@@ -219,8 +219,9 @@ Disallow: /node_modules/
 
 Sitemap: https://extrucon.de/sitemap.xml
 
-# Favicon für Suchmaschinen
+# Favicon & Logo für Suchmaschinen
 Allow: /favicon.png
+Allow: /logo.png
 
 # ===========================================
 # CRAWL-DELAY FÜR SERVER-SCHUTZ

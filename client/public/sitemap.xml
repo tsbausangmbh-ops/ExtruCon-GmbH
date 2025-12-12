@@ -3,13 +3,25 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
-  <!-- Favicon/Logo -->
+  <!-- Favicon -->
   <url>
     <loc>https://extrucon.de/favicon.png</loc>
     <lastmod>2025-12-12</lastmod>
     <image:image>
       <image:loc>https://extrucon.de/favicon.png</image:loc>
-      <image:title>ExtruCon GmbH Logo - KI-Agentur Fürstenfeldbruck</image:title>
+      <image:title>ExtruCon GmbH Favicon - KI-Agentur Fürstenfeldbruck</image:title>
+    </image:image>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Logo -->
+  <url>
+    <loc>https://extrucon.de/logo.png</loc>
+    <lastmod>2025-12-12</lastmod>
+    <image:image>
+      <image:loc>https://extrucon.de/logo.png</image:loc>
+      <image:title>ExtruCon GmbH - Social Marketing mit KI - KI-Agentur Fürstenfeldbruck</image:title>
     </image:image>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
