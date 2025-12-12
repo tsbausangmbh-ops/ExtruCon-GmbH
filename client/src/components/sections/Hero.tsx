@@ -67,6 +67,9 @@ export function Hero() {
               <a href="/ki-agenten" className="inline-flex items-center justify-center h-12 px-8 border border-white/20 text-white hover:bg-white/10 font-medium text-lg rounded-md transition-colors group" data-testid="button-hero-secondary">
                 KI-Agenten entdecken <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
+              <a href="/ki-bot" className="inline-flex items-center justify-center h-12 px-8 border border-primary/50 text-primary hover:bg-primary/10 font-medium text-lg rounded-md transition-colors group" data-testid="button-hero-bot">
+                KI Bot testen <Bot className="ml-2 w-4 h-4" />
+              </a>
             </div>
           </motion.div>
         </div>
