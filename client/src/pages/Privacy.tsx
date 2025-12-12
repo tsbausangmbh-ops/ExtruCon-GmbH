@@ -12,9 +12,30 @@ export default function Privacy() {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">{t.legalPages.privacyTitle}</h1>
           {language !== 'de' && (
-            <p className="text-amber-400/80 text-sm mb-6 p-3 rounded-lg bg-amber-400/10 border border-amber-400/20">
-              {t.legalPages.legalNotice}
-            </p>
+            <div className="mb-8 p-6 rounded-xl bg-cyan-500/10 border border-cyan-500/20">
+              <p className="text-amber-400/80 text-sm mb-4 p-3 rounded-lg bg-amber-400/10 border border-amber-400/20">
+                {t.legalPages.legalNotice}
+              </p>
+              
+              <h2 className="text-xl font-bold text-cyan-400 mb-3">{t.legalPages.privacySummaryTitle}</h2>
+              <p className="text-gray-300 mb-4">{t.legalPages.privacySummary}</p>
+              
+              <div className="grid md:grid-cols-2 gap-6 mt-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-200 mb-2">{t.legalPages.applicableLaws}</h3>
+                  <p className="text-gray-400 text-sm whitespace-pre-line">{t.legalPages.applicableLawsList}</p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-200 mb-2">{t.legalPages.yourRightsTitle}</h3>
+                  <p className="text-gray-400 text-sm whitespace-pre-line">{t.legalPages.yourRightsList}</p>
+                </div>
+              </div>
+              
+              <div className="mt-4 pt-4 border-t border-white/10">
+                <p className="text-gray-400 text-sm">{t.legalPages.supervisoryAuthority}</p>
+                <p className="text-cyan-400 text-sm mt-1">{t.legalPages.contactForPrivacy}</p>
+              </div>
+            </div>
           )}
           
           {/* Präambel */}
