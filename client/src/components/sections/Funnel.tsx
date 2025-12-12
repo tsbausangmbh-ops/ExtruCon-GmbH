@@ -161,7 +161,7 @@ export function Funnel() {
           <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-6 text-center">
             Häufige Fragen zu digitalem Marketing
           </h2>
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="grid md:grid-cols-2 gap-4 max-w-5xl mx-auto">
             {[
               { 
                 q: "Wie schnell sehe ich Ergebnisse mit SEO?", 
