@@ -74,13 +74,33 @@ export default function Chatbot() {
           <div className="container mx-auto px-4 text-center">
             <div className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-4">
               <Sparkles className="w-4 h-4" />
-              KI-Assistent
+              Live-Demo: KI-Assistent
             </div>
             <h1 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
-              Fragen Sie unseren <span className="text-gradient">KI-Bot</span>
+              Testen Sie unseren <span className="text-gradient">KI-Assistenten</span>
             </h1>
-            <p className="text-gray-400 max-w-xl mx-auto">
-              Unser KI-Assistent beantwortet Ihre Fragen zu KI-Agenten, Automatisierung und digitalem Marketing.
+            <p className="text-gray-400 max-w-2xl mx-auto mb-6">
+              Erleben Sie live, wie ein intelligenter KI-Agent funktioniert. Dieser Bot ist ein Beispiel dafür, 
+              was wir für Ihr Unternehmen entwickeln können – individuell angepasst an Ihre Branche und Bedürfnisse.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-4 max-w-3xl mx-auto mb-6">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-left">
+                <div className="text-primary font-bold mb-1">Sofortige Antworten</div>
+                <p className="text-gray-400 text-sm">24/7 verfügbar, beantwortet Kundenfragen in Sekunden statt Stunden.</p>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-left">
+                <div className="text-primary font-bold mb-1">Lernfähig</div>
+                <p className="text-gray-400 text-sm">Kann auf Ihre Produkte, Services und FAQs trainiert werden.</p>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-left">
+                <div className="text-primary font-bold mb-1">Entlastung für Ihr Team</div>
+                <p className="text-gray-400 text-sm">Übernimmt wiederkehrende Anfragen – Ihr Team fokussiert auf Wichtiges.</p>
+              </div>
+            </div>
+            
+            <p className="text-sm text-gray-500">
+              Stellen Sie Fragen zu unseren Leistungen: KI-Agenten, Automatisierungen, Webseiten mit KI, Marketing & mehr.
             </p>
           </div>
         </section>
