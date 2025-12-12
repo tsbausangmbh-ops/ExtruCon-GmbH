@@ -48,7 +48,7 @@ const articles = [
     category: "web",
     readTime: "6 Min.",
     date: "3. Dez 2025",
-    featured: false
+    featured: true
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ const articles = [
     category: "ki",
     readTime: "10 Min.",
     date: "1. Dez 2025",
-    featured: false
+    featured: true
   },
   {
     id: 6,
@@ -66,7 +66,7 @@ const articles = [
     category: "social",
     readTime: "8 Min.",
     date: "28. Nov 2025",
-    featured: false
+    featured: true
   },
   {
     id: 7,
