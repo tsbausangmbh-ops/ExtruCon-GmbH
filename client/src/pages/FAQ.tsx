@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
+import { RelatedServices } from "@/components/RelatedServices";
 
 const categoryIcons = {
   allgemein: { icon: HelpCircle, color: "text-primary" },
@@ -234,6 +235,8 @@ export default function FAQ() {
             </a>
           </div>
         </section>
+
+        <RelatedServices currentPath="/faq" />
       </main>
       <Footer />
     </div>

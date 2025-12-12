@@ -4,6 +4,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { motion } from "framer-motion";
 import { Users, Target, Lightbulb, Rocket, Heart, Award, MapPin, Mail, Phone, Clock, CheckCircle, ArrowRight, Zap, Shield, TrendingUp, Sparkles } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
+import { RelatedServices } from "@/components/RelatedServices";
 
 const valueIcons = [Lightbulb, Heart, Shield, Zap];
 
@@ -365,6 +366,8 @@ export default function UeberUns() {
             </div>
           </div>
         </section>
+
+        <RelatedServices currentPath="/ueber-uns" />
       </main>
       <Footer />
     </div>
