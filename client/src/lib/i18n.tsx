@@ -751,6 +751,32 @@ export const translations = {
         button: 'Kontakt aufnehmen'
       }
     },
+    brandPage: {
+      badge: 'Leistung',
+      title: 'Markenaufbau & Brand Identity',
+      subtitle: 'Entwicklung unverwechselbarer Markenidentitäten, die Vertrauen schaffen, im Gedächtnis bleiben und Ihr Unternehmen von der Konkurrenz abheben.',
+      ctaButton: 'Kostenlose Beratung',
+      servicesTitle: 'Was wir für Sie tun',
+      services: [
+        { title: 'Markenanalyse', desc: 'Tiefgehende Analyse Ihrer aktuellen Positionierung und des Wettbewerbsumfelds.' },
+        { title: 'Markenstrategie', desc: 'Entwicklung einer klaren Positionierung und Markenbotschaft.' },
+        { title: 'Logo & Visuelles Design', desc: 'Erstellung eines einzigartigen Logos und visueller Gestaltungsrichtlinien.' },
+        { title: 'Corporate Design', desc: 'Vollständiges Erscheinungsbild inkl. Farben, Typografie und Bildsprache.' },
+        { title: 'Brand Guidelines', desc: 'Dokumentation aller Markenelemente für konsistente Anwendung.' },
+        { title: 'Marken-Relaunch', desc: 'Modernisierung bestehender Marken für die digitale Zukunft.' }
+      ],
+      benefitsTitle: 'Ihre Vorteile',
+      benefits: [
+        'Einzigartige Markenidentität, die sich vom Wettbewerb abhebt',
+        'Konsistentes Erscheinungsbild über alle Kanäle hinweg',
+        'Stärkere Kundenbindung durch emotionale Markenerlebnisse',
+        'Höhere Wiedererkennbarkeit und Markenbekanntheit',
+        'Professionelle Außenwirkung für mehr Vertrauen'
+      ],
+      ctaTitle: 'Bereit für Ihre starke Marke?',
+      ctaSubtitle: 'Lassen Sie uns gemeinsam eine Marke entwickeln, die Ihre Werte verkörpert und Ihre Zielgruppe begeistert.',
+      ctaButtonAlt: 'Jetzt Projekt starten'
+    },
     contactPage: {
       badge: 'Deutschlandweit für Sie da',
       title: 'Kontakt aufnehmen',
@@ -1555,6 +1581,32 @@ export const translations = {
         button: 'Get in Touch'
       }
     },
+    brandPage: {
+      badge: 'Service',
+      title: 'Brand Building & Identity',
+      subtitle: 'Development of distinctive brand identities that build trust, stay memorable, and set your company apart from the competition.',
+      ctaButton: 'Free Consultation',
+      servicesTitle: 'What We Do For You',
+      services: [
+        { title: 'Brand Analysis', desc: 'In-depth analysis of your current positioning and competitive environment.' },
+        { title: 'Brand Strategy', desc: 'Development of a clear positioning and brand message.' },
+        { title: 'Logo & Visual Design', desc: 'Creation of a unique logo and visual design guidelines.' },
+        { title: 'Corporate Design', desc: 'Complete visual identity including colors, typography, and imagery.' },
+        { title: 'Brand Guidelines', desc: 'Documentation of all brand elements for consistent application.' },
+        { title: 'Brand Relaunch', desc: 'Modernization of existing brands for the digital future.' }
+      ],
+      benefitsTitle: 'Your Benefits',
+      benefits: [
+        'Unique brand identity that stands out from the competition',
+        'Consistent appearance across all channels',
+        'Stronger customer loyalty through emotional brand experiences',
+        'Higher recognition and brand awareness',
+        'Professional image for more trust'
+      ],
+      ctaTitle: 'Ready for Your Strong Brand?',
+      ctaSubtitle: 'Let\'s develop a brand together that embodies your values and inspires your target audience.',
+      ctaButtonAlt: 'Start Project Now'
+    },
     contactPage: {
       badge: 'Nationwide at Your Service',
       title: 'Get in Touch',
@@ -2358,6 +2410,32 @@ export const translations = {
         subtitle: 'Recite nam o svom projektu – na besplatnoj početnoj konzultaciji zajedno ćemo pronaći najbolje rješenje.',
         button: 'Kontaktirajte nas'
       }
+    },
+    brandPage: {
+      badge: 'Usluga',
+      title: 'Izgradnja brenda i identitet',
+      subtitle: 'Razvoj prepoznatljivih identiteta brendova koji grade povjerenje, ostaju u sjećanju i izdvajaju vašu tvrtku od konkurencije.',
+      ctaButton: 'Besplatna konzultacija',
+      servicesTitle: 'Što radimo za vas',
+      services: [
+        { title: 'Analiza brenda', desc: 'Detaljna analiza vaše trenutne pozicije i konkurentskog okruženja.' },
+        { title: 'Strategija brenda', desc: 'Razvoj jasne pozicije i poruke brenda.' },
+        { title: 'Logo i vizualni dizajn', desc: 'Kreiranje jedinstvenog loga i smjernica vizualnog dizajna.' },
+        { title: 'Korporativni dizajn', desc: 'Potpuni vizualni identitet uključujući boje, tipografiju i slikovni jezik.' },
+        { title: 'Smjernice brenda', desc: 'Dokumentacija svih elemenata brenda za dosljednu primjenu.' },
+        { title: 'Rebranding', desc: 'Modernizacija postojećih brendova za digitalnu budućnost.' }
+      ],
+      benefitsTitle: 'Vaše prednosti',
+      benefits: [
+        'Jedinstveni identitet brenda koji se ističe od konkurencije',
+        'Dosljedan izgled na svim kanalima',
+        'Jača lojalnost kupaca kroz emocionalna iskustva brenda',
+        'Veća prepoznatljivost i svijest o brendu',
+        'Profesionalna slika za više povjerenja'
+      ],
+      ctaTitle: 'Spremni za vaš snažan brend?',
+      ctaSubtitle: 'Razvijmo zajedno brend koji utjelovljuje vaše vrijednosti i oduševljava vašu ciljanu publiku.',
+      ctaButtonAlt: 'Započnite projekt sada'
     },
     contactPage: {
       badge: 'Dostupni diljem Njemačke',
