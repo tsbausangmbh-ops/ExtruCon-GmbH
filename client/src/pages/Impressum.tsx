@@ -14,9 +14,8 @@ export default function Impressum() {
             <h2 className="text-xl font-bold text-white mb-4">Angaben gemäß § 5 TMG</h2>
             <p className="text-gray-400 leading-relaxed">
               ExtruCon GmbH<br />
-              Hasenheide 8<br />
-              82256 Fürstenfeldbruck<br />
-              Deutschland
+              Tech Park 1<br />
+              Berlin, Deutschland
             </p>
           </section>
 
@@ -32,7 +31,8 @@ export default function Impressum() {
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
             <h2 className="text-xl font-bold text-white mb-4">Kontakt</h2>
             <p className="text-gray-400 leading-relaxed">
-              E-Mail: <a href="mailto:info@extrucon.de" className="text-cyan-400 hover:text-cyan-300 transition-colors">info@extrucon.de</a><br />
+              E-Mail: <a href="mailto:contact@extrucon.de" className="text-cyan-400 hover:text-cyan-300 transition-colors">contact@extrucon.de</a><br />
+              Telefon: <a href="tel:+49123456789" className="text-cyan-400 hover:text-cyan-300 transition-colors">+49 (0) 123 456 789</a><br />
               Website: <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 transition-colors">https://extrucon.de</a>
             </p>
           </section>
@@ -61,8 +61,8 @@ export default function Impressum() {
             <h2 className="text-xl font-bold text-white mb-4">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
             <p className="text-gray-400 leading-relaxed">
               Maral Ibrahim Agha<br />
-              Hasenheide 8<br />
-              82256 Fürstenfeldbruck
+              Tech Park 1<br />
+              Berlin, Deutschland
             </p>
           </section>
 

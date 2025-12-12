@@ -38,7 +38,7 @@ export default function Terms() {
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="s1">
             <h2 className="text-xl font-bold text-white mb-4">§1 Geltungsbereich und Definitionen</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
-              (1) Diese Allgemeinen Geschäftsbedingungen (nachfolgend "AGB") gelten für alle Verträge zwischen der ExtruCon GmbH, Hasenheide 8, 82256 Fürstenfeldbruck (nachfolgend "Anbieter" oder "wir") und ihren Kunden (nachfolgend "Kunde" oder "Auftraggeber") über die Erbringung von Dienstleistungen in den Bereichen Marketing, Künstliche Intelligenz (KI), Social Media, Content-Erstellung und Webentwicklung.
+              (1) Diese Allgemeinen Geschäftsbedingungen (nachfolgend "AGB") gelten für alle Verträge zwischen der ExtruCon GmbH, Tech Park 1, Berlin (nachfolgend "Anbieter" oder "wir") und ihren Kunden (nachfolgend "Kunde" oder "Auftraggeber") über die Erbringung von Dienstleistungen in den Bereichen Marketing, Künstliche Intelligenz (KI), Social Media, Content-Erstellung und Webentwicklung.
             </p>
             <p className="text-gray-400 mb-4 leading-relaxed">
               (2) <strong className="text-gray-200">Verbraucher (B2C)</strong> im Sinne dieser AGB ist jede natürliche Person, die ein Rechtsgeschäft zu Zwecken abschließt, die überwiegend weder ihrer gewerblichen noch ihrer selbständigen beruflichen Tätigkeit zugerechnet werden können (§ 13 BGB).
@@ -312,7 +312,7 @@ export default function Terms() {
               <strong className="text-gray-200">Widerrufsrecht:</strong> Sie haben das Recht, binnen 14 Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt 14 Tage ab dem Tag des Vertragsschlusses.
             </p>
             <p className="text-gray-400 mb-4 leading-relaxed">
-              Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (ExtruCon GmbH, Hasenheide 8, 82256 Fürstenfeldbruck, E-Mail: info@extrucon.de) mittels einer eindeutigen Erklärung (z.B. ein mit der Post versandter Brief oder E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren.
+              Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (ExtruCon GmbH, Tech Park 1, Berlin, E-Mail: contact@extrucon.de) mittels einer eindeutigen Erklärung (z.B. ein mit der Post versandter Brief oder E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren.
             </p>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.
