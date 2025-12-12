@@ -14,42 +14,48 @@ const services = [
     description: "Entwicklung unverwechselbarer Markenidentitäten, die Vertrauen schaffen und im Gedächtnis bleiben.",
     icon: Fingerprint,
     image: brandImg,
-    color: "text-amber-400"
+    color: "text-amber-400",
+    href: "/leistungen/markenaufbau"
   },
   {
     title: "Texting & Postings",
     description: "Zielgruppengenaue Texte und kreative Social Media Posts, die Interaktion fördern und verkaufen.",
     icon: PenTool,
     image: contentImg,
-    color: "text-pink-400"
+    color: "text-pink-400",
+    href: "/leistungen/content"
   },
   {
     title: "Social Media",
     description: "Strategisches Community-Management und virale Kampagnen, um Ihr Publikum auf allen Kanälen zu binden.",
     icon: Share2,
     image: socialImg,
-    color: "text-purple-400"
+    color: "text-purple-400",
+    href: "/leistungen/social-media"
   },
   {
     title: "KI & Automatisierung",
     description: "Maßgeschneiderte KI-Bots und intelligente Automatisierungs-Workflows zur Optimierung Ihrer Abläufe rund um die Uhr.",
     icon: Bot,
     image: aiImg,
-    color: "text-cyan-400"
+    color: "text-cyan-400",
+    href: "/leistungen/ki-automatisierung"
   },
   {
     title: "Web & Digitale Plattformen",
     description: "Hochleistungsfähige, visuell beeindruckende Webseiten und Web-Apps für das moderne Web.",
     icon: Globe,
     image: webImg,
-    color: "text-blue-400"
+    color: "text-blue-400",
+    href: "/leistungen/web"
   },
   {
     title: "Performance Marketing",
     description: "Datengetriebene Kampagnen und SEO-Strategien für messbares Wachstum und maximale Sichtbarkeit.",
     icon: TrendingUp,
     image: marketingImg,
-    color: "text-orange-400"
+    color: "text-orange-400",
+    href: "/leistungen/marketing"
   }
 ];
 
@@ -73,33 +79,35 @@ export function Services() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="glass-card border-none overflow-hidden group hover:bg-white/10 transition-all duration-300 h-full flex flex-col">
-                <div className="h-48 overflow-hidden relative">
-                  {service.image ? (
-                    <img 
-                      src={service.image} 
-                      alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  ) : (
-                    <div className="w-full h-full bg-gradient-to-br from-purple-900 to-pink-900 flex items-center justify-center">
-                      <service.icon className="w-16 h-16 text-white/20" />
+              <a href={service.href} className="block h-full" data-testid={`link-service-${index}`}>
+                <Card className="glass-card border-none overflow-hidden group hover:bg-white/10 transition-all duration-300 h-full flex flex-col cursor-pointer">
+                  <div className="h-48 overflow-hidden relative">
+                    {service.image ? (
+                      <img 
+                        src={service.image} 
+                        alt={service.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-purple-900 to-pink-900 flex items-center justify-center">
+                        <service.icon className="w-16 h-16 text-white/20" />
+                      </div>
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80" />
+                    <div className="absolute bottom-4 left-4">
+                      <service.icon className={`w-8 h-8 ${service.color} drop-shadow-lg`} />
                     </div>
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80" />
-                  <div className="absolute bottom-4 left-4">
-                    <service.icon className={`w-8 h-8 ${service.color} drop-shadow-lg`} />
                   </div>
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-xl text-white font-display tracking-wide">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-gray-400 text-base">
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
+                  <CardHeader>
+                    <CardTitle className="text-xl text-white font-display tracking-wide">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-gray-400 text-base">
+                      {service.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </a>
             </motion.div>
           ))}
         </div>

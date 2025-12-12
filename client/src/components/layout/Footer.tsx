@@ -21,10 +21,12 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-white mb-4">Leistungen</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-primary transition-colors">KI & Bots</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Digitales Marketing</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Web Entwicklung</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Content Erstellung</a></li>
+              <li><a href="/leistungen/ki-automatisierung" className="hover:text-primary transition-colors">KI & Automatisierung</a></li>
+              <li><a href="/leistungen/marketing" className="hover:text-primary transition-colors">Performance Marketing</a></li>
+              <li><a href="/leistungen/web" className="hover:text-primary transition-colors">Web Entwicklung</a></li>
+              <li><a href="/leistungen/social-media" className="hover:text-primary transition-colors">Social Media</a></li>
+              <li><a href="/leistungen/content" className="hover:text-primary transition-colors">Texting & Postings</a></li>
+              <li><a href="/leistungen/markenaufbau" className="hover:text-primary transition-colors">Markenaufbau</a></li>
             </ul>
           </div>
 
