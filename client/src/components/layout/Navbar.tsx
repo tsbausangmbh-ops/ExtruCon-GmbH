@@ -67,7 +67,7 @@ export function Navbar() {
           <a href="/kontakt" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
             Kontakt
           </a>
-          <Link href="/kontakt">
+          <Link href="/ki-bot">
             <Button variant="default" className="bg-primary text-background hover:bg-primary/90 font-bold">
               Loslegen
             </Button>
@@ -129,7 +129,7 @@ export function Navbar() {
             >
               Kontakt
             </a>
-            <Link href="/kontakt" onClick={() => setIsOpen(false)}>
+            <Link href="/ki-bot" onClick={() => setIsOpen(false)}>
               <Button className="w-full bg-primary text-background font-bold mt-2">
                 Loslegen
               </Button>

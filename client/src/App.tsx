@@ -14,6 +14,7 @@ import KIAgenten from "@/pages/KIAgenten";
 import Automatisierungen from "@/pages/Automatisierungen";
 import WebseitenKI from "@/pages/WebseitenKI";
 import UeberUns from "@/pages/UeberUns";
+import Chatbot from "@/pages/Chatbot";
 import Brand from "@/pages/services/Brand";
 import Content from "@/pages/services/Content";
 import SocialMedia from "@/pages/services/SocialMedia";
@@ -36,6 +37,7 @@ function Router() {
       <Route path="/automatisierungen" component={Automatisierungen} />
       <Route path="/webseiten-ki" component={WebseitenKI} />
       <Route path="/ueber-uns" component={UeberUns} />
+      <Route path="/ki-bot" component={Chatbot} />
       <Route path="/leistungen/markenaufbau" component={Brand} />
       <Route path="/leistungen/content" component={Content} />
       <Route path="/leistungen/social-media" component={SocialMedia} />
