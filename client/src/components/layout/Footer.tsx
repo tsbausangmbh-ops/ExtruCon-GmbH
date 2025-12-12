@@ -13,23 +13,23 @@ export function Footer() {
               </span>
             </div>
             <p className="text-gray-400 max-w-sm">
-              Empowering businesses with next-generation AI, marketing, and digital solutions. 
-              We build the future today.
+              Wir stärken Unternehmen mit KI der nächsten Generation, Marketing und digitalen Lösungen. 
+              Wir gestalten die Zukunft heute.
             </p>
           </div>
           
           <div>
-            <h4 className="font-bold text-white mb-4">Services</h4>
+            <h4 className="font-bold text-white mb-4">Leistungen</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-primary transition-colors">AI & Bots</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Digital Marketing</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Web Development</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Content Creation</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">KI & Bots</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Digitales Marketing</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Web Entwicklung</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Content Erstellung</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-bold text-white mb-4">Connect</h4>
+            <h4 className="font-bold text-white mb-4">Verbinden</h4>
             <div className="flex gap-4">
               <a href="#" className="text-gray-400 hover:text-primary transition-colors"><Linkedin /></a>
               <a href="#" className="text-gray-400 hover:text-primary transition-colors"><Twitter /></a>
@@ -40,11 +40,11 @@ export function Footer() {
         </div>
         
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-          <p>&copy; {new Date().getFullYear()} Extrucon GmbH. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Extrucon GmbH. Alle Rechte vorbehalten.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors">Imprint</a>
+            <a href="#" className="hover:text-white transition-colors">Datenschutzerklärung</a>
+            <a href="#" className="hover:text-white transition-colors">AGB</a>
+            <a href="#" className="hover:text-white transition-colors">Impressum</a>
           </div>
         </div>
       </div>

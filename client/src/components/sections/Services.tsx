@@ -7,29 +7,29 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    title: "AI & Automation",
-    description: "Custom AI bots and intelligent automation workflows to streamline your operations 24/7.",
+    title: "KI & Automatisierung",
+    description: "Maßgeschneiderte KI-Bots und intelligente Automatisierungs-Workflows zur Optimierung Ihrer Abläufe rund um die Uhr.",
     icon: Bot,
     image: aiImg,
     color: "text-cyan-400"
   },
   {
     title: "Social Media Marketing",
-    description: "Data-driven strategies to grow your audience and engage customers across all platforms.",
+    description: "Datengetriebene Strategien, um Ihr Publikum zu vergrößern und Kunden auf allen Plattformen zu binden.",
     icon: Share2,
     image: socialImg,
     color: "text-purple-400"
   },
   {
-    title: "Web & Digital Platforms",
-    description: "High-performance, visually stunning websites and web apps built for the modern web.",
+    title: "Web & Digitale Plattformen",
+    description: "Hochleistungsfähige, visuell beeindruckende Webseiten und Web-Apps für das moderne Web.",
     icon: Globe,
     image: webImg,
     color: "text-blue-400"
   },
   {
-    title: "Content Creation",
-    description: "Compelling storytelling and visual content that resonates with your target market.",
+    title: "Content Erstellung",
+    description: "Überzeugendes Storytelling und visuelle Inhalte, die bei Ihrer Zielgruppe ankommen.",
     icon: PenTool,
     image: null, // Using a gradient fallback if no image
     color: "text-pink-400"
@@ -41,9 +41,9 @@ export function Services() {
     <section id="services" className="py-24 bg-background relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold font-display text-white mb-4">Our Expertise</h2>
+          <h2 className="text-3xl md:text-5xl font-bold font-display text-white mb-4">Unsere Expertise</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Comprehensive digital solutions powered by innovation and creativity.
+            Umfassende digitale Lösungen, angetrieben von Innovation und Kreativität.
           </p>
         </div>
 

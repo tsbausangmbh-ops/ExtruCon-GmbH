@@ -24,22 +24,22 @@ export function Hero() {
             transition={{ duration: 0.8 }}
           >
             <span className="inline-block py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6 backdrop-blur-sm">
-              Future Ready Solutions
+              Zukunftssichere Lösungen
             </span>
             <h1 className="text-5xl md:text-7xl font-bold font-display text-white mb-6 leading-tight">
-              We Architect Your <br />
-              <span className="text-gradient">Digital Intelligence</span>
+              Wir gestalten Ihre <br />
+              <span className="text-gradient">Digitale Intelligenz</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Extrucon GmbH combines cutting-edge AI, strategic marketing, and immersive web experiences to propel your business into the next era.
+              Extrucon GmbH verbindet modernste KI, strategisches Marketing und immersive Web-Erlebnisse, um Ihr Unternehmen in die nächste Ära zu führen.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-primary text-background hover:bg-primary/90 font-bold text-lg h-12 px-8">
-                Start Project
+                Projekt starten
               </Button>
               <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 hover:text-white font-medium text-lg h-12 px-8 group">
-                View Services <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                Leistungen ansehen <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
           </motion.div>

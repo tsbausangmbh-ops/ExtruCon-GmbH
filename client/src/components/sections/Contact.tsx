@@ -14,11 +14,11 @@ export function Contact() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold font-display text-white mb-6">
-              Ready to <span className="text-gradient">Innovate?</span>
+              Bereit für <span className="text-gradient">Innovation?</span>
             </h2>
             <p className="text-gray-400 text-lg mb-8">
-              Let's discuss how Extrucon GmbH can transform your digital presence. 
-              Reach out to us for a consultation.
+              Lassen Sie uns besprechen, wie die Extrucon GmbH Ihre digitale Präsenz verändern kann. 
+              Kontaktieren Sie uns für ein Beratungsgespräch.
             </p>
 
             <div className="space-y-6">
@@ -27,7 +27,7 @@ export function Contact() {
                   <Mail className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500">Email Us</p>
+                  <p className="text-sm text-gray-500">E-Mail</p>
                   <p className="font-medium">contact@extrucon.de</p>
                 </div>
               </div>
@@ -37,7 +37,7 @@ export function Contact() {
                   <Phone className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500">Call Us</p>
+                  <p className="text-sm text-gray-500">Anrufen</p>
                   <p className="font-medium">+49 (0) 123 456 789</p>
                 </div>
               </div>
@@ -47,8 +47,8 @@ export function Contact() {
                   <MapPin className="w-5 h-5 text-pink-500" />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500">Visit Us</p>
-                  <p className="font-medium">Tech Park 1, Berlin, Germany</p>
+                  <p className="text-sm text-gray-500">Besuch uns</p>
+                  <p className="font-medium">Tech Park 1, Berlin, Deutschland</p>
                 </div>
               </div>
             </div>
@@ -58,27 +58,27 @@ export function Contact() {
             <form className="space-y-6">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-400">First Name</label>
-                  <Input placeholder="John" className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-primary/50" />
+                  <label className="text-sm font-medium text-gray-400">Vorname</label>
+                  <Input placeholder="Max" className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-primary/50" />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-400">Last Name</label>
-                  <Input placeholder="Doe" className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-primary/50" />
+                  <label className="text-sm font-medium text-gray-400">Nachname</label>
+                  <Input placeholder="Mustermann" className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-primary/50" />
                 </div>
               </div>
               
               <div className="space-y-2">
-                <label className="text-sm font-medium text-gray-400">Email</label>
-                <Input type="email" placeholder="john@company.com" className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-primary/50" />
+                <label className="text-sm font-medium text-gray-400">E-Mail</label>
+                <Input type="email" placeholder="max@firma.de" className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-primary/50" />
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-medium text-gray-400">Message</label>
-                <Textarea placeholder="Tell us about your project..." className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-primary/50 min-h-[120px]" />
+                <label className="text-sm font-medium text-gray-400">Nachricht</label>
+                <Textarea placeholder="Erzählen Sie uns von Ihrem Projekt..." className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-primary/50 min-h-[120px]" />
               </div>
 
               <Button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold h-12">
-                Send Message
+                Nachricht senden
               </Button>
             </form>
           </Card>

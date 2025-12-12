@@ -12,13 +12,12 @@ export default function Home() {
         <Hero />
         <Services />
         <div id="about" className="py-24 container mx-auto px-4 text-center">
-             <span className="text-primary text-sm font-medium uppercase tracking-widest mb-2 block">About Us</span>
-             <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-6">Innovating the Digital Landscape</h2>
+             <span className="text-primary text-sm font-medium uppercase tracking-widest mb-2 block">Über uns</span>
+             <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-6">Innovation der digitalen Landschaft</h2>
              <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-               At Extrucon GmbH, we believe in the power of technology to transform businesses. 
-               We are not just a service provider; we are your strategic partner in navigating 
-               the complexities of the digital age. From AI-driven automation to captivating 
-               content strategies, we deliver results that matter.
+               Bei der Extrucon GmbH glauben wir an die Kraft der Technologie, Unternehmen zu transformieren. 
+               Wir sind nicht nur Dienstleister, sondern Ihr strategischer Partner in der digitalen Ära. 
+               Von KI-gesteuerter Automatisierung bis hin zu fesselnden Content-Strategien liefern wir Ergebnisse, die zählen.
              </p>
         </div>
         <Contact />

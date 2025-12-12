@@ -7,9 +7,9 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Services", href: "#services" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Leistungen", href: "#services" },
+    { name: "Über uns", href: "#about" },
+    { name: "Kontakt", href: "#contact" },
   ];
 
   return (
@@ -34,7 +34,7 @@ export function Navbar() {
             </a>
           ))}
           <Button variant="default" className="bg-primary text-background hover:bg-primary/90 font-bold">
-            Get Started
+            Loslegen
           </Button>
         </div>
 
@@ -62,7 +62,7 @@ export function Navbar() {
               </a>
             ))}
             <Button className="w-full bg-primary text-background font-bold">
-              Get Started
+              Loslegen
             </Button>
           </div>
         </div>
