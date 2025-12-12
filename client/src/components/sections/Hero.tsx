@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import heroBg from "@assets/generated_images/futuristic_digital_landscape_with_connecting_nodes.png";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MapPin } from "lucide-react";
 
 export function Hero() {
   return (
@@ -10,7 +10,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <img 
           src={heroBg} 
-          alt="Digital Future Background" 
+          alt="Digitale Zukunft - ExtruCon Marketing Agentur Fürstenfeldbruck" 
           className="w-full h-full object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
@@ -23,22 +23,39 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="inline-block py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6 backdrop-blur-sm">
-              Das Extrucon Funnel-System
+            {/* Local SEO Badge */}
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <span className="inline-flex items-center gap-1.5 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium backdrop-blur-sm">
+                <MapPin className="w-3.5 h-3.5" />
+                Fürstenfeldbruck & München
+              </span>
+            </div>
+            
+            <span className="inline-block py-1 px-3 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-sm font-medium mb-6 backdrop-blur-sm">
+              Das ExtruCon Funnel-System für messbaren Erfolg
             </span>
-            <h1 className="text-5xl md:text-7xl font-bold font-display text-white mb-6 leading-tight">
-              Wir verwandeln Besucher in <br />
-              <span className="text-gradient">zahlende Kunden</span>
+            
+            {/* H1 with Local SEO Keywords */}
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-display text-white mb-6 leading-tight">
+              Ihre Marketing & KI Agentur in{" "}
+              <span className="text-gradient">Fürstenfeldbruck</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Schluss mit "unsichtbar". Unser spezialisiertes SEO- & Geo-System platziert Ihre Marke genau dort, wo Ihre Kunden suchen – und führt sie automatisch zum Abschluss.
+            
+            <p className="text-lg md:text-xl text-gray-300 mb-4 max-w-2xl mx-auto leading-relaxed">
+              Wir verwandeln Besucher in zahlende Kunden. Unser spezialisiertes SEO- & Geo-System 
+              platziert Ihr Unternehmen genau dort, wo Ihre Kunden in München und Umgebung suchen.
+            </p>
+            
+            {/* Trust Signals */}
+            <p className="text-sm text-gray-500 mb-8">
+              ✓ Lokale Expertise seit 2020 · ✓ 50+ zufriedene Kunden in Bayern · ✓ Kostenlose Erstberatung
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary text-background hover:bg-primary/90 font-bold text-lg h-12 px-8">
-                Analyse anfordern
+              <Button size="lg" className="bg-primary text-background hover:bg-primary/90 font-bold text-lg h-12 px-8" data-testid="button-hero-cta">
+                Kostenlose Analyse anfordern
               </Button>
-              <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 hover:text-white font-medium text-lg h-12 px-8 group">
+              <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 hover:text-white font-medium text-lg h-12 px-8 group" data-testid="button-hero-secondary">
                 System ansehen <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
