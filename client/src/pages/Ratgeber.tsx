@@ -94,6 +94,87 @@ const articles = [
     readTime: "6 Min.",
     date: "19. Nov 2025",
     featured: false
+  },
+  {
+    id: 10,
+    title: "TikTok für Unternehmen: Lohnt sich der Einstieg?",
+    excerpt: "Die Plattform boomt – aber ist TikTok auch für B2B relevant? Wir zeigen Chancen und Strategien.",
+    category: "social",
+    readTime: "7 Min.",
+    date: "16. Nov 2025",
+    featured: false
+  },
+  {
+    id: 11,
+    title: "E-Mail-Marketing: 12 Tipps für höhere Öffnungsraten",
+    excerpt: "So optimieren Sie Ihre Newsletter und E-Mail-Kampagnen für bessere Ergebnisse.",
+    category: "marketing",
+    readTime: "8 Min.",
+    date: "13. Nov 2025",
+    featured: false
+  },
+  {
+    id: 12,
+    title: "Voice Search SEO: Optimierung für Sprachsuche",
+    excerpt: "Immer mehr Menschen suchen per Sprache. So passen Sie Ihre SEO-Strategie an.",
+    category: "marketing",
+    readTime: "6 Min.",
+    date: "10. Nov 2025",
+    featured: false
+  },
+  {
+    id: 13,
+    title: "KI-generierte Bilder: Tools und rechtliche Aspekte",
+    excerpt: "Von DALL-E bis Midjourney: Was Sie bei der Nutzung von KI-Bildern beachten müssen.",
+    category: "ki",
+    readTime: "9 Min.",
+    date: "7. Nov 2025",
+    featured: false
+  },
+  {
+    id: 14,
+    title: "Conversion-Rate optimieren: A/B-Testing richtig nutzen",
+    excerpt: "Wie Sie mit systematischen Tests Ihre Website-Performance verbessern.",
+    category: "web",
+    readTime: "10 Min.",
+    date: "4. Nov 2025",
+    featured: false
+  },
+  {
+    id: 15,
+    title: "Content-Planung: Der perfekte Redaktionskalender",
+    excerpt: "So erstellen Sie einen effizienten Content-Plan für Social Media und Blog.",
+    category: "social",
+    readTime: "5 Min.",
+    date: "1. Nov 2025",
+    featured: false
+  },
+  {
+    id: 16,
+    title: "Schema Markup: Strukturierte Daten für bessere Rankings",
+    excerpt: "Mit Schema.org zu Rich Snippets: So steigern Sie Ihre Sichtbarkeit in Google.",
+    category: "marketing",
+    readTime: "8 Min.",
+    date: "28. Okt 2025",
+    featured: false
+  },
+  {
+    id: 17,
+    title: "Prompt Engineering: KI optimal nutzen",
+    excerpt: "Die Kunst der richtigen Prompts: So holen Sie das Maximum aus ChatGPT & Co.",
+    category: "ki",
+    readTime: "11 Min.",
+    date: "25. Okt 2025",
+    featured: false
+  },
+  {
+    id: 18,
+    title: "Barrierefreie Websites: WCAG-Richtlinien verstehen",
+    excerpt: "Warum Accessibility wichtig ist und wie Sie Ihre Website barrierefrei gestalten.",
+    category: "web",
+    readTime: "7 Min.",
+    date: "22. Okt 2025",
+    featured: false
   }
 ];
 
