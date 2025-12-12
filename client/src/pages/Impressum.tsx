@@ -43,7 +43,7 @@ export default function Impressum() {
             <p className="text-gray-400 leading-relaxed">
               Eintragung im Handelsregister<br />
               Registergericht: Amtsgericht München<br />
-              Registernummer: HRB [Nummer eintragen]
+              Registernummer: HRB 18623
             </p>
           </section>
 
