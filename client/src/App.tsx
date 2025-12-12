@@ -23,6 +23,7 @@ import KI from "@/pages/services/KI";
 import Web from "@/pages/services/Web";
 import Marketing from "@/pages/services/Marketing";
 import NotFound from "@/pages/not-found";
+import { ChatWidget } from "@/components/ChatWidget";
 
 function Router() {
   return (
@@ -57,6 +58,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <ChatWidget />
         </TooltipProvider>
       </LanguageProvider>
     </QueryClientProvider>
