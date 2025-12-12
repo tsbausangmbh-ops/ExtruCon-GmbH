@@ -926,6 +926,70 @@ export const translations = {
       ],
       viewAllFaqs: '→ Alle FAQs ansehen'
     },
+    socialMediaPage: {
+      heroImageAlt: 'Social Media Agentur Fürstenfeldbruck München',
+      badge: 'Social Media Agentur Deutschlandweit',
+      title: 'Social Media Marketing deutschlandweit',
+      subtitle: 'Strategisches Community-Management, virale Kampagnen und professionelle Content-Erstellung. Wir machen Ihr Unternehmen auf Instagram, TikTok, LinkedIn und Facebook sichtbar.',
+      ctaButton: 'Kostenlose Social Media Analyse',
+      servicesTitle: 'Social Media Leistungen',
+      servicesSubtitle: 'Full-Service Social Media Marketing für Unternehmen deutschlandweit.',
+      services: [
+        { title: 'Social Media Strategie', desc: 'Individuelle Strategie basierend auf Ihren Zielen und Ihrer Zielgruppe – deutschlandweit.' },
+        { title: 'Content-Produktion', desc: 'Kreative Posts, Stories, Reels und Videos – professionell produziert für maximale Reichweite.' },
+        { title: 'Community Management', desc: 'Aktive Betreuung Ihrer Community mit zeitnahen Antworten und Engagement-Steigerung.' },
+        { title: 'Influencer Marketing', desc: 'Kooperation mit passenden Influencern aus Bayern für authentische Reichweite.' },
+        { title: 'Paid Social Ads', desc: 'Zielgerichtete Werbekampagnen auf Meta, TikTok und LinkedIn für mehr Leads.' },
+        { title: 'Reporting & Analytics', desc: 'Monatliche Berichte zu Performance, Reichweite und Wachstum Ihrer Kanäle.' }
+      ],
+      platformsTitle: 'Plattformen die wir betreuen',
+      benefitsTitle: 'Ihre Vorteile mit uns als Social Media Agentur',
+      benefits: [
+        'Professionelle Präsenz auf allen relevanten Plattformen',
+        'Wachsende Community und höhere Engagement-Raten',
+        'Mehr Reichweite und Sichtbarkeit für Ihre Marke',
+        'Direkter Draht zu Ihrer lokalen Zielgruppe',
+        'Messbare Ergebnisse und transparente monatliche Reports'
+      ],
+      faqTitle: 'Häufige Fragen zu Social Media Marketing',
+      faqs: [
+        { q: 'Was kostet Social Media Marketing in München?', a: 'Unsere Pakete starten ab 790€/Monat für die Betreuung eines Kanals. Komplette Multi-Channel-Strategien mit Content-Produktion beginnen bei 1.490€/Monat.' },
+        { q: 'Wie oft sollte man auf Social Media posten?', a: 'Das hängt von der Plattform ab. Für Instagram empfehlen wir 3-5 Posts pro Woche plus tägliche Stories. Bei LinkedIn reichen 2-3 qualitative Posts pro Woche.' },
+        { q: 'Welche Plattform ist für mein Unternehmen am besten?', a: 'Das analysieren wir in einem kostenlosen Erstgespräch. B2B-Unternehmen profitieren oft von LinkedIn, lokale Dienstleister von Instagram und Google Business.' },
+        { q: 'Erstellt ihr auch den Content für uns?', a: 'Ja! Wir übernehmen die komplette Content-Produktion: Texte, Grafiken, Fotos und Videos. Auf Wunsch auch mit Vor-Ort-Shootings in München und Umgebung.' }
+      ],
+      ctaTitle: 'Bereit für Social Media Erfolg?',
+      ctaSubtitle: 'Lassen Sie uns Ihre Social Media Präsenz auf das nächste Level bringen. Kostenlose Erstanalyse!',
+      ctaButtonAlt: 'Jetzt Social Media Beratung starten'
+    },
+    webPage: {
+      heroImageAlt: 'Web Entwicklung Agentur',
+      badge: 'Leistung',
+      title: 'Web & Digitale Plattformen',
+      subtitle: 'Hochleistungsfähige, visuell beeindruckende Websites und Web-Apps für das moderne Web – responsiv, schnell und benutzerfreundlich.',
+      ctaButton: 'Kostenlose Beratung',
+      servicesTitle: 'Was wir für Sie tun',
+      services: [
+        { title: 'Corporate Websites', desc: 'Professionelle Unternehmenswebsites mit modernem Design.' },
+        { title: 'E-Commerce & Shops', desc: 'Leistungsstarke Online-Shops für Ihr digitales Geschäft.' },
+        { title: 'Landing Pages', desc: 'Konversionsoptimierte Seiten für Kampagnen und Produkte.' },
+        { title: 'Web-Applikationen', desc: 'Komplexe Web-Apps mit individueller Funktionalität.' },
+        { title: 'CMS & Blog-Systeme', desc: 'Einfach zu pflegende Content-Management-Lösungen.' },
+        { title: 'Wartung & Support', desc: 'Laufende Betreuung, Updates und technischer Support.' }
+      ],
+      techTitle: 'Unsere Technologien',
+      benefitsTitle: 'Ihre Vorteile',
+      benefits: [
+        'Moderne, responsive Designs für alle Geräte',
+        'Schnelle Ladezeiten für bessere User Experience',
+        'SEO-optimierte Struktur für mehr Sichtbarkeit',
+        'Barrierefreie Gestaltung nach WCAG-Standards',
+        'Sichere und wartungsfreundliche Technologien'
+      ],
+      ctaTitle: 'Bereit für Ihre neue Website?',
+      ctaSubtitle: 'Lassen Sie uns eine digitale Präsenz schaffen, die Ihre Kunden begeistert.',
+      ctaButtonAlt: 'Jetzt Projekt starten'
+    },
   },
   en: {
     nav: {
@@ -1850,6 +1914,70 @@ export const translations = {
       ],
       viewAllFaqs: '→ View all FAQs'
     },
+    socialMediaPage: {
+      heroImageAlt: 'Social Media Agency Fürstenfeldbruck Munich',
+      badge: 'Social Media Agency Germany-Wide',
+      title: 'Social Media Marketing Nationwide',
+      subtitle: 'Strategic community management, viral campaigns, and professional content creation. We make your business visible on Instagram, TikTok, LinkedIn, and Facebook.',
+      ctaButton: 'Free Social Media Analysis',
+      servicesTitle: 'Social Media Services',
+      servicesSubtitle: 'Full-service social media marketing for businesses nationwide.',
+      services: [
+        { title: 'Social Media Strategy', desc: 'Individual strategy based on your goals and target audience – nationwide.' },
+        { title: 'Content Production', desc: 'Creative posts, stories, reels, and videos – professionally produced for maximum reach.' },
+        { title: 'Community Management', desc: 'Active management of your community with timely responses and engagement growth.' },
+        { title: 'Influencer Marketing', desc: 'Collaboration with suitable influencers for authentic reach.' },
+        { title: 'Paid Social Ads', desc: 'Targeted advertising campaigns on Meta, TikTok, and LinkedIn for more leads.' },
+        { title: 'Reporting & Analytics', desc: 'Monthly reports on performance, reach, and growth of your channels.' }
+      ],
+      platformsTitle: 'Platforms We Manage',
+      benefitsTitle: 'Your Benefits with Us as Social Media Agency',
+      benefits: [
+        'Professional presence on all relevant platforms',
+        'Growing community and higher engagement rates',
+        'More reach and visibility for your brand',
+        'Direct connection to your local target audience',
+        'Measurable results and transparent monthly reports'
+      ],
+      faqTitle: 'Frequently Asked Questions About Social Media Marketing',
+      faqs: [
+        { q: 'What does social media marketing cost?', a: 'Our packages start at €790/month for managing one channel. Complete multi-channel strategies with content production start at €1,490/month.' },
+        { q: 'How often should you post on social media?', a: 'It depends on the platform. For Instagram, we recommend 3-5 posts per week plus daily stories. For LinkedIn, 2-3 quality posts per week are sufficient.' },
+        { q: 'Which platform is best for my business?', a: 'We analyze this in a free initial consultation. B2B companies often benefit from LinkedIn, local service providers from Instagram and Google Business.' },
+        { q: 'Do you also create content for us?', a: 'Yes! We handle complete content production: texts, graphics, photos, and videos. On request also with on-site shoots.' }
+      ],
+      ctaTitle: 'Ready for Social Media Success?',
+      ctaSubtitle: 'Let us take your social media presence to the next level. Free initial analysis!',
+      ctaButtonAlt: 'Start Social Media Consultation Now'
+    },
+    webPage: {
+      heroImageAlt: 'Web Development Agency',
+      badge: 'Service',
+      title: 'Web & Digital Platforms',
+      subtitle: 'High-performance, visually stunning websites and web apps for the modern web – responsive, fast, and user-friendly.',
+      ctaButton: 'Free Consultation',
+      servicesTitle: 'What We Do For You',
+      services: [
+        { title: 'Corporate Websites', desc: 'Professional company websites with modern design.' },
+        { title: 'E-Commerce & Shops', desc: 'Powerful online shops for your digital business.' },
+        { title: 'Landing Pages', desc: 'Conversion-optimized pages for campaigns and products.' },
+        { title: 'Web Applications', desc: 'Complex web apps with individual functionality.' },
+        { title: 'CMS & Blog Systems', desc: 'Easy-to-maintain content management solutions.' },
+        { title: 'Maintenance & Support', desc: 'Ongoing support, updates, and technical assistance.' }
+      ],
+      techTitle: 'Our Technologies',
+      benefitsTitle: 'Your Benefits',
+      benefits: [
+        'Modern, responsive designs for all devices',
+        'Fast loading times for better user experience',
+        'SEO-optimized structure for more visibility',
+        'Accessible design according to WCAG standards',
+        'Secure and maintainable technologies'
+      ],
+      ctaTitle: 'Ready for Your New Website?',
+      ctaSubtitle: 'Let us create a digital presence that delights your customers.',
+      ctaButtonAlt: 'Start Project Now'
+    },
   },
   hr: {
     nav: {
@@ -2773,6 +2901,70 @@ export const translations = {
         { q: 'I za male tvrtke?', a: 'Apsolutno. Rješenja za svaki budžet.' }
       ],
       viewAllFaqs: '→ Pogledajte sva pitanja'
+    },
+    socialMediaPage: {
+      heroImageAlt: 'Agencija za društvene mreže Fürstenfeldbruck München',
+      badge: 'Agencija za društvene mreže diljem Njemačke',
+      title: 'Marketing na društvenim mrežama diljem Njemačke',
+      subtitle: 'Strateško upravljanje zajednicom, viralne kampanje i profesionalno kreiranje sadržaja. Činimo vaše poslovanje vidljivim na Instagramu, TikToku, LinkedInu i Facebooku.',
+      ctaButton: 'Besplatna analiza društvenih mreža',
+      servicesTitle: 'Usluge društvenih mreža',
+      servicesSubtitle: 'Full-service marketing na društvenim mrežama za tvrtke diljem Njemačke.',
+      services: [
+        { title: 'Strategija društvenih mreža', desc: 'Individualna strategija temeljena na vašim ciljevima i ciljnoj skupini – diljem Njemačke.' },
+        { title: 'Produkcija sadržaja', desc: 'Kreativne objave, priče, reels i videozapisi – profesionalno producirani za maksimalan doseg.' },
+        { title: 'Upravljanje zajednicom', desc: 'Aktivno upravljanje vašom zajednicom s pravodobnim odgovorima i povećanjem angažmana.' },
+        { title: 'Influencer marketing', desc: 'Suradnja s odgovarajućim influencerima za autentičan doseg.' },
+        { title: 'Plaćeni oglasi na društvenim mrežama', desc: 'Ciljane reklamne kampanje na Meti, TikToku i LinkedInu za više leadova.' },
+        { title: 'Izvještavanje i analitika', desc: 'Mjesečna izvješća o performansama, dosegu i rastu vaših kanala.' }
+      ],
+      platformsTitle: 'Platforme kojima upravljamo',
+      benefitsTitle: 'Vaše prednosti s nama kao agencijom za društvene mreže',
+      benefits: [
+        'Profesionalna prisutnost na svim relevantnim platformama',
+        'Rastuća zajednica i veće stope angažmana',
+        'Više dosega i vidljivosti za vašu marku',
+        'Direktna veza s vašom lokalnom ciljnom skupinom',
+        'Mjerljivi rezultati i transparentna mjesečna izvješća'
+      ],
+      faqTitle: 'Često postavljana pitanja o marketingu na društvenim mrežama',
+      faqs: [
+        { q: 'Koliko košta marketing na društvenim mrežama?', a: 'Naši paketi počinju od 790€/mjesečno za upravljanje jednim kanalom. Kompletne višekanalne strategije s produkcijom sadržaja počinju od 1.490€/mjesečno.' },
+        { q: 'Koliko često treba objavljivati na društvenim mrežama?', a: 'Ovisi o platformi. Za Instagram preporučujemo 3-5 objava tjedno plus dnevne priče. Za LinkedIn, 2-3 kvalitetne objave tjedno su dovoljne.' },
+        { q: 'Koja platforma je najbolja za moje poslovanje?', a: 'To analiziramo u besplatnom prvom razgovoru. B2B tvrtke često imaju koristi od LinkedIna, lokalni pružatelji usluga od Instagrama i Google Businessa.' },
+        { q: 'Stvarate li i sadržaj za nas?', a: 'Da! Preuzimamo kompletnu produkciju sadržaja: tekstove, grafike, fotografije i videozapise. Na zahtjev i sa snimanjima na lokaciji.' }
+      ],
+      ctaTitle: 'Spremni za uspjeh na društvenim mrežama?',
+      ctaSubtitle: 'Dopustite nam da podignemo vašu prisutnost na društvenim mrežama na višu razinu. Besplatna prva analiza!',
+      ctaButtonAlt: 'Započnite konzultacije za društvene mreže sada'
+    },
+    webPage: {
+      heroImageAlt: 'Agencija za web razvoj',
+      badge: 'Usluga',
+      title: 'Web i digitalne platforme',
+      subtitle: 'Visokoučinkovite, vizualno zadivljujuće web stranice i web aplikacije za moderni web – responzivne, brze i jednostavne za korištenje.',
+      ctaButton: 'Besplatna konzultacija',
+      servicesTitle: 'Što radimo za vas',
+      services: [
+        { title: 'Korporativne web stranice', desc: 'Profesionalne poslovne web stranice s modernim dizajnom.' },
+        { title: 'E-trgovina i trgovine', desc: 'Moćne online trgovine za vaše digitalno poslovanje.' },
+        { title: 'Landing stranice', desc: 'Stranice optimizirane za konverziju za kampanje i proizvode.' },
+        { title: 'Web aplikacije', desc: 'Složene web aplikacije s individualnom funkcionalnošću.' },
+        { title: 'CMS i blog sustavi', desc: 'Rješenja za upravljanje sadržajem jednostavna za održavanje.' },
+        { title: 'Održavanje i podrška', desc: 'Kontinuirana podrška, ažuriranja i tehnička pomoć.' }
+      ],
+      techTitle: 'Naše tehnologije',
+      benefitsTitle: 'Vaše prednosti',
+      benefits: [
+        'Moderni, responzivni dizajni za sve uređaje',
+        'Brza vremena učitavanja za bolje korisničko iskustvo',
+        'SEO-optimizirana struktura za veću vidljivost',
+        'Pristupačan dizajn prema WCAG standardima',
+        'Sigurne i održive tehnologije'
+      ],
+      ctaTitle: 'Spremni za svoju novu web stranicu?',
+      ctaSubtitle: 'Dopustite nam da stvorimo digitalnu prisutnost koja oduševljava vaše kupce.',
+      ctaButtonAlt: 'Započnite projekt sada'
     },
   },
 };
