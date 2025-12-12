@@ -777,6 +777,32 @@ export const translations = {
       ctaSubtitle: 'Lassen Sie uns gemeinsam eine Marke entwickeln, die Ihre Werte verkörpert und Ihre Zielgruppe begeistert.',
       ctaButtonAlt: 'Jetzt Projekt starten'
     },
+    contentPage: {
+      badge: 'Leistung',
+      title: 'Texting & Postings',
+      subtitle: 'Zielgruppengenaue Texte und kreative Social Media Posts, die Interaktion fördern, Ihre Botschaft transportieren und verkaufen.',
+      ctaButton: 'Kostenlose Beratung',
+      servicesTitle: 'Was wir für Sie tun',
+      services: [
+        { title: 'Social Media Posts', desc: 'Kreative, aufmerksamkeitsstarke Posts für alle Plattformen.' },
+        { title: 'Werbetexte', desc: 'Überzeugende Copy für Anzeigen, Landing Pages und Kampagnen.' },
+        { title: 'Blog-Artikel', desc: 'SEO-optimierte Fachartikel, die Expertise demonstrieren.' },
+        { title: 'Newsletter', desc: 'Ansprechende E-Mail-Texte mit hohen Öffnungs- und Klickraten.' },
+        { title: 'Website-Texte', desc: 'Verkaufsstarke Texte für Ihre gesamte Online-Präsenz.' },
+        { title: 'Content-Strategie', desc: 'Redaktionspläne und Themenkonzepte für kontinuierlichen Output.' }
+      ],
+      benefitsTitle: 'Ihre Vorteile',
+      benefits: [
+        'Professionelle Texte, die Ihre Zielgruppe ansprechen',
+        'Konsistente Markenstimme über alle Kanäle',
+        'Höhere Engagement-Raten durch relevanten Content',
+        'Zeitersparnis durch externe Content-Produktion',
+        'SEO-optimierte Inhalte für bessere Sichtbarkeit'
+      ],
+      ctaTitle: 'Bereit für Content, der wirkt?',
+      ctaSubtitle: 'Lassen Sie uns Inhalte erstellen, die Ihre Zielgruppe begeistern und zum Handeln bewegen.',
+      ctaButtonAlt: 'Jetzt Projekt starten'
+    },
     contactPage: {
       badge: 'Deutschlandweit für Sie da',
       title: 'Kontakt aufnehmen',
@@ -1607,6 +1633,32 @@ export const translations = {
       ctaSubtitle: 'Let\'s develop a brand together that embodies your values and inspires your target audience.',
       ctaButtonAlt: 'Start Project Now'
     },
+    contentPage: {
+      badge: 'Service',
+      title: 'Texting & Postings',
+      subtitle: 'Targeted copy and creative social media posts that drive engagement, convey your message, and sell.',
+      ctaButton: 'Free Consultation',
+      servicesTitle: 'What We Do For You',
+      services: [
+        { title: 'Social Media Posts', desc: 'Creative, attention-grabbing posts for all platforms.' },
+        { title: 'Advertising Copy', desc: 'Compelling copy for ads, landing pages, and campaigns.' },
+        { title: 'Blog Articles', desc: 'SEO-optimized expert articles that demonstrate expertise.' },
+        { title: 'Newsletters', desc: 'Engaging email copy with high open and click rates.' },
+        { title: 'Website Copy', desc: 'Sales-driven copy for your entire online presence.' },
+        { title: 'Content Strategy', desc: 'Editorial plans and topic concepts for continuous output.' }
+      ],
+      benefitsTitle: 'Your Benefits',
+      benefits: [
+        'Professional copy that speaks to your target audience',
+        'Consistent brand voice across all channels',
+        'Higher engagement rates through relevant content',
+        'Time savings through external content production',
+        'SEO-optimized content for better visibility'
+      ],
+      ctaTitle: 'Ready for Content That Works?',
+      ctaSubtitle: 'Let us create content that excites your target audience and moves them to action.',
+      ctaButtonAlt: 'Start Project Now'
+    },
     contactPage: {
       badge: 'Nationwide at Your Service',
       title: 'Get in Touch',
@@ -2435,6 +2487,32 @@ export const translations = {
       ],
       ctaTitle: 'Spremni za vaš snažan brend?',
       ctaSubtitle: 'Razvijmo zajedno brend koji utjelovljuje vaše vrijednosti i oduševljava vašu ciljanu publiku.',
+      ctaButtonAlt: 'Započnite projekt sada'
+    },
+    contentPage: {
+      badge: 'Usluga',
+      title: 'Tekstovi i objave',
+      subtitle: 'Ciljani tekstovi i kreativne objave na društvenim mrežama koje potiču interakciju, prenose vašu poruku i prodaju.',
+      ctaButton: 'Besplatna konzultacija',
+      servicesTitle: 'Što radimo za vas',
+      services: [
+        { title: 'Objave na društvenim mrežama', desc: 'Kreativne, pažnju privlačne objave za sve platforme.' },
+        { title: 'Reklamni tekstovi', desc: 'Uvjerljivi tekstovi za oglase, landing stranice i kampanje.' },
+        { title: 'Blog članci', desc: 'SEO-optimizirani stručni članci koji demonstriraju ekspertizu.' },
+        { title: 'Newsletteri', desc: 'Privlačni e-mail tekstovi s visokim stopama otvaranja i klikanja.' },
+        { title: 'Tekstovi za web stranice', desc: 'Prodajni tekstovi za vašu cjelokupnu online prisutnost.' },
+        { title: 'Content strategija', desc: 'Urednički planovi i koncepti tema za kontinuirani output.' }
+      ],
+      benefitsTitle: 'Vaše prednosti',
+      benefits: [
+        'Profesionalni tekstovi koji se obraćaju vašoj ciljanoj publici',
+        'Dosljedan glas brenda na svim kanalima',
+        'Više stope angažmana kroz relevantan sadržaj',
+        'Ušteda vremena kroz vanjsku proizvodnju sadržaja',
+        'SEO-optimizirani sadržaji za bolju vidljivost'
+      ],
+      ctaTitle: 'Spremni za sadržaj koji djeluje?',
+      ctaSubtitle: 'Dopustite nam da kreiramo sadržaj koji oduševljava vašu ciljanu publiku i potiče ih na akciju.',
       ctaButtonAlt: 'Započnite projekt sada'
     },
     contactPage: {

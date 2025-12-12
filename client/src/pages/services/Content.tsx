@@ -4,8 +4,11 @@ import { Button } from "@/components/ui/button";
 import { PenTool, Check, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import contentImg from "@assets/generated_images/abstract_content_creation_visualization.png";
+import { useLanguage } from "@/lib/i18n";
 
 export default function Content() {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <Navbar />
@@ -24,17 +27,16 @@ export default function Content() {
             >
               <div className="flex items-center gap-3 mb-6">
                 <PenTool className="w-12 h-12 text-pink-400" />
-                <span className="text-pink-400 font-semibold">Leistung</span>
+                <span className="text-pink-400 font-semibold">{t.contentPage.badge}</span>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold font-display text-white mb-6">
-                Texting & Postings
+                {t.contentPage.title}
               </h1>
               <p className="text-xl text-gray-400 mb-8">
-                Zielgruppengenaue Texte und kreative Social Media Posts, die Interaktion 
-                fördern, Ihre Botschaft transportieren und verkaufen.
+                {t.contentPage.subtitle}
               </p>
               <Button size="lg" className="bg-pink-500 hover:bg-pink-600 text-white" data-testid="button-contact-content">
-                Kostenlose Beratung <ArrowRight className="ml-2 h-5 w-5" />
+                {t.contentPage.ctaButton} <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </motion.div>
           </div>
@@ -43,16 +45,9 @@ export default function Content() {
         {/* Leistungsumfang */}
         <section className="py-16 bg-card/20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold font-display text-white mb-12 text-center">Was wir für Sie tun</h2>
+            <h2 className="text-3xl font-bold font-display text-white mb-12 text-center">{t.contentPage.servicesTitle}</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                { title: "Social Media Posts", desc: "Kreative, aufmerksamkeitsstarke Posts für alle Plattformen." },
-                { title: "Werbetexte", desc: "Überzeugende Copy für Anzeigen, Landing Pages und Kampagnen." },
-                { title: "Blog-Artikel", desc: "SEO-optimierte Fachartikel, die Expertise demonstrieren." },
-                { title: "Newsletter", desc: "Ansprechende E-Mail-Texte mit hohen Öffnungs- und Klickraten." },
-                { title: "Website-Texte", desc: "Verkaufsstarke Texte für Ihre gesamte Online-Präsenz." },
-                { title: "Content-Strategie", desc: "Redaktionspläne und Themenkonzepte für kontinuierlichen Output." }
-              ].map((item, i) => (
+              {t.contentPage.services.map((item, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
@@ -74,15 +69,9 @@ export default function Content() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold font-display text-white mb-8">Ihre Vorteile</h2>
+              <h2 className="text-3xl font-bold font-display text-white mb-8">{t.contentPage.benefitsTitle}</h2>
               <div className="space-y-4 text-left">
-                {[
-                  "Professionelle Texte, die Ihre Zielgruppe ansprechen",
-                  "Konsistente Markenstimme über alle Kanäle",
-                  "Höhere Engagement-Raten durch relevanten Content",
-                  "Zeitersparnis durch externe Content-Produktion",
-                  "SEO-optimierte Inhalte für bessere Sichtbarkeit"
-                ].map((item, i) => (
+                {t.contentPage.benefits.map((item, i) => (
                   <div key={i} className="flex items-center gap-3 p-4 rounded-lg bg-card/30">
                     <Check className="w-5 h-5 text-pink-400 flex-shrink-0" />
                     <span className="text-gray-300">{item}</span>
@@ -96,12 +85,12 @@ export default function Content() {
         {/* CTA */}
         <section className="py-16 bg-gradient-to-r from-pink-900/20 to-purple-900/20">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold font-display text-white mb-4">Bereit für Content, der wirkt?</h2>
+            <h2 className="text-3xl font-bold font-display text-white mb-4">{t.contentPage.ctaTitle}</h2>
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-              Lassen Sie uns Inhalte erstellen, die Ihre Zielgruppe begeistern und zum Handeln bewegen.
+              {t.contentPage.ctaSubtitle}
             </p>
             <Button size="lg" className="bg-pink-500 hover:bg-pink-600 text-white" data-testid="button-cta-content">
-              Jetzt Projekt starten <ArrowRight className="ml-2 h-5 w-5" />
+              {t.contentPage.ctaButtonAlt} <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
         </section>
