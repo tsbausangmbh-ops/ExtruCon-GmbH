@@ -205,6 +205,7 @@ export const translations = {
       step1: { title: '1. Lokale Dominanz durch Geo-SEO', desc: 'Wir analysieren Ihren Standort und Ihre Zielregion in ganz Deutschland. Durch lokales SEO und Geo-Targeting stellen wir sicher, dass Sie bei Google Maps und der lokalen Suche ganz oben erscheinen.' },
       step2: { title: '2. Qualifizierte Leads durch Content-Strategie', desc: 'Nicht jeder Besucher ist ein Kunde. Unser Content-Funnel filtert Interessenten durch hochwertige, SEO-optimierte Inhalte, sodass nur qualifizierte Leads übrig bleiben.' },
       step3: { title: '3. Automatisierte Conversion mit KI', desc: 'Das finale Stück des Trichters: Ihre Webseite konvertiert Besucher automatisch in zahlende Kunden oder vereinbart Termine – unterstützt durch unsere intelligenten KI-Chatbots und Automatisierungen.' },
+      funnelLabels: { seo: 'SEO & Traffic', geo: 'Geo-Targeting', conversion: 'Conversion & Sales' },
       whyTrust: 'Warum Unternehmen uns vertrauen',
       trust: [
         { title: 'Deutschlandweite Expertise', desc: 'Wir betreuen Kunden in ganz Deutschland' },
@@ -441,6 +442,7 @@ export const translations = {
       step1: { title: '1. Local Dominance through Geo-SEO', desc: 'We analyze your location and target region across Germany. Through local SEO and geo-targeting, we ensure you appear at the top of Google Maps and local search.' },
       step2: { title: '2. Qualified Leads through Content Strategy', desc: 'Not every visitor is a customer. Our content funnel filters prospects through high-quality, SEO-optimized content, leaving only qualified leads.' },
       step3: { title: '3. Automated Conversion with AI', desc: 'The final piece of the funnel: Your website automatically converts visitors into paying customers or books appointments – supported by our intelligent AI chatbots and automations.' },
+      funnelLabels: { seo: 'SEO & Traffic', geo: 'Geo-Targeting', conversion: 'Conversion & Sales' },
       whyTrust: 'Why Companies Trust Us',
       trust: [
         { title: 'Germany-wide Expertise', desc: 'We serve clients throughout Germany' },
@@ -677,6 +679,7 @@ export const translations = {
       step1: { title: '1. Lokalna dominacija kroz Geo-SEO', desc: 'Analiziramo vašu lokaciju i ciljanu regiju diljem Njemačke. Kroz lokalni SEO i geo-targeting osiguravamo da se pojavljujete na vrhu Google Maps i lokalne pretrage.' },
       step2: { title: '2. Kvalificirani leadovi kroz strategiju sadržaja', desc: 'Nije svaki posjetitelj kupac. Naš content funnel filtrira potencijalne klijente kroz visokokvalitetan, SEO-optimiziran sadržaj, ostavljajući samo kvalificirane leadove.' },
       step3: { title: '3. Automatizirana konverzija s AI', desc: 'Posljednji dio funnela: Vaša web stranica automatski pretvara posjetitelje u kupce ili rezervira termine – uz podršku naših inteligentnih AI chatbotova i automatizacija.' },
+      funnelLabels: { seo: 'SEO i promet', geo: 'Geo-ciljanje', conversion: 'Konverzija i prodaja' },
       whyTrust: 'Zašto nam tvrtke vjeruju',
       trust: [
         { title: 'Ekspertiza diljem Njemačke', desc: 'Opslužujemo klijente diljem Njemačke' },

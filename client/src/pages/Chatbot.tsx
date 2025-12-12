@@ -4,6 +4,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { useState, useRef, useEffect } from "react";
 import { Send, Bot, User, Loader2, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "@/lib/i18n";
 
 interface Message {
   role: "user" | "assistant";
@@ -15,6 +16,7 @@ export default function Chatbot() {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -44,10 +46,10 @@ export default function Chatbot() {
       if (response.ok) {
         setMessages(prev => [...prev, { role: "assistant", content: data.message }]);
       } else {
-        setMessages(prev => [...prev, { role: "assistant", content: "Entschuldigung, ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut." }]);
+        setMessages(prev => [...prev, { role: "assistant", content: t.chatbotPage.errorMsg }]);
       }
     } catch (error) {
-      setMessages(prev => [...prev, { role: "assistant", content: "Verbindungsfehler. Bitte überprüfen Sie Ihre Internetverbindung." }]);
+      setMessages(prev => [...prev, { role: "assistant", content: t.chatbotPage.connectionError }]);
     } finally {
       setIsLoading(false);
     }
@@ -74,33 +76,26 @@ export default function Chatbot() {
           <div className="container mx-auto px-4 text-center">
             <div className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-4">
               <Sparkles className="w-4 h-4" />
-              Live-Demo: KI-Assistent
+              {t.chatbotPage.badge}
             </div>
             <h1 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
-              Testen Sie unseren <span className="text-gradient">KI-Assistenten</span>
+              {t.chatbotPage.title} <span className="text-gradient">{t.chatbotPage.titleHighlight}</span>
             </h1>
             <p className="text-gray-400 max-w-2xl mx-auto mb-6">
-              Erleben Sie live, wie ein intelligenter KI-Agent funktioniert. Dieser Bot ist ein Beispiel dafür, 
-              was wir für Ihr Unternehmen entwickeln können – individuell angepasst an Ihre Branche und Bedürfnisse.
+              {t.chatbotPage.subtitle}
             </p>
             
             <div className="grid md:grid-cols-3 gap-4 max-w-3xl mx-auto mb-6">
-              <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-left">
-                <div className="text-primary font-bold mb-1">Sofortige Antworten</div>
-                <p className="text-gray-400 text-sm">24/7 verfügbar, beantwortet Kundenfragen in Sekunden statt Stunden.</p>
-              </div>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-left">
-                <div className="text-primary font-bold mb-1">Lernfähig</div>
-                <p className="text-gray-400 text-sm">Kann auf Ihre Produkte, Services und FAQs trainiert werden.</p>
-              </div>
-              <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-left">
-                <div className="text-primary font-bold mb-1">Entlastung für Ihr Team</div>
-                <p className="text-gray-400 text-sm">Übernimmt wiederkehrende Anfragen – Ihr Team fokussiert auf Wichtiges.</p>
-              </div>
+              {t.chatbotPage.features.map((feature, i) => (
+                <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-4 text-left">
+                  <div className="text-primary font-bold mb-1">{feature.title}</div>
+                  <p className="text-gray-400 text-sm">{feature.desc}</p>
+                </div>
+              ))}
             </div>
             
             <p className="text-sm text-gray-500">
-              Stellen Sie Fragen zu unseren Leistungen: KI-Agenten, Automatisierungen, Webseiten mit KI, Marketing & mehr.
+              {t.chatbotPage.askAbout}
             </p>
           </div>
         </section>
@@ -113,12 +108,12 @@ export default function Chatbot() {
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                     <Bot className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-lg font-medium text-white mb-2">Willkommen!</h3>
+                  <h3 className="text-lg font-medium text-white mb-2">{t.chatbotPage.welcome}</h3>
                   <p className="text-gray-400 text-sm max-w-sm">
-                    Stellen Sie mir eine Frage zu unseren Leistungen: KI-Agenten, Automatisierungen, Webseiten mit KI und mehr.
+                    {t.chatbotPage.welcomeMsg}
                   </p>
                   <div className="flex flex-wrap gap-2 mt-4 justify-center">
-                    {["Was sind KI-Agenten?", "Wie funktioniert Automatisierung?", "Was kostet eine Website?"].map((suggestion) => (
+                    {t.chatbotPage.suggestions.map((suggestion) => (
                       <button
                         key={suggestion}
                         onClick={() => setInput(suggestion)}
@@ -189,7 +184,7 @@ export default function Chatbot() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder="Ihre Frage eingeben..."
+              placeholder={t.chatbotPage.placeholder}
               className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-primary/50 transition-colors"
               disabled={isLoading}
               data-testid="input-chat"

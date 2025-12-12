@@ -7,66 +7,69 @@ import brandImg from "@assets/generated_images/abstract_digital_brand_identity_c
 import contentImg from "@assets/generated_images/abstract_content_creation_visualization.png";
 import marketingImg from "@assets/generated_images/abstract_performance_marketing_growth.png";
 import { motion } from "framer-motion";
-
-const services = [
-  {
-    title: "Markenaufbau / Brand",
-    description: "Entwicklung unverwechselbarer Markenidentitäten, die Vertrauen schaffen und im Gedächtnis bleiben.",
-    icon: Fingerprint,
-    image: brandImg,
-    color: "text-amber-400",
-    href: "/leistungen/markenaufbau"
-  },
-  {
-    title: "Texting & Postings",
-    description: "Zielgruppengenaue Texte und kreative Social Media Posts, die Interaktion fördern und verkaufen.",
-    icon: PenTool,
-    image: contentImg,
-    color: "text-pink-400",
-    href: "/leistungen/content"
-  },
-  {
-    title: "Social Media",
-    description: "Strategisches Community-Management und virale Kampagnen, um Ihr Publikum auf allen Kanälen zu binden.",
-    icon: Share2,
-    image: socialImg,
-    color: "text-purple-400",
-    href: "/leistungen/social-media"
-  },
-  {
-    title: "KI & Automatisierung",
-    description: "Maßgeschneiderte KI-Bots und intelligente Automatisierungs-Workflows zur Optimierung Ihrer Abläufe rund um die Uhr.",
-    icon: Bot,
-    image: aiImg,
-    color: "text-cyan-400",
-    href: "/leistungen/ki-automatisierung"
-  },
-  {
-    title: "Web & Digitale Plattformen",
-    description: "Hochleistungsfähige, visuell beeindruckende Webseiten und Web-Apps für das moderne Web.",
-    icon: Globe,
-    image: webImg,
-    color: "text-blue-400",
-    href: "/leistungen/web"
-  },
-  {
-    title: "Performance Marketing",
-    description: "Datengetriebene Kampagnen und SEO-Strategien für messbares Wachstum und maximale Sichtbarkeit.",
-    icon: TrendingUp,
-    image: marketingImg,
-    color: "text-orange-400",
-    href: "/leistungen/marketing"
-  }
-];
+import { useLanguage } from "@/lib/i18n";
 
 export function Services() {
+  const { t } = useLanguage();
+
+  const services = [
+    {
+      title: t.servicesPage.brand.title,
+      description: t.servicesPage.brand.desc,
+      icon: Fingerprint,
+      image: brandImg,
+      color: "text-amber-400",
+      href: "/leistungen/markenaufbau"
+    },
+    {
+      title: t.servicesPage.content.title,
+      description: t.servicesPage.content.desc,
+      icon: PenTool,
+      image: contentImg,
+      color: "text-pink-400",
+      href: "/leistungen/content"
+    },
+    {
+      title: t.servicesPage.social.title,
+      description: t.servicesPage.social.desc,
+      icon: Share2,
+      image: socialImg,
+      color: "text-purple-400",
+      href: "/leistungen/social-media"
+    },
+    {
+      title: t.servicesPage.ki.title,
+      description: t.servicesPage.ki.desc,
+      icon: Bot,
+      image: aiImg,
+      color: "text-cyan-400",
+      href: "/leistungen/ki-automatisierung"
+    },
+    {
+      title: t.servicesPage.web.title,
+      description: t.servicesPage.web.desc,
+      icon: Globe,
+      image: webImg,
+      color: "text-blue-400",
+      href: "/leistungen/web"
+    },
+    {
+      title: t.servicesPage.marketing.title,
+      description: t.servicesPage.marketing.desc,
+      icon: TrendingUp,
+      image: marketingImg,
+      color: "text-orange-400",
+      href: "/leistungen/marketing"
+    }
+  ];
+
   return (
     <section id="services" className="py-8 bg-background relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-6">
-          <h2 className="text-3xl md:text-5xl font-bold font-display text-white mb-4">Unsere Leistungen</h2>
+          <h2 className="text-3xl md:text-5xl font-bold font-display text-white mb-4">{t.servicesPage.title}</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Umfassende digitale Lösungen, von starkem Branding bis zu modernster KI-Technologie.
+            {t.servicesPage.subtitle}
           </p>
         </div>
 

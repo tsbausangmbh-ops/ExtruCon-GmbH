@@ -1,7 +1,22 @@
 import { AlertTriangle, SearchX, TrendingDown, ArrowDown, Clock, Users, Brain } from "lucide-react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/lib/i18n";
 
 export function Problem() {
+  const { t } = useLanguage();
+
+  const problemsRow1 = [
+    { icon: Clock, ...t.problemSection.routine, delay: 0 },
+    { icon: Users, ...t.problemSection.leads, delay: 0.1 },
+    { icon: TrendingDown, ...t.problemSection.marketing, delay: 0.2 },
+  ];
+
+  const problemsRow2 = [
+    { icon: SearchX, ...t.problemSection.google, delay: 0.3 },
+    { icon: Brain, ...t.problemSection.innovation, delay: 0.4 },
+    { icon: AlertTriangle, ...t.problemSection.processes, delay: 0.5 },
+  ];
+
   return (
     <section className="py-12 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
@@ -12,42 +27,16 @@ export function Problem() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
-              Kennen Sie diese <span className="text-red-500">Herausforderungen?</span>
+              {t.problemSection.title} <span className="text-red-500">{t.problemSection.titleHighlight}</span>
             </h2>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              Die meisten Unternehmen kämpfen mit denselben Problemen – 
-              und verschwenden dabei wertvolle Zeit und Ressourcen.
+              {t.problemSection.subtitle}
             </p>
           </motion.div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          {[
-            {
-              icon: Clock,
-              title: "Zeitfresser Routineaufgaben",
-              problem: "Das Problem:",
-              desc: "80% Ihrer Arbeitszeit fließt in wiederkehrende Aufgaben: E-Mails beantworten, Daten eingeben, Reports erstellen.",
-              solution: "Die Lösung: KI-Agenten automatisieren diese Aufgaben – 24/7, ohne Fehler.",
-              delay: 0
-            },
-            {
-              icon: Users,
-              title: "Leads gehen verloren",
-              problem: "Das Problem:",
-              desc: "Kundenanfragen werden zu spät beantwortet. Interessenten springen ab, weil niemand sofort reagiert.",
-              solution: "Die Lösung: Chatbots qualifizieren Leads sofort und buchen automatisch Termine.",
-              delay: 0.1
-            },
-            {
-              icon: TrendingDown,
-              title: "Marketing ohne Ergebnis",
-              problem: "Das Problem:",
-              desc: "Sie investieren in Werbung, aber die Conversion-Rate bleibt niedrig. Der ROI ist unklar.",
-              solution: "Die Lösung: Datengetriebenes Marketing mit KI-Analyse zeigt, was wirklich funktioniert.",
-              delay: 0.2
-            }
-          ].map((item, i) => (
+          {problemsRow1.map((item, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
@@ -68,32 +57,7 @@ export function Problem() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {[
-            {
-              icon: SearchX,
-              title: "Unsichtbar bei Google",
-              problem: "Das Problem:",
-              desc: "Ihre Website existiert, aber lokale Kunden aus München, Fürstenfeldbruck und Bayern finden Sie nicht. Konkurrenten ranken vor Ihnen – regional und deutschlandweit.",
-              solution: "Die Lösung: Local SEO & Geo-Targeting mit KI-gestützter Content-Strategie für maximale regionale Sichtbarkeit.",
-              delay: 0.3
-            },
-            {
-              icon: Brain,
-              title: "Keine Zeit für Innovation",
-              problem: "Das Problem:",
-              desc: "Das Tagesgeschäft frisst alle Kapazitäten. Für strategische Projekte bleibt keine Zeit.",
-              solution: "Die Lösung: Automatisierung schafft Freiräume für echte Wertschöpfung.",
-              delay: 0.4
-            },
-            {
-              icon: AlertTriangle,
-              title: "Veraltete Prozesse",
-              problem: "Das Problem:",
-              desc: "Manuelle Prozesse sind fehleranfällig und skalieren nicht. Wachstum wird zur Belastung.",
-              solution: "Die Lösung: n8n-Workflows verbinden Ihre Tools und automatisieren Prozesse.",
-              delay: 0.5
-            }
-          ].map((item, i) => (
+          {problemsRow2.map((item, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
@@ -121,7 +85,7 @@ export function Problem() {
                 transition={{ delay: 0.6 }}
                 className="flex flex-col items-center gap-4"
             >
-                <p className="text-lg font-medium text-white">Bereit für die Lösung?</p>
+                <p className="text-lg font-medium text-white">{t.problemSection.ready}</p>
                 <ArrowDown className="w-8 h-8 text-primary animate-bounce" />
             </motion.div>
         </div>
