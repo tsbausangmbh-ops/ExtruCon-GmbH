@@ -17,8 +17,8 @@ const services = [
     color: "text-amber-400"
   },
   {
-    title: "Buchhaltung & Büroservice",
-    description: "Effiziente Büroorganisation und digitale Buchhaltungslösungen, damit Sie sich auf Ihr Kerngeschäft konzentrieren können.",
+    title: "Büroservice",
+    description: "Professionelle Büroorganisation und administrative Unterstützung, damit Sie sich auf Ihr Kerngeschäft konzentrieren können.",
     icon: Briefcase,
     image: officeImg,
     color: "text-emerald-400"
@@ -45,7 +45,7 @@ const services = [
     color: "text-blue-400"
   },
   {
-    title: "Texte & Postings",
+    title: "Texting und Postings",
     description: "Zielgruppengenaue Texte und kreative Social Media Posts, die Interaktion fördern und verkaufen.",
     icon: PenTool,
     image: contentImg,
