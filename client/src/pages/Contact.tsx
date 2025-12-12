@@ -228,50 +228,83 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  {/* Map and FAQ side by side */}
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {/* Map */}
-                    <div className="p-5 rounded-xl bg-card/30 border border-white/10">
-                      <h3 className="font-bold text-white mb-3">Standort</h3>
-                      <div className="aspect-video rounded-lg bg-white/5 flex items-center justify-center overflow-hidden">
-                        <iframe
-                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.5!2d11.2546!3d48.1789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDEwJzQ0LjAiTiAxMcKwMTUnMTYuNiJF!5e0!3m2!1sde!2sde!4v1234567890"
-                          width="100%"
-                          height="100%"
-                          style={{ border: 0, minHeight: "180px" }}
-                          allowFullScreen
-                          loading="lazy"
-                          referrerPolicy="no-referrer-when-downgrade"
-                          title="ExtruCon GmbH Standort"
-                        />
-                      </div>
-                      <p className="text-sm text-gray-500 mt-2">
-                        Deutschlandweiter Service
-                      </p>
-                    </div>
+                  </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
 
-                    {/* FAQ */}
-                    <div className="p-5 rounded-xl bg-card/30 border border-white/10">
-                      <h3 className="font-bold text-white mb-3">Häufige Fragen</h3>
-                      <div className="space-y-3">
-                        {[
-                          { q: "Wie schnell erhalte ich eine Antwort?", a: "Innerhalb von 24 Stunden an Werktagen." },
-                          { q: "Kostenlose Erstgespräche?", a: "Ja! Immer kostenlos und unverbindlich." },
-                          { q: "Auch für kleine Unternehmen?", a: "Absolut. Lösungen für jedes Budget." }
-                        ].map((faq, i) => (
-                          <div key={i} className="text-sm">
-                            <p className="font-medium text-white">{faq.q}</p>
-                            <p className="text-gray-400">{faq.a}</p>
-                          </div>
-                        ))}
-                        <a href="/faq" className="text-primary text-sm hover:underline inline-block mt-2">
-                          → Alle FAQs ansehen
-                        </a>
-                      </div>
-                    </div>
+        {/* Standort & Map - Full Width */}
+        <section className="py-8 bg-card/20">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Standort Info */}
+              <div className="p-6 rounded-xl bg-card/30 border border-white/10">
+                <h3 className="text-xl font-bold text-white mb-4">Unser Standort</h3>
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-lg text-white font-medium">ExtruCon GmbH</p>
+                    <p className="text-gray-400">Hasenheide 8</p>
+                    <p className="text-gray-400">82256 Fürstenfeldbruck</p>
+                  </div>
+                  <div className="pt-4 border-t border-white/10">
+                    <p className="text-primary font-medium mb-2">Deutschlandweiter Service</p>
+                    <p className="text-gray-400 text-sm">
+                      Unser Hauptsitz ist in Fürstenfeldbruck bei München. 
+                      Wir betreuen Kunden in ganz Deutschland – remote und vor Ort.
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    <span className="px-3 py-1 rounded-full bg-white/5 text-gray-400 text-xs">Bayern</span>
+                    <span className="px-3 py-1 rounded-full bg-white/5 text-gray-400 text-xs">NRW</span>
+                    <span className="px-3 py-1 rounded-full bg-white/5 text-gray-400 text-xs">Baden-Württemberg</span>
+                    <span className="px-3 py-1 rounded-full bg-white/5 text-gray-400 text-xs">Berlin</span>
+                    <span className="px-3 py-1 rounded-full bg-white/5 text-gray-400 text-xs">Hamburg</span>
+                    <span className="px-3 py-1 rounded-full bg-white/5 text-gray-400 text-xs">+ alle Bundesländer</span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
+
+              {/* Map */}
+              <div className="p-6 rounded-xl bg-card/30 border border-white/10">
+                <h3 className="text-xl font-bold text-white mb-4">Karte</h3>
+                <div className="rounded-lg bg-white/5 overflow-hidden" style={{ height: "280px" }}>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.5!2d11.2546!3d48.1789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDEwJzQ0LjAiTiAxMcKwMTUnMTYuNiJF!5e0!3m2!1sde!2sde!4v1234567890"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="ExtruCon GmbH Standort"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-8">
+          <div className="container mx-auto px-4">
+            <h2 className="text-xl font-bold text-white mb-6 text-center">Häufige Fragen</h2>
+            <div className="max-w-2xl mx-auto grid md:grid-cols-3 gap-4">
+              {[
+                { q: "Wie schnell erhalte ich eine Antwort?", a: "Innerhalb von 24 Stunden an Werktagen." },
+                { q: "Kostenlose Erstgespräche?", a: "Ja! Immer kostenlos und unverbindlich." },
+                { q: "Auch für kleine Unternehmen?", a: "Absolut. Lösungen für jedes Budget." }
+              ].map((faq, i) => (
+                <div key={i} className="p-4 rounded-xl bg-card/30 border border-white/5 text-center">
+                  <p className="font-medium text-white text-sm mb-1">{faq.q}</p>
+                  <p className="text-gray-400 text-xs">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-4">
+              <a href="/faq" className="text-primary text-sm hover:underline">
+                → Alle FAQs ansehen
+              </a>
             </div>
           </div>
         </section>
