@@ -85,6 +85,15 @@ const articles = [
     readTime: "12 Min.",
     date: "22. November 2025",
     featured: false
+  },
+  {
+    id: 9,
+    title: "Responsive Webdesign: Mobile First im Jahr 2025",
+    excerpt: "Warum Mobile-First-Design heute Standard ist und wie Sie Ihre Website für alle Geräte optimieren.",
+    category: "web",
+    readTime: "6 Min.",
+    date: "19. November 2025",
+    featured: false
   }
 ];
 
