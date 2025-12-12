@@ -668,6 +668,198 @@ export const translations = {
       errorMsg: 'Sorry, an error occurred. Please try again.',
       connectionError: 'Connection error. Please check your internet connection.',
     },
+    kiAgentsPage: {
+      badge: 'AI Agents for Your Business',
+      title: 'Intelligent Agents That Work for You',
+      subtitle: 'Our AI agents automate routine tasks, answer customer inquiries, and analyze data – so you can focus on your core business.',
+      ctaPrimary: 'Free Consultation',
+      ctaSecondary: 'Discover Agents',
+      stats: { timeSaving: 'Time Savings', availability: 'Availability', integrations: 'Integrations', responseTime: 'Response Time' },
+      whyTitle: 'Why AI Agents?',
+      whySubtitle: 'The benefits of intelligent automation for your business.',
+      agentsTitle: 'Our 8 AI Agents',
+      agentsSubtitle: 'Each agent specializes in specific tasks and can be customized to your business processes.',
+      typicalApps: 'Typical Applications:',
+      useCasesTitle: 'Use Cases',
+      useCasesSubtitle: 'AI agents support you across all business areas.',
+      howTitle: 'How It Works',
+      howSubtitle: 'In 5 steps to your custom AI agent.',
+      techTitle: 'Our Technologies',
+      techSubtitle: 'We use the most advanced AI technologies for your agents.',
+      pricingTitle: 'Transparent Pricing',
+      pricingSubtitle: 'No hidden costs – you know from the start what your agent will cost.',
+      faqTitle: 'Frequently Asked Questions About AI Agents',
+      ctaTitle: 'Ready for Your Own AI Agent?',
+      ctaSubtitle: 'Let\'s discuss how AI agents can transform your business. Free initial consultation with no risk.',
+      agents: [
+        { title: 'Customer Service Agent', description: 'Automated answering of customer inquiries around the clock. The agent understands context, answers FAQs, and intelligently routes complex cases to staff.', features: ['24/7 Available', 'Multilingual', 'Learning', 'CRM Integration'], useCases: ['Website Live Chat', 'Email Support', 'WhatsApp Business', 'Facebook Messenger'] },
+        { title: 'Analytics Agent', description: 'Automatic evaluation of marketing data, report creation, and recommendations based on AI analysis of your business metrics.', features: ['Real-time Data', 'Automatic Reports', 'Trend Detection', 'ROI Tracking'], useCases: ['Google Analytics Evaluation', 'Social Media Insights', 'Campaign Performance', 'Revenue Forecasts'] },
+        { title: 'Automation Agent', description: 'Connects your tools and automates workflows – from lead capture to email sending to invoicing. Based on n8n for maximum flexibility.', features: ['n8n-based', '500+ Integrations', 'No Coding Skills Needed', 'Scalable'], useCases: ['Lead Nurturing', 'Invoice Automation', 'Data Synchronization', 'Notifications'] },
+        { title: 'Content Agent', description: 'Generates social media posts, blog articles, and marketing copy in your brand style – with human quality control for perfect results.', features: ['Brand-Compliant', 'SEO-Optimized', 'Multi-Platform', 'Fast Creation'], useCases: ['Social Media Posts', 'Blog Articles', 'Newsletter Copy', 'Product Descriptions'] },
+        { title: 'Email Agent', description: 'Intelligent email automation with personalized responses, automatic categorization, and prioritization of incoming messages.', features: ['Auto-Categorization', 'Personalized Responses', 'Spam Filter', 'Follow-up Reminders'], useCases: ['Inbox Management', 'Newsletter Sending', 'Appointment Requests', 'Quote Sending'] },
+        { title: 'Appointment Agent', description: 'Automates your scheduling: coordinates availability, sends reminders, and manages cancellations or rescheduling independently.', features: ['Calendar Sync', 'Automatic Reminders', 'Timezone Management', 'Conflict Resolution'], useCases: ['Client Meetings', 'Team Meetings', 'Webinar Bookings', 'Service Hours'] },
+        { title: 'E-Commerce Agent', description: 'Supports customers with shopping, answers product questions, tracks orders, and handles return requests automatically.', features: ['Product Advice', 'Order Status', 'Return Handling', 'Upselling'], useCases: ['Shop Assistance', 'Cart Abandonment', 'Size Advice', 'Delivery Tracking'] },
+        { title: 'Document Agent', description: 'Processes documents automatically: extracts data from PDFs, categorizes files, and creates structured summaries.', features: ['PDF Extraction', 'OCR Recognition', 'Auto-Categorization', 'Data Export'], useCases: ['Invoice Processing', 'Contract Analysis', 'Application Management', 'Archiving'] }
+      ],
+      benefits: [
+        { title: 'Save Time', description: 'Up to 80% less manual work through intelligent automation.' },
+        { title: 'Respond Faster', description: 'Instant responses and actions – 24 hours a day, 7 days a week.' },
+        { title: 'Reduce Errors', description: 'Consistent quality without human careless mistakes.' },
+        { title: 'Relieve Your Team', description: 'Employees can focus on value-adding tasks.' },
+        { title: 'Scale Growth', description: 'Agents grow with your company – without additional staff.' },
+        { title: 'Leverage Data', description: 'Transform data into actionable insights and better decisions.' }
+      ],
+      useCaseCategories: [
+        { title: 'Customer Service', examples: ['Automatic answering of FAQ inquiries', '24/7 chat support on your website', 'Ticket categorization and prioritization', 'Multilingual support at no extra cost'] },
+        { title: 'Marketing & Sales', examples: ['Lead qualification and scoring', 'Personalized email campaigns', 'Social media content creation', 'Automatic quote generation'] },
+        { title: 'Operations', examples: ['Automatic invoice processing', 'Scheduling and resource management', 'Document analysis and extraction', 'Workflow automation between tools'] }
+      ],
+      processSteps: [
+        { title: 'Conversation', description: 'We understand your requirements and processes.' },
+        { title: 'Analysis', description: 'Identification of automation potential.' },
+        { title: 'Concept', description: 'Development of a customized solution.' },
+        { title: 'Implementation', description: 'Configuration and training of the agent.' },
+        { title: 'Go-Live', description: 'Integration and continuous optimization.' }
+      ],
+      technologies: [
+        { name: 'OpenAI GPT-4', description: 'State-of-the-art language processing for natural conversations' },
+        { name: 'n8n Workflows', description: 'No-code automation with 500+ integrations' },
+        { name: 'Claude AI', description: 'Precise analysis and text creation with Anthropic Claude' },
+        { name: 'LangChain', description: 'Intelligent chaining of AI models for complex tasks' },
+        { name: 'Vector Databases', description: 'Knowledge bases for context-aware responses' },
+        { name: 'Custom APIs', description: 'Seamless integration into your existing systems' }
+      ],
+      pricing: [
+        { title: 'Starter', price: 'from €990', description: 'One-time + from €50/month', features: ['1 AI Agent', 'Basic Functions', 'Email Support', 'Hosting Included'], best: false },
+        { title: 'Business', price: 'from €2,490', description: 'One-time + from €99/month', features: ['Up to 3 Agents', 'Extended Integrations', 'Priority Support', 'Custom Training', 'Analytics Dashboard'], best: true },
+        { title: 'Enterprise', price: 'Individual', description: 'On Request', features: ['Unlimited Agents', 'Complex Workflows', 'Dedicated Support', 'On-Premise Possible', 'SLA Guarantee'], best: false }
+      ],
+      faqs: [
+        { q: 'How long does it take to develop an AI agent?', a: 'Simple agents can be ready in 1-2 weeks. More complex solutions with multiple integrations require 3-6 weeks. In an initial meeting, we create a realistic timeline for your project.' },
+        { q: 'Do I need technical knowledge to use AI agents?', a: 'No! We handle complete development and integration. You receive a user-friendly dashboard and training. We\'re here to help with changes or extensions.' },
+        { q: 'Is my data secure with AI agents?', a: 'Data protection is our top priority. We use encrypted connections, GDPR-compliant hosting solutions in Germany/EU, and can implement completely local solutions on request.' },
+        { q: 'Can AI agents work with my existing tools?', a: 'Yes! Our agents integrate seamlessly with common tools like CRM systems (HubSpot, Salesforce), email providers, calendars, accounting (lexoffice, sevDesk), and many more through n8n interfaces.' },
+        { q: 'What happens if the agent can\'t answer a request?', a: 'Our agents are configured to automatically forward complex cases to human staff. They recognize their limits and escalate intelligently – with all relevant context information.' },
+        { q: 'How are the agents trained?', a: 'We train agents with your company data, FAQs, product information, and past customer interactions. The more context, the better the answers. Training is a continuous process.' },
+        { q: 'What ongoing costs are there?', a: 'In addition to one-time development, monthly costs include hosting, API usage, and optional maintenance. A typical agent costs €50-200 monthly depending on usage volume and complexity.' },
+        { q: 'Can I expand the agent later?', a: 'Absolutely! AI agents are modular. You can add new features, integrations, or language capabilities at any time. We support you in further development.' }
+      ],
+    },
+    automationPage: {
+      badge: 'Workflow Automation',
+      title: 'Automate Your Business',
+      subtitle: 'We connect your tools and automate recurring tasks – so you can focus on what matters.',
+      ctaPrimary: 'Free Consultation',
+      ctaSecondary: 'Discover Possibilities',
+      automationsTitle: 'What We Automate',
+      automationsSubtitle: 'From email workflows to complete process automation – we find the perfect solution.',
+      examples: 'Examples:',
+      toolsTitle: 'Our Tools',
+      toolsSubtitle: 'We rely on proven automation platforms for maximum reliability.',
+      processTitle: 'Our Process',
+      processSubtitle: 'From analysis to go-live – this is how your automation is created.',
+      faqTitle: 'Frequently Asked Questions About Automation',
+      ctaTitle: 'Ready for More Efficiency?',
+      ctaSubtitle: 'Let us analyze which processes we can automate for you. Free initial consultation.',
+      automations: [
+        { title: 'Email Automation', description: 'Automatic sending, sorting, and answering of emails. Welcome sequences, follow-ups, and personalized campaigns on autopilot.', examples: ['Welcome Emails', 'Lead Nurturing', 'Cart Abandonment', 'Newsletter Segmentation'] },
+        { title: 'Lead Management', description: 'Automatically capture, qualify, and hand over leads to sales. Integration with your CRM and automatic scoring.', examples: ['Forms → CRM', 'Lead Scoring', 'Automatic Assignment', 'Follow-up Reminders'] },
+        { title: 'Document Workflows', description: 'Automatically process, archive, and forward invoices, contracts, and documents. OCR recognition included.', examples: ['Invoice Processing', 'Contract Management', 'Digital Signatures', 'Archiving'] },
+        { title: 'E-Commerce Automation', description: 'Automatically manage orders, inventory, and shipping. Synchronization between shop, accounting, and shipping.', examples: ['Order Confirmations', 'Inventory Sync', 'Return Workflow', 'Review Requests'] },
+        { title: 'Appointment Automation', description: 'Bookings, reminders, and calendar sync fully automatic. No double bookings, no forgotten meetings.', examples: ['Online Booking', 'Reminders', 'Calendar Sync', 'No-Show Management'] },
+        { title: 'Data Synchronization', description: 'Keep all your systems in sync. Changes in one tool are automatically applied to all others.', examples: ['CRM ↔ Accounting', 'Shop ↔ Inventory', 'Contacts Sync', 'Stock Matching'] },
+        { title: 'Reporting Automation', description: 'Automatic creation and sending of reports. Daily, weekly, or monthly evaluations without manual effort.', examples: ['Revenue Reports', 'Marketing KPIs', 'Employee Dashboards', 'Customer Analytics'] },
+        { title: 'Process Workflows', description: 'Automate complex business processes: approvals, escalations, and multi-step procedures with intelligent rules.', examples: ['Approval Workflows', 'Escalation Chains', 'Onboarding', 'Checklists'] }
+      ],
+      benefits: [
+        { title: '80% Time Savings', description: 'Manual tasks are completed automatically' },
+        { title: 'Fewer Errors', description: 'Consistent processes without careless mistakes' },
+        { title: 'Scalable', description: 'More volume without more staff' },
+        { title: 'Faster', description: 'Processes run 24/7 in seconds' }
+      ],
+      tools: [
+        { name: 'n8n', description: 'Our main tool for complex automations' },
+        { name: 'Zapier', description: 'Quick integrations for simple workflows' },
+        { name: 'Make (Integromat)', description: 'Visual workflow creation' },
+        { name: 'HubSpot', description: 'Marketing and sales automation' },
+        { name: 'Airtable', description: 'Database automations' },
+        { name: 'Google Workspace', description: 'Sheets, Docs, Gmail integration' }
+      ],
+      processSteps: [
+        { title: 'Analysis', description: 'We understand your current processes and identify automation potential.' },
+        { title: 'Concept', description: 'Together we define the optimal workflow and select the right tools.' },
+        { title: 'Implementation', description: 'We build your automation with n8n or the appropriate tool.' },
+        { title: 'Testing', description: 'Extensive testing ensures everything works smoothly.' },
+        { title: 'Go-Live', description: 'Your workflow goes live – with monitoring and continuous optimization.' }
+      ],
+      faqs: [
+        { q: 'What does automation cost?', a: 'Simple automations start at €500. More complex workflows with multiple systems begin at €1,500. In the free initial consultation, we create a concrete cost estimate.' },
+        { q: 'Which tools can be integrated?', a: 'With n8n, we can integrate over 500 tools: CRM systems, email providers, shops, accounting, Google Workspace, Microsoft 365, Slack, Notion, and many more. Custom APIs are also possible.' },
+        { q: 'How long does implementation take?', a: 'Simple workflows are done in 1-2 days. More complex automations with multiple integrations require 1-2 weeks. At the initial consultation, we give you a realistic timeline.' },
+        { q: 'Can I customize the automations myself?', a: 'Yes! We train you on using n8n or the tool used. You can make simple adjustments yourself. We\'re here for more complex changes.' },
+        { q: 'What happens if something goes wrong?', a: 'Our automations have built-in error handling and notifications. You\'ll be immediately informed if something doesn\'t work. Additionally, we offer maintenance packages.' },
+        { q: 'Is my data secure?', a: 'Yes! We use encrypted connections and GDPR-compliant solutions. On request, we can also host n8n on your own servers for maximum data control.' }
+      ],
+    },
+    webKIPage: {
+      badge: 'AI Websites',
+      title: 'Intelligent Websites That Work',
+      subtitle: 'We develop modern websites with integrated AI features: chatbots, automatic content creation, intelligent SEO, and more.',
+      ctaPrimary: 'Start Project',
+      ctaSecondary: 'Discover AI Features',
+      stats: { loadTime: 'Load Time', conversion: 'More Conversion', uptime: 'Uptime', satisfaction: 'Satisfaction' },
+      featuresTitle: 'AI Features for Your Website',
+      featuresSubtitle: 'These intelligent features make the difference for your online presence.',
+      typesTitle: 'Website Packages',
+      typesSubtitle: 'The right solution for every project – from landing page to e-commerce shop.',
+      from: 'from',
+      processTitle: 'Our Process',
+      processSubtitle: 'In 5 steps to your intelligent website.',
+      techTitle: 'Technologies',
+      techSubtitle: 'We rely on modern, proven technologies for performance and flexibility.',
+      faqTitle: 'Frequently Asked Questions About AI Websites',
+      ctaTitle: 'Ready for Your New Website?',
+      ctaSubtitle: 'Let\'s discuss how we can take your online presence to the next level with AI. Free initial consultation.',
+      features: [
+        { title: 'AI Chatbot Integration', description: 'Intelligent chatbots that answer customer inquiries 24/7, qualify leads, and book appointments – directly on your website.', benefits: ['Instant Responses', 'Lead Generation', 'Appointment Booking', 'FAQ Automation'] },
+        { title: 'AI Content Creation', description: 'SEO-optimized texts, product descriptions, and blog articles created with AI and reviewed by experts.', benefits: ['SEO-Optimized', 'Brand-Compliant', 'Fast Creation', 'Regular Updates'] },
+        { title: 'AI Image Optimization', description: 'Automatic image optimization, alt-text generation, and intelligent image selection for maximum performance.', benefits: ['Fast Load Times', 'Auto Alt-Texts', 'Responsive Images', 'WebP Conversion'] },
+        { title: 'AI SEO Analysis', description: 'Continuous SEO monitoring with AI-powered recommendations for better rankings on Google.', benefits: ['Keyword Tracking', 'Competitor Analysis', 'Auto-Optimization', 'Ranking Reports'] },
+        { title: 'Personalization', description: 'AI analyzes visitor behavior and shows personalized content, products, and offers.', benefits: ['Higher Conversion', 'Relevant Content', 'A/B Testing', 'User Profiles'] },
+        { title: 'Intelligent Analytics', description: 'AI-powered evaluation of your website data with automatic action recommendations.', benefits: ['Automatic Insights', 'Conversion Tracking', 'User Behavior', 'Optimization Suggestions'] }
+      ],
+      websiteTypes: [
+        { title: 'Business Website', description: 'Professional presence with AI chatbot, SEO optimization, and content management.', price: 'from €3,500', features: ['Responsive Design', 'AI Chatbot', 'SEO Optimization', 'CMS', 'Contact Form', 'Analytics'] },
+        { title: 'Landing Page', description: 'Conversion-optimized page for campaigns, products, or services.', price: 'from €1,500', features: ['Conversion Design', 'A/B Testing', 'Lead Forms', 'Tracking', 'Mobile-First', 'Fast Load Time'] },
+        { title: 'E-Commerce Shop', description: 'Online shop with AI product recommendations and automated marketing.', price: 'from €5,000', features: ['Product Catalog', 'AI Recommendations', 'Payment Integration', 'Cart Abandonment Email', 'SEO', 'Analytics'] },
+        { title: 'Blog / Content Platform', description: 'Content hub with AI-powered text creation and SEO automation.', price: 'from €2,500', features: ['AI Content', 'SEO Tools', 'Categories', 'Newsletter', 'Social Sharing', 'Author Profiles'] }
+      ],
+      processSteps: [
+        { title: 'Briefing', description: 'We understand your goals, target audience, and requirements.' },
+        { title: 'Concept', description: 'Structure, design direction, and AI features are defined.' },
+        { title: 'Design', description: 'Modern UI/UX design with focus on conversion.' },
+        { title: 'Development', description: 'Technical implementation with AI integrations.' },
+        { title: 'Launch', description: 'Go-live with SEO setup and monitoring.' }
+      ],
+      technologies: [
+        { name: 'React / Next.js', category: 'Frontend' },
+        { name: 'WordPress', category: 'CMS' },
+        { name: 'Webflow', category: 'No-Code' },
+        { name: 'OpenAI GPT', category: 'AI' },
+        { name: 'Claude AI', category: 'AI' },
+        { name: 'n8n', category: 'Automation' },
+        { name: 'Tailwind CSS', category: 'Styling' },
+        { name: 'Vercel', category: 'Hosting' }
+      ],
+      faqs: [
+        { q: 'What does a website with AI features cost?', a: 'Simple landing pages start at €1,500, business websites from €3,500. AI features like chatbots or content automation can be booked separately or as a package. We create an individual offer based on your requirements.' },
+        { q: 'How long does it take to create a website?', a: 'A landing page is ready in 1-2 weeks. Business websites require 3-6 weeks, e-commerce projects 4-8 weeks. The exact timeline depends on scope and complexity.' },
+        { q: 'Which AI features are most useful?', a: 'That depends on your goals. For lead generation, we recommend a chatbot. For SEO, we focus on AI content creation. In consultation, we analyze which features offer the greatest value.' },
+        { q: 'Can I edit the website myself?', a: 'Yes! We use user-friendly CMS like WordPress or Webflow. You receive training and can make text, image, and simple changes yourself.' },
+        { q: 'Is the website GDPR-compliant?', a: 'Absolutely. We ensure GDPR-compliant cookie banners, privacy policies, SSL encryption, and secure contact forms. For AI features, we use EU-compliant solutions.' },
+        { q: 'What happens after launch?', a: 'We offer maintenance packages for updates, security, and support. Additionally, we can continuously add new AI features and optimize the website based on analytics data.' }
+      ],
+    },
   },
   hr: {
     nav: {
