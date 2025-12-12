@@ -1,16 +1,16 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
-import { BookOpen, Clock, ArrowRight, Search, Bot, Share2, Globe, TrendingUp } from "lucide-react";
+import { BookOpen, Clock, ArrowRight, Search, Bot, Share2, Globe, TrendingUp, Sparkles, Mail, Lightbulb } from "lucide-react";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 
 const categories = [
-  { name: "Alle", value: "all" },
-  { name: "KI & Automatisierung", value: "ki", icon: Bot },
-  { name: "Social Media", value: "social", icon: Share2 },
-  { name: "SEO & Marketing", value: "marketing", icon: TrendingUp },
-  { name: "Webentwicklung", value: "web", icon: Globe },
+  { name: "Alle", value: "all", icon: Sparkles, color: "text-primary" },
+  { name: "KI & Automatisierung", value: "ki", icon: Bot, color: "text-cyan-400" },
+  { name: "Social Media", value: "social", icon: Share2, color: "text-purple-400" },
+  { name: "SEO & Marketing", value: "marketing", icon: TrendingUp, color: "text-orange-400" },
+  { name: "Webentwicklung", value: "web", icon: Globe, color: "text-blue-400" },
 ];
 
 const articles = [
@@ -20,7 +20,7 @@ const articles = [
     excerpt: "Erfahren Sie, wie KI-Chatbots Ihren Kundenservice revolutionieren und gleichzeitig Kosten senken können.",
     category: "ki",
     readTime: "8 Min.",
-    date: "10. Dezember 2025",
+    date: "10. Dez 2025",
     featured: true
   },
   {
@@ -29,25 +29,25 @@ const articles = [
     excerpt: "So nutzen Sie das volle Potenzial von Instagram Reels für Ihr Unternehmen und erreichen tausende neue Kunden.",
     category: "social",
     readTime: "5 Min.",
-    date: "8. Dezember 2025",
+    date: "8. Dez 2025",
     featured: true
   },
   {
     id: 3,
-    title: "Local SEO: So dominieren Sie die Google-Suche in Ihrer Region",
-    excerpt: "Lokale Suchmaschinenoptimierung ist der Schlüssel für regionale Unternehmen. Hier sind die wichtigsten Strategien.",
+    title: "Local SEO: So dominieren Sie die Google-Suche",
+    excerpt: "Lokale Suchmaschinenoptimierung ist der Schlüssel für regionale Unternehmen. Die wichtigsten Strategien.",
     category: "marketing",
     readTime: "7 Min.",
-    date: "5. Dezember 2025",
-    featured: false
+    date: "5. Dez 2025",
+    featured: true
   },
   {
     id: 4,
-    title: "Website-Geschwindigkeit optimieren: Performance-Tipps 2025",
+    title: "Website-Geschwindigkeit optimieren: Performance-Tipps",
     excerpt: "Eine schnelle Website ist entscheidend für SEO und Nutzererfahrung. So verbessern Sie Ihre Ladezeiten.",
     category: "web",
     readTime: "6 Min.",
-    date: "3. Dezember 2025",
+    date: "3. Dez 2025",
     featured: false
   },
   {
@@ -56,7 +56,7 @@ const articles = [
     excerpt: "Von Content-Erstellung bis Kundenanalyse: So setzen Sie ChatGPT effektiv in Ihrem Marketing ein.",
     category: "ki",
     readTime: "10 Min.",
-    date: "1. Dezember 2025",
+    date: "1. Dez 2025",
     featured: false
   },
   {
@@ -65,7 +65,7 @@ const articles = [
     excerpt: "LinkedIn ist das wichtigste Netzwerk für B2B-Unternehmen. So bauen Sie eine starke Präsenz auf.",
     category: "social",
     readTime: "8 Min.",
-    date: "28. November 2025",
+    date: "28. Nov 2025",
     featured: false
   },
   {
@@ -74,7 +74,7 @@ const articles = [
     excerpt: "Wir vergleichen die beiden Werbeplattformen und zeigen, welche für Ihr Business besser geeignet ist.",
     category: "marketing",
     readTime: "9 Min.",
-    date: "25. November 2025",
+    date: "25. Nov 2025",
     featured: false
   },
   {
@@ -83,7 +83,7 @@ const articles = [
     excerpt: "Sparen Sie Zeit mit Workflow-Automatisierung. Diese Tools verbinden Ihre Apps und automatisieren Aufgaben.",
     category: "ki",
     readTime: "12 Min.",
-    date: "22. November 2025",
+    date: "22. Nov 2025",
     featured: false
   },
   {
@@ -92,7 +92,7 @@ const articles = [
     excerpt: "Warum Mobile-First-Design heute Standard ist und wie Sie Ihre Website für alle Geräte optimieren.",
     category: "web",
     readTime: "6 Min.",
-    date: "19. November 2025",
+    date: "19. Nov 2025",
     featured: false
   }
 ];
@@ -110,12 +110,14 @@ export default function Ratgeber() {
 
   const featuredArticles = articles.filter(a => a.featured);
 
+  const getCategoryInfo = (value: string) => categories.find(c => c.value === value);
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <Navbar />
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="py-12 bg-gradient-to-b from-primary/5 to-background">
+        <section className="py-10 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -129,7 +131,7 @@ export default function Ratgeber() {
               <h1 className="text-4xl md:text-5xl font-bold font-display text-white mb-4">
                 Marketing Ratgeber
               </h1>
-              <p className="text-lg text-gray-400 mb-8">
+              <p className="text-lg text-gray-400 mb-6">
                 Praktische Tipps, Anleitungen und Strategien für digitales Marketing, 
                 KI-Automatisierung und erfolgreiche Online-Präsenz.
               </p>
@@ -149,117 +151,144 @@ export default function Ratgeber() {
           </div>
         </section>
 
-        {/* Featured Articles */}
-        {searchQuery === "" && selectedCategory === "all" && (
-          <section className="py-10">
-            <div className="container mx-auto px-4">
-              <h2 className="text-2xl font-bold text-white mb-6">Empfohlene Artikel</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                {featuredArticles.map((article, i) => (
-                  <motion.a
-                    key={article.id}
-                    href={`/ratgeber/${article.id}`}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: i * 0.1 }}
-                    className="group p-6 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 border border-white/10 hover:border-primary/30 transition-all"
-                    data-testid={`card-featured-${article.id}`}
+        {/* Category Filter */}
+        <section className="py-4 border-b border-white/10 sticky top-16 bg-background/95 backdrop-blur-md z-30">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-wrap gap-2 justify-center">
+              {categories.map((cat) => {
+                const Icon = cat.icon;
+                return (
+                  <button
+                    key={cat.value}
+                    onClick={() => setSelectedCategory(cat.value)}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                      selectedCategory === cat.value
+                        ? "bg-primary text-background"
+                        : "bg-white/5 text-gray-300 hover:bg-white/10"
+                    }`}
+                    data-testid={`filter-${cat.value}`}
                   >
-                    <span className="text-xs text-primary font-medium uppercase tracking-wider">
-                      {categories.find(c => c.value === article.category)?.name}
-                    </span>
-                    <h3 className="text-xl font-bold text-white mt-2 mb-3 group-hover:text-primary transition-colors">
-                      {article.title}
-                    </h3>
-                    <p className="text-gray-400 mb-4">{article.excerpt}</p>
-                    <div className="flex items-center justify-between text-sm text-gray-500">
-                      <span className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" /> {article.readTime}
-                      </span>
-                      <span className="flex items-center gap-1 text-primary group-hover:gap-2 transition-all">
-                        Lesen <ArrowRight className="w-4 h-4" />
-                      </span>
-                    </div>
-                  </motion.a>
-                ))}
+                    <Icon className="w-4 h-4" />
+                    {cat.name}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Articles - 3 columns */}
+        {searchQuery === "" && selectedCategory === "all" && (
+          <section className="py-8">
+            <div className="container mx-auto px-4">
+              <div className="flex items-center gap-2 mb-6">
+                <Lightbulb className="w-5 h-5 text-yellow-400" />
+                <h2 className="text-xl font-bold text-white">Empfohlene Artikel</h2>
+              </div>
+              <div className="grid md:grid-cols-3 gap-4">
+                {featuredArticles.map((article, i) => {
+                  const catInfo = getCategoryInfo(article.category);
+                  const Icon = catInfo?.icon || BookOpen;
+                  return (
+                    <motion.a
+                      key={article.id}
+                      href={`/ratgeber/${article.id}`}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: i * 0.1 }}
+                      className="group p-5 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 border border-white/10 hover:border-primary/30 transition-all"
+                      data-testid={`card-featured-${article.id}`}
+                    >
+                      <div className="flex items-center gap-2 mb-3">
+                        <Icon className={`w-4 h-4 ${catInfo?.color}`} />
+                        <span className={`text-xs font-medium ${catInfo?.color}`}>
+                          {catInfo?.name}
+                        </span>
+                      </div>
+                      <h3 className="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                        {article.title}
+                      </h3>
+                      <p className="text-gray-400 text-sm mb-3 line-clamp-2">{article.excerpt}</p>
+                      <div className="flex items-center justify-between text-xs text-gray-500">
+                        <span className="flex items-center gap-1">
+                          <Clock className="w-3 h-3" /> {article.readTime}
+                        </span>
+                        <span className="flex items-center gap-1 text-primary group-hover:gap-2 transition-all">
+                          Lesen <ArrowRight className="w-3 h-3" />
+                        </span>
+                      </div>
+                    </motion.a>
+                  );
+                })}
               </div>
             </div>
           </section>
         )}
 
-        {/* Category Filter */}
-        <section className="py-6 border-y border-white/10">
+        {/* All Articles - 3x3 Grid */}
+        <section className="py-8">
           <div className="container mx-auto px-4">
-            <div className="flex flex-wrap gap-2">
-              {categories.map((cat) => (
-                <button
-                  key={cat.value}
-                  onClick={() => setSelectedCategory(cat.value)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                    selectedCategory === cat.value
-                      ? "bg-primary text-background"
-                      : "bg-white/5 text-gray-300 hover:bg-white/10"
-                  }`}
-                  data-testid={`filter-${cat.value}`}
-                >
-                  {cat.name}
-                </button>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* All Articles */}
-        <section className="py-10">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold text-white mb-6">
-              {selectedCategory === "all" ? "Alle Artikel" : categories.find(c => c.value === selectedCategory)?.name}
-              <span className="text-gray-500 font-normal ml-2">({filteredArticles.length})</span>
+            <h2 className="text-xl font-bold text-white mb-6">
+              {selectedCategory === "all" ? "Alle Artikel" : getCategoryInfo(selectedCategory)?.name}
+              <span className="text-gray-500 font-normal ml-2 text-base">({filteredArticles.length})</span>
             </h2>
             
             {filteredArticles.length === 0 ? (
               <div className="text-center py-12">
+                <Search className="w-12 h-12 text-gray-600 mx-auto mb-4" />
                 <p className="text-gray-400">Keine Artikel gefunden.</p>
+                <button 
+                  onClick={() => { setSearchQuery(""); setSelectedCategory("all"); }}
+                  className="text-primary hover:underline mt-2"
+                >
+                  Filter zurücksetzen
+                </button>
               </div>
             ) : (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredArticles.map((article, i) => (
-                  <motion.a
-                    key={article.id}
-                    href={`/ratgeber/${article.id}`}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.05 }}
-                    className="group p-5 rounded-xl bg-card/30 border border-white/5 hover:border-primary/30 transition-all"
-                    data-testid={`card-article-${article.id}`}
-                  >
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="text-xs text-gray-500">{article.date}</span>
-                      <span className="text-gray-600">·</span>
-                      <span className="text-xs text-gray-500 flex items-center gap-1">
-                        <Clock className="w-3 h-3" /> {article.readTime}
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                      {article.title}
-                    </h3>
-                    <p className="text-gray-400 text-sm line-clamp-2 mb-3">{article.excerpt}</p>
-                    <span className="text-xs px-2 py-1 rounded-full bg-white/5 text-gray-400">
-                      {categories.find(c => c.value === article.category)?.name}
-                    </span>
-                  </motion.a>
-                ))}
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {filteredArticles.map((article, i) => {
+                  const catInfo = getCategoryInfo(article.category);
+                  const Icon = catInfo?.icon || BookOpen;
+                  return (
+                    <motion.a
+                      key={article.id}
+                      href={`/ratgeber/${article.id}`}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.03 }}
+                      className="group p-4 rounded-xl bg-card/30 border border-white/5 hover:border-primary/30 hover:bg-card/50 transition-all"
+                      data-testid={`card-article-${article.id}`}
+                    >
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="flex items-center gap-2">
+                          <div className={`p-1.5 rounded-lg bg-white/5 ${catInfo?.color}`}>
+                            <Icon className="w-3.5 h-3.5" />
+                          </div>
+                          <span className="text-xs text-gray-500">{article.date}</span>
+                        </div>
+                        <span className="text-xs text-gray-500 flex items-center gap-1">
+                          <Clock className="w-3 h-3" /> {article.readTime}
+                        </span>
+                      </div>
+                      <h3 className="text-base font-bold text-white mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                        {article.title}
+                      </h3>
+                      <p className="text-gray-400 text-sm line-clamp-2">{article.excerpt}</p>
+                    </motion.a>
+                  );
+                })}
               </div>
             )}
           </div>
         </section>
 
         {/* Newsletter CTA */}
-        <section className="py-10 bg-card/20">
+        <section className="py-10 bg-gradient-to-r from-primary/10 to-secondary/10 border-y border-white/10">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-2xl font-bold text-white mb-4">Newsletter abonnieren</h2>
+              <Mail className="w-10 h-10 text-primary mx-auto mb-4" />
+              <h2 className="text-2xl font-bold text-white mb-3">Newsletter abonnieren</h2>
               <p className="text-gray-400 mb-6">
                 Erhalten Sie die neuesten Marketing-Tipps und KI-Insights direkt in Ihr Postfach.
               </p>
@@ -278,6 +307,22 @@ export default function Ratgeber() {
                 Mit der Anmeldung stimmen Sie unserer <a href="/privacy" className="text-primary hover:underline">Datenschutzerklärung</a> zu.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-10">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-2xl font-bold text-white mb-3">Individuelle Beratung gewünscht?</h2>
+            <p className="text-gray-400 mb-6 max-w-xl mx-auto">
+              Unsere Experten helfen Ihnen, die richtige Strategie für Ihr Unternehmen zu finden.
+            </p>
+            <a 
+              href="/kontakt" 
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-background font-bold rounded-lg hover:bg-primary/90 transition-colors"
+            >
+              Kostenlose Beratung anfragen <ArrowRight className="w-4 h-4" />
+            </a>
           </div>
         </section>
       </main>
