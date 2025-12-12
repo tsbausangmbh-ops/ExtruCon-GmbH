@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import contentImg from "@assets/generated_images/abstract_content_creation_visualization.png";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
+import { RelatedServices } from "@/components/RelatedServices";
 
 export default function Content() {
   const { t } = useLanguage();
@@ -101,6 +102,8 @@ export default function Content() {
             </Button>
           </div>
         </section>
+
+        <RelatedServices currentPath="/leistungen/content" />
       </main>
       <Footer />
     </div>

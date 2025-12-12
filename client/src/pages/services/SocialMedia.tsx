@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import socialImg from "@assets/generated_images/digital_social_connection_abstract_art.png";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
+import { RelatedServices } from "@/components/RelatedServices";
 
 export default function SocialMedia() {
   const { t } = useLanguage();
@@ -154,6 +155,8 @@ export default function SocialMedia() {
             </Button>
           </div>
         </section>
+
+        <RelatedServices currentPath="/leistungen/social-media" />
       </main>
       <Footer />
     </div>

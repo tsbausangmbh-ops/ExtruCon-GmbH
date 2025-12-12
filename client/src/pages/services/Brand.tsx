@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import brandImg from "@assets/generated_images/abstract_digital_brand_identity_construction.png";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
+import { RelatedServices } from "@/components/RelatedServices";
 
 export default function Brand() {
   const { t } = useLanguage();
@@ -101,6 +102,8 @@ export default function Brand() {
             </Button>
           </div>
         </section>
+
+        <RelatedServices currentPath="/leistungen/markenaufbau" />
       </main>
       <Footer />
     </div>

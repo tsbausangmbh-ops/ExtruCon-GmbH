@@ -32,7 +32,9 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/privacy" component={Privacy} />
+      <Route path="/datenschutz" component={Privacy} />
       <Route path="/terms" component={Terms} />
+      <Route path="/agb" component={Terms} />
       <Route path="/impressum" component={Impressum} />
       <Route path="/kontakt" component={Contact} />
       <Route path="/ratgeber" component={Ratgeber} />

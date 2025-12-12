@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import webImg from "@assets/generated_images/holographic_creative_interface.png";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
+import { RelatedServices } from "@/components/RelatedServices";
 
 export default function Web() {
   const { t } = useLanguage();
@@ -124,6 +125,8 @@ export default function Web() {
             </Button>
           </div>
         </section>
+
+        <RelatedServices currentPath="/leistungen/web" />
       </main>
       <Footer />
     </div>

@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import aiImg from "@assets/generated_images/glowing_neural_network_brain.png";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
+import { RelatedServices } from "@/components/RelatedServices";
 
 export default function KI() {
   const { t } = useLanguage();
@@ -154,6 +155,8 @@ export default function KI() {
             </Button>
           </div>
         </section>
+
+        <RelatedServices currentPath="/leistungen/ki-automatisierung" />
       </main>
       <Footer />
     </div>

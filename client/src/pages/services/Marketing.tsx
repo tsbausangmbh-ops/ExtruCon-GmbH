@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import marketingImg from "@assets/generated_images/abstract_performance_marketing_growth.png";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
+import { RelatedServices } from "@/components/RelatedServices";
 
 export default function Marketing() {
   const { t } = useLanguage();
@@ -124,6 +125,8 @@ export default function Marketing() {
             </Button>
           </div>
         </section>
+
+        <RelatedServices currentPath="/leistungen/marketing" />
       </main>
       <Footer />
     </div>

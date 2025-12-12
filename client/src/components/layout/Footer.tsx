@@ -84,8 +84,8 @@ export function Footer() {
             <a href="/ueber-uns" className="hover:text-white transition-colors">{t.footer.about}</a>
             <a href="/faq" className="hover:text-white transition-colors">{t.footer.faq}</a>
             <a href="/ratgeber" className="hover:text-white transition-colors">{t.footer.ratgeber}</a>
-            <a href="/privacy" className="hover:text-white transition-colors">{t.footer.privacy}</a>
-            <a href="/terms" className="hover:text-white transition-colors">{t.footer.terms}</a>
+            <a href="/datenschutz" className="hover:text-white transition-colors">{t.footer.privacy}</a>
+            <a href="/agb" className="hover:text-white transition-colors">{t.footer.terms}</a>
             <a href="/impressum" className="hover:text-white transition-colors">{t.footer.impressum}</a>
             <a href="/cookies" className="hover:text-white transition-colors">{t.footer.cookies}</a>
           </div>
