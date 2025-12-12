@@ -359,23 +359,28 @@ export default function KIAgenten() {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
               {t.kiAgentsPage.pricing.map((plan, i) => (
                 <motion.div
                   key={plan.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className={`p-6 rounded-2xl border ${plan.best ? 'bg-primary/10 border-primary/30' : 'bg-white/5 border-white/10'}`}
+                  transition={{ delay: i * 0.05 }}
+                  className={`relative p-5 rounded-2xl border ${plan.best ? 'bg-primary/10 border-primary/30 ring-2 ring-primary/50' : plan.badge === 'AKTION' ? 'bg-green-500/10 border-green-500/30' : 'bg-white/5 border-white/10'}`}
                 >
-                  <h3 className="text-lg font-bold text-white mb-1">{plan.title}</h3>
-                  <div className="text-2xl font-bold text-primary mb-2">{plan.price}</div>
-                  <p className="text-gray-400 text-sm mb-4">{plan.description}</p>
-                  <ul className="space-y-2">
+                  {plan.badge && (
+                    <div className={`absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 text-xs font-bold rounded-full ${plan.badge === 'AKTION' ? 'bg-green-500 text-white animate-pulse' : plan.badge === 'Beliebt' ? 'bg-primary text-background' : 'bg-white/20 text-white'}`}>
+                      {plan.badge}
+                    </div>
+                  )}
+                  <h3 className="text-base font-bold text-white mb-1 mt-2">{plan.title}</h3>
+                  <div className="text-xl font-bold text-primary mb-1">{plan.price}</div>
+                  <p className="text-gray-400 text-xs mb-3">{plan.description}</p>
+                  <ul className="space-y-1.5">
                     {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2 text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
+                      <li key={feature} className="flex items-start gap-2 text-gray-300 text-xs">
+                        <CheckCircle className="w-3.5 h-3.5 text-primary flex-shrink-0 mt-0.5" />
                         {feature}
                       </li>
                     ))}

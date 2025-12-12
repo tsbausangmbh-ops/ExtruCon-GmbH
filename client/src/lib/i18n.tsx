@@ -311,9 +311,14 @@ export const translations = {
         { name: 'Custom APIs', description: 'Nahtlose Integration in Ihre bestehenden Systeme' }
       ],
       pricing: [
-        { title: 'Starter', price: 'ab 990€', description: 'Einmalig + ab 50€/Monat', features: ['1 KI-Agent', 'Grundfunktionen', 'E-Mail-Support', 'Hosting inklusive'], best: false },
-        { title: 'Business', price: 'ab 2.490€', description: 'Einmalig + ab 99€/Monat', features: ['Bis zu 3 Agenten', 'Erweiterte Integrationen', 'Prioritäts-Support', 'Custom Training', 'Analytics Dashboard'], best: true },
-        { title: 'Enterprise', price: 'Individuell', description: 'Auf Anfrage', features: ['Unbegrenzte Agenten', 'Komplexe Workflows', 'Dedizierter Support', 'On-Premise möglich', 'SLA-Garantie'], best: false }
+        { title: 'Low Budget', price: 'ab 490€', description: 'Einmalig + ab 29€/Monat', features: ['1 einfacher KI-Agent', 'Basis-Chatbot', 'Community-Support', '3 Monate Hosting'], best: false, badge: 'Einstieg' },
+        { title: 'Standard', price: 'ab 790€', description: 'Einmalig + ab 39€/Monat', features: ['1 KI-Agent', 'Grundfunktionen', 'E-Mail-Support', 'Hosting inklusive', 'Basis-Training'], best: false, badge: 'AKTION' },
+        { title: 'Starter', price: 'ab 990€', description: 'Einmalig + ab 50€/Monat', features: ['1 KI-Agent', 'Erweiterte Funktionen', 'E-Mail-Support', 'Hosting inklusive', 'Custom Training'], best: false, badge: null },
+        { title: 'Professional', price: 'ab 1.690€', description: 'Einmalig + ab 79€/Monat', features: ['2 KI-Agenten', 'Alle Integrationen', 'Prioritäts-Support', 'Custom Training', 'Analytics'], best: false, badge: null },
+        { title: 'Business', price: 'ab 2.490€', description: 'Einmalig + ab 99€/Monat', features: ['Bis zu 3 Agenten', 'Erweiterte Integrationen', 'Prioritäts-Support', 'Custom Training', 'Analytics Dashboard'], best: true, badge: 'Beliebt' },
+        { title: 'Growth', price: 'ab 3.990€', description: 'Einmalig + ab 149€/Monat', features: ['Bis zu 5 Agenten', 'Multi-Channel', 'Account Manager', 'Monatliche Reviews', 'Erweiterte Analytics'], best: false, badge: null },
+        { title: 'Enterprise', price: 'ab 6.990€', description: 'Einmalig + ab 249€/Monat', features: ['Bis zu 10 Agenten', 'Komplexe Workflows', 'Dedizierter Support', 'On-Premise möglich', 'SLA-Garantie'], best: false, badge: null },
+        { title: 'Unlimited', price: 'Individuell', description: 'Auf Anfrage', features: ['Unbegrenzte Agenten', 'Enterprise Features', '24/7 Support', 'Individuelle SLA', 'Komplettlösung'], best: false, badge: 'Enterprise' }
       ],
       faqs: [
         { q: 'Wie lange dauert die Entwicklung eines KI-Agenten?', a: 'Einfache Agenten können binnen 1-2 Wochen einsatzbereit sein. Komplexere Lösungen mit mehreren Integrationen benötigen 3-6 Wochen. In einem ersten Gespräch erstellen wir einen realistischen Zeitplan für Ihr Projekt.' },
@@ -1357,9 +1362,14 @@ export const translations = {
         { name: 'Custom APIs', description: 'Seamless integration into your existing systems' }
       ],
       pricing: [
-        { title: 'Starter', price: 'from €990', description: 'One-time + from €50/month', features: ['1 AI Agent', 'Basic Functions', 'Email Support', 'Hosting Included'], best: false },
-        { title: 'Business', price: 'from €2,490', description: 'One-time + from €99/month', features: ['Up to 3 Agents', 'Extended Integrations', 'Priority Support', 'Custom Training', 'Analytics Dashboard'], best: true },
-        { title: 'Enterprise', price: 'Individual', description: 'On Request', features: ['Unlimited Agents', 'Complex Workflows', 'Dedicated Support', 'On-Premise Possible', 'SLA Guarantee'], best: false }
+        { title: 'Low Budget', price: 'from €490', description: 'One-time + from €29/month', features: ['1 Simple AI Agent', 'Basic Chatbot', 'Community Support', '3 Months Hosting'], best: false, badge: 'Entry' },
+        { title: 'Standard', price: 'from €790', description: 'One-time + from €39/month', features: ['1 AI Agent', 'Basic Functions', 'Email Support', 'Hosting Included', 'Basic Training'], best: false, badge: 'SALE' },
+        { title: 'Starter', price: 'from €990', description: 'One-time + from €50/month', features: ['1 AI Agent', 'Extended Functions', 'Email Support', 'Hosting Included', 'Custom Training'], best: false, badge: null },
+        { title: 'Professional', price: 'from €1,690', description: 'One-time + from €79/month', features: ['2 AI Agents', 'All Integrations', 'Priority Support', 'Custom Training', 'Analytics'], best: false, badge: null },
+        { title: 'Business', price: 'from €2,490', description: 'One-time + from €99/month', features: ['Up to 3 Agents', 'Extended Integrations', 'Priority Support', 'Custom Training', 'Analytics Dashboard'], best: true, badge: 'Popular' },
+        { title: 'Growth', price: 'from €3,990', description: 'One-time + from €149/month', features: ['Up to 5 Agents', 'Multi-Channel', 'Account Manager', 'Monthly Reviews', 'Extended Analytics'], best: false, badge: null },
+        { title: 'Enterprise', price: 'from €6,990', description: 'One-time + from €249/month', features: ['Up to 10 Agents', 'Complex Workflows', 'Dedicated Support', 'On-Premise Possible', 'SLA Guarantee'], best: false, badge: null },
+        { title: 'Unlimited', price: 'Individual', description: 'On Request', features: ['Unlimited Agents', 'Enterprise Features', '24/7 Support', 'Individual SLA', 'Complete Solution'], best: false, badge: 'Enterprise' }
       ],
       faqs: [
         { q: 'How long does it take to develop an AI agent?', a: 'Simple agents can be ready in 1-2 weeks. More complex solutions with multiple integrations require 3-6 weeks. In an initial meeting, we create a realistic timeline for your project.' },
@@ -2403,9 +2413,14 @@ export const translations = {
         { name: 'Custom APIs', description: 'Besprijekorna integracija u vaše postojeće sustave' }
       ],
       pricing: [
-        { title: 'Starter', price: 'od 990€', description: 'Jednokratno + od 50€/mjesečno', features: ['1 AI Agent', 'Osnovne Funkcije', 'Email Podrška', 'Hosting Uključen'], best: false },
-        { title: 'Business', price: 'od 2.490€', description: 'Jednokratno + od 99€/mjesečno', features: ['Do 3 Agenta', 'Proširene Integracije', 'Prioritetna Podrška', 'Custom Obuka', 'Analytics Dashboard'], best: true },
-        { title: 'Enterprise', price: 'Individualno', description: 'Na Upit', features: ['Neograničeni Agenti', 'Složeni Tijekovi Rada', 'Posvećena Podrška', 'On-Premise Moguć', 'SLA Garancija'], best: false }
+        { title: 'Low Budget', price: 'od 490€', description: 'Jednokratno + od 29€/mjesečno', features: ['1 Jednostavan AI Agent', 'Osnovni Chatbot', 'Community Podrška', '3 Mjeseca Hosting'], best: false, badge: 'Početak' },
+        { title: 'Standard', price: 'od 790€', description: 'Jednokratno + od 39€/mjesečno', features: ['1 AI Agent', 'Osnovne Funkcije', 'Email Podrška', 'Hosting Uključen', 'Osnovna Obuka'], best: false, badge: 'AKCIJA' },
+        { title: 'Starter', price: 'od 990€', description: 'Jednokratno + od 50€/mjesečno', features: ['1 AI Agent', 'Proširene Funkcije', 'Email Podrška', 'Hosting Uključen', 'Custom Obuka'], best: false, badge: null },
+        { title: 'Professional', price: 'od 1.690€', description: 'Jednokratno + od 79€/mjesečno', features: ['2 AI Agenta', 'Sve Integracije', 'Prioritetna Podrška', 'Custom Obuka', 'Analytics'], best: false, badge: null },
+        { title: 'Business', price: 'od 2.490€', description: 'Jednokratno + od 99€/mjesečno', features: ['Do 3 Agenta', 'Proširene Integracije', 'Prioritetna Podrška', 'Custom Obuka', 'Analytics Dashboard'], best: true, badge: 'Popularno' },
+        { title: 'Growth', price: 'od 3.990€', description: 'Jednokratno + od 149€/mjesečno', features: ['Do 5 Agenata', 'Multi-Channel', 'Account Manager', 'Mjesečni Pregledi', 'Prošireni Analytics'], best: false, badge: null },
+        { title: 'Enterprise', price: 'od 6.990€', description: 'Jednokratno + od 249€/mjesečno', features: ['Do 10 Agenata', 'Složeni Tijekovi Rada', 'Posvećena Podrška', 'On-Premise Moguć', 'SLA Garancija'], best: false, badge: null },
+        { title: 'Unlimited', price: 'Individualno', description: 'Na Upit', features: ['Neograničeni Agenti', 'Enterprise Značajke', '24/7 Podrška', 'Individualni SLA', 'Kompletno Rješenje'], best: false, badge: 'Enterprise' }
       ],
       faqs: [
         { q: 'Koliko dugo traje razvoj AI agenta?', a: 'Jednostavni agenti mogu biti spremni za 1-2 tjedna. Složenija rješenja s više integracija zahtijevaju 3-6 tjedana. Na početnom sastanku stvaramo realan vremenski plan za vaš projekt.' },
@@ -3468,9 +3483,14 @@ export const translations = {
         { name: 'Özel API\'ler', description: 'Mevcut sistemlerinize sorunsuz entegrasyon' }
       ],
       pricing: [
-        { title: 'Başlangıç', price: '990€\'dan', description: 'Tek seferlik + 50€/ay\'dan', features: ['1 AI Ajanı', 'Temel özellikler', 'E-posta desteği', 'Hosting dahil'], best: false },
-        { title: 'İşletme', price: '2.490€\'dan', description: 'Tek seferlik + 99€/ay\'dan', features: ['3 ajana kadar', 'Gelişmiş entegrasyonlar', 'Öncelikli destek', 'Özel eğitim', 'Analiz paneli'], best: true },
-        { title: 'Kurumsal', price: 'Özel', description: 'Talep üzerine', features: ['Sınırsız ajan', 'Karmaşık iş akışları', 'Özel destek', 'Şirket içi mümkün', 'SLA garantisi'], best: false }
+        { title: 'Düşük Bütçe', price: '490€\'dan', description: 'Tek seferlik + 29€/ay\'dan', features: ['1 Basit AI Ajanı', 'Temel Chatbot', 'Topluluk Desteği', '3 Ay Hosting'], best: false, badge: 'Giriş' },
+        { title: 'Standart', price: '790€\'dan', description: 'Tek seferlik + 39€/ay\'dan', features: ['1 AI Ajanı', 'Temel Özellikler', 'E-posta Desteği', 'Hosting Dahil', 'Temel Eğitim'], best: false, badge: 'KAMPANYA' },
+        { title: 'Başlangıç', price: '990€\'dan', description: 'Tek seferlik + 50€/ay\'dan', features: ['1 AI Ajanı', 'Gelişmiş Özellikler', 'E-posta Desteği', 'Hosting Dahil', 'Özel Eğitim'], best: false, badge: null },
+        { title: 'Profesyonel', price: '1.690€\'dan', description: 'Tek seferlik + 79€/ay\'dan', features: ['2 AI Ajanı', 'Tüm Entegrasyonlar', 'Öncelikli Destek', 'Özel Eğitim', 'Analytics'], best: false, badge: null },
+        { title: 'İşletme', price: '2.490€\'dan', description: 'Tek seferlik + 99€/ay\'dan', features: ['3 Ajana Kadar', 'Gelişmiş Entegrasyonlar', 'Öncelikli Destek', 'Özel Eğitim', 'Analiz Paneli'], best: true, badge: 'Popüler' },
+        { title: 'Büyüme', price: '3.990€\'dan', description: 'Tek seferlik + 149€/ay\'dan', features: ['5 Ajana Kadar', 'Multi-Channel', 'Hesap Yöneticisi', 'Aylık Değerlendirmeler', 'Gelişmiş Analytics'], best: false, badge: null },
+        { title: 'Kurumsal', price: '6.990€\'dan', description: 'Tek seferlik + 249€/ay\'dan', features: ['10 Ajana Kadar', 'Karmaşık İş Akışları', 'Özel Destek', 'Şirket İçi Mümkün', 'SLA Garantisi'], best: false, badge: null },
+        { title: 'Sınırsız', price: 'Özel', description: 'Talep Üzerine', features: ['Sınırsız Ajan', 'Kurumsal Özellikler', '7/24 Destek', 'Bireysel SLA', 'Eksiksiz Çözüm'], best: false, badge: 'Kurumsal' }
       ],
       faqs: [
         { q: 'Bir AI ajanı geliştirmek ne kadar sürer?', a: 'Basit ajanlar 1-2 hafta içinde kullanıma hazır olabilir. Birden fazla entegrasyona sahip daha karmaşık çözümler 3-6 hafta gerektirir. İlk görüşmede projeniz için gerçekçi bir zaman çizelgesi oluşturuyoruz.' },
