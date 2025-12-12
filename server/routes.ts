@@ -24,10 +24,10 @@ export async function registerRoutes(
       }
 
       const languageInstructions: Record<string, string> = {
-        de: 'Antworte immer auf Deutsch. Verwende die Sie-Form.',
-        en: 'Always respond in English. Use formal language.',
-        hr: 'Uvijek odgovaraj na hrvatskom jeziku. Koristi formalni jezik.',
-        tr: 'Her zaman Türkçe yanıt verin. Resmi dil kullanın.'
+        de: 'SPRACHE: Antworte IMMER auf Deutsch. Verwende die Sie-Form. Keine andere Sprache verwenden!',
+        en: 'LANGUAGE: ALWAYS respond in English. Use formal language. Do NOT use any other language!',
+        hr: 'JEZIK: UVIJEK odgovaraj na hrvatskom jeziku. Koristi formalni jezik. NE koristi druge jezike!',
+        tr: 'DİL: HER ZAMAN Türkçe yanıt verin. Kesinlikle başka bir dil kullanmayın! Hırvatça, Almanca veya İngilizce KULLANMAYIN. Sadece Türkçe!'
       };
 
       const languageInstruction = languageInstructions[language] || languageInstructions.de;
