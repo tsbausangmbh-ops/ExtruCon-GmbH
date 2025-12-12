@@ -6,12 +6,12 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
+            <a href="https://extrucon.de" className="flex items-center gap-2 mb-4 hover:opacity-80 transition-opacity">
               <Cpu className="h-6 w-6 text-primary" />
               <span className="text-xl font-bold font-display tracking-wider text-white">
                 EXTRUCON
               </span>
-            </div>
+            </a>
             <p className="text-gray-400 max-w-sm">
               Wir stärken Unternehmen mit KI der nächsten Generation, Marketing und digitalen Lösungen. 
               Wir gestalten die Zukunft heute.
