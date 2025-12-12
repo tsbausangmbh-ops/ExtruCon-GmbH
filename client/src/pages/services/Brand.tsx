@@ -7,6 +7,8 @@ import brandImg from "@assets/generated_images/abstract_digital_brand_identity_c
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 
 export default function Brand() {
   const { t } = useLanguage();
@@ -20,7 +22,11 @@ export default function Brand() {
         canonical="https://extrucon.de/leistungen/markenentwicklung"
       />
       <Navbar />
-      <main>
+      <main className="pt-24">
+        <Breadcrumbs items={[
+          { label: t.nav.services, href: "/#services" },
+          { label: t.brandPage.badge }
+        ]} />
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -104,6 +110,7 @@ export default function Brand() {
         </section>
 
         <RelatedServices currentPath="/leistungen/markenaufbau" />
+        <ExploreMoreSection />
       </main>
       <Footer />
     </div>

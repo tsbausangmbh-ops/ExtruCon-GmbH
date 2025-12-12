@@ -1,6 +1,8 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Bot, Zap, MessageSquare, BarChart3, Clock, Shield, Sparkles, ArrowRight, CheckCircle, Brain, Workflow, Users, Mail, Calendar, FileText, ShoppingCart, Headphones, TrendingUp, Settings, Database, Globe, Cpu, Lock, RefreshCw, HelpCircle, ChevronDown } from "lucide-react";
 import { useState } from "react";
@@ -34,6 +36,10 @@ export default function KIAgenten() {
       />
       <Navbar />
       <main className="pt-24">
+        <Breadcrumbs items={[
+          { label: t.nav.services, href: "/#services" },
+          { label: t.nav.kiAgents }
+        ]} />
         {/* Hero Section */}
         <section className="py-16 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
@@ -67,6 +73,7 @@ export default function KIAgenten() {
                   {t.kiAgentsPage.ctaSecondary}
                 </a>
               </div>
+              <GeoLinks service="KI-Agenten Entwicklung" />
             </motion.div>
           </div>
         </section>
@@ -489,6 +496,8 @@ export default function KIAgenten() {
             </div>
           </div>
         </section>
+
+        <ExploreMoreSection />
       </main>
       <Footer />
     </div>

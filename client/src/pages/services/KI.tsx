@@ -7,6 +7,8 @@ import aiImg from "@assets/generated_images/glowing_neural_network_brain.png";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 
 export default function KI() {
   const { t } = useLanguage();
@@ -20,7 +22,11 @@ export default function KI() {
         canonical="https://extrucon.de/leistungen/ki"
       />
       <Navbar />
-      <main>
+      <main className="pt-24">
+        <Breadcrumbs items={[
+          { label: t.nav.services, href: "/#services" },
+          { label: t.kiServicePage.badge }
+        ]} />
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -157,6 +163,7 @@ export default function KI() {
         </section>
 
         <RelatedServices currentPath="/leistungen/ki-automatisierung" />
+        <ExploreMoreSection />
       </main>
       <Footer />
     </div>

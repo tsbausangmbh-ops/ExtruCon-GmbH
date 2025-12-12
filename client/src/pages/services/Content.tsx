@@ -7,6 +7,8 @@ import contentImg from "@assets/generated_images/abstract_content_creation_visua
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 
 export default function Content() {
   const { t } = useLanguage();
@@ -20,7 +22,11 @@ export default function Content() {
         canonical="https://extrucon.de/leistungen/content"
       />
       <Navbar />
-      <main>
+      <main className="pt-24">
+        <Breadcrumbs items={[
+          { label: t.nav.services, href: "/#services" },
+          { label: t.nav.contentCreation }
+        ]} />
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -104,6 +110,7 @@ export default function Content() {
         </section>
 
         <RelatedServices currentPath="/leistungen/content" />
+        <ExploreMoreSection />
       </main>
       <Footer />
     </div>

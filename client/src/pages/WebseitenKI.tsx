@@ -1,6 +1,8 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Globe, Sparkles, ArrowRight, CheckCircle, Zap, Shield, TrendingUp, MessageSquare, Bot, Search, FileText, Image, Code, Palette, Smartphone, BarChart3, RefreshCw, ChevronDown, HelpCircle, Clock, Users } from "lucide-react";
 import { useState } from "react";
@@ -21,6 +23,10 @@ export default function WebseitenKI() {
       />
       <Navbar />
       <main className="pt-24">
+        <Breadcrumbs items={[
+          { label: t.nav.services, href: "/#services" },
+          { label: t.nav.websitesKI }
+        ]} />
         {/* Hero */}
         <section className="py-16 bg-gradient-to-b from-secondary/10 to-background">
           <div className="container mx-auto px-4">
@@ -54,6 +60,7 @@ export default function WebseitenKI() {
                   {t.webKIPage.ctaSecondary}
                 </a>
               </div>
+              <GeoLinks service="KI-Webseiten Entwicklung" />
             </motion.div>
           </div>
         </section>
@@ -338,6 +345,8 @@ export default function WebseitenKI() {
             </div>
           </div>
         </section>
+
+        <ExploreMoreSection />
       </main>
       <Footer />
     </div>

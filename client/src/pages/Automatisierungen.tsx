@@ -1,6 +1,8 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Workflow, Zap, ArrowRight, CheckCircle, Clock, TrendingUp, Shield, RefreshCw, Mail, FileText, Users, ShoppingCart, Calendar, Database, Settings, Cpu, Link2, GitBranch, Layers, Play, ChevronDown, HelpCircle } from "lucide-react";
 import { useState } from "react";
@@ -22,6 +24,10 @@ export default function Automatisierungen() {
       />
       <Navbar />
       <main className="pt-24">
+        <Breadcrumbs items={[
+          { label: t.nav.services, href: "/#services" },
+          { label: t.nav.automation }
+        ]} />
         {/* Hero */}
         <section className="py-16 bg-gradient-to-b from-orange-500/5 to-background">
           <div className="container mx-auto px-4">
@@ -55,6 +61,7 @@ export default function Automatisierungen() {
                   {t.automationPage.ctaSecondary}
                 </a>
               </div>
+              <GeoLinks service="Workflow-Automatisierung" />
             </motion.div>
           </div>
         </section>
@@ -359,6 +366,8 @@ export default function Automatisierungen() {
             </div>
           </div>
         </section>
+
+        <ExploreMoreSection />
       </main>
       <Footer />
     </div>

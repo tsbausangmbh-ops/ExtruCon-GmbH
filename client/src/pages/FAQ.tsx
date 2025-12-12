@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ExploreMoreSection } from "@/components/InternalLinks";
 
 const categoryIcons = {
   allgemein: { icon: HelpCircle, color: "text-primary" },
@@ -64,6 +66,9 @@ export default function FAQ() {
       />
       <Navbar />
       <main className="pt-24">
+        <Breadcrumbs items={[
+          { label: t.faqPage.badge }
+        ]} />
         {/* Hero Section */}
         <section className="py-12 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
@@ -237,6 +242,7 @@ export default function FAQ() {
         </section>
 
         <RelatedServices currentPath="/faq" />
+        <ExploreMoreSection />
       </main>
       <Footer />
     </div>

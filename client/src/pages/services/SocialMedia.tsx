@@ -7,6 +7,8 @@ import socialImg from "@assets/generated_images/digital_social_connection_abstra
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 
 export default function SocialMedia() {
   const { t } = useLanguage();
@@ -22,7 +24,11 @@ export default function SocialMedia() {
         canonical="https://extrucon.de/leistungen/social-media"
       />
       <Navbar />
-      <main>
+      <main className="pt-24">
+        <Breadcrumbs items={[
+          { label: t.nav.services, href: "/#services" },
+          { label: t.nav.socialMedia }
+        ]} />
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -157,6 +163,7 @@ export default function SocialMedia() {
         </section>
 
         <RelatedServices currentPath="/leistungen/social-media" />
+        <ExploreMoreSection />
       </main>
       <Footer />
     </div>

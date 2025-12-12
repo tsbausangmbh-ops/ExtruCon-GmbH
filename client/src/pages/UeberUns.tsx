@@ -1,6 +1,8 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ExploreMoreSection } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Users, Target, Lightbulb, Rocket, Heart, Award, MapPin, Mail, Phone, Clock, CheckCircle, ArrowRight, Zap, Shield, TrendingUp, Sparkles } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
@@ -21,6 +23,9 @@ export default function UeberUns() {
       />
       <Navbar />
       <main className="pt-24">
+        <Breadcrumbs items={[
+          { label: about.badge }
+        ]} />
         {/* Hero */}
         <section className="py-16 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
@@ -368,6 +373,7 @@ export default function UeberUns() {
         </section>
 
         <RelatedServices currentPath="/ueber-uns" />
+        <ExploreMoreSection />
       </main>
       <Footer />
     </div>

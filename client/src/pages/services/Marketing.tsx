@@ -7,6 +7,8 @@ import marketingImg from "@assets/generated_images/abstract_performance_marketin
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 
 export default function Marketing() {
   const { t } = useLanguage();
@@ -22,7 +24,11 @@ export default function Marketing() {
         canonical="https://extrucon.de/leistungen/marketing"
       />
       <Navbar />
-      <main>
+      <main className="pt-24">
+        <Breadcrumbs items={[
+          { label: t.nav.services, href: "/#services" },
+          { label: t.nav.marketing }
+        ]} />
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -127,6 +133,7 @@ export default function Marketing() {
         </section>
 
         <RelatedServices currentPath="/leistungen/marketing" />
+        <ExploreMoreSection />
       </main>
       <Footer />
     </div>

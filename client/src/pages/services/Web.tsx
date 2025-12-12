@@ -7,6 +7,8 @@ import webImg from "@assets/generated_images/holographic_creative_interface.png"
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 
 export default function Web() {
   const { t } = useLanguage();
@@ -22,7 +24,11 @@ export default function Web() {
         canonical="https://extrucon.de/leistungen/webentwicklung"
       />
       <Navbar />
-      <main>
+      <main className="pt-24">
+        <Breadcrumbs items={[
+          { label: t.nav.services, href: "/#services" },
+          { label: t.webPage.badge }
+        ]} />
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -127,6 +133,7 @@ export default function Web() {
         </section>
 
         <RelatedServices currentPath="/leistungen/web" />
+        <ExploreMoreSection />
       </main>
       <Footer />
     </div>
