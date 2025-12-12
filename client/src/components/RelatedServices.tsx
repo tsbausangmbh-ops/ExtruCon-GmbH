@@ -1,4 +1,4 @@
-import { Bot, Workflow, Globe, TrendingUp, Share2, FileText, Palette, Users } from "lucide-react";
+import { Bot, Workflow, Globe, TrendingUp, Share2, FileText, Palette, Users, BookOpen, HelpCircle, Building2 } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 import { motion } from "framer-motion";
 
@@ -27,9 +27,8 @@ interface RelatedServicesProps {
 export function RelatedServices({ currentPath, maxItems = 3 }: RelatedServicesProps) {
   const { t } = useLanguage();
   
-  const relatedServices = allServices
-    .filter(service => service.href !== currentPath)
-    .slice(0, maxItems);
+  const filteredServices = allServices.filter(service => service.href !== currentPath);
+  const relatedServices = filteredServices.slice(0, maxItems);
 
   const getColorClasses = (color: string) => {
     const colorMap: Record<string, { border: string; icon: string }> = {
@@ -59,7 +58,7 @@ export function RelatedServices({ currentPath, maxItems = 3 }: RelatedServicesPr
     <section className="py-12 bg-white/5">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl font-bold text-white text-center mb-8">{t.nav.services}</h2>
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {relatedServices.map((service, i) => {
             const IconComponent = service.icon;
             const colors = getColorClasses(service.colorClass);
