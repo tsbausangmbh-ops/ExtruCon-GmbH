@@ -24,10 +24,10 @@ export default function SocialMedia() {
             >
               <div className="flex items-center gap-3 mb-6">
                 <Share2 className="w-12 h-12 text-purple-400" />
-                <span className="text-purple-400 font-semibold">Social Media Agentur München</span>
+                <span className="text-purple-400 font-semibold">Social Media Agentur Deutschlandweit</span>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold font-display text-white mb-6">
-                Social Media Marketing in Fürstenfeldbruck & München
+                Social Media Marketing deutschlandweit
               </h1>
               <p className="text-xl text-gray-400 mb-8">
                 Strategisches Community-Management, virale Kampagnen und professionelle Content-Erstellung. 
@@ -41,15 +41,15 @@ export default function SocialMedia() {
         </section>
 
         {/* Leistungsumfang */}
-        <section className="py-16 bg-card/20">
+        <section className="py-10 bg-card/20">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold font-display text-white mb-4 text-center">Social Media Leistungen</h2>
             <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-              Full-Service Social Media Marketing für Unternehmen in der Region München.
+              Full-Service Social Media Marketing für Unternehmen deutschlandweit.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { title: "Social Media Strategie", desc: "Individuelle Strategie basierend auf Ihren Zielen und Ihrer Zielgruppe in München und Umgebung." },
+                { title: "Social Media Strategie", desc: "Individuelle Strategie basierend auf Ihren Zielen und Ihrer Zielgruppe – deutschlandweit." },
                 { title: "Content-Produktion", desc: "Kreative Posts, Stories, Reels und Videos – professionell produziert für maximale Reichweite." },
                 { title: "Community Management", desc: "Aktive Betreuung Ihrer Community mit zeitnahen Antworten und Engagement-Steigerung." },
                 { title: "Influencer Marketing", desc: "Kooperation mit passenden Influencern aus Bayern für authentische Reichweite." },
@@ -74,7 +74,7 @@ export default function SocialMedia() {
         </section>
 
         {/* Plattformen */}
-        <section className="py-16">
+        <section className="py-10">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold font-display text-white mb-12 text-center">Plattformen die wir betreuen</h2>
             <div className="flex flex-wrap justify-center gap-6">
@@ -95,7 +95,7 @@ export default function SocialMedia() {
         </section>
 
         {/* Vorteile */}
-        <section className="py-16 bg-card/20">
+        <section className="py-10 bg-card/20">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold font-display text-white mb-8">Ihre Vorteile mit uns als Social Media Agentur</h2>
@@ -103,7 +103,7 @@ export default function SocialMedia() {
                 {[
                   "Professionelle Präsenz auf allen relevanten Plattformen",
                   "Wachsende Community und höhere Engagement-Raten",
-                  "Mehr Reichweite und Sichtbarkeit für Ihre Marke in München",
+                  "Mehr Reichweite und Sichtbarkeit für Ihre Marke",
                   "Direkter Draht zu Ihrer lokalen Zielgruppe",
                   "Messbare Ergebnisse und transparente monatliche Reports"
                 ].map((item, i) => (
@@ -118,7 +118,7 @@ export default function SocialMedia() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16">
+        <section className="py-10">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold font-display text-white mb-8 text-center">
               Häufige Fragen zu Social Media Marketing
@@ -162,11 +162,11 @@ export default function SocialMedia() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
+        <section className="py-10 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold font-display text-white mb-4">Bereit für Social Media Erfolg?</h2>
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-              Lassen Sie uns Ihre Social Media Präsenz in München auf das nächste Level bringen. Kostenlose Erstanalyse!
+              Lassen Sie uns Ihre Social Media Präsenz auf das nächste Level bringen. Kostenlose Erstanalyse!
             </p>
             <Button size="lg" className="bg-purple-500 hover:bg-purple-600 text-white" data-testid="button-cta-social">
               Jetzt Social Media Beratung starten <ArrowRight className="ml-2 h-5 w-5" />

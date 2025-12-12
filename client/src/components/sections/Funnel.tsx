@@ -5,14 +5,14 @@ import { Card } from "@/components/ui/card";
 
 export function Funnel() {
   return (
-    <section id="funnel" className="py-16 bg-background relative overflow-hidden">
+    <section id="funnel" className="py-8 bg-background relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header with SEO H2 */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-6">
           <span className="inline-block py-1 px-3 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-4">
             Bewährtes System
           </span>
@@ -21,11 +21,11 @@ export function Funnel() {
           </h2>
           <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
             Wir verwandeln unsichtbare Webseiten in Kundenmagneten. Unser SEO- und Geo-basiertes 
-            Funnel-System löst Ihr Problem fehlender Sichtbarkeit in Fürstenfeldbruck, München und ganz Bayern.
+            Funnel-System löst Ihr Problem fehlender Sichtbarkeit – deutschlandweit.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 items-center mb-10">
           {/* Visual Funnel Side */}
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
@@ -61,7 +61,7 @@ export function Funnel() {
           </motion.div>
 
           {/* Text/Steps Side with H3 Subheadings */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ export function Funnel() {
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">1. Lokale Dominanz durch Geo-SEO</h3>
                     <p className="text-gray-400">
-                      Wir analysieren Ihren Standort und Ihre Zielregion in Fürstenfeldbruck und München. 
+                      Wir analysieren Ihren Standort und Ihre Zielregion in ganz Deutschland. 
                       Durch lokales SEO und Geo-Targeting stellen wir sicher, dass Sie bei Google Maps 
                       und der lokalen Suche ganz oben erscheinen.
                     </p>
@@ -98,7 +98,7 @@ export function Funnel() {
                     <h3 className="text-xl font-bold text-white mb-2">2. Qualifizierte Leads durch Content-Strategie</h3>
                     <p className="text-gray-400">
                       Nicht jeder Besucher ist ein Kunde. Unser Content-Funnel filtert Interessenten durch 
-                      hochwertige, SEO-optimierte Inhalte, sodass nur qualifizierte Leads aus Ihrer Region übrig bleiben.
+                      hochwertige, SEO-optimierte Inhalte, sodass nur qualifizierte Leads übrig bleiben.
                     </p>
                   </div>
                 </div>
@@ -129,13 +129,13 @@ export function Funnel() {
         </div>
 
         {/* Additional SEO Content Section */}
-        <div className="mt-16">
-          <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-8 text-center">
-            Warum Unternehmen in Fürstenfeldbruck uns vertrauen
+        <div className="mt-10">
+          <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-6 text-center">
+            Warum Unternehmen uns vertrauen
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Lokale Expertise", desc: "Wir kennen den Markt in München und Umgebung seit Jahren", icon: MapPin },
+              { title: "Deutschlandweite Expertise", desc: "Wir betreuen Kunden in ganz Deutschland", icon: MapPin },
               { title: "Messbare Ergebnisse", desc: "Transparente KPIs und monatliche Reportings", icon: TrendingUp },
               { title: "Persönliche Betreuung", desc: "Direkter Ansprechpartner, keine Call-Center", icon: Users },
               { title: "Schnelle Umsetzung", desc: "Erste Ergebnisse oft schon nach 4-6 Wochen", icon: Zap }
@@ -157,23 +157,23 @@ export function Funnel() {
         </div>
 
         {/* FAQ Section for SEO */}
-        <div className="mt-16">
-          <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-8 text-center">
-            Häufige Fragen zu Marketing in Fürstenfeldbruck
+        <div className="mt-10">
+          <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-6 text-center">
+            Häufige Fragen zu digitalem Marketing
           </h2>
           <div className="max-w-3xl mx-auto space-y-4">
             {[
               { 
-                q: "Wie schnell sehe ich Ergebnisse mit SEO in Fürstenfeldbruck?", 
-                a: "Lokales SEO zeigt oft schon nach 4-8 Wochen erste Verbesserungen. Für nachhaltige Top-Rankings in München und Umgebung planen wir 3-6 Monate ein." 
+                q: "Wie schnell sehe ich Ergebnisse mit SEO?", 
+                a: "Erste Verbesserungen zeigen sich oft nach 4-8 Wochen. Für nachhaltige Top-Rankings planen wir 3-6 Monate ein." 
               },
               { 
-                q: "Arbeitet ihr nur mit Unternehmen aus Fürstenfeldbruck?", 
-                a: "Unser Fokus liegt auf der Region München, Fürstenfeldbruck, Germering, Puchheim und ganz Oberbayern. Wir betreuen aber auch deutschlandweite Projekte." 
+                q: "Arbeitet ihr deutschlandweit?", 
+                a: "Ja! Unser Sitz ist in Fürstenfeldbruck bei München, aber wir betreuen Kunden in ganz Deutschland – remote und vor Ort." 
               },
               { 
-                q: "Was kostet eine Marketing-Agentur in München?",
-                a: "Unsere Pakete starten ab 990€/Monat für lokales SEO. Für eine individuelle Beratung und ein maßgeschneidertes Angebot kontaktieren Sie uns kostenlos." 
+                q: "Was kostet eine Marketing-Agentur?",
+                a: "Unsere Pakete starten ab 990€/Monat. Für eine individuelle Beratung und ein maßgeschneidertes Angebot kontaktieren Sie uns kostenlos." 
               },
               { 
                 q: "Bietet ihr auch Einzelleistungen an?",

@@ -27,7 +27,7 @@ export function Hero() {
             <div className="flex items-center justify-center gap-2 mb-4">
               <span className="inline-flex items-center gap-1.5 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium backdrop-blur-sm">
                 <MapPin className="w-3.5 h-3.5" />
-                Fürstenfeldbruck & München
+                Deutschlandweit · Sitz in Fürstenfeldbruck
               </span>
             </div>
             
@@ -35,20 +35,20 @@ export function Hero() {
               Das ExtruCon Funnel-System für messbaren Erfolg
             </span>
             
-            {/* H1 with Local SEO Keywords */}
+            {/* H1 with SEO Keywords */}
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-display text-white mb-6 leading-tight">
-              Ihre Marketing & KI Agentur in{" "}
-              <span className="text-gradient">Fürstenfeldbruck</span>
+              Ihre Marketing & KI Agentur{" "}
+              <span className="text-gradient">deutschlandweit</span>
             </h1>
             
             <p className="text-lg md:text-xl text-gray-300 mb-4 max-w-2xl mx-auto leading-relaxed">
               Wir verwandeln Besucher in zahlende Kunden. Unser spezialisiertes SEO- & Geo-System 
-              platziert Ihr Unternehmen genau dort, wo Ihre Kunden in München und Umgebung suchen.
+              platziert Ihr Unternehmen genau dort, wo Ihre Kunden suchen – in ganz Deutschland.
             </p>
             
             {/* Trust Signals */}
             <p className="text-sm text-gray-500 mb-8">
-              ✓ Lokale Expertise seit 2020 · ✓ 50+ zufriedene Kunden in Bayern · ✓ Kostenlose Erstberatung
+              ✓ Deutschlandweiter Service · ✓ 50+ zufriedene Kunden · ✓ Kostenlose Erstberatung
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -24,15 +24,14 @@ export default function KI() {
             >
               <div className="flex items-center gap-3 mb-6">
                 <Bot className="w-12 h-12 text-cyan-400" />
-                <span className="text-cyan-400 font-semibold">KI Agentur Fürstenfeldbruck</span>
+                <span className="text-cyan-400 font-semibold">KI Agentur Deutschlandweit</span>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold font-display text-white mb-6">
-                KI & Automatisierung für Unternehmen in München
+                KI & Automatisierung für Ihr Unternehmen
               </h1>
               <p className="text-xl text-gray-400 mb-8">
                 Maßgeschneiderte KI-Lösungen, Chatbots und intelligente Automatisierungs-Workflows 
-                für Unternehmen in Fürstenfeldbruck, München und ganz Bayern. Sparen Sie Zeit und Kosten 
-                durch modernste Künstliche Intelligenz.
+                deutschlandweit. Sparen Sie Zeit und Kosten durch modernste Künstliche Intelligenz.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-black" data-testid="button-contact-ki">
@@ -44,7 +43,7 @@ export default function KI() {
         </section>
 
         {/* Leistungsumfang */}
-        <section className="py-16 bg-card/20">
+        <section className="py-10 bg-card/20">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold font-display text-white mb-4 text-center">Unsere KI-Leistungen</h2>
             <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
@@ -52,7 +51,7 @@ export default function KI() {
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { title: "KI-Chatbots & Assistenten", desc: "Intelligente Chatbots für Kundenservice, Beratung und Vertrieb – 24/7 verfügbar für Ihre Kunden in München." },
+                { title: "KI-Chatbots & Assistenten", desc: "Intelligente Chatbots für Kundenservice, Beratung und Vertrieb – 24/7 verfügbar für Ihre Kunden." },
                 { title: "Workflow-Automatisierung", desc: "Automatisierung wiederkehrender Aufgaben mit n8n, Make und Zapier. Sparen Sie bis zu 80% Zeit." },
                 { title: "KI-Content-Erstellung", desc: "KI-gestützte Texte, Bilder und Videos für Ihr Marketing – schneller und kosteneffizienter." },
                 { title: "Datenanalyse & Insights", desc: "KI-basierte Auswertungen Ihrer Geschäftsdaten für bessere Entscheidungen." },
@@ -77,7 +76,7 @@ export default function KI() {
         </section>
 
         {/* Technologien */}
-        <section className="py-16">
+        <section className="py-10">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold font-display text-white mb-12 text-center">KI-Technologien die wir einsetzen</h2>
             <div className="flex flex-wrap justify-center gap-6">
@@ -98,7 +97,7 @@ export default function KI() {
         </section>
 
         {/* Vorteile */}
-        <section className="py-16 bg-card/20">
+        <section className="py-10 bg-card/20">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold font-display text-white mb-8">Vorteile von KI für Ihr Unternehmen</h2>
@@ -121,7 +120,7 @@ export default function KI() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16">
+        <section className="py-10">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold font-display text-white mb-8 text-center">
               Häufige Fragen zu KI & Automatisierung
@@ -165,11 +164,11 @@ export default function KI() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+        <section className="py-10 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold font-display text-white mb-4">Bereit für die KI-Revolution in Ihrem Unternehmen?</h2>
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-              Lassen Sie uns gemeinsam Ihre Prozesse mit KI optimieren. Kostenlose Erstberatung für Unternehmen aus Fürstenfeldbruck und München.
+              Lassen Sie uns gemeinsam Ihre Prozesse mit KI optimieren. Kostenlose Erstberatung – deutschlandweit.
             </p>
             <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-black" data-testid="button-cta-ki">
               Jetzt KI-Projekt starten <ArrowRight className="ml-2 h-5 w-5" />
