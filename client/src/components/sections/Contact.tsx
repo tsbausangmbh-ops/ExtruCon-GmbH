@@ -28,7 +28,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-500">E-Mail</p>
-                  <p className="font-medium">contact@extrucon.de</p>
+                  <p className="font-medium">info@extrucon.de</p>
                 </div>
               </div>
               
@@ -38,7 +38,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-500">Anrufen</p>
-                  <p className="font-medium">+49 (0) 123 456 789</p>
+                  <p className="font-medium">089 444438879</p>
                 </div>
               </div>
 

@@ -31,8 +31,8 @@ export default function Impressum() {
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
             <h2 className="text-xl font-bold text-white mb-4">Kontakt</h2>
             <p className="text-gray-400 leading-relaxed">
-              E-Mail: <a href="mailto:contact@extrucon.de" className="text-cyan-400 hover:text-cyan-300 transition-colors">contact@extrucon.de</a><br />
-              Telefon: <a href="tel:+49123456789" className="text-cyan-400 hover:text-cyan-300 transition-colors">+49 (0) 123 456 789</a><br />
+              E-Mail: <a href="mailto:info@extrucon.de" className="text-cyan-400 hover:text-cyan-300 transition-colors">info@extrucon.de</a><br />
+              Telefon: <a href="tel:+4989444438879" className="text-cyan-400 hover:text-cyan-300 transition-colors">089 444438879</a><br />
               Website: <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 transition-colors">https://extrucon.de</a>
             </p>
           </section>

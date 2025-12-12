@@ -312,7 +312,7 @@ export default function Terms() {
               <strong className="text-gray-200">Widerrufsrecht:</strong> Sie haben das Recht, binnen 14 Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt 14 Tage ab dem Tag des Vertragsschlusses.
             </p>
             <p className="text-gray-400 mb-4 leading-relaxed">
-              Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (ExtruCon GmbH, Tech Park 1, Berlin, E-Mail: contact@extrucon.de) mittels einer eindeutigen Erklärung (z.B. ein mit der Post versandter Brief oder E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren.
+              Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (ExtruCon GmbH, Tech Park 1, Berlin, E-Mail: info@extrucon.de) mittels einer eindeutigen Erklärung (z.B. ein mit der Post versandter Brief oder E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren.
             </p>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.
