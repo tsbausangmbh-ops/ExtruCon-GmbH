@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 export type Language = 'de' | 'en' | 'hr' | 'tr';
 
@@ -3695,6 +3695,33 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+const countryToLanguage: Record<string, Language> = {
+  'DE': 'de',
+  'AT': 'de',
+  'CH': 'de',
+  'HR': 'hr',
+  'BA': 'hr',
+  'RS': 'hr',
+  'SI': 'hr',
+  'ME': 'hr',
+  'TR': 'tr',
+  'CY': 'tr',
+};
+
+async function detectCountryLanguage(): Promise<Language> {
+  try {
+    const response = await fetch('https://ipapi.co/json/', { 
+      signal: AbortSignal.timeout(3000) 
+    });
+    if (!response.ok) return 'de';
+    const data = await response.json();
+    const country = data.country_code?.toUpperCase();
+    return countryToLanguage[country] || 'de';
+  } catch {
+    return 'de';
+  }
+}
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>(() => {
     if (typeof window !== 'undefined') {
@@ -3703,6 +3730,26 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     }
     return 'de';
   });
+
+  const [isInitialized, setIsInitialized] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
+    const saved = localStorage.getItem('language');
+    const hasVisited = localStorage.getItem('geoDetected');
+    
+    if (!saved && !hasVisited) {
+      detectCountryLanguage().then((detectedLang) => {
+        setLanguage(detectedLang);
+        localStorage.setItem('language', detectedLang);
+        localStorage.setItem('geoDetected', 'true');
+        setIsInitialized(true);
+      });
+    } else {
+      setIsInitialized(true);
+    }
+  }, []);
 
   const handleSetLanguage = (lang: Language) => {
     setLanguage(lang);
