@@ -55,6 +55,9 @@ export function Navbar() {
             )}
           </div>
 
+          <a href="/ki-agenten" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
+            KI-Agenten
+          </a>
           <a href="/ratgeber" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
             Ratgeber
           </a>
@@ -101,6 +104,13 @@ export function Navbar() {
                 </a>
               ))}
             </div>
+            <a
+              href="/ki-agenten"
+              className="text-lg font-medium text-gray-300 hover:text-primary transition-colors py-2"
+              onClick={() => setIsOpen(false)}
+            >
+              KI-Agenten
+            </a>
             <a
               href="/ratgeber"
               className="text-lg font-medium text-gray-300 hover:text-primary transition-colors py-2"

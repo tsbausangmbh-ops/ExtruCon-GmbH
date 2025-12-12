@@ -10,6 +10,7 @@ import Impressum from "@/pages/Impressum";
 import Contact from "@/pages/Contact";
 import Ratgeber from "@/pages/Ratgeber";
 import FAQ from "@/pages/FAQ";
+import KIAgenten from "@/pages/KIAgenten";
 import Brand from "@/pages/services/Brand";
 import Content from "@/pages/services/Content";
 import SocialMedia from "@/pages/services/SocialMedia";
@@ -28,6 +29,7 @@ function Router() {
       <Route path="/kontakt" component={Contact} />
       <Route path="/ratgeber" component={Ratgeber} />
       <Route path="/faq" component={FAQ} />
+      <Route path="/ki-agenten" component={KIAgenten} />
       <Route path="/leistungen/markenaufbau" component={Brand} />
       <Route path="/leistungen/content" component={Content} />
       <Route path="/leistungen/social-media" component={SocialMedia} />
