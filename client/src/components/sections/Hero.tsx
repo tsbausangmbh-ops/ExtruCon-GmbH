@@ -32,7 +32,7 @@ export function Hero() {
               </span>
             </div>
             
-            <span className="inline-block py-1 px-3 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-sm font-medium mb-6 backdrop-blur-sm">
+            <span className="inline-block py-1 px-3 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-sm font-medium mb-6 mt-6 backdrop-blur-sm">
               Zeitersparnis durch intelligente KI-Automatisierung
             </span>
             
