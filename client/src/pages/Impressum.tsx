@@ -1,13 +1,21 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { useLanguage } from "@/lib/i18n";
 
 export default function Impressum() {
+  const { t, language } = useLanguage();
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <Navbar />
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-bold font-display text-white mb-8">Impressum</h1>
+          <h1 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">{t.legalPages.impressumTitle}</h1>
+          {language !== 'de' && (
+            <p className="text-amber-400/80 text-sm mb-8 p-3 rounded-lg bg-amber-400/10 border border-amber-400/20">
+              {t.legalPages.legalNotice}
+            </p>
+          )}
 
           {/* Angaben gemäß § 5 TMG */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">

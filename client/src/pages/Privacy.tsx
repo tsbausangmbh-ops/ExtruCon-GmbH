@@ -1,13 +1,21 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { useLanguage } from "@/lib/i18n";
 
 export default function Privacy() {
+  const { t, language } = useLanguage();
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <Navbar />
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-bold font-display text-white mb-6">Datenschutzerklärung</h1>
+          <h1 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">{t.legalPages.privacyTitle}</h1>
+          {language !== 'de' && (
+            <p className="text-amber-400/80 text-sm mb-6 p-3 rounded-lg bg-amber-400/10 border border-amber-400/20">
+              {t.legalPages.legalNotice}
+            </p>
+          )}
           
           {/* Präambel */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">

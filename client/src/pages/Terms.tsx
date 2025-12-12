@@ -1,14 +1,22 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { useLanguage } from "@/lib/i18n";
 
 export default function Terms() {
+  const { t, language } = useLanguage();
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <Navbar />
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-bold font-display text-white mb-6">Allgemeine Geschäftsbedingungen (AGB)</h1>
-          <p className="text-gray-500 mb-8">Stand: Dezember 2025</p>
+          <h1 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">{t.legalPages.termsTitle}</h1>
+          <p className="text-gray-500 mb-4">{t.legalPages.termsDate}</p>
+          {language !== 'de' && (
+            <p className="text-amber-400/80 text-sm mb-8 p-3 rounded-lg bg-amber-400/10 border border-amber-400/20">
+              {t.legalPages.legalNotice}
+            </p>
+          )}
 
           {/* Inhaltsübersicht */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">

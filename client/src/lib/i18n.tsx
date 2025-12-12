@@ -990,6 +990,13 @@ export const translations = {
       ctaSubtitle: 'Lassen Sie uns eine digitale Präsenz schaffen, die Ihre Kunden begeistert.',
       ctaButtonAlt: 'Jetzt Projekt starten'
     },
+    legalPages: {
+      impressumTitle: 'Impressum',
+      privacyTitle: 'Datenschutzerklärung',
+      termsTitle: 'Allgemeine Geschäftsbedingungen (AGB)',
+      termsDate: 'Stand: Dezember 2025',
+      legalNotice: 'Hinweis: Diese Seite ist auf Deutsch verfasst, um den deutschen gesetzlichen Anforderungen zu entsprechen.'
+    },
   },
   en: {
     nav: {
@@ -1978,6 +1985,13 @@ export const translations = {
       ctaSubtitle: 'Let us create a digital presence that delights your customers.',
       ctaButtonAlt: 'Start Project Now'
     },
+    legalPages: {
+      impressumTitle: 'Legal Notice',
+      privacyTitle: 'Privacy Policy',
+      termsTitle: 'Terms and Conditions',
+      termsDate: 'As of: December 2025',
+      legalNotice: 'Note: This page is in German to comply with German legal requirements.'
+    },
   },
   hr: {
     nav: {
@@ -2965,6 +2979,13 @@ export const translations = {
       ctaTitle: 'Spremni za svoju novu web stranicu?',
       ctaSubtitle: 'Dopustite nam da stvorimo digitalnu prisutnost koja oduševljava vaše kupce.',
       ctaButtonAlt: 'Započnite projekt sada'
+    },
+    legalPages: {
+      impressumTitle: 'Pravna obavijest',
+      privacyTitle: 'Politika privatnosti',
+      termsTitle: 'Opći uvjeti poslovanja',
+      termsDate: 'Stanje: Prosinac 2025.',
+      legalNotice: 'Napomena: Ova stranica je na njemačkom jeziku radi usklađenosti s njemačkim zakonskim zahtjevima.'
     },
   },
 };
