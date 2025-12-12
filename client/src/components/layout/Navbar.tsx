@@ -64,7 +64,7 @@ export function Navbar() {
           <a href="/faq" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
             FAQ
           </a>
-          <a href="/#about" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
+          <a href="/ueber-uns" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
             Über uns
           </a>
           <a href="/kontakt" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
@@ -126,7 +126,7 @@ export function Navbar() {
               FAQ
             </a>
             <a
-              href="/#about"
+              href="/ueber-uns"
               className="text-lg font-medium text-gray-300 hover:text-primary transition-colors py-2"
               onClick={() => setIsOpen(false)}
             >
