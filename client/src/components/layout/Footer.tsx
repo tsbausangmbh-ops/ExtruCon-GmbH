@@ -42,7 +42,7 @@ export function Footer() {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
           <p>&copy; {new Date().getFullYear()} Extrucon GmbH. Alle Rechte vorbehalten.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Datenschutzerklärung</a>
+            <a href="/privacy" className="hover:text-white transition-colors">Datenschutzerklärung</a>
             <a href="#" className="hover:text-white transition-colors">AGB</a>
             <a href="#" className="hover:text-white transition-colors">Impressum</a>
           </div>
