@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
+import { BackToHome } from "@/components/BackToHome";
 
 export default function Privacy() {
   const { t, language } = useLanguage();
@@ -15,7 +16,9 @@ export default function Privacy() {
         canonical="https://extrucon.de/datenschutz"
       />
       <Navbar />
-      <main className="container mx-auto px-4 py-16">
+      <main className="pt-24">
+        <BackToHome />
+        <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">{t.legalPages.privacyTitle}</h1>
           {language !== 'de' && (
@@ -482,6 +485,7 @@ export default function Privacy() {
             </p>
           </section>
 
+        </div>
         </div>
       </main>
       <Footer />

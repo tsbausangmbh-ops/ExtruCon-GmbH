@@ -8,6 +8,7 @@ import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BackToHome } from "@/components/BackToHome";
 import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 
 export default function Web() {
@@ -25,6 +26,7 @@ export default function Web() {
       />
       <Navbar />
       <main className="pt-24">
+        <BackToHome />
         <Breadcrumbs items={[
           { label: t.nav.services, href: "/#services" },
           { label: t.webPage.badge }

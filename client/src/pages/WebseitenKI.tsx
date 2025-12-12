@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BackToHome } from "@/components/BackToHome";
 import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Globe, Sparkles, ArrowRight, CheckCircle, Zap, Shield, TrendingUp, MessageSquare, Bot, Search, FileText, Image, Code, Palette, Smartphone, BarChart3, RefreshCw, ChevronDown, HelpCircle, Clock, Users } from "lucide-react";
@@ -23,6 +24,7 @@ export default function WebseitenKI() {
       />
       <Navbar />
       <main className="pt-24">
+        <BackToHome />
         <Breadcrumbs items={[
           { label: t.nav.services, href: "/#services" },
           { label: t.nav.websitesKI }
