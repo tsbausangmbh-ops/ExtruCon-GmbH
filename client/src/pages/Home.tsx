@@ -6,6 +6,7 @@ import { Funnel } from "@/components/sections/Funnel";
 import { Problem } from "@/components/sections/Problem";
 import { About } from "@/components/sections/About";
 import { Contact } from "@/components/sections/Contact";
+import { FAQ } from "@/components/sections/FAQ";
 
 export default function Home() {
   return (
@@ -21,6 +22,8 @@ export default function Home() {
         <Services />
         {/* About Section */}
         <About />
+        {/* FAQ Section */}
+        <FAQ />
         {/* Funnel Logic: 4. Action */}
         <Contact />
       </main>
