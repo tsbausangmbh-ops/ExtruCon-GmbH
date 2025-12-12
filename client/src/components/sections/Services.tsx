@@ -1,11 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Bot, Share2, Globe, PenTool, Fingerprint, TrendingUp } from "lucide-react";
+import { Bot, Share2, Globe, PenTool, Fingerprint, Calculator } from "lucide-react";
 import aiImg from "@assets/generated_images/glowing_neural_network_brain.png";
 import socialImg from "@assets/generated_images/digital_social_connection_abstract_art.png";
 import webImg from "@assets/generated_images/holographic_creative_interface.png";
 import brandImg from "@assets/generated_images/abstract_digital_brand_identity_construction.png";
 import contentImg from "@assets/generated_images/abstract_content_creation_visualization.png";
-import marketingImg from "@assets/generated_images/abstract_performance_marketing_growth.png";
+import financeImg from "@assets/generated_images/digital_finance_and_accounting_visualization.png";
 import { motion } from "framer-motion";
 
 const services = [
@@ -17,11 +17,11 @@ const services = [
     color: "text-amber-400"
   },
   {
-    title: "Performance Marketing",
-    description: "Datengetriebene Kampagnen und SEO-Strategien für messbares Wachstum und maximale Sichtbarkeit.",
-    icon: TrendingUp,
-    image: marketingImg,
-    color: "text-orange-400"
+    title: "Buchhaltungsservice",
+    description: "Digitale und automatisierte Buchhaltungslösungen für maximale Effizienz und Transparenz.",
+    icon: Calculator,
+    image: financeImg,
+    color: "text-emerald-400"
   },
   {
     title: "Social Media",
