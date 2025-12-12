@@ -58,6 +58,9 @@ export function Navbar() {
           <a href="/ki-agenten" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
             KI-Agenten
           </a>
+          <a href="/webseiten-ki" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
+            Webseiten mit KI
+          </a>
           <a href="/ratgeber" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
             Ratgeber
           </a>
@@ -110,6 +113,13 @@ export function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               KI-Agenten
+            </a>
+            <a
+              href="/webseiten-ki"
+              className="text-lg font-medium text-gray-300 hover:text-primary transition-colors py-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Webseiten mit KI
             </a>
             <a
               href="/ratgeber"
