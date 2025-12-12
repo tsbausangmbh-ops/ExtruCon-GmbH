@@ -8,6 +8,7 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useLanguage } from "@/lib/i18n";
+import { SEOHead } from "@/components/SEOHead";
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -20,6 +21,12 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
+      <SEOHead
+        title="Kontakt | KI-Beratung Fürstenfeldbruck | ExtruCon GmbH"
+        description="Kontaktieren Sie ExtruCon für KI-Beratung in Fürstenfeldbruck bei München. Kostenlose Erstberatung zu KI-Agenten und Automatisierung."
+        keywords="KI Beratung Kontakt, Fürstenfeldbruck, München, ExtruCon Kontakt"
+        canonical="https://extrucon.de/kontakt"
+      />
       <Navbar />
       <main>
         {/* Hero Section */}

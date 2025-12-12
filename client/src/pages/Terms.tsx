@@ -1,12 +1,19 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { useLanguage } from "@/lib/i18n";
+import { SEOHead } from "@/components/SEOHead";
 
 export default function Terms() {
   const { t, language } = useLanguage();
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
+      <SEOHead
+        title="AGB | Allgemeine Geschäftsbedingungen | ExtruCon GmbH"
+        description="Allgemeine Geschäftsbedingungen der ExtruCon GmbH für KI, Marketing, Social Media und Webentwicklung."
+        keywords="AGB, Geschäftsbedingungen, ExtruCon"
+        canonical="https://extrucon.de/agb"
+      />
       <Navbar />
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">

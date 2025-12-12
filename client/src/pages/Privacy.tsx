@@ -1,12 +1,19 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { useLanguage } from "@/lib/i18n";
+import { SEOHead } from "@/components/SEOHead";
 
 export default function Privacy() {
   const { t, language } = useLanguage();
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
+      <SEOHead
+        title="Datenschutzerklärung | ExtruCon GmbH"
+        description="Datenschutzerklärung der ExtruCon GmbH gemäß DSGVO. Informationen zur Verarbeitung personenbezogener Daten."
+        keywords="Datenschutz, DSGVO, ExtruCon, Datenschutzerklärung"
+        canonical="https://extrucon.de/datenschutz"
+      />
       <Navbar />
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">

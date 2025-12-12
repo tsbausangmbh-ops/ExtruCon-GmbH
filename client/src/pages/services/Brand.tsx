@@ -5,12 +5,19 @@ import { Fingerprint, Check, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import brandImg from "@assets/generated_images/abstract_digital_brand_identity_construction.png";
 import { useLanguage } from "@/lib/i18n";
+import { SEOHead } from "@/components/SEOHead";
 
 export default function Brand() {
   const { t } = useLanguage();
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
+      <SEOHead
+        title="Markenentwicklung & Corporate Design | ExtruCon GmbH"
+        description="Professionelle Markenentwicklung und Corporate Design. Logo, Branding & visuelle Identität. Agentur Fürstenfeldbruck."
+        keywords="Markenentwicklung, Corporate Design, Logo Design, Branding Agentur"
+        canonical="https://extrucon.de/leistungen/markenentwicklung"
+      />
       <Navbar />
       <main>
         {/* Hero Section */}

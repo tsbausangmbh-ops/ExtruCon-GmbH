@@ -5,6 +5,7 @@ import { Share2, Check, ArrowRight, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import socialImg from "@assets/generated_images/digital_social_connection_abstract_art.png";
 import { useLanguage } from "@/lib/i18n";
+import { SEOHead } from "@/components/SEOHead";
 
 export default function SocialMedia() {
   const { t } = useLanguage();
@@ -13,6 +14,12 @@ export default function SocialMedia() {
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
+      <SEOHead
+        title="Social Media Marketing Fürstenfeldbruck | ExtruCon GmbH"
+        description="Professionelles Social Media Marketing. Instagram, TikTok, LinkedIn & Facebook Betreuung. Agentur aus Fürstenfeldbruck."
+        keywords="Social Media Marketing, Instagram Agentur, TikTok Marketing, Fürstenfeldbruck"
+        canonical="https://extrucon.de/leistungen/social-media"
+      />
       <Navbar />
       <main>
         {/* Hero Section */}

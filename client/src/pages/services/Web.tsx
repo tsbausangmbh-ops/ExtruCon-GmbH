@@ -5,6 +5,7 @@ import { Globe, Check, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import webImg from "@assets/generated_images/holographic_creative_interface.png";
 import { useLanguage } from "@/lib/i18n";
+import { SEOHead } from "@/components/SEOHead";
 
 export default function Web() {
   const { t } = useLanguage();
@@ -13,6 +14,12 @@ export default function Web() {
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
+      <SEOHead
+        title="Webentwicklung Fürstenfeldbruck | Professionelle Websites | ExtruCon"
+        description="Moderne Webentwicklung mit KI-Integration. React, Next.js, WordPress & Shopify. Webdesign Agentur Fürstenfeldbruck bei München."
+        keywords="Webentwicklung Fürstenfeldbruck, Webdesign München, Website erstellen, React Entwicklung"
+        canonical="https://extrucon.de/leistungen/webentwicklung"
+      />
       <Navbar />
       <main>
         {/* Hero Section */}

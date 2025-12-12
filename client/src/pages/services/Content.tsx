@@ -5,12 +5,19 @@ import { PenTool, Check, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import contentImg from "@assets/generated_images/abstract_content_creation_visualization.png";
 import { useLanguage } from "@/lib/i18n";
+import { SEOHead } from "@/components/SEOHead";
 
 export default function Content() {
   const { t } = useLanguage();
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
+      <SEOHead
+        title="Content-Erstellung | KI-gestützte Inhalte | ExtruCon"
+        description="Professionelle Content-Erstellung mit KI-Unterstützung. Texte, Grafiken, Videos & Social Media Content. Fürstenfeldbruck."
+        keywords="Content Erstellung, KI Content, Social Media Content, Texterstellung"
+        canonical="https://extrucon.de/leistungen/content"
+      />
       <Navbar />
       <main>
         {/* Hero Section */}

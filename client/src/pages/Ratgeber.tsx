@@ -5,6 +5,7 @@ import { BookOpen, Clock, ArrowRight, Search, Bot, Share2, Globe, TrendingUp, Sp
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/lib/i18n";
+import { SEOHead } from "@/components/SEOHead";
 
 const articleMetadata: { id: number; category: string; featured: boolean }[] = [
   { id: 1, category: "ki", featured: true },
@@ -108,6 +109,12 @@ export default function Ratgeber() {
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
+      <SEOHead
+        title="KI Ratgeber | Tipps zu KI, Marketing & Automatisierung | ExtruCon"
+        description="Expertenwissen zu KI, Automatisierung, Social Media und Webentwicklung. Praxistipps von Ihrer KI-Agentur aus Fürstenfeldbruck."
+        keywords="KI Ratgeber, Automatisierung Tipps, Marketing Guide, KI Wissen"
+        canonical="https://extrucon.de/ratgeber"
+      />
       <Navbar />
       <main className="pt-24">
         {/* Hero Section */}

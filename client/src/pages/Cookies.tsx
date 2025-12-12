@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { useLanguage } from "@/lib/i18n";
 import { Cookie, Shield, BarChart3, Megaphone, Settings, Scale, UserCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SEOHead } from "@/components/SEOHead";
 
 type CookiePreferences = {
   necessary: boolean;
@@ -34,6 +35,12 @@ export default function Cookies() {
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
+      <SEOHead
+        title="Cookie-Richtlinie | ExtruCon GmbH"
+        description="Informationen zu Cookies auf extrucon.de. Cookie-Einstellungen verwalten und Datenschutz."
+        keywords="Cookies, Cookie-Richtlinie, Datenschutz, ExtruCon"
+        canonical="https://extrucon.de/cookies"
+      />
       <Navbar />
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
