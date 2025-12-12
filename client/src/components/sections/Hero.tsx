@@ -24,22 +24,22 @@ export function Hero() {
             transition={{ duration: 0.8 }}
           >
             <span className="inline-block py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6 backdrop-blur-sm">
-              Zukunftssichere Lösungen
+              Das Extrucon Funnel-System
             </span>
             <h1 className="text-5xl md:text-7xl font-bold font-display text-white mb-6 leading-tight">
-              Wir formen Ihre Marke & <br />
-              <span className="text-gradient">Digitale Intelligenz</span>
+              Wir verwandeln Besucher in <br />
+              <span className="text-gradient">zahlende Kunden</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Extrucon GmbH verbindet Strategisches Branding, modernste KI und immersive Web-Erlebnisse, um Ihr Unternehmen zur Marktführerschaft zu führen.
+              Schluss mit "unsichtbar". Unser spezialisiertes SEO- & Geo-System platziert Ihre Marke genau dort, wo Ihre Kunden suchen – und führt sie automatisch zum Abschluss.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-primary text-background hover:bg-primary/90 font-bold text-lg h-12 px-8">
-                Projekt starten
+                Analyse anfordern
               </Button>
               <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 hover:text-white font-medium text-lg h-12 px-8 group">
-                Leistungen ansehen <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                System ansehen <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
           </motion.div>
