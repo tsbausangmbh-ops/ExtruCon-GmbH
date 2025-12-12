@@ -21,7 +21,7 @@ export function Problem() {
           </motion.div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
           {[
             {
               icon: Clock,
@@ -67,7 +67,7 @@ export function Problem() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {[
             {
               icon: SearchX,
