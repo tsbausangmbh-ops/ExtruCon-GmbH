@@ -61,16 +61,12 @@ export function Hero() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/kontakt">
-                <Button size="lg" className="bg-primary text-background hover:bg-primary/90 font-bold text-lg h-12 px-8" data-testid="button-hero-cta">
-                  Kostenlose Erstberatung
-                </Button>
-              </Link>
-              <Link href="/ki-agenten">
-                <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 hover:text-white font-medium text-lg h-12 px-8 group" data-testid="button-hero-secondary">
-                  KI-Agenten entdecken <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
+              <a href="/kontakt" className="inline-flex items-center justify-center h-12 px-8 bg-primary text-background hover:bg-primary/90 font-bold text-lg rounded-md transition-colors" data-testid="button-hero-cta">
+                Kostenlose Erstberatung
+              </a>
+              <a href="/ki-agenten" className="inline-flex items-center justify-center h-12 px-8 border border-white/20 text-white hover:bg-white/10 font-medium text-lg rounded-md transition-colors group" data-testid="button-hero-secondary">
+                KI-Agenten entdecken <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
             </div>
           </motion.div>
         </div>
