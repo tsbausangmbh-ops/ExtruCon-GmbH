@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    title: "Markenaufbau & Branding",
+    title: "Markenaufbau / Brand",
     description: "Entwicklung unverwechselbarer Markenidentitäten, die Vertrauen schaffen und im Gedächtnis bleiben.",
     icon: Fingerprint,
     image: brandImg,
@@ -49,7 +49,7 @@ export function Services() {
     <section id="services" className="py-24 bg-background relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold font-display text-white mb-4">Unsere Expertise</h2>
+          <h2 className="text-3xl md:text-5xl font-bold font-display text-white mb-4">Unsere Leistungen</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Umfassende digitale Lösungen, von starkem Branding bis zu modernster KI-Technologie.
           </p>
