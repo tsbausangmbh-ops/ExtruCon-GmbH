@@ -671,6 +671,86 @@ export const translations = {
         { id: 48, title: 'Cookie-Banner und DSGVO: Rechtssichere Umsetzung', excerpt: 'Alles, was Sie über Consent-Management wissen müssen.', readTime: '9 Min.', date: '22. Jul 2025' }
       ]
     },
+    aboutPage: {
+      badge: 'Über ExtruCon',
+      title: 'Ihr Partner für digitale Transformation',
+      subtitle: 'Wir sind ExtruCon GmbH – eine Agentur aus Fürstenfeldbruck, die Unternehmen deutschlandweit bei KI, Automatisierung und digitalem Marketing unterstützt.',
+      stats: {
+        projects: 'Projekte',
+        clients: 'Kunden',
+        automations: 'Automatisierungen',
+        support: 'Support'
+      },
+      whoWeAre: {
+        title: 'Wer wir sind',
+        paragraph1: 'ExtruCon GmbH ist eine spezialisierte Agentur für KI-Lösungen, Automatisierung und digitales Marketing. Von unserem Standort in Fürstenfeldbruck aus betreuen wir Unternehmen in ganz Deutschland.',
+        paragraph2: 'Unser Fokus liegt auf praktischen Lösungen, die echten Mehrwert schaffen. Keine theoretischen Konzepte, sondern funktionierende Systeme, die Ihren Arbeitsalltag erleichtern.',
+        paragraph3: 'Wir kombinieren technisches Know-how mit Marketing-Expertise – und bringen so beide Welten zusammen, um ganzheitliche Lösungen zu entwickeln.',
+        tags: ['KI & Automatisierung', 'Webentwicklung', 'Marketing']
+      },
+      contact: {
+        location: 'Standort',
+        email: 'E-Mail',
+        phone: 'Telefon',
+        availability: 'Erreichbarkeit',
+        hours: 'Mo–Fr 08:00–17:00 Uhr'
+      },
+      timeline: {
+        title: 'Von der Vision zur Umsetzung',
+        subtitle: 'Unser Ansatz ist klar strukturiert und auf nachhaltige Ergebnisse ausgerichtet.',
+        items: [
+          { year: 'Vision', title: 'Die Idee', description: 'Unternehmen dabei helfen, das volle Potenzial von KI und Automatisierung zu nutzen – ohne technische Hürden.' },
+          { year: 'Mission', title: 'Der Ansatz', description: 'Maßgeschneiderte Lösungen statt Standardprodukte. Jedes Business ist einzigartig und verdient individuelle Betreuung.' },
+          { year: 'Methode', title: 'Die Umsetzung', description: 'Enge Zusammenarbeit, klare Kommunikation und iterative Entwicklung für optimale Ergebnisse.' },
+          { year: 'Ziel', title: 'Das Ergebnis', description: 'Nachhaltige Lösungen, die Ihr Unternehmen effizienter machen und langfristig Mehrwert schaffen.' }
+        ]
+      },
+      values: {
+        title: 'Unsere Werte',
+        subtitle: 'Was uns antreibt und wie wir arbeiten.',
+        items: [
+          { title: 'Innovation', description: 'Wir nutzen die neuesten KI-Technologien, um Ihrem Business einen echten Vorsprung zu verschaffen.' },
+          { title: 'Partnerschaft', description: 'Wir verstehen uns als langfristiger Partner – nicht als Dienstleister, der nach dem Projekt verschwindet.' },
+          { title: 'Qualität', description: 'Jedes Projekt wird sorgfältig geplant und umgesetzt. Wir liefern erst, wenn wir selbst überzeugt sind.' },
+          { title: 'Effizienz', description: 'Zeit ist wertvoll. Wir arbeiten schnell und fokussiert, ohne Kompromisse bei der Qualität.' }
+        ]
+      },
+      services: {
+        title: 'Was wir anbieten',
+        subtitle: 'Unsere Kernkompetenzen für Ihren digitalen Erfolg.',
+        items: [
+          { name: 'KI-Agenten', description: 'Intelligente Assistenten für Kundenservice, Analyse und Automatisierung' },
+          { name: 'Automatisierungen', description: 'Workflows, die Ihre wiederkehrenden Aufgaben übernehmen' },
+          { name: 'Webentwicklung', description: 'Moderne Websites mit integrierten KI-Features' },
+          { name: 'Social Media', description: 'Strategische Betreuung Ihrer Social-Media-Kanäle' },
+          { name: 'Content Creation', description: 'KI-gestützte Erstellung von Texten und Grafiken' },
+          { name: 'Marketing', description: 'Datengetriebenes Online-Marketing für mehr Reichweite' }
+        ]
+      },
+      whyExtrucon: {
+        title: 'Warum ExtruCon?',
+        items: [
+          { title: 'Persönliche Betreuung', description: 'Kein anonymer Support – Sie haben einen festen Ansprechpartner, der Ihr Projekt kennt.' },
+          { title: 'Technische Expertise', description: 'Wir verstehen KI, Automatisierung und moderne Webtechnologien – nicht nur oberflächlich.' },
+          { title: 'Praxisorientiert', description: 'Keine theoretischen Konzepte, sondern Lösungen, die in der Praxis funktionieren.' },
+          { title: 'Transparente Preise', description: 'Sie wissen von Anfang an, was Ihr Projekt kostet. Keine versteckten Gebühren.' },
+          { title: 'Deutschlandweit', description: 'Remote-Zusammenarbeit mit Kunden in ganz Deutschland – persönliche Meetings auf Wunsch.' },
+          { title: 'Langfristige Partnerschaft', description: 'Wir betreuen unsere Kunden auch nach dem Launch mit Wartung und Weiterentwicklung.' }
+        ]
+      },
+      legal: {
+        title: 'Rechtliche Informationen',
+        companyLabel: 'ExtruCon GmbH',
+        registerLabel: 'Handelsregister',
+        registerNumber: 'HRB 18623',
+        court: 'Amtsgericht München'
+      },
+      cta: {
+        title: 'Lernen Sie uns kennen',
+        subtitle: 'Erzählen Sie uns von Ihrem Projekt – in einem kostenlosen Erstgespräch finden wir gemeinsam die beste Lösung.',
+        button: 'Kontakt aufnehmen'
+      }
+    },
   },
   en: {
     nav: {
@@ -1340,6 +1420,86 @@ export const translations = {
         { id: 48, title: 'Cookie Banners and GDPR: Legally Compliant Implementation', excerpt: 'Everything you need to know about consent management.', readTime: '9 min', date: 'Jul 22, 2025' }
       ]
     },
+    aboutPage: {
+      badge: 'About ExtruCon',
+      title: 'Your Partner for Digital Transformation',
+      subtitle: 'We are ExtruCon GmbH – an agency from Fürstenfeldbruck that supports companies throughout Germany with AI, automation, and digital marketing.',
+      stats: {
+        projects: 'Projects',
+        clients: 'Clients',
+        automations: 'Automations',
+        support: 'Support'
+      },
+      whoWeAre: {
+        title: 'Who We Are',
+        paragraph1: 'ExtruCon GmbH is a specialized agency for AI solutions, automation, and digital marketing. From our location in Fürstenfeldbruck, we serve companies throughout Germany.',
+        paragraph2: 'Our focus is on practical solutions that create real value. No theoretical concepts, but functioning systems that make your daily work easier.',
+        paragraph3: 'We combine technical know-how with marketing expertise – bringing both worlds together to develop holistic solutions.',
+        tags: ['AI & Automation', 'Web Development', 'Marketing']
+      },
+      contact: {
+        location: 'Location',
+        email: 'Email',
+        phone: 'Phone',
+        availability: 'Availability',
+        hours: 'Mon–Fri 08:00–17:00'
+      },
+      timeline: {
+        title: 'From Vision to Implementation',
+        subtitle: 'Our approach is clearly structured and focused on sustainable results.',
+        items: [
+          { year: 'Vision', title: 'The Idea', description: 'Help companies harness the full potential of AI and automation – without technical barriers.' },
+          { year: 'Mission', title: 'The Approach', description: 'Tailored solutions instead of standard products. Every business is unique and deserves individual attention.' },
+          { year: 'Method', title: 'The Implementation', description: 'Close collaboration, clear communication, and iterative development for optimal results.' },
+          { year: 'Goal', title: 'The Result', description: 'Sustainable solutions that make your company more efficient and create long-term value.' }
+        ]
+      },
+      values: {
+        title: 'Our Values',
+        subtitle: 'What drives us and how we work.',
+        items: [
+          { title: 'Innovation', description: 'We use the latest AI technologies to give your business a real competitive edge.' },
+          { title: 'Partnership', description: 'We see ourselves as a long-term partner – not a service provider who disappears after the project.' },
+          { title: 'Quality', description: 'Every project is carefully planned and executed. We only deliver when we ourselves are convinced.' },
+          { title: 'Efficiency', description: 'Time is valuable. We work quickly and focused, without compromising on quality.' }
+        ]
+      },
+      services: {
+        title: 'What We Offer',
+        subtitle: 'Our core competencies for your digital success.',
+        items: [
+          { name: 'AI Agents', description: 'Intelligent assistants for customer service, analysis, and automation' },
+          { name: 'Automations', description: 'Workflows that handle your recurring tasks' },
+          { name: 'Web Development', description: 'Modern websites with integrated AI features' },
+          { name: 'Social Media', description: 'Strategic management of your social media channels' },
+          { name: 'Content Creation', description: 'AI-powered creation of texts and graphics' },
+          { name: 'Marketing', description: 'Data-driven online marketing for more reach' }
+        ]
+      },
+      whyExtrucon: {
+        title: 'Why ExtruCon?',
+        items: [
+          { title: 'Personal Support', description: 'No anonymous support – you have a dedicated contact person who knows your project.' },
+          { title: 'Technical Expertise', description: 'We understand AI, automation, and modern web technologies – not just superficially.' },
+          { title: 'Practice-Oriented', description: 'No theoretical concepts, but solutions that work in practice.' },
+          { title: 'Transparent Prices', description: 'You know from the start what your project costs. No hidden fees.' },
+          { title: 'Germany-Wide', description: 'Remote collaboration with clients throughout Germany – personal meetings on request.' },
+          { title: 'Long-Term Partnership', description: 'We support our clients even after launch with maintenance and further development.' }
+        ]
+      },
+      legal: {
+        title: 'Legal Information',
+        companyLabel: 'ExtruCon GmbH',
+        registerLabel: 'Commercial Register',
+        registerNumber: 'HRB 18623',
+        court: 'District Court Munich'
+      },
+      cta: {
+        title: 'Get to Know Us',
+        subtitle: 'Tell us about your project – in a free initial consultation, we\'ll find the best solution together.',
+        button: 'Get in Touch'
+      }
+    },
   },
   hr: {
     nav: {
@@ -2008,6 +2168,86 @@ export const translations = {
         { id: 47, title: 'Web fontovi pravilno: Performanse i dizajn', excerpt: 'Kako fontovi brzo učitavaju i još uvijek izgledaju dobro.', readTime: '6 min', date: '25. srp 2025' },
         { id: 48, title: 'Cookie banneri i GDPR: Pravno usklađena implementacija', excerpt: 'Sve što trebate znati o upravljanju pristankom.', readTime: '9 min', date: '22. srp 2025' }
       ]
+    },
+    aboutPage: {
+      badge: 'O ExtruConu',
+      title: 'Vaš partner za digitalnu transformaciju',
+      subtitle: 'Mi smo ExtruCon GmbH – agencija iz Fürstenfeldbrucka koja podržava tvrtke diljem Njemačke u području AI, automatizacije i digitalnog marketinga.',
+      stats: {
+        projects: 'Projekti',
+        clients: 'Klijenti',
+        automations: 'Automatizacije',
+        support: 'Podrška'
+      },
+      whoWeAre: {
+        title: 'Tko smo mi',
+        paragraph1: 'ExtruCon GmbH je specijalizirana agencija za AI rješenja, automatizaciju i digitalni marketing. Iz naše lokacije u Fürstenfeldbrucku, uslužujemo tvrtke diljem Njemačke.',
+        paragraph2: 'Naš fokus je na praktičnim rješenjima koja stvaraju stvarnu vrijednost. Bez teoretskih koncepata, već funkcionirajući sustavi koji olakšavaju vaš svakodnevni rad.',
+        paragraph3: 'Kombiniramo tehničko znanje s marketinškom stručnošću – spajajući oba svijeta za razvoj cjelovitih rješenja.',
+        tags: ['AI i automatizacija', 'Web razvoj', 'Marketing']
+      },
+      contact: {
+        location: 'Lokacija',
+        email: 'Email',
+        phone: 'Telefon',
+        availability: 'Dostupnost',
+        hours: 'Pon–Pet 08:00–17:00'
+      },
+      timeline: {
+        title: 'Od vizije do implementacije',
+        subtitle: 'Naš pristup je jasno strukturiran i usmjeren na održive rezultate.',
+        items: [
+          { year: 'Vizija', title: 'Ideja', description: 'Pomoći tvrtkama iskoristiti puni potencijal AI i automatizacije – bez tehničkih prepreka.' },
+          { year: 'Misija', title: 'Pristup', description: 'Prilagođena rješenja umjesto standardnih proizvoda. Svako poslovanje je jedinstveno i zaslužuje individualnu pažnju.' },
+          { year: 'Metoda', title: 'Implementacija', description: 'Bliska suradnja, jasna komunikacija i iterativni razvoj za optimalne rezultate.' },
+          { year: 'Cilj', title: 'Rezultat', description: 'Održiva rješenja koja čine vašu tvrtku učinkovitijom i stvaraju dugoročnu vrijednost.' }
+        ]
+      },
+      values: {
+        title: 'Naše vrijednosti',
+        subtitle: 'Što nas pokreće i kako radimo.',
+        items: [
+          { title: 'Inovacija', description: 'Koristimo najnovije AI tehnologije kako bismo vašem poslovanju dali stvarnu konkurentsku prednost.' },
+          { title: 'Partnerstvo', description: 'Vidimo se kao dugoročni partner – ne kao pružatelj usluga koji nestaje nakon projekta.' },
+          { title: 'Kvaliteta', description: 'Svaki projekt se pažljivo planira i provodi. Isporučujemo tek kada smo i sami uvjereni.' },
+          { title: 'Učinkovitost', description: 'Vrijeme je vrijedno. Radimo brzo i fokusirano, bez kompromisa u kvaliteti.' }
+        ]
+      },
+      services: {
+        title: 'Što nudimo',
+        subtitle: 'Naše ključne kompetencije za vaš digitalni uspjeh.',
+        items: [
+          { name: 'AI Agenti', description: 'Inteligentni asistenti za korisničku službu, analizu i automatizaciju' },
+          { name: 'Automatizacije', description: 'Tijekovi rada koji preuzimaju vaše ponavljajuće zadatke' },
+          { name: 'Web razvoj', description: 'Moderne web stranice s integriranim AI značajkama' },
+          { name: 'Društvene mreže', description: 'Strateško upravljanje vašim kanalima na društvenim mrežama' },
+          { name: 'Kreiranje sadržaja', description: 'AI-potpomognuto kreiranje tekstova i grafika' },
+          { name: 'Marketing', description: 'Marketinške kampanje temeljene na podacima za veći doseg' }
+        ]
+      },
+      whyExtrucon: {
+        title: 'Zašto ExtruCon?',
+        items: [
+          { title: 'Osobna podrška', description: 'Bez anonimne podrške – imate stalnu kontakt osobu koja poznaje vaš projekt.' },
+          { title: 'Tehnička stručnost', description: 'Razumijemo AI, automatizaciju i moderne web tehnologije – ne samo površno.' },
+          { title: 'Orijentiranost na praksu', description: 'Bez teoretskih koncepata, već rješenja koja funkcioniraju u praksi.' },
+          { title: 'Transparentne cijene', description: 'Od početka znate koliko košta vaš projekt. Bez skrivenih naknada.' },
+          { title: 'Cijela Njemačka', description: 'Udaljena suradnja s klijentima diljem Njemačke – osobni sastanci na zahtjev.' },
+          { title: 'Dugoročno partnerstvo', description: 'Podržavamo naše klijente i nakon lansiranja s održavanjem i daljnjim razvojem.' }
+        ]
+      },
+      legal: {
+        title: 'Pravne informacije',
+        companyLabel: 'ExtruCon GmbH',
+        registerLabel: 'Trgovački registar',
+        registerNumber: 'HRB 18623',
+        court: 'Okružni sud München'
+      },
+      cta: {
+        title: 'Upoznajte nas',
+        subtitle: 'Recite nam o svom projektu – na besplatnoj početnoj konzultaciji zajedno ćemo pronaći najbolje rješenje.',
+        button: 'Kontaktirajte nas'
+      }
     },
   },
 };
