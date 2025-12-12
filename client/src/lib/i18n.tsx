@@ -109,6 +109,10 @@ export const translations = {
       allRights: 'Alle Rechte vorbehalten.',
       openingHours: 'Mo–Fr 08:00–17:00',
       legalInfo: 'Geschäftsführer: Siehe Impressum',
+      addressLabel: 'Adresse',
+      emailLabel: 'E-Mail',
+      phoneLabel: 'Telefon',
+      contactLink: 'Kontakt aufnehmen',
     },
     about: {
       badge: 'Über ExtruCon GmbH',
@@ -1029,6 +1033,10 @@ export const translations = {
       allRights: 'All rights reserved.',
       openingHours: 'Mon–Fri 08:00–17:00',
       legalInfo: 'Managing Director: See Imprint',
+      addressLabel: 'Address',
+      emailLabel: 'Email',
+      phoneLabel: 'Phone',
+      contactLink: 'Get in touch',
     },
     about: {
       badge: 'About ExtruCon GmbH',
@@ -1949,6 +1957,10 @@ export const translations = {
       allRights: 'Sva prava pridržana.',
       openingHours: 'Pon–Pet 08:00–17:00',
       legalInfo: 'Direktor: Pogledajte Impressum',
+      addressLabel: 'Adresa',
+      emailLabel: 'E-pošta',
+      phoneLabel: 'Telefon',
+      contactLink: 'Kontaktirajte nas',
     },
     about: {
       badge: 'O ExtruCon GmbH',

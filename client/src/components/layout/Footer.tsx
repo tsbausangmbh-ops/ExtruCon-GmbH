@@ -40,7 +40,7 @@ export function Footer() {
           </div>
 
           <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
-            <h3 className="font-bold text-white mb-4">{t.nav.contact}</h3>
+            <h3 className="font-bold text-white mb-4">{t.footer.contact}</h3>
             <ul className="space-y-3 text-gray-400 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
@@ -67,7 +67,7 @@ export function Footer() {
               </li>
             </ul>
             <div className="mt-4">
-              <a href="/kontakt" className="text-primary hover:underline text-sm font-medium">→ {t.nav.contact}</a>
+              <a href="/kontakt" className="text-primary hover:underline text-sm font-medium">→ {t.footer.contactLink}</a>
             </div>
           </div>
         </div>
