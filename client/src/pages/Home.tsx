@@ -19,16 +19,6 @@ export default function Home() {
         {/* Funnel Logic: 3. The Execution Tools (Services) */}
         <Services />
         
-        <div id="about" className="py-24 container mx-auto px-4 text-center">
-             <span className="text-primary text-sm font-medium uppercase tracking-widest mb-2 block">Über uns</span>
-             <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-6">Innovation der digitalen Landschaft</h2>
-             <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-               Bei der Extrucon GmbH glauben wir an die Kraft der Technologie, Unternehmen zu transformieren. 
-               Wir sind nicht nur Dienstleister, sondern Ihr strategischer Partner in der digitalen Ära. 
-               Von KI-gesteuerter Automatisierung bis hin zu fesselnden Content-Strategien liefern wir Ergebnisse, die zählen.
-             </p>
-        </div>
-        
         {/* Funnel Logic: 4. Action */}
         <Contact />
       </main>
