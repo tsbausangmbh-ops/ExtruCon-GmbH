@@ -2,9 +2,21 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
-import { Mail, Globe, Phone } from "lucide-react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Mail, Globe, Phone, Bot, Sparkles } from "lucide-react";
+import { useState } from "react";
 
 export function Contact() {
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+
+  const toggleService = (service: string) => {
+    setSelectedServices(prev => 
+      prev.includes(service) 
+        ? prev.filter(s => s !== service)
+        : [...prev, service]
+    );
+  };
+
   return (
     <section id="contact" className="py-8 bg-background/50 relative overflow-hidden">
       {/* Decorative glow */}
@@ -17,7 +29,7 @@ export function Contact() {
               Bereit für <span className="text-gradient">Innovation?</span>
             </h2>
             <p className="text-gray-400 text-lg mb-8">
-              Lassen Sie uns besprechen, wie die Extrucon GmbH Ihre digitale Präsenz verändern kann. 
+              Lassen Sie uns besprechen, wie die ExtruCon GmbH Ihre digitale Präsenz verändern kann. 
               Kontaktieren Sie uns für ein Beratungsgespräch.
             </p>
 
@@ -28,7 +40,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-500">E-Mail</p>
-                  <p className="font-medium">info@extrucon.de</p>
+                  <a href="mailto:info@extrucon.de" className="font-medium hover:text-primary transition-colors">info@extrucon.de</a>
                 </div>
               </div>
               
@@ -38,7 +50,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-500">Anrufen</p>
-                  <p className="font-medium">089 444438879</p>
+                  <a href="tel:+4989444438879" className="font-medium hover:text-primary transition-colors">089 444438879</a>
                 </div>
               </div>
 
@@ -59,25 +71,70 @@ export function Contact() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-400">Vorname</label>
-                  <Input placeholder="Max" className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-primary/50" />
+                  <Input placeholder="Max" className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-primary/50" data-testid="input-firstname" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-gray-400">Nachname</label>
-                  <Input placeholder="Mustermann" className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-primary/50" />
+                  <Input placeholder="Mustermann" className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-primary/50" data-testid="input-lastname" />
                 </div>
               </div>
               
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-400">E-Mail</label>
-                <Input type="email" placeholder="max@firma.de" className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-primary/50" />
+                <Input type="email" placeholder="max@firma.de" className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-primary/50" data-testid="input-email" />
+              </div>
+
+              <div className="space-y-3">
+                <label className="text-sm font-medium text-gray-400">Interesse an</label>
+                <div className="grid grid-cols-1 gap-3">
+                  <label 
+                    className={`flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-all ${
+                      selectedServices.includes('ki-agenten') 
+                        ? 'bg-primary/10 border-primary/50' 
+                        : 'bg-white/5 border-white/10 hover:border-white/20'
+                    }`}
+                    data-testid="checkbox-ki-agenten"
+                  >
+                    <Checkbox 
+                      checked={selectedServices.includes('ki-agenten')}
+                      onCheckedChange={() => toggleService('ki-agenten')}
+                      className="border-white/30 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+                    />
+                    <Bot className="w-5 h-5 text-primary" />
+                    <div>
+                      <p className="text-white font-medium">KI-Agenten</p>
+                      <p className="text-xs text-gray-500">Chatbots, Automatisierung, Kundenservice</p>
+                    </div>
+                  </label>
+                  
+                  <label 
+                    className={`flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-all ${
+                      selectedServices.includes('webseiten-ki') 
+                        ? 'bg-secondary/10 border-secondary/50' 
+                        : 'bg-white/5 border-white/10 hover:border-white/20'
+                    }`}
+                    data-testid="checkbox-webseiten-ki"
+                  >
+                    <Checkbox 
+                      checked={selectedServices.includes('webseiten-ki')}
+                      onCheckedChange={() => toggleService('webseiten-ki')}
+                      className="border-white/30 data-[state=checked]:bg-secondary data-[state=checked]:border-secondary"
+                    />
+                    <Sparkles className="w-5 h-5 text-secondary" />
+                    <div>
+                      <p className="text-white font-medium">Webseiten mit KI</p>
+                      <p className="text-xs text-gray-500">Moderne Websites mit KI-Features</p>
+                    </div>
+                  </label>
+                </div>
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-gray-400">Nachricht</label>
-                <Textarea placeholder="Erzählen Sie uns von Ihrem Projekt..." className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-primary/50 min-h-[120px]" />
+                <Textarea placeholder="Erzählen Sie uns von Ihrem Projekt..." className="bg-white/5 border-white/10 text-white placeholder:text-gray-600 focus:border-primary/50 min-h-[100px]" data-testid="input-message" />
               </div>
 
-              <Button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold h-12">
+              <Button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold h-12" data-testid="button-submit-contact">
                 Nachricht senden
               </Button>
             </form>
