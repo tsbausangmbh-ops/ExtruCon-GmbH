@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
 import { Funnel } from "@/components/sections/Funnel";
+import { Problem } from "@/components/sections/Problem";
 import { Contact } from "@/components/sections/Contact";
 
 export default function Home() {
@@ -11,8 +12,13 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Services />
+        {/* Funnel Logic: 1. Problem Awareness */}
+        <Problem />
+        {/* Funnel Logic: 2. The System/Solution */}
         <Funnel />
+        {/* Funnel Logic: 3. The Execution Tools (Services) */}
+        <Services />
+        
         <div id="about" className="py-24 container mx-auto px-4 text-center">
              <span className="text-primary text-sm font-medium uppercase tracking-widest mb-2 block">Über uns</span>
              <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-6">Innovation der digitalen Landschaft</h2>
@@ -22,6 +28,8 @@ export default function Home() {
                Von KI-gesteuerter Automatisierung bis hin zu fesselnden Content-Strategien liefern wir Ergebnisse, die zählen.
              </p>
         </div>
+        
+        {/* Funnel Logic: 4. Action */}
         <Contact />
       </main>
       <Footer />
