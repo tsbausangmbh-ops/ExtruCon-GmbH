@@ -69,7 +69,7 @@ export function Navbar() {
           </a>
           <Link href="/ki-bot">
             <Button variant="default" className="bg-primary text-background hover:bg-primary/90 font-bold">
-              KI Bot
+              Loslegen
             </Button>
           </Link>
         </div>
@@ -131,7 +131,7 @@ export function Navbar() {
             </a>
             <Link href="/ki-bot" onClick={() => setIsOpen(false)}>
               <Button className="w-full bg-primary text-background font-bold mt-2">
-                KI Bot
+                Loslegen
               </Button>
             </Link>
           </div>
