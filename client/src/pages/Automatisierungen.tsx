@@ -118,7 +118,7 @@ export default function Automatisierungen() {
         keywords="n8n Automatisierung, Workflow Automatisierung, Prozessautomatisierung, Business Automation, Zapier Alternative, Make Alternative"
       />
       <Navbar />
-      <main className="pt-16">
+      <main className="pt-20">
         {/* Hero */}
         <section className="py-16 bg-gradient-to-b from-orange-500/5 to-background">
           <div className="container mx-auto px-4">

@@ -69,7 +69,7 @@ export default function Chatbot() {
       />
       <Navbar />
       
-      <main className="flex-1 pt-16 flex flex-col">
+      <main className="flex-1 pt-20 flex flex-col">
         <section className="py-8 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4 text-center">
             <div className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-4">
