@@ -175,6 +175,69 @@ const articles = [
     readTime: "7 Min.",
     date: "22. Okt 2025",
     featured: false
+  },
+  {
+    id: 19,
+    title: "KI im Kundenservice: Automatisierung ohne Qualitätsverlust",
+    excerpt: "So setzen Sie KI-Tools ein, ohne die persönliche Note zu verlieren.",
+    category: "ki",
+    readTime: "8 Min.",
+    date: "19. Okt 2025",
+    featured: false
+  },
+  {
+    id: 20,
+    title: "OpenAI API für Unternehmen: Erste Schritte",
+    excerpt: "Ein praktischer Einstieg in die Integration von GPT-4 in Ihre Geschäftsprozesse.",
+    category: "ki",
+    readTime: "14 Min.",
+    date: "16. Okt 2025",
+    featured: false
+  },
+  {
+    id: 21,
+    title: "Automatisierte Lead-Generierung mit KI",
+    excerpt: "Wie Sie mit intelligenten Systemen qualifizierte Leads gewinnen und nurturing automatisieren.",
+    category: "ki",
+    readTime: "10 Min.",
+    date: "13. Okt 2025",
+    featured: false
+  },
+  {
+    id: 22,
+    title: "n8n Webhooks: Echtzeit-Automatisierung einrichten",
+    excerpt: "So verbinden Sie externe Dienste mit n8n für sofortige Reaktionen auf Events.",
+    category: "ki",
+    readTime: "9 Min.",
+    date: "10. Okt 2025",
+    featured: false
+  },
+  {
+    id: 23,
+    title: "Claude AI vs. ChatGPT: Der große Vergleich",
+    excerpt: "Welches KI-Modell eignet sich besser für Ihre Anwendungsfälle? Stärken und Schwächen.",
+    category: "ki",
+    readTime: "11 Min.",
+    date: "7. Okt 2025",
+    featured: false
+  },
+  {
+    id: 24,
+    title: "KI-gestützte Datenanalyse für Marketing-Entscheidungen",
+    excerpt: "So nutzen Sie Machine Learning für bessere Kampagnen und höheren ROI.",
+    category: "ki",
+    readTime: "12 Min.",
+    date: "4. Okt 2025",
+    featured: false
+  },
+  {
+    id: 25,
+    title: "Automatisierte Reports mit n8n und Google Sheets",
+    excerpt: "Erstellen Sie automatische Berichte, die sich selbst aktualisieren.",
+    category: "ki",
+    readTime: "8 Min.",
+    date: "1. Okt 2025",
+    featured: false
   }
 ];
 
