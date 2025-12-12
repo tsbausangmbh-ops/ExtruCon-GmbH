@@ -28,6 +28,12 @@ export function Navbar() {
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
+          <a href="/ki-agenten" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
+            {t.nav.kiAgents}
+          </a>
+          <a href="/webseiten-ki" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
+            {t.nav.websitesKI}
+          </a>
           <div 
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
