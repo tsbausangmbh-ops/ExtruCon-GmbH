@@ -128,7 +128,7 @@ export default function WebseitenKI() {
         keywords="Webseiten mit KI, Website Chatbot, KI Content, SEO Automatisierung, Webentwicklung München, React Website"
       />
       <Navbar />
-      <main className="pt-20">
+      <main className="pt-24">
         {/* Hero */}
         <section className="py-16 bg-gradient-to-b from-secondary/10 to-background">
           <div className="container mx-auto px-4">

@@ -75,7 +75,7 @@ export default function UeberUns() {
         keywords="ExtruCon GmbH, KI-Agentur Fürstenfeldbruck, Automatisierung München, Marketing Agentur Bayern, HRB 18623"
       />
       <Navbar />
-      <main className="pt-20">
+      <main className="pt-24">
         {/* Hero */}
         <section className="py-16 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">

@@ -466,7 +466,7 @@ export default function Ratgeber() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <Navbar />
-      <main className="pt-20">
+      <main className="pt-24">
         {/* Hero Section */}
         <section className="py-10 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
