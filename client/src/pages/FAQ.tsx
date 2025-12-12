@@ -12,26 +12,14 @@ const faqCategories = [
     icon: HelpCircle,
     color: "text-primary",
     questions: [
-      {
-        q: "Wer ist ExtruCon?",
-        a: "ExtruCon GmbH ist eine Full-Service Marketing- und KI-Agentur mit Sitz in Fürstenfeldbruck bei München. Wir betreuen Kunden deutschlandweit in den Bereichen digitales Marketing, KI-Automatisierung, Webentwicklung und Content Creation."
-      },
-      {
-        q: "Arbeitet ihr deutschlandweit?",
-        a: "Ja! Unser Hauptsitz ist in Fürstenfeldbruck, aber wir betreuen Kunden in ganz Deutschland – sowohl remote als auch vor Ort, je nach Bedarf."
-      },
-      {
-        q: "Für welche Branchen arbeitet ihr?",
-        a: "Wir arbeiten branchenübergreifend mit KMUs, Startups, Handwerksbetrieben, Dienstleistern, E-Commerce-Unternehmen und mehr. Unsere Strategien passen wir individuell an Ihre Branche an."
-      },
-      {
-        q: "Bietet ihr kostenlose Erstgespräche an?",
-        a: "Ja! Das erste Beratungsgespräch ist immer kostenlos und unverbindlich. Wir analysieren Ihre aktuelle Situation und zeigen Ihnen Potenziale auf."
-      },
-      {
-        q: "Wie schnell antwortet ihr auf Anfragen?",
-        a: "Wir antworten in der Regel innerhalb von 24 Stunden an Werktagen auf alle Anfragen."
-      }
+      { q: "Wer ist ExtruCon?", a: "ExtruCon GmbH ist eine Full-Service Marketing- und KI-Agentur mit Sitz in Fürstenfeldbruck bei München. Wir betreuen Kunden deutschlandweit in den Bereichen digitales Marketing, KI-Automatisierung, Webentwicklung und Content Creation." },
+      { q: "Arbeitet ihr deutschlandweit?", a: "Ja! Unser Hauptsitz ist in Fürstenfeldbruck, aber wir betreuen Kunden in ganz Deutschland – sowohl remote als auch vor Ort, je nach Bedarf." },
+      { q: "Für welche Branchen arbeitet ihr?", a: "Wir arbeiten branchenübergreifend mit KMUs, Startups, Handwerksbetrieben, Dienstleistern, E-Commerce-Unternehmen und mehr. Unsere Strategien passen wir individuell an Ihre Branche an." },
+      { q: "Bietet ihr kostenlose Erstgespräche an?", a: "Ja! Das erste Beratungsgespräch ist immer kostenlos und unverbindlich. Wir analysieren Ihre aktuelle Situation und zeigen Ihnen Potenziale auf." },
+      { q: "Wie schnell antwortet ihr auf Anfragen?", a: "Wir antworten in der Regel innerhalb von 24 Stunden an Werktagen auf alle Anfragen." },
+      { q: "Wie groß ist euer Team?", a: "Wir sind ein agiles Team aus Spezialisten für Marketing, Design, Entwicklung und KI. Je nach Projektgröße arbeiten wir auch mit bewährten Partnern zusammen." },
+      { q: "Habt ihr Referenzen?", a: "Ja! Wir haben bereits über 50 Projekte erfolgreich umgesetzt. Gerne zeigen wir Ihnen im Erstgespräch passende Referenzen aus Ihrer Branche." },
+      { q: "Wie kann ich euch kontaktieren?", a: "Per E-Mail an info@extrucon.de, telefonisch unter 089 444438879 oder über unser Kontaktformular. Wir melden uns schnellstmöglich bei Ihnen." }
     ]
   },
   {
@@ -40,26 +28,14 @@ const faqCategories = [
     icon: Bot,
     color: "text-cyan-400",
     questions: [
-      {
-        q: "Was kostet ein KI-Chatbot?",
-        a: "Ein einfacher Chatbot startet ab 1.500€ einmalig. Komplexere KI-Lösungen mit individueller Anpassung beginnen bei 3.000€. Wir beraten Sie kostenlos zu den Möglichkeiten."
-      },
-      {
-        q: "Brauche ich technisches Wissen für KI-Tools?",
-        a: "Nein! Wir übernehmen die komplette technische Umsetzung und schulen Ihr Team. Sie erhalten eine benutzerfreundliche Lösung, die einfach zu bedienen ist."
-      },
-      {
-        q: "Wie schnell ist ein KI-Projekt umgesetzt?",
-        a: "Einfache Chatbots sind in 1-2 Wochen einsatzbereit. Komplexere Automatisierungen benötigen 4-8 Wochen je nach Umfang."
-      },
-      {
-        q: "Ist KI auch für kleine Unternehmen sinnvoll?",
-        a: "Absolut! Gerade kleine Unternehmen profitieren von Automatisierung, da sie Zeit für das Kerngeschäft freisetzt. Wir haben Lösungen für jedes Budget."
-      },
-      {
-        q: "Welche KI-Technologien setzt ihr ein?",
-        a: "Wir arbeiten mit OpenAI/GPT-4, Claude AI, Google Gemini sowie Automatisierungstools wie n8n, Make und Zapier. Die Technologie wählen wir passend zu Ihren Anforderungen."
-      }
+      { q: "Was kostet ein KI-Chatbot?", a: "Ein einfacher Chatbot startet ab 1.500€ einmalig. Komplexere KI-Lösungen mit individueller Anpassung beginnen bei 3.000€. Wir beraten Sie kostenlos zu den Möglichkeiten." },
+      { q: "Brauche ich technisches Wissen für KI-Tools?", a: "Nein! Wir übernehmen die komplette technische Umsetzung und schulen Ihr Team. Sie erhalten eine benutzerfreundliche Lösung, die einfach zu bedienen ist." },
+      { q: "Wie schnell ist ein KI-Projekt umgesetzt?", a: "Einfache Chatbots sind in 1-2 Wochen einsatzbereit. Komplexere Automatisierungen benötigen 4-8 Wochen je nach Umfang." },
+      { q: "Ist KI auch für kleine Unternehmen sinnvoll?", a: "Absolut! Gerade kleine Unternehmen profitieren von Automatisierung, da sie Zeit für das Kerngeschäft freisetzt. Wir haben Lösungen für jedes Budget." },
+      { q: "Welche KI-Technologien setzt ihr ein?", a: "Wir arbeiten mit OpenAI/GPT-4, Claude AI, Google Gemini sowie Automatisierungstools wie n8n, Make und Zapier. Die Technologie wählen wir passend zu Ihren Anforderungen." },
+      { q: "Kann KI meinen Kundenservice ersetzen?", a: "KI kann repetitive Anfragen automatisieren und Ihr Team entlasten. Für komplexe Fälle bleibt der menschliche Kontakt wichtig – KI ergänzt, ersetzt nicht vollständig." },
+      { q: "Wie sicher sind KI-Lösungen?", a: "Wir achten auf DSGVO-Konformität und Datensicherheit. Kundendaten werden verschlüsselt und nur für den vorgesehenen Zweck verwendet." },
+      { q: "Gibt es laufende Kosten für KI-Tools?", a: "Je nach Lösung können API-Kosten anfallen (z.B. für OpenAI). Wir kalkulieren dies transparent im Angebot und optimieren auf Kosteneffizienz." }
     ]
   },
   {
@@ -68,26 +44,14 @@ const faqCategories = [
     icon: Share2,
     color: "text-purple-400",
     questions: [
-      {
-        q: "Was kostet Social Media Marketing?",
-        a: "Unsere Pakete starten ab 790€/Monat für die Betreuung eines Kanals. Komplette Multi-Channel-Strategien mit Content-Produktion beginnen bei 1.490€/Monat."
-      },
-      {
-        q: "Wie oft sollte man auf Social Media posten?",
-        a: "Das hängt von der Plattform ab. Für Instagram empfehlen wir 3-5 Posts pro Woche plus tägliche Stories. Bei LinkedIn reichen 2-3 qualitative Posts pro Woche."
-      },
-      {
-        q: "Welche Plattform ist für mein Unternehmen am besten?",
-        a: "Das analysieren wir in einem kostenlosen Erstgespräch. B2B-Unternehmen profitieren oft von LinkedIn, lokale Dienstleister von Instagram und Google Business."
-      },
-      {
-        q: "Erstellt ihr auch den Content für uns?",
-        a: "Ja! Wir übernehmen die komplette Content-Produktion: Texte, Grafiken, Fotos und Videos. Auf Wunsch auch mit Vor-Ort-Shootings."
-      },
-      {
-        q: "Wie messt ihr den Erfolg von Social Media?",
-        a: "Wir tracken KPIs wie Reichweite, Engagement, Follower-Wachstum, Website-Traffic und Conversions. Sie erhalten monatliche Reports mit allen wichtigen Zahlen."
-      }
+      { q: "Was kostet Social Media Marketing?", a: "Unsere Pakete starten ab 790€/Monat für die Betreuung eines Kanals. Komplette Multi-Channel-Strategien mit Content-Produktion beginnen bei 1.490€/Monat." },
+      { q: "Wie oft sollte man auf Social Media posten?", a: "Das hängt von der Plattform ab. Für Instagram empfehlen wir 3-5 Posts pro Woche plus tägliche Stories. Bei LinkedIn reichen 2-3 qualitative Posts pro Woche." },
+      { q: "Welche Plattform ist für mein Unternehmen am besten?", a: "Das analysieren wir in einem kostenlosen Erstgespräch. B2B-Unternehmen profitieren oft von LinkedIn, lokale Dienstleister von Instagram und Google Business." },
+      { q: "Erstellt ihr auch den Content für uns?", a: "Ja! Wir übernehmen die komplette Content-Produktion: Texte, Grafiken, Fotos und Videos. Auf Wunsch auch mit Vor-Ort-Shootings." },
+      { q: "Wie messt ihr den Erfolg von Social Media?", a: "Wir tracken KPIs wie Reichweite, Engagement, Follower-Wachstum, Website-Traffic und Conversions. Sie erhalten monatliche Reports mit allen wichtigen Zahlen." },
+      { q: "Macht ihr auch bezahlte Werbung auf Social Media?", a: "Ja! Wir erstellen und betreuen Kampagnen auf Meta (Facebook/Instagram), TikTok und LinkedIn mit kontinuierlicher Optimierung." },
+      { q: "Wie schnell wächst meine Community?", a: "Das hängt von Branche und Budget ab. Organisches Wachstum braucht Zeit – mit bezahlter Reichweite können erste Ergebnisse schon nach Wochen sichtbar sein." },
+      { q: "Kann ich den Content vorher freigeben?", a: "Selbstverständlich! Wir arbeiten mit Content-Kalendern und Freigabeprozessen, damit Sie immer die volle Kontrolle behalten." }
     ]
   },
   {
@@ -96,26 +60,14 @@ const faqCategories = [
     icon: Globe,
     color: "text-blue-400",
     questions: [
-      {
-        q: "Was kostet eine professionelle Website?",
-        a: "Eine moderne Business-Website startet ab 2.500€. Umfangreichere Projekte mit E-Commerce oder individuellen Funktionen beginnen bei 5.000€. Wir erstellen Ihnen gerne ein individuelles Angebot."
-      },
-      {
-        q: "Wie lange dauert die Erstellung einer Website?",
-        a: "Eine Standard-Website ist in 2-4 Wochen fertig. Komplexere Projekte mit individuellen Funktionen können 6-12 Wochen dauern."
-      },
-      {
-        q: "Ist die Website für Suchmaschinen optimiert?",
-        a: "Ja! Jede Website wird von uns SEO-optimiert erstellt: schnelle Ladezeiten, mobile Optimierung, strukturierte Daten und technisches SEO sind Standard."
-      },
-      {
-        q: "Bietet ihr auch Hosting und Wartung an?",
-        a: "Ja, wir bieten Hosting- und Wartungspakete ab 49€/Monat an, inkl. Updates, Backups, SSL-Zertifikat und technischem Support."
-      },
-      {
-        q: "Kann ich die Website selbst bearbeiten?",
-        a: "Ja! Wir richten ein benutzerfreundliches Content-Management-System ein und schulen Sie in der Bedienung."
-      }
+      { q: "Was kostet eine professionelle Website?", a: "Eine moderne Business-Website startet ab 2.500€. Umfangreichere Projekte mit E-Commerce oder individuellen Funktionen beginnen bei 5.000€." },
+      { q: "Wie lange dauert die Erstellung einer Website?", a: "Eine Standard-Website ist in 2-4 Wochen fertig. Komplexere Projekte mit individuellen Funktionen können 6-12 Wochen dauern." },
+      { q: "Ist die Website für Suchmaschinen optimiert?", a: "Ja! Jede Website wird von uns SEO-optimiert erstellt: schnelle Ladezeiten, mobile Optimierung, strukturierte Daten und technisches SEO sind Standard." },
+      { q: "Bietet ihr auch Hosting und Wartung an?", a: "Ja, wir bieten Hosting- und Wartungspakete ab 49€/Monat an, inkl. Updates, Backups, SSL-Zertifikat und technischem Support." },
+      { q: "Kann ich die Website selbst bearbeiten?", a: "Ja! Wir richten ein benutzerfreundliches Content-Management-System ein und schulen Sie in der Bedienung." },
+      { q: "Welche Technologien verwendet ihr?", a: "Wir arbeiten mit modernen Technologien wie React, Next.js, WordPress und individuellen Lösungen – je nach Anforderung Ihres Projekts." },
+      { q: "Ist die Website auch mobil optimiert?", a: "Absolut! Responsive Design ist bei uns Standard. Ihre Website sieht auf Smartphone, Tablet und Desktop perfekt aus." },
+      { q: "Können Sie meinen bestehenden Online-Shop verbessern?", a: "Ja! Wir optimieren bestehende Shops für bessere Performance, höhere Conversion-Rates und modernes Design." }
     ]
   },
   {
@@ -124,26 +76,14 @@ const faqCategories = [
     icon: TrendingUp,
     color: "text-orange-400",
     questions: [
-      {
-        q: "Wie schnell sehe ich Ergebnisse mit SEO?",
-        a: "Erste Verbesserungen zeigen sich oft nach 4-8 Wochen. Für nachhaltige Top-Rankings planen wir 3-6 Monate ein. SEO ist eine langfristige Investition."
-      },
-      {
-        q: "Was kostet SEO-Optimierung?",
-        a: "Unsere SEO-Pakete starten ab 990€/Monat. Der genaue Preis hängt vom Umfang und der Wettbewerbssituation in Ihrer Branche ab."
-      },
-      {
-        q: "Macht ihr auch Google Ads?",
-        a: "Ja! Wir erstellen und betreuen Google Ads Kampagnen mit kontinuierlicher Optimierung. Managementgebühren starten ab 15% des Werbebudgets (mind. 300€/Monat)."
-      },
-      {
-        q: "Wie unterscheidet sich SEO von bezahlter Werbung?",
-        a: "SEO bringt langfristig kostenlose Besucher, braucht aber Zeit. Bezahlte Werbung (Google/Meta Ads) bringt sofort Traffic, kostet aber kontinuierlich. Ideal ist eine Kombination."
-      },
-      {
-        q: "Bekomme ich regelmäßige Reports?",
-        a: "Ja! Sie erhalten monatliche Reports mit allen wichtigen KPIs: Rankings, Traffic, Conversions, ROI. Auf Wunsch auch wöchentliche Updates."
-      }
+      { q: "Wie schnell sehe ich Ergebnisse mit SEO?", a: "Erste Verbesserungen zeigen sich oft nach 4-8 Wochen. Für nachhaltige Top-Rankings planen wir 3-6 Monate ein. SEO ist eine langfristige Investition." },
+      { q: "Was kostet SEO-Optimierung?", a: "Unsere SEO-Pakete starten ab 990€/Monat. Der genaue Preis hängt vom Umfang und der Wettbewerbssituation in Ihrer Branche ab." },
+      { q: "Macht ihr auch Google Ads?", a: "Ja! Wir erstellen und betreuen Google Ads Kampagnen mit kontinuierlicher Optimierung. Managementgebühren starten ab 15% des Werbebudgets (mind. 300€/Monat)." },
+      { q: "Wie unterscheidet sich SEO von bezahlter Werbung?", a: "SEO bringt langfristig kostenlose Besucher, braucht aber Zeit. Bezahlte Werbung bringt sofort Traffic, kostet aber kontinuierlich. Ideal ist eine Kombination." },
+      { q: "Bekomme ich regelmäßige Reports?", a: "Ja! Sie erhalten monatliche Reports mit allen wichtigen KPIs: Rankings, Traffic, Conversions, ROI. Auf Wunsch auch wöchentliche Updates." },
+      { q: "Was ist Local SEO?", a: "Local SEO optimiert Ihre Sichtbarkeit für lokale Suchanfragen (z.B. 'Friseur in München'). Wichtig für Unternehmen mit lokalem Einzugsgebiet." },
+      { q: "Garantiert ihr Rankings?", a: "Seriöse Agenturen geben keine Ranking-Garantien, da Google den Algorithmus kontrolliert. Wir garantieren aber professionelle Arbeit nach Best Practices." },
+      { q: "Wie hoch sollte mein Werbebudget sein?", a: "Das hängt von Ihrer Branche und Ihren Zielen ab. Für erste Tests empfehlen wir mindestens 500-1.000€/Monat. Wir beraten Sie gerne individuell." }
     ]
   },
   {
@@ -152,26 +92,14 @@ const faqCategories = [
     icon: CreditCard,
     color: "text-emerald-400",
     questions: [
-      {
-        q: "Wie sind eure Zahlungsbedingungen?",
-        a: "Bei Projekten: 50% Anzahlung, 50% bei Fertigstellung. Bei laufenden Leistungen: Monatliche Abrechnung per Rechnung mit 14 Tagen Zahlungsziel."
-      },
-      {
-        q: "Gibt es Mindestvertragslaufzeiten?",
-        a: "Für laufende Betreuungen (SEO, Social Media) empfehlen wir mindestens 6 Monate, da Ergebnisse Zeit brauchen. Einzelprojekte haben keine Laufzeit."
-      },
-      {
-        q: "Bietet ihr auch Einzelleistungen an?",
-        a: "Ja! Ob nur Social Media, nur Webdesign oder nur SEO – wir schneiden unsere Leistungen auf Ihre Bedürfnisse zu. Oft entfalten kombinierte Strategien aber die größte Wirkung."
-      },
-      {
-        q: "Arbeitet ihr auch mit kleinen Budgets?",
-        a: "Ja! Wir haben Einstiegspakete für kleinere Budgets und beraten Sie ehrlich, welche Maßnahmen mit Ihrem Budget am sinnvollsten sind."
-      },
-      {
-        q: "Wie läuft die Zusammenarbeit ab?",
-        a: "Nach dem Erstgespräch erstellen wir ein Angebot. Bei Zusage starten wir mit einem Kick-off, in dem wir Ziele und Zeitplan festlegen. Sie haben einen festen Ansprechpartner und regelmäßige Updates."
-      }
+      { q: "Wie sind eure Zahlungsbedingungen?", a: "Bei Projekten: 50% Anzahlung, 50% bei Fertigstellung. Bei laufenden Leistungen: Monatliche Abrechnung per Rechnung mit 14 Tagen Zahlungsziel." },
+      { q: "Gibt es Mindestvertragslaufzeiten?", a: "Für laufende Betreuungen (SEO, Social Media) empfehlen wir mindestens 6 Monate, da Ergebnisse Zeit brauchen. Einzelprojekte haben keine Laufzeit." },
+      { q: "Bietet ihr auch Einzelleistungen an?", a: "Ja! Ob nur Social Media, nur Webdesign oder nur SEO – wir schneiden unsere Leistungen auf Ihre Bedürfnisse zu." },
+      { q: "Arbeitet ihr auch mit kleinen Budgets?", a: "Ja! Wir haben Einstiegspakete für kleinere Budgets und beraten Sie ehrlich, welche Maßnahmen mit Ihrem Budget am sinnvollsten sind." },
+      { q: "Wie läuft die Zusammenarbeit ab?", a: "Nach dem Erstgespräch erstellen wir ein Angebot. Bei Zusage starten wir mit einem Kick-off, in dem wir Ziele und Zeitplan festlegen." },
+      { q: "Habe ich einen festen Ansprechpartner?", a: "Ja! Sie bekommen einen persönlichen Projektmanager, der Ihr Hauptansprechpartner ist und alle Fäden zusammenhält." },
+      { q: "Kann ich Leistungen jederzeit kündigen?", a: "Bei laufenden Verträgen gelten die vereinbarten Kündigungsfristen (meist 1-3 Monate). Einzelprojekte werden nach Abschluss abgerechnet." },
+      { q: "Erstellt ihr auch individuelle Angebote?", a: "Ja! Jedes Angebot wird individuell auf Ihre Anforderungen zugeschnitten. Kontaktieren Sie uns für ein kostenloses Erstgespräch." }
     ]
   }
 ];
