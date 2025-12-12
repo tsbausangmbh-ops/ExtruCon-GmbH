@@ -9,6 +9,7 @@ import Terms from "@/pages/Terms";
 import Impressum from "@/pages/Impressum";
 import Contact from "@/pages/Contact";
 import Ratgeber from "@/pages/Ratgeber";
+import FAQ from "@/pages/FAQ";
 import Brand from "@/pages/services/Brand";
 import Content from "@/pages/services/Content";
 import SocialMedia from "@/pages/services/SocialMedia";
@@ -26,6 +27,7 @@ function Router() {
       <Route path="/impressum" component={Impressum} />
       <Route path="/kontakt" component={Contact} />
       <Route path="/ratgeber" component={Ratgeber} />
+      <Route path="/faq" component={FAQ} />
       <Route path="/leistungen/markenaufbau" component={Brand} />
       <Route path="/leistungen/content" component={Content} />
       <Route path="/leistungen/social-media" component={SocialMedia} />
