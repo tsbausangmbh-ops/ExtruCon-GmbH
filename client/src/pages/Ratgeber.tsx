@@ -79,8 +79,8 @@ const articles = [
   },
   {
     id: 8,
-    title: "Automatisierung mit Make & Zapier: Einsteiger-Guide",
-    excerpt: "Sparen Sie Zeit mit Workflow-Automatisierung. Diese Tools verbinden Ihre Apps und automatisieren Aufgaben.",
+    title: "n8n Workflow-Automatisierung: Der komplette Guide",
+    excerpt: "Mit n8n automatisieren Sie Geschäftsprozesse ohne Programmierkenntnisse. So starten Sie durch.",
     category: "ki",
     readTime: "12 Min.",
     date: "22. Nov 2025",
@@ -124,8 +124,8 @@ const articles = [
   },
   {
     id: 13,
-    title: "KI-generierte Bilder: Tools und rechtliche Aspekte",
-    excerpt: "Von DALL-E bis Midjourney: Was Sie bei der Nutzung von KI-Bildern beachten müssen.",
+    title: "n8n für E-Commerce: Automatisierte Bestellprozesse",
+    excerpt: "So automatisieren Sie Bestellbestätigungen, Lagerbestand und Versand mit n8n.",
     category: "ki",
     readTime: "9 Min.",
     date: "7. Nov 2025",
@@ -160,8 +160,8 @@ const articles = [
   },
   {
     id: 17,
-    title: "Prompt Engineering: KI optimal nutzen",
-    excerpt: "Die Kunst der richtigen Prompts: So holen Sie das Maximum aus ChatGPT & Co.",
+    title: "n8n vs. Make vs. Zapier: Welches Tool passt zu Ihnen?",
+    excerpt: "Wir vergleichen die drei beliebtesten Automatisierungstools und zeigen Vor- und Nachteile.",
     category: "ki",
     readTime: "11 Min.",
     date: "25. Okt 2025",
