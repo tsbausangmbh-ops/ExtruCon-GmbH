@@ -1,0 +1,47 @@
+# ExtruCon GmbH - Robots.txt
+# SEO optimiert für Deutschland (DE), Kroatien (HR), Türkei (TR)
+
+User-agent: *
+Allow: /
+
+# Wichtige Seiten für Crawling
+Allow: /ki-agenten
+Allow: /automatisierungen
+Allow: /webseiten-ki
+Allow: /leistungen/
+Allow: /kontakt
+Allow: /ueber-uns
+Allow: /faq
+Allow: /ratgeber
+
+# Sitemap für alle Suchmaschinen
+Sitemap: https://extrucon.de/sitemap.xml
+
+# Google Bot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Yandex (für internationale Reichweite)
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Baidu (internationale Sichtbarkeit)
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# Nicht indizieren
+Disallow: /api/
+Disallow: /_*
+Disallow: /assets/
