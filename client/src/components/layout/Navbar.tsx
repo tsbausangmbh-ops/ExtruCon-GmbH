@@ -1,6 +1,6 @@
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Bot, Share2, Globe, TrendingUp, Palette, FileText, ArrowLeft, Home } from "lucide-react";
+import { Menu, X, ChevronDown, Bot, Share2, Globe, TrendingUp, Palette, FileText } from "lucide-react";
 import { useState } from "react";
 import logoImage from "@assets/Logo_mittel_Header_1765567902974.png";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -9,17 +9,7 @@ import { useLanguage } from "@/lib/i18n";
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const { t, language } = useLanguage();
-  const [location] = useLocation();
-  
-  const backLabels = {
-    de: "Zurück zur Startseite",
-    en: "Back to Home",
-    hr: "Povratak na naslovnu",
-    tr: "Ana Sayfaya Dön"
-  };
-  
-  const isHomePage = location === "/" || location === "";
+  const { t } = useLanguage();
 
   const services = [
     { name: t.nav.kiAgents, href: "/ki-agenten", icon: Bot },
@@ -157,21 +147,6 @@ export function Navbar() {
         </div>
       )}
       
-      {!isHomePage && (
-        <div className="fixed top-24 left-0 right-0 z-40 bg-background/60 backdrop-blur-sm border-b border-white/5">
-          <div className="container mx-auto px-4 py-2">
-            <a 
-              href="/"
-              className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg transition-all duration-300 group text-sm"
-              data-testid="button-back-home"
-            >
-              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-              <Home className="w-4 h-4" />
-              <span className="font-medium">{backLabels[language]}</span>
-            </a>
-          </div>
-        </div>
-      )}
     </nav>
   );
 }
