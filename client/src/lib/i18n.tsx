@@ -239,6 +239,198 @@ export const translations = {
       errorMsg: 'Entschuldigung, ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.',
       connectionError: 'Verbindungsfehler. Bitte überprüfen Sie Ihre Internetverbindung.',
     },
+    kiAgentsPage: {
+      badge: 'KI-Agenten für Ihr Business',
+      title: 'Intelligente Agenten, die für Sie arbeiten',
+      subtitle: 'Unsere KI-Agenten automatisieren Routineaufgaben, beantworten Kundenanfragen und analysieren Daten – damit Sie sich auf Ihr Kerngeschäft konzentrieren können.',
+      ctaPrimary: 'Kostenlose Beratung',
+      ctaSecondary: 'Agenten entdecken',
+      stats: { timeSaving: 'Zeitersparnis', availability: 'Verfügbarkeit', integrations: 'Integrationen', responseTime: 'Antwortzeit' },
+      whyTitle: 'Warum KI-Agenten?',
+      whySubtitle: 'Die Vorteile intelligenter Automatisierung für Ihr Unternehmen.',
+      agentsTitle: 'Unsere 8 KI-Agenten',
+      agentsSubtitle: 'Jeder Agent ist auf bestimmte Aufgaben spezialisiert und kann individuell an Ihre Geschäftsprozesse angepasst werden.',
+      typicalApps: 'Typische Anwendungen:',
+      useCasesTitle: 'Einsatzbereiche',
+      useCasesSubtitle: 'KI-Agenten unterstützen Sie in allen Unternehmensbereichen.',
+      howTitle: 'So funktioniert\'s',
+      howSubtitle: 'In 5 Schritten zu Ihrem individuellen KI-Agenten.',
+      techTitle: 'Unsere Technologien',
+      techSubtitle: 'Wir nutzen die modernsten KI-Technologien für Ihre Agenten.',
+      pricingTitle: 'Transparente Preise',
+      pricingSubtitle: 'Keine versteckten Kosten – Sie wissen von Anfang an, was Ihr Agent kostet.',
+      faqTitle: 'Häufige Fragen zu KI-Agenten',
+      ctaTitle: 'Bereit für Ihren eigenen KI-Agenten?',
+      ctaSubtitle: 'Lassen Sie uns besprechen, wie KI-Agenten Ihr Business transformieren können. Kostenlose Erstberatung ohne Risiko.',
+      agents: [
+        { title: 'Kundenservice-Agent', description: 'Automatisierte Beantwortung von Kundenanfragen rund um die Uhr. Der Agent versteht Kontext, beantwortet FAQs und leitet komplexe Fälle intelligent an Mitarbeiter weiter.', features: ['24/7 verfügbar', 'Mehrsprachig', 'Lernfähig', 'CRM-Integration'], useCases: ['Live-Chat auf Website', 'E-Mail-Support', 'WhatsApp Business', 'Facebook Messenger'] },
+        { title: 'Analyse-Agent', description: 'Automatische Auswertung von Marketing-Daten, Erstellung von Reports und Handlungsempfehlungen basierend auf KI-Analyse Ihrer Geschäftskennzahlen.', features: ['Echtzeit-Daten', 'Automatische Reports', 'Trend-Erkennung', 'ROI-Tracking'], useCases: ['Google Analytics Auswertung', 'Social Media Insights', 'Kampagnen-Performance', 'Umsatzprognosen'] },
+        { title: 'Automatisierungs-Agent', description: 'Verbindet Ihre Tools und automatisiert Workflows – von Lead-Erfassung über E-Mail-Versand bis zur Rechnungsstellung. Basierend auf n8n für maximale Flexibilität.', features: ['n8n-basiert', '500+ Integrationen', 'Keine Coding-Skills nötig', 'Skalierbar'], useCases: ['Lead-Nurturing', 'Rechnungsautomatisierung', 'Daten-Synchronisation', 'Benachrichtigungen'] },
+        { title: 'Content-Agent', description: 'Generiert Social Media Posts, Blog-Artikel und Marketing-Texte in Ihrem Markenstil – mit menschlicher Qualitätskontrolle für perfekte Ergebnisse.', features: ['Markenkonform', 'SEO-optimiert', 'Multi-Plattform', 'Schnelle Erstellung'], useCases: ['Social Media Posts', 'Blog-Artikel', 'Newsletter-Texte', 'Produktbeschreibungen'] },
+        { title: 'E-Mail-Agent', description: 'Intelligente E-Mail-Automatisierung mit personalisierten Antworten, automatischer Kategorisierung und Priorisierung eingehender Nachrichten.', features: ['Auto-Kategorisierung', 'Personalisierte Antworten', 'Spam-Filter', 'Follow-up Reminder'], useCases: ['Inbox-Management', 'Newsletter-Versand', 'Terminanfragen', 'Angebotsversand'] },
+        { title: 'Termin-Agent', description: 'Automatisiert Ihre Terminplanung: Koordiniert Verfügbarkeiten, sendet Erinnerungen und verwaltet Absagen oder Verschiebungen selbstständig.', features: ['Kalender-Sync', 'Automatische Erinnerungen', 'Zeitzonenmanagement', 'Konfliktlösung'], useCases: ['Kundentermine', 'Team-Meetings', 'Webinar-Buchungen', 'Servicezeiten'] },
+        { title: 'E-Commerce-Agent', description: 'Unterstützt Kunden beim Einkauf, beantwortet Produktfragen, verfolgt Bestellungen und kümmert sich um Retouren-Anfragen automatisch.', features: ['Produktberatung', 'Bestellstatus', 'Retouren-Handling', 'Upselling'], useCases: ['Shop-Assistenz', 'Warenkorbabbruch', 'Größenberatung', 'Liefertracking'] },
+        { title: 'Dokumenten-Agent', description: 'Verarbeitet Dokumente automatisch: Extrahiert Daten aus PDFs, kategorisiert Unterlagen und erstellt strukturierte Zusammenfassungen.', features: ['PDF-Extraktion', 'OCR-Erkennung', 'Auto-Kategorisierung', 'Datenexport'], useCases: ['Rechnungsverarbeitung', 'Vertragsanalyse', 'Bewerbungsmanagement', 'Archivierung'] }
+      ],
+      benefits: [
+        { title: 'Zeit sparen', description: 'Bis zu 80% weniger manuelle Arbeit durch intelligente Automatisierung.' },
+        { title: 'Schneller reagieren', description: 'Sofortige Antworten und Aktionen – 24 Stunden am Tag, 7 Tage die Woche.' },
+        { title: 'Fehler reduzieren', description: 'Konsistente Qualität ohne menschliche Flüchtigkeitsfehler.' },
+        { title: 'Team entlasten', description: 'Mitarbeiter können sich auf wertschöpfende Aufgaben konzentrieren.' },
+        { title: 'Skalierbar wachsen', description: 'Agenten wachsen mit Ihrem Unternehmen – ohne zusätzliches Personal.' },
+        { title: 'Daten nutzen', description: 'Wandeln Sie Daten in verwertbare Insights und bessere Entscheidungen um.' }
+      ],
+      useCaseCategories: [
+        { title: 'Kundenservice', examples: ['Automatische Beantwortung von FAQ-Anfragen', '24/7 Chat-Support auf Ihrer Website', 'Ticket-Kategorisierung und Priorisierung', 'Mehrsprachiger Support ohne Mehrkosten'] },
+        { title: 'Marketing & Vertrieb', examples: ['Lead-Qualifizierung und -Scoring', 'Personalisierte E-Mail-Kampagnen', 'Social Media Content-Erstellung', 'Automatische Angebotserstellung'] },
+        { title: 'Operations', examples: ['Automatische Rechnungsverarbeitung', 'Terminplanung und Ressourcenmanagement', 'Dokumentenanalyse und -extraktion', 'Workflow-Automatisierung zwischen Tools'] }
+      ],
+      processSteps: [
+        { title: 'Gespräch', description: 'Wir verstehen Ihre Anforderungen und Prozesse.' },
+        { title: 'Analyse', description: 'Identifikation von Automatisierungspotenzialen.' },
+        { title: 'Konzept', description: 'Entwicklung einer maßgeschneiderten Lösung.' },
+        { title: 'Umsetzung', description: 'Konfiguration und Training des Agenten.' },
+        { title: 'Go-Live', description: 'Integration und kontinuierliche Optimierung.' }
+      ],
+      technologies: [
+        { name: 'OpenAI GPT-4', description: 'Modernste Sprachverarbeitung für natürliche Konversationen' },
+        { name: 'n8n Workflows', description: 'No-Code Automatisierung mit 500+ Integrationen' },
+        { name: 'Claude AI', description: 'Präzise Analyse und Texterstellung mit Anthropic Claude' },
+        { name: 'LangChain', description: 'Intelligente Verkettung von KI-Modellen für komplexe Aufgaben' },
+        { name: 'Vector Databases', description: 'Wissensbasen für kontextbewusste Antworten' },
+        { name: 'Custom APIs', description: 'Nahtlose Integration in Ihre bestehenden Systeme' }
+      ],
+      pricing: [
+        { title: 'Starter', price: 'ab 990€', description: 'Einmalig + ab 50€/Monat', features: ['1 KI-Agent', 'Grundfunktionen', 'E-Mail-Support', 'Hosting inklusive'], best: false },
+        { title: 'Business', price: 'ab 2.490€', description: 'Einmalig + ab 99€/Monat', features: ['Bis zu 3 Agenten', 'Erweiterte Integrationen', 'Prioritäts-Support', 'Custom Training', 'Analytics Dashboard'], best: true },
+        { title: 'Enterprise', price: 'Individuell', description: 'Auf Anfrage', features: ['Unbegrenzte Agenten', 'Komplexe Workflows', 'Dedizierter Support', 'On-Premise möglich', 'SLA-Garantie'], best: false }
+      ],
+      faqs: [
+        { q: 'Wie lange dauert die Entwicklung eines KI-Agenten?', a: 'Einfache Agenten können binnen 1-2 Wochen einsatzbereit sein. Komplexere Lösungen mit mehreren Integrationen benötigen 3-6 Wochen. In einem ersten Gespräch erstellen wir einen realistischen Zeitplan für Ihr Projekt.' },
+        { q: 'Brauche ich technisches Wissen, um KI-Agenten zu nutzen?', a: 'Nein! Wir übernehmen die komplette Entwicklung und Integration. Sie erhalten ein benutzerfreundliches Dashboard und eine Schulung. Für Änderungen oder Erweiterungen stehen wir Ihnen zur Seite.' },
+        { q: 'Sind meine Daten bei KI-Agenten sicher?', a: 'Datenschutz hat höchste Priorität. Wir nutzen verschlüsselte Verbindungen, DSGVO-konforme Hosting-Lösungen in Deutschland/EU und können auf Wunsch auch komplett lokale Lösungen implementieren.' },
+        { q: 'Können KI-Agenten mit meinen bestehenden Tools arbeiten?', a: 'Ja! Unsere Agenten integrieren sich nahtlos in gängige Tools wie CRM-Systeme (HubSpot, Salesforce), E-Mail-Provider, Kalender, Buchhaltung (lexoffice, sevDesk) und viele weitere über n8n-Schnittstellen.' },
+        { q: 'Was passiert, wenn der Agent eine Anfrage nicht beantworten kann?', a: 'Unsere Agenten sind so konfiguriert, dass sie komplexe Fälle automatisch an menschliche Mitarbeiter weiterleiten. Sie erkennen ihre Grenzen und eskalieren intelligent – mit allen relevanten Kontextinformationen.' },
+        { q: 'Wie werden die Agenten trainiert?', a: 'Wir trainieren die Agenten mit Ihren Unternehmensdaten, FAQs, Produktinformationen und bisherigen Kundeninteraktionen. Je mehr Kontext, desto besser die Antworten. Das Training ist ein kontinuierlicher Prozess.' },
+        { q: 'Welche laufenden Kosten entstehen?', a: 'Neben der einmaligen Entwicklung fallen monatliche Kosten für Hosting, API-Nutzung und optional Wartung an. Ein typischer Agent kostet 50-200€ monatlich je nach Nutzungsvolumen und Komplexität.' },
+        { q: 'Kann ich den Agenten später erweitern?', a: 'Absolut! KI-Agenten sind modular aufgebaut. Sie können jederzeit neue Funktionen, Integrationen oder Sprachfähigkeiten hinzufügen. Wir begleiten Sie bei der Weiterentwicklung.' }
+      ],
+    },
+    automationPage: {
+      badge: 'Workflow-Automatisierung',
+      title: 'Automatisieren Sie Ihr Business',
+      subtitle: 'Wir verbinden Ihre Tools und automatisieren wiederkehrende Aufgaben – damit Sie sich auf das Wesentliche konzentrieren können.',
+      ctaPrimary: 'Kostenlose Beratung',
+      ctaSecondary: 'Möglichkeiten entdecken',
+      automationsTitle: 'Was wir automatisieren',
+      automationsSubtitle: 'Von E-Mail-Workflows bis zur kompletten Prozessautomatisierung – wir finden die perfekte Lösung.',
+      examples: 'Beispiele:',
+      toolsTitle: 'Unsere Tools',
+      toolsSubtitle: 'Wir setzen auf bewährte Automatisierungs-Plattformen für maximale Zuverlässigkeit.',
+      processTitle: 'Unser Prozess',
+      processSubtitle: 'Von der Analyse bis zum Go-Live – so entsteht Ihre Automatisierung.',
+      faqTitle: 'Häufige Fragen zur Automatisierung',
+      ctaTitle: 'Bereit für mehr Effizienz?',
+      ctaSubtitle: 'Lassen Sie uns analysieren, welche Prozesse wir für Sie automatisieren können. Kostenlose Erstberatung.',
+      automations: [
+        { title: 'E-Mail-Automatisierung', description: 'Automatischer Versand, Sortierung und Beantwortung von E-Mails. Willkommens-Sequenzen, Follow-ups und personalisierte Kampagnen auf Autopilot.', examples: ['Willkommens-E-Mails', 'Lead-Nurturing', 'Warenkorbabbrecher', 'Newsletter-Segmentierung'] },
+        { title: 'Lead-Management', description: 'Leads automatisch erfassen, qualifizieren und an den Vertrieb übergeben. Integration mit Ihrem CRM und automatisches Scoring.', examples: ['Formulare → CRM', 'Lead-Scoring', 'Automatische Zuweisung', 'Nachfass-Reminder'] },
+        { title: 'Dokumenten-Workflows', description: 'Rechnungen, Verträge und Dokumente automatisch verarbeiten, archivieren und weiterleiten. OCR-Erkennung inklusive.', examples: ['Rechnungsverarbeitung', 'Vertragsmanagement', 'Digitale Unterschriften', 'Archivierung'] },
+        { title: 'E-Commerce-Automation', description: 'Bestellungen, Lagerbestände und Versand automatisch verwalten. Synchronisation zwischen Shop, Buchhaltung und Versand.', examples: ['Bestellbestätigungen', 'Lager-Sync', 'Retouren-Workflow', 'Bewertungsanfragen'] },
+        { title: 'Termin-Automatisierung', description: 'Buchungen, Erinnerungen und Kalenderabgleich vollautomatisch. Keine doppelten Termine, keine vergessenen Meetings.', examples: ['Online-Buchung', 'Erinnerungen', 'Kalender-Sync', 'No-Show-Management'] },
+        { title: 'Daten-Synchronisation', description: 'Halten Sie alle Ihre Systeme synchron. Änderungen in einem Tool werden automatisch in allen anderen übernommen.', examples: ['CRM ↔ Buchhaltung', 'Shop ↔ Warenwirtschaft', 'Kontakte synchron', 'Bestandsabgleich'] },
+        { title: 'Reporting-Automation', description: 'Automatische Erstellung und Versand von Reports. Tägliche, wöchentliche oder monatliche Auswertungen ohne manuellen Aufwand.', examples: ['Umsatzreports', 'Marketing-KPIs', 'Mitarbeiter-Dashboards', 'Kundenanalysen'] },
+        { title: 'Prozess-Workflows', description: 'Komplexe Geschäftsprozesse automatisieren: Freigaben, Eskalationen und mehrstufige Abläufe mit intelligenten Regeln.', examples: ['Freigabe-Workflows', 'Eskalationsketten', 'Onboarding', 'Checklisten'] }
+      ],
+      benefits: [
+        { title: '80% Zeitersparnis', description: 'Manuelle Aufgaben werden automatisch erledigt' },
+        { title: 'Weniger Fehler', description: 'Konsistente Prozesse ohne Flüchtigkeitsfehler' },
+        { title: 'Skalierbar', description: 'Mehr Volumen ohne mehr Personal' },
+        { title: 'Schneller', description: 'Prozesse laufen 24/7 in Sekunden' }
+      ],
+      tools: [
+        { name: 'n8n', description: 'Unser Haupt-Tool für komplexe Automatisierungen' },
+        { name: 'Zapier', description: 'Schnelle Integrationen für einfache Workflows' },
+        { name: 'Make (Integromat)', description: 'Visuelle Workflow-Erstellung' },
+        { name: 'HubSpot', description: 'Marketing- und Sales-Automatisierung' },
+        { name: 'Airtable', description: 'Datenbank-Automatisierungen' },
+        { name: 'Google Workspace', description: 'Sheets, Docs, Gmail-Integration' }
+      ],
+      processSteps: [
+        { title: 'Analyse', description: 'Wir verstehen Ihre aktuellen Prozesse und identifizieren Automatisierungspotenzial.' },
+        { title: 'Konzept', description: 'Gemeinsam definieren wir den optimalen Workflow und wählen die passenden Tools.' },
+        { title: 'Umsetzung', description: 'Wir bauen Ihre Automatisierung mit n8n oder dem passenden Tool.' },
+        { title: 'Testing', description: 'Ausgiebige Tests stellen sicher, dass alles reibungslos funktioniert.' },
+        { title: 'Go-Live', description: 'Ihr Workflow geht live – mit Monitoring und kontinuierlicher Optimierung.' }
+      ],
+      faqs: [
+        { q: 'Was kostet eine Automatisierung?', a: 'Einfache Automatisierungen starten ab 500€. Komplexere Workflows mit mehreren Systemen beginnen bei 1.500€. In der kostenlosen Erstberatung erstellen wir einen konkreten Kostenvoranschlag.' },
+        { q: 'Welche Tools können integriert werden?', a: 'Mit n8n können wir über 500 Tools integrieren: CRM-Systeme, E-Mail-Provider, Shops, Buchhaltung, Google Workspace, Microsoft 365, Slack, Notion und viele mehr. Auch individuelle APIs sind möglich.' },
+        { q: 'Wie lange dauert die Umsetzung?', a: 'Einfache Workflows sind in 1-2 Tagen fertig. Komplexere Automatisierungen mit mehreren Integrationen benötigen 1-2 Wochen. Bei der Erstberatung geben wir Ihnen einen realistischen Zeitplan.' },
+        { q: 'Kann ich die Automatisierungen selbst anpassen?', a: 'Ja! Wir schulen Sie im Umgang mit n8n oder dem genutzten Tool. Einfache Anpassungen können Sie selbst vornehmen. Für komplexere Änderungen stehen wir Ihnen zur Seite.' },
+        { q: 'Was passiert, wenn etwas schiefgeht?', a: 'Unsere Automatisierungen haben eingebaute Fehlerbehandlung und Benachrichtigungen. Sie werden sofort informiert, wenn etwas nicht funktioniert. Zusätzlich bieten wir Wartungspakete an.' },
+        { q: 'Sind meine Daten sicher?', a: 'Ja! Wir nutzen verschlüsselte Verbindungen und DSGVO-konforme Lösungen. Auf Wunsch hosten wir n8n auch auf Ihren eigenen Servern für maximale Datenkontrolle.' }
+      ],
+    },
+    webKIPage: {
+      badge: 'Webseiten mit KI',
+      title: 'Intelligente Websites, die arbeiten',
+      subtitle: 'Wir entwickeln moderne Websites mit integrierten KI-Features: Chatbots, automatische Content-Erstellung, intelligente SEO und mehr.',
+      ctaPrimary: 'Projekt starten',
+      ctaSecondary: 'KI-Features entdecken',
+      stats: { loadTime: 'Ladezeit', conversion: 'Mehr Conversion', uptime: 'Uptime', satisfaction: 'Zufriedenheit' },
+      featuresTitle: 'KI-Features für Ihre Website',
+      featuresSubtitle: 'Diese intelligenten Funktionen machen den Unterschied für Ihre Online-Präsenz.',
+      typesTitle: 'Website-Pakete',
+      typesSubtitle: 'Für jedes Projekt die passende Lösung – von der Landing Page bis zum E-Commerce-Shop.',
+      from: 'ab',
+      processTitle: 'Unser Prozess',
+      processSubtitle: 'In 5 Schritten zu Ihrer intelligenten Website.',
+      techTitle: 'Technologien',
+      techSubtitle: 'Wir setzen auf moderne, bewährte Technologien für Performance und Flexibilität.',
+      faqTitle: 'Häufige Fragen zu Webseiten mit KI',
+      ctaTitle: 'Bereit für Ihre neue Website?',
+      ctaSubtitle: 'Lassen Sie uns besprechen, wie wir Ihre Online-Präsenz mit KI auf das nächste Level bringen. Kostenlose Erstberatung.',
+      features: [
+        { title: 'KI-Chatbot Integration', description: 'Intelligente Chatbots, die Kundenanfragen 24/7 beantworten, Leads qualifizieren und Termine buchen – direkt auf Ihrer Website.', benefits: ['Sofortige Antworten', 'Lead-Generierung', 'Terminbuchung', 'FAQ-Automatisierung'] },
+        { title: 'KI-Content-Erstellung', description: 'SEO-optimierte Texte, Produktbeschreibungen und Blog-Artikel werden mit KI erstellt und von Experten geprüft.', benefits: ['SEO-optimiert', 'Markenkonform', 'Schnelle Erstellung', 'Regelmäßige Updates'] },
+        { title: 'KI-Bildoptimierung', description: 'Automatische Bildoptimierung, Alt-Text-Generierung und intelligente Bildauswahl für maximale Performance.', benefits: ['Schnelle Ladezeiten', 'Auto Alt-Texte', 'Responsive Bilder', 'WebP-Konvertierung'] },
+        { title: 'KI-SEO-Analyse', description: 'Kontinuierliche SEO-Überwachung mit KI-gestützten Empfehlungen für bessere Rankings bei Google.', benefits: ['Keyword-Tracking', 'Konkurrenz-Analyse', 'Auto-Optimierung', 'Ranking-Reports'] },
+        { title: 'Personalisierung', description: 'KI analysiert Besucherverhalten und zeigt personalisierte Inhalte, Produkte und Angebote.', benefits: ['Höhere Conversion', 'Relevante Inhalte', 'A/B-Testing', 'Nutzerprofile'] },
+        { title: 'Intelligente Analytics', description: 'KI-gestützte Auswertung Ihrer Website-Daten mit automatischen Handlungsempfehlungen.', benefits: ['Automatische Insights', 'Conversion-Tracking', 'Nutzerverhalten', 'Optimierungsvorschläge'] }
+      ],
+      websiteTypes: [
+        { title: 'Unternehmenswebsite', description: 'Professionelle Präsenz mit KI-Chatbot, SEO-Optimierung und Content-Management.', price: 'ab 3.500€', features: ['Responsives Design', 'KI-Chatbot', 'SEO-Optimierung', 'CMS', 'Kontaktformular', 'Analytics'] },
+        { title: 'Landing Page', description: 'Conversion-optimierte Seite für Kampagnen, Produkte oder Dienstleistungen.', price: 'ab 1.500€', features: ['Conversion-Design', 'A/B-Testing', 'Lead-Formulare', 'Tracking', 'Mobile-First', 'Schnelle Ladezeit'] },
+        { title: 'E-Commerce Shop', description: 'Online-Shop mit KI-Produktempfehlungen und automatisiertem Marketing.', price: 'ab 5.000€', features: ['Produktkatalog', 'KI-Empfehlungen', 'Zahlungsintegration', 'Warenkorbabbruch-Mail', 'SEO', 'Analytics'] },
+        { title: 'Blog / Content-Plattform', description: 'Content-Hub mit KI-gestützter Texterstellung und SEO-Automatisierung.', price: 'ab 2.500€', features: ['KI-Content', 'SEO-Tools', 'Kategorien', 'Newsletter', 'Social Sharing', 'Autorenprofile'] }
+      ],
+      processSteps: [
+        { title: 'Briefing', description: 'Wir verstehen Ihre Ziele, Zielgruppe und Anforderungen.' },
+        { title: 'Konzept', description: 'Struktur, Design-Richtung und KI-Features werden definiert.' },
+        { title: 'Design', description: 'Modernes UI/UX-Design mit Fokus auf Conversion.' },
+        { title: 'Entwicklung', description: 'Technische Umsetzung mit KI-Integrationen.' },
+        { title: 'Launch', description: 'Go-Live mit SEO-Setup und Monitoring.' }
+      ],
+      technologies: [
+        { name: 'React / Next.js', category: 'Frontend' },
+        { name: 'WordPress', category: 'CMS' },
+        { name: 'Webflow', category: 'No-Code' },
+        { name: 'OpenAI GPT', category: 'KI' },
+        { name: 'Claude AI', category: 'KI' },
+        { name: 'n8n', category: 'Automation' },
+        { name: 'Tailwind CSS', category: 'Styling' },
+        { name: 'Vercel', category: 'Hosting' }
+      ],
+      faqs: [
+        { q: 'Was kostet eine Website mit KI-Features?', a: 'Einfache Landing Pages starten ab 1.500€, Unternehmenswebsites ab 3.500€. KI-Features wie Chatbots oder Content-Automatisierung können separat oder als Paket hinzugebucht werden. Wir erstellen ein individuelles Angebot basierend auf Ihren Anforderungen.' },
+        { q: 'Wie lange dauert die Erstellung einer Website?', a: 'Eine Landing Page ist in 1-2 Wochen fertig. Unternehmenswebsites benötigen 3-6 Wochen, E-Commerce-Projekte 4-8 Wochen. Der genaue Zeitplan hängt von Umfang und Komplexität ab.' },
+        { q: 'Welche KI-Features sind am sinnvollsten?', a: 'Das hängt von Ihren Zielen ab. Für Lead-Generierung empfehlen wir einen Chatbot. Für SEO setzen wir auf KI-Content-Erstellung. In der Beratung analysieren wir, welche Features den größten Mehrwert bieten.' },
+        { q: 'Kann ich die Website selbst bearbeiten?', a: 'Ja! Wir setzen auf benutzerfreundliche CMS wie WordPress oder Webflow. Sie erhalten eine Schulung und können Texte, Bilder und einfache Änderungen selbst vornehmen.' },
+        { q: 'Ist die Website DSGVO-konform?', a: 'Absolut. Wir achten auf DSGVO-konforme Cookie-Banner, Datenschutzerklärungen, SSL-Verschlüsselung und sichere Kontaktformulare. Bei KI-Features nutzen wir EU-konforme Lösungen.' },
+        { q: 'Was passiert nach dem Launch?', a: 'Wir bieten Wartungspakete für Updates, Sicherheit und Support. Außerdem können wir kontinuierlich neue KI-Features hinzufügen und die Website basierend auf Analytics-Daten optimieren.' }
+      ],
+    },
   },
   en: {
     nav: {
