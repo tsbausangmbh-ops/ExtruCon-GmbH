@@ -1,58 +1,90 @@
-import { Cpu, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Cpu, MapPin, Mail, Phone, Clock } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-background border-t border-white/10 py-6 mt-0">
+    <footer className="bg-background border-t border-white/10 py-8 mt-0" itemScope itemType="https://schema.org/LocalBusiness">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
+          {/* Company Info with Schema */}
           <div className="col-span-1 md:col-span-2">
-            <a href="https://extrucon.de" className="flex items-center gap-2 mb-4 hover:opacity-80 transition-opacity">
+            <a href="https://extrucon.de" className="flex items-center gap-2 mb-4 hover:opacity-80 transition-opacity" itemProp="url">
               <Cpu className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold font-display tracking-wider text-white">
-                EXTRUCON
+              <span className="text-xl font-bold font-display tracking-wider text-white" itemProp="name">
+                ExtruCon GmbH
               </span>
             </a>
-            <p className="text-gray-400 max-w-sm">
-              Wir stärken Unternehmen mit KI der nächsten Generation, Marketing und digitalen Lösungen. 
-              Wir gestalten die Zukunft heute.
+            <p className="text-gray-400 max-w-sm mb-4" itemProp="description">
+              Ihre KI-Agentur aus Fürstenfeldbruck. Wir entwickeln intelligente KI-Agenten, 
+              automatisieren Geschäftsprozesse und unterstützen beim digitalen Marketing – deutschlandweit.
             </p>
+            <div className="flex flex-wrap gap-2 text-xs">
+              <span className="px-2 py-1 rounded bg-primary/10 text-primary">KI-Agenten</span>
+              <span className="px-2 py-1 rounded bg-primary/10 text-primary">Automatisierung</span>
+              <span className="px-2 py-1 rounded bg-primary/10 text-primary">Webentwicklung</span>
+              <span className="px-2 py-1 rounded bg-primary/10 text-primary">Marketing</span>
+            </div>
           </div>
           
+          {/* Services */}
           <div>
-            <h4 className="font-bold text-white mb-4">Leistungen</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="/leistungen/ki-automatisierung" className="hover:text-primary transition-colors">KI & Automatisierung</a></li>
-              <li><a href="/leistungen/marketing" className="hover:text-primary transition-colors">Performance Marketing</a></li>
-              <li><a href="/leistungen/web" className="hover:text-primary transition-colors">Web Entwicklung</a></li>
+            <h3 className="font-bold text-white mb-4">Leistungen</h3>
+            <ul className="space-y-2 text-gray-400 text-sm">
+              <li><a href="/ki-agenten" className="hover:text-primary transition-colors">KI-Agenten</a></li>
+              <li><a href="/automatisierungen" className="hover:text-primary transition-colors">Automatisierungen</a></li>
+              <li><a href="/webseiten-ki" className="hover:text-primary transition-colors">Webseiten mit KI</a></li>
               <li><a href="/leistungen/social-media" className="hover:text-primary transition-colors">Social Media</a></li>
-              <li><a href="/leistungen/content" className="hover:text-primary transition-colors">Texting & Postings</a></li>
-              <li><a href="/leistungen/markenaufbau" className="hover:text-primary transition-colors">Markenaufbau</a></li>
+              <li><a href="/leistungen/marketing" className="hover:text-primary transition-colors">Performance Marketing</a></li>
+              <li><a href="/leistungen/content" className="hover:text-primary transition-colors">Content Creation</a></li>
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-bold text-white mb-4">Kontakt</h4>
-            <ul className="space-y-2 text-gray-400 text-sm">
-              <li>ExtruCon GmbH</li>
-              <li>Hasenheide 8</li>
-              <li>82256 Fürstenfeldbruck</li>
-              <li className="pt-2">
-                <a href="mailto:info@extrucon.de" className="hover:text-primary transition-colors">info@extrucon.de</a>
+          {/* NAP Block - Schema optimized */}
+          <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+            <h3 className="font-bold text-white mb-4">Kontakt</h3>
+            <ul className="space-y-3 text-gray-400 text-sm">
+              <li className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <div>
+                  <span itemProp="name" className="font-medium text-white">ExtruCon GmbH</span><br />
+                  <span itemProp="streetAddress">Hasenheide 8</span><br />
+                  <span itemProp="postalCode">82256</span> <span itemProp="addressLocality">Fürstenfeldbruck</span>
+                  <meta itemProp="addressRegion" content="Bayern" />
+                  <meta itemProp="addressCountry" content="DE" />
+                </div>
               </li>
-              <li>
-                <a href="tel:+4989444438879" className="hover:text-primary transition-colors">089 444438879</a>
+              <li className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-primary flex-shrink-0" />
+                <a href="mailto:info@extrucon.de" className="hover:text-primary transition-colors" itemProp="email">info@extrucon.de</a>
               </li>
-              <li className="pt-2">
-                <a href="/kontakt" className="text-primary hover:underline">→ Kontaktformular</a>
+              <li className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-primary flex-shrink-0" />
+                <a href="tel:+4989444438879" className="hover:text-primary transition-colors" itemProp="telephone">089 444438879</a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Clock className="w-4 h-4 text-primary flex-shrink-0" />
+                <span>Mo–Fr 08:00–17:00</span>
+                <meta itemProp="openingHours" content="Mo-Fr 08:00-17:00" />
               </li>
             </ul>
+            <div className="mt-4">
+              <a href="/kontakt" className="text-primary hover:underline text-sm font-medium">→ Kontaktformular</a>
+            </div>
           </div>
         </div>
+
+        {/* Legal Info */}
+        <div className="border-t border-white/10 pt-6 mb-4">
+          <p className="text-xs text-gray-500 text-center">
+            ExtruCon GmbH · HRB 18623 · Amtsgericht München · Geschäftsführer: Siehe Impressum
+          </p>
+        </div>
         
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-          <p>&copy; {new Date().getFullYear()} Extrucon GmbH. Alle Rechte vorbehalten.</p>
-          <div className="flex gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+          <p>&copy; {new Date().getFullYear()} ExtruCon GmbH. Alle Rechte vorbehalten.</p>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+            <a href="/ueber-uns" className="hover:text-white transition-colors">Über uns</a>
             <a href="/faq" className="hover:text-white transition-colors">FAQ</a>
+            <a href="/ratgeber" className="hover:text-white transition-colors">Ratgeber</a>
             <a href="/privacy" className="hover:text-white transition-colors">Datenschutz</a>
             <a href="/terms" className="hover:text-white transition-colors">AGB</a>
             <a href="/impressum" className="hover:text-white transition-colors">Impressum</a>

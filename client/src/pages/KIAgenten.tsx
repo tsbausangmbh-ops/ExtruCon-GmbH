@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { SEOHead } from "@/components/SEOHead";
 import { motion } from "framer-motion";
 import { Bot, Zap, MessageSquare, BarChart3, Clock, Shield, Sparkles, ArrowRight, CheckCircle, Brain, Workflow, Users, Mail, Calendar, FileText, ShoppingCart, Headphones, TrendingUp, Settings, Database, Globe, Cpu, Lock, RefreshCw, HelpCircle, ChevronDown } from "lucide-react";
 import { useState } from "react";
@@ -162,6 +163,11 @@ export default function KIAgenten() {
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
+      <SEOHead 
+        title="KI-Agenten Entwicklung | ExtruCon Fürstenfeldbruck – Chatbots & Automatisierung"
+        description="Individuelle KI-Agenten für Kundenservice, Lead-Generierung & Automatisierung. 24/7 verfügbar, mehrsprachig, lernfähig. KI-Agentur aus Fürstenfeldbruck – deutschlandweit."
+        keywords="KI-Agenten, Chatbot Entwicklung, Kundenservice Automatisierung, Lead-Qualifizierung, KI München, Automatisierung Bayern"
+      />
       <Navbar />
       <main className="pt-16">
         {/* Hero Section */}
