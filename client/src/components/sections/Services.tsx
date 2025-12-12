@@ -1,11 +1,19 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Bot, Share2, Globe, PenTool } from "lucide-react";
+import { Bot, Share2, Globe, PenTool, Fingerprint } from "lucide-react";
 import aiImg from "@assets/generated_images/glowing_neural_network_brain.png";
 import socialImg from "@assets/generated_images/digital_social_connection_abstract_art.png";
 import webImg from "@assets/generated_images/holographic_creative_interface.png";
+import brandImg from "@assets/generated_images/abstract_digital_brand_identity_construction.png";
 import { motion } from "framer-motion";
 
 const services = [
+  {
+    title: "Markenaufbau & Branding",
+    description: "Entwicklung unverwechselbarer Markenidentitäten, die Vertrauen schaffen und im Gedächtnis bleiben.",
+    icon: Fingerprint,
+    image: brandImg,
+    color: "text-amber-400"
+  },
   {
     title: "KI & Automatisierung",
     description: "Maßgeschneiderte KI-Bots und intelligente Automatisierungs-Workflows zur Optimierung Ihrer Abläufe rund um die Uhr.",
@@ -43,7 +51,7 @@ export function Services() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold font-display text-white mb-4">Unsere Expertise</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Umfassende digitale Lösungen, angetrieben von Innovation und Kreativität.
+            Umfassende digitale Lösungen, von starkem Branding bis zu modernster KI-Technologie.
           </p>
         </div>
 

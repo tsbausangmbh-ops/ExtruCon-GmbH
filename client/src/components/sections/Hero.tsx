@@ -27,11 +27,11 @@ export function Hero() {
               Zukunftssichere Lösungen
             </span>
             <h1 className="text-5xl md:text-7xl font-bold font-display text-white mb-6 leading-tight">
-              Wir gestalten Ihre <br />
+              Wir formen Ihre Marke & <br />
               <span className="text-gradient">Digitale Intelligenz</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Extrucon GmbH verbindet modernste KI, strategisches Marketing und immersive Web-Erlebnisse, um Ihr Unternehmen in die nächste Ära zu führen.
+              Extrucon GmbH verbindet Strategisches Branding, modernste KI und immersive Web-Erlebnisse, um Ihr Unternehmen zur Marktführerschaft zu führen.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
