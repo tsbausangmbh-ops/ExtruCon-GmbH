@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, Globe, Phone } from "lucide-react";
 
 export function Contact() {
   return (
@@ -44,11 +44,11 @@ export function Contact() {
 
               <div className="flex items-center gap-4 text-gray-300">
                 <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
-                  <MapPin className="w-5 h-5 text-pink-500" />
+                  <Globe className="w-5 h-5 text-pink-500" />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500">Besuch uns</p>
-                  <p className="font-medium">Tech Park 1, Berlin, Deutschland</p>
+                  <p className="text-sm text-gray-500">Webpage</p>
+                  <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="font-medium hover:text-primary transition-colors">https://extrucon.de</a>
                 </div>
               </div>
             </div>

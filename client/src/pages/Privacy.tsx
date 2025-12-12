@@ -54,7 +54,7 @@ export default function Privacy() {
             <h2 className="text-xl font-bold text-white mb-4">Verantwortlicher</h2>
             <div className="text-gray-400 leading-relaxed space-y-2">
               <p className="font-semibold text-gray-200">ExtruCon GmbH</p>
-              <p>Tech Park 1<br />Berlin, Deutschland</p>
+              <p>Hasenheide 8<br />82256 Fürstenfeldbruck</p>
               <p className="mt-4"><strong className="text-gray-200">Vertretungsberechtigte Personen:</strong> Maral Ibrahim Agha</p>
               <p><strong className="text-gray-200">E-Mail-Adresse:</strong> <a href="mailto:info@extrucon.de" className="text-cyan-400 hover:text-cyan-300">info@extrucon.de</a></p>
               <p><strong className="text-gray-200">Telefon:</strong> 089 444438879</p>

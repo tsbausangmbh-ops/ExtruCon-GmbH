@@ -14,8 +14,8 @@ export default function Impressum() {
             <h2 className="text-xl font-bold text-white mb-4">Angaben gemäß § 5 TMG</h2>
             <p className="text-gray-400 leading-relaxed">
               ExtruCon GmbH<br />
-              Tech Park 1<br />
-              Berlin, Deutschland
+              Hasenheide 8<br />
+              82256 Fürstenfeldbruck
             </p>
           </section>
 
@@ -61,8 +61,8 @@ export default function Impressum() {
             <h2 className="text-xl font-bold text-white mb-4">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
             <p className="text-gray-400 leading-relaxed">
               Maral Ibrahim Agha<br />
-              Tech Park 1<br />
-              Berlin, Deutschland
+              Hasenheide 8<br />
+              82256 Fürstenfeldbruck
             </p>
           </section>
 
