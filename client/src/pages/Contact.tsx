@@ -9,7 +9,6 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
-import { BackToHome } from "@/components/BackToHome";
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -30,7 +29,6 @@ export default function Contact() {
       />
       <Navbar />
       <main className="pt-24">
-        <BackToHome />
         {/* Hero Section */}
         <section className="relative py-16 overflow-hidden">
           <div className="absolute inset-0 z-0">

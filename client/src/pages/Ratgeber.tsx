@@ -8,7 +8,6 @@ import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { BackToHome } from "@/components/BackToHome";
 import { ExploreMoreSection } from "@/components/InternalLinks";
 
 const articleMetadata: { id: number; category: string; featured: boolean }[] = [
@@ -121,7 +120,6 @@ export default function Ratgeber() {
       />
       <Navbar />
       <main className="pt-24">
-        <BackToHome />
         <Breadcrumbs items={[
           { label: t.ratgeberPage.badge }
         ]} />
