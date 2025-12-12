@@ -31,7 +31,7 @@ export const translations = {
       freeConsultation: 'Kostenlose Beratung',
       ctaPrimary: 'Kostenlose Erstberatung',
       ctaSecondary: 'KI-Agenten entdecken',
-      ctaBot: 'KI Bot testen',
+      ctaBot: 'KI-Assistenten testen',
     },
     services: {
       title: 'Unsere Leistungen',
@@ -268,7 +268,7 @@ export const translations = {
       freeConsultation: 'Free consultation',
       ctaPrimary: 'Free Consultation',
       ctaSecondary: 'Discover AI Agents',
-      ctaBot: 'Test AI Bot',
+      ctaBot: 'Test AI Assistant',
     },
     services: {
       title: 'Our Services',
@@ -505,7 +505,7 @@ export const translations = {
       freeConsultation: 'Besplatno savjetovanje',
       ctaPrimary: 'Besplatna konzultacija',
       ctaSecondary: 'Otkrijte AI agente',
-      ctaBot: 'Testirajte AI bota',
+      ctaBot: 'Testirajte AI asistenta',
     },
     services: {
       title: 'Naše usluge',
@@ -742,7 +742,7 @@ export const translations = {
       freeConsultation: 'Ücretsiz danışmanlık',
       ctaPrimary: 'Ücretsiz İlk Danışma',
       ctaSecondary: 'AI Ajanları Keşfet',
-      ctaBot: 'AI Botu Test Et',
+      ctaBot: 'AI Asistanı Test Et',
     },
     services: {
       title: 'Hizmetlerimiz',
