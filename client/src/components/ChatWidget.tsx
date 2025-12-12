@@ -158,7 +158,7 @@ export function ChatWidget() {
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-orange-500/20 backdrop-blur-md border border-orange-400/30 rounded-full px-4 py-2 text-sm text-white shadow-lg"
+            className="bg-green-500/20 backdrop-blur-md border border-green-400/30 rounded-full px-4 py-2 text-sm text-white shadow-lg"
           >
             <span className="font-medium">Fragen? KI-Bot hilft!</span>
           </motion.div>
