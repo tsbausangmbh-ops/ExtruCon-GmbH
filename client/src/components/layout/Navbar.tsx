@@ -75,7 +75,7 @@ export function Navbar() {
             {t.nav.contact}
           </a>
           <LanguageSwitcher />
-          <Link href="/ki-bot">
+          <Link href="/ki-agenten">
             <Button variant="default" className="bg-primary text-background hover:bg-primary/90 font-bold">
               {t.nav.getStarted}
             </Button>
