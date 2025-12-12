@@ -87,6 +87,7 @@ export function Footer() {
             <a href="/privacy" className="hover:text-white transition-colors">{t.footer.privacy}</a>
             <a href="/terms" className="hover:text-white transition-colors">{t.footer.terms}</a>
             <a href="/impressum" className="hover:text-white transition-colors">{t.footer.impressum}</a>
+            <a href="/cookies" className="hover:text-white transition-colors">{t.footer.cookies}</a>
           </div>
         </div>
       </div>

@@ -106,6 +106,7 @@ export const translations = {
       impressum: 'Impressum',
       privacy: 'Datenschutz',
       terms: 'AGB',
+      cookies: 'Cookie-Einstellungen',
       allRights: 'Alle Rechte vorbehalten.',
       openingHours: 'Mo–Fr 08:00–17:00',
       legalInfo: 'Geschäftsführer: Siehe Impressum',
@@ -1014,6 +1015,22 @@ export const translations = {
       marketingDesc: 'Werden verwendet, um Werbung relevanter für Sie zu gestalten.',
       save: 'Auswahl speichern'
     },
+    cookiePage: {
+      title: 'Cookie-Einstellungen',
+      subtitle: 'Verwalten Sie Ihre Cookie-Präferenzen',
+      intro: 'Auf dieser Seite können Sie Ihre Cookie-Einstellungen jederzeit anpassen. Wir respektieren Ihre Privatsphäre und geben Ihnen die volle Kontrolle über Ihre Daten.',
+      whatAreCookies: 'Was sind Cookies?',
+      whatAreCookiesDesc: 'Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden, wenn Sie unsere Website besuchen. Sie helfen uns, die Website funktionsfähig zu halten und Ihr Nutzererlebnis zu verbessern.',
+      typesTitle: 'Arten von Cookies',
+      changeSettings: 'Einstellungen ändern',
+      changeSettingsDesc: 'Klicken Sie auf den Button unten, um Ihre Cookie-Einstellungen zu ändern.',
+      openSettings: 'Cookie-Einstellungen öffnen',
+      currentSettings: 'Aktuelle Einstellungen',
+      lastUpdated: 'Zuletzt geändert',
+      notSet: 'Noch nicht festgelegt',
+      enabled: 'Aktiviert',
+      disabled: 'Deaktiviert'
+    },
   },
   en: {
     nav: {
@@ -1118,6 +1135,7 @@ export const translations = {
       impressum: 'Imprint',
       privacy: 'Privacy',
       terms: 'Terms',
+      cookies: 'Cookie Settings',
       allRights: 'All rights reserved.',
       openingHours: 'Mon–Fri 08:00–17:00',
       legalInfo: 'Managing Director: See Imprint',
@@ -2026,6 +2044,22 @@ export const translations = {
       marketingDesc: 'Used to make advertising more relevant to you.',
       save: 'Save Preferences'
     },
+    cookiePage: {
+      title: 'Cookie Settings',
+      subtitle: 'Manage your cookie preferences',
+      intro: 'On this page you can adjust your cookie settings at any time. We respect your privacy and give you full control over your data.',
+      whatAreCookies: 'What are Cookies?',
+      whatAreCookiesDesc: 'Cookies are small text files stored on your device when you visit our website. They help us keep the website functional and improve your user experience.',
+      typesTitle: 'Types of Cookies',
+      changeSettings: 'Change Settings',
+      changeSettingsDesc: 'Click the button below to change your cookie settings.',
+      openSettings: 'Open Cookie Settings',
+      currentSettings: 'Current Settings',
+      lastUpdated: 'Last updated',
+      notSet: 'Not yet set',
+      enabled: 'Enabled',
+      disabled: 'Disabled'
+    },
   },
   hr: {
     nav: {
@@ -2130,6 +2164,7 @@ export const translations = {
       impressum: 'Impressum',
       privacy: 'Privatnost',
       terms: 'Uvjeti',
+      cookies: 'Postavke kolačića',
       allRights: 'Sva prava pridržana.',
       openingHours: 'Pon–Pet 08:00–17:00',
       legalInfo: 'Direktor: Pogledajte Impressum',
@@ -3037,6 +3072,22 @@ export const translations = {
       marketing: 'Marketinški kolačići',
       marketingDesc: 'Koriste se za prikazivanje relevantnijih oglasa.',
       save: 'Spremi postavke'
+    },
+    cookiePage: {
+      title: 'Postavke kolačića',
+      subtitle: 'Upravljajte svojim postavkama kolačića',
+      intro: 'Na ovoj stranici možete u bilo kojem trenutku prilagoditi svoje postavke kolačića. Poštujemo vašu privatnost i dajemo vam potpunu kontrolu nad vašim podacima.',
+      whatAreCookies: 'Što su kolačići?',
+      whatAreCookiesDesc: 'Kolačići su male tekstualne datoteke koje se spremaju na vaš uređaj kada posjetite našu web stranicu. Pomažu nam održati funkcionalnost stranice i poboljšati vaše korisničko iskustvo.',
+      typesTitle: 'Vrste kolačića',
+      changeSettings: 'Promijeni postavke',
+      changeSettingsDesc: 'Kliknite gumb ispod za promjenu postavki kolačića.',
+      openSettings: 'Otvori postavke kolačića',
+      currentSettings: 'Trenutne postavke',
+      lastUpdated: 'Zadnja izmjena',
+      notSet: 'Još nije postavljeno',
+      enabled: 'Omogućeno',
+      disabled: 'Onemogućeno'
     },
   },
 };
