@@ -3501,6 +3501,67 @@ export const translations = {
       ctaButton: 'Ücretsiz Danışmanlık',
       ctaButtonAlt: 'Projeye Başla',
     },
+    webKIPage: {
+      badge: 'AI Web Siteleri',
+      title: 'Sizin için çalışan akıllı web siteleri',
+      subtitle: 'Entegre AI özellikleriyle modern web siteleri geliştiriyoruz: Chatbotlar, otomatik içerik oluşturma, akıllı SEO ve daha fazlası.',
+      ctaPrimary: 'Projeye başla',
+      ctaSecondary: 'AI özelliklerini keşfet',
+      stats: { loadTime: 'Yükleme süresi', conversion: 'Daha fazla dönüşüm', uptime: 'Çalışma süresi', satisfaction: 'Memnuniyet' },
+      featuresTitle: 'Web siteniz için AI özellikleri',
+      featuresSubtitle: 'Online varlığınız için fark yaratan akıllı özellikler.',
+      typesTitle: 'Web Sitesi Paketleri',
+      typesSubtitle: 'Her proje için doğru çözüm – Landing Page\'den E-Ticaret mağazasına kadar.',
+      from: 'den itibaren',
+      processTitle: 'Sürecimiz',
+      processSubtitle: 'Akıllı web sitenize 5 adımda.',
+      techTitle: 'Teknolojiler',
+      techSubtitle: 'Performans ve esneklik için modern, kanıtlanmış teknolojiler kullanıyoruz.',
+      faqTitle: 'AI Web Siteleri Hakkında Sık Sorulan Sorular',
+      ctaTitle: 'Yeni web siteniz için hazır mısınız?',
+      ctaSubtitle: 'Online varlığınızı AI ile nasıl bir üst seviyeye taşıyacağımızı konuşalım. Ücretsiz ilk danışmanlık.',
+      features: [
+        { title: 'AI Chatbot Entegrasyonu', description: 'Müşteri sorularını 7/24 yanıtlayan, potansiyel müşterileri değerlendiren ve randevu alan akıllı chatbotlar – doğrudan web sitenizde.', benefits: ['Anında yanıtlar', 'Potansiyel müşteri oluşturma', 'Randevu alma', 'SSS otomasyonu'] },
+        { title: 'AI İçerik Oluşturma', description: 'SEO optimize metinler, ürün açıklamaları ve blog makaleleri AI ile oluşturulur ve uzmanlar tarafından kontrol edilir.', benefits: ['SEO optimize', 'Marka uyumlu', 'Hızlı oluşturma', 'Düzenli güncellemeler'] },
+        { title: 'AI Görsel Optimizasyonu', description: 'Maksimum performans için otomatik görsel optimizasyonu, alt metin oluşturma ve akıllı görsel seçimi.', benefits: ['Hızlı yükleme', 'Otomatik alt metinler', 'Responsive görseller', 'WebP dönüşümü'] },
+        { title: 'AI SEO Analizi', description: 'Google\'da daha iyi sıralamalar için AI destekli önerilerle sürekli SEO izleme.', benefits: ['Anahtar kelime takibi', 'Rakip analizi', 'Otomatik optimizasyon', 'Sıralama raporları'] },
+        { title: 'Kişiselleştirme', description: 'AI ziyaretçi davranışını analiz eder ve kişiselleştirilmiş içerik, ürün ve teklifler gösterir.', benefits: ['Daha yüksek dönüşüm', 'İlgili içerik', 'A/B testi', 'Kullanıcı profilleri'] },
+        { title: 'Akıllı Analytics', description: 'Otomatik eylem önerileriyle web sitesi verilerinizin AI destekli analizi.', benefits: ['Otomatik içgörüler', 'Dönüşüm takibi', 'Kullanıcı davranışı', 'Optimizasyon önerileri'] }
+      ],
+      websiteTypes: [
+        { title: 'Kurumsal Web Sitesi', description: 'AI chatbot, SEO optimizasyonu ve içerik yönetimi ile profesyonel varlık.', price: '3.500€\'dan itibaren', features: ['Responsive tasarım', 'AI chatbot', 'SEO optimizasyonu', 'CMS', 'İletişim formu', 'Analytics'] },
+        { title: 'Landing Page', description: 'Kampanyalar, ürünler veya hizmetler için dönüşüm odaklı sayfa.', price: '1.500€\'dan itibaren', features: ['Dönüşüm tasarımı', 'A/B testi', 'Potansiyel müşteri formları', 'Takip', 'Mobile-first', 'Hızlı yükleme'] },
+        { title: 'E-Ticaret Mağazası', description: 'AI ürün önerileri ve otomatik pazarlama ile online mağaza.', price: '5.000€\'dan itibaren', features: ['Ürün kataloğu', 'AI önerileri', 'Ödeme entegrasyonu', 'Terk edilmiş sepet e-postası', 'SEO', 'Analytics'] },
+        { title: 'Blog / İçerik Platformu', description: 'AI destekli metin oluşturma ve SEO otomasyonu ile içerik merkezi.', price: '2.500€\'dan itibaren', features: ['AI içerik', 'SEO araçları', 'Kategoriler', 'Bülten', 'Sosyal paylaşım', 'Yazar profilleri'] },
+        { title: 'Karmaşık E-Ticaret Çözümleri', description: 'Özel entegrasyonlar ve gelişmiş özelliklerle büyük ölçekli e-ticaret projeleri.', price: '7.000€\'dan itibaren', features: ['Özel entegrasyonlar', 'ERP bağlantısı', 'Çoklu dil', 'Gelişmiş raporlama', 'API entegrasyonları', 'Özel iş akışları'] },
+        { title: 'Hosting ve Bakım', description: 'Güvenli, hızlı hosting ve düzenli bakım hizmetleri.', price: '49€/aydan itibaren', features: ['SSL sertifikası', 'Günlük yedekleme', 'Güvenlik güncellemeleri', 'Performans optimizasyonu', 'E-posta desteği', '99.9% çalışma süresi'] }
+      ],
+      processSteps: [
+        { title: 'Brifing', description: 'Hedeflerinizi, hedef kitlenizi ve gereksinimlerinizi anlıyoruz.' },
+        { title: 'Konsept', description: 'Yapı, tasarım yönü ve AI özellikleri belirlenir.' },
+        { title: 'Tasarım', description: 'Dönüşüm odaklı modern UI/UX tasarımı.' },
+        { title: 'Geliştirme', description: 'AI entegrasyonlarıyla teknik uygulama.' },
+        { title: 'Lansman', description: 'SEO kurulumu ve izleme ile yayına alma.' }
+      ],
+      technologies: [
+        { name: 'React / Next.js', category: 'Frontend' },
+        { name: 'WordPress', category: 'CMS' },
+        { name: 'Webflow', category: 'No-Code' },
+        { name: 'OpenAI GPT', category: 'AI' },
+        { name: 'Claude AI', category: 'AI' },
+        { name: 'n8n', category: 'Otomasyon' },
+        { name: 'Tailwind CSS', category: 'Stil' },
+        { name: 'Vercel', category: 'Hosting' }
+      ],
+      faqs: [
+        { q: 'AI özellikli bir web sitesi ne kadar tutar?', a: 'Basit landing page\'ler 1.500€\'dan, kurumsal web siteleri 3.500€\'dan başlar. Chatbot veya içerik otomasyonu gibi AI özellikleri ayrı veya paket olarak eklenebilir. Gereksinimlerinize göre özel teklif oluşturuyoruz. Tüm fiyatlar KDV hariçtir.' },
+        { q: 'Bir web sitesi oluşturmak ne kadar sürer?', a: 'Landing page 1-2 haftada hazır olur. Kurumsal web siteleri 3-6 hafta, e-ticaret projeleri 4-8 hafta gerektirir. Kesin süre kapsam ve karmaşıklığa bağlıdır.' },
+        { q: 'Hangi AI özellikleri en mantıklı?', a: 'Hedeflerinize bağlıdır. Potansiyel müşteri oluşturma için chatbot öneriyoruz. SEO için AI içerik oluşturmaya güveniyoruz. Danışmanlıkta hangi özelliklerin en büyük değeri sağlayacağını analiz ediyoruz.' },
+        { q: 'Web sitesini kendim düzenleyebilir miyim?', a: 'Evet! WordPress veya Webflow gibi kullanıcı dostu CMS\'ler kullanıyoruz. Eğitim alırsınız ve metinleri, görselleri ve basit değişiklikleri kendiniz yapabilirsiniz.' },
+        { q: 'Web sitesi GDPR/KVKK uyumlu mu?', a: 'Kesinlikle. GDPR/KVKK uyumlu çerez bannerları, gizlilik bildirimleri, SSL şifrelemesi ve güvenli iletişim formlarına dikkat ediyoruz. AI özelliklerinde AB/TR uyumlu çözümler kullanıyoruz.' },
+        { q: 'Lansmandan sonra ne olur?', a: 'Güncellemeler, güvenlik ve destek için bakım paketleri sunuyoruz. Ayrıca sürekli olarak yeni AI özellikleri ekleyebilir ve analytics verilerine göre web sitesini optimize edebiliriz.' }
+      ],
+    },
     socialMediaPage: {
       heroTitle: 'Sosyal Medya',
       heroSubtitle: 'AI destekli sosyal medya yönetimi',
