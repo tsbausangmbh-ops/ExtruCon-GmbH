@@ -840,6 +840,33 @@ export const translations = {
       ctaSubtitle: 'Lassen Sie uns gemeinsam Ihre Prozesse mit KI optimieren. Kostenlose Erstberatung – deutschlandweit.',
       ctaButtonAlt: 'Jetzt KI-Projekt starten'
     },
+    marketingPage: {
+      badge: 'Leistung',
+      title: 'Performance Marketing',
+      subtitle: 'Datengetriebene Kampagnen und SEO-Strategien für messbares Wachstum, maximale Sichtbarkeit und echte Geschäftsergebnisse.',
+      ctaButton: 'Kostenlose Beratung',
+      servicesTitle: 'Was wir für Sie tun',
+      services: [
+        { title: 'Google Ads', desc: 'Suchmaschinen- und Display-Kampagnen für gezielte Reichweite.' },
+        { title: 'Meta Ads', desc: 'Facebook und Instagram Werbung für Ihre Zielgruppe.' },
+        { title: 'SEO-Optimierung', desc: 'Nachhaltige Suchmaschinenoptimierung für organisches Wachstum.' },
+        { title: 'Conversion-Optimierung', desc: 'A/B-Tests und Optimierung für höhere Konversionsraten.' },
+        { title: 'Analytics & Tracking', desc: 'Präzises Tracking und datenbasierte Entscheidungen.' },
+        { title: 'Retargeting', desc: 'Interessenten erneut ansprechen und zu Kunden konvertieren.' }
+      ],
+      channelsTitle: 'Unsere Kanäle',
+      benefitsTitle: 'Ihre Vorteile',
+      benefits: [
+        'Messbare Ergebnisse und transparente ROI-Berechnung',
+        'Gezielte Ansprache Ihrer idealen Kunden',
+        'Kontinuierliche Optimierung für maximale Effizienz',
+        'Mehr qualifizierte Leads und Anfragen',
+        'Skalierbare Kampagnen für nachhaltiges Wachstum'
+      ],
+      ctaTitle: 'Bereit für messbares Wachstum?',
+      ctaSubtitle: 'Lassen Sie uns datengetriebene Kampagnen starten, die echte Ergebnisse liefern.',
+      ctaButtonAlt: 'Jetzt Projekt starten'
+    },
     contactPage: {
       badge: 'Deutschlandweit für Sie da',
       title: 'Kontakt aufnehmen',
@@ -1733,6 +1760,33 @@ export const translations = {
       ctaSubtitle: 'Let us optimize your processes with AI together. Free initial consultation – nationwide.',
       ctaButtonAlt: 'Start AI Project Now'
     },
+    marketingPage: {
+      badge: 'Service',
+      title: 'Performance Marketing',
+      subtitle: 'Data-driven campaigns and SEO strategies for measurable growth, maximum visibility, and real business results.',
+      ctaButton: 'Free Consultation',
+      servicesTitle: 'What We Do for You',
+      services: [
+        { title: 'Google Ads', desc: 'Search engine and display campaigns for targeted reach.' },
+        { title: 'Meta Ads', desc: 'Facebook and Instagram advertising for your target audience.' },
+        { title: 'SEO Optimization', desc: 'Sustainable search engine optimization for organic growth.' },
+        { title: 'Conversion Optimization', desc: 'A/B testing and optimization for higher conversion rates.' },
+        { title: 'Analytics & Tracking', desc: 'Precise tracking and data-driven decisions.' },
+        { title: 'Retargeting', desc: 'Re-engage prospects and convert them into customers.' }
+      ],
+      channelsTitle: 'Our Channels',
+      benefitsTitle: 'Your Benefits',
+      benefits: [
+        'Measurable results and transparent ROI calculation',
+        'Targeted approach to your ideal customers',
+        'Continuous optimization for maximum efficiency',
+        'More qualified leads and inquiries',
+        'Scalable campaigns for sustainable growth'
+      ],
+      ctaTitle: 'Ready for Measurable Growth?',
+      ctaSubtitle: 'Let us start data-driven campaigns that deliver real results.',
+      ctaButtonAlt: 'Start Project Now'
+    },
     contactPage: {
       badge: 'Nationwide at Your Service',
       title: 'Get in Touch',
@@ -2625,6 +2679,33 @@ export const translations = {
       ctaTitle: 'Spremni za AI revoluciju u vašem poslovanju?',
       ctaSubtitle: 'Optimizirajmo zajedno vaše procese s AI-jem. Besplatna početna konzultacija – diljem Njemačke.',
       ctaButtonAlt: 'Započnite AI projekt sada'
+    },
+    marketingPage: {
+      badge: 'Usluga',
+      title: 'Performance Marketing',
+      subtitle: 'Kampanje temeljene na podacima i SEO strategije za mjerljiv rast, maksimalnu vidljivost i stvarne poslovne rezultate.',
+      ctaButton: 'Besplatna konzultacija',
+      servicesTitle: 'Što radimo za vas',
+      services: [
+        { title: 'Google Ads', desc: 'Kampanje za tražilice i display oglasi za ciljani doseg.' },
+        { title: 'Meta Ads', desc: 'Facebook i Instagram oglašavanje za vašu ciljanu publiku.' },
+        { title: 'SEO optimizacija', desc: 'Održiva optimizacija za tražilice za organski rast.' },
+        { title: 'Optimizacija konverzije', desc: 'A/B testiranje i optimizacija za veće stope konverzije.' },
+        { title: 'Analitika i praćenje', desc: 'Precizno praćenje i odluke temeljene na podacima.' },
+        { title: 'Retargeting', desc: 'Ponovno angažirajte potencijalne klijente i pretvorite ih u kupce.' }
+      ],
+      channelsTitle: 'Naši kanali',
+      benefitsTitle: 'Vaše prednosti',
+      benefits: [
+        'Mjerljivi rezultati i transparentan izračun ROI-a',
+        'Ciljani pristup vašim idealnim kupcima',
+        'Kontinuirana optimizacija za maksimalnu učinkovitost',
+        'Više kvalificiranih potencijalnih klijenata i upita',
+        'Skalabilne kampanje za održivi rast'
+      ],
+      ctaTitle: 'Spremni za mjerljiv rast?',
+      ctaSubtitle: 'Pokrenimo kampanje temeljene na podacima koje donose stvarne rezultate.',
+      ctaButtonAlt: 'Započnite projekt sada'
     },
     contactPage: {
       badge: 'Dostupni diljem Njemačke',
