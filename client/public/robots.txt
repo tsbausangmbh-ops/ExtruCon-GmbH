@@ -214,13 +214,10 @@ Disallow: /*.json$
 Disallow: /node_modules/
 
 # ===========================================
-# SITEMAPS - Mehrsprachig für DE, HR, TR
+# SITEMAP
 # ===========================================
 
 Sitemap: https://extrucon.de/sitemap.xml
-Sitemap: https://extrucon.de/sitemap-de.xml
-Sitemap: https://extrucon.de/sitemap-hr.xml
-Sitemap: https://extrucon.de/sitemap-tr.xml
 
 # ===========================================
 # CRAWL-DELAY FÜR SERVER-SCHUTZ
