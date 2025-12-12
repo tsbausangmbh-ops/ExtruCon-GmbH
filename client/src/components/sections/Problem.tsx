@@ -73,8 +73,8 @@ export function Problem() {
               icon: SearchX,
               title: "Unsichtbar bei Google",
               problem: "Das Problem:",
-              desc: "Ihre Website existiert, aber Kunden finden Sie nicht. Konkurrenten ranken vor Ihnen.",
-              solution: "Die Lösung: SEO-Optimierung mit KI-gestützter Content-Strategie.",
+              desc: "Ihre Website existiert, aber lokale Kunden aus München, Fürstenfeldbruck und Bayern finden Sie nicht. Konkurrenten ranken vor Ihnen – regional und deutschlandweit.",
+              solution: "Die Lösung: Local SEO & Geo-Targeting mit KI-gestützter Content-Strategie für maximale regionale Sichtbarkeit.",
               delay: 0.3
             },
             {
