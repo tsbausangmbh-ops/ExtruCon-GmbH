@@ -22,7 +22,7 @@ const services = [
     color: "text-cyan-400"
   },
   {
-    title: "Social Media Marketing",
+    title: "Social Media",
     description: "Datengetriebene Strategien, um Ihr Publikum zu vergrößern und Kunden auf allen Plattformen zu binden.",
     icon: Share2,
     image: socialImg,
