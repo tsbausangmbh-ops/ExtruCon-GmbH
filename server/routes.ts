@@ -17,15 +17,24 @@ export async function registerRoutes(
   // Chat API endpoint for KI-Bot
   app.post("/api/chat", async (req, res) => {
     try {
-      const { messages } = req.body;
+      const { messages, language = 'de' } = req.body;
       
       if (!messages || !Array.isArray(messages)) {
         return res.status(400).json({ error: "Messages array required" });
       }
 
+      const languageInstructions: Record<string, string> = {
+        de: 'Antworte immer auf Deutsch. Verwende die Sie-Form.',
+        en: 'Always respond in English. Use formal language.',
+        hr: 'Uvijek odgovaraj na hrvatskom jeziku. Koristi formalni jezik.',
+        tr: 'Her zaman Türkçe yanıt verin. Resmi dil kullanın.'
+      };
+
+      const languageInstruction = languageInstructions[language] || languageInstructions.de;
+
       const systemMessage = {
         role: "system" as const,
-        content: `Sie sind der offizielle KI-Assistent von ExtruCon.
+        content: `Sie sind der offizielle KI-Assistent von ExtruCon / You are the official AI assistant of ExtruCon.
 Sie sprechen ausschließlich in der Sie-Form.
 Sie sind kein kalter Roboter, sondern ein freundlicher, geduldiger und zuverlässiger digitaler Ansprechpartner, der Besucher ehrlich berät – so, als würden Sie einem guten Bekannten helfen.
 
@@ -109,9 +118,9 @@ ExtruCon ist eine Agentur für digitales Marketing, KI-Automatisierung und moder
 - Ehrlich sagen, wenn etwas individuell geprüft werden muss
 - Immer Mehrwert liefern und menschlich wirken
 
-Am Ende freundlich anbieten: „Wenn Sie möchten, fasse ich Ihnen alles kurz zusammen oder erkläre Ihnen den nächsten Schritt ganz in Ruhe."
+Am Ende freundlich anbieten: „Wenn Sie möchten, fasse ich Ihnen alles kurz zusammen oder erkläre Ihnen den nächsten Schritt ganz in Ruhe." / At the end, kindly offer: "If you like, I can summarize everything briefly or explain the next step in detail."
 
-Antworte immer auf Deutsch.`
+**WICHTIG / IMPORTANT:** ${languageInstruction}`
       };
 
       const response = await openai.chat.completions.create({
