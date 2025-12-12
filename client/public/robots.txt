@@ -1,10 +1,196 @@
 # ExtruCon GmbH - Robots.txt
-# SEO optimiert für Deutschland (DE), Kroatien (HR), Türkei (TR)
+# SEO & AI optimiert für Deutschland (DE), Kroatien (HR), Türkei (TR)
+# Letzte Aktualisierung: Dezember 2025
+
+# ===========================================
+# STANDARD SUCHMASCHINEN - VOLLER ZUGRIFF
+# ===========================================
+
+# Google (inkl. Google Images, News, Video)
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: msnbot
+Allow: /
+
+# Yahoo
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Yandex (Russland, internationale Reichweite)
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+# Baidu (China, internationale Sichtbarkeit)
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# Seznam (Tschechien, Nähe zu HR-Markt)
+User-agent: SeznamBot
+Allow: /
+Crawl-delay: 2
+
+# Naver (Südkorea)
+User-agent: Yeti
+Allow: /
+Crawl-delay: 2
+
+# ===========================================
+# AI SUCHMASCHINEN - FÜR SICHTBARKEIT ERLAUBT
+# ===========================================
+
+# OpenAI ChatGPT Search (erscheint in ChatGPT Antworten)
+User-agent: OAI-SearchBot
+Allow: /
+
+# ChatGPT User Browsing (zeigt Inhalte in ChatGPT)
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity AI Search
+User-agent: PerplexityBot
+Allow: /
+
+# DuckDuckGo AI Answers
+User-agent: DuckAssistBot
+Allow: /
+
+# You.com AI Search
+User-agent: YouBot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# ===========================================
+# AI TRAINING BOTS - BLOCKIERT
+# (Verhindert Training ohne Vergütung)
+# ===========================================
+
+# OpenAI GPT Training
+User-agent: GPTBot
+Disallow: /
+
+# Anthropic Claude Training
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+# Google AI Training (Gemini)
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: GoogleOther
+Disallow: /
+
+# Apple AI Training (Siri/Spotlight)
+User-agent: Applebot-Extended
+Disallow: /
+
+# Meta AI Training
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+# ByteDance/TikTok AI
+User-agent: Bytespider
+Disallow: /
+
+# Common Crawl (für LLM Training genutzt)
+User-agent: CCBot
+Disallow: /
+
+# Diffbot Data Scraping
+User-agent: Diffbot
+Disallow: /
+
+# Amazon AI
+User-agent: Amazonbot
+Disallow: /
+
+# Andere bekannte AI Scraper
+User-agent: omgili
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+User-agent: img2dataset
+Disallow: /
+
+User-agent: Sidetrade
+Disallow: /
+
+# ===========================================
+# SCHÄDLICHE BOTS - BLOCKIERT
+# ===========================================
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+# ===========================================
+# ALLGEMEINE REGELN
+# ===========================================
 
 User-agent: *
 Allow: /
 
-# Wichtige Seiten für Crawling
+# Wichtige Seiten für Crawling (DE, HR, TR)
 Allow: /ki-agenten
 Allow: /automatisierungen
 Allow: /webseiten-ki
@@ -13,35 +199,39 @@ Allow: /kontakt
 Allow: /ueber-uns
 Allow: /faq
 Allow: /ratgeber
+Allow: /impressum
+Allow: /datenschutz
 
-# Sitemap für alle Suchmaschinen
-Sitemap: https://extrucon.de/sitemap.xml
-
-# Google Bot
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 1
-
-# Bing Bot
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-# Yandex (für internationale Reichweite)
-User-agent: Yandex
-Allow: /
-Crawl-delay: 2
-
-# DuckDuckGo
-User-agent: DuckDuckBot
-Allow: /
-
-# Baidu (internationale Sichtbarkeit)
-User-agent: Baiduspider
-Allow: /
-Crawl-delay: 2
-
-# Nicht indizieren
+# Blockierte Bereiche (nicht indizieren)
 Disallow: /api/
 Disallow: /_*
-Disallow: /assets/
+Disallow: /admin/
+Disallow: /login/
+Disallow: /search?
+Disallow: /*?filter=
+Disallow: /*?sort=
+Disallow: /*.json$
+Disallow: /node_modules/
+
+# ===========================================
+# SITEMAPS - Mehrsprachig für DE, HR, TR
+# ===========================================
+
+Sitemap: https://extrucon.de/sitemap.xml
+Sitemap: https://extrucon.de/sitemap-de.xml
+Sitemap: https://extrucon.de/sitemap-hr.xml
+Sitemap: https://extrucon.de/sitemap-tr.xml
+
+# ===========================================
+# CRAWL-DELAY FÜR SERVER-SCHUTZ
+# ===========================================
+
+# Default für unbekannte Bots
+User-agent: *
+Crawl-delay: 2
+
+# ===========================================
+# HOST (Canonical Domain)
+# ===========================================
+
+Host: https://extrucon.de
