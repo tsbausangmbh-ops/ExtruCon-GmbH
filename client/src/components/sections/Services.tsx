@@ -55,9 +55,9 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-24 bg-background relative">
+    <section id="services" className="py-12 bg-background relative">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h2 className="text-3xl md:text-5xl font-bold font-display text-white mb-4">Unsere Leistungen</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Umfassende digitale Lösungen, von starkem Branding bis zu modernster KI-Technologie.

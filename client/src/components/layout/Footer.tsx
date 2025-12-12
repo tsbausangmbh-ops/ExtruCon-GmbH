@@ -2,7 +2,7 @@ import { Cpu, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-background border-t border-white/10 py-12 mt-20">
+    <footer className="bg-background border-t border-white/10 py-8 mt-10">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
