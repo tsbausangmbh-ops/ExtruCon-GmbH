@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { useLanguage } from "@/lib/i18n";
-import { Cookie, Shield, BarChart3, Megaphone, Settings } from "lucide-react";
+import { Cookie, Shield, BarChart3, Megaphone, Settings, Scale, UserCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 type CookiePreferences = {
@@ -93,6 +93,30 @@ export default function Cookies() {
                   <h3 className="font-semibold text-white mb-1">{t.cookieConsent.marketing}</h3>
                   <p className="text-gray-400 text-sm">{t.cookieConsent.marketingDesc}</p>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
+            <div className="flex items-start gap-4 mb-4">
+              <div className="p-2 rounded-lg bg-amber-500/20">
+                <Scale className="w-5 h-5 text-amber-400" />
+              </div>
+              <div>
+                <h2 className="text-xl font-bold text-white mb-2">{t.cookiePage.legalBasis}</h2>
+                <p className="text-gray-400 leading-relaxed">{t.cookiePage.legalBasisDesc}</p>
+              </div>
+            </div>
+          </section>
+
+          <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
+            <div className="flex items-start gap-4 mb-4">
+              <div className="p-2 rounded-lg bg-cyan-500/20">
+                <UserCheck className="w-5 h-5 text-cyan-400" />
+              </div>
+              <div>
+                <h2 className="text-xl font-bold text-white mb-2">{t.cookiePage.yourRights}</h2>
+                <p className="text-gray-400 leading-relaxed">{t.cookiePage.yourRightsDesc}</p>
               </div>
             </div>
           </section>
