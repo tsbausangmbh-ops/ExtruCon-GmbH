@@ -4,8 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Bot, Check, ArrowRight, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import aiImg from "@assets/generated_images/glowing_neural_network_brain.png";
+import { useLanguage } from "@/lib/i18n";
 
 export default function KI() {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <Navbar />
@@ -24,18 +27,17 @@ export default function KI() {
             >
               <div className="flex items-center gap-3 mb-6">
                 <Bot className="w-12 h-12 text-cyan-400" />
-                <span className="text-cyan-400 font-semibold">KI Agentur Deutschlandweit</span>
+                <span className="text-cyan-400 font-semibold">{t.kiServicePage.badge}</span>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold font-display text-white mb-6">
-                KI & Automatisierung für Ihr Unternehmen
+                {t.kiServicePage.title}
               </h1>
               <p className="text-xl text-gray-400 mb-8">
-                Maßgeschneiderte KI-Lösungen, Chatbots und intelligente Automatisierungs-Workflows 
-                deutschlandweit. Sparen Sie Zeit und Kosten durch modernste Künstliche Intelligenz.
+                {t.kiServicePage.subtitle}
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-black" data-testid="button-contact-ki">
-                  Kostenlose KI-Beratung <ArrowRight className="ml-2 h-5 w-5" />
+                  {t.kiServicePage.ctaButton} <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </div>
             </motion.div>
@@ -45,19 +47,12 @@ export default function KI() {
         {/* Leistungsumfang */}
         <section className="py-10 bg-card/20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold font-display text-white mb-4 text-center">Unsere KI-Leistungen</h2>
+            <h2 className="text-3xl font-bold font-display text-white mb-4 text-center">{t.kiServicePage.servicesTitle}</h2>
             <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-              Von intelligenten Chatbots bis zur kompletten Prozessautomatisierung – wir bringen KI in Ihr Unternehmen.
+              {t.kiServicePage.servicesSubtitle}
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                { title: "KI-Chatbots & Assistenten", desc: "Intelligente Chatbots für Kundenservice, Beratung und Vertrieb – 24/7 verfügbar für Ihre Kunden." },
-                { title: "Workflow-Automatisierung", desc: "Automatisierung wiederkehrender Aufgaben mit n8n, Make und Zapier. Sparen Sie bis zu 80% Zeit." },
-                { title: "KI-Content-Erstellung", desc: "KI-gestützte Texte, Bilder und Videos für Ihr Marketing – schneller und kosteneffizienter." },
-                { title: "Datenanalyse & Insights", desc: "KI-basierte Auswertungen Ihrer Geschäftsdaten für bessere Entscheidungen." },
-                { title: "Personalisierung", desc: "Individuelle Kundenerlebnisse durch intelligente Algorithmen und Machine Learning." },
-                { title: "Integration & APIs", desc: "Nahtlose Einbindung von KI in Ihre bestehenden Systeme und Software." }
-              ].map((item, i) => (
+              {t.kiServicePage.services.map((item, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
@@ -78,7 +73,7 @@ export default function KI() {
         {/* Technologien */}
         <section className="py-10">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold font-display text-white mb-12 text-center">KI-Technologien die wir einsetzen</h2>
+            <h2 className="text-3xl font-bold font-display text-white mb-12 text-center">{t.kiServicePage.techTitle}</h2>
             <div className="flex flex-wrap justify-center gap-6">
               {["OpenAI / GPT-4", "Claude AI", "Google Gemini", "Midjourney", "DALL-E", "n8n", "Make", "Zapier", "Custom APIs"].map((tech, i) => (
                 <motion.div
@@ -100,15 +95,9 @@ export default function KI() {
         <section className="py-10 bg-card/20">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold font-display text-white mb-8">Vorteile von KI für Ihr Unternehmen</h2>
+              <h2 className="text-3xl font-bold font-display text-white mb-8">{t.kiServicePage.benefitsTitle}</h2>
               <div className="space-y-4 text-left">
-                {[
-                  "24/7 Verfügbarkeit durch automatisierte Kundenbetreuung",
-                  "Bis zu 80% Zeitersparnis bei wiederkehrenden Aufgaben",
-                  "Skalierbare Prozesse ohne zusätzliche Personalkosten",
-                  "Bessere Kundenerlebnisse durch schnelle Reaktionszeiten",
-                  "Datenbasierte Entscheidungen für mehr Geschäftserfolg"
-                ].map((item, i) => (
+                {t.kiServicePage.benefits.map((item, i) => (
                   <div key={i} className="flex items-center gap-3 p-4 rounded-lg bg-card/30">
                     <Check className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                     <span className="text-gray-300">{item}</span>
@@ -123,27 +112,10 @@ export default function KI() {
         <section className="py-10">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold font-display text-white mb-8 text-center">
-              Häufige Fragen zu KI & Automatisierung
+              {t.kiServicePage.faqTitle}
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
-              {[
-                { 
-                  q: "Was kostet ein KI-Chatbot für mein Unternehmen?", 
-                  a: "Ein einfacher Chatbot startet ab 1.500€ einmalig. Komplexere KI-Lösungen mit individueller Anpassung beginnen bei 3.000€. Wir beraten Sie kostenlos zu den Möglichkeiten." 
-                },
-                { 
-                  q: "Brauche ich technisches Wissen für KI-Tools?", 
-                  a: "Nein! Wir übernehmen die komplette technische Umsetzung und schulen Ihr Team. Sie erhalten eine benutzerfreundliche Lösung, die einfach zu bedienen ist." 
-                },
-                { 
-                  q: "Wie schnell ist ein KI-Projekt umgesetzt?",
-                  a: "Einfache Chatbots sind in 1-2 Wochen einsatzbereit. Komplexere Automatisierungen benötigen 4-8 Wochen je nach Umfang." 
-                },
-                { 
-                  q: "Ist KI auch für kleine Unternehmen sinnvoll?",
-                  a: "Absolut! Gerade kleine Unternehmen profitieren von Automatisierung, da sie Zeit für das Kerngeschäft freisetzt. Wir haben Lösungen für jedes Budget." 
-                }
-              ].map((faq, i) => (
+              {t.kiServicePage.faqs.map((faq, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 10 }}
@@ -166,12 +138,12 @@ export default function KI() {
         {/* CTA */}
         <section className="py-10 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold font-display text-white mb-4">Bereit für die KI-Revolution in Ihrem Unternehmen?</h2>
+            <h2 className="text-3xl font-bold font-display text-white mb-4">{t.kiServicePage.ctaTitle}</h2>
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-              Lassen Sie uns gemeinsam Ihre Prozesse mit KI optimieren. Kostenlose Erstberatung – deutschlandweit.
+              {t.kiServicePage.ctaSubtitle}
             </p>
             <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-black" data-testid="button-cta-ki">
-              Jetzt KI-Projekt starten <ArrowRight className="ml-2 h-5 w-5" />
+              {t.kiServicePage.ctaButtonAlt} <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
         </section>

@@ -803,6 +803,41 @@ export const translations = {
       ctaSubtitle: 'Lassen Sie uns Inhalte erstellen, die Ihre Zielgruppe begeistern und zum Handeln bewegen.',
       ctaButtonAlt: 'Jetzt Projekt starten'
     },
+    kiServicePage: {
+      badge: 'KI Agentur Deutschlandweit',
+      title: 'KI & Automatisierung für Ihr Unternehmen',
+      subtitle: 'Maßgeschneiderte KI-Lösungen, Chatbots und intelligente Automatisierungs-Workflows deutschlandweit. Sparen Sie Zeit und Kosten durch modernste Künstliche Intelligenz.',
+      ctaButton: 'Kostenlose KI-Beratung',
+      servicesTitle: 'Unsere KI-Leistungen',
+      servicesSubtitle: 'Von intelligenten Chatbots bis zur kompletten Prozessautomatisierung – wir bringen KI in Ihr Unternehmen.',
+      services: [
+        { title: 'KI-Chatbots & Assistenten', desc: 'Intelligente Chatbots für Kundenservice, Beratung und Vertrieb – 24/7 verfügbar für Ihre Kunden.' },
+        { title: 'Workflow-Automatisierung', desc: 'Automatisierung wiederkehrender Aufgaben mit n8n, Make und Zapier. Sparen Sie bis zu 80% Zeit.' },
+        { title: 'KI-Content-Erstellung', desc: 'KI-gestützte Texte, Bilder und Videos für Ihr Marketing – schneller und kosteneffizienter.' },
+        { title: 'Datenanalyse & Insights', desc: 'KI-basierte Auswertungen Ihrer Geschäftsdaten für bessere Entscheidungen.' },
+        { title: 'Personalisierung', desc: 'Individuelle Kundenerlebnisse durch intelligente Algorithmen und Machine Learning.' },
+        { title: 'Integration & APIs', desc: 'Nahtlose Einbindung von KI in Ihre bestehenden Systeme und Software.' }
+      ],
+      techTitle: 'KI-Technologien die wir einsetzen',
+      benefitsTitle: 'Vorteile von KI für Ihr Unternehmen',
+      benefits: [
+        '24/7 Verfügbarkeit durch automatisierte Kundenbetreuung',
+        'Bis zu 80% Zeitersparnis bei wiederkehrenden Aufgaben',
+        'Skalierbare Prozesse ohne zusätzliche Personalkosten',
+        'Bessere Kundenerlebnisse durch schnelle Reaktionszeiten',
+        'Datenbasierte Entscheidungen für mehr Geschäftserfolg'
+      ],
+      faqTitle: 'Häufige Fragen zu KI & Automatisierung',
+      faqs: [
+        { q: 'Was kostet ein KI-Chatbot für mein Unternehmen?', a: 'Ein einfacher Chatbot startet ab 1.500€ einmalig. Komplexere KI-Lösungen mit individueller Anpassung beginnen bei 3.000€. Wir beraten Sie kostenlos zu den Möglichkeiten.' },
+        { q: 'Brauche ich technisches Wissen für KI-Tools?', a: 'Nein! Wir übernehmen die komplette technische Umsetzung und schulen Ihr Team. Sie erhalten eine benutzerfreundliche Lösung, die einfach zu bedienen ist.' },
+        { q: 'Wie schnell ist ein KI-Projekt umgesetzt?', a: 'Einfache Chatbots sind in 1-2 Wochen einsatzbereit. Komplexere Automatisierungen benötigen 4-8 Wochen je nach Umfang.' },
+        { q: 'Ist KI auch für kleine Unternehmen sinnvoll?', a: 'Absolut! Gerade kleine Unternehmen profitieren von Automatisierung, da sie Zeit für das Kerngeschäft freisetzt. Wir haben Lösungen für jedes Budget.' }
+      ],
+      ctaTitle: 'Bereit für die KI-Revolution in Ihrem Unternehmen?',
+      ctaSubtitle: 'Lassen Sie uns gemeinsam Ihre Prozesse mit KI optimieren. Kostenlose Erstberatung – deutschlandweit.',
+      ctaButtonAlt: 'Jetzt KI-Projekt starten'
+    },
     contactPage: {
       badge: 'Deutschlandweit für Sie da',
       title: 'Kontakt aufnehmen',
@@ -1659,6 +1694,41 @@ export const translations = {
       ctaSubtitle: 'Let us create content that excites your target audience and moves them to action.',
       ctaButtonAlt: 'Start Project Now'
     },
+    kiServicePage: {
+      badge: 'AI Agency Nationwide',
+      title: 'AI & Automation for Your Business',
+      subtitle: 'Custom AI solutions, chatbots, and intelligent automation workflows nationwide. Save time and costs with cutting-edge artificial intelligence.',
+      ctaButton: 'Free AI Consultation',
+      servicesTitle: 'Our AI Services',
+      servicesSubtitle: 'From intelligent chatbots to complete process automation – we bring AI to your business.',
+      services: [
+        { title: 'AI Chatbots & Assistants', desc: 'Intelligent chatbots for customer service, consulting, and sales – available 24/7 for your customers.' },
+        { title: 'Workflow Automation', desc: 'Automation of recurring tasks with n8n, Make, and Zapier. Save up to 80% of your time.' },
+        { title: 'AI Content Creation', desc: 'AI-powered texts, images, and videos for your marketing – faster and more cost-effective.' },
+        { title: 'Data Analysis & Insights', desc: 'AI-based analysis of your business data for better decisions.' },
+        { title: 'Personalization', desc: 'Individual customer experiences through intelligent algorithms and machine learning.' },
+        { title: 'Integration & APIs', desc: 'Seamless integration of AI into your existing systems and software.' }
+      ],
+      techTitle: 'AI Technologies We Use',
+      benefitsTitle: 'Benefits of AI for Your Business',
+      benefits: [
+        '24/7 availability through automated customer service',
+        'Up to 80% time savings on recurring tasks',
+        'Scalable processes without additional personnel costs',
+        'Better customer experiences through fast response times',
+        'Data-driven decisions for greater business success'
+      ],
+      faqTitle: 'Frequently Asked Questions about AI & Automation',
+      faqs: [
+        { q: 'How much does an AI chatbot cost for my business?', a: 'A simple chatbot starts from €1,500 one-time. More complex AI solutions with custom adaptation start at €3,000. We advise you free of charge on the possibilities.' },
+        { q: 'Do I need technical knowledge for AI tools?', a: 'No! We handle the complete technical implementation and train your team. You receive a user-friendly solution that is easy to use.' },
+        { q: 'How quickly is an AI project implemented?', a: 'Simple chatbots are ready for use in 1-2 weeks. More complex automations require 4-8 weeks depending on scope.' },
+        { q: 'Is AI also useful for small businesses?', a: 'Absolutely! Small businesses especially benefit from automation, as it frees up time for core business. We have solutions for every budget.' }
+      ],
+      ctaTitle: 'Ready for the AI Revolution in Your Business?',
+      ctaSubtitle: 'Let us optimize your processes with AI together. Free initial consultation – nationwide.',
+      ctaButtonAlt: 'Start AI Project Now'
+    },
     contactPage: {
       badge: 'Nationwide at Your Service',
       title: 'Get in Touch',
@@ -2514,6 +2584,41 @@ export const translations = {
       ctaTitle: 'Spremni za sadržaj koji djeluje?',
       ctaSubtitle: 'Dopustite nam da kreiramo sadržaj koji oduševljava vašu ciljanu publiku i potiče ih na akciju.',
       ctaButtonAlt: 'Započnite projekt sada'
+    },
+    kiServicePage: {
+      badge: 'AI Agencija diljem Njemačke',
+      title: 'AI i automatizacija za vaše poslovanje',
+      subtitle: 'Prilagođena AI rješenja, chatbotovi i inteligentni radni tokovi automatizacije diljem Njemačke. Uštedite vrijeme i troškove uz najmoderniju umjetnu inteligenciju.',
+      ctaButton: 'Besplatna AI konzultacija',
+      servicesTitle: 'Naše AI usluge',
+      servicesSubtitle: 'Od inteligentnih chatbotova do potpune automatizacije procesa – donosimo AI u vaše poslovanje.',
+      services: [
+        { title: 'AI Chatbotovi i asistenti', desc: 'Inteligentni chatbotovi za korisničku službu, savjetovanje i prodaju – dostupni 24/7 za vaše klijente.' },
+        { title: 'Automatizacija radnih tokova', desc: 'Automatizacija ponavljajućih zadataka s n8n, Make i Zapier. Uštedite do 80% vremena.' },
+        { title: 'AI kreiranje sadržaja', desc: 'AI-pokretani tekstovi, slike i videozapisi za vaš marketing – brže i isplativije.' },
+        { title: 'Analiza podataka i uvidi', desc: 'AI-bazirana analiza vaših poslovnih podataka za bolje odluke.' },
+        { title: 'Personalizacija', desc: 'Individualna korisnička iskustva kroz inteligentne algoritme i strojno učenje.' },
+        { title: 'Integracija i API-ji', desc: 'Besprijekorna integracija AI-a u vaše postojeće sustave i softver.' }
+      ],
+      techTitle: 'AI tehnologije koje koristimo',
+      benefitsTitle: 'Prednosti AI-a za vaše poslovanje',
+      benefits: [
+        '24/7 dostupnost kroz automatiziranu korisničku službu',
+        'Do 80% uštede vremena na ponavljajućim zadacima',
+        'Skalabilni procesi bez dodatnih troškova osoblja',
+        'Bolja korisnička iskustva kroz brzo vrijeme odziva',
+        'Odluke temeljene na podacima za veći poslovni uspjeh'
+      ],
+      faqTitle: 'Često postavljana pitanja o AI-u i automatizaciji',
+      faqs: [
+        { q: 'Koliko košta AI chatbot za moje poslovanje?', a: 'Jednostavan chatbot počinje od 1.500€ jednokratno. Složenija AI rješenja s prilagođenom izradom počinju od 3.000€. Besplatno vas savjetujemo o mogućnostima.' },
+        { q: 'Trebam li tehničko znanje za AI alate?', a: 'Ne! Mi preuzimamo kompletnu tehničku implementaciju i školujemo vaš tim. Dobivate korisničko rješenje jednostavno za korištenje.' },
+        { q: 'Koliko brzo se AI projekt implementira?', a: 'Jednostavni chatbotovi su spremni za uporabu u 1-2 tjedna. Složenije automatizacije zahtijevaju 4-8 tjedana ovisno o opsegu.' },
+        { q: 'Je li AI koristan i za male tvrtke?', a: 'Apsolutno! Upravo male tvrtke imaju koristi od automatizacije jer oslobađa vrijeme za osnovnu djelatnost. Imamo rješenja za svaki proračun.' }
+      ],
+      ctaTitle: 'Spremni za AI revoluciju u vašem poslovanju?',
+      ctaSubtitle: 'Optimizirajmo zajedno vaše procese s AI-jem. Besplatna početna konzultacija – diljem Njemačke.',
+      ctaButtonAlt: 'Započnite AI projekt sada'
     },
     contactPage: {
       badge: 'Dostupni diljem Njemačke',
