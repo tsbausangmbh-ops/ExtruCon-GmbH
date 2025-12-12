@@ -238,6 +238,213 @@ const articles = [
     readTime: "8 Min.",
     date: "1. Okt 2025",
     featured: false
+  },
+  {
+    id: 26,
+    title: "Facebook Ads Optimierung: Mehr Conversions für weniger Budget",
+    excerpt: "So optimieren Sie Ihre Facebook-Kampagnen für maximale Effizienz.",
+    category: "social",
+    readTime: "9 Min.",
+    date: "28. Sep 2025",
+    featured: false
+  },
+  {
+    id: 27,
+    title: "Pinterest für Unternehmen: Der unterschätzte Traffic-Kanal",
+    excerpt: "Warum Pinterest besonders für E-Commerce und DIY-Branchen Gold wert ist.",
+    category: "social",
+    readTime: "7 Min.",
+    date: "25. Sep 2025",
+    featured: false
+  },
+  {
+    id: 28,
+    title: "Influencer Marketing: Partner finden und Erfolg messen",
+    excerpt: "So arbeiten Sie erfolgreich mit Influencern zusammen.",
+    category: "social",
+    readTime: "10 Min.",
+    date: "22. Sep 2025",
+    featured: false
+  },
+  {
+    id: 29,
+    title: "YouTube SEO: Videos auf Platz 1 bringen",
+    excerpt: "Die wichtigsten Ranking-Faktoren für YouTube und wie Sie sie nutzen.",
+    category: "social",
+    readTime: "11 Min.",
+    date: "19. Sep 2025",
+    featured: false
+  },
+  {
+    id: 30,
+    title: "Community Management: So bauen Sie eine treue Fanbase auf",
+    excerpt: "Engagement steigern und Kunden zu Markenbotschaftern machen.",
+    category: "social",
+    readTime: "8 Min.",
+    date: "16. Sep 2025",
+    featured: false
+  },
+  {
+    id: 31,
+    title: "Social Listening: Was Kunden wirklich über Sie denken",
+    excerpt: "Tools und Strategien für effektives Monitoring Ihrer Marke.",
+    category: "social",
+    readTime: "7 Min.",
+    date: "13. Sep 2025",
+    featured: false
+  },
+  {
+    id: 32,
+    title: "Threads vs. Twitter/X: Welche Plattform für Ihr Business?",
+    excerpt: "Der aktuelle Stand beider Plattformen und Empfehlungen für Unternehmen.",
+    category: "social",
+    readTime: "6 Min.",
+    date: "10. Sep 2025",
+    featured: false
+  },
+  {
+    id: 33,
+    title: "User Generated Content: Authentische Werbung von Kunden",
+    excerpt: "So motivieren Sie Kunden, Content für Ihre Marke zu erstellen.",
+    category: "social",
+    readTime: "8 Min.",
+    date: "7. Sep 2025",
+    featured: false
+  },
+  {
+    id: 34,
+    title: "Keyword-Recherche 2025: Tools und Strategien",
+    excerpt: "Die besten Methoden, um profitable Keywords zu finden.",
+    category: "marketing",
+    readTime: "10 Min.",
+    date: "4. Sep 2025",
+    featured: false
+  },
+  {
+    id: 35,
+    title: "Core Web Vitals: Google's Ranking-Faktoren verstehen",
+    excerpt: "LCP, FID und CLS optimieren für bessere Rankings.",
+    category: "marketing",
+    readTime: "9 Min.",
+    date: "1. Sep 2025",
+    featured: false
+  },
+  {
+    id: 36,
+    title: "Retargeting-Strategien: Besucher zurückholen",
+    excerpt: "So bringen Sie Website-Besucher zum Kaufabschluss.",
+    category: "marketing",
+    readTime: "8 Min.",
+    date: "28. Aug 2025",
+    featured: false
+  },
+  {
+    id: 37,
+    title: "Content Marketing ROI: Erfolg messbar machen",
+    excerpt: "Welche Kennzahlen wirklich zählen und wie Sie sie tracken.",
+    category: "marketing",
+    readTime: "11 Min.",
+    date: "25. Aug 2025",
+    featured: false
+  },
+  {
+    id: 38,
+    title: "Landing Pages, die konvertieren: Best Practices",
+    excerpt: "Design- und Copy-Tipps für Landingpages mit hoher Conversion.",
+    category: "marketing",
+    readTime: "9 Min.",
+    date: "22. Aug 2025",
+    featured: false
+  },
+  {
+    id: 39,
+    title: "Backlink-Aufbau 2025: White-Hat Strategien",
+    excerpt: "Seriöse Methoden für nachhaltige Link-Building-Erfolge.",
+    category: "marketing",
+    readTime: "12 Min.",
+    date: "19. Aug 2025",
+    featured: false
+  },
+  {
+    id: 40,
+    title: "Google Analytics 4: Der komplette Umstieg",
+    excerpt: "Alles, was Sie über GA4 wissen müssen – einfach erklärt.",
+    category: "marketing",
+    readTime: "14 Min.",
+    date: "16. Aug 2025",
+    featured: false
+  },
+  {
+    id: 41,
+    title: "Headless CMS: Vorteile für moderne Websites",
+    excerpt: "Warum die Trennung von Frontend und Backend Sinn macht.",
+    category: "web",
+    readTime: "10 Min.",
+    date: "13. Aug 2025",
+    featured: false
+  },
+  {
+    id: 42,
+    title: "Website-Sicherheit: SSL, Backups und mehr",
+    excerpt: "So schützen Sie Ihre Website vor Hackern und Datenverlust.",
+    category: "web",
+    readTime: "8 Min.",
+    date: "10. Aug 2025",
+    featured: false
+  },
+  {
+    id: 43,
+    title: "Progressive Web Apps: Die Zukunft des mobilen Web",
+    excerpt: "PWAs kombinieren das Beste aus Websites und nativen Apps.",
+    category: "web",
+    readTime: "9 Min.",
+    date: "7. Aug 2025",
+    featured: false
+  },
+  {
+    id: 44,
+    title: "Website-Relaunch: Checkliste für einen erfolgreichen Neustart",
+    excerpt: "Alle Schritte für einen reibungslosen Website-Relaunch ohne SEO-Verlust.",
+    category: "web",
+    readTime: "11 Min.",
+    date: "4. Aug 2025",
+    featured: false
+  },
+  {
+    id: 45,
+    title: "E-Commerce UX: Checkout-Optimierung für mehr Verkäufe",
+    excerpt: "So reduzieren Sie Kaufabbrüche im Online-Shop.",
+    category: "web",
+    readTime: "8 Min.",
+    date: "1. Aug 2025",
+    featured: false
+  },
+  {
+    id: 46,
+    title: "Dark Mode Design: Tipps für die Umsetzung",
+    excerpt: "So implementieren Sie einen attraktiven Dark Mode für Ihre Website.",
+    category: "web",
+    readTime: "7 Min.",
+    date: "28. Jul 2025",
+    featured: false
+  },
+  {
+    id: 47,
+    title: "Web Fonts richtig einsetzen: Performance und Design",
+    excerpt: "So laden Schriften schnell und sehen trotzdem gut aus.",
+    category: "web",
+    readTime: "6 Min.",
+    date: "25. Jul 2025",
+    featured: false
+  },
+  {
+    id: 48,
+    title: "Cookie-Banner und DSGVO: Rechtssichere Umsetzung",
+    excerpt: "Alles, was Sie über Consent-Management wissen müssen.",
+    category: "web",
+    readTime: "9 Min.",
+    date: "22. Jul 2025",
+    featured: false
   }
 ];
 
