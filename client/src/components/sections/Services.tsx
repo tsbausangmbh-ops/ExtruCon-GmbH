@@ -1,11 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Bot, Share2, Globe, PenTool, Fingerprint, Calculator } from "lucide-react";
+import { Bot, Share2, Globe, PenTool, Fingerprint, Briefcase } from "lucide-react";
 import aiImg from "@assets/generated_images/glowing_neural_network_brain.png";
 import socialImg from "@assets/generated_images/digital_social_connection_abstract_art.png";
 import webImg from "@assets/generated_images/holographic_creative_interface.png";
 import brandImg from "@assets/generated_images/abstract_digital_brand_identity_construction.png";
 import contentImg from "@assets/generated_images/abstract_content_creation_visualization.png";
-import financeImg from "@assets/generated_images/digital_finance_and_accounting_visualization.png";
+import officeImg from "@assets/generated_images/digital_office_administration_visualization.png";
 import { motion } from "framer-motion";
 
 const services = [
@@ -17,10 +17,10 @@ const services = [
     color: "text-amber-400"
   },
   {
-    title: "Buchhaltungsservice",
-    description: "Digitale und automatisierte Buchhaltungslösungen für maximale Effizienz und Transparenz.",
-    icon: Calculator,
-    image: financeImg,
+    title: "Buchhaltung & Büroservice",
+    description: "Effiziente Büroorganisation und digitale Buchhaltungslösungen, damit Sie sich auf Ihr Kerngeschäft konzentrieren können.",
+    icon: Briefcase,
+    image: officeImg,
     color: "text-emerald-400"
   },
   {
@@ -45,8 +45,8 @@ const services = [
     color: "text-blue-400"
   },
   {
-    title: "Content Erstellung",
-    description: "Überzeugendes Storytelling und visuelle Inhalte, die bei Ihrer Zielgruppe ankommen.",
+    title: "Texte & Postings",
+    description: "Zielgruppengenaue Texte und kreative Social Media Posts, die Interaktion fördern und verkaufen.",
     icon: PenTool,
     image: contentImg,
     color: "text-pink-400"
