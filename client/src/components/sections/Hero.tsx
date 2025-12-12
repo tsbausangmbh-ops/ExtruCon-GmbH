@@ -60,16 +60,20 @@ export function Hero() {
               <span className="flex items-center gap-1.5"><Zap className="w-4 h-4 text-primary" /> Kostenlose Beratung</span>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/kontakt" className="inline-flex items-center justify-center h-12 px-8 bg-primary text-background hover:bg-primary/90 font-bold text-lg rounded-md transition-colors" data-testid="button-hero-cta">
-                Kostenlose Erstberatung
-              </a>
-              <a href="#services" className="inline-flex items-center justify-center h-12 px-8 border border-white/20 text-white hover:bg-white/10 font-medium text-lg rounded-md transition-colors group" data-testid="button-hero-secondary">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-30">
+              <Link href="/kontakt">
+                <span className="inline-flex items-center justify-center h-12 px-8 bg-primary text-background hover:bg-primary/90 font-bold text-lg rounded-md transition-colors cursor-pointer" data-testid="button-hero-cta">
+                  Kostenlose Erstberatung
+                </span>
+              </Link>
+              <a href="#services" className="inline-flex items-center justify-center h-12 px-8 border border-white/20 text-white hover:bg-white/10 font-medium text-lg rounded-md transition-colors group cursor-pointer" data-testid="button-hero-secondary">
                 KI-Agenten entdecken <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="/ki-bot" className="inline-flex items-center justify-center h-12 px-8 border border-primary/50 text-primary hover:bg-primary/10 font-medium text-lg rounded-md transition-colors group" data-testid="button-hero-bot">
-                KI Bot testen <Bot className="ml-2 w-4 h-4" />
-              </a>
+              <Link href="/ki-bot">
+                <span className="inline-flex items-center justify-center h-12 px-8 border border-primary/50 text-primary hover:bg-primary/10 font-medium text-lg rounded-md transition-colors group cursor-pointer" data-testid="button-hero-bot">
+                  KI Bot testen <Bot className="ml-2 w-4 h-4" />
+                </span>
+              </Link>
             </div>
           </motion.div>
         </div>
