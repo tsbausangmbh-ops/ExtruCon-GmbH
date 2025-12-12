@@ -427,7 +427,9 @@ export const translations = {
         { title: 'Unternehmenswebsite', description: 'Professionelle Präsenz mit KI-Chatbot, SEO-Optimierung und Content-Management.', price: 'ab 3.500€', features: ['Responsives Design', 'KI-Chatbot', 'SEO-Optimierung', 'CMS', 'Kontaktformular', 'Analytics'] },
         { title: 'Landing Page', description: 'Conversion-optimierte Seite für Kampagnen, Produkte oder Dienstleistungen.', price: 'ab 1.500€', features: ['Conversion-Design', 'A/B-Testing', 'Lead-Formulare', 'Tracking', 'Mobile-First', 'Schnelle Ladezeit'] },
         { title: 'E-Commerce Shop', description: 'Online-Shop mit KI-Produktempfehlungen und automatisiertem Marketing.', price: 'ab 5.000€', features: ['Produktkatalog', 'KI-Empfehlungen', 'Zahlungsintegration', 'Warenkorbabbruch-Mail', 'SEO', 'Analytics'] },
-        { title: 'Blog / Content-Plattform', description: 'Content-Hub mit KI-gestützter Texterstellung und SEO-Automatisierung.', price: 'ab 2.500€', features: ['KI-Content', 'SEO-Tools', 'Kategorien', 'Newsletter', 'Social Sharing', 'Autorenprofile'] }
+        { title: 'Blog / Content-Plattform', description: 'Content-Hub mit KI-gestützter Texterstellung und SEO-Automatisierung.', price: 'ab 2.500€', features: ['KI-Content', 'SEO-Tools', 'Kategorien', 'Newsletter', 'Social Sharing', 'Autorenprofile'] },
+        { title: 'Komplexe E-Commerce-Lösungen', description: 'Großprojekte mit individuellen Integrationen und erweiterten Funktionen.', price: 'ab 7.000€', features: ['Individuelle Integrationen', 'ERP-Anbindung', 'Mehrsprachigkeit', 'Erweiterte Reports', 'API-Integrationen', 'Individuelle Workflows'] },
+        { title: 'Hosting & Wartung', description: 'Sicheres, schnelles Hosting und regelmäßige Wartungsservices.', price: 'ab 49€/Monat', features: ['SSL-Zertifikat', 'Tägliche Backups', 'Sicherheitsupdates', 'Performance-Optimierung', 'E-Mail-Support', '99,9% Uptime'] }
       ],
       processSteps: [
         { title: 'Briefing', description: 'Wir verstehen Ihre Ziele, Zielgruppe und Anforderungen.' },
@@ -1471,7 +1473,9 @@ export const translations = {
         { title: 'Business Website', description: 'Professional presence with AI chatbot, SEO optimization, and content management.', price: 'from €3,500', features: ['Responsive Design', 'AI Chatbot', 'SEO Optimization', 'CMS', 'Contact Form', 'Analytics'] },
         { title: 'Landing Page', description: 'Conversion-optimized page for campaigns, products, or services.', price: 'from €1,500', features: ['Conversion Design', 'A/B Testing', 'Lead Forms', 'Tracking', 'Mobile-First', 'Fast Load Time'] },
         { title: 'E-Commerce Shop', description: 'Online shop with AI product recommendations and automated marketing.', price: 'from €5,000', features: ['Product Catalog', 'AI Recommendations', 'Payment Integration', 'Cart Abandonment Email', 'SEO', 'Analytics'] },
-        { title: 'Blog / Content Platform', description: 'Content hub with AI-powered text creation and SEO automation.', price: 'from €2,500', features: ['AI Content', 'SEO Tools', 'Categories', 'Newsletter', 'Social Sharing', 'Author Profiles'] }
+        { title: 'Blog / Content Platform', description: 'Content hub with AI-powered text creation and SEO automation.', price: 'from €2,500', features: ['AI Content', 'SEO Tools', 'Categories', 'Newsletter', 'Social Sharing', 'Author Profiles'] },
+        { title: 'Complex E-Commerce Solutions', description: 'Large-scale projects with custom integrations and advanced features.', price: 'from €7,000', features: ['Custom Integrations', 'ERP Connection', 'Multi-Language', 'Advanced Reporting', 'API Integrations', 'Custom Workflows'] },
+        { title: 'Hosting & Maintenance', description: 'Secure, fast hosting and regular maintenance services.', price: 'from €49/month', features: ['SSL Certificate', 'Daily Backups', 'Security Updates', 'Performance Optimization', 'Email Support', '99.9% Uptime'] }
       ],
       processSteps: [
         { title: 'Briefing', description: 'We understand your goals, target audience, and requirements.' },
@@ -2515,7 +2519,9 @@ export const translations = {
         { title: 'Poslovna Web Stranica', description: 'Profesionalna prisutnost s AI chatbotom, SEO optimizacijom i upravljanjem sadržajem.', price: 'od 3.500€', features: ['Responzivan Dizajn', 'AI Chatbot', 'SEO Optimizacija', 'CMS', 'Kontakt Forma', 'Analitika'] },
         { title: 'Landing Stranica', description: 'Konverzijski optimizirana stranica za kampanje, proizvode ili usluge.', price: 'od 1.500€', features: ['Konverzijski Dizajn', 'A/B Testiranje', 'Lead Forme', 'Praćenje', 'Mobile-First', 'Brzo Učitavanje'] },
         { title: 'E-Commerce Trgovina', description: 'Online trgovina s AI preporukama proizvoda i automatiziranim marketingom.', price: 'od 5.000€', features: ['Katalog Proizvoda', 'AI Preporuke', 'Integracija Plaćanja', 'Email za Napuštenu Košaricu', 'SEO', 'Analitika'] },
-        { title: 'Blog / Platforma za Sadržaj', description: 'Hub za sadržaj s AI-pogonenom izradom teksta i SEO automatizacijom.', price: 'od 2.500€', features: ['AI Sadržaj', 'SEO Alati', 'Kategorije', 'Newsletter', 'Dijeljenje na Društvenim Mrežama', 'Profili Autora'] }
+        { title: 'Blog / Platforma za Sadržaj', description: 'Hub za sadržaj s AI-pogonenom izradom teksta i SEO automatizacijom.', price: 'od 2.500€', features: ['AI Sadržaj', 'SEO Alati', 'Kategorije', 'Newsletter', 'Dijeljenje na Društvenim Mrežama', 'Profili Autora'] },
+        { title: 'Složena E-Commerce Rješenja', description: 'Veliki projekti s prilagođenim integracijama i naprednim značajkama.', price: 'od 7.000€', features: ['Prilagođene Integracije', 'ERP Povezivanje', 'Višejezičnost', 'Napredno Izvještavanje', 'API Integracije', 'Prilagođeni Tokovi Rada'] },
+        { title: 'Hosting i Održavanje', description: 'Sigurno, brzo hosting i redoviti servisi održavanja.', price: 'od 49€/mjesečno', features: ['SSL Certifikat', 'Dnevne Sigurnosne Kopije', 'Sigurnosna Ažuriranja', 'Optimizacija Performansi', 'Email Podrška', '99,9% Uptime'] }
       ],
       processSteps: [
         { title: 'Briefing', description: 'Razumijemo vaše ciljeve, ciljnu publiku i zahtjeve.' },
