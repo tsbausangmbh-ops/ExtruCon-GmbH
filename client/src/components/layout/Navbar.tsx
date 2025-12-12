@@ -5,12 +5,12 @@ import { useState } from "react";
 import logoImage from "@assets/Logo_Neutral_1765559088189.png";
 
 const services = [
-  { name: "KI & Automatisierung", href: "/leistungen/ki-automatisierung", icon: Bot },
-  { name: "Social Media", href: "/leistungen/social-media", icon: Share2 },
-  { name: "Webentwicklung", href: "/leistungen/web", icon: Globe },
-  { name: "Performance Marketing", href: "/leistungen/marketing", icon: TrendingUp },
-  { name: "Markenaufbau", href: "/leistungen/markenaufbau", icon: Palette },
-  { name: "Texting & Content", href: "/leistungen/content", icon: FileText },
+  { name: "KI-Agenten", href: "/ki-agenten", icon: Bot },
+  { name: "Automatisierungen", href: "/automatisierungen", icon: Share2 },
+  { name: "Webseiten mit KI", href: "/webseiten-ki", icon: Globe },
+  { name: "Social Media", href: "/leistungen/social-media", icon: TrendingUp },
+  { name: "Content Creation", href: "/leistungen/content", icon: FileText },
+  { name: "Performance Marketing", href: "/leistungen/marketing", icon: Palette },
 ];
 
 export function Navbar() {
@@ -55,12 +55,6 @@ export function Navbar() {
             )}
           </div>
 
-          <a href="/ki-agenten" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
-            KI-Agenten
-          </a>
-          <a href="/webseiten-ki" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
-            Webseiten mit KI
-          </a>
           <a href="/ratgeber" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
             Ratgeber
           </a>
@@ -107,20 +101,6 @@ export function Navbar() {
                 </a>
               ))}
             </div>
-            <a
-              href="/ki-agenten"
-              className="text-lg font-medium text-gray-300 hover:text-primary transition-colors py-2"
-              onClick={() => setIsOpen(false)}
-            >
-              KI-Agenten
-            </a>
-            <a
-              href="/webseiten-ki"
-              className="text-lg font-medium text-gray-300 hover:text-primary transition-colors py-2"
-              onClick={() => setIsOpen(false)}
-            >
-              Webseiten mit KI
-            </a>
             <a
               href="/ratgeber"
               className="text-lg font-medium text-gray-300 hover:text-primary transition-colors py-2"
