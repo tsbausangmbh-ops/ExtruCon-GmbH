@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Link } from "wouter";
 import heroBg from "@assets/generated_images/futuristic_digital_landscape_with_connecting_nodes.png";
 import { ArrowRight, MapPin, Bot, Zap, Clock } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
@@ -58,19 +56,15 @@ export function Hero() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-30">
-              <Link href="/kontakt">
-                <span className="inline-flex items-center justify-center h-12 px-8 bg-primary text-background hover:bg-primary/90 font-bold text-lg rounded-md transition-colors cursor-pointer" data-testid="button-hero-cta">
-                  {t.hero.ctaPrimary}
-                </span>
-              </Link>
+              <a href="/kontakt" className="inline-flex items-center justify-center h-12 px-8 bg-primary text-background hover:bg-primary/90 font-bold text-lg rounded-md transition-colors cursor-pointer" data-testid="button-hero-cta">
+                {t.hero.ctaPrimary}
+              </a>
               <a href="#services" className="inline-flex items-center justify-center h-12 px-8 border border-white/20 text-white hover:bg-white/10 font-medium text-lg rounded-md transition-colors group cursor-pointer" data-testid="button-hero-secondary">
                 {t.hero.ctaSecondary} <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
-              <Link href="/ki-bot">
-                <span className="inline-flex items-center justify-center h-12 px-8 border border-primary/50 text-primary hover:bg-primary/10 font-medium text-lg rounded-md transition-colors group cursor-pointer" data-testid="button-hero-bot">
-                  {t.hero.ctaBot} <Bot className="ml-2 w-4 h-4" />
-                </span>
-              </Link>
+              <a href="/ki-bot" className="inline-flex items-center justify-center h-12 px-8 border border-primary/50 text-primary hover:bg-primary/10 font-medium text-lg rounded-md transition-colors group cursor-pointer" data-testid="button-hero-bot">
+                {t.hero.ctaBot} <Bot className="ml-2 w-4 h-4" />
+              </a>
             </div>
           </motion.div>
         </div>
