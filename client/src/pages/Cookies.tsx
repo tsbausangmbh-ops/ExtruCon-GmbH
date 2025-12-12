@@ -102,9 +102,11 @@ export default function Cookies() {
               <div className="p-2 rounded-lg bg-amber-500/20">
                 <Scale className="w-5 h-5 text-amber-400" />
               </div>
-              <div>
+              <div className="flex-1">
                 <h2 className="text-xl font-bold text-white mb-2">{t.cookiePage.legalBasis}</h2>
-                <p className="text-gray-400 leading-relaxed">{t.cookiePage.legalBasisDesc}</p>
+                <p className="text-gray-400 leading-relaxed mb-3">{t.cookiePage.legalBasisDesc}</p>
+                <pre className="text-gray-300 text-sm whitespace-pre-wrap bg-white/5 p-4 rounded-lg border border-white/10">{t.cookiePage.legalBasisList}</pre>
+                <p className="text-primary text-sm mt-3 font-medium">{t.cookiePage.supervisoryAuthority}</p>
               </div>
             </div>
           </section>
@@ -114,9 +116,10 @@ export default function Cookies() {
               <div className="p-2 rounded-lg bg-cyan-500/20">
                 <UserCheck className="w-5 h-5 text-cyan-400" />
               </div>
-              <div>
+              <div className="flex-1">
                 <h2 className="text-xl font-bold text-white mb-2">{t.cookiePage.yourRights}</h2>
-                <p className="text-gray-400 leading-relaxed">{t.cookiePage.yourRightsDesc}</p>
+                <p className="text-gray-400 leading-relaxed mb-3">{t.cookiePage.yourRightsDesc}</p>
+                <pre className="text-gray-300 text-sm whitespace-pre-wrap bg-white/5 p-4 rounded-lg border border-white/10">{t.cookiePage.yourRightsList}</pre>
               </div>
             </div>
           </section>
