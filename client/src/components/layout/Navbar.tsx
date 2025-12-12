@@ -68,6 +68,11 @@ export function Navbar() {
             Kontakt
           </a>
           <Link href="/ki-bot">
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 font-bold">
+              Testen
+            </Button>
+          </Link>
+          <Link href="/kontakt">
             <Button variant="default" className="bg-primary text-background hover:bg-primary/90 font-bold">
               Loslegen
             </Button>
@@ -130,6 +135,11 @@ export function Navbar() {
               Kontakt
             </a>
             <Link href="/ki-bot" onClick={() => setIsOpen(false)}>
+              <Button variant="outline" className="w-full border-primary text-primary font-bold mt-2">
+                Testen
+              </Button>
+            </Link>
+            <Link href="/kontakt" onClick={() => setIsOpen(false)}>
               <Button className="w-full bg-primary text-background font-bold mt-2">
                 Loslegen
               </Button>
