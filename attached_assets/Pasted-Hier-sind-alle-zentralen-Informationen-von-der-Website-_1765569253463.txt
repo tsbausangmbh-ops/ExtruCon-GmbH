@@ -1,0 +1,59 @@
+Hier sind alle zentralen Informationen von der Website extrucon.de, übersichtlich zusammengefasst (ohne Preisangaben). Die Angaben stammen direkt von ExtruCon GmbH, einer KI‑Agentur aus Fürstenfeldbruck bei München.
+
+Unternehmensfokus
+
+ExtruCon präsentiert sich als Agentur für digitales Marketing, KI‑Automatisierung und modernes Webdesign. Das Unternehmen verspricht, Routineaufgaben zu automatisieren, damit Sie sich auf Ihr Kerngeschäft konzentrieren können
+extrucon.de
+. Typische Vorteile sind bis zu 80 % Zeitersparnis, 24/7‑Verfügbarkeit, fehlerfreie Abläufe und Skalierbarkeit ohne zusätzlichen Personalaufwand
+extrucon.de
+.
+
+Kernangebote
+
+KI‑Agenten – Intelligente Assistenten beantworten Kundenfragen, automatisieren Datenverarbeitung, analysieren Geschäftsdaten und unterstützen bei Marketing‑Aufgaben. Laut ExtruCon stehen acht spezialisierte Agenten zur Auswahl:
+Kundenservice‑Agent für 24/7‑Support und FAQ‑Automatisierung, Analyse‑Agent für automatische Auswertungen und Reports, Automatisierungs‑Agent für Workflow‑Automatisierungen mit über 500 Integrationen, Content‑Agent für Texte und Posts im Unternehmensstil, E‑Mail‑Agent zur automatischen Verarbeitung von E‑Mails, Termin‑Agent für Terminplanung, E‑Commerce‑Agent für Kaufberatung und Bestelltracking sowie Dokumenten‑Agent zur Datenextraktion aus PDFs
+extrucon.de
+. Diese Agenten lassen sich in Kundenservice, Marketing/Vertrieb und Operations einsetzen (z. B. Lead‑Scoring, E‑Mail‑Kampagnen, Rechnungsverarbeitung)
+extrucon.de
+.
+
+Automatisierungen – ExtruCon verbindet bestehende Tools und automatisiert E‑Mail‑Versand, Lead‑Management, Dokumenten‑Workflows, E‑Commerce‑Prozesse, Terminplanung, Daten‑Synchronisation, Reporting und komplexe Prozess‑Workflows
+extrucon.de
+. Die Automatisierung basiert auf der Open‑Source‑Plattform n8n; sie bietet über 500 Integrationen, keine Ausführungslimits, Self‑Hosting für Datensouveränität und ist laut ExtruCon günstiger als andere Automation‑Anbieter
+extrucon.de
+.
+
+Webseiten mit KI‑Features – Für moderne Websites kombiniert ExtruCon Chatbots, automatische Content‑Erstellung, Bild‑Optimierung, KI‑SEO‑Analyse, Personalisierung und intelligente Analytics. Ziel sind Ladezeiten unter zwei Sekunden, höhere Conversion‑Rates und 24/7‑Verfügbarkeit
+extrucon.de
+. Das Angebot umfasst u. a. eine Unternehmens­website (mit responsive Design, integriertem KI‑Chatbot, SEO‑Optimierung, CMS, Kontaktformular und Analytics) sowie conversion‑optimierte Landing‑Pages; beide sind modular erweiterbar
+extrucon.de
+. Der Entwicklungsprozess folgt fünf Schritten: Briefing (Ziele verstehen), Konzept (Struktur, Design und KI‑Features definieren), Design (UX‑Design mit Conversion‑Fokus), Entwicklung (technische Umsetzung mit KI‑Integrationen) und Launch inklusive SEO‑Setup und Monitoring
+extrucon.de
+.
+
+Weitere Leistungen
+
+Zusätzlich bietet ExtruCon Branding/Markenaufbau, Texting & Social‑Media‑Posts, Social‑Media‑Management, Performance‑Marketing sowie die Erstellung hoch performanter Web‑Apps an
+extrucon.de
+.
+
+Technologie‑Stack
+
+Für KI‑Lösungen nutzt ExtruCon unterschiedliche Technologien: OpenAI GPT‑4 und Claude AI für natürliche Dialoge und Textanalysen, LangChain für die Verknüpfung mehrerer Modelle, Vektor‑Datenbanken für kontextbezogene Antworten, n8n‑Workflows zur No‑Code‑Automatisierung, maßgeschneiderte APIs und bei Websites u. a. React/Next.js, WordPress, Webflow, Tailwind CSS und Vercel
+extrucon.de
+.
+
+Erfolgssystem & Arbeitsweise
+
+Das ExtruCon‑Erfolgssystem umfasst drei Stufen: lokale Dominanz durch Geo‑SEO (lokales SEO und Geo‑Targeting für Top‑Platzierungen), qualifizierte Leads durch Content‑Strategie und automatisierte Conversion mittels KI‑Chatbots
+extrucon.de
+.
+Der interne Arbeitsprozess gliedert sich in vier Phasen – Vision, Strategie, Umsetzung und Erfolg
+extrucon.de
+. Unternehmen profitieren von deutschlandweiter Expertise, messbaren Ergebnissen (transparente KPIs, monatliches Reporting), persönlicher Betreuung und ersten Resultaten nach 4–6 Wochen
+extrucon.de
+.
+
+Warum ExtruCon?
+
+Laut eigener Darstellung betreut die Agentur Kunden in ganz Deutschland, setzt auf moderne KI‑Technologien, bietet transparente Ergebnisse und feste Ansprechpartner sowie über 50 erfolgreich umgesetzte Projekte
