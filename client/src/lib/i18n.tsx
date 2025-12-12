@@ -25,7 +25,7 @@ export const translations = {
       title2: 'Mehr Wachstum.',
       subtitle: 'KI-Agenten übernehmen Ihre wiederkehrenden Aufgaben –',
       subtitleHighlight: '24/7, fehlerfrei, skalierbar',
-      description: 'Ihre KI-Agentur aus Fürstenfeldbruck entwickelt intelligente Automatisierungen, die Kundenservice, Lead-Generierung und Marketing optimieren. Deutschlandweit.',
+      description: 'Ihre KI-Agentur aus Fürstenfeldbruck entwickelt intelligente Automatisierungen, die Kundenservice, Lead-Generierung und Marketing optimieren. Kroatien, Türkei und Deutschlandweit.',
       timeSaving: '80% Zeitersparnis',
       available: '24/7 verfügbar',
       freeConsultation: 'Kostenlose Beratung',
@@ -997,6 +997,22 @@ export const translations = {
       termsDate: 'Stand: Dezember 2025',
       legalNotice: 'Hinweis: Diese Seite ist auf Deutsch verfasst, um den deutschen gesetzlichen Anforderungen zu entsprechen.'
     },
+    cookieConsent: {
+      title: 'Cookie-Einstellungen',
+      description: 'Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung auf unserer Website zu bieten. Einige Cookies sind für den Betrieb der Website notwendig, während andere uns helfen, die Website zu verbessern.',
+      privacyLink: 'Mehr in unserer Datenschutzerklärung',
+      acceptAll: 'Alle akzeptieren',
+      acceptNecessary: 'Nur notwendige',
+      settings: 'Einstellungen',
+      settingsTitle: 'Cookie-Einstellungen anpassen',
+      necessary: 'Notwendige Cookies',
+      necessaryDesc: 'Diese Cookies sind für die Grundfunktionen der Website erforderlich.',
+      analytics: 'Analyse-Cookies',
+      analyticsDesc: 'Helfen uns zu verstehen, wie Besucher mit der Website interagieren.',
+      marketing: 'Marketing-Cookies',
+      marketingDesc: 'Werden verwendet, um Werbung relevanter für Sie zu gestalten.',
+      save: 'Auswahl speichern'
+    },
   },
   en: {
     nav: {
@@ -1020,7 +1036,7 @@ export const translations = {
       title2: 'More growth.',
       subtitle: 'AI agents handle your recurring tasks –',
       subtitleHighlight: '24/7, error-free, scalable',
-      description: 'Your AI agency from Fürstenfeldbruck develops intelligent automation that optimizes customer service, lead generation, and marketing. Nationwide.',
+      description: 'Your AI agency from Fürstenfeldbruck develops intelligent automation that optimizes customer service, lead generation, and marketing. Croatia, Turkey, and Germany-wide.',
       timeSaving: '80% time savings',
       available: 'Available 24/7',
       freeConsultation: 'Free consultation',
@@ -1992,6 +2008,22 @@ export const translations = {
       termsDate: 'As of: December 2025',
       legalNotice: 'Note: This page is in German to comply with German legal requirements.'
     },
+    cookieConsent: {
+      title: 'Cookie Settings',
+      description: 'We use cookies to provide you with the best possible experience on our website. Some cookies are necessary for the website to function, while others help us improve the website.',
+      privacyLink: 'Learn more in our Privacy Policy',
+      acceptAll: 'Accept All',
+      acceptNecessary: 'Necessary Only',
+      settings: 'Settings',
+      settingsTitle: 'Customize Cookie Settings',
+      necessary: 'Necessary Cookies',
+      necessaryDesc: 'These cookies are required for the basic functions of the website.',
+      analytics: 'Analytics Cookies',
+      analyticsDesc: 'Help us understand how visitors interact with the website.',
+      marketing: 'Marketing Cookies',
+      marketingDesc: 'Used to make advertising more relevant to you.',
+      save: 'Save Preferences'
+    },
   },
   hr: {
     nav: {
@@ -2015,7 +2047,7 @@ export const translations = {
       title2: 'Više rasta.',
       subtitle: 'AI agenti preuzimaju vaše ponavljajuće zadatke –',
       subtitleHighlight: '24/7, bez grešaka, skalabilno',
-      description: 'Vaša AI agencija iz Fürstenfeldbrucka razvija inteligentnu automatizaciju koja optimizira korisničku službu, generiranje leadova i marketing. U cijeloj Njemačkoj.',
+      description: 'Vaša AI agencija iz Fürstenfeldbrucka razvija inteligentnu automatizaciju koja optimizira korisničku službu, generiranje leadova i marketing. Hrvatska, Turska i cijela Njemačka.',
       timeSaving: '80% uštede vremena',
       available: 'Dostupno 24/7',
       freeConsultation: 'Besplatno savjetovanje',
@@ -2986,6 +3018,22 @@ export const translations = {
       termsTitle: 'Opći uvjeti poslovanja',
       termsDate: 'Stanje: Prosinac 2025.',
       legalNotice: 'Napomena: Ova stranica je na njemačkom jeziku radi usklađenosti s njemačkim zakonskim zahtjevima.'
+    },
+    cookieConsent: {
+      title: 'Postavke kolačića',
+      description: 'Koristimo kolačiće kako bismo vam pružili najbolje moguće iskustvo na našoj web stranici. Neki kolačići su neophodni za rad web stranice, dok nam drugi pomažu u poboljšanju.',
+      privacyLink: 'Saznajte više u našoj Politici privatnosti',
+      acceptAll: 'Prihvati sve',
+      acceptNecessary: 'Samo neophodni',
+      settings: 'Postavke',
+      settingsTitle: 'Prilagodite postavke kolačića',
+      necessary: 'Neophodni kolačići',
+      necessaryDesc: 'Ovi kolačići su potrebni za osnovne funkcije web stranice.',
+      analytics: 'Analitički kolačići',
+      analyticsDesc: 'Pomažu nam razumjeti kako posjetitelji koriste web stranicu.',
+      marketing: 'Marketinški kolačići',
+      marketingDesc: 'Koriste se za prikazivanje relevantnijih oglasa.',
+      save: 'Spremi postavke'
     },
   },
 };
