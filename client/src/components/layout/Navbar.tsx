@@ -1,7 +1,8 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Cpu, ChevronDown, Bot, Share2, Globe, TrendingUp, Palette, FileText } from "lucide-react";
+import { Menu, X, ChevronDown, Bot, Share2, Globe, TrendingUp, Palette, FileText } from "lucide-react";
 import { useState } from "react";
+import logoImage from "@assets/Logo_Neutral_1765559088189.png";
 
 const services = [
   { name: "KI & Automatisierung", href: "/leistungen/ki-automatisierung", icon: Bot },
@@ -19,11 +20,8 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <Cpu className="h-8 w-8 text-primary animate-pulse" />
-          <span className="text-xl font-bold font-display tracking-wider text-white">
-            EXTRUCON
-          </span>
+        <Link href="/" className="flex items-center">
+          <img src={logoImage} alt="ExtruCon GmbH" className="h-10" />
         </Link>
 
         {/* Desktop Nav */}
