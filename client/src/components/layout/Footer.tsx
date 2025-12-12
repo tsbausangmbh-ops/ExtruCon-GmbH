@@ -31,13 +31,21 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold text-white mb-4">Verbinden</h4>
-            <div className="flex gap-4">
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors"><Linkedin /></a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors"><Twitter /></a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors"><Instagram /></a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors"><Facebook /></a>
-            </div>
+            <h4 className="font-bold text-white mb-4">Kontakt</h4>
+            <ul className="space-y-2 text-gray-400 text-sm">
+              <li>ExtruCon GmbH</li>
+              <li>Hasenheide 8</li>
+              <li>82256 Fürstenfeldbruck</li>
+              <li className="pt-2">
+                <a href="mailto:info@extrucon.de" className="hover:text-primary transition-colors">info@extrucon.de</a>
+              </li>
+              <li>
+                <a href="tel:+4989444438879" className="hover:text-primary transition-colors">089 444438879</a>
+              </li>
+              <li className="pt-2">
+                <a href="/kontakt" className="text-primary hover:underline">→ Kontaktformular</a>
+              </li>
+            </ul>
           </div>
         </div>
         

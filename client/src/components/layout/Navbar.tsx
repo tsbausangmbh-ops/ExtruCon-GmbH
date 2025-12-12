@@ -7,9 +7,9 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Leistungen", href: "#services" },
-    { name: "Über uns", href: "#about" },
-    { name: "Kontakt", href: "#contact" },
+    { name: "Leistungen", href: "/#services" },
+    { name: "Über uns", href: "/#about" },
+    { name: "Kontakt", href: "/kontakt" },
   ];
 
   return (
