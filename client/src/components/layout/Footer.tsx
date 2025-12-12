@@ -43,7 +43,7 @@ export function Footer() {
           <p>&copy; {new Date().getFullYear()} Extrucon GmbH. Alle Rechte vorbehalten.</p>
           <div className="flex gap-6">
             <a href="/privacy" className="hover:text-white transition-colors">Datenschutzerklärung</a>
-            <a href="#" className="hover:text-white transition-colors">AGB</a>
+            <a href="/terms" className="hover:text-white transition-colors">AGB</a>
             <a href="#" className="hover:text-white transition-colors">Impressum</a>
           </div>
         </div>
