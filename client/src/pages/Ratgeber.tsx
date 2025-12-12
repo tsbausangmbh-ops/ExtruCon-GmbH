@@ -4,453 +4,96 @@ import { motion } from "framer-motion";
 import { BookOpen, Clock, ArrowRight, Search, Bot, Share2, Globe, TrendingUp, Sparkles, Mail, Lightbulb } from "lucide-react";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
+import { useLanguage } from "@/lib/i18n";
 
-const categories = [
-  { name: "Alle", value: "all", icon: Sparkles, color: "text-primary" },
-  { name: "KI & Automatisierung", value: "ki", icon: Bot, color: "text-cyan-400" },
-  { name: "Social Media", value: "social", icon: Share2, color: "text-purple-400" },
-  { name: "SEO & Marketing", value: "marketing", icon: TrendingUp, color: "text-orange-400" },
-  { name: "Webentwicklung", value: "web", icon: Globe, color: "text-blue-400" },
+const articleMetadata: { id: number; category: string; featured: boolean }[] = [
+  { id: 1, category: "ki", featured: true },
+  { id: 2, category: "social", featured: true },
+  { id: 3, category: "marketing", featured: true },
+  { id: 4, category: "web", featured: true },
+  { id: 5, category: "ki", featured: true },
+  { id: 6, category: "social", featured: true },
+  { id: 7, category: "marketing", featured: false },
+  { id: 8, category: "ki", featured: false },
+  { id: 9, category: "web", featured: false },
+  { id: 10, category: "social", featured: false },
+  { id: 11, category: "marketing", featured: false },
+  { id: 12, category: "marketing", featured: false },
+  { id: 13, category: "ki", featured: false },
+  { id: 14, category: "web", featured: false },
+  { id: 15, category: "social", featured: false },
+  { id: 16, category: "marketing", featured: false },
+  { id: 17, category: "ki", featured: false },
+  { id: 18, category: "web", featured: false },
+  { id: 19, category: "ki", featured: false },
+  { id: 20, category: "ki", featured: false },
+  { id: 21, category: "ki", featured: false },
+  { id: 22, category: "ki", featured: false },
+  { id: 23, category: "ki", featured: false },
+  { id: 24, category: "ki", featured: false },
+  { id: 25, category: "ki", featured: false },
+  { id: 26, category: "social", featured: false },
+  { id: 27, category: "social", featured: false },
+  { id: 28, category: "social", featured: false },
+  { id: 29, category: "social", featured: false },
+  { id: 30, category: "social", featured: false },
+  { id: 31, category: "social", featured: false },
+  { id: 32, category: "social", featured: false },
+  { id: 33, category: "social", featured: false },
+  { id: 34, category: "marketing", featured: false },
+  { id: 35, category: "marketing", featured: false },
+  { id: 36, category: "marketing", featured: false },
+  { id: 37, category: "marketing", featured: false },
+  { id: 38, category: "marketing", featured: false },
+  { id: 39, category: "marketing", featured: false },
+  { id: 40, category: "marketing", featured: false },
+  { id: 41, category: "web", featured: false },
+  { id: 42, category: "web", featured: false },
+  { id: 43, category: "web", featured: false },
+  { id: 44, category: "web", featured: false },
+  { id: 45, category: "web", featured: false },
+  { id: 46, category: "web", featured: false },
+  { id: 47, category: "web", featured: false },
+  { id: 48, category: "web", featured: false },
 ];
 
-const articles = [
-  {
-    id: 1,
-    title: "KI-Chatbots für Unternehmen: Der komplette Leitfaden 2025",
-    excerpt: "Erfahren Sie, wie KI-Chatbots Ihren Kundenservice revolutionieren und gleichzeitig Kosten senken können.",
-    category: "ki",
-    readTime: "8 Min.",
-    date: "10. Dez 2025",
-    featured: true
-  },
-  {
-    id: 2,
-    title: "Instagram Reels: 10 Tipps für mehr Reichweite",
-    excerpt: "So nutzen Sie das volle Potenzial von Instagram Reels für Ihr Unternehmen und erreichen tausende neue Kunden.",
-    category: "social",
-    readTime: "5 Min.",
-    date: "8. Dez 2025",
-    featured: true
-  },
-  {
-    id: 3,
-    title: "Local SEO: So dominieren Sie die Google-Suche",
-    excerpt: "Lokale Suchmaschinenoptimierung ist der Schlüssel für regionale Unternehmen. Die wichtigsten Strategien.",
-    category: "marketing",
-    readTime: "7 Min.",
-    date: "5. Dez 2025",
-    featured: true
-  },
-  {
-    id: 4,
-    title: "Website-Geschwindigkeit optimieren: Performance-Tipps",
-    excerpt: "Eine schnelle Website ist entscheidend für SEO und Nutzererfahrung. So verbessern Sie Ihre Ladezeiten.",
-    category: "web",
-    readTime: "6 Min.",
-    date: "3. Dez 2025",
-    featured: true
-  },
-  {
-    id: 5,
-    title: "ChatGPT für Marketing: Praktische Anwendungsfälle",
-    excerpt: "Von Content-Erstellung bis Kundenanalyse: So setzen Sie ChatGPT effektiv in Ihrem Marketing ein.",
-    category: "ki",
-    readTime: "10 Min.",
-    date: "1. Dez 2025",
-    featured: true
-  },
-  {
-    id: 6,
-    title: "LinkedIn für B2B: Die beste Strategie für 2025",
-    excerpt: "LinkedIn ist das wichtigste Netzwerk für B2B-Unternehmen. So bauen Sie eine starke Präsenz auf.",
-    category: "social",
-    readTime: "8 Min.",
-    date: "28. Nov 2025",
-    featured: true
-  },
-  {
-    id: 7,
-    title: "Google Ads vs. Meta Ads: Was lohnt sich mehr?",
-    excerpt: "Wir vergleichen die beiden Werbeplattformen und zeigen, welche für Ihr Business besser geeignet ist.",
-    category: "marketing",
-    readTime: "9 Min.",
-    date: "25. Nov 2025",
-    featured: false
-  },
-  {
-    id: 8,
-    title: "n8n Workflow-Automatisierung: Der komplette Guide",
-    excerpt: "Mit n8n automatisieren Sie Geschäftsprozesse ohne Programmierkenntnisse. So starten Sie durch.",
-    category: "ki",
-    readTime: "12 Min.",
-    date: "22. Nov 2025",
-    featured: false
-  },
-  {
-    id: 9,
-    title: "Responsive Webdesign: Mobile First im Jahr 2025",
-    excerpt: "Warum Mobile-First-Design heute Standard ist und wie Sie Ihre Website für alle Geräte optimieren.",
-    category: "web",
-    readTime: "6 Min.",
-    date: "19. Nov 2025",
-    featured: false
-  },
-  {
-    id: 10,
-    title: "TikTok für Unternehmen: Lohnt sich der Einstieg?",
-    excerpt: "Die Plattform boomt – aber ist TikTok auch für B2B relevant? Wir zeigen Chancen und Strategien.",
-    category: "social",
-    readTime: "7 Min.",
-    date: "16. Nov 2025",
-    featured: false
-  },
-  {
-    id: 11,
-    title: "E-Mail-Marketing: 12 Tipps für höhere Öffnungsraten",
-    excerpt: "So optimieren Sie Ihre Newsletter und E-Mail-Kampagnen für bessere Ergebnisse.",
-    category: "marketing",
-    readTime: "8 Min.",
-    date: "13. Nov 2025",
-    featured: false
-  },
-  {
-    id: 12,
-    title: "Voice Search SEO: Optimierung für Sprachsuche",
-    excerpt: "Immer mehr Menschen suchen per Sprache. So passen Sie Ihre SEO-Strategie an.",
-    category: "marketing",
-    readTime: "6 Min.",
-    date: "10. Nov 2025",
-    featured: false
-  },
-  {
-    id: 13,
-    title: "n8n für E-Commerce: Automatisierte Bestellprozesse",
-    excerpt: "So automatisieren Sie Bestellbestätigungen, Lagerbestand und Versand mit n8n.",
-    category: "ki",
-    readTime: "9 Min.",
-    date: "7. Nov 2025",
-    featured: false
-  },
-  {
-    id: 14,
-    title: "Conversion-Rate optimieren: A/B-Testing richtig nutzen",
-    excerpt: "Wie Sie mit systematischen Tests Ihre Website-Performance verbessern.",
-    category: "web",
-    readTime: "10 Min.",
-    date: "4. Nov 2025",
-    featured: false
-  },
-  {
-    id: 15,
-    title: "Content-Planung: Der perfekte Redaktionskalender",
-    excerpt: "So erstellen Sie einen effizienten Content-Plan für Social Media und Blog.",
-    category: "social",
-    readTime: "5 Min.",
-    date: "1. Nov 2025",
-    featured: false
-  },
-  {
-    id: 16,
-    title: "Schema Markup: Strukturierte Daten für bessere Rankings",
-    excerpt: "Mit Schema.org zu Rich Snippets: So steigern Sie Ihre Sichtbarkeit in Google.",
-    category: "marketing",
-    readTime: "8 Min.",
-    date: "28. Okt 2025",
-    featured: false
-  },
-  {
-    id: 17,
-    title: "n8n vs. Make vs. Zapier: Welches Tool passt zu Ihnen?",
-    excerpt: "Wir vergleichen die drei beliebtesten Automatisierungstools und zeigen Vor- und Nachteile.",
-    category: "ki",
-    readTime: "11 Min.",
-    date: "25. Okt 2025",
-    featured: false
-  },
-  {
-    id: 18,
-    title: "Barrierefreie Websites: WCAG-Richtlinien verstehen",
-    excerpt: "Warum Accessibility wichtig ist und wie Sie Ihre Website barrierefrei gestalten.",
-    category: "web",
-    readTime: "7 Min.",
-    date: "22. Okt 2025",
-    featured: false
-  },
-  {
-    id: 19,
-    title: "KI im Kundenservice: Automatisierung ohne Qualitätsverlust",
-    excerpt: "So setzen Sie KI-Tools ein, ohne die persönliche Note zu verlieren.",
-    category: "ki",
-    readTime: "8 Min.",
-    date: "19. Okt 2025",
-    featured: false
-  },
-  {
-    id: 20,
-    title: "OpenAI API für Unternehmen: Erste Schritte",
-    excerpt: "Ein praktischer Einstieg in die Integration von GPT-4 in Ihre Geschäftsprozesse.",
-    category: "ki",
-    readTime: "14 Min.",
-    date: "16. Okt 2025",
-    featured: false
-  },
-  {
-    id: 21,
-    title: "Automatisierte Lead-Generierung mit KI",
-    excerpt: "Wie Sie mit intelligenten Systemen qualifizierte Leads gewinnen und nurturing automatisieren.",
-    category: "ki",
-    readTime: "10 Min.",
-    date: "13. Okt 2025",
-    featured: false
-  },
-  {
-    id: 22,
-    title: "n8n Webhooks: Echtzeit-Automatisierung einrichten",
-    excerpt: "So verbinden Sie externe Dienste mit n8n für sofortige Reaktionen auf Events.",
-    category: "ki",
-    readTime: "9 Min.",
-    date: "10. Okt 2025",
-    featured: false
-  },
-  {
-    id: 23,
-    title: "Claude AI vs. ChatGPT: Der große Vergleich",
-    excerpt: "Welches KI-Modell eignet sich besser für Ihre Anwendungsfälle? Stärken und Schwächen.",
-    category: "ki",
-    readTime: "11 Min.",
-    date: "7. Okt 2025",
-    featured: false
-  },
-  {
-    id: 24,
-    title: "KI-gestützte Datenanalyse für Marketing-Entscheidungen",
-    excerpt: "So nutzen Sie Machine Learning für bessere Kampagnen und höheren ROI.",
-    category: "ki",
-    readTime: "12 Min.",
-    date: "4. Okt 2025",
-    featured: false
-  },
-  {
-    id: 25,
-    title: "Automatisierte Reports mit n8n und Google Sheets",
-    excerpt: "Erstellen Sie automatische Berichte, die sich selbst aktualisieren.",
-    category: "ki",
-    readTime: "8 Min.",
-    date: "1. Okt 2025",
-    featured: false
-  },
-  {
-    id: 26,
-    title: "Facebook Ads Optimierung: Mehr Conversions für weniger Budget",
-    excerpt: "So optimieren Sie Ihre Facebook-Kampagnen für maximale Effizienz.",
-    category: "social",
-    readTime: "9 Min.",
-    date: "28. Sep 2025",
-    featured: false
-  },
-  {
-    id: 27,
-    title: "Pinterest für Unternehmen: Der unterschätzte Traffic-Kanal",
-    excerpt: "Warum Pinterest besonders für E-Commerce und DIY-Branchen Gold wert ist.",
-    category: "social",
-    readTime: "7 Min.",
-    date: "25. Sep 2025",
-    featured: false
-  },
-  {
-    id: 28,
-    title: "Influencer Marketing: Partner finden und Erfolg messen",
-    excerpt: "So arbeiten Sie erfolgreich mit Influencern zusammen.",
-    category: "social",
-    readTime: "10 Min.",
-    date: "22. Sep 2025",
-    featured: false
-  },
-  {
-    id: 29,
-    title: "YouTube SEO: Videos auf Platz 1 bringen",
-    excerpt: "Die wichtigsten Ranking-Faktoren für YouTube und wie Sie sie nutzen.",
-    category: "social",
-    readTime: "11 Min.",
-    date: "19. Sep 2025",
-    featured: false
-  },
-  {
-    id: 30,
-    title: "Community Management: So bauen Sie eine treue Fanbase auf",
-    excerpt: "Engagement steigern und Kunden zu Markenbotschaftern machen.",
-    category: "social",
-    readTime: "8 Min.",
-    date: "16. Sep 2025",
-    featured: false
-  },
-  {
-    id: 31,
-    title: "Social Listening: Was Kunden wirklich über Sie denken",
-    excerpt: "Tools und Strategien für effektives Monitoring Ihrer Marke.",
-    category: "social",
-    readTime: "7 Min.",
-    date: "13. Sep 2025",
-    featured: false
-  },
-  {
-    id: 32,
-    title: "Threads vs. Twitter/X: Welche Plattform für Ihr Business?",
-    excerpt: "Der aktuelle Stand beider Plattformen und Empfehlungen für Unternehmen.",
-    category: "social",
-    readTime: "6 Min.",
-    date: "10. Sep 2025",
-    featured: false
-  },
-  {
-    id: 33,
-    title: "User Generated Content: Authentische Werbung von Kunden",
-    excerpt: "So motivieren Sie Kunden, Content für Ihre Marke zu erstellen.",
-    category: "social",
-    readTime: "8 Min.",
-    date: "7. Sep 2025",
-    featured: false
-  },
-  {
-    id: 34,
-    title: "Keyword-Recherche 2025: Tools und Strategien",
-    excerpt: "Die besten Methoden, um profitable Keywords zu finden.",
-    category: "marketing",
-    readTime: "10 Min.",
-    date: "4. Sep 2025",
-    featured: false
-  },
-  {
-    id: 35,
-    title: "Core Web Vitals: Google's Ranking-Faktoren verstehen",
-    excerpt: "LCP, FID und CLS optimieren für bessere Rankings.",
-    category: "marketing",
-    readTime: "9 Min.",
-    date: "1. Sep 2025",
-    featured: false
-  },
-  {
-    id: 36,
-    title: "Retargeting-Strategien: Besucher zurückholen",
-    excerpt: "So bringen Sie Website-Besucher zum Kaufabschluss.",
-    category: "marketing",
-    readTime: "8 Min.",
-    date: "28. Aug 2025",
-    featured: false
-  },
-  {
-    id: 37,
-    title: "Content Marketing ROI: Erfolg messbar machen",
-    excerpt: "Welche Kennzahlen wirklich zählen und wie Sie sie tracken.",
-    category: "marketing",
-    readTime: "11 Min.",
-    date: "25. Aug 2025",
-    featured: false
-  },
-  {
-    id: 38,
-    title: "Landing Pages, die konvertieren: Best Practices",
-    excerpt: "Design- und Copy-Tipps für Landingpages mit hoher Conversion.",
-    category: "marketing",
-    readTime: "9 Min.",
-    date: "22. Aug 2025",
-    featured: false
-  },
-  {
-    id: 39,
-    title: "Backlink-Aufbau 2025: White-Hat Strategien",
-    excerpt: "Seriöse Methoden für nachhaltige Link-Building-Erfolge.",
-    category: "marketing",
-    readTime: "12 Min.",
-    date: "19. Aug 2025",
-    featured: false
-  },
-  {
-    id: 40,
-    title: "Google Analytics 4: Der komplette Umstieg",
-    excerpt: "Alles, was Sie über GA4 wissen müssen – einfach erklärt.",
-    category: "marketing",
-    readTime: "14 Min.",
-    date: "16. Aug 2025",
-    featured: false
-  },
-  {
-    id: 41,
-    title: "Headless CMS: Vorteile für moderne Websites",
-    excerpt: "Warum die Trennung von Frontend und Backend Sinn macht.",
-    category: "web",
-    readTime: "10 Min.",
-    date: "13. Aug 2025",
-    featured: false
-  },
-  {
-    id: 42,
-    title: "Website-Sicherheit: SSL, Backups und mehr",
-    excerpt: "So schützen Sie Ihre Website vor Hackern und Datenverlust.",
-    category: "web",
-    readTime: "8 Min.",
-    date: "10. Aug 2025",
-    featured: false
-  },
-  {
-    id: 43,
-    title: "Progressive Web Apps: Die Zukunft des mobilen Web",
-    excerpt: "PWAs kombinieren das Beste aus Websites und nativen Apps.",
-    category: "web",
-    readTime: "9 Min.",
-    date: "7. Aug 2025",
-    featured: false
-  },
-  {
-    id: 44,
-    title: "Website-Relaunch: Checkliste für einen erfolgreichen Neustart",
-    excerpt: "Alle Schritte für einen reibungslosen Website-Relaunch ohne SEO-Verlust.",
-    category: "web",
-    readTime: "11 Min.",
-    date: "4. Aug 2025",
-    featured: false
-  },
-  {
-    id: 45,
-    title: "E-Commerce UX: Checkout-Optimierung für mehr Verkäufe",
-    excerpt: "So reduzieren Sie Kaufabbrüche im Online-Shop.",
-    category: "web",
-    readTime: "8 Min.",
-    date: "1. Aug 2025",
-    featured: false
-  },
-  {
-    id: 46,
-    title: "Dark Mode Design: Tipps für die Umsetzung",
-    excerpt: "So implementieren Sie einen attraktiven Dark Mode für Ihre Website.",
-    category: "web",
-    readTime: "7 Min.",
-    date: "28. Jul 2025",
-    featured: false
-  },
-  {
-    id: 47,
-    title: "Web Fonts richtig einsetzen: Performance und Design",
-    excerpt: "So laden Schriften schnell und sehen trotzdem gut aus.",
-    category: "web",
-    readTime: "6 Min.",
-    date: "25. Jul 2025",
-    featured: false
-  },
-  {
-    id: 48,
-    title: "Cookie-Banner und DSGVO: Rechtssichere Umsetzung",
-    excerpt: "Alles, was Sie über Consent-Management wissen müssen.",
-    category: "web",
-    readTime: "9 Min.",
-    date: "22. Jul 2025",
-    featured: false
-  }
-];
+const categoryIcons = {
+  all: Sparkles,
+  ki: Bot,
+  social: Share2,
+  marketing: TrendingUp,
+  web: Globe,
+};
+
+const categoryColors = {
+  all: "text-primary",
+  ki: "text-cyan-400",
+  social: "text-purple-400",
+  marketing: "text-orange-400",
+  web: "text-blue-400",
+};
 
 export default function Ratgeber() {
+  const { t } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
+
+  const categories = [
+    { name: t.ratgeberPage.categories.all, value: "all", icon: categoryIcons.all, color: categoryColors.all },
+    { name: t.ratgeberPage.categories.ki, value: "ki", icon: categoryIcons.ki, color: categoryColors.ki },
+    { name: t.ratgeberPage.categories.social, value: "social", icon: categoryIcons.social, color: categoryColors.social },
+    { name: t.ratgeberPage.categories.marketing, value: "marketing", icon: categoryIcons.marketing, color: categoryColors.marketing },
+    { name: t.ratgeberPage.categories.web, value: "web", icon: categoryIcons.web, color: categoryColors.web },
+  ];
+
+  const articles = t.ratgeberPage.articles.map((article) => {
+    const meta = articleMetadata.find((m) => m.id === article.id);
+    return {
+      ...article,
+      category: meta?.category || "ki",
+      featured: meta?.featured || false,
+    };
+  });
 
   const filteredArticles = articles.filter(article => {
     const matchesCategory = selectedCategory === "all" || article.category === selectedCategory;
@@ -477,21 +120,20 @@ export default function Ratgeber() {
             >
               <div className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-4">
                 <BookOpen className="w-4 h-4" />
-                Wissen & Insights
+                {t.ratgeberPage.badge}
               </div>
               <h1 className="text-4xl md:text-5xl font-bold font-display text-white mb-4">
-                Marketing Ratgeber
+                {t.ratgeberPage.title}
               </h1>
               <p className="text-lg text-gray-400 mb-6">
-                Praktische Tipps, Anleitungen und Strategien für digitales Marketing, 
-                KI-Automatisierung und erfolgreiche Online-Präsenz.
+                {t.ratgeberPage.subtitle}
               </p>
               
               {/* Search */}
               <div className="relative max-w-md mx-auto">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
                 <Input
-                  placeholder="Artikel durchsuchen..."
+                  placeholder={t.ratgeberPage.searchPlaceholder}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10 bg-white/5 border-white/10 text-white"
@@ -534,7 +176,7 @@ export default function Ratgeber() {
             <div className="container mx-auto px-4">
               <div className="flex items-center gap-2 mb-6">
                 <Lightbulb className="w-5 h-5 text-yellow-400" />
-                <h2 className="text-xl font-bold text-white">Empfohlene Artikel</h2>
+                <h2 className="text-xl font-bold text-white">{t.ratgeberPage.featuredTitle}</h2>
               </div>
               <div className="grid md:grid-cols-3 gap-4">
                 {featuredArticles.map((article, i) => {
@@ -565,7 +207,7 @@ export default function Ratgeber() {
                           <Clock className="w-3 h-3" /> {article.readTime}
                         </span>
                         <span className="flex items-center gap-1 text-primary group-hover:gap-2 transition-all">
-                          Lesen <ArrowRight className="w-3 h-3" />
+                          {t.ratgeberPage.read} <ArrowRight className="w-3 h-3" />
                         </span>
                       </div>
                     </motion.a>
@@ -580,19 +222,19 @@ export default function Ratgeber() {
         <section className="py-8">
           <div className="container mx-auto px-4">
             <h2 className="text-xl font-bold text-white mb-6">
-              {selectedCategory === "all" ? "Alle Artikel" : getCategoryInfo(selectedCategory)?.name}
+              {selectedCategory === "all" ? t.ratgeberPage.allArticlesTitle : getCategoryInfo(selectedCategory)?.name}
               <span className="text-gray-500 font-normal ml-2 text-base">({filteredArticles.length})</span>
             </h2>
             
             {filteredArticles.length === 0 ? (
               <div className="text-center py-12">
                 <Search className="w-12 h-12 text-gray-600 mx-auto mb-4" />
-                <p className="text-gray-400">Keine Artikel gefunden.</p>
+                <p className="text-gray-400">{t.ratgeberPage.noResults}</p>
                 <button 
                   onClick={() => { setSearchQuery(""); setSelectedCategory("all"); }}
                   className="text-primary hover:underline mt-2"
                 >
-                  Filter zurücksetzen
+                  {t.ratgeberPage.resetFilter}
                 </button>
               </div>
             ) : (
@@ -639,23 +281,23 @@ export default function Ratgeber() {
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center">
               <Mail className="w-10 h-10 text-primary mx-auto mb-4" />
-              <h2 className="text-2xl font-bold text-white mb-3">Newsletter abonnieren</h2>
+              <h2 className="text-2xl font-bold text-white mb-3">{t.ratgeberPage.newsletter.title}</h2>
               <p className="text-gray-400 mb-6">
-                Erhalten Sie die neuesten Marketing-Tipps und KI-Insights direkt in Ihr Postfach.
+                {t.ratgeberPage.newsletter.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
                 <Input
                   type="email"
-                  placeholder="Ihre E-Mail-Adresse"
+                  placeholder={t.ratgeberPage.newsletter.placeholder}
                   className="bg-white/5 border-white/10 text-white flex-1"
                   data-testid="input-newsletter"
                 />
                 <button className="px-6 py-2 bg-primary text-background font-bold rounded-md hover:bg-primary/90 transition-colors" data-testid="button-subscribe">
-                  Abonnieren
+                  {t.ratgeberPage.newsletter.button}
                 </button>
               </div>
               <p className="text-xs text-gray-500 mt-3">
-                Mit der Anmeldung stimmen Sie unserer <a href="/privacy" className="text-primary hover:underline">Datenschutzerklärung</a> zu.
+                {t.ratgeberPage.newsletter.consent} <a href="/privacy" className="text-primary hover:underline">{t.ratgeberPage.newsletter.privacyLink}</a> {t.ratgeberPage.newsletter.consentEnd}
               </p>
             </div>
           </div>
@@ -664,15 +306,15 @@ export default function Ratgeber() {
         {/* CTA Section */}
         <section className="py-10">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl font-bold text-white mb-3">Individuelle Beratung gewünscht?</h2>
+            <h2 className="text-2xl font-bold text-white mb-3">{t.ratgeberPage.cta.title}</h2>
             <p className="text-gray-400 mb-6 max-w-xl mx-auto">
-              Unsere Experten helfen Ihnen, die richtige Strategie für Ihr Unternehmen zu finden.
+              {t.ratgeberPage.cta.subtitle}
             </p>
             <a 
               href="/kontakt" 
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-background font-bold rounded-lg hover:bg-primary/90 transition-colors"
             >
-              Kostenlose Beratung anfragen <ArrowRight className="w-4 h-4" />
+              {t.ratgeberPage.cta.button} <ArrowRight className="w-4 h-4" />
             </a>
           </div>
         </section>
