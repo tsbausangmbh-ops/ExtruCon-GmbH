@@ -3,19 +3,22 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Bot, Share2, Globe, TrendingUp, Palette, FileText } from "lucide-react";
 import { useState } from "react";
 import logoImage from "@assets/Logo_gros_1765563749292.png";
-
-const services = [
-  { name: "KI-Agenten", href: "/ki-agenten", icon: Bot },
-  { name: "Automatisierungen", href: "/automatisierungen", icon: Share2 },
-  { name: "Webseiten mit KI", href: "/webseiten-ki", icon: Globe },
-  { name: "Social Media", href: "/leistungen/social-media", icon: TrendingUp },
-  { name: "Content Creation", href: "/leistungen/content", icon: FileText },
-  { name: "Performance Marketing", href: "/leistungen/marketing", icon: Palette },
-];
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/lib/i18n";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const { t } = useLanguage();
+
+  const services = [
+    { name: t.nav.kiAgents, href: "/ki-agenten", icon: Bot },
+    { name: t.nav.automation, href: "/automatisierungen", icon: Share2 },
+    { name: t.nav.websitesKI, href: "/webseiten-ki", icon: Globe },
+    { name: t.nav.socialMedia, href: "/leistungen/social-media", icon: TrendingUp },
+    { name: t.nav.contentCreation, href: "/leistungen/content", icon: FileText },
+    { name: t.nav.marketing, href: "/leistungen/marketing", icon: Palette },
+  ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/10">
@@ -24,16 +27,14 @@ export function Navbar() {
           <img src={logoImage} alt="ExtruCon GmbH" className="h-[5.5rem]" />
         </Link>
 
-        {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          {/* Leistungen Dropdown */}
           <div 
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
             <button className="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-primary transition-colors">
-              Leistungen
+              {t.nav.services}
               <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
             </button>
             
@@ -56,39 +57,41 @@ export function Navbar() {
           </div>
 
           <a href="/ratgeber" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
-            Ratgeber
+            {t.nav.ratgeber}
           </a>
           <a href="/faq" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
-            FAQ
+            {t.nav.faq}
           </a>
           <a href="/ueber-uns" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
-            Über uns
+            {t.nav.about}
           </a>
           <a href="/kontakt" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
-            Kontakt
+            {t.nav.contact}
           </a>
+          <LanguageSwitcher />
           <Link href="/ki-bot">
             <Button variant="default" className="bg-primary text-background hover:bg-primary/90 font-bold">
-              Loslegen
+              {t.nav.getStarted}
             </Button>
           </Link>
         </div>
 
-        {/* Mobile Toggle */}
-        <button
-          className="md:hidden text-white"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X /> : <Menu />}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <LanguageSwitcher />
+          <button
+            className="text-white"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile Nav */}
       {isOpen && (
         <div className="md:hidden bg-background border-b border-white/10 p-4 absolute w-full">
           <div className="flex flex-col gap-2">
             <div className="border-b border-white/10 pb-2 mb-2">
-              <p className="text-xs text-gray-500 uppercase tracking-wider mb-2">Leistungen</p>
+              <p className="text-xs text-gray-500 uppercase tracking-wider mb-2">{t.nav.services}</p>
               {services.map((service) => (
                 <a
                   key={service.name}
@@ -106,32 +109,32 @@ export function Navbar() {
               className="text-lg font-medium text-gray-300 hover:text-primary transition-colors py-2"
               onClick={() => setIsOpen(false)}
             >
-              Ratgeber
+              {t.nav.ratgeber}
             </a>
             <a
               href="/faq"
               className="text-lg font-medium text-gray-300 hover:text-primary transition-colors py-2"
               onClick={() => setIsOpen(false)}
             >
-              FAQ
+              {t.nav.faq}
             </a>
             <a
               href="/ueber-uns"
               className="text-lg font-medium text-gray-300 hover:text-primary transition-colors py-2"
               onClick={() => setIsOpen(false)}
             >
-              Über uns
+              {t.nav.about}
             </a>
             <a
               href="/kontakt"
               className="text-lg font-medium text-gray-300 hover:text-primary transition-colors py-2"
               onClick={() => setIsOpen(false)}
             >
-              Kontakt
+              {t.nav.contact}
             </a>
             <Link href="/ki-bot" onClick={() => setIsOpen(false)}>
               <Button className="w-full bg-primary text-background font-bold mt-2">
-                Loslegen
+                {t.nav.getStarted}
               </Button>
             </Link>
           </div>

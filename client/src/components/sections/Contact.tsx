@@ -5,9 +5,11 @@ import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
 import { Mail, Globe, Phone, Send, CheckCircle } from "lucide-react";
 import { useState } from "react";
+import { useLanguage } from "@/lib/i18n";
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const { t } = useLanguage();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,11 +24,10 @@ export function Contact() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold font-display text-white mb-6">
-              Bereit für <span className="text-gradient">Innovation?</span>
+              {t.contact.title} <span className="text-gradient">{t.contact.titleHighlight}</span>
             </h2>
             <p className="text-gray-400 text-lg mb-8">
-              Lassen Sie uns besprechen, wie die ExtruCon GmbH Ihre digitale Präsenz verändern kann. 
-              Kontaktieren Sie uns für ein Beratungsgespräch.
+              {t.contact.subtitle}
             </p>
 
             <div className="space-y-6">
@@ -35,7 +36,7 @@ export function Contact() {
                   <Mail className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500">E-Mail</p>
+                  <p className="text-sm text-gray-500">{t.contact.email}</p>
                   <a href="mailto:info@extrucon.de" className="font-medium hover:text-primary transition-colors">info@extrucon.de</a>
                 </div>
               </div>
@@ -45,7 +46,7 @@ export function Contact() {
                   <Phone className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500">Anrufen</p>
+                  <p className="text-sm text-gray-500">{t.contact.phone}</p>
                   <a href="tel:+4989444438879" className="font-medium hover:text-primary transition-colors">089 444438879</a>
                 </div>
               </div>
@@ -55,7 +56,7 @@ export function Contact() {
                   <Globe className="w-5 h-5 text-pink-500" />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500">Webpage</p>
+                  <p className="text-sm text-gray-500">{t.contact.webpage}</p>
                   <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="font-medium hover:text-primary transition-colors">https://extrucon.de</a>
                 </div>
               </div>
@@ -63,34 +64,34 @@ export function Contact() {
           </div>
 
           <Card className="glass-card p-8 border-white/10">
-            <h3 className="text-2xl font-bold text-white mb-6">Nachricht senden</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">{t.contact.formTitle}</h3>
             
             {submitted ? (
               <div className="text-center py-12">
                 <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">Vielen Dank!</h3>
+                <h3 className="text-xl font-bold text-white mb-2">{t.contact.thankYou}</h3>
                 <p className="text-gray-400">
-                  Ihre Nachricht wurde gesendet. Wir melden uns schnellstmöglich bei Ihnen.
+                  {t.contact.thankYouMessage}
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="home-name" className="text-gray-300">Name *</Label>
+                    <Label htmlFor="home-name" className="text-gray-300">{t.contact.name} *</Label>
                     <Input 
                       id="home-name" 
-                      placeholder="Ihr Name" 
+                      placeholder={t.contact.namePlaceholder}
                       required
                       className="bg-white/5 border-white/10 text-white mt-1 placeholder:text-gray-600"
                       data-testid="input-name"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="home-company" className="text-gray-300">Unternehmen</Label>
+                    <Label htmlFor="home-company" className="text-gray-300">{t.contact.company}</Label>
                     <Input 
                       id="home-company" 
-                      placeholder="Firma (optional)"
+                      placeholder={t.contact.companyPlaceholder}
                       className="bg-white/5 border-white/10 text-white mt-1 placeholder:text-gray-600"
                       data-testid="input-company"
                     />
@@ -99,22 +100,22 @@ export function Contact() {
                 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="home-email" className="text-gray-300">E-Mail *</Label>
+                    <Label htmlFor="home-email" className="text-gray-300">{t.contact.emailLabel} *</Label>
                     <Input 
                       id="home-email" 
                       type="email" 
-                      placeholder="ihre@email.de" 
+                      placeholder={t.contact.emailPlaceholder}
                       required
                       className="bg-white/5 border-white/10 text-white mt-1 placeholder:text-gray-600"
                       data-testid="input-email"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="home-phone" className="text-gray-300">Telefon</Label>
+                    <Label htmlFor="home-phone" className="text-gray-300">{t.contact.phone}</Label>
                     <Input 
                       id="home-phone" 
                       type="tel" 
-                      placeholder="+49 ..."
+                      placeholder={t.contact.phonePlaceholder}
                       className="bg-white/5 border-white/10 text-white mt-1 placeholder:text-gray-600"
                       data-testid="input-phone"
                     />
@@ -122,28 +123,28 @@ export function Contact() {
                 </div>
 
                 <div>
-                  <Label htmlFor="home-service" className="text-gray-300">Interesse an</Label>
+                  <Label htmlFor="home-service" className="text-gray-300">{t.contact.interest}</Label>
                   <select 
                     id="home-service"
                     className="w-full mt-1 px-3 py-2 rounded-md bg-white/5 border border-white/10 text-white"
                     data-testid="select-service"
                   >
-                    <option value="" className="bg-gray-900">Bitte wählen...</option>
-                    <option value="ki" className="bg-gray-900">KI & Automatisierung</option>
-                    <option value="social" className="bg-gray-900">Social Media Marketing</option>
-                    <option value="web" className="bg-gray-900">Webentwicklung</option>
-                    <option value="marketing" className="bg-gray-900">Performance Marketing</option>
-                    <option value="content" className="bg-gray-900">Content Creation</option>
-                    <option value="brand" className="bg-gray-900">Markenaufbau</option>
-                    <option value="other" className="bg-gray-900">Sonstiges</option>
+                    <option value="" className="bg-gray-900">{t.contact.selectPlaceholder}</option>
+                    <option value="ki" className="bg-gray-900">{t.contact.kiAutomation}</option>
+                    <option value="social" className="bg-gray-900">{t.contact.socialMediaMarketing}</option>
+                    <option value="web" className="bg-gray-900">{t.contact.webDevelopment}</option>
+                    <option value="marketing" className="bg-gray-900">{t.contact.performanceMarketing}</option>
+                    <option value="content" className="bg-gray-900">{t.contact.contentCreation}</option>
+                    <option value="brand" className="bg-gray-900">{t.contact.brandBuilding}</option>
+                    <option value="other" className="bg-gray-900">{t.contact.other}</option>
                   </select>
                 </div>
                 
                 <div>
-                  <Label htmlFor="home-message" className="text-gray-300">Nachricht *</Label>
+                  <Label htmlFor="home-message" className="text-gray-300">{t.contact.message} *</Label>
                   <Textarea 
                     id="home-message" 
-                    placeholder="Wie können wir Ihnen helfen?" 
+                    placeholder={t.contact.messagePlaceholder}
                     rows={4}
                     required
                     className="bg-white/5 border-white/10 text-white mt-1 resize-none placeholder:text-gray-600"
@@ -152,7 +153,7 @@ export function Contact() {
                 </div>
 
                 <p className="text-xs text-gray-500">
-                  Mit dem Absenden stimmen Sie unserer <a href="/privacy" className="text-primary hover:underline">Datenschutzerklärung</a> zu.
+                  {t.contact.privacyText} <a href="/privacy" className="text-primary hover:underline">{t.contact.privacyLink}</a> {t.contact.privacyEnd}
                 </p>
                 
                 <Button 
@@ -161,7 +162,7 @@ export function Contact() {
                   data-testid="button-submit-contact"
                 >
                   <Send className="w-4 h-4 mr-2" />
-                  Nachricht senden
+                  {t.contact.submit}
                 </Button>
               </form>
             )}
