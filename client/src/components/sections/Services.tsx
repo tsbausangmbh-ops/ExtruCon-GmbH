@@ -1,9 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Bot, Share2, Globe, PenTool, Fingerprint } from "lucide-react";
+import { Bot, Share2, Globe, PenTool, Fingerprint, TrendingUp } from "lucide-react";
 import aiImg from "@assets/generated_images/glowing_neural_network_brain.png";
 import socialImg from "@assets/generated_images/digital_social_connection_abstract_art.png";
 import webImg from "@assets/generated_images/holographic_creative_interface.png";
 import brandImg from "@assets/generated_images/abstract_digital_brand_identity_construction.png";
+import contentImg from "@assets/generated_images/abstract_content_creation_visualization.png";
+import marketingImg from "@assets/generated_images/abstract_performance_marketing_growth.png";
 import { motion } from "framer-motion";
 
 const services = [
@@ -15,18 +17,25 @@ const services = [
     color: "text-amber-400"
   },
   {
+    title: "Performance Marketing",
+    description: "Datengetriebene Kampagnen und SEO-Strategien für messbares Wachstum und maximale Sichtbarkeit.",
+    icon: TrendingUp,
+    image: marketingImg,
+    color: "text-orange-400"
+  },
+  {
+    title: "Social Media",
+    description: "Strategisches Community-Management und virale Kampagnen, um Ihr Publikum auf allen Kanälen zu binden.",
+    icon: Share2,
+    image: socialImg,
+    color: "text-purple-400"
+  },
+  {
     title: "KI & Automatisierung",
     description: "Maßgeschneiderte KI-Bots und intelligente Automatisierungs-Workflows zur Optimierung Ihrer Abläufe rund um die Uhr.",
     icon: Bot,
     image: aiImg,
     color: "text-cyan-400"
-  },
-  {
-    title: "Social Media",
-    description: "Datengetriebene Strategien, um Ihr Publikum zu vergrößern und Kunden auf allen Plattformen zu binden.",
-    icon: Share2,
-    image: socialImg,
-    color: "text-purple-400"
   },
   {
     title: "Web & Digitale Plattformen",
@@ -39,7 +48,7 @@ const services = [
     title: "Content Erstellung",
     description: "Überzeugendes Storytelling und visuelle Inhalte, die bei Ihrer Zielgruppe ankommen.",
     icon: PenTool,
-    image: null, // Using a gradient fallback if no image
+    image: contentImg,
     color: "text-pink-400"
   }
 ];
