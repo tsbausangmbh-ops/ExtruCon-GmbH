@@ -160,7 +160,7 @@ export function ChatWidget() {
             animate={{ opacity: 1, x: 0 }}
             className="bg-green-500/20 backdrop-blur-md border border-green-400/30 rounded-full px-4 py-2 text-sm text-white shadow-lg"
           >
-            <span className="font-medium">Fragen? KI-Bot hilft!</span>
+            <span className="font-medium">{t.chatbot?.bubble || "Fragen? KI-Bot hilft!"}</span>
           </motion.div>
         )}
         <motion.button

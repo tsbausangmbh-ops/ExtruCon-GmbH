@@ -159,6 +159,7 @@ export const translations = {
       placeholder: 'Stellen Sie eine Frage...',
       send: 'Senden',
       welcome: 'Hallo! Ich bin der ExtruCon KI-Assistent. Wie kann ich Ihnen helfen?',
+      bubble: 'Fragen? KI-Bot hilft!',
     },
     faq: {
       title: 'Häufige Fragen',
@@ -1170,6 +1171,7 @@ export const translations = {
       placeholder: 'Ask a question...',
       send: 'Send',
       welcome: 'Hello! I am the ExtruCon AI Assistant. How can I help you?',
+      bubble: 'Questions? AI Bot helps!',
     },
     faq: {
       title: 'Frequently Asked Questions',
@@ -2181,6 +2183,7 @@ export const translations = {
       placeholder: 'Postavite pitanje...',
       send: 'Pošalji',
       welcome: 'Pozdrav! Ja sam ExtruCon AI Asistent. Kako vam mogu pomoći?',
+      bubble: 'Pitanja? AI Bot pomaže!',
     },
     faq: {
       title: 'Često postavljana pitanja',
