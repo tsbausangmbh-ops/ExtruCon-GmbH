@@ -8,6 +8,7 @@ import Privacy from "@/pages/Privacy";
 import Terms from "@/pages/Terms";
 import Impressum from "@/pages/Impressum";
 import Contact from "@/pages/Contact";
+import Ratgeber from "@/pages/Ratgeber";
 import Brand from "@/pages/services/Brand";
 import Content from "@/pages/services/Content";
 import SocialMedia from "@/pages/services/SocialMedia";
@@ -24,6 +25,7 @@ function Router() {
       <Route path="/terms" component={Terms} />
       <Route path="/impressum" component={Impressum} />
       <Route path="/kontakt" component={Contact} />
+      <Route path="/ratgeber" component={Ratgeber} />
       <Route path="/leistungen/markenaufbau" component={Brand} />
       <Route path="/leistungen/content" component={Content} />
       <Route path="/leistungen/social-media" component={SocialMedia} />
