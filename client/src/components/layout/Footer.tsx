@@ -1,4 +1,5 @@
-import { Cpu, MapPin, Mail, Phone, Clock } from "lucide-react";
+import { MapPin, Mail, Phone, Clock } from "lucide-react";
+import logoImg from "@assets/Logo_1765563135323.png";
 
 export function Footer() {
   return (
@@ -7,8 +8,8 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Company Info with Schema */}
           <div className="col-span-1 md:col-span-2">
-            <a href="https://extrucon.de" className="flex items-center gap-2 mb-4 hover:opacity-80 transition-opacity" itemProp="url">
-              <Cpu className="h-6 w-6 text-primary" />
+            <a href="https://extrucon.de" className="flex items-center gap-3 mb-4 hover:opacity-80 transition-opacity" itemProp="url">
+              <img src={logoImg} alt="ExtruCon GmbH Logo" className="h-10 w-10 object-contain" />
               <span className="text-xl font-bold font-display tracking-wider text-white" itemProp="name">
                 ExtruCon GmbH
               </span>
