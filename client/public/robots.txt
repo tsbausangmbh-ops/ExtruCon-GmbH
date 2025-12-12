@@ -214,10 +214,13 @@ Disallow: /*.json$
 Disallow: /node_modules/
 
 # ===========================================
-# SITEMAP
+# SITEMAP & FAVICON
 # ===========================================
 
 Sitemap: https://extrucon.de/sitemap.xml
+
+# Favicon für Suchmaschinen
+Allow: /favicon.png
 
 # ===========================================
 # CRAWL-DELAY FÜR SERVER-SCHUTZ
