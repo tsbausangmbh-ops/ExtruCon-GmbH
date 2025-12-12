@@ -42,7 +42,9 @@ export default function Privacy() {
               <li><a href="#m638" className="text-cyan-400 hover:text-cyan-300 transition-colors">Werbliche Kommunikation</a></li>
               <li><a href="#m263" className="text-cyan-400 hover:text-cyan-300 transition-colors">Webanalyse und Optimierung</a></li>
               <li><a href="#m264" className="text-cyan-400 hover:text-cyan-300 transition-colors">Onlinemarketing</a></li>
+              <li><a href="#mKI" className="text-cyan-400 hover:text-cyan-300 transition-colors">Einsatz von Künstlicher Intelligenz</a></li>
               <li><a href="#m136" className="text-cyan-400 hover:text-cyan-300 transition-colors">Social Media Präsenzen</a></li>
+              <li><a href="#mSocialMedia" className="text-cyan-400 hover:text-cyan-300 transition-colors">Social Media Marketing</a></li>
               <li><a href="#m328" className="text-cyan-400 hover:text-cyan-300 transition-colors">Plugins und eingebettete Inhalte</a></li>
             </ul>
           </section>
@@ -364,15 +366,69 @@ export default function Privacy() {
             </p>
           </section>
 
+          {/* Einsatz von Künstlicher Intelligenz */}
+          <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="mKI">
+            <h2 className="text-xl font-bold text-white mb-4">Einsatz von Künstlicher Intelligenz (KI)</h2>
+            <p className="text-gray-400 mb-4 leading-relaxed">
+              Im Rahmen unserer Dienstleistungen setzen wir Technologien der Künstlichen Intelligenz (KI) ein, um unseren Kunden innovative und effiziente Lösungen anzubieten. Hierzu gehören insbesondere KI-gestützte Chatbots, automatisierte Content-Erstellung, Datenanalysen und Optimierungsverfahren.
+            </p>
+            <p className="text-gray-400 mb-4 leading-relaxed">
+              <strong className="text-gray-200">Verarbeitung durch KI-Systeme:</strong> Bei der Nutzung von KI-Diensten können personenbezogene Daten verarbeitet werden, etwa Eingaben in Chatbots, Kommunikationsinhalte oder Nutzungsverhalten. Diese Daten werden ausschließlich zur Erbringung der jeweiligen Dienstleistung und zur Verbesserung der KI-Modelle verwendet.
+            </p>
+            <p className="text-gray-400 mb-4 leading-relaxed">
+              <strong className="text-gray-200">Drittanbieter-KI-Dienste:</strong> Wir nutzen KI-Dienste von Drittanbietern wie OpenAI, Google oder Microsoft. Diese Anbieter verarbeiten Daten gemäß ihrer eigenen Datenschutzrichtlinien. Wir haben mit diesen Anbietern entsprechende Auftragsverarbeitungsverträge abgeschlossen, um den Schutz Ihrer Daten zu gewährleisten.
+            </p>
+            <p className="text-gray-400 mb-4 leading-relaxed">
+              <strong className="text-gray-200">Automatisierte Entscheidungsfindung:</strong> Soweit wir KI für automatisierte Entscheidungen einsetzen, die rechtliche Wirkung entfalten oder Sie in ähnlicher Weise erheblich beeinträchtigen könnten, werden Sie hierüber gesondert informiert und haben das Recht auf menschliche Überprüfung.
+            </p>
+            <ul className="text-gray-400 space-y-2">
+              <li><strong className="text-gray-200">Verarbeitete Datenarten:</strong> Inhaltsdaten, Nutzungsdaten, Kommunikationsdaten, Meta-Daten.</li>
+              <li><strong className="text-gray-200">Betroffene Personen:</strong> Nutzer, Kunden, Interessenten, Kommunikationspartner.</li>
+              <li><strong className="text-gray-200">Zwecke der Verarbeitung:</strong> Erbringung von KI-gestützten Dienstleistungen, Automatisierung, Optimierung, Kundenservice.</li>
+              <li><strong className="text-gray-200">Rechtsgrundlagen:</strong> Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO), Vertragserfüllung (Art. 6 Abs. 1 S. 1 lit. b) DSGVO), Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).</li>
+            </ul>
+          </section>
+
           {/* Social Media */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="m136">
             <h2 className="text-xl font-bold text-white mb-4">Präsenzen in sozialen Netzwerken (Social Media)</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Wir unterhalten Onlinepräsenzen innerhalb sozialer Netzwerke und verarbeiten in diesem Rahmen Nutzerdaten, um mit den dort aktiven Nutzern zu kommunizieren oder Informationen über uns anzubieten.
             </p>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-400 mb-4 leading-relaxed">
               Wir weisen darauf hin, dass dabei Nutzerdaten außerhalb des Raumes der Europäischen Union verarbeitet werden können. Hierdurch können sich für die Nutzer Risiken ergeben, weil so etwa die Durchsetzung der Nutzerrechte erschwert werden könnte.
             </p>
+            <ul className="text-gray-400 space-y-2">
+              <li><strong className="text-gray-200">Eingesetzte Plattformen:</strong> Instagram, Facebook, LinkedIn, TikTok, YouTube, X (Twitter).</li>
+              <li><strong className="text-gray-200">Verarbeitete Datenarten:</strong> Kontaktdaten, Inhaltsdaten, Nutzungsdaten, Meta-, Kommunikations- und Verfahrensdaten.</li>
+              <li><strong className="text-gray-200">Betroffene Personen:</strong> Nutzer (z.B. Webseitenbesucher, Nutzer von Onlinediensten).</li>
+            </ul>
+          </section>
+
+          {/* Social Media Marketing */}
+          <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="mSocialMedia">
+            <h2 className="text-xl font-bold text-white mb-4">Social Media Marketing und Werbung</h2>
+            <p className="text-gray-400 mb-4 leading-relaxed">
+              Im Rahmen unserer Social Media Marketing-Dienstleistungen verarbeiten wir personenbezogene Daten zur Planung, Durchführung und Analyse von Werbekampagnen auf sozialen Netzwerken. Dies umfasst die Erstellung und Verwaltung von Werbeanzeigen, Zielgruppenanalysen sowie die Erfolgsmessung von Kampagnen.
+            </p>
+            <p className="text-gray-400 mb-4 leading-relaxed">
+              <strong className="text-gray-200">Zielgruppenbildung und Targeting:</strong> Wir nutzen die Targeting-Funktionen der sozialen Netzwerke, um Werbeanzeigen gezielt an relevante Zielgruppen auszuspielen. Dabei können demografische Daten, Interessen, Verhaltensweisen und andere Kriterien verwendet werden. Die Verarbeitung erfolgt durch die jeweiligen Plattformbetreiber gemäß deren Datenschutzrichtlinien.
+            </p>
+            <p className="text-gray-400 mb-4 leading-relaxed">
+              <strong className="text-gray-200">Pixel und Tracking-Technologien:</strong> Zur Messung der Effektivität von Werbekampagnen und zur Erstellung von Custom Audiences können Tracking-Pixel (z.B. Facebook-Pixel, LinkedIn Insight Tag) auf Websites eingesetzt werden. Diese erfassen Nutzerinteraktionen und ermöglichen Retargeting-Maßnahmen. Der Einsatz erfolgt nur mit entsprechender Einwilligung.
+            </p>
+            <p className="text-gray-400 mb-4 leading-relaxed">
+              <strong className="text-gray-200">Influencer-Marketing:</strong> Bei der Zusammenarbeit mit Influencern können personenbezogene Daten im Rahmen der Kampagnenkoordination und Erfolgsmessung verarbeitet werden. Hierzu gehören Kontaktdaten, Reichweitendaten und Engagement-Metriken.
+            </p>
+            <p className="text-gray-400 mb-4 leading-relaxed">
+              <strong className="text-gray-200">Community Management:</strong> Im Rahmen des Community Managements verarbeiten wir Daten von Nutzern, die mit unseren Social Media-Präsenzen interagieren, etwa durch Kommentare, Nachrichten oder Reaktionen. Diese Verarbeitung dient der Kommunikation und Kundenbetreuung.
+            </p>
+            <ul className="text-gray-400 space-y-2">
+              <li><strong className="text-gray-200">Verarbeitete Datenarten:</strong> Bestandsdaten, Kontaktdaten, Inhaltsdaten, Nutzungsdaten, Meta-, Kommunikations- und Verfahrensdaten, Event-Daten.</li>
+              <li><strong className="text-gray-200">Betroffene Personen:</strong> Nutzer, Interessenten, Kunden, Kommunikationspartner.</li>
+              <li><strong className="text-gray-200">Zwecke der Verarbeitung:</strong> Marketing, Zielgruppenbildung, Reichweitenmessung, Konversionsmessung, Kommunikation.</li>
+              <li><strong className="text-gray-200">Rechtsgrundlagen:</strong> Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO), Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).</li>
+            </ul>
           </section>
 
           {/* Plugins und eingebettete Inhalte */}
