@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, ReactNode } from 'react';
 
-export type Language = 'de' | 'en' | 'hr';
+export type Language = 'de' | 'en' | 'hr' | 'tr';
 
 export const translations = {
   de: {
@@ -714,6 +714,193 @@ export const translations = {
       connectionError: 'Greška povezivanja. Molimo provjerite svoju internetsku vezu.',
     },
   },
+  tr: {
+    nav: {
+      services: 'Hizmetler',
+      ratgeber: 'Rehber',
+      faq: 'SSS',
+      about: 'Hakkımızda',
+      contact: 'İletişim',
+      getStarted: 'Başla',
+      kiAgents: 'AI Ajanlar',
+      automation: 'Otomasyonlar',
+      websitesKI: 'AI Web Siteleri',
+      socialMedia: 'Sosyal Medya',
+      contentCreation: 'İçerik Üretimi',
+      marketing: 'Performans Pazarlama',
+    },
+    hero: {
+      location: 'Fürstenfeldbruck · Münih · Bavyera · Almanya Genelinde',
+      badge: 'Akıllı AI otomasyonu ile zaman tasarrufu',
+      title1: 'Daha az rutin iş.',
+      title2: 'Daha fazla büyüme.',
+      subtitle: 'AI ajanları tekrarlayan görevlerinizi üstlenir –',
+      subtitleHighlight: '7/24, hatasız, ölçeklenebilir',
+      description: 'Fürstenfeldbruck merkezli AI ajansınız, müşteri hizmetleri, potansiyel müşteri oluşturma ve pazarlamayı optimize eden akıllı otomasyonlar geliştirir. Almanya genelinde.',
+      timeSaving: '%80 zaman tasarrufu',
+      available: '7/24 erişilebilir',
+      freeConsultation: 'Ücretsiz danışmanlık',
+      ctaPrimary: 'Ücretsiz İlk Danışma',
+      ctaSecondary: 'AI Ajanları Keşfet',
+      ctaBot: 'AI Botu Test Et',
+    },
+    services: {
+      title: 'Hizmetlerimiz',
+      subtitle: 'İşletmeniz için özel AI çözümleri',
+      kiAgents: {
+        title: 'AI Ajanlar',
+        desc: 'Müşteri hizmetleri, destek ve potansiyel müşteri oluşturma için akıllı sohbet botları ve ajanlar',
+      },
+      automation: {
+        title: 'Otomasyonlar',
+        desc: 'Özel iş akışlarıyla iş süreçlerini otomatikleştirin ve zaman kazanın',
+      },
+      websites: {
+        title: 'AI Web Siteleri',
+        desc: 'Daha fazla dönüşüm için entegre AI özellikleri olan modern web siteleri',
+      },
+      socialMedia: {
+        title: 'Sosyal Medya',
+        desc: 'AI destekli sosyal medya pazarlama ve topluluk yönetimi',
+      },
+      content: {
+        title: 'İçerik Üretimi',
+        desc: 'Tüm kanallar için AI destekli içerik oluşturma',
+      },
+      marketing: {
+        title: 'Performans Pazarlama',
+        desc: 'Maksimum ROI için AI optimizasyonlu veri odaklı pazarlama',
+      },
+    },
+    contact: {
+      title: 'İnovasyona',
+      titleHighlight: 'hazır mısınız?',
+      subtitle: 'ExtruCon GmbH\'nin dijital varlığınızı nasıl dönüştürebileceğini konuşalım. Danışmanlık için bizimle iletişime geçin.',
+      email: 'E-posta',
+      phone: 'Telefon',
+      webpage: 'Web sitesi',
+      formTitle: 'Mesaj gönder',
+      name: 'İsim',
+      namePlaceholder: 'Adınız',
+      company: 'Şirket',
+      companyPlaceholder: 'Şirket (isteğe bağlı)',
+      emailLabel: 'E-posta',
+      emailPlaceholder: 'E-posta adresiniz',
+      phonePlaceholder: 'Telefon numaranız',
+      serviceLabel: 'İlgilendiğiniz hizmet',
+      servicePlaceholder: 'Hizmet seçin...',
+      serviceOptions: ['AI Ajanları & Sohbet Botları', 'Otomasyon & İş Akışları', 'AI Web Siteleri', 'Sosyal Medya & İçerik', 'Performans Pazarlama', 'Diğer'],
+      message: 'Mesaj',
+      messagePlaceholder: 'Projenizi veya isteğinizi açıklayın...',
+      submit: 'Mesaj gönder',
+      sending: 'Gönderiliyor...',
+      successTitle: 'Mesaj gönderildi!',
+      successMessage: 'Talebiniz için teşekkür ederiz. Kısa süre içinde size döneceğiz.',
+      errorMessage: 'Mesaj gönderilemedi. Lütfen daha sonra tekrar deneyin.',
+    },
+    footer: {
+      slogan: 'AI ve veriye dayalı pazarlama stratejileriyle dijital varlığınızı dönüştürüyoruz.',
+      quickLinks: 'Hızlı Bağlantılar',
+      legal: 'Yasal',
+      imprint: 'Künye',
+      privacy: 'Gizlilik Politikası',
+      agb: 'Genel Şartlar',
+      copyright: 'Tüm hakları saklıdır.',
+      madeWith: 'ile yapıldı',
+      inBavaria: 'Bavyera\'da',
+    },
+    chatbot: {
+      title: 'AI Asistan',
+      placeholder: 'Sorunuzu yazın...',
+      send: 'Gönder',
+      welcome: 'Merhaba! Ben ExtruCon AI Asistanı. Size nasıl yardımcı olabilirim?',
+    },
+    faq: {
+      title: 'Sıkça Sorulan Sorular',
+      questions: [
+        { q: 'Ne kadar hızlı cevap alırım?', a: 'İş günlerinde 24 saat içinde.' },
+        { q: 'Ücretsiz ilk danışma mı?', a: 'Evet! Her zaman ücretsiz ve bağlayıcı değil.' },
+        { q: 'Küçük şirketler için de mi?', a: 'Kesinlikle. Her bütçe için çözümler.' },
+      ],
+      viewAll: 'Tüm SSS\'leri görüntüle',
+    },
+    servicesPage: {
+      title: 'Hizmetlerimiz',
+      subtitle: 'Güçlü markadan en son AI teknolojisine kadar kapsamlı dijital çözümler.',
+      brand: { title: 'Marka Oluşturma', desc: 'Güven inşa eden ve akılda kalan tanınabilir marka kimlikleri geliştirme.' },
+      content: { title: 'İçerik ve Paylaşımlar', desc: 'Etkileşimi ve satışı artıran hedefli metinler ve yaratıcı sosyal medya paylaşımları.' },
+      social: { title: 'Sosyal Medya', desc: 'Tüm kanallarda kitleyi harekete geçiren stratejik topluluk yönetimi ve viral kampanyalar.' },
+      ki: { title: 'AI ve Otomasyon', desc: 'İşletmenizi 7/24 optimize etmek için özel AI botları ve akıllı otomasyon iş akışları.' },
+      web: { title: 'Web ve Dijital Platformlar', desc: 'Modern web için yüksek performanslı, görsel açıdan etkileyici web siteleri ve web uygulamaları.' },
+      marketing: { title: 'Performans Pazarlama', desc: 'Ölçülebilir büyüme ve maksimum görünürlük için veri odaklı kampanyalar ve SEO stratejileri.' },
+    },
+    problemSection: {
+      title: 'Bu zorlukları',
+      titleHighlight: 'tanıyor musunuz?',
+      subtitle: 'Çoğu şirket aynı sorunlarla mücadele ediyor – değerli zaman ve kaynakları boşa harcıyor.',
+      routine: { title: 'Zaman alan rutin görevler', problem: 'Sorun:', desc: 'Çalışma sürenizin %80\'i tekrarlayan görevlere gidiyor: e-postaları yanıtlamak, veri girişi, raporlar oluşturmak.', solution: 'Çözüm: AI ajanları bu görevleri otomatikleştirir – 7/24, hatasız.' },
+      leads: { title: 'Kaybedilen potansiyel müşteriler', problem: 'Sorun:', desc: 'Müşteri taleplerine çok geç yanıt veriliyor. Potansiyel müşteriler kimse hemen tepki vermediği için ayrılıyor.', solution: 'Çözüm: Sohbet botları potansiyel müşterileri anında nitelendirir ve otomatik olarak randevu ayarlar.' },
+      marketing: { title: 'Sonuçsuz pazarlama', problem: 'Sorun:', desc: 'Reklama yatırım yapıyorsunuz ama dönüşüm oranları düşük kalıyor. ROI belirsiz.', solution: 'Çözüm: AI analiziyle veri odaklı pazarlama neyin gerçekten işe yaradığını gösterir.' },
+      google: { title: 'Google\'da görünmez', problem: 'Sorun:', desc: 'Web siteniz var ama Münih, Fürstenfeldbruck ve Bavyera\'daki yerel müşteriler sizi bulamıyor. Rakipler sizden önce sıralanıyor – bölgesel ve ulusal.', solution: 'Çözüm: Maksimum bölgesel görünürlük için AI içerik stratejisiyle yerel SEO ve coğrafi hedefleme.' },
+      innovation: { title: 'İnovasyon için zaman yok', problem: 'Sorun:', desc: 'Günlük işler tüm kapasiteyi tüketiyor. Stratejik projeler için zaman yok.', solution: 'Çözüm: Otomasyon gerçek değer yaratma için alan oluşturur.' },
+      processes: { title: 'Modası geçmiş süreçler', problem: 'Sorun:', desc: 'Manuel süreçler hataya açık ve ölçeklenmiyor. Büyüme yük haline geliyor.', solution: 'Çözüm: n8n iş akışları araçlarınızı bağlar ve süreçleri otomatikleştirir.' },
+      ready: 'Çözüme hazır mısınız?',
+    },
+    aboutSection: {
+      badge: 'Hakkımızda',
+      title: 'Vizyondan gerçekleştirmeye',
+      subtitle: 'ExtruCon GmbH, dijital pazarlama ve AI otomasyonu için ortağınızdır. İlk fikirden ölçülebilir başarıya kadar tüm yol boyunca size eşlik ediyoruz.',
+      step: 'Adım',
+      vision: { title: 'Vizyon', desc: 'Hedeflerinizi anlıyor ve dijital başarınız için özelleştirilmiş bir strateji geliştiriyoruz.' },
+      strategy: { title: 'Strateji', desc: 'Verilere ve deneyime dayanarak ölçülebilir kilometre taşlarıyla net bir plan oluşturuyoruz.' },
+      execution: { title: 'Uygulama', desc: 'Ekibimiz stratejiyi profesyonelce uyguluyor – AI otomasyonundan hazır web varlığına kadar.' },
+      success: { title: 'Başarı', desc: 'Sürekli optimizasyon ve şeffaf raporlama sürdürülebilir sonuçlar sağlıyor.' },
+      whyUs: 'Neden ExtruCon?',
+      reasons: ['Fürstenfeldbruck\'tan Almanya genelinde hizmet', 'Verimli çözümler için en son AI teknolojileri', 'Şeffaf fiyatlandırma ve ölçülebilir sonuçlar', 'Özel iletişim kişilerinden kişisel destek', '50\'den fazla başarıyla tamamlanmış proje'],
+    },
+    funnelSection: {
+      badge: 'Kanıtlanmış Sistem',
+      title: 'ExtruCon',
+      titleHighlight: 'Başarı Sistemi',
+      subtitle: 'Görünmez web sitelerini müşteri mıknatıslarına dönüştürüyoruz. SEO ve coğrafi tabanlı funnel sistemimiz görünürlük sorununuzu çözüyor – Almanya genelinde.',
+      step1: { title: '1. Coğrafi SEO ile Yerel Hakimiyet', desc: 'Almanya genelinde konumunuzu ve hedef bölgenizi analiz ediyoruz. Yerel SEO ve coğrafi hedefleme ile Google Haritalar ve yerel aramada en üstte görünmenizi sağlıyoruz.' },
+      step2: { title: '2. İçerik Stratejisiyle Nitelikli Potansiyel Müşteriler', desc: 'Her ziyaretçi müşteri değildir. İçerik funnel\'ımız, yüksek kaliteli, SEO optimize edilmiş içerikle potansiyel müşterileri filtreler, sadece nitelikli olanları bırakır.' },
+      step3: { title: '3. AI ile Otomatik Dönüşüm', desc: 'Funnel\'ın son parçası: Web siteniz ziyaretçileri otomatik olarak ödeme yapan müşterilere dönüştürür veya randevu ayarlar – akıllı AI sohbet botları ve otomasyonlarımız tarafından desteklenir.' },
+      funnelLabels: { seo: 'SEO & Trafik', geo: 'Coğrafi Hedefleme', conversion: 'Dönüşüm & Satış' },
+      whyTrust: 'Şirketler Neden Bize Güveniyor',
+      trust: [
+        { title: 'Almanya Genelinde Uzmanlık', desc: 'Almanya genelinde müşterilere hizmet veriyoruz' },
+        { title: 'Ölçülebilir Sonuçlar', desc: 'Şeffaf KPI\'lar ve aylık raporlar' },
+        { title: 'Kişisel Destek', desc: 'Doğrudan iletişim kişisi, çağrı merkezi yok' },
+        { title: 'Hızlı Uygulama', desc: 'İlk sonuçlar genellikle 4-6 hafta içinde' },
+      ],
+      faqTitle: 'Dijital Pazarlama Hakkında Sık Sorulan Sorular',
+      faqs: [
+        { q: 'SEO ile ne kadar hızlı sonuç göreceğim?', a: 'İlk iyileştirmeler genellikle 4-8 hafta sonra görülür. Sürdürülebilir üst sıralar için 3-6 ay planlıyoruz.' },
+        { q: 'Almanya genelinde çalışıyor musunuz?', a: 'Evet! Merkezimiz Münih yakınlarındaki Fürstenfeldbruck\'ta, ancak Almanya genelinde müşterilere hizmet veriyoruz – uzaktan ve yerinde.' },
+        { q: 'Pazarlama ajansının maliyeti ne kadar?', a: 'Paketlerimiz aylık 990€\'dan başlıyor. Bireysel danışmanlık ve özel teklif için ücretsiz iletişime geçin.' },
+        { q: 'Tek tek hizmetler de sunuyor musunuz?', a: 'Evet, ister sadece sosyal medya, ister sadece web tasarımı, ister sadece SEO olsun – hizmetlerimizi ihtiyaçlarınıza göre uyarlıyoruz. Birleşik stratejiler genellikle en büyük etkiye sahiptir.' },
+      ],
+    },
+    chatbotPage: {
+      badge: 'Canlı Demo: AI Asistan',
+      title: 'AI Asistanımızı',
+      titleHighlight: 'test edin',
+      subtitle: 'Akıllı bir AI ajanın nasıl çalıştığını canlı deneyimleyin. Bu bot, işletmeniz için geliştirebileceğimizin bir örneğidir – sektörünüze ve ihtiyaçlarınıza özel olarak uyarlanmış.',
+      features: [
+        { title: 'Anında Yanıtlar', desc: '7/24 kullanılabilir, müşteri sorularını saatler yerine saniyeler içinde yanıtlar.' },
+        { title: 'Öğrenme Yeteneği', desc: 'Ürünleriniz, hizmetleriniz ve SSS\'leriniz üzerinde eğitilebilir.' },
+        { title: 'Ekibiniz İçin Rahatlama', desc: 'Tekrarlayan sorguları üstlenir – ekibiniz önemli olana odaklanır.' },
+      ],
+      askAbout: 'Hizmetlerimiz hakkında sorular sorun: AI ajanları, otomasyon, AI web siteleri, pazarlama ve daha fazlası.',
+      welcome: 'Hoş geldiniz!',
+      welcomeMsg: 'Hizmetlerimiz hakkında soru sorun: AI ajanları, otomasyon, AI web siteleri ve daha fazlası.',
+      suggestions: ['AI ajanları nedir?', 'Otomasyon nasıl çalışır?', 'Bir web sitesi ne kadar?'],
+      placeholder: 'Sorunuzu girin...',
+      errorMsg: 'Üzgünüz, bir hata oluştu. Lütfen tekrar deneyin.',
+      connectionError: 'Bağlantı hatası. Lütfen internet bağlantınızı kontrol edin.',
+    },
+  },
 };
 
 type Translations = typeof translations.de;
@@ -730,7 +917,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('language') as Language;
-      if (saved && ['de', 'en', 'hr'].includes(saved)) return saved;
+      if (saved && ['de', 'en', 'hr', 'tr'].includes(saved)) return saved;
     }
     return 'de';
   });
