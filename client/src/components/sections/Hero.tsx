@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import heroBg from "@assets/generated_images/futuristic_digital_landscape_with_connecting_nodes.png";
 import { ArrowRight, MapPin, Bot, Zap, Clock } from "lucide-react";
 
@@ -60,16 +61,16 @@ export function Hero() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/kontakt">
+              <Link href="/kontakt">
                 <Button size="lg" className="bg-primary text-background hover:bg-primary/90 font-bold text-lg h-12 px-8" data-testid="button-hero-cta">
                   Kostenlose Erstberatung
                 </Button>
-              </a>
-              <a href="/ki-agenten">
+              </Link>
+              <Link href="/ki-agenten">
                 <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 hover:text-white font-medium text-lg h-12 px-8 group" data-testid="button-hero-secondary">
                   KI-Agenten entdecken <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
