@@ -1,11 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Bot, Share2, Globe, PenTool, Fingerprint, Briefcase } from "lucide-react";
+import { Bot, Share2, Globe, PenTool, Fingerprint, TrendingUp } from "lucide-react";
 import aiImg from "@assets/generated_images/glowing_neural_network_brain.png";
 import socialImg from "@assets/generated_images/digital_social_connection_abstract_art.png";
 import webImg from "@assets/generated_images/holographic_creative_interface.png";
 import brandImg from "@assets/generated_images/abstract_digital_brand_identity_construction.png";
 import contentImg from "@assets/generated_images/abstract_content_creation_visualization.png";
-import officeImg from "@assets/generated_images/digital_office_administration_visualization.png";
+import marketingImg from "@assets/generated_images/abstract_performance_marketing_growth.png";
 import { motion } from "framer-motion";
 
 const services = [
@@ -17,11 +17,11 @@ const services = [
     color: "text-amber-400"
   },
   {
-    title: "Büroservice",
-    description: "Professionelle Büroorganisation und administrative Unterstützung, damit Sie sich auf Ihr Kerngeschäft konzentrieren können.",
-    icon: Briefcase,
-    image: officeImg,
-    color: "text-emerald-400"
+    title: "Texting & Postings",
+    description: "Zielgruppengenaue Texte und kreative Social Media Posts, die Interaktion fördern und verkaufen.",
+    icon: PenTool,
+    image: contentImg,
+    color: "text-pink-400"
   },
   {
     title: "Social Media",
@@ -45,11 +45,11 @@ const services = [
     color: "text-blue-400"
   },
   {
-    title: "Texting und Postings",
-    description: "Zielgruppengenaue Texte und kreative Social Media Posts, die Interaktion fördern und verkaufen.",
-    icon: PenTool,
-    image: contentImg,
-    color: "text-pink-400"
+    title: "Performance Marketing",
+    description: "Datengetriebene Kampagnen und SEO-Strategien für messbares Wachstum und maximale Sichtbarkeit.",
+    icon: TrendingUp,
+    image: marketingImg,
+    color: "text-orange-400"
   }
 ];
 
