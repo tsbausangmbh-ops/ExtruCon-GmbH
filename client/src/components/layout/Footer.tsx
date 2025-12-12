@@ -62,7 +62,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-primary flex-shrink-0" />
-                <span>Mo–Fr 08:00–17:00</span>
+                <span>{t.footer.openingHours}</span>
                 <meta itemProp="openingHours" content="Mo-Fr 08:00-17:00" />
               </li>
             </ul>
@@ -74,7 +74,7 @@ export function Footer() {
 
         <div className="border-t border-white/10 pt-6 mb-4">
           <p className="text-xs text-gray-500 text-center">
-            ExtruCon GmbH · HRB 18623 · Amtsgericht München · Geschäftsführer: Siehe Impressum
+            ExtruCon GmbH · HRB 18623 · Amtsgericht München · {t.footer.legalInfo}
           </p>
         </div>
         

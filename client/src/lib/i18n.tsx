@@ -107,6 +107,8 @@ export const translations = {
       privacy: 'Datenschutz',
       terms: 'AGB',
       allRights: 'Alle Rechte vorbehalten.',
+      openingHours: 'Mo–Fr 08:00–17:00',
+      legalInfo: 'Geschäftsführer: Siehe Impressum',
     },
     about: {
       badge: 'Über ExtruCon GmbH',
@@ -998,6 +1000,8 @@ export const translations = {
       privacy: 'Privacy',
       terms: 'Terms',
       allRights: 'All rights reserved.',
+      openingHours: 'Mon–Fri 08:00–17:00',
+      legalInfo: 'Managing Director: See Imprint',
     },
     about: {
       badge: 'About ExtruCon GmbH',
@@ -1889,6 +1893,8 @@ export const translations = {
       privacy: 'Privatnost',
       terms: 'Uvjeti',
       allRights: 'Sva prava pridržana.',
+      openingHours: 'Pon–Pet 08:00–17:00',
+      legalInfo: 'Direktor: Pogledajte Impressum',
     },
     about: {
       badge: 'O ExtruCon GmbH',
