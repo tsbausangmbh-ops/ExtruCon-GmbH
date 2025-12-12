@@ -222,7 +222,7 @@ export default function Contact() {
                     <div>
                       <h3 className="font-bold text-white mb-1">Erreichbarkeit</h3>
                       <p className="text-gray-400">
-                        Mo – Fr: 09:00 – 18:00 Uhr<br />
+                        Mo – Fr: 08:00 – 17:00 Uhr<br />
                         <span className="text-sm">Termine nach Vereinbarung</span>
                       </p>
                     </div>
