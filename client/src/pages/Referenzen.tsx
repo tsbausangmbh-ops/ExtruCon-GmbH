@@ -41,6 +41,15 @@ export default function Referenzen() {
       features: ["KI-Beratung", "Festpreis-Garantie", "268+ Projekte", "Handwerker-Vermittlung"],
       url: "https://089-sanierer.de",
       location: "München, Deutschland"
+    },
+    {
+      company: "ExtruCon Funnel",
+      industry: "KI-Agenten & Automatisierung",
+      logo: "🤖",
+      description: "Lead-Funnel für KI-Agenten Entwicklung: Autonome KI-Systeme, Chatbots und intelligente Automatisierung für Unternehmen in Bayern.",
+      features: ["Lead-Funnel", "KI-Chatbot", "Geo-Targeting", "Conversion-Optimiert"],
+      url: "https://funnel.extrucon.de",
+      location: "Fürstenfeldbruck, Deutschland"
     }
   ];
 
