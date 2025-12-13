@@ -16,13 +16,13 @@ export default function Referenzen() {
       location: "München, Deutschland"
     },
     {
-      company: "089Bayern",
+      company: "089Bayern Ltd.",
       industry: "Energie & Solar",
       logo: "☀️",
       description: "4-in-1 Energiesysteme für die Türkei: Wärmepumpen, Kühlung, Photovoltaik und Energiespeicher - Deutsch-Türkische Qualität.",
       features: ["Mehrsprachig (TR/DE)", "Energie-Lösungen", "Premium Design", "B2B Website"],
       url: "https://www.089bayern.com/",
-      location: "Alanya, Türkei"
+      location: "Antalya/Alanya, Türkei"
     },
     {
       company: "AquaPro24",
@@ -49,6 +49,15 @@ export default function Referenzen() {
       description: "Lead-Funnel für KI-Agenten Entwicklung: Autonome KI-Systeme, Chatbots und intelligente Automatisierung für Unternehmen in Bayern.",
       features: ["Lead-Funnel", "KI-Chatbot", "Geo-Targeting", "Conversion-Optimiert"],
       url: "https://funnel.extrucon.de",
+      location: "Fürstenfeldbruck, Deutschland"
+    },
+    {
+      company: "ExtruCon GmbH",
+      industry: "KI-Agentur & Marketing",
+      logo: "⚡",
+      description: "Hauptwebsite der KI-Agentur: Digitales Marketing, KI-Automatisierung, Webentwicklung und SEO für Unternehmen deutschlandweit.",
+      features: ["KI-Chatbot", "SEO-Optimiert", "Full-Service Agentur", "50+ Projekte"],
+      url: "https://extrucon.de",
       location: "Fürstenfeldbruck, Deutschland"
     }
   ];
