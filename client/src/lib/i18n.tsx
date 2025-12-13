@@ -3362,6 +3362,88 @@ export const translations = {
         ]
       }
     },
+    ratgeberPage: {
+      badge: 'Bilgi & İçgörüler',
+      title: 'Pazarlama Rehberi',
+      subtitle: 'Dijital pazarlama, AI otomasyonu ve başarılı online varlık için pratik ipuçları, kılavuzlar ve stratejiler.',
+      searchPlaceholder: 'Makale ara...',
+      featuredTitle: 'Öne Çıkan Makaleler',
+      allArticlesTitle: 'Tüm Makaleler',
+      noResults: 'Makale bulunamadı.',
+      resetFilter: 'Filtreyi Sıfırla',
+      read: 'Oku',
+      newsletter: {
+        title: 'Bültene Abone Olun',
+        subtitle: 'En son pazarlama ipuçlarını ve AI içgörülerini doğrudan gelen kutunuza alın.',
+        placeholder: 'E-posta adresiniz',
+        button: 'Abone Ol',
+        consent: 'Kaydolarak',
+        privacyLink: 'Gizlilik Politikamızı',
+        consentEnd: 'kabul ediyorsunuz.'
+      },
+      cta: {
+        title: 'Bireysel danışmanlık mı istiyorsunuz?',
+        subtitle: 'Uzmanlarımız işletmeniz için doğru stratejiyi bulmanıza yardımcı olur.',
+        button: 'Ücretsiz Danışmanlık Talep Edin'
+      },
+      categories: {
+        all: 'Tümü',
+        ki: 'AI & Otomasyon',
+        social: 'Sosyal Medya',
+        marketing: 'SEO & Pazarlama',
+        web: 'Web Geliştirme'
+      },
+      articles: [
+        { id: 1, title: 'İşletmeler için AI Chatbotlar: 2025 Rehberi', excerpt: 'AI chatbotların müşteri hizmetlerinizi nasıl dönüştürebileceğini ve aynı anda maliyetleri nasıl düşürebileceğini öğrenin.', readTime: '8 dk.', date: '10 Ara 2025' },
+        { id: 2, title: 'Instagram Reels: Daha Fazla Erişim için 10 İpucu', excerpt: 'Instagram Reels\'in tüm potansiyelini işletmeniz için nasıl kullanacağınızı ve binlerce yeni müşteriye nasıl ulaşacağınızı öğrenin.', readTime: '5 dk.', date: '8 Ara 2025' },
+        { id: 3, title: 'Local SEO: Google Aramasına Nasıl Hakim Olursunuz', excerpt: 'Yerel arama motoru optimizasyonu bölgesel işletmeler için anahtardır. En önemli stratejiler.', readTime: '7 dk.', date: '5 Ara 2025' },
+        { id: 4, title: 'Web Sitesi Hızını Optimize Etme: Performans İpuçları', excerpt: 'Hızlı bir web sitesi SEO ve kullanıcı deneyimi için kritiktir. Yükleme sürelerinizi nasıl iyileştireceğinizi öğrenin.', readTime: '6 dk.', date: '3 Ara 2025' },
+        { id: 5, title: 'Pazarlama için ChatGPT: Pratik Kullanım Alanları', excerpt: 'İçerik oluşturmadan müşteri analizine: ChatGPT\'yi pazarlamanızda etkili bir şekilde nasıl kullanacağınızı öğrenin.', readTime: '10 dk.', date: '1 Ara 2025' },
+        { id: 6, title: 'B2B için LinkedIn: 2025 için En İyi Strateji', excerpt: 'LinkedIn B2B şirketleri için en önemli ağdır. Güçlü bir varlık nasıl oluşturulur.', readTime: '8 dk.', date: '28 Kas 2025' },
+        { id: 7, title: 'Google Ads vs. Meta Ads: Hangisi Daha Değerli?', excerpt: 'İki reklam platformunu karşılaştırıyoruz ve işletmeniz için hangisinin daha uygun olduğunu gösteriyoruz.', readTime: '9 dk.', date: '25 Kas 2025' },
+        { id: 8, title: 'n8n İş Akışı Otomasyonu: Eksiksiz Rehber', excerpt: 'n8n ile programlama bilgisi olmadan iş süreçlerini otomatikleştirin. Nasıl başlayacağınızı öğrenin.', readTime: '12 dk.', date: '22 Kas 2025' },
+        { id: 9, title: 'Responsive Web Tasarım: 2025\'te Mobile First', excerpt: 'Mobile-First tasarımın neden bugün standart olduğunu ve web sitenizi tüm cihazlar için nasıl optimize edeceğinizi öğrenin.', readTime: '6 dk.', date: '19 Kas 2025' },
+        { id: 10, title: 'İşletmeler için TikTok: Girmeye Değer mi?', excerpt: 'Platform patlıyor – ama TikTok B2B için de geçerli mi? Fırsatları ve stratejileri gösteriyoruz.', readTime: '7 dk.', date: '16 Kas 2025' },
+        { id: 11, title: 'E-posta Pazarlama: Daha Yüksek Açılma Oranları için 12 İpucu', excerpt: 'Daha iyi sonuçlar için bültenlerinizi ve e-posta kampanyalarınızı nasıl optimize edeceğinizi öğrenin.', readTime: '8 dk.', date: '13 Kas 2025' },
+        { id: 12, title: 'Voice Search SEO: Sesli Arama Optimizasyonu', excerpt: 'Giderek daha fazla insan sesle arıyor. SEO stratejinizi nasıl uyarlayacağınızı öğrenin.', readTime: '6 dk.', date: '10 Kas 2025' },
+        { id: 13, title: 'E-ticaret için n8n: Otomatik Sipariş Süreçleri', excerpt: 'n8n ile sipariş onaylarını, envanter ve gönderimi nasıl otomatikleştireceğinizi öğrenin.', readTime: '9 dk.', date: '7 Kas 2025' },
+        { id: 14, title: 'Dönüşüm Oranını Optimize Etme: A/B Testini Doğru Kullanma', excerpt: 'Sistematik testlerle web sitesi performansınızı nasıl artıracağınızı öğrenin.', readTime: '10 dk.', date: '4 Kas 2025' },
+        { id: 15, title: 'İçerik Planlaması: Mükemmel Editoryal Takvim', excerpt: 'Sosyal medya ve blog için verimli bir içerik planı nasıl oluşturulur.', readTime: '5 dk.', date: '1 Kas 2025' },
+        { id: 16, title: 'Schema Markup: Daha İyi Sıralamalar için Yapılandırılmış Veriler', excerpt: 'Schema.org ile Rich Snippets\'a: Google\'da görünürlüğünüzü nasıl artıracağınızı öğrenin.', readTime: '8 dk.', date: '28 Eki 2025' },
+        { id: 17, title: 'n8n vs. Make vs. Zapier: Hangi Araç Size Uygun?', excerpt: 'En popüler üç otomasyon aracını karşılaştırıyoruz ve avantajları ile dezavantajlarını gösteriyoruz.', readTime: '11 dk.', date: '25 Eki 2025' },
+        { id: 18, title: 'Erişilebilir Web Siteleri: WCAG Yönergelerini Anlamak', excerpt: 'Erişilebilirliğin neden önemli olduğunu ve web sitenizi nasıl erişilebilir hale getireceğinizi öğrenin.', readTime: '7 dk.', date: '22 Eki 2025' },
+        { id: 19, title: 'Müşteri Hizmetlerinde AI: Kalite Kaybı Olmadan Otomasyon', excerpt: 'Kişisel dokunuşu kaybetmeden AI araçlarını nasıl kullanacağınızı öğrenin.', readTime: '8 dk.', date: '19 Eki 2025' },
+        { id: 20, title: 'İşletmeler için OpenAI API: İlk Adımlar', excerpt: 'GPT-4\'ü iş süreçlerinize entegre etmek için pratik bir giriş.', readTime: '14 dk.', date: '16 Eki 2025' },
+        { id: 21, title: 'AI ile Otomatik Potansiyel Müşteri Oluşturma', excerpt: 'Akıllı sistemlerle nitelikli potansiyel müşterileri nasıl kazanacağınızı ve beslemeyi nasıl otomatikleştireceğinizi öğrenin.', readTime: '10 dk.', date: '13 Eki 2025' },
+        { id: 22, title: 'n8n Webhooks: Gerçek Zamanlı Otomasyon Kurulumu', excerpt: 'Olaylara anında tepkiler için harici servisleri n8n\'e nasıl bağlayacağınızı öğrenin.', readTime: '9 dk.', date: '10 Eki 2025' },
+        { id: 23, title: 'Claude AI vs. ChatGPT: Büyük Karşılaştırma', excerpt: 'Hangi AI modeli kullanım durumlarınız için daha uygun? Güçlü ve zayıf yönler.', readTime: '11 dk.', date: '7 Eki 2025' },
+        { id: 24, title: 'Pazarlama Kararları için AI Destekli Veri Analizi', excerpt: 'Daha iyi kampanyalar ve daha yüksek ROI için makine öğrenimini nasıl kullanacağınızı öğrenin.', readTime: '12 dk.', date: '4 Eki 2025' },
+        { id: 25, title: 'n8n ve Google Sheets ile Otomatik Raporlar', excerpt: 'Kendini güncelleyen otomatik raporlar nasıl oluşturulur.', readTime: '8 dk.', date: '1 Eki 2025' },
+        { id: 26, title: 'Facebook Ads Optimizasyonu: Daha Az Bütçeyle Daha Fazla Dönüşüm', excerpt: 'Facebook kampanyalarınızı maksimum verimlilik için nasıl optimize edeceğinizi öğrenin.', readTime: '9 dk.', date: '28 Eyl 2025' },
+        { id: 27, title: 'İşletmeler için Pinterest: Hafife Alınan Trafik Kanalı', excerpt: 'Pinterest\'in özellikle e-ticaret ve DIY sektörleri için neden altın değerinde olduğunu öğrenin.', readTime: '7 dk.', date: '25 Eyl 2025' },
+        { id: 28, title: 'Influencer Pazarlama: Ortaklar Bulma ve Başarıyı Ölçme', excerpt: 'Influencer\'larla başarılı bir şekilde nasıl çalışacağınızı öğrenin.', readTime: '10 dk.', date: '22 Eyl 2025' },
+        { id: 29, title: 'YouTube SEO: Videoları 1. Sıraya Taşıma', excerpt: 'YouTube için en önemli sıralama faktörleri ve bunları nasıl kullanacağınız.', readTime: '11 dk.', date: '19 Eyl 2025' },
+        { id: 30, title: 'Topluluk Yönetimi: Sadık Bir Fan Kitlesi Nasıl Oluşturulur', excerpt: 'Etkileşimi artırın ve müşterileri marka elçilerine dönüştürün.', readTime: '8 dk.', date: '16 Eyl 2025' },
+        { id: 31, title: 'Social Listening: Müşteriler Sizin Hakkınızda Gerçekten Ne Düşünüyor', excerpt: 'Markanızın etkili izlenmesi için araçlar ve stratejiler.', readTime: '7 dk.', date: '13 Eyl 2025' },
+        { id: 32, title: 'Threads vs. Twitter/X: İşletmeniz için Hangi Platform?', excerpt: 'Her iki platformun mevcut durumu ve işletmeler için öneriler.', readTime: '6 dk.', date: '10 Eyl 2025' },
+        { id: 33, title: 'Kullanıcı Üretimli İçerik: Müşterilerden Otantik Reklam', excerpt: 'Müşterileri markanız için içerik oluşturmaya nasıl motive edeceğinizi öğrenin.', readTime: '8 dk.', date: '7 Eyl 2025' },
+        { id: 34, title: 'Anahtar Kelime Araştırması 2025: Araçlar ve Stratejiler', excerpt: 'Karlı anahtar kelimeleri bulmak için en iyi yöntemler.', readTime: '10 dk.', date: '4 Eyl 2025' },
+        { id: 35, title: 'Core Web Vitals: Google Sıralama Faktörlerini Anlamak', excerpt: 'Daha iyi sıralamalar için LCP, FID ve CLS optimizasyonu.', readTime: '9 dk.', date: '1 Eyl 2025' },
+        { id: 36, title: 'Retargeting Stratejileri: Ziyaretçileri Geri Getirme', excerpt: 'Web sitesi ziyaretçilerini satın almaya nasıl yönlendireceğinizi öğrenin.', readTime: '8 dk.', date: '28 Ağu 2025' },
+        { id: 37, title: 'İçerik Pazarlama ROI: Başarıyı Ölçülebilir Kılma', excerpt: 'Gerçekten önemli olan metrikler ve bunları nasıl takip edeceğiniz.', readTime: '11 dk.', date: '25 Ağu 2025' },
+        { id: 38, title: 'Dönüşüm Sağlayan Landing Sayfaları: En İyi Uygulamalar', excerpt: 'Yüksek dönüşümlü landing sayfaları için tasarım ve metin ipuçları.', readTime: '9 dk.', date: '22 Ağu 2025' },
+        { id: 39, title: 'Backlink Oluşturma 2025: White-Hat Stratejileri', excerpt: 'Sürdürülebilir link oluşturma başarısı için ciddi yöntemler.', readTime: '12 dk.', date: '19 Ağu 2025' },
+        { id: 40, title: 'Google Analytics 4: Eksiksiz Geçiş', excerpt: 'GA4 hakkında bilmeniz gereken her şey – basitçe açıklandı.', readTime: '14 dk.', date: '16 Ağu 2025' },
+        { id: 41, title: 'Headless CMS: Modern Web Siteleri için Avantajlar', excerpt: 'Frontend ve backend ayrımının neden mantıklı olduğunu öğrenin.', readTime: '10 dk.', date: '13 Ağu 2025' },
+        { id: 42, title: 'Web Sitesi Güvenliği: SSL, Yedeklemeler ve Dahası', excerpt: 'Web sitenizi hackerlardan ve veri kaybından nasıl koruyacağınızı öğrenin.', readTime: '8 dk.', date: '10 Ağu 2025' },
+        { id: 43, title: 'Progressive Web Apps: Mobil Web\'in Geleceği', excerpt: 'PWA\'lar web sitelerinin ve native uygulamaların en iyisini birleştirir.', readTime: '9 dk.', date: '7 Ağu 2025' },
+        { id: 44, title: 'Web Sitesi Yenileme: Başarılı Bir Yeniden Başlatma için Kontrol Listesi', excerpt: 'SEO kaybı olmadan sorunsuz bir web sitesi yenilemesi için tüm adımlar.', readTime: '11 dk.', date: '4 Ağu 2025' },
+        { id: 45, title: 'E-ticaret UX: Daha Fazla Satış için Checkout Optimizasyonu', excerpt: 'Online mağazada satın alma iptallerini nasıl azaltacağınızı öğrenin.', readTime: '8 dk.', date: '1 Ağu 2025' },
+        { id: 46, title: 'Dark Mode Tasarımı: Uygulama İpuçları', excerpt: 'Web siteniz için çekici bir Dark Mode nasıl uygulanır.', readTime: '7 dk.', date: '28 Tem 2025' },
+        { id: 47, title: 'Web Fontlarını Doğru Kullanma: Performans ve Tasarım', excerpt: 'Yazı tiplerinin hızlı yüklenmesi ve yine de iyi görünmesi.', readTime: '6 dk.', date: '25 Tem 2025' },
+        { id: 48, title: 'Cookie Banner ve GDPR: Yasal Güvenli Uygulama', excerpt: 'Onay yönetimi hakkında bilmeniz gereken her şey.', readTime: '9 dk.', date: '22 Tem 2025' }
+      ]
+    },
     ratgeber: {
       title: 'Rehber',
       subtitle: 'AI ve otomasyon hakkında bilgiler',
@@ -3741,6 +3823,121 @@ export const translations = {
       ctaSubtitle: 'Web projenizi hayata geçirin.',
       ctaButton: 'Ücretsiz Danışmanlık',
       ctaButtonAlt: 'Projeye Başla',
+    },
+    aboutPage: {
+      badge: 'ExtruCon Hakkında',
+      title: 'Dijital Dönüşümde Ortağınız',
+      subtitle: 'Biz ExtruCon GmbH – Almanya genelinde AI, otomasyon ve dijital pazarlama konularında işletmelere destek veren Fürstenfeldbruck merkezli bir ajansız.',
+      stats: {
+        projects: 'Proje',
+        clients: 'Müşteri',
+        automations: 'Otomasyon',
+        support: 'Destek'
+      },
+      whoWeAre: {
+        title: 'Biz Kimiz',
+        paragraph1: 'ExtruCon GmbH, AI çözümleri, otomasyon ve dijital pazarlama konusunda uzmanlaşmış bir ajanstır. Fürstenfeldbruck\'taki merkezimizden tüm Almanya\'daki işletmelere hizmet veriyoruz.',
+        paragraph2: 'Odak noktamız gerçek değer yaratan pratik çözümlerdir. Teorik kavramlar değil, günlük işlerinizi kolaylaştıran çalışan sistemler sunuyoruz.',
+        paragraph3: 'Teknik bilgi birikimini pazarlama uzmanlığıyla birleştiriyoruz – böylece her iki dünyayı bir araya getirerek kapsamlı çözümler geliştiriyoruz.',
+        tags: ['AI & Otomasyon', 'Web Geliştirme', 'Pazarlama']
+      },
+      contact: {
+        location: 'Konum',
+        email: 'E-posta',
+        phone: 'Telefon',
+        availability: 'Çalışma Saatleri',
+        hours: 'Pzt–Cuma 08:00–17:00'
+      },
+      timeline: {
+        title: 'Vizyondan Uygulamaya',
+        subtitle: 'Yaklaşımımız net yapılandırılmış ve sürdürülebilir sonuçlara yöneliktir.',
+        items: [
+          { year: 'Vizyon', title: 'Fikir', description: 'İşletmelerin AI ve otomasyonun tüm potansiyelinden yararlanmasına yardımcı olmak – teknik engeller olmadan.' },
+          { year: 'Misyon', title: 'Yaklaşım', description: 'Standart ürünler yerine özelleştirilmiş çözümler. Her işletme benzersizdir ve bireysel ilgiyi hak eder.' },
+          { year: 'Yöntem', title: 'Uygulama', description: 'Optimal sonuçlar için yakın işbirliği, net iletişim ve iteratif geliştirme.' },
+          { year: 'Hedef', title: 'Sonuç', description: 'İşletmenizi daha verimli hale getiren ve uzun vadeli değer yaratan sürdürülebilir çözümler.' }
+        ]
+      },
+      values: {
+        title: 'Değerlerimiz',
+        subtitle: 'Bizi neyin motive ettiği ve nasıl çalıştığımız.',
+        items: [
+          { title: 'İnovasyon', description: 'İşletmenize gerçek bir avantaj sağlamak için en son AI teknolojilerini kullanıyoruz.' },
+          { title: 'Ortaklık', description: 'Kendimizi uzun vadeli bir ortak olarak görüyoruz – proje bittikten sonra kaybolan bir tedarikçi olarak değil.' },
+          { title: 'Kalite', description: 'Her proje titizlikle planlanır ve uygulanır. Ancak kendimiz ikna olduğumuzda teslim ederiz.' },
+          { title: 'Verimlilik', description: 'Zaman değerlidir. Kaliteden ödün vermeden hızlı ve odaklı çalışıyoruz.' }
+        ]
+      },
+      services: {
+        title: 'Neler Sunuyoruz',
+        subtitle: 'Dijital başarınız için temel yetkinliklerimiz.',
+        items: [
+          { name: 'AI Ajanları', description: 'Müşteri hizmetleri, analiz ve otomasyon için akıllı asistanlar' },
+          { name: 'Otomasyonlar', description: 'Tekrarlayan görevlerinizi üstlenen iş akışları' },
+          { name: 'Web Geliştirme', description: 'Entegre AI özellikleriyle modern web siteleri' },
+          { name: 'Sosyal Medya', description: 'Sosyal medya kanallarınızın stratejik yönetimi' },
+          { name: 'İçerik Oluşturma', description: 'AI destekli metin ve grafik üretimi' },
+          { name: 'Pazarlama', description: 'Daha fazla erişim için veri odaklı online pazarlama' }
+        ]
+      },
+      whyExtrucon: {
+        title: 'Neden ExtruCon?',
+        items: [
+          { title: 'Kişisel Hizmet', description: 'Anonim destek yok – projenizi tanıyan sabit bir iletişim kişiniz var.' },
+          { title: 'Teknik Uzmanlık', description: 'AI, otomasyon ve modern web teknolojilerini sadece yüzeysel değil, derinlemesine anlıyoruz.' },
+          { title: 'Pratik Odaklı', description: 'Teorik kavramlar değil, pratikte işe yarayan çözümler.' },
+          { title: 'Şeffaf Fiyatlar', description: 'Projenizin ne kadara mal olacağını baştan bilirsiniz. Gizli ücret yok.' },
+          { title: 'Almanya Geneli', description: 'Tüm Almanya\'daki müşterilerle uzaktan işbirliği – istenirse yüz yüze toplantılar.' },
+          { title: 'Uzun Vadeli Ortaklık', description: 'Lansmanın ardından da bakım ve geliştirme ile müşterilerimize hizmet veriyoruz.' }
+        ]
+      },
+      legal: {
+        title: 'Yasal Bilgiler',
+        companyLabel: 'ExtruCon GmbH',
+        registerLabel: 'Ticaret Sicili',
+        registerNumber: 'HRB 18623',
+        court: 'Münih Asliye Ticaret Mahkemesi'
+      },
+      cta: {
+        title: 'Bizi Tanıyın',
+        subtitle: 'Projenizden bahsedin – ücretsiz ilk görüşmede birlikte en iyi çözümü buluruz.',
+        button: 'İletişime Geçin'
+      }
+    },
+    kiServicePage: {
+      badge: 'Almanya Geneli AI Ajansı',
+      title: 'İşletmeniz için AI & Otomasyon',
+      subtitle: 'Almanya genelinde özelleştirilmiş AI çözümleri, chatbotlar ve akıllı otomasyon iş akışları. En modern yapay zeka ile zamandan ve maliyetten tasarruf edin.',
+      ctaButton: 'Ücretsiz AI Danışmanlığı',
+      servicesTitle: 'AI Hizmetlerimiz',
+      servicesSubtitle: 'Akıllı chatbotlardan tam süreç otomasyonuna – AI\'yı işletmenize taşıyoruz.',
+      services: [
+        { title: 'AI Chatbotlar & Asistanlar', desc: 'Müşteri hizmetleri, danışmanlık ve satış için akıllı chatbotlar – müşterileriniz için 7/24 erişilebilir.' },
+        { title: 'İş Akışı Otomasyonu', desc: 'n8n, Make ve Zapier ile tekrarlayan görevlerin otomasyonu. %80\'e kadar zaman tasarrufu.' },
+        { title: 'AI İçerik Üretimi', desc: 'Pazarlamanız için AI destekli metinler, görseller ve videolar – daha hızlı ve maliyet etkin.' },
+        { title: 'Veri Analizi & İçgörüler', desc: 'Daha iyi kararlar için iş verilerinizin AI tabanlı değerlendirmesi.' },
+        { title: 'Kişiselleştirme', desc: 'Akıllı algoritmalar ve makine öğrenimi ile bireysel müşteri deneyimleri.' },
+        { title: 'Entegrasyon & API\'ler', desc: 'AI\'nın mevcut sistemlerinize ve yazılımlarınıza sorunsuz entegrasyonu.' }
+      ],
+      techTitle: 'Kullandığımız AI Teknolojileri',
+      benefitsTitle: 'İşletmeniz için AI\'nın Avantajları',
+      benefits: [
+        'Otomatik müşteri hizmetleri ile 7/24 erişilebilirlik',
+        'Tekrarlayan görevlerde %80\'e kadar zaman tasarrufu',
+        'Ek personel maliyeti olmadan ölçeklenebilir süreçler',
+        'Hızlı yanıt süreleri ile daha iyi müşteri deneyimleri',
+        'Daha fazla iş başarısı için veri odaklı kararlar'
+      ],
+      faqTitle: 'AI & Otomasyon Hakkında Sıkça Sorulan Sorular',
+      faqs: [
+        { q: 'İşletmem için bir AI chatbot ne kadar?', a: 'Basit bir chatbot 1.500€\'dan başlıyor. Özel uyarlamalı daha karmaşık AI çözümleri 3.000€\'dan başlıyor. Olasılıklar hakkında ücretsiz danışmanlık veriyoruz.' },
+        { q: 'AI araçları için teknik bilgiye ihtiyacım var mı?', a: 'Hayır! Tüm teknik uygulamayı biz üstleniyoruz ve ekibinizi eğitiyoruz. Kullanımı kolay bir çözüm alırsınız.' },
+        { q: 'Bir AI projesi ne kadar sürede tamamlanır?', a: 'Basit chatbotlar 1-2 haftada kullanıma hazır. Daha karmaşık otomasyonlar kapsama bağlı olarak 4-8 hafta alır.' },
+        { q: 'AI küçük işletmeler için de mantıklı mı?', a: 'Kesinlikle! Özellikle küçük işletmeler otomasyondan faydalanır, çünkü ana iş için zaman kazandırır. Her bütçeye uygun çözümlerimiz var.' }
+      ],
+      ctaTitle: 'İşletmenizde AI Devrimine Hazır mısınız?',
+      ctaSubtitle: 'Süreçlerinizi AI ile birlikte optimize edelim. Ücretsiz ilk danışmanlık – Almanya geneli.',
+      ctaButtonAlt: 'Şimdi AI Projesine Başlayın'
     },
     legalPages: {
       impressumTitle: 'Yasal Bildirim',
