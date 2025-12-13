@@ -23,6 +23,15 @@ export default function Referenzen() {
       features: ["Mehrsprachig (TR/DE)", "Energie-Lösungen", "Premium Design", "B2B Website"],
       url: "https://www.089bayern.com/",
       location: "Alanya, Türkei"
+    },
+    {
+      company: "AquaPro24",
+      industry: "Sanitär & Wasserinstallation",
+      logo: "🔧",
+      description: "Partnernetzwerk für Sanitär, Heizung und Wasserinstallation in München mit Festpreis-Garantie, 24/7 Notdienst und KI-Kostenrechner.",
+      features: ["KI-Kostenrechner", "24/7 Notdienst", "Festpreis-Garantie", "2.500+ Kunden"],
+      url: "https://aquapro24.de",
+      location: "München, Deutschland"
     }
   ];
 
