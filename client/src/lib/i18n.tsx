@@ -3813,6 +3813,121 @@ export const translations = {
         { id: 8, title: 'n8n İş Akışı Otomasyonu: Tam Rehber', excerpt: 'n8n ile programlama bilgisi olmadan iş süreçlerini otomatikleştirin. Nasıl başlayacağınızı öğrenin.', readTime: '12 dk.', date: '22 Kas 2025' }
       ]
     },
+    aboutPage: {
+      badge: 'ExtruCon Hakkında',
+      title: 'Dijital dönüşüm için ortağınız',
+      subtitle: 'Biz ExtruCon GmbH\'yiz – Almanya genelinde şirketlere AI, otomasyon ve dijital pazarlama konularında destek veren Fürstenfeldbruck merkezli bir ajans.',
+      stats: {
+        projects: 'Projeler',
+        clients: 'Müşteriler',
+        automations: 'Otomasyonlar',
+        support: 'Destek'
+      },
+      whoWeAre: {
+        title: 'Biz Kimiz',
+        paragraph1: 'ExtruCon GmbH, AI çözümleri, otomasyon ve dijital pazarlama konusunda uzmanlaşmış bir ajanstır. Fürstenfeldbruck\'taki merkezimizden Almanya genelindeki şirketlere hizmet veriyoruz.',
+        paragraph2: 'Odak noktamız gerçek değer yaratan pratik çözümlerdir. Teorik kavramlar değil, günlük işinizi kolaylaştıran çalışan sistemler.',
+        paragraph3: 'Teknik bilgi birikimini pazarlama uzmanlığıyla birleştiriyoruz – böylece bütünsel çözümler geliştirmek için her iki dünyayı bir araya getiriyoruz.',
+        tags: ['AI & Otomasyon', 'Web Geliştirme', 'Pazarlama']
+      },
+      contact: {
+        location: 'Konum',
+        email: 'E-posta',
+        phone: 'Telefon',
+        availability: 'Ulaşılabilirlik',
+        hours: 'Pzt–Cum 08:00–17:00'
+      },
+      timeline: {
+        title: 'Vizyondan uygulamaya',
+        subtitle: 'Yaklaşımımız net yapılandırılmış ve sürdürülebilir sonuçlara odaklıdır.',
+        items: [
+          { year: 'Vizyon', title: 'Fikir', description: 'Şirketlerin teknik engeller olmadan AI ve otomasyonun tam potansiyelini kullanmalarına yardımcı olmak.' },
+          { year: 'Misyon', title: 'Yaklaşım', description: 'Standart ürünler yerine özel çözümler. Her işletme benzersizdir ve bireysel ilgi hak eder.' },
+          { year: 'Yöntem', title: 'Uygulama', description: 'Optimal sonuçlar için yakın işbirliği, net iletişim ve iteratif geliştirme.' },
+          { year: 'Hedef', title: 'Sonuç', description: 'Şirketinizi daha verimli hale getiren ve uzun vadeli değer yaratan sürdürülebilir çözümler.' }
+        ]
+      },
+      values: {
+        title: 'Değerlerimiz',
+        subtitle: 'Bizi motive eden ve nasıl çalıştığımız.',
+        items: [
+          { title: 'İnovasyon', description: 'İşletmenize gerçek bir avantaj sağlamak için en son AI teknolojilerini kullanıyoruz.' },
+          { title: 'Ortaklık', description: 'Kendimizi uzun vadeli bir ortak olarak görüyoruz – projeden sonra kaybolan bir hizmet sağlayıcı değil.' },
+          { title: 'Kalite', description: 'Her proje dikkatle planlanır ve uygulanır. Ancak kendimiz ikna olduğumuzda teslim ederiz.' },
+          { title: 'Verimlilik', description: 'Zaman değerlidir. Kaliteden ödün vermeden hızlı ve odaklı çalışıyoruz.' }
+        ]
+      },
+      services: {
+        title: 'Neler Sunuyoruz',
+        subtitle: 'Dijital başarınız için temel yetkinliklerimiz.',
+        items: [
+          { name: 'AI Ajanları', description: 'Müşteri hizmetleri, analiz ve otomasyon için akıllı asistanlar' },
+          { name: 'Otomasyonlar', description: 'Tekrarlayan görevlerinizi üstlenen iş akışları' },
+          { name: 'Web Geliştirme', description: 'Entegre AI özellikleriyle modern web siteleri' },
+          { name: 'Sosyal Medya', description: 'Sosyal medya kanallarınızın stratejik yönetimi' },
+          { name: 'İçerik Oluşturma', description: 'AI destekli metin ve grafik üretimi' },
+          { name: 'Pazarlama', description: 'Daha fazla erişim için veri odaklı online pazarlama' }
+        ]
+      },
+      whyExtrucon: {
+        title: 'Neden ExtruCon?',
+        items: [
+          { title: 'Kişisel Destek', description: 'Anonim destek yok – projenizi tanıyan sabit bir muhatap var.' },
+          { title: 'Teknik Uzmanlık', description: 'AI, otomasyon ve modern web teknolojilerini anlıyoruz – sadece yüzeysel olarak değil.' },
+          { title: 'Pratik Odaklı', description: 'Teorik kavramlar değil, pratikte çalışan çözümler.' },
+          { title: 'Şeffaf Fiyatlar', description: 'Projenizin ne kadar maliyetli olduğunu baştan bilirsiniz. Gizli ücret yok.' },
+          { title: 'Almanya Geneli', description: 'Almanya genelindeki müşterilerle uzaktan işbirliği – istek üzerine yüz yüze toplantılar.' },
+          { title: 'Uzun Vadeli Ortaklık', description: 'Müşterilerimizi lansmandan sonra bakım ve geliştirme ile desteklemeye devam ediyoruz.' }
+        ]
+      },
+      legal: {
+        title: 'Yasal Bilgiler',
+        companyLabel: 'ExtruCon GmbH',
+        registerLabel: 'Ticaret Sicili',
+        registerNumber: 'HRB 18623',
+        court: 'Münih Ticaret Mahkemesi'
+      },
+      cta: {
+        title: 'Bizi Tanıyın',
+        subtitle: 'Projenizi bize anlatın – ücretsiz ilk görüşmede birlikte en iyi çözümü bulalım.',
+        button: 'İletişime Geçin'
+      }
+    },
+    kiServicePage: {
+      badge: 'Almanya Geneli AI Ajansı',
+      title: 'İşletmeniz İçin AI & Otomasyon',
+      subtitle: 'Almanya genelinde özel AI çözümleri, chatbotlar ve akıllı otomasyon iş akışları. Modern yapay zeka ile zaman ve maliyetten tasarruf edin.',
+      ctaButton: 'Ücretsiz AI Danışmanlığı',
+      servicesTitle: 'AI Hizmetlerimiz',
+      servicesSubtitle: 'Akıllı chatbotlardan tam süreç otomasyonuna – AI\'ı işletmenize getiriyoruz.',
+      services: [
+        { title: 'AI Chatbotlar & Asistanlar', desc: 'Müşteri hizmetleri, danışmanlık ve satış için akıllı chatbotlar – müşterileriniz için 7/24 mevcut.' },
+        { title: 'İş Akışı Otomasyonu', desc: 'n8n, Make ve Zapier ile tekrarlayan görevlerin otomasyonu. %80\'e kadar zaman tasarrufu sağlayın.' },
+        { title: 'AI İçerik Oluşturma', desc: 'Pazarlamanız için AI destekli metinler, görseller ve videolar – daha hızlı ve daha maliyet etkin.' },
+        { title: 'Veri Analizi & İçgörüler', desc: 'Daha iyi kararlar için işletme verilerinizin AI tabanlı değerlendirmesi.' },
+        { title: 'Kişiselleştirme', desc: 'Akıllı algoritmalar ve makine öğrenimi ile bireysel müşteri deneyimleri.' },
+        { title: 'Entegrasyon & API\'ler', desc: 'AI\'ın mevcut sistemlerinize ve yazılımlarınıza sorunsuz entegrasyonu.' }
+      ],
+      techTitle: 'Kullandığımız AI Teknolojileri',
+      benefitsTitle: 'İşletmeniz İçin AI\'ın Avantajları',
+      benefits: [
+        'Otomatik müşteri hizmeti ile 7/24 erişilebilirlik',
+        'Tekrarlayan görevlerde %80\'e kadar zaman tasarrufu',
+        'Ek personel maliyeti olmadan ölçeklenebilir süreçler',
+        'Hızlı yanıt süreleri ile daha iyi müşteri deneyimleri',
+        'Daha fazla iş başarısı için veri odaklı kararlar'
+      ],
+      faqTitle: 'AI & Otomasyon Hakkında Sık Sorulan Sorular',
+      faqs: [
+        { q: 'İşletmem için AI chatbot ne kadar?', a: 'Basit bir chatbot tek seferlik 1.500€\'dan başlar. Özel uyarlama ile daha karmaşık AI çözümleri 3.000€\'dan başlar. Olasılıklar hakkında ücretsiz danışmanlık veriyoruz.' },
+        { q: 'AI otomasyon ne kadar sürede kurulur?', a: 'Basit otomasyonlar 1-2 hafta içinde çalışır durumda olabilir. Birden fazla entegrasyonlu daha karmaşık çözümler 3-6 hafta sürer.' },
+        { q: 'AI çözümleri için teknik bilgi gerekir mi?', a: 'Hayır! Tüm geliştirme ve entegrasyonu biz üstleniyoruz. Kullanıcı dostu bir kontrol paneli ve eğitim alırsınız.' },
+        { q: 'Verilerim güvende mi?', a: 'Veri güvenliği en yüksek önceliğe sahiptir. Şifreli bağlantılar, Almanya/AB\'de GDPR uyumlu barındırma çözümleri kullanıyoruz.' }
+      ],
+      ctaTitle: 'AI Çözümünüz İçin Hazır mısınız?',
+      ctaSubtitle: 'AI\'ın işletmenizi nasıl dönüştürebileceğini konuşalım. Risksiz ücretsiz ilk danışmanlık.',
+      ctaButtonAlt: 'Ücretsiz Danışmanlık İsteyin'
+    },
     cookieConsent: {
       title: 'Çerez Ayarları',
       description: 'Web sitemizde size en iyi deneyimi sunmak için çerezler kullanıyoruz. Bazı çerezler web sitesinin çalışması için gereklidir, diğerleri ise siteyi geliştirmemize yardımcı olur.',
