@@ -17,8 +17,8 @@ function WebseitenKI() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead 
-        title="KI-Webseiten & Chatbots erstellen lassen | Webentwicklung Fürstenfeldbruck & München"
-        description="Professionelle Webseiten mit KI-Chatbots, NLP & automatischer Lead-Generierung. Webentwicklung aus Fürstenfeldbruck bei München – für Handwerker, Ärzte & Unternehmen in Bayern."
+        title="KI-Webseiten & Chatbots erstellen lassen | München & Deutschlandweit"
+        description="Professionelle Webseiten mit KI-Chatbots, NLP & automatischer Lead-Generierung. Webentwicklung München & deutschlandweit – für Handwerker, Ärzte & Unternehmen."
         keywords="KI Webseite erstellen, Website mit Chatbot, Webentwicklung Fürstenfeldbruck, Webdesign München, KI Website Bayern, Chatbot für Website, NLP Webseite, Lead-Generierung Website, Webseite für Handwerker München, KI Agentur Bayern"
       />
       <Navbar />

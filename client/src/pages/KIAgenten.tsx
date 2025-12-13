@@ -30,8 +30,8 @@ function KIAgenten() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead 
-        title="KI-Agenten Entwicklung | ExtruCon Fürstenfeldbruck – Chatbots & Automatisierung"
-        description="Individuelle KI-Agenten für Kundenservice, Lead-Generierung & Automatisierung. 24/7 verfügbar, mehrsprachig, lernfähig. KI-Agentur aus Fürstenfeldbruck – deutschlandweit."
+        title="KI-Agenten Entwicklung | München & Deutschlandweit | ExtruCon"
+        description="Individuelle KI-Agenten für Kundenservice, Lead-Generierung & Automatisierung. 24/7 verfügbar, mehrsprachig, lernfähig. KI-Agentur München & deutschlandweit."
         keywords="KI-Agenten, Chatbot Entwicklung, Kundenservice Automatisierung, Lead-Qualifizierung, KI München, Automatisierung Bayern"
       />
       <Navbar />

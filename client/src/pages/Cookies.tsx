@@ -36,8 +36,8 @@ function Cookies() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Cookie-Richtlinie | ExtruCon GmbH"
-        description="Informationen zu Cookies auf extrucon.de. Cookie-Einstellungen verwalten und Datenschutz."
+        title="Cookie-Richtlinie | ExtruCon GmbH München & Deutschlandweit"
+        description="Cookie-Richtlinie der ExtruCon GmbH – KI-Agentur München & deutschlandweit. Cookie-Einstellungen verwalten und Datenschutz."
         keywords="Cookies, Cookie-Richtlinie, Datenschutz, ExtruCon"
         canonical="https://extrucon.de/cookies"
       />

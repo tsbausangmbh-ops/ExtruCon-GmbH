@@ -17,8 +17,8 @@ function KI() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="KI-Lösungen & Automatisierung | KI Agentur | ExtruCon"
-        description="Maßgeschneiderte KI-Lösungen für Ihr Unternehmen. KI-Agenten, ChatGPT Integration, Workflow-Automatisierung. Fürstenfeldbruck."
+        title="KI-Lösungen & Automatisierung | München & Deutschlandweit | ExtruCon"
+        description="Maßgeschneiderte KI-Lösungen für Ihr Unternehmen. KI-Agenten, ChatGPT Integration, Workflow-Automatisierung – München & deutschlandweit."
         keywords="KI Agentur, KI-Lösungen, ChatGPT Integration, Automatisierung, Künstliche Intelligenz"
         canonical="https://extrucon.de/leistungen/ki"
       />
