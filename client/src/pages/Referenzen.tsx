@@ -52,11 +52,12 @@ export default function Referenzen() {
       link: "https://funnel.extrucon.de"
     },
     {
-      title: "Restaurant Social Media",
-      category: "Social Media",
-      description: "Content-Strategie und Community Management für Gastronomie",
-      results: ["+5.000 Follower", "30% mehr Reservierungen"],
-      color: "pink"
+      title: "KSHW – Komplettsanierungen München",
+      category: "Webentwicklung",
+      description: "Umfangreiche Unternehmenswebsite für Generalunternehmer. Leistungsseiten, Kontaktformulare und professionelle Darstellung aller Sanierungsgewerke.",
+      results: ["Full-Service Sanierung", "Alle Gewerke", "KFW-Förderberatung"],
+      color: "pink",
+      link: "https://komplettsanierungen-haus-wohnung.de"
     },
     {
       title: "Fitness-Studio SEO",
