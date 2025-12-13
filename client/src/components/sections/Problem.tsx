@@ -1,8 +1,9 @@
+import { memo } from "react";
 import { AlertTriangle, SearchX, TrendingDown, ArrowDown, Clock, Users, Brain } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/i18n";
 
-export function Problem() {
+export const Problem = memo(function Problem() {
   const { t } = useLanguage();
 
   const problemsRow1 = [
@@ -92,4 +93,4 @@ export function Problem() {
       </div>
     </section>
   );
-}
+});

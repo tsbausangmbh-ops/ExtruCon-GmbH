@@ -1,8 +1,9 @@
+import { memo } from "react";
 import { motion } from "framer-motion";
 import { Lightbulb, Target, Rocket, Users, CheckCircle } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 
-export function About() {
+export const About = memo(function About() {
   const { t } = useLanguage();
 
   const timeline = [
@@ -113,4 +114,4 @@ export function About() {
       </div>
     </section>
   );
-}
+});
