@@ -2,9 +2,11 @@ import { memo } from "react";
 import { AlertTriangle, SearchX, TrendingDown, ArrowDown, Clock, Users, Brain } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/i18n";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 export const Problem = memo(function Problem() {
   const { t } = useLanguage();
+  const prefersReducedMotion = useReducedMotion();
 
   const problemsRow1 = [
     { icon: Clock, ...t.problemSection.routine, delay: 0 },
@@ -40,10 +42,10 @@ export const Problem = memo(function Problem() {
           {problemsRow1.map((item, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: item.delay }}
+              transition={{ delay: prefersReducedMotion ? 0 : item.delay }}
               className="bg-white/5 border border-white/10 p-6 rounded-2xl hover:border-red-500/30 transition-colors group"
             >
               <div className="w-12 h-12 bg-red-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-red-500/20 transition-colors">
@@ -61,10 +63,10 @@ export const Problem = memo(function Problem() {
           {problemsRow2.map((item, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: item.delay }}
+              transition={{ delay: prefersReducedMotion ? 0 : item.delay }}
               className="bg-white/5 border border-white/10 p-6 rounded-2xl hover:border-red-500/30 transition-colors group"
             >
               <div className="w-12 h-12 bg-red-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-red-500/20 transition-colors">
