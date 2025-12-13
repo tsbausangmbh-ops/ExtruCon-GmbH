@@ -65,8 +65,8 @@ function Chatbot() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans flex flex-col">
       <SEOHead 
-        title="KI-Assistent | ExtruCon GmbH München & Deutschlandweit"
-        description="Sprechen Sie mit unserem KI-Assistenten über KI-Agenten, Automatisierung und digitales Marketing – München & deutschlandweit. Kostenlos und unverbindlich."
+        title="KI-Assistent | ExtruCon GmbH München"
+        description="Sprechen Sie mit unserem KI-Assistenten über KI-Agenten, Automatisierung und digitales Marketing. Kostenlos und unverbindlich."
         keywords="KI Chatbot, ExtruCon Bot, KI Beratung, Automatisierung Beratung"
       />
       <Navbar />

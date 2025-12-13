@@ -19,8 +19,8 @@ function SocialMedia() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Social Media Marketing München & Deutschlandweit | ExtruCon GmbH"
-        description="Professionelles Social Media Marketing. Instagram, TikTok, LinkedIn & Facebook Betreuung. Agentur München & deutschlandweit."
+        title="Social Media Marketing München | ExtruCon GmbH"
+        description="Professionelles Social Media Marketing. Instagram, TikTok, LinkedIn & Facebook Betreuung. Agentur München."
         keywords="Social Media Marketing, Instagram Agentur, TikTok Marketing, Fürstenfeldbruck"
         canonical="https://extrucon.de/leistungen/social-media"
       />

@@ -59,8 +59,8 @@ function FAQ() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="FAQ | Häufige Fragen zu KI & Automatisierung | München & Deutschlandweit"
-        description="Antworten auf häufig gestellte Fragen zu KI-Agenten, Automatisierungen, Webentwicklung und Marketing. ExtruCon GmbH – München & deutschlandweit."
+        title="FAQ | Häufige Fragen zu KI & Automatisierung | ExtruCon München"
+        description="Antworten auf häufig gestellte Fragen zu KI-Agenten, Automatisierungen, Webentwicklung und Marketing. ExtruCon GmbH München."
         keywords="KI FAQ, Automatisierung Fragen, KI-Agenten FAQ, Webentwicklung FAQ"
         canonical="https://extrucon.de/faq"
       />

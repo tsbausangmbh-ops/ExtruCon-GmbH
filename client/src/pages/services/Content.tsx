@@ -17,8 +17,8 @@ function Content() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Content-Erstellung | München & Deutschlandweit | ExtruCon"
-        description="Professionelle Content-Erstellung mit KI-Unterstützung. Texte, Grafiken, Videos & Social Media Content – München & deutschlandweit."
+        title="Content-Erstellung | München | ExtruCon"
+        description="Professionelle Content-Erstellung mit KI-Unterstützung. Texte, Grafiken, Videos & Social Media Content. Agentur München."
         keywords="Content Erstellung, KI Content, Social Media Content, Texterstellung"
         canonical="https://extrucon.de/leistungen/content"
       />

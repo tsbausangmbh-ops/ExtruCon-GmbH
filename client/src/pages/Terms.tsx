@@ -10,8 +10,8 @@ function Terms() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="AGB | Allgemeine Geschäftsbedingungen | München & Deutschlandweit | ExtruCon"
-        description="Allgemeine Geschäftsbedingungen der ExtruCon GmbH – KI-Agentur München & deutschlandweit für KI, Marketing, Social Media und Webentwicklung."
+        title="AGB | Allgemeine Geschäftsbedingungen | ExtruCon GmbH München"
+        description="Allgemeine Geschäftsbedingungen der ExtruCon GmbH – KI-Agentur in München für KI, Marketing, Social Media und Webentwicklung."
         keywords="AGB, Geschäftsbedingungen, ExtruCon"
         canonical="https://extrucon.de/agb"
       />

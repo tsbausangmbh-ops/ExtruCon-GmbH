@@ -10,8 +10,8 @@ function Privacy() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Datenschutzerklärung | ExtruCon GmbH München & Deutschlandweit"
-        description="Datenschutzerklärung der ExtruCon GmbH – KI-Agentur München & deutschlandweit gemäß DSGVO. Informationen zur Verarbeitung personenbezogener Daten."
+        title="Datenschutzerklärung | ExtruCon GmbH München"
+        description="Datenschutzerklärung der ExtruCon GmbH – KI-Agentur in München gemäß DSGVO. Informationen zur Verarbeitung personenbezogener Daten."
         keywords="Datenschutz, DSGVO, ExtruCon, Datenschutzerklärung"
         canonical="https://extrucon.de/datenschutz"
       />
