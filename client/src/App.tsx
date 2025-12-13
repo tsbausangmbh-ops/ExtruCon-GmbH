@@ -28,6 +28,7 @@ const Web = lazy(() => import("@/pages/services/Web"));
 const Marketing = lazy(() => import("@/pages/services/Marketing"));
 const Cookies = lazy(() => import("@/pages/Cookies"));
 const Referenzen = lazy(() => import("@/pages/Referenzen"));
+const Terminbuchung = lazy(() => import("@/pages/Terminbuchung"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 function LoadingFallback() {
@@ -67,6 +68,7 @@ function Router() {
         <Route path="/leistungen/marketing" component={Marketing} />
         <Route path="/cookies" component={Cookies} />
         <Route path="/referenzen" component={Referenzen} />
+        <Route path="/terminbuchung" component={Terminbuchung} />
         <Route component={NotFound} />
       </Switch>
     </Suspense>

@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import OpenAI from "openai";
 import nodemailer from "nodemailer";
+import { getAvailableSlots, createAppointment } from "./googleCalendar";
 
 // the newest OpenAI model is "gpt-5" which was released August 7, 2025. do not change this unless explicitly requested by the user
 // This is using Replit's AI Integrations service, which provides OpenAI-compatible API access without requiring your own OpenAI API key.
@@ -198,6 +199,43 @@ Formatiere die Anfrage immer übersichtlich mit Zeilenumbrüchen zwischen den Pu
     } catch (error: any) {
       console.error("Chat API error:", error);
       res.status(500).json({ error: "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut." });
+    }
+  });
+
+  // Appointment booking - available slots
+  app.get("/api/appointments/slots", async (req, res) => {
+    try {
+      const { date } = req.query;
+      if (!date || typeof date !== 'string') {
+        return res.status(400).json({ error: "Date parameter required (YYYY-MM-DD)" });
+      }
+      const slots = await getAvailableSlots(date);
+      res.json({ slots });
+    } catch (error: any) {
+      console.error("Slots API error:", error);
+      res.status(500).json({ error: "Fehler beim Abrufen der Verfügbarkeit" });
+    }
+  });
+
+  // Appointment booking - create appointment
+  app.post("/api/appointments/book", async (req, res) => {
+    try {
+      const { date, time, name, email, phone, service, message } = req.body;
+      
+      if (!date || !time || !name || !email || !service) {
+        return res.status(400).json({ error: "Datum, Zeit, Name, E-Mail und Service sind erforderlich" });
+      }
+
+      const result = await createAppointment({ date, time, name, email, phone, service, message });
+      
+      if (result.success) {
+        res.json({ success: true, eventId: result.eventId });
+      } else {
+        res.status(500).json({ error: result.error || "Buchung fehlgeschlagen" });
+      }
+    } catch (error: any) {
+      console.error("Booking API error:", error);
+      res.status(500).json({ error: "Fehler bei der Terminbuchung" });
     }
   });
 
