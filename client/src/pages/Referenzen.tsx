@@ -1,9 +1,30 @@
 import { motion } from "framer-motion";
-import { Star, Building2, Users, TrendingUp, Quote } from "lucide-react";
+import { Star, Building2, Users, TrendingUp, Quote, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 
 export default function Referenzen() {
   const { t } = useLanguage();
+
+  const liveProjects = [
+    {
+      company: "089Dach GmbH",
+      industry: "Dachdecker & Spenglerei",
+      logo: "🏠",
+      description: "Meisterbetrieb für Dacharbeiten in München mit 24/7 Notdienst, KI-gestützter Beratung und automatisierter Anfrageverarbeitung.",
+      features: ["KI-Chatbot", "Multi-Step Formular", "SEO-Optimiert", "Responsive Design"],
+      url: "https://dacharbeiten.089dach.de/",
+      location: "München, Deutschland"
+    },
+    {
+      company: "089Bayern",
+      industry: "Energie & Solar",
+      logo: "☀️",
+      description: "4-in-1 Energiesysteme für die Türkei: Wärmepumpen, Kühlung, Photovoltaik und Energiespeicher - Deutsch-Türkische Qualität.",
+      features: ["Mehrsprachig (TR/DE)", "Energie-Lösungen", "Premium Design", "B2B Website"],
+      url: "https://www.089bayern.com/",
+      location: "Alanya, Türkei"
+    }
+  ];
 
   const references = [
     {
@@ -77,6 +98,63 @@ export default function Referenzen() {
             {t.references?.subtitle || "Erfolgsgeschichten unserer Kunden aus verschiedenen Branchen"}
           </p>
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="mb-16"
+        >
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center">
+            Live Projekte
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {liveProjects.map((project, index) => (
+              <motion.a
+                key={project.company}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="group bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/30 rounded-2xl p-6 hover:border-primary transition-all hover:shadow-lg hover:shadow-primary/20"
+                data-testid={`card-live-project-${index}`}
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-4">
+                    <div className="text-4xl">{project.logo}</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white group-hover:text-primary transition-colors">{project.company}</h3>
+                      <p className="text-sm text-gray-400">{project.industry}</p>
+                    </div>
+                  </div>
+                  <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-primary transition-colors" />
+                </div>
+
+                <p className="text-gray-300 mb-4">{project.description}</p>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.features.map((feature, i) => (
+                    <span key={i} className="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex items-center gap-2 text-sm text-gray-400 border-t border-white/10 pt-4">
+                  <span className="font-medium text-white">{project.location}</span>
+                  <span>•</span>
+                  <span className="text-primary group-hover:underline">Website besuchen</span>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+        </motion.div>
+
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center">
+          Kundenstimmen
+        </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {references.map((ref, index) => (
