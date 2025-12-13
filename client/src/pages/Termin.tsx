@@ -8,7 +8,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { useLanguage } from '@/lib/i18n';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { apiRequest } from '@/lib/queryClient';
 
 const WEEKDAYS_DE = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
 const MONTHS_DE = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
@@ -259,6 +258,7 @@ export default function Termin() {
     message: '',
   });
   const [bookingSuccess, setBookingSuccess] = useState(false);
+  const [alternatives, setAlternatives] = useState<{ date: string; time: string; label: string }[] | null>(null);
 
   const bookingMutation = useMutation({
     mutationFn: async (data: {
@@ -269,13 +269,32 @@ export default function Termin() {
       phone?: string;
       message?: string;
     }) => {
-      const res = await apiRequest('POST', '/api/calendar/book', data);
-      return res.json();
+      const res = await fetch('/api/calendar/book', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const json = await res.json();
+      if (!res.ok) {
+        if (json.alternatives) {
+          setAlternatives(json.alternatives);
+        }
+        throw new Error(json.error || 'Buchung fehlgeschlagen');
+      }
+      return json;
     },
     onSuccess: () => {
       setBookingSuccess(true);
+      setAlternatives(null);
     },
   });
+
+  const handleSelectAlternative = (alt: { date: string; time: string }) => {
+    setSelectedDate(new Date(alt.date + 'T12:00:00'));
+    setSelectedTime(alt.time);
+    setAlternatives(null);
+    setCurrentMonth(new Date(alt.date + 'T12:00:00'));
+  };
 
   const handleChangeMonth = (delta: number) => {
     setCurrentMonth(prev => {
@@ -486,9 +505,30 @@ export default function Termin() {
                   </div>
                   
                   {bookingMutation.error && (
-                    <div className="flex items-center gap-2 p-3 bg-red-500/10 rounded-lg text-red-400 text-sm">
-                      <AlertCircle className="w-4 h-4 flex-shrink-0" />
-                      <span>{(bookingMutation.error as Error).message || 'Ein Fehler ist aufgetreten'}</span>
+                    <div className="p-4 bg-red-500/10 rounded-lg border border-red-500/30">
+                      <div className="flex items-center gap-2 text-red-400 text-sm mb-3">
+                        <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                        <span>{(bookingMutation.error as Error).message || 'Ein Fehler ist aufgetreten'}</span>
+                      </div>
+                      
+                      {alternatives && alternatives.length > 0 && (
+                        <div className="mt-3">
+                          <p className="text-sm text-slate-300 mb-2">Alternative Termine:</p>
+                          <div className="space-y-2">
+                            {alternatives.map((alt, index) => (
+                              <button
+                                key={index}
+                                type="button"
+                                onClick={() => handleSelectAlternative(alt)}
+                                data-testid={`alternative-${index}`}
+                                className="w-full text-left px-3 py-2 bg-slate-700 hover:bg-slate-600 rounded-lg text-sm text-white transition-colors"
+                              >
+                                {alt.label}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   )}
                   

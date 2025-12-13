@@ -2,7 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import OpenAI from "openai";
-import { listEvents, createEvent, getAvailableSlots, isBusinessHour } from "./lib/googleCalendar";
+import { listEvents, createEvent, getAvailableSlots, isBusinessHour, getAlternativeSlots } from "./lib/googleCalendar";
 
 // the newest OpenAI model is "gpt-5" which was released August 7, 2025. do not change this unless explicitly requested by the user
 // This is using Replit's AI Integrations service, which provides OpenAI-compatible API access without requiring your own OpenAI API key.
@@ -250,21 +250,32 @@ Am Ende freundlich anbieten: „Wenn Sie möchten, fasse ich Ihnen alles kurz zu
       const endOfDay = new Date(date + 'T23:59:59+01:00');
       const existingEvents = await listEvents('primary', startOfDay.toISOString(), endOfDay.toISOString());
       
-      // Check if slot is already booked
+      // Check if slot is already booked (including 2-hour buffer)
+      const slotStart = new Date(slotStartBerlin + '+01:00');
+      const slotEnd = new Date(slotEndBerlin + '+01:00');
+      
       const hasConflict = existingEvents.some(event => {
         const startStr = event.start?.dateTime || event.start?.date;
         const endStr = event.end?.dateTime || event.end?.date;
         if (!startStr || !endStr) return false;
         const eventStart = new Date(startStr);
         const eventEnd = new Date(endStr);
-        const slotStart = new Date(slotStartBerlin + '+01:00');
-        const slotEnd = new Date(slotEndBerlin + '+01:00');
-        return slotStart < eventEnd && slotEnd > eventStart;
+        
+        // Add 2-hour buffer before and after each event
+        const bufferStart = new Date(eventStart.getTime() - 2 * 60 * 60 * 1000);
+        const bufferEnd = new Date(eventEnd.getTime() + 2 * 60 * 60 * 1000);
+        
+        return slotStart < bufferEnd && slotEnd > bufferStart;
       });
 
       if (hasConflict) {
+        // Get 3 alternative suggestions
+        const alternatives = getAlternativeSlots(requestedDate, existingEvents, 3);
+        
         return res.status(409).json({ 
-          error: "Dieser Termin ist leider nicht mehr verfügbar. Bitte wählen Sie einen anderen Zeitpunkt." 
+          error: "Dieser Termin ist leider nicht mehr verfügbar.",
+          alternatives: alternatives,
+          message: "Hier sind 3 alternative Termine:"
         });
       }
 

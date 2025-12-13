@@ -130,11 +130,20 @@ export function getAvailableSlots(date: Date, existingEvents: any[]): string[] {
     const slotEnd = new Date(date);
     slotEnd.setHours(hour + 1, 0, 0, 0);
     
-    // Check if slot conflicts with existing events
+    // Check if slot conflicts with existing events (including 2-hour buffer)
     const hasConflict = existingEvents.some(event => {
-      const eventStart = new Date(event.start?.dateTime || event.start?.date);
-      const eventEnd = new Date(event.end?.dateTime || event.end?.date);
-      return slotStart < eventEnd && slotEnd > eventStart;
+      const startStr = event.start?.dateTime || event.start?.date;
+      const endStr = event.end?.dateTime || event.end?.date;
+      if (!startStr || !endStr) return false;
+      
+      const eventStart = new Date(startStr);
+      const eventEnd = new Date(endStr);
+      
+      // Add 2-hour buffer: block 2 hours before event start and 2 hours after event end
+      const bufferStart = new Date(eventStart.getTime() - 2 * 60 * 60 * 1000);
+      const bufferEnd = new Date(eventEnd.getTime() + 2 * 60 * 60 * 1000);
+      
+      return slotStart < bufferEnd && slotEnd > bufferStart;
     });
     
     if (!hasConflict && slotStart > new Date()) {
@@ -143,4 +152,42 @@ export function getAvailableSlots(date: Date, existingEvents: any[]): string[] {
   }
   
   return slots;
+}
+
+// Get alternative slots across multiple days when requested slot is unavailable
+export function getAlternativeSlots(
+  requestedDate: Date, 
+  existingEvents: any[], 
+  count: number = 3
+): { date: string; time: string; label: string }[] {
+  const alternatives: { date: string; time: string; label: string }[] = [];
+  const dayNames = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
+  
+  // Check next 14 days for available slots
+  for (let dayOffset = 0; dayOffset < 14 && alternatives.length < count; dayOffset++) {
+    const checkDate = new Date(requestedDate);
+    checkDate.setDate(checkDate.getDate() + dayOffset);
+    
+    const day = checkDate.getDay();
+    // Skip weekends
+    if (day === 0 || day === 6) continue;
+    
+    const slots = getAvailableSlots(checkDate, existingEvents);
+    
+    for (const time of slots) {
+      if (alternatives.length >= count) break;
+      
+      const dateStr = checkDate.toISOString().split('T')[0];
+      const dayName = dayNames[checkDate.getDay()];
+      const dateLabel = `${dayName}, ${checkDate.getDate()}.${checkDate.getMonth() + 1}.`;
+      
+      alternatives.push({
+        date: dateStr,
+        time: time,
+        label: `${dateLabel} um ${time} Uhr`
+      });
+    }
+  }
+  
+  return alternatives;
 }
