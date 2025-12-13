@@ -187,6 +187,7 @@ export const translations = {
       ki: { title: 'KI & Automatisierung', desc: 'Maßgeschneiderte KI-Bots und intelligente Automatisierungs-Workflows zur Optimierung Ihrer Abläufe rund um die Uhr.' },
       web: { title: 'Web & Digitale Plattformen', desc: 'Hochleistungsfähige, visuell beeindruckende Webseiten und Web-Apps für das moderne Web.' },
       marketing: { title: 'Performance Marketing', desc: 'Datengetriebene Kampagnen und SEO-Strategien für messbares Wachstum und maximale Sichtbarkeit.' },
+      seo: { title: 'SEO & Geo-Optimierung', desc: 'Lokale Suchmaschinenoptimierung und Geo-Targeting für maximale regionale Sichtbarkeit.' },
     },
     problemSection: {
       title: 'Kennen Sie diese',
@@ -1276,6 +1277,7 @@ export const translations = {
       ki: { title: 'AI & Automation', desc: 'Custom AI bots and intelligent automation workflows to optimize your operations 24/7.' },
       web: { title: 'Web & Digital Platforms', desc: 'High-performance, visually stunning websites and web apps for the modern web.' },
       marketing: { title: 'Performance Marketing', desc: 'Data-driven campaigns and SEO strategies for measurable growth and maximum visibility.' },
+      seo: { title: 'SEO & Geo-Optimization', desc: 'Local search engine optimization and geo-targeting for maximum regional visibility.' },
     },
     problemSection: {
       title: 'Do you know these',
@@ -2365,6 +2367,7 @@ export const translations = {
       ki: { title: 'AI i automatizacija', desc: 'Prilagođeni AI botovi i inteligentni automatizacijski tijekovi rada za optimizaciju vašeg poslovanja 24/7.' },
       web: { title: 'Web i digitalne platforme', desc: 'Visoko učinkovite, vizualno impresivne web stranice i web aplikacije za moderni web.' },
       marketing: { title: 'Performance Marketing', desc: 'Kampanje vođene podacima i SEO strategije za mjerljiv rast i maksimalnu vidljivost.' },
+      seo: { title: 'SEO i Geo-Optimizacija', desc: 'Lokalna optimizacija za tražilice i geo-targeting za maksimalnu regionalnu vidljivost.' },
     },
     problemSection: {
       title: 'Poznajete li ove',
@@ -3344,6 +3347,7 @@ export const translations = {
       ki: { title: 'AI ve Otomasyon', desc: 'İşlemlerinizi 7/24 optimize etmek için özel AI botları ve akıllı otomasyon iş akışları.' },
       web: { title: 'Web ve Dijital Platformlar', desc: 'Modern web için yüksek performanslı, görsel olarak etkileyici web siteleri ve web uygulamaları.' },
       marketing: { title: 'Performans Pazarlama', desc: 'Ölçülebilir büyüme ve maksimum görünürlük için veri odaklı kampanyalar ve SEO stratejileri.' },
+      seo: { title: 'SEO ve Coğrafi Optimizasyon', desc: 'Maksimum bölgesel görünürlük için yerel arama motoru optimizasyonu ve coğrafi hedefleme.' },
     },
     contact: {
       title: 'İnovasyon için',

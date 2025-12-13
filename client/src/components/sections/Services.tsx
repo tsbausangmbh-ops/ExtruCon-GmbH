@@ -1,11 +1,12 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Bot, Share2, Globe, PenTool, Fingerprint, TrendingUp } from "lucide-react";
+import { Bot, Share2, Globe, PenTool, Fingerprint, TrendingUp, Search } from "lucide-react";
 import aiImg from "@assets/generated_images/glowing_neural_network_brain.png";
 import socialImg from "@assets/generated_images/digital_social_connection_abstract_art.png";
 import webImg from "@assets/generated_images/holographic_creative_interface.png";
 import brandImg from "@assets/generated_images/abstract_digital_brand_identity_construction.png";
 import contentImg from "@assets/generated_images/abstract_content_creation_visualization.png";
 import marketingImg from "@assets/generated_images/abstract_performance_marketing_growth.png";
+import seoImg from "@assets/generated_images/abstract_seo_geo-optimization_visual.png";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/i18n";
 
@@ -60,6 +61,14 @@ export function Services() {
       image: marketingImg,
       color: "text-orange-400",
       href: "/leistungen/marketing"
+    },
+    {
+      title: t.servicesPage.seo.title,
+      description: t.servicesPage.seo.desc,
+      icon: Search,
+      image: seoImg,
+      color: "text-green-400",
+      href: "/leistungen/seo"
     }
   ];
 
