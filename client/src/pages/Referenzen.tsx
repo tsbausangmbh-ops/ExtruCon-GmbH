@@ -10,32 +10,32 @@ export default function Referenzen() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = "KI-Agentur Referenzen & Portfolio | 50+ Projekte Deutschland | Webentwicklung München, Bayern | ExtruCon";
+    document.title = "KI-Agentur Referenzen & Portfolio | Deutschland, Kroatien, Türkei | Webentwicklung München, Zagreb, Istanbul | ExtruCon";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Erfolgreiche KI-Projekte und Webentwicklung Referenzen deutschlandweit. 50+ Projekte, 98% Kundenzufriedenheit, 5x ROI. KI-Agenten, Chatbots, Automatisierung für Unternehmen in München, Fürstenfeldbruck, Bayern, Berlin, Hamburg, Frankfurt, Köln, Düsseldorf. International: Kroatien, Türkei.");
+      metaDescription.setAttribute("content", "Erfolgreiche KI-Projekte und Webentwicklung Referenzen international. 50+ Projekte, 98% Kundenzufriedenheit. KI-Agenten, Chatbots, Automatisierung in Deutschland (München, Bayern, Berlin, Hamburg), Kroatien (Zagreb, Split, Rijeka, Dubrovnik), Türkei (Istanbul, Antalya, Alanya, Ankara, İzmir).");
     }
 
     const existingKeywords = document.querySelector('meta[name="keywords"]');
     if (existingKeywords) existingKeywords.remove();
     const metaKeywords = document.createElement('meta');
     metaKeywords.name = 'keywords';
-    metaKeywords.content = 'KI-Agentur Referenzen, KI-Projekte Deutschland, Webentwicklung München, Chatbot Entwicklung, KI-Agenten Bayern, Automatisierung Unternehmen, Webdesign Fürstenfeldbruck, SEO Agentur München, Lead-Generierung KI, Marketing Automatisierung, KI-Agentur Berlin, KI-Agentur Hamburg, KI-Agentur Frankfurt, KI-Agentur Köln, KI-Agentur Düsseldorf, KI-Agentur Stuttgart, AI Agency Germany, Chatbot Deutschland';
+    metaKeywords.content = 'KI-Agentur Referenzen, KI-Projekte Deutschland, Webentwicklung München, Chatbot Entwicklung, KI-Agenten Bayern, AI Agencija Hrvatska, Web Razvoj Zagreb, Chatbot Split, Dubrovnik, Rijeka, AI Ajansı Türkiye, Web Geliştirme Istanbul, Chatbot Antalya, Alanya, Ankara, İzmir, KI-Agentur Berlin, KI-Agentur Hamburg, KI-Agentur Frankfurt, AI Agency Germany, AI Agency Croatia, AI Agency Turkey, Yapay Zeka Ajansı, Umjetna Inteligencija';
     document.head.appendChild(metaKeywords);
 
     const existingGeoRegion = document.querySelector('meta[name="geo.region"]');
     if (existingGeoRegion) existingGeoRegion.remove();
     const geoRegion = document.createElement('meta');
     geoRegion.name = 'geo.region';
-    geoRegion.content = 'DE';
+    geoRegion.content = 'DE, HR, TR';
     document.head.appendChild(geoRegion);
 
     const existingGeoPlacename = document.querySelector('meta[name="geo.placename"]');
     if (existingGeoPlacename) existingGeoPlacename.remove();
     const geoPlacename = document.createElement('meta');
     geoPlacename.name = 'geo.placename';
-    geoPlacename.content = 'Deutschland, München, Fürstenfeldbruck, Bayern';
+    geoPlacename.content = 'Deutschland, München, Bayern, Kroatien, Zagreb, Split, Türkei, Istanbul, Antalya';
     document.head.appendChild(geoPlacename);
 
     const existingGeoPosition = document.querySelector('meta[name="geo.position"]');
@@ -70,14 +70,14 @@ export default function Referenzen() {
     if (existingOgTitle) existingOgTitle.remove();
     const ogTitle = document.createElement('meta');
     ogTitle.setAttribute('property', 'og:title');
-    ogTitle.content = 'KI-Agentur Referenzen & Portfolio | 50+ erfolgreiche Projekte deutschlandweit | ExtruCon';
+    ogTitle.content = 'KI-Agentur Referenzen | Deutschland, Kroatien, Türkei | AI Agency | ExtruCon';
     document.head.appendChild(ogTitle);
 
     const existingOgDescription = document.querySelector('meta[property="og:description"]');
     if (existingOgDescription) existingOgDescription.remove();
     const ogDescription = document.createElement('meta');
     ogDescription.setAttribute('property', 'og:description');
-    ogDescription.content = 'Entdecken Sie 50+ erfolgreiche KI-Projekte: Chatbots, Automatisierung, Webentwicklung. 98% Kundenzufriedenheit. München, Bayern, deutschlandweit.';
+    ogDescription.content = '50+ erfolgreiche KI-Projekte: Chatbots, Automatisierung, Webentwicklung. Deutschland (München, Bayern), Kroatien (Zagreb, Split), Türkei (Istanbul, Antalya).';
     document.head.appendChild(ogDescription);
 
     const existingOgType = document.querySelector('meta[property="og:type"]');
@@ -112,14 +112,14 @@ export default function Referenzen() {
     if (existingTwitterTitle) existingTwitterTitle.remove();
     const twitterTitle = document.createElement('meta');
     twitterTitle.name = 'twitter:title';
-    twitterTitle.content = 'KI-Agentur Referenzen | 50+ Projekte Deutschland | ExtruCon';
+    twitterTitle.content = 'KI-Agentur Referenzen | DE, HR, TR | AI Agency ExtruCon';
     document.head.appendChild(twitterTitle);
 
     const existingTwitterDescription = document.querySelector('meta[name="twitter:description"]');
     if (existingTwitterDescription) existingTwitterDescription.remove();
     const twitterDescription = document.createElement('meta');
     twitterDescription.name = 'twitter:description';
-    twitterDescription.content = '50+ erfolgreiche KI-Projekte: Chatbots, Automatisierung, Webentwicklung. 98% Kundenzufriedenheit deutschlandweit.';
+    twitterDescription.content = '50+ KI-Projekte: Deutschland, Kroatien, Türkei. Chatbots, Automatisierung, Webentwicklung. München, Zagreb, Istanbul.';
     document.head.appendChild(twitterDescription);
 
     const schemaScript = document.createElement('script');
@@ -131,8 +131,8 @@ export default function Referenzen() {
         "@type": "LocalBusiness",
         "@id": "https://extrucon.de/#organization",
         "name": "ExtruCon GmbH",
-        "alternateName": ["ExtruCon KI-Agentur", "ExtruCon AI Agency", "KI-Agentur München", "KI-Agentur Deutschland"],
-        "description": "ExtruCon GmbH ist eine führende KI-Agentur in Deutschland. Wir entwickeln KI-Agenten, Chatbots, Automatisierungslösungen und moderne Webseiten für Unternehmen deutschlandweit.",
+        "alternateName": ["ExtruCon KI-Agentur", "ExtruCon AI Agency", "KI-Agentur München", "KI-Agentur Deutschland", "AI Agencija Hrvatska", "AI Ajansı Türkiye", "Yapay Zeka Ajansı"],
+        "description": "ExtruCon GmbH ist eine internationale KI-Agentur mit Sitz in Deutschland. Wir entwickeln KI-Agenten, Chatbots und Automatisierungslösungen für Unternehmen in Deutschland, Kroatien und der Türkei.",
         "url": "https://extrucon.de",
         "logo": "https://extrucon.de/logo.png",
         "image": "https://extrucon.de/og-image.png",
@@ -167,7 +167,20 @@ export default function Referenzen() {
           { "@type": "City", "name": "Stuttgart" },
           { "@type": "City", "name": "Fürstenfeldbruck" },
           { "@type": "Country", "name": "Kroatien" },
-          { "@type": "Country", "name": "Türkei" }
+          { "@type": "City", "name": "Zagreb" },
+          { "@type": "City", "name": "Split" },
+          { "@type": "City", "name": "Rijeka" },
+          { "@type": "City", "name": "Dubrovnik" },
+          { "@type": "City", "name": "Osijek" },
+          { "@type": "City", "name": "Zadar" },
+          { "@type": "Country", "name": "Türkei" },
+          { "@type": "City", "name": "Istanbul" },
+          { "@type": "City", "name": "Antalya" },
+          { "@type": "City", "name": "Alanya" },
+          { "@type": "City", "name": "Ankara" },
+          { "@type": "City", "name": "İzmir" },
+          { "@type": "City", "name": "Bursa" },
+          { "@type": "City", "name": "Bodrum" }
         ],
         "openingHoursSpecification": {
           "@type": "OpeningHoursSpecification",
