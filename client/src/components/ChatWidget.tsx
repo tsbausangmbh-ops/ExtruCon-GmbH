@@ -68,7 +68,7 @@ export function ChatWidget() {
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            className="fixed bottom-24 right-4 z-50 w-[500px] max-w-[calc(100vw-2rem)] bg-background/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden"
+            className="fixed bottom-24 right-4 z-50 w-[380px] max-w-[calc(100vw-2rem)] bg-background/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden"
           >
             <div className="bg-gradient-to-r from-primary to-secondary p-5 flex items-center justify-between">
               <div className="flex items-center gap-4">
@@ -89,7 +89,7 @@ export function ChatWidget() {
               </button>
             </div>
 
-            <div className="h-[550px] overflow-y-auto p-4 space-y-4">
+            <div className="h-[400px] overflow-y-auto p-4 space-y-3">
               {messages.length === 0 && (
                 <div className="text-center py-8">
                   <Bot className="w-12 h-12 text-primary/50 mx-auto mb-3" />
