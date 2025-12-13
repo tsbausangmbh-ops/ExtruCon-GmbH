@@ -3,9 +3,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
-import { Mail, Globe, Phone, Send, CheckCircle } from "lucide-react";
+import { Mail, Globe, Phone, Send, CheckCircle, Calendar, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/lib/i18n";
+import { Link } from "wouter";
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -60,6 +61,27 @@ export function Contact() {
                   <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="font-medium hover:text-primary transition-colors">https://extrucon.de</a>
                 </div>
               </div>
+            </div>
+
+            {/* Booking CTA */}
+            <div className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-primary/10 to-cyan-500/10 border border-primary/20">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                  <Calendar className="w-5 h-5 text-primary" />
+                </div>
+                <h3 className="font-bold text-white">{t.contactPage.bookingCta.title}</h3>
+              </div>
+              <p className="text-gray-400 text-sm mb-4">{t.contactPage.bookingCta.subtitle}</p>
+              <Link href="/termin">
+                <Button 
+                  className="w-full bg-primary hover:bg-primary/90 text-background font-bold"
+                  data-testid="button-book-appointment-home"
+                >
+                  <Calendar className="w-4 h-4 mr-2" />
+                  {t.contactPage.bookingCta.button}
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
             </div>
           </div>
 

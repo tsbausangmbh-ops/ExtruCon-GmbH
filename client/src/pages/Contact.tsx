@@ -4,11 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Calendar, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
+import { Link } from "wouter";
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -309,6 +310,40 @@ export default function Contact() {
                 {t.contactPage.viewAllFaqs}
               </a>
             </div>
+          </div>
+        </section>
+
+        {/* Booking CTA Section */}
+        <section className="py-12 bg-gradient-to-b from-background to-primary/5">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-3xl mx-auto text-center"
+            >
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+                <Calendar className="w-4 h-4" />
+                {t.contactPage.bookingCta.badge}
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {t.contactPage.bookingCta.title}
+              </h2>
+              <p className="text-gray-400 text-lg mb-8">
+                {t.contactPage.bookingCta.subtitle}
+              </p>
+              <Link href="/termin">
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-background font-bold px-8"
+                  data-testid="button-book-appointment-contact"
+                >
+                  <Calendar className="w-5 h-5 mr-2" />
+                  {t.contactPage.bookingCta.button}
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
+            </motion.div>
           </div>
         </section>
       </main>

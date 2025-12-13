@@ -994,7 +994,13 @@ export const translations = {
         { q: 'Kostenlose Erstgespräche?', a: 'Ja! Immer kostenlos und unverbindlich.' },
         { q: 'Auch für kleine Unternehmen?', a: 'Absolut. Lösungen für jedes Budget.' }
       ],
-      viewAllFaqs: '→ Alle FAQs ansehen'
+      viewAllFaqs: '→ Alle FAQs ansehen',
+      bookingCta: {
+        title: 'Lieber direkt sprechen?',
+        subtitle: 'Buchen Sie jetzt einen kostenlosen Beratungstermin – schnell und unkompliziert.',
+        button: 'Termin vereinbaren',
+        badge: 'Kostenlose Beratung'
+      }
     },
     socialMediaPage: {
       heroImageAlt: 'Social Media Agentur Fürstenfeldbruck München',
@@ -2143,7 +2149,13 @@ export const translations = {
         { q: 'Free initial consultations?', a: 'Yes! Always free and non-binding.' },
         { q: 'Also for small businesses?', a: 'Absolutely. Solutions for every budget.' }
       ],
-      viewAllFaqs: '→ View all FAQs'
+      viewAllFaqs: '→ View all FAQs',
+      bookingCta: {
+        title: 'Prefer to talk directly?',
+        subtitle: 'Book a free consultation now – quick and easy.',
+        button: 'Schedule Appointment',
+        badge: 'Free Consultation'
+      }
     },
     socialMediaPage: {
       heroImageAlt: 'Social Media Agency Fürstenfeldbruck Munich',
@@ -3292,7 +3304,13 @@ export const translations = {
         { q: 'Besplatne prve konzultacije?', a: 'Da! Uvijek besplatno i neobvezujuće.' },
         { q: 'I za male tvrtke?', a: 'Apsolutno. Rješenja za svaki budžet.' }
       ],
-      viewAllFaqs: '→ Pogledajte sva pitanja'
+      viewAllFaqs: '→ Pogledajte sva pitanja',
+      bookingCta: {
+        title: 'Radije biste razgovarali?',
+        subtitle: 'Rezervirajte besplatne konzultacije sada – brzo i jednostavno.',
+        button: 'Zakažite termin',
+        badge: 'Besplatne konzultacije'
+      }
     },
     socialMediaPage: {
       heroImageAlt: 'Agencija za društvene mreže Fürstenfeldbruck München',
@@ -3904,7 +3922,13 @@ export const translations = {
         { q: 'Ücretsiz ilk görüşme?', a: 'Evet! Her zaman ücretsiz ve bağlayıcı değil.' },
         { q: 'Küçük işletmeler için de?', a: 'Kesinlikle. Her bütçeye uygun çözümler.' }
       ],
-      viewAllFaqs: '→ Tüm SSS\'leri görüntüle'
+      viewAllFaqs: '→ Tüm SSS\'leri görüntüle',
+      bookingCta: {
+        title: 'Doğrudan konuşmayı mı tercih edersiniz?',
+        subtitle: 'Şimdi ücretsiz danışmanlık randevusu alın – hızlı ve kolay.',
+        button: 'Randevu Alın',
+        badge: 'Ücretsiz Danışmanlık'
+      }
     },
     footer: {
       services: 'Hizmetler',
