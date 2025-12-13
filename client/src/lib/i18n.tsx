@@ -3268,6 +3268,100 @@ export const translations = {
       title: 'Sıkça Sorulan Sorular',
       subtitle: 'Hizmetlerimiz hakkında merak ettikleriniz',
     },
+    faqPage: {
+      badge: 'Yardım & Destek',
+      title: 'Sıkça Sorulan Sorular (SSS)',
+      subtitle: 'Hizmetlerimiz, fiyatlarımız ve ExtruCon ile işbirliği hakkında en sık sorulan soruların yanıtlarını bulun.',
+      searchPlaceholder: 'Soru ara...',
+      searchResults: 'Arama Sonuçları',
+      noResults: 'Soru bulunamadı. Başka bir arama terimi deneyin.',
+      categoriesLabel: 'Kategoriler',
+      ctaTitle: 'Sorunuz burada yok mu?',
+      ctaSubtitle: 'Doğrudan bizimle iletişime geçin – sorularınızı kişisel ve bağlayıcı olmadan yanıtlamaktan memnuniyet duyarız.',
+      ctaButton: 'Şimdi İletişime Geçin',
+      categories: {
+        allgemein: 'Genel',
+        ki: 'AI & Otomasyon',
+        social: 'Sosyal Medya',
+        web: 'Web Geliştirme',
+        marketing: 'SEO & Performans Pazarlama',
+        kosten: 'Fiyatlar & İşbirliği'
+      },
+      questions: {
+        allgemein: [
+          { q: 'ExtruCon kimdir?', a: 'ExtruCon GmbH, Münih yakınlarındaki Fürstenfeldbruck merkezli tam hizmet pazarlama ve AI ajansıdır. Dijital pazarlama, AI otomasyonu, web geliştirme ve içerik oluşturma alanlarında Almanya genelinde müşterilere hizmet veriyoruz.' },
+          { q: 'Almanya genelinde çalışıyor musunuz?', a: 'Evet! Merkezimiz Fürstenfeldbruck\'ta, ancak tüm Almanya\'daki müşterilere ihtiyaca göre uzaktan ve yerinde hizmet veriyoruz.' },
+          { q: 'Hangi sektörlerle çalışıyorsunuz?', a: 'KOBİ\'ler, start-up\'lar, zanaatkarlar, hizmet sağlayıcılar, e-ticaret şirketleri ve daha fazlasıyla sektörler arası çalışıyoruz. Stratejilerimizi sektörünüze göre özelleştiriyoruz.' },
+          { q: 'Ücretsiz ilk görüşme sunuyor musunuz?', a: 'Evet! İlk danışma görüşmesi her zaman ücretsiz ve bağlayıcı değildir. Mevcut durumunuzu analiz ediyor ve potansiyelleri gösteriyoruz.' },
+          { q: 'Taleplere ne kadar hızlı yanıt veriyorsunuz?', a: 'İş günlerinde tüm taleplere genellikle 24 saat içinde yanıt veriyoruz.' },
+          { q: 'Ekibiniz ne kadar büyük?', a: 'Pazarlama, tasarım, geliştirme ve AI uzmanlarından oluşan çevik bir ekibiz. Proje büyüklüğüne göre kanıtlanmış ortaklarla da çalışıyoruz.' },
+          { q: 'Referanslarınız var mı?', a: 'Evet! 50\'den fazla projeyi başarıyla tamamladık. İlk görüşmede sektörünüze uygun referansları memnuniyetle gösteriyoruz.' },
+          { q: 'Sizinle nasıl iletişime geçebilirim?', a: 'info@extrucon.de adresine e-posta, 089 444438879 numaralı telefon veya iletişim formumuz aracılığıyla. En kısa sürede size dönüş yapacağız.' },
+          { q: 'Sizi diğer ajanslardan ayıran nedir?', a: 'Klasik pazarlamayı en modern AI teknolojisiyle birleştiriyoruz. Bu sayede daha verimli çalışıyor ve uygun fiyatlarla daha iyi sonuçlar sunabiliyoruz.' },
+          { q: 'ExtruCon ne zamandan beri var?', a: 'ExtruCon 2020\'de kuruldu ve o zamandan beri şirketlerin dijital dönüşümünü desteklemek için hizmet portföyünü sürekli genişletti.' }
+        ],
+        ki: [
+          { q: 'AI chatbot ne kadar?', a: 'Basit bir chatbot 1.500€\'dan başlıyor. Özel uyarlamalı daha karmaşık AI çözümleri 3.000€\'dan başlıyor. Olasılıklar hakkında ücretsiz danışmanlık veriyoruz.' },
+          { q: 'AI araçları için teknik bilgiye ihtiyacım var mı?', a: 'Hayır! Tüm teknik uygulamayı biz üstleniyoruz ve ekibinizi eğitiyoruz. Kullanımı kolay bir çözüm alırsınız.' },
+          { q: 'Bir AI projesi ne kadar sürede tamamlanır?', a: 'Basit chatbotlar 1-2 haftada kullanıma hazır. Daha karmaşık otomasyonlar kapsama bağlı olarak 4-8 hafta alır.' },
+          { q: 'AI küçük işletmeler için de mantıklı mı?', a: 'Kesinlikle! Özellikle küçük işletmeler otomasyondan faydalanır, çünkü ana iş için zaman kazandırır. Her bütçeye uygun çözümlerimiz var.' },
+          { q: 'Hangi AI teknolojilerini kullanıyorsunuz?', a: 'OpenAI/GPT-4, Claude AI, Google Gemini ve n8n, Make, Zapier gibi otomasyon araçlarıyla çalışıyoruz. Teknolojiyi gereksinimlerinize göre seçiyoruz.' },
+          { q: 'AI müşteri hizmetlerimin yerini alabilir mi?', a: 'AI tekrarlayan talepleri otomatikleştirebilir ve ekibinizi rahatlatabilir. Karmaşık durumlar için insan teması önemli kalır – AI tamamen değil, tamamlar.' },
+          { q: 'AI çözümleri ne kadar güvenli?', a: 'GDPR uyumluluğuna ve veri güvenliğine dikkat ediyoruz. Müşteri verileri şifrelenir ve yalnızca amaçlanan kullanım için kullanılır.' },
+          { q: 'AI araçları için sürekli maliyet var mı?', a: 'Çözüme bağlı olarak API maliyetleri (örn. OpenAI için) olabilir. Bunu teklifte şeffaf bir şekilde hesaplıyoruz ve maliyet verimliliği için optimize ediyoruz.' },
+          { q: 'n8n nedir ve neden kullanıyorsunuz?', a: 'n8n güçlü bir açık kaynak otomasyon aracıdır. Ticari alternatiflere göre daha düşük maliyetle maksimum esneklik sunar.' },
+          { q: 'Mevcut sistemlerimi AI ile bağlayabilir miyim?', a: 'Evet! AI çözümlerini mevcut yazılım altyapınıza entegre ediyoruz – CRM, ERP, e-posta, mağaza sistemleri ve daha fazlası.' }
+        ],
+        social: [
+          { q: 'Sosyal medya pazarlama ne kadar?', a: 'Paketlerimiz tek bir kanalın yönetimi için 790€/aydan başlıyor. İçerik üretimiyle tam multi-channel stratejiler 1.490€/aydan başlıyor.' },
+          { q: 'Sosyal medyada ne sıklıkla paylaşım yapılmalı?', a: 'Bu platforma bağlı. Instagram için haftada 3-5 gönderi artı günlük hikayeler öneriyoruz. LinkedIn için haftada 2-3 kaliteli gönderi yeterli.' },
+          { q: 'İşletmem için en iyi platform hangisi?', a: 'Bunu ücretsiz ilk görüşmede analiz ediyoruz. B2B şirketleri genellikle LinkedIn\'den, yerel hizmet sağlayıcılar Instagram ve Google Business\'tan faydalanır.' },
+          { q: 'Bizim için içerik de oluşturuyor musunuz?', a: 'Evet! Tüm içerik üretimini üstleniyoruz: metinler, grafikler, fotoğraflar ve videolar. İsteğe bağlı olarak yerinde çekimler de yapıyoruz.' },
+          { q: 'Sosyal medya başarısını nasıl ölçüyorsunuz?', a: 'Erişim, etkileşim, takipçi büyümesi, web sitesi trafiği ve dönüşümler gibi KPI\'ları takip ediyoruz. Tüm önemli rakamlarla aylık raporlar alırsınız.' },
+          { q: 'Sosyal medyada ücretli reklam da yapıyor musunuz?', a: 'Evet! Meta (Facebook/Instagram), TikTok ve LinkedIn\'de sürekli optimizasyonla kampanyalar oluşturuyor ve yönetiyoruz.' },
+          { q: 'Topluluğum ne kadar hızlı büyür?', a: 'Bu sektöre ve bütçeye bağlı. Organik büyüme zaman alır – ücretli erişimle ilk sonuçlar haftalar içinde görülebilir.' },
+          { q: 'İçeriği önceden onaylayabilir miyim?', a: 'Elbette! İçerik takvimleri ve onay süreçleriyle çalışıyoruz, böylece her zaman tam kontrole sahip olursunuz.' },
+          { q: 'Topluluk yönetimini de üstleniyor musunuz?', a: 'Evet! Yorumları ve mesajları sizin adınıza yanıtlıyoruz – hızlı, dostça ve marka uyumlu.' },
+          { q: 'Influencer pazarlama nasıl çalışır?', a: 'Uygun influencer\'ları belirliyoruz, koşulları müzakere ediyoruz, kampanyaları koordine ediyoruz ve sonuçları ölçüyoruz.' }
+        ],
+        web: [
+          { q: 'Profesyonel bir web sitesi ne kadar?', a: 'Modern bir işletme web sitesi 2.500€\'dan başlıyor. E-ticaret veya özel işlevlere sahip daha kapsamlı projeler 5.000€\'dan başlıyor.' },
+          { q: 'Bir web sitesinin oluşturulması ne kadar sürer?', a: 'Standart bir web sitesi 2-4 haftada tamamlanır. Özel işlevlere sahip daha karmaşık projeler 6-12 hafta sürebilir.' },
+          { q: 'Web sitesi arama motorları için optimize edilmiş mi?', a: 'Evet! Her web sitesi SEO optimizasyonlu oluşturulur: hızlı yükleme süreleri, mobil optimizasyon, yapılandırılmış veriler ve teknik SEO standarttır.' },
+          { q: 'Hosting ve bakım da sunuyor musunuz?', a: 'Evet, güncellemeler, yedeklemeler, SSL sertifikası ve teknik destek dahil 49€/aydan başlayan hosting ve bakım paketleri sunuyoruz.' },
+          { q: 'Web sitesini kendim düzenleyebilir miyim?', a: 'Evet! Kullanıcı dostu bir içerik yönetim sistemi kuruyoruz ve kullanımı konusunda eğitim veriyoruz.' },
+          { q: 'Hangi teknolojileri kullanıyorsunuz?', a: 'React, Next.js, WordPress ve özel çözümler gibi modern teknolojilerle çalışıyoruz – projenizin gereksinimlerine göre.' },
+          { q: 'Web sitesi mobil için de optimize edilmiş mi?', a: 'Kesinlikle! Responsive tasarım bizim standardımız. Web siteniz akıllı telefon, tablet ve masaüstünde mükemmel görünür.' },
+          { q: 'Mevcut online mağazamı geliştirebilir misiniz?', a: 'Evet! Mevcut mağazaları daha iyi performans, daha yüksek dönüşüm oranları ve modern tasarım için optimize ediyoruz.' },
+          { q: 'Online mağaza ne kadar?', a: 'Basit mağazalar 3.500€\'dan başlıyor. Entegrasyonlu daha karmaşık e-ticaret çözümleri 7.000€\'dan başlıyor. Size danışmanlık yapmaktan memnuniyet duyarız.' },
+          { q: 'Web sitesi lansmanından sonra ne olur?', a: 'Bakım, güncellemeler ve geliştirme sunuyoruz. Web siteniz güvenli ve güncel kalır.' }
+        ],
+        marketing: [
+          { q: 'SEO ile ne kadar hızlı sonuç görürüm?', a: 'İlk iyileştirmeler genellikle 4-8 hafta sonra görülür. Sürdürülebilir üst sıralamalar için 3-6 ay planlıyoruz. SEO uzun vadeli bir yatırımdır.' },
+          { q: 'SEO optimizasyonu ne kadar?', a: 'SEO paketlerimiz 990€/aydan başlıyor. Kesin fiyat kapsam ve sektörünüzdeki rekabet durumuna bağlıdır.' },
+          { q: 'Google Ads da yapıyor musunuz?', a: 'Evet! Sürekli optimizasyonla Google Ads kampanyaları oluşturuyor ve yönetiyoruz. Yönetim ücretleri reklam bütçesinin %15\'inden başlıyor (minimum 300€/ay).' },
+          { q: 'SEO ile ücretli reklam arasındaki fark nedir?', a: 'SEO uzun vadede ücretsiz ziyaretçi getirir, ancak zaman alır. Ücretli reklam anında trafik getirir, ancak sürekli maliyet gerektirir. İdeal olan bir kombinasyondur.' },
+          { q: 'Düzenli raporlar alır mıyım?', a: 'Evet! Tüm önemli KPI\'larla aylık raporlar alırsınız: sıralamalar, trafik, dönüşümler, ROI. İsteğe bağlı haftalık güncellemeler de mümkün.' },
+          { q: 'Local SEO nedir?', a: 'Local SEO, yerel aramalar için görünürlüğünüzü optimize eder (örn. "Münih\'te kuaför"). Yerel müşteri çevresine sahip işletmeler için önemlidir.' },
+          { q: 'Sıralama garantisi veriyor musunuz?', a: 'Ciddi ajanslar sıralama garantisi vermez, çünkü algoritmayı Google kontrol eder. Ancak en iyi uygulamalara göre profesyonel çalışma garantisi veriyoruz.' },
+          { q: 'Reklam bütçem ne kadar olmalı?', a: 'Bu sektörünüze ve hedeflerinize bağlı. İlk testler için minimum 500-1.000€/ay öneriyoruz. Size özel danışmanlık vermekten memnuniyet duyarız.' },
+          { q: 'Anahtar kelimeler nedir?', a: 'Anahtar kelimeler, web sitenizin bulunmasını istediğiniz arama terimleridir. İşletmeniz için en karlı anahtar kelimeleri araştırıyoruz.' },
+          { q: 'Dönüşüm nedir?', a: 'Dönüşüm istenen bir eylemdir: satın alma, talep, bülten aboneliği. Sizin için önemli dönüşümler için optimize ediyoruz.' }
+        ],
+        kosten: [
+          { q: 'Ödeme koşullarınız nedir?', a: 'Projelerde: %50 peşinat, %50 tamamlanmada. Devam eden hizmetlerde: 14 gün vade ile aylık faturalandırma.' },
+          { q: 'Minimum sözleşme süreleri var mı?', a: 'Devam eden bakımlar (SEO, sosyal medya) için sonuçlar zaman aldığından minimum 6 ay öneriyoruz. Tek projeler için süre yok.' },
+          { q: 'Tek hizmetler de sunuyor musunuz?', a: 'Evet! Sadece sosyal medya, sadece web tasarımı veya sadece SEO – hizmetlerimizi ihtiyaçlarınıza göre şekillendiriyoruz.' },
+          { q: 'Küçük bütçelerle de çalışıyor musunuz?', a: 'Evet! Daha küçük bütçeler için giriş paketlerimiz var ve bütçenizle hangi önlemlerin en mantıklı olduğu konusunda dürüstçe danışmanlık veriyoruz.' },
+          { q: 'İşbirliği nasıl işliyor?', a: 'İlk görüşmeden sonra bir teklif hazırlıyoruz. Kabul durumunda hedefleri ve zaman çizelgesini belirlediğimiz bir başlangıç toplantısıyla başlıyoruz.' },
+          { q: 'Sabit bir iletişim kişim oluyor mu?', a: 'Evet! Ana iletişim kişiniz olan ve tüm ipleri bir arada tutan kişisel bir proje yöneticisi alıyorsunuz.' },
+          { q: 'Hizmetleri istediğim zaman iptal edebilir miyim?', a: 'Devam eden sözleşmelerde anlaşılan fesih süreleri geçerlidir (genellikle 1-3 ay). Tek projeler tamamlanmada faturalandırılır.' },
+          { q: 'Özel teklifler de hazırlıyor musunuz?', a: 'Evet! Her teklif gereksinimlerinize göre özel olarak hazırlanır. Ücretsiz ilk görüşme için bizimle iletişime geçin.' },
+          { q: 'Uzun vadeli işbirliği için indirimler var mı?', a: 'Evet! Yıllık sözleşmeler veya kapsamlı projeler için cazip koşullar sunuyoruz.' },
+          { q: 'Hizmetleri daha sonra genişletebilir miyim?', a: 'Elbette! Birçok müşteri tek bir hizmetle başlayıp adım adım genişletiyor.' }
+        ]
+      }
+    },
     ratgeber: {
       title: 'Rehber',
       subtitle: 'AI ve otomasyon hakkında bilgiler',
