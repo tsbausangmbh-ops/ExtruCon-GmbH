@@ -146,115 +146,87 @@
     }
     </script>
 
-    <!-- Structured Data: LocalBusiness -->
+    <!-- Structured Data: ProfessionalService (Hauptsitz Deutschland) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "@id": "https://extrucon.de/#localbusiness",
+      "@type": "ProfessionalService",
+      "@id": "https://extrucon.de/#profservice",
       "name": "ExtruCon GmbH - KI-Agentur Fürstenfeldbruck",
-      "image": "https://extrucon.de/logo.png",
-      "description": "KI-Agentur für Automatisierung, KI-Agenten und digitales Marketing. Wir helfen Unternehmen, mit intelligenten Workflows Zeit zu sparen und mehr Kunden zu gewinnen.",
+      "alternateName": ["ExtruCon", "ExtruCon KI-Agentur", "ExtruCon Automatisierung"],
+      "image": ["https://extrucon.de/logo.png", "https://extrucon.de/og-image.png"],
+      "description": "KI-Agentur für Automatisierung, KI-Agenten und digitales Marketing. Wir helfen Unternehmen in Deutschland, Kroatien und der Türkei, mit intelligenten Workflows Zeit zu sparen und mehr Kunden zu gewinnen.",
       "url": "https://extrucon.de",
       "telephone": "+4989444438879",
       "email": "info@extrucon.de",
       "priceRange": "€€-€€€",
-      "currenciesAccepted": "EUR",
-      "paymentAccepted": "Überweisung, PayPal",
+      "currenciesAccepted": "EUR, HRK, TRY",
+      "paymentAccepted": ["Überweisung", "PayPal", "Kreditkarte"],
+      "hasMap": "https://www.google.com/maps?q=48.1789,11.2546",
+      "isAccessibleForFree": false,
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Hasenheide 8",
         "addressLocality": "Fürstenfeldbruck",
         "postalCode": "82256",
         "addressRegion": "Bayern",
-        "addressCountry": "DE"
+        "addressCountry": "DE",
+        "areaServed": "DE"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 48.1789,
-        "longitude": 11.2546
+        "latitude": "48.1789",
+        "longitude": "11.2546",
+        "name": "ExtruCon Hauptsitz Fürstenfeldbruck"
       },
       "areaServed": [
+        {
+          "@type": "GeoCircle",
+          "@id": "https://extrucon.de/#servicearea-dach",
+          "name": "DACH-Region Service-Gebiet",
+          "description": "Deutschland, Österreich, Schweiz - 500km Radius um München",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "48.1351",
+            "longitude": "11.5820",
+            "name": "München Zentrum"
+          },
+          "geoRadius": "500000"
+        },
+        {
+          "@type": "GeoCircle",
+          "@id": "https://extrucon.de/#servicearea-hr",
+          "name": "Kroatien Service-Gebiet",
+          "description": "Kroatien, Slowenien, Bosnien - 400km Radius um Zagreb",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "45.8150",
+            "longitude": "15.9819",
+            "name": "Zagreb Zentrum"
+          },
+          "geoRadius": "400000"
+        },
+        {
+          "@type": "GeoCircle",
+          "@id": "https://extrucon.de/#servicearea-tr",
+          "name": "Türkei Service-Gebiet",
+          "description": "Türkische Riviera und Westküste - 600km Radius um Antalya",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "36.8969",
+            "longitude": "30.7133",
+            "name": "Antalya Zentrum"
+          },
+          "geoRadius": "600000"
+        },
         {"@type": "Country", "name": "Deutschland", "alternateName": "Germany", "sameAs": "https://www.wikidata.org/wiki/Q183"},
         {"@type": "Country", "name": "Österreich", "alternateName": "Austria", "sameAs": "https://www.wikidata.org/wiki/Q40"},
         {"@type": "Country", "name": "Schweiz", "alternateName": "Switzerland", "sameAs": "https://www.wikidata.org/wiki/Q39"},
         {"@type": "Country", "name": "Hrvatska", "alternateName": "Croatia", "sameAs": "https://www.wikidata.org/wiki/Q224"},
-        {"@type": "Country", "name": "Bosna i Hercegovina", "alternateName": "Bosnia and Herzegovina", "sameAs": "https://www.wikidata.org/wiki/Q225"},
-        {"@type": "Country", "name": "Srbija", "alternateName": "Serbia", "sameAs": "https://www.wikidata.org/wiki/Q403"},
-        {"@type": "Country", "name": "Slovenija", "alternateName": "Slovenia", "sameAs": "https://www.wikidata.org/wiki/Q215"},
-        {"@type": "Country", "name": "Crna Gora", "alternateName": "Montenegro", "sameAs": "https://www.wikidata.org/wiki/Q236"},
         {"@type": "Country", "name": "Türkiye", "alternateName": "Turkey", "sameAs": "https://www.wikidata.org/wiki/Q43"},
-        {"@type": "Country", "name": "Kıbrıs", "alternateName": "Cyprus", "sameAs": "https://www.wikidata.org/wiki/Q229"},
-        {"@type": "State", "name": "Bayern"},
-        {"@type": "City", "name": "München"},
-        {"@type": "City", "name": "Fürstenfeldbruck"},
-        {"@type": "City", "name": "Wien"},
-        {"@type": "City", "name": "Zürich"},
-        {"@type": "City", "name": "Zagreb", "sameAs": "https://www.wikidata.org/wiki/Q1435"},
-        {"@type": "City", "name": "Split", "sameAs": "https://www.wikidata.org/wiki/Q1663"},
-        {"@type": "City", "name": "Rijeka", "sameAs": "https://www.wikidata.org/wiki/Q1572"},
-        {"@type": "City", "name": "Osijek", "sameAs": "https://www.wikidata.org/wiki/Q7106"},
-        {"@type": "City", "name": "Zadar", "sameAs": "https://www.wikidata.org/wiki/Q3375"},
-        {"@type": "City", "name": "Pula", "sameAs": "https://www.wikidata.org/wiki/Q5074"},
-        {"@type": "City", "name": "Dubrovnik", "sameAs": "https://www.wikidata.org/wiki/Q1722"},
-        {"@type": "City", "name": "Šibenik", "sameAs": "https://www.wikidata.org/wiki/Q7109"},
-        {"@type": "City", "name": "Varaždin", "sameAs": "https://www.wikidata.org/wiki/Q7108"},
-        {"@type": "City", "name": "Karlovac", "sameAs": "https://www.wikidata.org/wiki/Q7107"},
-        {"@type": "City", "name": "Makarska", "sameAs": "https://www.wikidata.org/wiki/Q329933"},
-        {"@type": "City", "name": "Rovinj", "sameAs": "https://www.wikidata.org/wiki/Q209155"},
-        {"@type": "City", "name": "Poreč", "sameAs": "https://www.wikidata.org/wiki/Q215371"},
-        {"@type": "City", "name": "Opatija", "sameAs": "https://www.wikidata.org/wiki/Q279649"},
-        {"@type": "City", "name": "Crikvenica", "sameAs": "https://www.wikidata.org/wiki/Q578380"},
-        {"@type": "City", "name": "Umag", "sameAs": "https://www.wikidata.org/wiki/Q207285"},
-        {"@type": "City", "name": "Trogir", "sameAs": "https://www.wikidata.org/wiki/Q189278"},
-        {"@type": "City", "name": "Hvar", "sameAs": "https://www.wikidata.org/wiki/Q208007"},
-        {"@type": "City", "name": "Korčula", "sameAs": "https://www.wikidata.org/wiki/Q599954"},
-        {"@type": "City", "name": "Biograd na Moru", "sameAs": "https://www.wikidata.org/wiki/Q589656"},
-        {"@type": "City", "name": "Vodice", "sameAs": "https://www.wikidata.org/wiki/Q681178"},
-        {"@type": "City", "name": "Primošten", "sameAs": "https://www.wikidata.org/wiki/Q1143046"},
-        {"@type": "City", "name": "Bol", "sameAs": "https://www.wikidata.org/wiki/Q761609"},
-        {"@type": "City", "name": "Cavtat", "sameAs": "https://www.wikidata.org/wiki/Q1051706"},
-        {"@type": "AdministrativeArea", "name": "Istarska županija", "alternateName": "Istria"},
-        {"@type": "AdministrativeArea", "name": "Primorsko-goranska županija", "alternateName": "Kvarner"},
-        {"@type": "AdministrativeArea", "name": "Zadarska županija", "alternateName": "Zadar County"},
-        {"@type": "AdministrativeArea", "name": "Šibensko-kninska županija", "alternateName": "Šibenik-Knin County"},
-        {"@type": "AdministrativeArea", "name": "Splitsko-dalmatinska županija", "alternateName": "Split-Dalmatia"},
-        {"@type": "AdministrativeArea", "name": "Dubrovačko-neretvanska županija", "alternateName": "Dubrovnik-Neretva"},
-        {"@type": "AdministrativeArea", "name": "Ličko-senjska županija", "alternateName": "Lika-Senj"},
-        {"@type": "City", "name": "Sarajevo"},
-        {"@type": "City", "name": "Beograd"},
-        {"@type": "City", "name": "Ljubljana"},
-        {"@type": "City", "name": "Istanbul", "sameAs": "https://www.wikidata.org/wiki/Q406"},
-        {"@type": "City", "name": "Ankara", "sameAs": "https://www.wikidata.org/wiki/Q3322"},
-        {"@type": "City", "name": "İzmir", "sameAs": "https://www.wikidata.org/wiki/Q35997"},
-        {"@type": "City", "name": "Antalya", "sameAs": "https://www.wikidata.org/wiki/Q82070"},
-        {"@type": "City", "name": "Bursa", "sameAs": "https://www.wikidata.org/wiki/Q43387"},
-        {"@type": "City", "name": "Adana", "sameAs": "https://www.wikidata.org/wiki/Q42059"},
-        {"@type": "City", "name": "Konya", "sameAs": "https://www.wikidata.org/wiki/Q79857"},
-        {"@type": "City", "name": "Gaziantep", "sameAs": "https://www.wikidata.org/wiki/Q83271"},
-        {"@type": "City", "name": "Mersin", "sameAs": "https://www.wikidata.org/wiki/Q131376"},
-        {"@type": "City", "name": "Kayseri", "sameAs": "https://www.wikidata.org/wiki/Q80063"},
-        {"@type": "City", "name": "Eskişehir", "sameAs": "https://www.wikidata.org/wiki/Q80065"},
-        {"@type": "City", "name": "Bodrum", "sameAs": "https://www.wikidata.org/wiki/Q203895"},
-        {"@type": "City", "name": "Marmaris", "sameAs": "https://www.wikidata.org/wiki/Q208175"},
-        {"@type": "City", "name": "Fethiye", "sameAs": "https://www.wikidata.org/wiki/Q220826"},
-        {"@type": "City", "name": "Kuşadası", "sameAs": "https://www.wikidata.org/wiki/Q267528"},
-        {"@type": "City", "name": "Alanya", "sameAs": "https://www.wikidata.org/wiki/Q207208"},
-        {"@type": "City", "name": "Kaş", "sameAs": "https://www.wikidata.org/wiki/Q932648"},
-        {"@type": "City", "name": "Side", "sameAs": "https://www.wikidata.org/wiki/Q679085"},
-        {"@type": "City", "name": "Belek", "sameAs": "https://www.wikidata.org/wiki/Q835988"},
-        {"@type": "City", "name": "Kemer", "sameAs": "https://www.wikidata.org/wiki/Q946644"},
-        {"@type": "City", "name": "Çeşme", "sameAs": "https://www.wikidata.org/wiki/Q208176"},
-        {"@type": "City", "name": "Didim", "sameAs": "https://www.wikidata.org/wiki/Q212887"},
-        {"@type": "City", "name": "Trabzon", "sameAs": "https://www.wikidata.org/wiki/Q80061"},
-        {"@type": "City", "name": "Samsun", "sameAs": "https://www.wikidata.org/wiki/Q80067"},
-        {"@type": "City", "name": "Sinop", "sameAs": "https://www.wikidata.org/wiki/Q180650"},
-        {"@type": "City", "name": "Amasra", "sameAs": "https://www.wikidata.org/wiki/Q599949"},
-        {"@type": "AdministrativeArea", "name": "Ege Bölgesi", "alternateName": "Aegean Region"},
-        {"@type": "AdministrativeArea", "name": "Akdeniz Bölgesi", "alternateName": "Mediterranean Region"},
-        {"@type": "AdministrativeArea", "name": "Marmara Bölgesi", "alternateName": "Marmara Region"},
-        {"@type": "AdministrativeArea", "name": "Karadeniz Bölgesi", "alternateName": "Black Sea Region"},
-        {"@type": "AdministrativeArea", "name": "Türkische Riviera", "alternateName": "Turkish Riviera"}
+        {"@type": "State", "name": "Bayern", "sameAs": "https://www.wikidata.org/wiki/Q980"},
+        {"@type": "City", "name": "München", "sameAs": "https://www.wikidata.org/wiki/Q1726"},
+        {"@type": "City", "name": "Fürstenfeldbruck", "sameAs": "https://www.wikidata.org/wiki/Q507486"}
       ],
       "openingHoursSpecification": [
         {
@@ -270,7 +242,201 @@
         "reviewCount": "47",
         "bestRating": "5",
         "worstRating": "1"
-      }
+      },
+      "makesOffer": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "KI-Agenten Entwicklung"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Workflow-Automatisierung mit n8n"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Webseiten mit KI-Features"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Social Media Marketing"}}
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: Niederlassung Kroatien -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://extrucon.de/#location-hr",
+      "name": "ExtruCon GmbH - Niederlassung Kroatien",
+      "alternateName": ["ExtruCon Hrvatska", "ExtruCon Zagreb"],
+      "description": "KI-Agentur und Automatisierungsexperten für Kroatien, Slowenien, Bosnien-Herzegowina, Serbien und Montenegro.",
+      "url": "https://extrucon.de/?lang=hr",
+      "telephone": "+4989444438879",
+      "email": "info@extrucon.de",
+      "priceRange": "€€-€€€",
+      "parentOrganization": {"@type": "Organization", "@id": "https://extrucon.de/#organization"},
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Zagreb",
+        "addressRegion": "Grad Zagreb",
+        "addressCountry": "HR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "45.8150",
+        "longitude": "15.9819",
+        "name": "ExtruCon Zagreb"
+      },
+      "hasMap": "https://www.google.com/maps?q=45.8150,15.9819",
+      "areaServed": [
+        {
+          "@type": "GeoCircle",
+          "name": "Balkan Service-Gebiet",
+          "geoMidpoint": {"@type": "GeoCoordinates", "latitude": "45.8150", "longitude": "15.9819"},
+          "geoRadius": "400000"
+        },
+        {"@type": "Country", "name": "Hrvatska", "alternateName": "Croatia", "sameAs": "https://www.wikidata.org/wiki/Q224"},
+        {"@type": "Country", "name": "Slovenija", "alternateName": "Slovenia", "sameAs": "https://www.wikidata.org/wiki/Q215"},
+        {"@type": "Country", "name": "Bosna i Hercegovina", "alternateName": "Bosnia", "sameAs": "https://www.wikidata.org/wiki/Q225"},
+        {"@type": "Country", "name": "Srbija", "alternateName": "Serbia", "sameAs": "https://www.wikidata.org/wiki/Q403"},
+        {"@type": "Country", "name": "Crna Gora", "alternateName": "Montenegro", "sameAs": "https://www.wikidata.org/wiki/Q236"},
+        {"@type": "City", "name": "Zagreb", "sameAs": "https://www.wikidata.org/wiki/Q1435"},
+        {"@type": "City", "name": "Split", "sameAs": "https://www.wikidata.org/wiki/Q1663"},
+        {"@type": "City", "name": "Rijeka", "sameAs": "https://www.wikidata.org/wiki/Q1572"},
+        {"@type": "City", "name": "Dubrovnik", "sameAs": "https://www.wikidata.org/wiki/Q1722"},
+        {"@type": "City", "name": "Zadar", "sameAs": "https://www.wikidata.org/wiki/Q3375"},
+        {"@type": "City", "name": "Pula", "sameAs": "https://www.wikidata.org/wiki/Q5074"},
+        {"@type": "City", "name": "Osijek", "sameAs": "https://www.wikidata.org/wiki/Q7106"},
+        {"@type": "City", "name": "Ljubljana", "sameAs": "https://www.wikidata.org/wiki/Q437"},
+        {"@type": "City", "name": "Sarajevo", "sameAs": "https://www.wikidata.org/wiki/Q11194"},
+        {"@type": "City", "name": "Beograd", "sameAs": "https://www.wikidata.org/wiki/Q3711"},
+        {"@type": "AdministrativeArea", "name": "Istarska županija", "alternateName": "Istrien"},
+        {"@type": "AdministrativeArea", "name": "Splitsko-dalmatinska županija", "alternateName": "Dalmatien"}
+      ],
+      "availableLanguage": ["Croatian", "Slovenian", "Bosnian", "Serbian", "German", "English"]
+    }
+    </script>
+
+    <!-- Structured Data: Niederlassung Türkei -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://extrucon.de/#location-tr",
+      "name": "ExtruCon GmbH - Niederlassung Türkei",
+      "alternateName": ["ExtruCon Türkiye", "ExtruCon Antalya", "ExtruCon Alanya"],
+      "description": "KI-Agentur und Automatisierungsexperten für die Türkei und Zypern. Spezialisiert auf Tourismus, Immobilien und Gastronomie.",
+      "url": "https://extrucon.de/?lang=tr",
+      "telephone": "+4989444438879",
+      "email": "info@extrucon.de",
+      "priceRange": "€€-€€€",
+      "parentOrganization": {"@type": "Organization", "@id": "https://extrucon.de/#organization"},
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Antalya/Alanya",
+        "addressRegion": "Antalya",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "36.5434",
+        "longitude": "32.0005",
+        "name": "ExtruCon Alanya"
+      },
+      "hasMap": "https://www.google.com/maps?q=36.5434,32.0005",
+      "areaServed": [
+        {
+          "@type": "GeoCircle",
+          "name": "Türkei Service-Gebiet",
+          "geoMidpoint": {"@type": "GeoCoordinates", "latitude": "36.8969", "longitude": "30.7133"},
+          "geoRadius": "600000"
+        },
+        {"@type": "Country", "name": "Türkiye", "alternateName": "Turkey", "sameAs": "https://www.wikidata.org/wiki/Q43"},
+        {"@type": "Country", "name": "Kıbrıs", "alternateName": "Cyprus", "sameAs": "https://www.wikidata.org/wiki/Q229"},
+        {"@type": "City", "name": "Istanbul", "sameAs": "https://www.wikidata.org/wiki/Q406"},
+        {"@type": "City", "name": "Ankara", "sameAs": "https://www.wikidata.org/wiki/Q3322"},
+        {"@type": "City", "name": "İzmir", "sameAs": "https://www.wikidata.org/wiki/Q35997"},
+        {"@type": "City", "name": "Antalya", "sameAs": "https://www.wikidata.org/wiki/Q82070"},
+        {"@type": "City", "name": "Alanya", "sameAs": "https://www.wikidata.org/wiki/Q207208"},
+        {"@type": "City", "name": "Bodrum", "sameAs": "https://www.wikidata.org/wiki/Q203895"},
+        {"@type": "City", "name": "Marmaris", "sameAs": "https://www.wikidata.org/wiki/Q208175"},
+        {"@type": "City", "name": "Fethiye", "sameAs": "https://www.wikidata.org/wiki/Q220826"},
+        {"@type": "City", "name": "Side", "sameAs": "https://www.wikidata.org/wiki/Q679085"},
+        {"@type": "City", "name": "Belek", "sameAs": "https://www.wikidata.org/wiki/Q835988"},
+        {"@type": "City", "name": "Kemer", "sameAs": "https://www.wikidata.org/wiki/Q946644"},
+        {"@type": "City", "name": "Kuşadası", "sameAs": "https://www.wikidata.org/wiki/Q267528"},
+        {"@type": "AdministrativeArea", "name": "Akdeniz Bölgesi", "alternateName": "Türkische Riviera"},
+        {"@type": "AdministrativeArea", "name": "Ege Bölgesi", "alternateName": "Ägäis-Region"}
+      ],
+      "availableLanguage": ["Turkish", "German", "English"]
+    }
+    </script>
+
+    <!-- Structured Data: Geo-Koordinaten aller Standorte -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "@id": "https://extrucon.de/#places",
+      "name": "ExtruCon Standorte",
+      "description": "Alle ExtruCon GmbH Standorte mit präzisen Geo-Koordinaten",
+      "containsPlace": [
+        {
+          "@type": "Place",
+          "@id": "https://extrucon.de/#place-ffb",
+          "name": "ExtruCon Hauptsitz Fürstenfeldbruck",
+          "description": "Hauptsitz der ExtruCon GmbH in Bayern, Deutschland",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Hasenheide 8",
+            "addressLocality": "Fürstenfeldbruck",
+            "postalCode": "82256",
+            "addressRegion": "Bayern",
+            "addressCountry": "DE"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "48.1789",
+            "longitude": "11.2546"
+          },
+          "hasMap": "https://www.google.com/maps?q=48.1789,11.2546",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Landkreis Fürstenfeldbruck",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "Bayern",
+              "sameAs": "https://www.wikidata.org/wiki/Q980"
+            }
+          }
+        },
+        {
+          "@type": "Place",
+          "@id": "https://extrucon.de/#place-zagreb",
+          "name": "ExtruCon Niederlassung Zagreb",
+          "description": "Kroatische Niederlassung für Balkan-Region",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Zagreb",
+            "addressCountry": "HR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "45.8150",
+            "longitude": "15.9819"
+          },
+          "hasMap": "https://www.google.com/maps?q=45.8150,15.9819"
+        },
+        {
+          "@type": "Place",
+          "@id": "https://extrucon.de/#place-alanya",
+          "name": "ExtruCon Niederlassung Alanya",
+          "description": "Türkische Niederlassung für Türkei und Zypern",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Alanya",
+            "addressRegion": "Antalya",
+            "addressCountry": "TR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "36.5434",
+            "longitude": "32.0005"
+          },
+          "hasMap": "https://www.google.com/maps?q=36.5434,32.0005"
+        }
+      ]
     }
     </script>
 
