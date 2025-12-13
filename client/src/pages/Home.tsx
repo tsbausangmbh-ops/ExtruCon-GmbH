@@ -7,6 +7,7 @@ import { Problem } from "@/components/sections/Problem";
 import { About } from "@/components/sections/About";
 import { Contact } from "@/components/sections/Contact";
 import { SEOHead } from "@/components/SEOHead";
+import { KIWebseitenHighlight } from "@/components/sections/KIWebseitenHighlight";
 
 export default function Home() {
   return (
@@ -24,6 +25,8 @@ export default function Home() {
         <Problem />
         {/* Funnel Logic: 2. The System/Solution */}
         <Funnel />
+        {/* KI Webseiten Highlight */}
+        <KIWebseitenHighlight />
         {/* Funnel Logic: 3. The Execution Tools (Services) */}
         <Services />
         {/* About Section */}
