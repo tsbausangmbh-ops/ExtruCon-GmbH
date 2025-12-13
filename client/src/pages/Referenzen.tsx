@@ -28,11 +28,12 @@ export default function Referenzen() {
       link: "https://aquapro24.de"
     },
     {
-      title: "E-Commerce KI-Chatbot",
-      category: "KI-Agent",
-      description: "Automatisierter Kundenservice für Online-Shop mit 24/7 Verfügbarkeit",
-      results: ["85% weniger Support-Anfragen", "4.8/5 Kundenzufriedenheit"],
-      color: "cyan"
+      title: "089 Sanierer – Komplettsanierung München",
+      category: "Webentwicklung + KI",
+      description: "Full-Service Sanierungsportal mit KI-Beratung. Mehrstufiges Anfrageformular, Handwerker-Vermittlung und Online-Terminbuchung.",
+      results: ["268+ Projekte", "98% Weiterempfehlung", "20+ Jahre Erfahrung"],
+      color: "green",
+      link: "https://089-sanierer.de"
     },
     {
       title: "Immobilienmakler Automation",
