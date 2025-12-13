@@ -175,6 +175,7 @@ export const translations = {
     servicesPage: {
       title: 'Unsere Leistungen',
       subtitle: 'Umfassende digitale Lösungen, von starkem Branding bis zu modernster KI-Technologie.',
+      kiAgents: { title: 'KI-Agenten', desc: 'Autonome KI-Agenten für Kundenservice, Lead-Qualifizierung und Prozessautomatisierung – 24/7 verfügbar.' },
       brand: { title: 'Markenaufbau / Brand', desc: 'Entwicklung unverwechselbarer Markenidentitäten, die Vertrauen schaffen und im Gedächtnis bleiben.' },
       content: { title: 'Texting & Postings', desc: 'Zielgruppengenaue Texte und kreative Social Media Posts, die Interaktion fördern und verkaufen.' },
       social: { title: 'Social Media', desc: 'Strategisches Community-Management und virale Kampagnen, um Ihr Publikum auf allen Kanälen zu binden.' },
@@ -1227,6 +1228,7 @@ export const translations = {
     servicesPage: {
       title: 'Our Services',
       subtitle: 'Comprehensive digital solutions, from strong branding to cutting-edge AI technology.',
+      kiAgents: { title: 'AI Agents', desc: 'Autonomous AI agents for customer service, lead qualification, and process automation – available 24/7.' },
       brand: { title: 'Brand Building', desc: 'Development of distinctive brand identities that build trust and stay memorable.' },
       content: { title: 'Content & Posts', desc: 'Target-focused texts and creative social media posts that drive engagement and sales.' },
       social: { title: 'Social Media', desc: 'Strategic community management and viral campaigns to engage your audience across all channels.' },
@@ -2279,6 +2281,7 @@ export const translations = {
     servicesPage: {
       title: 'Naše usluge',
       subtitle: 'Sveobuhvatna digitalna rješenja, od snažnog brendiranja do najsuvremenije AI tehnologije.',
+      kiAgents: { title: 'AI Agenti', desc: 'Autonomni AI agenti za korisničku podršku, kvalifikaciju leadova i automatizaciju procesa – dostupni 24/7.' },
       brand: { title: 'Izgradnja brenda', desc: 'Razvoj prepoznatljivih identiteta brenda koji grade povjerenje i ostaju u sjećanju.' },
       content: { title: 'Sadržaj i objave', desc: 'Ciljani tekstovi i kreativne objave na društvenim mrežama koje potiču angažman i prodaju.' },
       social: { title: 'Društvene mreže', desc: 'Strateško upravljanje zajednicom i viralne kampanje za angažiranje publike na svim kanalima.' },
@@ -3221,6 +3224,7 @@ export const translations = {
     servicesPage: {
       title: 'Hizmetlerimiz',
       subtitle: 'Güçlü markadan en modern AI teknolojisine kadar kapsamlı dijital çözümler.',
+      kiAgents: { title: 'AI Ajanları', desc: 'Müşteri hizmetleri, lead kalifikasyonu ve süreç otomasyonu için otonom AI ajanları – 7/24 mevcut.' },
       brand: { title: 'Marka Oluşturma', desc: 'Güven inşa eden ve akılda kalan benzersiz marka kimlikleri geliştirme.' },
       content: { title: 'İçerik ve Paylaşımlar', desc: 'Etkileşim ve satış sağlayan hedefli metinler ve yaratıcı sosyal medya paylaşımları.' },
       social: { title: 'Sosyal Medya', desc: 'Kitlenizi tüm kanallarda bağlamak için stratejik topluluk yönetimi ve viral kampanyalar.' },
