@@ -12,9 +12,9 @@ export function Navbar() {
   const { t } = useLanguage();
 
   const services = [
+    { name: t.nav.websitesKI, href: "/webseiten-ki", icon: Globe },
     { name: t.nav.kiAgents, href: "/ki-agenten", icon: Bot },
     { name: t.nav.automation, href: "/automatisierungen", icon: Share2 },
-    { name: t.nav.websitesKI, href: "/webseiten-ki", icon: Globe },
     { name: t.nav.socialMedia, href: "/leistungen/social-media", icon: TrendingUp },
     { name: t.nav.contentCreation, href: "/leistungen/content", icon: FileText },
     { name: t.nav.marketing, href: "/leistungen/marketing", icon: Palette },
