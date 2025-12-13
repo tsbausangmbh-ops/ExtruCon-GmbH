@@ -56,6 +56,9 @@ export function Navbar() {
             )}
           </div>
 
+          <a href="/webseiten-ki" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
+            {t.nav.websitesKI}
+          </a>
           <a href="/referenzen" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
             {t.nav.references}
           </a>
@@ -107,6 +110,13 @@ export function Navbar() {
                 </a>
               ))}
             </div>
+            <a
+              href="/webseiten-ki"
+              className="text-lg font-bold text-secondary hover:text-primary transition-colors py-2"
+              onClick={() => setIsOpen(false)}
+            >
+              {t.nav.websitesKI}
+            </a>
             <a
               href="/referenzen"
               className="text-lg font-medium text-gray-300 hover:text-primary transition-colors py-2"
