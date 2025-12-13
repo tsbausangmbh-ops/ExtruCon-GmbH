@@ -7,7 +7,7 @@ export const translations = {
     nav: {
       services: 'Leistungen',
       ratgeber: 'Ratgeber',
-      faq: 'Häufige Fragen',
+      faq: 'FAQ',
       about: 'Über uns',
       contact: 'Kontakt',
       getStarted: 'Loslegen',
@@ -109,7 +109,7 @@ export const translations = {
       legal: 'Rechtliches',
       about: 'Über uns',
       contact: 'Kontakt',
-      faq: 'Häufige Fragen',
+      faq: 'FAQ',
       ratgeber: 'Ratgeber',
       impressum: 'Impressum',
       privacy: 'Datenschutz',
