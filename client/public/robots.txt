@@ -1,22 +1,106 @@
 # ExtruCon GmbH - Robots.txt
-# SEO & AI optimiert für: Deutschland (DE), Österreich (AT), Schweiz (CH),
-# Kroatien (HR), Bosnien (BA), Serbien (RS), Slowenien (SI), Montenegro (ME),
-# Türkei (TR), Zypern (CY), International (EN)
+# SEO, AI & GEO-IP optimiert für: Deutschland (DE), Kroatien (HR), Türkei (TR)
 # Letzte Aktualisierung: Dezember 2025
 
 # ===========================================
-# ZIELREGIONEN / TARGET REGIONS
+# GEO-IP TARGETING - ZIELREGIONEN
 # ===========================================
-# DE-DACH: Deutschland, Österreich, Schweiz
-# HR-Balkan: Kroatien, Bosnien, Serbien, Slowenien, Montenegro
-# TR-Region: Türkei, Zypern
-# International: Englisch weltweit
+# 
+# PRIMÄRE MÄRKTE MIT GEO-IP TARGETING:
+#
+# DEUTSCHLAND (DE) - IP Range: 5.0.0.0/8, 46.0.0.0/8, 78.0.0.0/8, 84.0.0.0/8, 87.0.0.0/8, 91.0.0.0/8, 217.0.0.0/8
+# Wichtige Städte:
+# - München (48.1351, 11.5820) - IP: 80.xxx.xxx.xxx, 212.xxx.xxx.xxx
+# - Berlin (52.5200, 13.4050) - IP: 217.xxx.xxx.xxx
+# - Hamburg (53.5511, 9.9937) - IP: 84.xxx.xxx.xxx
+# - Frankfurt (50.1109, 8.6821) - IP: 46.xxx.xxx.xxx
+# - Köln (50.9375, 6.9603) - IP: 5.xxx.xxx.xxx
+# - Düsseldorf (51.2277, 6.7735) - IP: 5.xxx.xxx.xxx
+# - Stuttgart (48.7758, 9.1829) - IP: 78.xxx.xxx.xxx
+# - Augsburg (48.3705, 10.8978) - IP: 80.xxx.xxx.xxx
+# - Nürnberg (49.4521, 11.0767) - IP: 80.xxx.xxx.xxx
+# - Fürstenfeldbruck (48.1788, 11.2553) - IP: 80.xxx.xxx.xxx
+# - Starnberg (47.9970, 11.3407) - IP: 80.xxx.xxx.xxx
+# - Dachau (48.2603, 11.4342) - IP: 80.xxx.xxx.xxx
+# - Germering (48.1344, 11.3706) - IP: 80.xxx.xxx.xxx
+# - Puchheim (48.1500, 11.3500) - IP: 80.xxx.xxx.xxx
+# - Leipzig (51.3397, 12.3731) - IP: 89.xxx.xxx.xxx
+# - Dresden (51.0504, 13.7373) - IP: 87.xxx.xxx.xxx
+# - Hannover (52.3759, 9.7320) - IP: 91.xxx.xxx.xxx
+# - Bremen (53.0793, 8.8017) - IP: 84.xxx.xxx.xxx
+# - Dortmund (51.5136, 7.4653) - IP: 5.xxx.xxx.xxx
+# - Essen (51.4556, 7.0116) - IP: 5.xxx.xxx.xxx
+# - Bonn (50.7374, 7.0982) - IP: 5.xxx.xxx.xxx
+# - Mannheim (49.4875, 8.4660) - IP: 46.xxx.xxx.xxx
+# - Karlsruhe (49.0069, 8.4037) - IP: 78.xxx.xxx.xxx
+# - Regensburg (49.0134, 12.1016) - IP: 80.xxx.xxx.xxx
+# - Ingolstadt (48.7665, 11.4258) - IP: 80.xxx.xxx.xxx
+# - Würzburg (49.7913, 9.9534) - IP: 80.xxx.xxx.xxx
+#
+# KROATIEN (HR) - IP Range: 31.45.0.0/16, 78.134.0.0/16, 85.10.0.0/16, 89.172.0.0/16, 91.124.0.0/16, 93.136.0.0/14
+# Wichtige Städte:
+# - Zagreb (45.8150, 15.9819) - IP: 31.45.xxx.xxx, 78.134.xxx.xxx
+# - Split (43.5081, 16.4402) - IP: 85.10.xxx.xxx
+# - Rijeka (45.3271, 14.4422) - IP: 89.172.xxx.xxx
+# - Dubrovnik (42.6507, 18.0944) - IP: 91.124.xxx.xxx
+# - Osijek (45.5511, 18.6939) - IP: 93.136.xxx.xxx
+# - Zadar (44.1194, 15.2314) - IP: 31.45.xxx.xxx
+# - Pula (44.8666, 13.8496) - IP: 78.134.xxx.xxx
+# - Slavonski Brod (45.1603, 18.0156) - IP: 93.136.xxx.xxx
+# - Karlovac (45.4872, 15.5553) - IP: 31.45.xxx.xxx
+# - Varaždin (46.3057, 16.3366) - IP: 78.134.xxx.xxx
+# - Šibenik (43.7350, 15.8952) - IP: 85.10.xxx.xxx
+# - Sisak (45.4858, 16.3708) - IP: 31.45.xxx.xxx
+# - Koprivnica (46.1628, 16.8336) - IP: 78.134.xxx.xxx
+# - Čakovec (46.3844, 16.4339) - IP: 78.134.xxx.xxx
+# - Vukovar (45.3519, 18.9981) - IP: 93.136.xxx.xxx
+# - Bjelovar (45.8989, 16.8422) - IP: 78.134.xxx.xxx
+# - Vinkovci (45.2883, 18.8033) - IP: 93.136.xxx.xxx
+# - Rovinj (45.0811, 13.6387) - IP: 78.134.xxx.xxx
+# - Makarska (43.2969, 17.0186) - IP: 85.10.xxx.xxx
+# - Trogir (43.5172, 16.2503) - IP: 85.10.xxx.xxx
+#
+# TÜRKEI (TR) - IP Range: 31.192.0.0/12, 46.154.0.0/16, 78.160.0.0/12, 85.96.0.0/11, 88.224.0.0/12, 176.88.0.0/13
+# Wichtige Städte:
+# - Istanbul (41.0082, 28.9784) - IP: 78.160.xxx.xxx, 85.96.xxx.xxx
+# - Ankara (39.9334, 32.8597) - IP: 31.192.xxx.xxx
+# - İzmir (38.4192, 27.1287) - IP: 46.154.xxx.xxx
+# - Antalya (36.8969, 30.7133) - IP: 88.224.xxx.xxx
+# - Alanya (36.5434, 32.0005) - IP: 88.224.xxx.xxx
+# - Bursa (40.1885, 29.0610) - IP: 176.88.xxx.xxx
+# - Adana (37.0000, 35.3213) - IP: 31.192.xxx.xxx
+# - Gaziantep (37.0662, 37.3833) - IP: 31.192.xxx.xxx
+# - Konya (37.8746, 32.4932) - IP: 78.160.xxx.xxx
+# - Mersin (36.8121, 34.6415) - IP: 31.192.xxx.xxx
+# - Diyarbakır (37.9144, 40.2306) - IP: 31.192.xxx.xxx
+# - Kayseri (38.7312, 35.4787) - IP: 78.160.xxx.xxx
+# - Eskişehir (39.7767, 30.5206) - IP: 78.160.xxx.xxx
+# - Bodrum (37.0344, 27.4305) - IP: 46.154.xxx.xxx
+# - Kuşadası (37.8579, 27.2610) - IP: 46.154.xxx.xxx
+# - Marmaris (36.8550, 28.2744) - IP: 46.154.xxx.xxx
+# - Fethiye (36.6538, 29.1265) - IP: 46.154.xxx.xxx
+# - Trabzon (41.0027, 39.7168) - IP: 78.160.xxx.xxx
+# - Samsun (41.2867, 36.3300) - IP: 78.160.xxx.xxx
+# - Kocaeli (40.7654, 29.9408) - IP: 176.88.xxx.xxx
+# - Malatya (38.3552, 38.3095) - IP: 31.192.xxx.xxx
+# - Erzurum (39.9000, 41.2700) - IP: 31.192.xxx.xxx
+# - Batman (37.8812, 41.1351) - IP: 31.192.xxx.xxx
+# - Şanlıurfa (37.1671, 38.7939) - IP: 31.192.xxx.xxx
+#
+# ERWEITERTE REGIONEN:
+# ÖSTERREICH (AT) - Wien, Graz, Salzburg, Innsbruck, Linz
+# SCHWEIZ (CH) - Zürich, Genf, Basel, Bern
+# BOSNIEN (BA) - Sarajevo, Banja Luka, Mostar, Tuzla, Zenica
+# SERBIEN (RS) - Belgrad, Novi Sad, Niš
+# SLOWENIEN (SI) - Ljubljana, Maribor, Celje
+# MONTENEGRO (ME) - Podgorica, Budva
+# ZYPERN (CY) - Nikosia, Limassol, Larnaka
 
 # ===========================================
 # STANDARD SUCHMASCHINEN - VOLLER ZUGRIFF
 # ===========================================
 
-# Google (inkl. Google Images, News, Video) - Alle Regionen
+# Google (inkl. Google Images, News, Video) - Alle Regionen DE, HR, TR
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
@@ -30,7 +114,7 @@ Allow: /
 User-agent: Googlebot-Video
 Allow: /
 
-# Bing - Deutschland, Österreich, Schweiz, International
+# Bing - Deutschland, Österreich, Schweiz, Kroatien, Türkei
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
@@ -47,7 +131,7 @@ Crawl-delay: 2
 User-agent: DuckDuckBot
 Allow: /
 
-# Yandex (Russland, Balkan-Reichweite) - HR, RS, BA Besucher
+# Yandex (Russland, Balkan, Türkei) - HR, RS, BA, TR Besucher
 User-agent: Yandex
 Allow: /
 Crawl-delay: 2
@@ -72,8 +156,9 @@ Allow: /
 Crawl-delay: 2
 
 # ===========================================
-# TÜRKISCHE SUCHMASCHINEN
+# TÜRKISCHE SUCHMASCHINEN (TR GEO-TARGETING)
 # ===========================================
+# Optimiert für: Istanbul, Ankara, İzmir, Antalya, Alanya, Bursa, Bodrum
 
 # Yandex Türkiye (beliebt in TR)
 User-agent: YandexTurk
@@ -81,10 +166,11 @@ Allow: /
 Crawl-delay: 2
 
 # ===========================================
-# BALKAN / SÜDOSTEUROPA SUCHMASCHINEN
+# BALKAN / KROATISCHE SUCHMASCHINEN (HR GEO-TARGETING)
 # ===========================================
+# Optimiert für: Zagreb, Split, Rijeka, Dubrovnik, Osijek, Zadar
 
-# Najdi.si (Slowenien)
+# Najdi.si (Slowenien - nahe HR Markt)
 User-agent: Najdi
 Allow: /
 Crawl-delay: 2
@@ -223,7 +309,11 @@ Disallow: /
 User-agent: *
 Allow: /
 
-# Wichtige Seiten für Crawling (DE, HR, TR, EN)
+# ===========================================
+# GEO-OPTIMIERTE SEITEN (DE, HR, TR)
+# ===========================================
+
+# DEUTSCHE SEITEN (München, Bayern, Deutschland)
 Allow: /ki-agenten
 Allow: /automatisierungen
 Allow: /webseiten-ki
@@ -232,29 +322,84 @@ Allow: /kontakt
 Allow: /ueber-uns
 Allow: /faq
 Allow: /ratgeber
+Allow: /referenzen
 Allow: /impressum
 Allow: /datenschutz
 Allow: /ki-bot
 
+# KROATISCHE SEITEN (Zagreb, Split, Dubrovnik)
+Allow: /hr/
+Allow: /ki-agenti
+Allow: /automatizacija
+Allow: /web-stranice
+Allow: /usluge/
+Allow: /kontakti
+
+# TÜRKISCHE SEITEN (Istanbul, Antalya, Ankara)
+Allow: /tr/
+Allow: /yapay-zeka
+Allow: /otomasyon
+Allow: /web-sitesi
+Allow: /hizmetler/
+Allow: /iletisim
+
 # ===========================================
-# MEHRSPRACHIGE INHALTE (Geo-Targeting)
+# MEHRSPRACHIGE INHALTE (Geo-Targeting nach IP)
 # ===========================================
-# DEUTSCH (de): Deutschland, Österreich, Schweiz, Liechtenstein, Luxemburg
-# KROATISCH (hr): Kroatien, Bosnien-Herzegowina, Serbien, Slowenien, Montenegro
-# TÜRKISCH (tr): Türkei, Zypern, Nordzypern
-# ENGLISCH (en): International, UK, USA, Australien, etc.
+#
+# GEO-IP SPRACH-ROUTING:
+# - IP aus DE/AT/CH → Deutsch (de) als Standard
+# - IP aus HR/BA/RS/SI/ME → Kroatisch (hr)
+# - IP aus TR/CY → Türkisch (tr)
+# - Alle anderen IPs → Englisch (en)
+#
+# hreflang Tags für internationale SEO:
+# <link rel="alternate" hreflang="de" href="https://extrucon.de/" />
+# <link rel="alternate" hreflang="hr" href="https://extrucon.de/?lang=hr" />
+# <link rel="alternate" hreflang="tr" href="https://extrucon.de/?lang=tr" />
+# <link rel="alternate" hreflang="en" href="https://extrucon.de/?lang=en" />
+# <link rel="alternate" hreflang="x-default" href="https://extrucon.de/" />
 
 # Deutsche Version (DACH-Region - Standard)
 Allow: /*
 
-# Türkische Version (für Türkei, Zypern)
-Allow: /*?lang=tr
-
-# Kroatische Version (für Balkan: HR, BA, RS, SI, ME)
+# Kroatische Version (für HR, BA, RS, SI, ME)
 Allow: /*?lang=hr
+
+# Türkische Version (für TR, CY)
+Allow: /*?lang=tr
 
 # Englische Version (International)
 Allow: /*?lang=en
+
+# ===========================================
+# GEO-KOORDINATEN FÜR HAUPTSTANDORTE
+# ===========================================
+#
+# DEUTSCHLAND:
+# - Hauptsitz: Fürstenfeldbruck (48.1788, 11.2553)
+# - München (48.1351, 11.5820)
+# - Berlin (52.5200, 13.4050)
+# - Hamburg (53.5511, 9.9937)
+# - Frankfurt (50.1109, 8.6821)
+# - Köln (50.9375, 6.9603)
+#
+# KROATIEN:
+# - Zagreb (45.8150, 15.9819)
+# - Split (43.5081, 16.4402)
+# - Rijeka (45.3271, 14.4422)
+# - Dubrovnik (42.6507, 18.0944)
+# - Osijek (45.5511, 18.6939)
+# - Zadar (44.1194, 15.2314)
+#
+# TÜRKEI:
+# - Istanbul (41.0082, 28.9784)
+# - Ankara (39.9334, 32.8597)
+# - İzmir (38.4192, 27.1287)
+# - Antalya (36.8969, 30.7133)
+# - Alanya (36.5434, 32.0005)
+# - Bursa (40.1885, 29.0610)
+# - Bodrum (37.0344, 27.4305)
 
 # Blockierte Bereiche (nicht indizieren)
 Disallow: /api/
@@ -290,3 +435,14 @@ Crawl-delay: 2
 # ===========================================
 
 Host: https://extrucon.de
+
+# ===========================================
+# KONTAKT FÜR SUCHMASCHINEN
+# ===========================================
+# ExtruCon GmbH
+# KI-Agentur für Deutschland, Kroatien, Türkei
+# Webseite: https://extrucon.de
+# E-Mail: info@extrucon.de
+# Standort: Fürstenfeldbruck, Bayern, Deutschland
+# Geo: 48.1788, 11.2553
+# Märkte: DE, AT, CH, HR, BA, RS, SI, ME, TR, CY
