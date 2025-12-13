@@ -7,6 +7,7 @@ import { Problem } from "@/components/sections/Problem";
 import { About } from "@/components/sections/About";
 import { Contact } from "@/components/sections/Contact";
 import { References } from "@/components/sections/References";
+import { HomeFAQ } from "@/components/sections/HomeFAQ";
 import { SEOHead } from "@/components/SEOHead";
 
 export default function Home() {
@@ -29,6 +30,8 @@ export default function Home() {
         <Services />
         {/* References Section */}
         <References />
+        {/* FAQ Section */}
+        <HomeFAQ />
         {/* About Section */}
         <About />
         {/* Funnel Logic: 4. Action */}
