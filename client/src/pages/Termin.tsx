@@ -8,6 +8,50 @@ import { Textarea } from '@/components/ui/textarea';
 import { useLanguage } from '@/lib/i18n';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
+import { SEOHead } from '@/components/SEOHead';
+
+const terminSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://extrucon.de/termin#service",
+    "name": "Kostenlose KI-Beratung",
+    "description": "Buchen Sie eine kostenlose 30-minütige Beratung zu KI-Agenten, Automatisierung oder Webentwicklung mit ExtruCon GmbH in Fürstenfeldbruck.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "ExtruCon GmbH",
+      "telephone": "+49-89-444438879",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hasenheide 8",
+        "addressLocality": "Fürstenfeldbruck",
+        "postalCode": "82256",
+        "addressRegion": "Bayern",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.1789,
+        "longitude": 11.2546
+      }
+    },
+    "areaServed": ["Bayern", "Deutschland"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://extrucon.de" },
+      { "@type": "ListItem", "position": 2, "name": "Termin buchen", "item": "https://extrucon.de/termin" }
+    ]
+  }
+];
 
 function CalendarGrid({ selectedDate, onSelectDate, currentMonth, onChangeMonth }: {
   selectedDate: Date | null;
@@ -327,6 +371,14 @@ export default function Termin() {
   if (bookingSuccess) {
     return (
       <div className="min-h-screen bg-slate-900">
+        <SEOHead 
+          title="Termin gebucht | ExtruCon GmbH"
+          description="Ihr Beratungstermin wurde erfolgreich gebucht. Wir freuen uns auf das Gespräch!"
+          canonical="https://extrucon.de/termin"
+          geoRegion="DE-BY"
+          geoPlacename="Fürstenfeldbruck"
+          schema={terminSchema}
+        />
         <Navbar />
         <main className="pt-24 pb-16">
           <div className="max-w-2xl mx-auto px-4">
@@ -369,6 +421,15 @@ export default function Termin() {
 
   return (
     <div className="min-h-screen bg-slate-900">
+      <SEOHead 
+        title="Kostenlose KI-Beratung buchen | ExtruCon Fürstenfeldbruck"
+        description="Buchen Sie jetzt Ihre kostenlose 30-minütige KI-Beratung. Online-Terminbuchung für KI-Agenten, Automatisierung und Webentwicklung."
+        keywords="KI Beratung buchen, Termin KI Agentur, Beratungsgespräch Automatisierung, ExtruCon Termin"
+        canonical="https://extrucon.de/termin"
+        geoRegion="DE-BY"
+        geoPlacename="Fürstenfeldbruck"
+        schema={terminSchema}
+      />
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="max-w-6xl mx-auto px-4">

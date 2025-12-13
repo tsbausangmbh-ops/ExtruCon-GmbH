@@ -10,6 +10,82 @@ import { useLanguage } from "@/lib/i18n";
 
 const featureIcons = [Bot, FileText, Image, Search, Users, BarChart3];
 
+const webseitenSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://extrucon.de/webseiten-ki#service",
+    "name": "Webseiten mit KI-Features",
+    "description": "Moderne Websites mit integrierten KI-Features: Chatbots, automatische Content-Erstellung, intelligente SEO. Professionelle Webentwicklung mit React und TypeScript.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "ExtruCon GmbH",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hasenheide 8",
+        "addressLocality": "Fürstenfeldbruck",
+        "postalCode": "82256",
+        "addressRegion": "Bayern",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.1789,
+        "longitude": 11.2546
+      },
+      "telephone": "+49-89-444438879"
+    },
+    "areaServed": ["Bayern", "Deutschland", "Österreich", "Schweiz"],
+    "serviceType": "Webentwicklung mit KI",
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "EUR",
+      "lowPrice": "2500",
+      "highPrice": "15000",
+      "offerCount": "3"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://extrucon.de" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://extrucon.de/#services" },
+      { "@type": "ListItem", "position": 3, "name": "Webseiten mit KI", "item": "https://extrucon.de/webseiten-ki" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Was kostet eine Website mit KI-Features?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unsere Websites starten ab 2.500€ für eine Landing Page und reichen bis zu 15.000€+ für komplexe Web-Applikationen mit umfassenden KI-Integrationen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Welche KI-Features können integriert werden?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wir integrieren KI-Chatbots für Kundenservice, automatische Content-Generierung, intelligente SEO-Optimierung, personalisierte Empfehlungen und Bild-Analyse."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie lange dauert die Entwicklung?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eine Landing Page ist in 2-3 Wochen fertig. Komplexere Projekte dauern 4-8 Wochen, abhängig von den gewünschten Features und Integrationen."
+        }
+      }
+    ]
+  }
+];
+
 export default function WebseitenKI() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const { t } = useLanguage();
@@ -19,7 +95,11 @@ export default function WebseitenKI() {
       <SEOHead 
         title="Webseiten mit KI-Features | ExtruCon Fürstenfeldbruck – Chatbots & SEO"
         description="Moderne Websites mit integrierten KI-Features: Chatbots, automatische Content-Erstellung, intelligente SEO. Webentwicklung aus Fürstenfeldbruck – deutschlandweit."
-        keywords="Webseiten mit KI, Website Chatbot, KI Content, SEO Automatisierung, Webentwicklung München, React Website"
+        keywords="Webseiten mit KI, Website Chatbot, KI Content, SEO Automatisierung, Webentwicklung München, React Website, KI Website Agentur"
+        canonical="https://extrucon.de/webseiten-ki"
+        geoRegion="DE-BY"
+        geoPlacename="Fürstenfeldbruck"
+        schema={webseitenSchema}
       />
       <Navbar />
       <main className="pt-24">

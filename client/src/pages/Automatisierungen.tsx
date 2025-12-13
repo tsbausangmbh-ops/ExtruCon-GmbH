@@ -11,6 +11,83 @@ import { useLanguage } from "@/lib/i18n";
 const automationIcons = [Mail, Users, FileText, ShoppingCart, Calendar, Database, TrendingUp, Settings];
 const benefitIcons = [Clock, Shield, TrendingUp, Zap];
 
+const automationSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://extrucon.de/automatisierungen#service",
+    "name": "Workflow-Automatisierung mit n8n",
+    "description": "Professionelle Geschäftsprozess-Automatisierung mit n8n. E-Mail, CRM, Rechnungen und mehr automatisieren. Bis zu 80% Zeitersparnis.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "ExtruCon GmbH",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hasenheide 8",
+        "addressLocality": "Fürstenfeldbruck",
+        "postalCode": "82256",
+        "addressRegion": "Bayern",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.1789,
+        "longitude": 11.2546
+      },
+      "telephone": "+49-89-444438879"
+    },
+    "areaServed": ["Bayern", "Deutschland", "Österreich", "Schweiz"],
+    "serviceType": "Workflow-Automatisierung",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "EUR"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://extrucon.de" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://extrucon.de/#services" },
+      { "@type": "ListItem", "position": 3, "name": "Automatisierungen", "item": "https://extrucon.de/automatisierungen" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Was ist n8n und warum nutzt ExtruCon es?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "n8n ist eine leistungsstarke Open-Source Workflow-Automatisierungsplattform. Wir nutzen n8n, weil es flexibel, skalierbar und kosteneffizient ist – ideal für maßgeschneiderte Automatisierungslösungen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Welche Prozesse können automatisiert werden?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nahezu alle wiederkehrenden Geschäftsprozesse: E-Mail-Workflows, CRM-Synchronisation, Rechnungsstellung, Bestandsmanagement, Kundenkommunikation und viele mehr."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie viel Zeit kann ich mit Automatisierung sparen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unsere Kunden berichten von Zeiteinsparungen von bis zu 80% bei wiederkehrenden Aufgaben. Die genaue Ersparnis hängt von Ihren spezifischen Prozessen ab."
+        }
+      }
+    ]
+  }
+];
+
 export default function Automatisierungen() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const { t } = useLanguage();
@@ -20,7 +97,11 @@ export default function Automatisierungen() {
       <SEOHead 
         title="Workflow-Automatisierung mit n8n | ExtruCon Fürstenfeldbruck – 80% Zeit sparen"
         description="Automatisieren Sie Ihre Geschäftsprozesse mit n8n: E-Mail, CRM, Rechnungen & mehr. Bis zu 80% Zeitersparnis. KI-Agentur aus Fürstenfeldbruck – deutschlandweit."
-        keywords="n8n Automatisierung, Workflow Automatisierung, Prozessautomatisierung, Business Automation, Zapier Alternative, Make Alternative"
+        keywords="n8n Automatisierung, Workflow Automatisierung, Prozessautomatisierung, Business Automation, Zapier Alternative, Make Alternative, Automatisierung München, n8n Agentur"
+        canonical="https://extrucon.de/automatisierungen"
+        geoRegion="DE-BY"
+        geoPlacename="Fürstenfeldbruck"
+        schema={automationSchema}
       />
       <Navbar />
       <main className="pt-24">
