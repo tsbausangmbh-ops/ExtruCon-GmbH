@@ -36,11 +36,12 @@ export default function Referenzen() {
       link: "https://089-sanierer.de"
     },
     {
-      title: "Immobilienmakler Automation",
-      category: "Automatisierung",
-      description: "Automatische Lead-Qualifizierung und Exposé-Versand",
-      results: ["10h/Woche gespart", "2x mehr Abschlüsse"],
-      color: "purple"
+      title: "089 Bayern – Energiesysteme Türkei",
+      category: "Webentwicklung",
+      description: "Türkischsprachige Landingpage für 4-in-1 Energiesysteme. Wärmepumpen, Solar, Kühlung und Energiespeicher für den türkischen Markt.",
+      results: ["4-in-1 System", "Deutsche Qualität", "Türkischer Markt"],
+      color: "cyan",
+      link: "https://www.089bayern.com"
     },
     {
       title: "Restaurant Social Media",
