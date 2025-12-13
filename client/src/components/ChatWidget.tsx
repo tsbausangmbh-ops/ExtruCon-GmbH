@@ -153,7 +153,7 @@ export function ChatWidget() {
         )}
       </AnimatePresence>
 
-      <div className="fixed bottom-6 right-4 z-50 flex items-center gap-3">
+      <div className="fixed bottom-32 right-4 z-50 flex items-center gap-3">
         {!isOpen && (
           <motion.div
             initial={{ opacity: 0, x: 20 }}
