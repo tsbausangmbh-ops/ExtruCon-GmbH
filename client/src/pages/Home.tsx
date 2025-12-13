@@ -14,9 +14,9 @@ function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden font-sans">
       <SEOHead
-        title="KI-Agentur München | KI-Agenten, Automatisierung & Chatbots | ExtruCon"
-        description="ExtruCon GmbH: Ihre KI-Agentur in München für intelligente Automatisierung, maßgeschneiderte KI-Agenten und Chatbot-Entwicklung. Kostenlose Erstberatung!"
-        keywords="KI Agentur Fürstenfeldbruck, KI Agentur München, künstliche Intelligenz Bayern, AI Agency, Automatisierung"
+        title="KI-Agentur München | Chatbots & Automatisierung ab 2.500€ | ExtruCon"
+        description="KI-Agenten & Chatbots für Ihr Unternehmen. 80% Zeitersparnis durch Automatisierung. ✓ Kostenlose Erstberatung ✓ Made in Germany"
+        keywords="KI Agentur München, KI-Agenten entwickeln, Chatbot Entwicklung, Automatisierung Unternehmen, künstliche Intelligenz Bayern"
         canonical="https://extrucon.de"
       />
       <Navbar />

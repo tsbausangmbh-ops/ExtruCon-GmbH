@@ -18,9 +18,9 @@ function Automatisierungen() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead 
-        title="Workflow-Automatisierung München | n8n & KI-Integration | ExtruCon"
-        description="Automatisieren Sie Geschäftsprozesse: E-Mail, CRM, Rechnungen & mehr. Bis zu 80% Zeitersparnis mit n8n. Kostenlose Beratung!"
-        keywords="n8n Automatisierung, Workflow Automatisierung, Prozessautomatisierung, Business Automation, Zapier Alternative, Make Alternative"
+        title="Workflow-Automatisierung | 80% Zeitersparnis mit n8n | ExtruCon München"
+        description="Automatisieren Sie E-Mail, CRM & Rechnungen. ✓ Bis zu 80% Zeitersparnis ✓ n8n Experten ✓ Kostenlose Analyse. Jetzt Prozesse optimieren!"
+        keywords="Workflow Automatisierung, n8n Agentur, Prozessautomatisierung München, Business Automation, Zapier Alternative"
       />
       <Navbar />
       <main className="pt-24">

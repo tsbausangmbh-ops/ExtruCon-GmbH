@@ -17,9 +17,9 @@ function KI() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="KI-Lösungen für Unternehmen München | ChatGPT Integration | ExtruCon"
-        description="Maßgeschneiderte KI-Lösungen: KI-Agenten, ChatGPT Integration & Workflow-Automatisierung. Jetzt kostenlos beraten lassen!"
-        keywords="KI Agentur, KI-Lösungen, ChatGPT Integration, Automatisierung, Künstliche Intelligenz"
+        title="KI-Lösungen für Unternehmen | ChatGPT & GPT-4 Integration | ExtruCon"
+        description="Maßgeschneiderte KI für Ihr Business. ✓ ChatGPT Integration ✓ Individuelle KI-Agenten ✓ ROI in 3 Monaten. Kostenlose Analyse!"
+        keywords="KI-Lösungen Unternehmen, ChatGPT Integration, GPT-4 API, KI Agentur München"
         canonical="https://extrucon.de/leistungen/ki"
       />
       <Navbar />

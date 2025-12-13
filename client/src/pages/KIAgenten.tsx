@@ -30,9 +30,9 @@ function KIAgenten() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead 
-        title="KI-Agenten entwickeln lassen München | Chatbots & Automatisierung | ExtruCon"
-        description="Individuelle KI-Agenten für Kundenservice, Lead-Generierung & Automatisierung. 24/7 verfügbar, mehrsprachig, selbstlernend. Jetzt beraten lassen!"
-        keywords="KI-Agenten, Chatbot Entwicklung, Kundenservice Automatisierung, Lead-Qualifizierung, KI München, Automatisierung Bayern"
+        title="KI-Agenten entwickeln lassen | 24/7 Kundenservice automatisieren | ExtruCon"
+        description="Intelligente KI-Agenten für Kundenservice & Lead-Generierung. ✓ 24/7 verfügbar ✓ Mehrsprachig ✓ Selbstlernend. Ab 2.500€ - Jetzt anfragen!"
+        keywords="KI-Agenten entwickeln, Chatbot Kundenservice, Lead-Generierung automatisieren, KI München, intelligente Assistenten"
       />
       <Navbar />
       <main className="pt-24">

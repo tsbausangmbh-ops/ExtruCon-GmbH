@@ -113,9 +113,9 @@ function Ratgeber() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="KI-Ratgeber | Tipps zu Automatisierung & Marketing | ExtruCon"
-        description="Expertenwissen zu KI, Automatisierung, Social Media und Webentwicklung. Praxistipps für Ihren Unternehmenserfolg."
-        keywords="KI Ratgeber, Automatisierung Tipps, Marketing Guide, KI Wissen"
+        title="KI-Ratgeber | Wissen zu Automatisierung & Chatbots | ExtruCon"
+        description="Kostenloses Expertenwissen: KI-Trends, Automatisierungs-Tipps & Best Practices. ✓ Praxisnah ✓ Aktuell ✓ Von Experten"
+        keywords="KI Ratgeber, Automatisierung lernen, Chatbot Wissen, KI für Unternehmen"
         canonical="https://extrucon.de/ratgeber"
       />
       <Navbar />

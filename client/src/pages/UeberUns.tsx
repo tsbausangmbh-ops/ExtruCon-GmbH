@@ -18,9 +18,9 @@ function UeberUns() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead 
-        title="Über ExtruCon | KI-Agentur aus Fürstenfeldbruck bei München"
-        description="Lernen Sie ExtruCon kennen: Experten für KI-Agenten, Prozessautomatisierung und intelligente Websites. Ihr Partner für digitale Innovation."
-        keywords="ExtruCon GmbH, KI-Agentur Fürstenfeldbruck, Automatisierung München, Marketing Agentur Bayern, HRB 18623"
+        title="Über ExtruCon | KI-Experten aus München | Unser Team"
+        description="Das Team hinter ExtruCon: KI-Spezialisten & Automatisierungs-Experten. ✓ 50+ Projekte ✓ Made in Germany ✓ Persönlicher Ansprechpartner"
+        keywords="ExtruCon Team, KI-Agentur München, Automatisierung Experten, über uns"
       />
       <Navbar />
       <main className="pt-24">

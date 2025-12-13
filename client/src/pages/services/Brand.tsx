@@ -17,9 +17,9 @@ function Brand() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Markenentwicklung München | Logo & Corporate Design | ExtruCon"
-        description="Professionelle Markenentwicklung: Logo-Design, Corporate Identity & visuelle Identität. Starke Marken für nachhaltigen Erfolg."
-        keywords="Markenentwicklung, Corporate Design, Logo Design, Branding Agentur"
+        title="Markenentwicklung & Logo Design München | Corporate Identity | ExtruCon"
+        description="Einzigartige Markenidentität entwickeln. ✓ Logo Design ✓ Corporate Design ✓ Brand Guidelines. Von der Idee zur starken Marke!"
+        keywords="Markenentwicklung München, Logo Design, Corporate Identity, Branding Agentur"
         canonical="https://extrucon.de/leistungen/markenentwicklung"
       />
       <Navbar />

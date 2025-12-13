@@ -19,9 +19,9 @@ function SocialMedia() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Social Media Marketing München | Instagram, TikTok & LinkedIn | ExtruCon"
-        description="Professionelles Social Media Marketing: Instagram, TikTok, LinkedIn & Facebook. Mehr Reichweite & Engagement für Ihr Unternehmen."
-        keywords="Social Media Marketing, Instagram Agentur, TikTok Marketing, Fürstenfeldbruck"
+        title="Social Media Marketing München | Instagram & TikTok Agentur | ExtruCon"
+        description="Mehr Reichweite auf Instagram, TikTok & LinkedIn. ✓ Content-Erstellung ✓ Community Management ✓ Ads. Ab 500€/Monat!"
+        keywords="Social Media Marketing München, Instagram Agentur, TikTok Marketing, LinkedIn Marketing"
         canonical="https://extrucon.de/leistungen/social-media"
       />
       <Navbar />

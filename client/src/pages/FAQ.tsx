@@ -59,9 +59,9 @@ function FAQ() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="FAQ | Häufige Fragen zu KI-Agenten & Automatisierung | ExtruCon"
-        description="Antworten auf Ihre Fragen: KI-Agenten, Automatisierungen, Chatbots & Webentwicklung. Alles was Sie wissen müssen."
-        keywords="KI FAQ, Automatisierung Fragen, KI-Agenten FAQ, Webentwicklung FAQ"
+        title="FAQ | Häufige Fragen zu KI & Automatisierung | ExtruCon"
+        description="Antworten auf alle Fragen: Was kostet ein KI-Agent? Wie lange dauert die Entwicklung? ✓ Preise ✓ Ablauf ✓ Technologie"
+        keywords="KI FAQ, Automatisierung Kosten, KI-Agent Preis, Chatbot Entwicklung Dauer"
         canonical="https://extrucon.de/faq"
       />
       <Navbar />
