@@ -115,6 +115,7 @@ export const translations = {
       emailLabel: 'E-Mail',
       phoneLabel: 'Telefon',
       contactLink: 'Kontakt aufnehmen',
+      bookAppointment: 'Termin buchen',
     },
     about: {
       badge: 'Über ExtruCon GmbH',
@@ -1200,6 +1201,7 @@ export const translations = {
       emailLabel: 'Email',
       phoneLabel: 'Phone',
       contactLink: 'Get in touch',
+      bookAppointment: 'Book appointment',
     },
     about: {
       badge: 'About ExtruCon GmbH',
@@ -2285,6 +2287,7 @@ export const translations = {
       emailLabel: 'E-pošta',
       phoneLabel: 'Telefon',
       contactLink: 'Kontaktirajte nas',
+      bookAppointment: 'Rezervirajte termin',
     },
     about: {
       badge: 'O ExtruCon GmbH',
@@ -3568,6 +3571,7 @@ export const translations = {
       emailLabel: 'E-posta',
       phoneLabel: 'Telefon',
       contactLink: 'İletişime geçin',
+      bookAppointment: 'Randevu al',
     },
     chatbot: {
       title: 'AI Asistanı',

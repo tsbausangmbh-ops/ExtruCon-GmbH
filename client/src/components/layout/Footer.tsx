@@ -67,8 +67,9 @@ export const Footer = memo(function Footer() {
                 <meta itemProp="openingHours" content="Mo-Fr 08:00-17:00" />
               </li>
             </ul>
-            <div className="mt-4">
-              <a href="/kontakt" className="text-primary hover:underline text-sm font-medium">→ {t.footer.contactLink}</a>
+            <div className="mt-4 space-y-2">
+              <a href="/kontakt" className="text-primary hover:underline text-sm font-medium block">→ {t.footer.contactLink}</a>
+              <a href="/terminbuchung" className="text-primary hover:underline text-sm font-medium block">→ {t.footer.bookAppointment}</a>
             </div>
           </div>
         </div>
