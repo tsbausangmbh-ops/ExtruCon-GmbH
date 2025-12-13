@@ -7,6 +7,8 @@ import brandImg from "@assets/generated_images/abstract_digital_brand_identity_c
 import contentImg from "@assets/generated_images/abstract_content_creation_visualization.png";
 import marketingImg from "@assets/generated_images/abstract_performance_marketing_growth.png";
 import seoImg from "@assets/generated_images/abstract_seo_geo-optimization_visual.png";
+import referenzenImg from "@assets/generated_images/portfolio_references_showcase_visual.png";
+import faqImg from "@assets/generated_images/faq_knowledge_help_visual.png";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/i18n";
 
@@ -74,7 +76,7 @@ export function Services() {
       title: "Referenzen",
       description: "Überzeugen Sie sich von unseren erfolgreichen Projekten und zufriedenen Kunden",
       icon: Award,
-      image: null,
+      image: referenzenImg,
       color: "text-yellow-400",
       href: "/referenzen"
     },
@@ -82,7 +84,7 @@ export function Services() {
       title: "FAQ",
       description: "Antworten auf häufig gestellte Fragen zu unseren Leistungen und Prozessen",
       icon: HelpCircle,
-      image: null,
+      image: faqImg,
       color: "text-violet-400",
       href: "/faq"
     }
