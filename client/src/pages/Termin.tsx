@@ -9,15 +9,13 @@ import { useLanguage } from '@/lib/i18n';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 
-const WEEKDAYS_DE = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
-const MONTHS_DE = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
-
 function CalendarGrid({ selectedDate, onSelectDate, currentMonth, onChangeMonth }: {
   selectedDate: Date | null;
   onSelectDate: (date: Date) => void;
   currentMonth: Date;
   onChangeMonth: (delta: number) => void;
 }) {
+  const { t } = useLanguage();
   const today = new Date();
   today.setHours(0, 0, 0, 0);
   
@@ -31,12 +29,10 @@ function CalendarGrid({ selectedDate, onSelectDate, currentMonth, onChangeMonth 
   
   const days: (Date | null)[] = [];
   
-  // Add empty cells for days before the first day of the month
   for (let i = 0; i < startDay; i++) {
     days.push(null);
   }
   
-  // Add days of the month
   for (let day = 1; day <= daysInMonth; day++) {
     days.push(new Date(year, month, day));
   }
@@ -72,7 +68,7 @@ function CalendarGrid({ selectedDate, onSelectDate, currentMonth, onChangeMonth 
           <ChevronLeft className="w-5 h-5" />
         </Button>
         <h3 className="text-lg font-semibold text-white">
-          {MONTHS_DE[month]} {year}
+          {t.terminPage.months[month]} {year}
         </h3>
         <Button
           variant="ghost"
@@ -86,7 +82,7 @@ function CalendarGrid({ selectedDate, onSelectDate, currentMonth, onChangeMonth 
       </div>
       
       <div className="grid grid-cols-7 gap-1 mb-2">
-        {WEEKDAYS_DE.map((day, i) => (
+        {t.terminPage.weekdays.map((day, i) => (
           <div
             key={day}
             className={`text-center text-sm font-medium py-2 ${
@@ -145,11 +141,11 @@ function CalendarGrid({ selectedDate, onSelectDate, currentMonth, onChangeMonth 
       <div className="mt-4 flex items-center gap-4 text-xs text-slate-400">
         <div className="flex items-center gap-1">
           <div className="w-3 h-3 bg-red-400/50 rounded" />
-          <span>Geschlossen (Sa/So)</span>
+          <span>{t.terminPage.closedWeekend}</span>
         </div>
         <div className="flex items-center gap-1">
           <div className="w-3 h-3 bg-cyan-500 rounded" />
-          <span>Ausgewählt</span>
+          <span>{t.terminPage.selected}</span>
         </div>
       </div>
     </div>
@@ -161,6 +157,7 @@ function TimeSlots({ date, selectedTime, onSelectTime }: {
   selectedTime: string | null;
   onSelectTime: (time: string) => void;
 }) {
+  const { t } = useLanguage();
   const dateStr = date.toISOString().split('T')[0];
   
   const { data, isLoading, error } = useQuery({
@@ -177,7 +174,7 @@ function TimeSlots({ date, selectedTime, onSelectTime }: {
       <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
         <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
           <Clock className="w-5 h-5 text-cyan-400" />
-          Verfügbare Zeiten
+          {t.terminPage.availableTimes}
         </h3>
         <div className="flex items-center justify-center py-8">
           <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full" />
@@ -191,11 +188,11 @@ function TimeSlots({ date, selectedTime, onSelectTime }: {
       <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
         <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
           <Clock className="w-5 h-5 text-cyan-400" />
-          Verfügbare Zeiten
+          {t.terminPage.availableTimes}
         </h3>
         <div className="flex items-center gap-2 text-red-400">
           <AlertCircle className="w-5 h-5" />
-          <span>Zeiten konnten nicht geladen werden</span>
+          <span>{t.terminPage.couldNotLoadTimes}</span>
         </div>
       </div>
     );
@@ -207,7 +204,7 @@ function TimeSlots({ date, selectedTime, onSelectTime }: {
     <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
       <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
         <Clock className="w-5 h-5 text-cyan-400" />
-        Verfügbare Zeiten
+        {t.terminPage.availableTimes}
       </h3>
       
       {data.message ? (
@@ -216,7 +213,7 @@ function TimeSlots({ date, selectedTime, onSelectTime }: {
         </div>
       ) : slots.length === 0 ? (
         <div className="text-center py-4 text-slate-400">
-          <p>Keine verfügbaren Zeiten an diesem Tag</p>
+          <p>{t.terminPage.noAvailableTimes}</p>
         </div>
       ) : (
         <div className="grid grid-cols-3 gap-2">
@@ -233,14 +230,14 @@ function TimeSlots({ date, selectedTime, onSelectTime }: {
                 }
               `}
             >
-              {time} Uhr
+              {time} {t.terminPage.oclock}
             </button>
           ))}
         </div>
       )}
       
       <p className="mt-4 text-xs text-slate-500 text-center">
-        Öffnungszeiten: {data.businessHours}
+        {t.terminPage.openingHours}: {data.businessHours}
       </p>
     </div>
   );
@@ -279,7 +276,7 @@ export default function Termin() {
         if (json.alternatives) {
           setAlternatives(json.alternatives);
         }
-        throw new Error(json.error || 'Buchung fehlgeschlagen');
+        throw new Error(json.error || 'Booking failed');
       }
       return json;
     },
@@ -321,9 +318,9 @@ export default function Termin() {
   const formatSelectedDate = () => {
     if (!selectedDate) return '';
     const day = selectedDate.getDate();
-    const month = MONTHS_DE[selectedDate.getMonth()];
+    const month = t.terminPage.months[selectedDate.getMonth()];
     const year = selectedDate.getFullYear();
-    const weekday = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'][selectedDate.getDay()];
+    const weekday = t.terminPage.weekdaysFull[selectedDate.getDay()];
     return `${weekday}, ${day}. ${month} ${year}`;
   };
 
@@ -342,13 +339,13 @@ export default function Termin() {
                 <CheckCircle className="w-10 h-10 text-green-400" />
               </div>
               <h1 className="text-2xl font-bold text-white mb-4">
-                Termin erfolgreich gebucht!
+                {t.terminPage.successTitle}
               </h1>
               <p className="text-slate-400 mb-2">
-                <strong className="text-white">{formatSelectedDate()}</strong> um <strong className="text-white">{selectedTime} Uhr</strong>
+                <strong className="text-white">{formatSelectedDate()}</strong> {t.terminPage.oclock && 'um'} <strong className="text-white">{selectedTime} {t.terminPage.oclock}</strong>
               </p>
               <p className="text-slate-400 mb-6">
-                Sie erhalten in Kürze eine Bestätigung per E-Mail an <strong className="text-cyan-400">{formData.email}</strong>
+                {t.terminPage.successEmailInfo} <strong className="text-cyan-400">{formData.email}</strong>
               </p>
               <Button
                 onClick={() => {
@@ -360,7 +357,7 @@ export default function Termin() {
                 className="bg-cyan-500 hover:bg-cyan-600"
                 data-testid="button-new-booking"
               >
-                Weiteren Termin buchen
+                {t.terminPage.bookAnother}
               </Button>
             </motion.div>
           </div>
@@ -382,19 +379,17 @@ export default function Termin() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 text-cyan-400 text-sm mb-4">
               <Calendar className="w-4 h-4" />
-              Kostenlose Erstberatung
+              {t.terminPage.badge}
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Termin <span className="text-cyan-400">buchen</span>
+              {t.terminPage.title} <span className="text-cyan-400">{t.terminPage.titleHighlight}</span>
             </h1>
             <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-              Wählen Sie einen passenden Termin für Ihr kostenloses Beratungsgespräch. 
-              Wir sind Montag bis Freitag von 08:00 bis 17:00 Uhr für Sie da.
+              {t.terminPage.description}
             </p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-8">
-            {/* Left Column - Calendar & Time Slots */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -408,15 +403,14 @@ export default function Termin() {
                 onChangeMonth={handleChangeMonth}
               />
               
-              {/* Opening Hours */}
               <div className="p-4 bg-slate-800/30 rounded-xl border border-slate-700">
                 <h4 className="text-white font-medium mb-2 flex items-center gap-2">
                   <Clock className="w-4 h-4 text-cyan-400" />
-                  Öffnungszeiten
+                  {t.terminPage.openingHours}
                 </h4>
                 <div className="text-sm text-slate-400 space-y-1">
-                  <p>Montag - Freitag: <span className="text-white">08:00 - 17:00 Uhr</span></p>
-                  <p>Samstag & Sonntag: <span className="text-red-400">Geschlossen</span></p>
+                  <p>{t.terminPage.mondayFriday}: <span className="text-white">08:00 - 17:00 {t.terminPage.oclock}</span></p>
+                  <p>{t.terminPage.saturdaySunday}: <span className="text-red-400">{t.terminPage.closed}</span></p>
                 </div>
               </div>
               
@@ -434,7 +428,6 @@ export default function Termin() {
               )}
             </motion.div>
 
-            {/* Right Column - Booking Form */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -442,14 +435,14 @@ export default function Termin() {
             >
               <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
                 <h3 className="text-lg font-semibold text-white mb-6">
-                  Ihre Kontaktdaten
+                  {t.terminPage.yourContactData}
                 </h3>
                 
                 {selectedDate && selectedTime && (
                   <div className="mb-6 p-4 bg-cyan-500/10 rounded-lg border border-cyan-500/30">
-                    <p className="text-cyan-400 text-sm font-medium">Ausgewählter Termin:</p>
+                    <p className="text-cyan-400 text-sm font-medium">{t.terminPage.selectedAppointment}</p>
                     <p className="text-white font-semibold">{formatSelectedDate()}</p>
-                    <p className="text-white">{selectedTime} Uhr</p>
+                    <p className="text-white">{selectedTime} {t.terminPage.oclock}</p>
                   </div>
                 )}
                 
@@ -457,14 +450,14 @@ export default function Termin() {
                   <div>
                     <label className="block text-sm text-slate-400 mb-1">
                       <User className="w-4 h-4 inline mr-1" />
-                      Name *
+                      {t.terminPage.name}
                     </label>
                     <Input
                       type="text"
                       required
                       value={formData.name}
                       onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                      placeholder="Ihr Name"
+                      placeholder={t.terminPage.namePlaceholder}
                       className="bg-slate-700 border-slate-600 text-white"
                       data-testid="input-name"
                     />
@@ -473,14 +466,14 @@ export default function Termin() {
                   <div>
                     <label className="block text-sm text-slate-400 mb-1">
                       <Mail className="w-4 h-4 inline mr-1" />
-                      E-Mail *
+                      {t.terminPage.email}
                     </label>
                     <Input
                       type="email"
                       required
                       value={formData.email}
                       onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                      placeholder="ihre@email.de"
+                      placeholder={t.terminPage.emailPlaceholder}
                       className="bg-slate-700 border-slate-600 text-white"
                       data-testid="input-email"
                     />
@@ -489,13 +482,13 @@ export default function Termin() {
                   <div>
                     <label className="block text-sm text-slate-400 mb-1">
                       <Phone className="w-4 h-4 inline mr-1" />
-                      Telefon (optional)
+                      {t.terminPage.phone}
                     </label>
                     <Input
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                      placeholder="+49 ..."
+                      placeholder={t.terminPage.phonePlaceholder}
                       className="bg-slate-700 border-slate-600 text-white"
                       data-testid="input-phone"
                     />
@@ -504,12 +497,12 @@ export default function Termin() {
                   <div>
                     <label className="block text-sm text-slate-400 mb-1">
                       <MessageSquare className="w-4 h-4 inline mr-1" />
-                      Nachricht (optional)
+                      {t.terminPage.message}
                     </label>
                     <Textarea
                       value={formData.message}
                       onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                      placeholder="Worum geht es bei Ihrem Anliegen?"
+                      placeholder={t.terminPage.messagePlaceholder}
                       rows={3}
                       className="bg-slate-700 border-slate-600 text-white resize-none"
                       data-testid="input-message"
@@ -520,12 +513,12 @@ export default function Termin() {
                     <div className="p-4 bg-red-500/10 rounded-lg border border-red-500/30">
                       <div className="flex items-center gap-2 text-red-400 text-sm mb-3">
                         <AlertCircle className="w-4 h-4 flex-shrink-0" />
-                        <span>{(bookingMutation.error as Error).message || 'Ein Fehler ist aufgetreten'}</span>
+                        <span>{(bookingMutation.error as Error).message || 'An error occurred'}</span>
                       </div>
                       
                       {alternatives && alternatives.length > 0 && (
                         <div className="mt-3">
-                          <p className="text-sm text-slate-300 mb-2">Alternative Termine:</p>
+                          <p className="text-sm text-slate-300 mb-2">{t.terminPage.alternativeSlots}</p>
                           <div className="space-y-2">
                             {alternatives.map((alt, index) => (
                               <button
@@ -553,18 +546,18 @@ export default function Termin() {
                     {bookingMutation.isPending ? (
                       <>
                         <span className="animate-spin mr-2">⏳</span>
-                        Wird gebucht...
+                        {t.terminPage.booking}
                       </>
                     ) : (
                       <>
                         <Calendar className="w-4 h-4 mr-2" />
-                        Termin buchen
+                        {t.terminPage.bookButton}
                       </>
                     )}
                   </Button>
                   
                   <p className="text-xs text-slate-500 text-center">
-                    * Pflichtfelder. Ihre Daten werden gemäß unserer Datenschutzerklärung verarbeitet.
+                    {t.terminPage.requiredFields}
                   </p>
                 </form>
               </div>
