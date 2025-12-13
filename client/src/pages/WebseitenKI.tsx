@@ -28,7 +28,7 @@ export default function WebseitenKI() {
           { label: t.nav.websitesKI }
         ]} />
         {/* Hero */}
-        <section className="py-16 bg-gradient-to-b from-secondary/10 to-background">
+        <section className="py-8 bg-gradient-to-b from-secondary/10 to-background">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -66,7 +66,7 @@ export default function WebseitenKI() {
         </section>
 
         {/* Empathische Ansprache - Schmerzpunkte */}
-        <section className="py-16 bg-gradient-to-b from-background via-red-500/5 to-background">
+        <section className="py-8 bg-gradient-to-b from-background via-red-500/5 to-background">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -74,7 +74,7 @@ export default function WebseitenKI() {
               viewport={{ once: true }}
               className="max-w-4xl mx-auto"
             >
-              <div className="text-center mb-10">
+              <div className="text-center mb-6">
                 <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
                   Kennen Sie das auch?
                 </h2>
@@ -83,7 +83,7 @@ export default function WebseitenKI() {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-10">
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div className="p-6 bg-red-500/5 border border-red-500/20 rounded-xl">
                   <h3 className="text-lg font-semibold text-red-400 mb-3">Anfragen gehen verloren</h3>
                   <p className="text-gray-400">
@@ -168,13 +168,13 @@ export default function WebseitenKI() {
         </section>
 
         {/* Referenzen - Hauptthema */}
-        <section className="py-20 bg-gradient-to-b from-secondary/5 via-card/30 to-background">
+        <section className="py-10 bg-gradient-to-b from-secondary/5 via-card/30 to-background">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-6"
             >
               <div className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-green-500/20 border border-green-500/30 text-green-400 text-sm font-medium mb-4">
                 <CheckCircle className="w-4 h-4" />
@@ -188,7 +188,7 @@ export default function WebseitenKI() {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
               {[
                 {
                   name: "089Dach GmbH",
@@ -280,7 +280,7 @@ export default function WebseitenKI() {
         </section>
 
         {/* NLP & KI-Problemlösung */}
-        <section className="py-16 bg-gradient-to-b from-background to-card/20">
+        <section className="py-8 bg-gradient-to-b from-background to-card/20">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -288,7 +288,7 @@ export default function WebseitenKI() {
               viewport={{ once: true }}
               className="max-w-5xl mx-auto"
             >
-              <div className="text-center mb-12">
+              <div className="text-center mb-6">
                 <div className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/20 border border-primary/30 text-primary text-sm font-medium mb-4">
                   <Bot className="w-4 h-4" />
                   Natural Language Processing
@@ -302,7 +302,7 @@ export default function WebseitenKI() {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="grid md:grid-cols-2 gap-8 mb-6">
                 <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
                   <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
                     <MessageSquare className="w-7 h-7 text-primary" />
@@ -381,13 +381,13 @@ export default function WebseitenKI() {
         </section>
 
         {/* Konkrete Anwendungsfälle */}
-        <section className="py-16">
+        <section className="py-8">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-6"
             >
               <h2 className="text-3xl font-bold font-display text-white mb-4">
                 So löst Ihre KI-Website Kundenprobleme
@@ -451,13 +451,13 @@ export default function WebseitenKI() {
         </section>
 
         {/* KI Features */}
-        <section id="features" className="py-16">
+        <section id="features" className="py-8">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-6"
             >
               <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
                 {t.webKIPage.featuresTitle}
@@ -499,7 +499,7 @@ export default function WebseitenKI() {
         </section>
 
         {/* Empathisch vor Preisen */}
-        <section className="py-12 bg-gradient-to-b from-background to-card/10">
+        <section className="py-6 bg-gradient-to-b from-background to-card/10">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -525,13 +525,13 @@ export default function WebseitenKI() {
         </section>
 
         {/* Website Types */}
-        <section className="py-16 bg-card/20">
+        <section className="py-8 bg-card/20">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-6"
             >
               <h2 className="text-3xl font-bold font-display text-white mb-4">
                 {t.webKIPage.typesTitle}
@@ -569,13 +569,13 @@ export default function WebseitenKI() {
         </section>
 
         {/* Process */}
-        <section className="py-16">
+        <section className="py-8">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="text-center mb-6"
             >
               <h2 className="text-3xl font-bold font-display text-white mb-4">
                 {t.webKIPage.processTitle}
@@ -610,7 +610,7 @@ export default function WebseitenKI() {
         </section>
 
         {/* Technologies */}
-        <section className="py-12 bg-card/20">
+        <section className="py-6 bg-card/20">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -643,7 +643,7 @@ export default function WebseitenKI() {
         </section>
 
         {/* Why KI Websites */}
-        <section className="py-16">
+        <section className="py-8">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -718,13 +718,13 @@ export default function WebseitenKI() {
         </section>
 
         {/* FAQ */}
-        <section className="py-16">
+        <section className="py-8">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-10"
+              className="text-center mb-6"
             >
               <HelpCircle className="w-10 h-10 text-secondary mx-auto mb-4" />
               <h2 className="text-2xl font-bold font-display text-white mb-3">
@@ -762,14 +762,14 @@ export default function WebseitenKI() {
         </section>
 
         {/* CTA - Erweitert */}
-        <section className="py-20 bg-gradient-to-b from-secondary/10 via-primary/5 to-background border-y border-white/10">
+        <section className="py-10 bg-gradient-to-b from-secondary/10 via-primary/5 to-background border-y border-white/10">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-center mb-12"
+                className="text-center mb-6"
               >
                 <Sparkles className="w-14 h-14 text-secondary mx-auto mb-6" />
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -780,7 +780,7 @@ export default function WebseitenKI() {
                 </p>
               </motion.div>
 
-              <div className="grid md:grid-cols-3 gap-6 mb-12">
+              <div className="grid md:grid-cols-3 gap-6 mb-6">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -898,7 +898,7 @@ export default function WebseitenKI() {
         </section>
 
         {/* Related Services */}
-        <section className="py-12 bg-white/5">
+        <section className="py-6 bg-white/5">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl font-bold text-white text-center mb-8">{t.nav.services}</h2>
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
