@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import OpenAI from "openai";
+import { listEvents, createEvent, getAvailableSlots, isBusinessHour } from "./lib/googleCalendar";
 
 // the newest OpenAI model is "gpt-5" which was released August 7, 2025. do not change this unless explicitly requested by the user
 // This is using Replit's AI Integrations service, which provides OpenAI-compatible API access without requiring your own OpenAI API key.
@@ -163,6 +164,139 @@ Am Ende freundlich anbieten: „Wenn Sie möchten, fasse ich Ihnen alles kurz zu
     } catch (error: any) {
       console.error("Chat API error:", error);
       res.status(500).json({ error: "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut." });
+    }
+  });
+
+  // Calendar API - Get available time slots for a specific date
+  app.get("/api/calendar/slots", async (req, res) => {
+    try {
+      const { date } = req.query;
+      
+      if (!date || typeof date !== 'string') {
+        return res.status(400).json({ error: "Date parameter required (YYYY-MM-DD)" });
+      }
+
+      const requestedDate = new Date(date);
+      const day = requestedDate.getDay();
+      
+      // Check if weekend
+      if (day === 0 || day === 6) {
+        return res.json({ 
+          slots: [], 
+          message: "Wochenende - Geschlossen (Sa & So)",
+          businessHours: "Mo-Fr 08:00-17:00"
+        });
+      }
+
+      // Get events for this date
+      const startOfDay = new Date(requestedDate);
+      startOfDay.setHours(0, 0, 0, 0);
+      const endOfDay = new Date(requestedDate);
+      endOfDay.setHours(23, 59, 59, 999);
+
+      const events = await listEvents('primary', startOfDay.toISOString(), endOfDay.toISOString());
+      const availableSlots = getAvailableSlots(requestedDate, events);
+
+      res.json({ 
+        slots: availableSlots,
+        businessHours: "Mo-Fr 08:00-17:00",
+        date: date
+      });
+    } catch (error: any) {
+      console.error("Calendar slots error:", error);
+      res.status(500).json({ error: "Kalender konnte nicht geladen werden." });
+    }
+  });
+
+  // Calendar API - Book an appointment
+  app.post("/api/calendar/book", async (req, res) => {
+    try {
+      const { date, time, name, email, phone, message } = req.body;
+      
+      if (!date || !time || !name || !email) {
+        return res.status(400).json({ error: "Datum, Uhrzeit, Name und E-Mail sind erforderlich." });
+      }
+
+      // Validate time format is allowed (HH:00 between 08 and 16)
+      const allowedTimes = ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00'];
+      if (!allowedTimes.includes(time)) {
+        return res.status(400).json({ 
+          error: "Ungültige Uhrzeit. Termine nur zur vollen Stunde zwischen 08:00 und 16:00." 
+        });
+      }
+
+      // Validate date format (YYYY-MM-DD)
+      const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+      if (!dateRegex.test(date)) {
+        return res.status(400).json({ error: "Ungültiges Datumsformat." });
+      }
+
+      // Check if weekend
+      const requestedDate = new Date(date + 'T12:00:00');
+      const day = requestedDate.getDay();
+      if (day === 0 || day === 6) {
+        return res.status(400).json({ 
+          error: "Termine nur Mo-Fr möglich. Wochenende geschlossen." 
+        });
+      }
+
+      // Re-check for conflicts before booking
+      const hour = parseInt(time.split(':')[0]);
+      const slotStartBerlin = `${date}T${time}:00`;
+      const slotEndBerlin = `${date}T${(hour + 1).toString().padStart(2, '0')}:00:00`;
+
+      // Get existing events to check for conflicts
+      const startOfDay = new Date(date + 'T00:00:00+01:00');
+      const endOfDay = new Date(date + 'T23:59:59+01:00');
+      const existingEvents = await listEvents('primary', startOfDay.toISOString(), endOfDay.toISOString());
+      
+      // Check if slot is already booked
+      const hasConflict = existingEvents.some(event => {
+        const startStr = event.start?.dateTime || event.start?.date;
+        const endStr = event.end?.dateTime || event.end?.date;
+        if (!startStr || !endStr) return false;
+        const eventStart = new Date(startStr);
+        const eventEnd = new Date(endStr);
+        const slotStart = new Date(slotStartBerlin + '+01:00');
+        const slotEnd = new Date(slotEndBerlin + '+01:00');
+        return slotStart < eventEnd && slotEnd > eventStart;
+      });
+
+      if (hasConflict) {
+        return res.status(409).json({ 
+          error: "Dieser Termin ist leider nicht mehr verfügbar. Bitte wählen Sie einen anderen Zeitpunkt." 
+        });
+      }
+
+      // Create the event
+      const description = `
+Terminbuchung über Website
+
+Name: ${name}
+E-Mail: ${email}
+${phone ? `Telefon: ${phone}` : ''}
+${message ? `Nachricht: ${message}` : ''}
+      `.trim();
+
+      const event = await createEvent(
+        'primary',
+        `Beratungsgespräch: ${name}`,
+        description,
+        slotStartBerlin,
+        slotEndBerlin,
+        email
+      );
+
+      res.json({ 
+        success: true, 
+        message: "Termin erfolgreich gebucht!",
+        eventId: event.id,
+        start: event.start,
+        end: event.end
+      });
+    } catch (error: any) {
+      console.error("Calendar booking error:", error);
+      res.status(500).json({ error: "Termin konnte nicht gebucht werden. Bitte versuchen Sie es erneut." });
     }
   });
 
