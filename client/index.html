@@ -73,14 +73,53 @@
         "https://www.linkedin.com/company/extrucon",
         "https://www.instagram.com/extrucon"
       ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+4989444438879",
-        "contactType": "customer service",
-        "email": "info@extrucon.de",
-        "availableLanguage": ["German", "English", "Croatian", "Turkish"],
-        "areaServed": ["DE", "AT", "CH", "HR", "BA", "RS", "SI", "ME", "TR", "CY"]
-      }
+      "location": [
+        {
+          "@type": "Place",
+          "name": "ExtruCon Hauptsitz Deutschland",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Hasenheide 8",
+            "addressLocality": "Fürstenfeldbruck",
+            "postalCode": "82256",
+            "addressRegion": "Bayern",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "Place",
+          "name": "ExtruCon Türkei Zentrale",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Antalya/Alanya",
+            "addressRegion": "Antalya",
+            "addressCountry": "TR"
+          }
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+4989444438879",
+          "contactType": "customer service",
+          "email": "info@extrucon.de",
+          "availableLanguage": ["German", "English", "Croatian", "Turkish"],
+          "areaServed": ["DE", "AT", "CH", "HR", "BA", "RS", "SI", "ME", "TR", "CY"]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "info@extrucon.de",
+          "availableLanguage": ["Turkish", "German", "English"],
+          "areaServed": ["TR", "CY"],
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        }
+      ]
     }
     </script>
 
