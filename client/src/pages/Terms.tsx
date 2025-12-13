@@ -1,9 +1,10 @@
+import { memo } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 
-export default function Terms() {
+function Terms() {
   const { t, language } = useLanguage();
 
   return (
@@ -384,3 +385,5 @@ export default function Terms() {
     </div>
   );
 }
+
+export default memo(Terms);

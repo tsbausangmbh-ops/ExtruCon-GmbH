@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
@@ -10,7 +11,7 @@ import { RelatedServices } from "@/components/RelatedServices";
 
 const valueIcons = [Lightbulb, Heart, Shield, Zap];
 
-export default function UeberUns() {
+function UeberUns() {
   const { t } = useLanguage();
   const about = t.aboutPage;
 
@@ -379,3 +380,5 @@ export default function UeberUns() {
     </div>
   );
 }
+
+export default memo(UeberUns);

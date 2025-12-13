@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -10,7 +11,7 @@ import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 
-export default function Marketing() {
+function Marketing() {
   const { t } = useLanguage();
 
   const channels = ["Google Ads", "Meta Ads", "LinkedIn Ads", "TikTok Ads", "Google SEO", "YouTube Ads", "Microsoft Ads"];
@@ -139,3 +140,5 @@ export default function Marketing() {
     </div>
   );
 }
+
+export default memo(Marketing);

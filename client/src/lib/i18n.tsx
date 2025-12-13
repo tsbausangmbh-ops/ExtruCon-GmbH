@@ -3280,6 +3280,34 @@ export const translations = {
       german: 'Alman Kalitesi',
       support: '7/24 Destek',
     },
+    funnel: {
+      title: '3 Adımda',
+      titleHighlight: 'AI Çözümüne',
+      step1: 'İlk Görüşme',
+      step1Desc: 'Ücretsiz danışmanlık görüşmesi ile ihtiyaç analizi',
+      step2: 'Konsept',
+      step2Desc: 'Bireysel strateji ve çözüm konsepti',
+      step3: 'Uygulama',
+      step3Desc: 'Uygulama ve sürekli optimizasyon',
+    },
+    problem: {
+      title: 'Problem',
+      titleHighlight: 'AI olmadan',
+      problems: [
+        'Zaman alan manuel görevler',
+        'Kaçırılan müşteri talepleri',
+        'Tutarsız iletişim',
+        'Yüksek personel maliyetleri',
+      ],
+      solution: 'Çözüm',
+      solutionHighlight: 'ExtruCon ile',
+      solutions: [
+        'Otomasyon ile %80 zaman tasarrufu',
+        'Müşteriler için 7/24 erişilebilirlik',
+        'Tutarlı marka dili',
+        'Ölçeklenebilir süreçler',
+      ],
+    },
     faq: {
       title: 'Sıkça Sorulan Sorular',
       subtitle: 'Hizmetlerimiz hakkında merak ettikleriniz',
@@ -3678,6 +3706,112 @@ export const translations = {
       yourRightsTitle: 'Haklarınız',
       yourRightsList: '• Kişisel verilerinize erişim hakkı (KVKK Md. 11)\n• Düzeltme hakkı\n• Silme/yok etme hakkı (KVKK Md. 7)\n• İtiraz hakkı\n• KVKK\'ya şikayet hakkı',
       contactForPrivacy: 'Gizlilik soruları: info@extrucon.de'
+    },
+    faqPage: {
+      badge: 'Yardım & Destek',
+      title: 'Sıkça Sorulan Sorular (SSS)',
+      subtitle: 'Hizmetlerimiz, fiyatlarımız ve ExtruCon ile işbirliği hakkında en sık sorulan soruların yanıtlarını bulun.',
+      searchPlaceholder: 'Soru ara...',
+      searchResults: 'Arama sonuçları',
+      noResults: 'Soru bulunamadı. Farklı bir arama terimi deneyin.',
+      categoriesLabel: 'Kategoriler',
+      ctaTitle: 'Sorunuz yok mu?',
+      ctaSubtitle: 'Doğrudan bize ulaşın – sorularınızı kişisel ve bağlayıcı olmadan yanıtlamaktan mutluluk duyarız.',
+      ctaButton: 'Şimdi İletişime Geçin',
+      categories: {
+        allgemein: 'Genel',
+        ki: 'AI & Otomasyon',
+        social: 'Sosyal Medya',
+        web: 'Web Geliştirme',
+        marketing: 'SEO & Performans Pazarlama',
+        kosten: 'Fiyatlar & İşbirliği'
+      },
+      questions: {
+        allgemein: [
+          { q: 'ExtruCon kimdir?', a: 'ExtruCon GmbH, Münih yakınlarındaki Fürstenfeldbruck merkezli tam kapsamlı bir pazarlama ve AI ajansıdır. Almanya genelinde dijital pazarlama, AI otomasyonu, web geliştirme ve içerik oluşturma alanlarında müşterilere hizmet veriyoruz.' },
+          { q: 'Almanya genelinde çalışıyor musunuz?', a: 'Evet! Merkezimiz Fürstenfeldbruck\'ta, ancak tüm Almanya\'daki müşterilere hem uzaktan hem de ihtiyaca göre yerinde hizmet veriyoruz.' },
+          { q: 'Hangi sektörler için çalışıyorsunuz?', a: 'KOBİ\'ler, startuplar, zanaat işletmeleri, hizmet sağlayıcılar, e-ticaret şirketleri ve daha fazlasıyla sektörler arası çalışıyoruz. Stratejilerimizi sektörünüze özel olarak uyarlıyoruz.' },
+          { q: 'Ücretsiz ilk görüşme sunuyor musunuz?', a: 'Evet! İlk danışmanlık görüşmesi her zaman ücretsiz ve bağlayıcı değildir. Mevcut durumunuzu analiz eder ve potansiyelleri gösteririz.' },
+          { q: 'Taleplere ne kadar hızlı yanıt veriyorsunuz?', a: 'Genellikle iş günlerinde 24 saat içinde tüm taleplere yanıt veriyoruz.' }
+        ],
+        ki: [
+          { q: 'Bir AI chatbot ne kadar?', a: 'Basit bir chatbot 1.500€\'dan başlar. Bireysel özelleştirmeli daha karmaşık AI çözümleri 3.000€\'dan başlar. Seçenekler hakkında ücretsiz danışmanlık sunuyoruz.' },
+          { q: 'AI araçları için teknik bilgi gerekiyor mu?', a: 'Hayır! Tam teknik uygulamayı üstleniyoruz ve ekibinizi eğitiyoruz. Kullanımı kolay, kullanıcı dostu bir çözüm alırsınız.' },
+          { q: 'Bir AI projesi ne kadar sürede hayata geçirilir?', a: 'Basit chatbotlar 1-2 hafta içinde kullanıma hazırdır. Daha karmaşık otomasyonlar kapsama bağlı olarak 4-8 hafta gerektirir.' },
+          { q: 'AI küçük işletmeler için de mantıklı mı?', a: 'Kesinlikle! Özellikle küçük işletmeler otomasyondan faydalanır, çünkü ana işe odaklanmak için zaman kazandırır. Her bütçe için çözümlerimiz var.' },
+          { q: 'Hangi AI teknolojilerini kullanıyorsunuz?', a: 'OpenAI/GPT-4, Claude AI, Google Gemini ve n8n, Make, Zapier gibi otomasyon araçlarıyla çalışıyoruz. Gereksinimlerinize uygun teknolojiyi seçiyoruz.' }
+        ],
+        social: [
+          { q: 'Sosyal medya pazarlama ne kadar?', a: 'Paketlerimiz tek kanal yönetimi için aylık 790€\'dan başlar. İçerik üretimi dahil kapsamlı çoklu kanal stratejileri aylık 1.490€\'dan başlar.' },
+          { q: 'Sosyal medyada ne sıklıkta paylaşım yapılmalı?', a: 'Bu platforma bağlıdır. Instagram için haftada 3-5 gönderi artı günlük hikayeler öneriyoruz. LinkedIn\'de haftada 2-3 kaliteli gönderi yeterlidir.' },
+          { q: 'İşletmem için en iyi platform hangisi?', a: 'Bunu ücretsiz ilk görüşmede analiz ediyoruz. B2B şirketleri genellikle LinkedIn\'den, yerel hizmet sağlayıcıları Instagram ve Google Business\'tan faydalanır.' },
+          { q: 'İçeriği de siz mi oluşturuyorsunuz?', a: 'Evet! Tam içerik üretimini üstleniyoruz: metinler, grafikler, fotoğraflar ve videolar. Talep üzerine yerinde çekimler de dahil.' },
+          { q: 'Sosyal medya başarısını nasıl ölçüyorsunuz?', a: 'Erişim, etkileşim, takipçi artışı, web sitesi trafiği ve dönüşümler gibi KPI\'ları takip ediyoruz. Tüm önemli rakamlarla aylık raporlar alırsınız.' }
+        ],
+        web: [
+          { q: 'Profesyonel bir web sitesi ne kadar?', a: 'Modern bir iş web sitesi 2.500€\'dan başlar. E-ticaret veya bireysel işlevlerle daha kapsamlı projeler 5.000€\'dan başlar.' },
+          { q: 'Bir web sitesi oluşturmak ne kadar sürer?', a: 'Standart bir web sitesi 2-4 haftada tamamlanır. Bireysel işlevlere sahip daha karmaşık projeler 6-12 hafta sürebilir.' },
+          { q: 'Web sitesi arama motorları için optimize mi?', a: 'Evet! Her web sitesi SEO optimize edilmiş olarak oluşturulur: hızlı yükleme süreleri, mobil optimizasyon, yapılandırılmış veriler ve teknik SEO standarttır.' },
+          { q: 'Barındırma ve bakım sunuyor musunuz?', a: 'Evet, güncellemeler, yedeklemeler, SSL sertifikası ve teknik destek dahil aylık 49€\'dan barındırma ve bakım paketleri sunuyoruz.' },
+          { q: 'Web sitesini kendim düzenleyebilir miyim?', a: 'Evet! Kullanıcı dostu bir içerik yönetim sistemi kuruyoruz ve kullanımı konusunda eğitim veriyoruz.' }
+        ],
+        marketing: [
+          { q: 'SEO ile ne kadar hızlı sonuç görürüm?', a: 'İlk iyileştirmeler genellikle 4-8 hafta sonra görülür. Sürdürülebilir üst sıralamalar için 3-6 ay planlıyoruz. SEO uzun vadeli bir yatırımdır.' },
+          { q: 'SEO optimizasyonu ne kadar?', a: 'SEO paketlerimiz aylık 990€\'dan başlar. Kesin fiyat, sektörünüzdeki kapsam ve rekabet durumuna bağlıdır.' },
+          { q: 'Google Ads da yapıyor musunuz?', a: 'Evet! Sürekli optimizasyonla Google Ads kampanyaları oluşturuyor ve yönetiyoruz. Yönetim ücretleri reklam bütçesinin %15\'inden başlar (min. 300€/ay).' },
+          { q: 'SEO ile ücretli reklam arasındaki fark nedir?', a: 'SEO uzun vadede ücretsiz ziyaretçiler getirir ama zaman alır. Ücretli reklam anında trafik getirir ama sürekli maliyet gerektirir. İkisinin kombinasyonu idealdir.' },
+          { q: 'Düzenli raporlar alır mıyım?', a: 'Evet! Tüm önemli KPI\'larla aylık raporlar alırsınız: sıralamalar, trafik, dönüşümler, ROI. Talep üzerine haftalık güncellemeler de mümkün.' }
+        ],
+        kosten: [
+          { q: 'Ödeme koşullarınız nasıl?', a: 'Projelerde: %50 peşinat, %50 tamamlandığında. Devam eden hizmetlerde: 14 gün ödeme vadeli aylık faturalama.' },
+          { q: 'Minimum sözleşme süreleri var mı?', a: 'Devam eden destek (SEO, sosyal medya) için sonuçlar zaman aldığından en az 6 ay öneriyoruz. Tek projeler süreli değildir.' },
+          { q: 'Tek hizmetler de sunuyor musunuz?', a: 'Evet! Sadece sosyal medya, sadece web tasarımı veya sadece SEO – hizmetlerimizi ihtiyaçlarınıza göre şekillendiriyoruz.' },
+          { q: 'Küçük bütçelerle de çalışıyor musunuz?', a: 'Evet! Küçük bütçeler için giriş paketlerimiz var ve bütçenizle hangi önlemlerin en mantıklı olduğunu dürüstçe danışıyoruz.' },
+          { q: 'İşbirliği nasıl ilerliyor?', a: 'İlk görüşmeden sonra bir teklif hazırlıyoruz. Onay üzerine hedefleri ve zaman çizelgesini belirlediğimiz bir başlangıç toplantısıyla başlıyoruz.' }
+        ]
+      }
+    },
+    ratgeberPage: {
+      badge: 'Bilgi & İçgörüler',
+      title: 'Pazarlama Rehberi',
+      subtitle: 'Dijital pazarlama, AI otomasyonu ve başarılı online varlık için pratik ipuçları, kılavuzlar ve stratejiler.',
+      searchPlaceholder: 'Makalelerde ara...',
+      featuredTitle: 'Öne Çıkan Makaleler',
+      allArticlesTitle: 'Tüm Makaleler',
+      noResults: 'Makale bulunamadı.',
+      resetFilter: 'Filtreyi sıfırla',
+      read: 'Oku',
+      newsletter: {
+        title: 'Bültene abone olun',
+        subtitle: 'En son pazarlama ipuçlarını ve AI içgörülerini doğrudan gelen kutunuza alın.',
+        placeholder: 'E-posta adresiniz',
+        button: 'Abone Ol',
+        consent: 'Abone olarak',
+        privacyLink: 'Gizlilik Politikamızı',
+        consentEnd: 'kabul etmiş olursunuz.'
+      },
+      cta: {
+        title: 'Bireysel danışmanlık mı istiyorsunuz?',
+        subtitle: 'Uzmanlarımız işletmeniz için doğru stratejiyi bulmanıza yardımcı olur.',
+        button: 'Ücretsiz Danışmanlık İsteyin'
+      },
+      categories: {
+        all: 'Tümü',
+        ki: 'AI & Otomasyon',
+        social: 'Sosyal Medya',
+        marketing: 'SEO & Pazarlama',
+        web: 'Web Geliştirme'
+      },
+      articles: [
+        { id: 1, title: 'İşletmeler İçin AI Chatbotları: 2025 Tam Rehber', excerpt: 'AI chatbotlarının müşteri hizmetinizi nasıl devrimleştirip aynı zamanda maliyetleri nasıl düşürebileceğini öğrenin.', readTime: '8 dk.', date: '10 Ara 2025' },
+        { id: 2, title: 'Instagram Reels: Daha Fazla Erişim İçin 10 İpucu', excerpt: 'İşletmeniz için Instagram Reels\'ın tam potansiyelini nasıl kullanacağınızı ve binlerce yeni müşteriye nasıl ulaşacağınızı öğrenin.', readTime: '5 dk.', date: '8 Ara 2025' },
+        { id: 3, title: 'Yerel SEO: Google Aramasına Nasıl Hakim Olursunuz', excerpt: 'Yerel arama motoru optimizasyonu bölgesel işletmeler için anahtardır. En önemli stratejiler.', readTime: '7 dk.', date: '5 Ara 2025' },
+        { id: 4, title: 'Web Sitesi Hızını Optimize Etme: Performans İpuçları', excerpt: 'Hızlı bir web sitesi SEO ve kullanıcı deneyimi için kritik öneme sahiptir. Yükleme sürelerinizi nasıl iyileştireceğinizi öğrenin.', readTime: '6 dk.', date: '3 Ara 2025' },
+        { id: 5, title: 'Pazarlama İçin ChatGPT: Pratik Kullanım Alanları', excerpt: 'İçerik oluşturmadan müşteri analizine: ChatGPT\'yi pazarlamanızda etkili bir şekilde nasıl kullanacağınızı öğrenin.', readTime: '10 dk.', date: '1 Ara 2025' },
+        { id: 6, title: 'B2B İçin LinkedIn: 2025 En İyi Strateji', excerpt: 'LinkedIn, B2B şirketleri için en önemli ağdır. Güçlü bir varlık nasıl oluşturulur.', readTime: '8 dk.', date: '28 Kas 2025' },
+        { id: 7, title: 'Google Ads vs. Meta Ads: Hangisi Daha Değerli?', excerpt: 'İki reklam platformunu karşılaştırıyor ve işletmeniz için hangisinin daha uygun olduğunu gösteriyoruz.', readTime: '9 dk.', date: '25 Kas 2025' },
+        { id: 8, title: 'n8n İş Akışı Otomasyonu: Tam Rehber', excerpt: 'n8n ile programlama bilgisi olmadan iş süreçlerini otomatikleştirin. Nasıl başlayacağınızı öğrenin.', readTime: '12 dk.', date: '22 Kas 2025' }
+      ]
     },
     cookieConsent: {
       title: 'Çerez Ayarları',

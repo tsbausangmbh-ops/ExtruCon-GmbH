@@ -1,11 +1,11 @@
+import { memo, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Quote, ExternalLink, MapPin, CheckCircle, ArrowRight, Users, Zap, Shield, Clock, ChevronDown, Building2, Stethoscope, Car, Utensils, Scale, Home, Wrench, Sun } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
-import { useEffect, useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
-export default function Referenzen() {
+function Referenzen() {
   const { t } = useLanguage();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -1047,3 +1047,5 @@ export default function Referenzen() {
     </div>
   );
 }
+
+export default memo(Referenzen);

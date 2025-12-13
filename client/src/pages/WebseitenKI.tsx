@@ -1,3 +1,4 @@
+import { memo, useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
@@ -5,12 +6,11 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Globe, Sparkles, ArrowRight, CheckCircle, Zap, Shield, TrendingUp, MessageSquare, Bot, Search, FileText, Image, Code, Palette, Smartphone, BarChart3, RefreshCw, ChevronDown, HelpCircle, Clock, Users } from "lucide-react";
-import { useState } from "react";
 import { useLanguage } from "@/lib/i18n";
 
 const featureIcons = [Bot, FileText, Image, Search, Users, BarChart3];
 
-export default function WebseitenKI() {
+function WebseitenKI() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const { t } = useLanguage();
 
@@ -927,3 +927,5 @@ export default function WebseitenKI() {
     </div>
   );
 }
+
+export default memo(WebseitenKI);

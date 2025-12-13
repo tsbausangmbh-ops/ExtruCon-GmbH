@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
@@ -9,7 +10,7 @@ import { Contact } from "@/components/sections/Contact";
 import { SEOHead } from "@/components/SEOHead";
 import { KIWebseitenHighlight } from "@/components/sections/KIWebseitenHighlight";
 
-export default function Home() {
+function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden font-sans">
       <SEOHead
@@ -38,3 +39,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default memo(Home);

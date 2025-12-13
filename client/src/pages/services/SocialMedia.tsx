@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -10,7 +11,7 @@ import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 
-export default function SocialMedia() {
+function SocialMedia() {
   const { t } = useLanguage();
 
   const platforms = ["Instagram", "TikTok", "LinkedIn", "Facebook", "YouTube", "X (Twitter)", "Pinterest", "Google Business"];
@@ -169,3 +170,5 @@ export default function SocialMedia() {
     </div>
   );
 }
+
+export default memo(SocialMedia);

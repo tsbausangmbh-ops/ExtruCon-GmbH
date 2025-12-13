@@ -1,9 +1,10 @@
+import { memo } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 
-export default function Privacy() {
+function Privacy() {
   const { t, language } = useLanguage();
 
   return (
@@ -490,3 +491,5 @@ export default function Privacy() {
     </div>
   );
 }
+
+export default memo(Privacy);

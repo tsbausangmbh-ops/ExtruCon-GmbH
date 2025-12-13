@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -10,7 +11,7 @@ import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 
-export default function Brand() {
+function Brand() {
   const { t } = useLanguage();
 
   return (
@@ -116,3 +117,5 @@ export default function Brand() {
     </div>
   );
 }
+
+export default memo(Brand);
