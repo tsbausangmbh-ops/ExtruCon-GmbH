@@ -60,18 +60,74 @@ export default function Referenzen() {
       link: "https://komplettsanierungen-haus-wohnung.de"
     },
     {
-      title: "Fitness-Studio SEO",
-      category: "SEO",
-      description: "Lokale Suchmaschinenoptimierung für Fitnessstudio-Kette",
-      results: ["Platz 1 bei 'Fitnessstudio + Stadt'", "+200% organischer Traffic"],
+      title: "FitLife München – Fitness-Studio Kette",
+      category: "SEO & Geo-Optimierung",
+      description: "Lokale Suchmaschinenoptimierung für Fitnessstudio-Kette mit 5 Standorten in München. Google My Business Optimierung und lokale Keyword-Strategie.",
+      results: ["Platz 1 bei 'Fitnessstudio München'", "+200% organischer Traffic", "5 Standorte optimiert"],
       color: "orange"
     },
     {
-      title: "Arztpraxis Digitalisierung",
+      title: "Dr. Müller Praxis – Arztpraxis München",
       category: "KI-Agent",
-      description: "KI-gestützte Terminvergabe und Patientenkommunikation",
-      results: ["90% weniger Telefonanrufe", "Wartezeit -50%"],
+      description: "KI-gestützte Terminvergabe und Patientenkommunikation für Allgemeinmediziner. 24/7 Terminbuchung ohne Warteschleife.",
+      results: ["90% weniger Telefonanrufe", "Wartezeit -50%", "24/7 Erreichbarkeit"],
       color: "green"
+    },
+    {
+      title: "AutoHaus Berger – Kfz-Werkstatt",
+      category: "KI-Agent + Automatisierung",
+      description: "Automatisierte Werkstatt-Terminvergabe mit KI-Chatbot. Integration in bestehendes Werkstattsystem und SMS-Erinnerungen.",
+      results: ["75% weniger No-Shows", "Automatische Erinnerungen", "CRM-Integration"],
+      color: "cyan"
+    },
+    {
+      title: "Bella Italia Restaurant – Gastronomie",
+      category: "Social Media + Marketing",
+      description: "Social-Media-Strategie und Content-Erstellung für italienisches Restaurant. Instagram, Facebook und Google Ads Management.",
+      results: ["+350% Instagram Follower", "40 Reservierungen/Woche", "5.0 Google-Bewertung"],
+      color: "pink"
+    },
+    {
+      title: "Malermeister Schmidt – Handwerk",
+      category: "Webentwicklung + SEO",
+      description: "Moderne Website mit Referenzgalerie und integriertem Angebotsrechner für Malermeister. Lokale SEO-Optimierung für Landkreis FFB.",
+      results: ["12 neue Anfragen/Monat", "Angebotsrechner", "Mobile-optimiert"],
+      color: "blue"
+    },
+    {
+      title: "Rechtsanwalt Weber – Kanzlei",
+      category: "KI-Agent",
+      description: "KI-gestützter Erstkontakt und Terminbuchung für Rechtsanwaltskanzlei. Mandantenportal mit sicherer Dokumentenübertragung.",
+      results: ["Erstberatung automatisiert", "Sichere Datenübertragung", "DSGVO-konform"],
+      color: "purple"
+    },
+    {
+      title: "Immobilien König – Makler",
+      category: "Automatisierung + Marketing",
+      description: "Automatisierte Objektverwaltung mit Lead-Qualifizierung. KI-Chatbot für Interessenten und automatische Exposé-Versendung.",
+      results: ["60% schnellere Leadbearbeitung", "Auto-Exposé-Versand", "Lead-Scoring"],
+      color: "orange"
+    },
+    {
+      title: "Yoga Studio Harmonie – Wellness",
+      category: "Webentwicklung + Automatisierung",
+      description: "Online-Buchungssystem für Yoga-Kurse mit automatischer Teilnehmerverwaltung. Newsletter-Integration und Mitgliederbereich.",
+      results: ["Online-Kursbuchung", "Mitgliederportal", "+80% Buchungsrate"],
+      color: "green"
+    },
+    {
+      title: "TechStart GmbH – IT-Dienstleister",
+      category: "Content Creation + SEO",
+      description: "Blog-Strategie und technische SEO für IT-Unternehmen. Regelmäßige Fachartikel und Whitepaper-Erstellung mit KI-Unterstützung.",
+      results: ["20 Fachartikel/Jahr", "+150% Website-Traffic", "3 Whitepaper"],
+      color: "cyan"
+    },
+    {
+      title: "Blumen Paradies – Floristik",
+      category: "Social Media + Webshop",
+      description: "Instagram-Marketing mit täglichem Content und Online-Shop für Blumenlieferung. Automatisierte Bestellbestätigung und Liefertracking.",
+      results: ["Online-Shop integriert", "1.500+ Instagram Follower", "Same-Day Delivery"],
+      color: "pink"
     }
   ];
 
