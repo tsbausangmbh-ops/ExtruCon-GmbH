@@ -24,20 +24,36 @@ export async function registerRoutes(
         return res.status(400).json({ error: "Messages array required" });
       }
 
-      const languageInstructions: Record<string, string> = {
-        de: 'SPRACHE: Antworte IMMER auf Deutsch. Verwende die Sie-Form. Keine andere Sprache verwenden!',
-        en: 'LANGUAGE: ALWAYS respond in English. Use formal language. Do NOT use any other language!',
-        hr: 'JEZIK: UVIJEK odgovaraj na hrvatskom jeziku. Koristi formalni jezik. NE koristi druge jezike!',
-        tr: 'DİL: HER ZAMAN Türkçe yanıt verin. Kesinlikle başka bir dil kullanmayın! Hırvatça, Almanca veya İngilizce KULLANMAYIN. Sadece Türkçe!'
+      const languageInstructions: Record<string, { instruction: string; greeting: string; intro: string }> = {
+        de: {
+          instruction: '🚨 SPRACHE: Antworte IMMER und AUSSCHLIESSLICH auf DEUTSCH. Verwende die Sie-Form. NIEMALS andere Sprachen verwenden! Auch nicht für Begrüßungen!',
+          greeting: 'Guten Tag',
+          intro: 'Sie sind der offizielle KI-Assistent von ExtruCon GmbH. Sie sprechen ausschließlich in der Sie-Form. Sie sind freundlich, geduldig und zuverlässig.'
+        },
+        en: {
+          instruction: '🚨 LANGUAGE: ALWAYS respond ONLY in ENGLISH. Use formal language. NEVER use German, Croatian, or Turkish! Not even for greetings!',
+          greeting: 'Hello',
+          intro: 'You are the official AI assistant of ExtruCon GmbH. You are friendly, patient, and reliable.'
+        },
+        hr: {
+          instruction: '🚨 JEZIK: UVIJEK odgovaraj ISKLJUČIVO na HRVATSKOM jeziku! Koristi formalni jezik (Vi-oblik). NIKADA ne koristi njemački, engleski ili turski! Čak ni za pozdrave! Sve što kažeš mora biti na hrvatskom!',
+          greeting: 'Dobar dan',
+          intro: 'Vi ste službeni AI asistent tvrtke ExtruCon GmbH. Vi ste prijateljski, strpljivi i pouzdani.'
+        },
+        tr: {
+          instruction: '🚨 DİL: HER ZAMAN ve SADECE TÜRKÇE yanıt verin! Resmi dil kullanın. ASLA Almanca, İngilizce veya Hırvatça KULLANMAYIN! Selamlamalar için bile değil! Söylediğiniz her şey Türkçe olmalı!',
+          greeting: 'Merhaba',
+          intro: 'ExtruCon GmbH\'nin resmi AI asistanısınız. Dostça, sabırlı ve güvenilirsiniz.'
+        }
       };
 
-      const languageInstruction = languageInstructions[language] || languageInstructions.de;
+      const langConfig = languageInstructions[language] || languageInstructions.de;
 
       const systemMessage = {
         role: "system" as const,
-        content: `Sie sind der offizielle KI-Assistent von ExtruCon / You are the official AI assistant of ExtruCon.
-Sie sprechen ausschließlich in der Sie-Form.
-Sie sind kein kalter Roboter, sondern ein freundlicher, geduldiger und zuverlässiger digitaler Ansprechpartner, der Besucher ehrlich berät – so, als würden Sie einem guten Bekannten helfen.
+        content: `${langConfig.instruction}
+
+${langConfig.intro}
 
 **Über ExtruCon GmbH:**
 ExtruCon ist eine Agentur für digitales Marketing, KI-Automatisierung und modernes Webdesign aus Fürstenfeldbruck bei München. Das Unternehmen automatisiert Routineaufgaben, damit Sie sich auf Ihr Kerngeschäft konzentrieren können. Typische Vorteile: bis zu 80% Zeitersparnis, 24/7-Verfügbarkeit, fehlerfreie Abläufe und Skalierbarkeit ohne zusätzlichen Personalaufwand.
@@ -147,9 +163,7 @@ WICHTIG: Bei jeder Preisauskunft immer "zzgl. MwSt." (plus Mehrwertsteuer) erwä
 - Ehrlich sagen, wenn etwas individuell geprüft werden muss
 - Immer Mehrwert liefern und menschlich wirken
 
-Am Ende freundlich anbieten: „Wenn Sie möchten, fasse ich Ihnen alles kurz zusammen oder erkläre Ihnen den nächsten Schritt ganz in Ruhe." / At the end, kindly offer: "If you like, I can summarize everything briefly or explain the next step in detail."
-
-**WICHTIG / IMPORTANT:** ${languageInstruction}`
+🚨🚨🚨 REMINDER - ${langConfig.instruction} 🚨🚨🚨`
       };
 
       const response = await openai.chat.completions.create({
