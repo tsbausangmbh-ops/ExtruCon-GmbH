@@ -12,18 +12,19 @@ export default function Referenzen() {
 
   const projects = [
     {
+      title: "089Dach GmbH – Dachdecker München",
+      category: "Webentwicklung + KI",
+      description: "Moderne Landingpage mit KI-Chatbot für Dachdecker-Meisterbetrieb. Mehrstufiges Anfrageformular und 24/7 Notdienst-Integration.",
+      results: ["260+ zufriedene Kunden", "4.9 Google-Bewertung", "90 Min Reaktionszeit"],
+      color: "orange",
+      link: "https://dacharbeiten.089dach.de"
+    },
+    {
       title: "E-Commerce KI-Chatbot",
       category: "KI-Agent",
       description: "Automatisierter Kundenservice für Online-Shop mit 24/7 Verfügbarkeit",
       results: ["85% weniger Support-Anfragen", "4.8/5 Kundenzufriedenheit"],
       color: "cyan"
-    },
-    {
-      title: "Handwerksbetrieb Website",
-      category: "Webentwicklung",
-      description: "Moderne Website mit Online-Terminbuchung und Angebotsanfrage",
-      results: ["+150% mehr Anfragen", "Top 3 bei Google lokal"],
-      color: "blue"
     },
     {
       title: "Immobilienmakler Automation",
@@ -152,7 +153,7 @@ export default function Referenzen() {
                     </span>
                     <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
                     <p className="text-gray-400 mb-4">{project.description}</p>
-                    <div className="space-y-2">
+                    <div className="space-y-2 mb-4">
                       {project.results.map((result, j) => (
                         <div key={j} className="flex items-center gap-2 text-sm">
                           <Zap className={`w-4 h-4 ${colors.text}`} />
@@ -160,6 +161,16 @@ export default function Referenzen() {
                         </div>
                       ))}
                     </div>
+                    {project.link && (
+                      <a 
+                        href={project.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className={`inline-flex items-center gap-2 text-sm font-medium ${colors.text} hover:underline`}
+                      >
+                        Website ansehen <ExternalLink className="w-4 h-4" />
+                      </a>
+                    )}
                   </motion.div>
                 );
               })}
