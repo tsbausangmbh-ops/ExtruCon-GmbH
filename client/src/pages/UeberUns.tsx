@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 import { Users, Target, Lightbulb, Rocket, Heart, Award, MapPin, Mail, Phone, Clock, CheckCircle, ArrowRight, Zap, Shield, TrendingUp, Sparkles } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 import { RelatedServices } from "@/components/RelatedServices";
-import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 const valueIcons = [Lightbulb, Heart, Shield, Zap];
 
@@ -19,9 +18,9 @@ function UeberUns() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead 
-        title="Über ExtruCon | KI-Experten aus München | Unser Team"
-        description="Das Team hinter ExtruCon: KI-Spezialisten & Automatisierungs-Experten. ✓ 50+ Projekte ✓ Made in Germany ✓ Persönlicher Ansprechpartner"
-        keywords={PAGE_KEYWORDS.ueberUns}
+        title="Über uns | ExtruCon GmbH Fürstenfeldbruck – KI-Agentur & Automatisierung"
+        description="ExtruCon GmbH: Ihre KI-Agentur aus Fürstenfeldbruck bei München. Wir entwickeln KI-Agenten, automatisieren Prozesse und erstellen intelligente Websites – deutschlandweit."
+        keywords="ExtruCon GmbH, KI-Agentur Fürstenfeldbruck, Automatisierung München, Marketing Agentur Bayern, HRB 18623"
       />
       <Navbar />
       <main className="pt-24">

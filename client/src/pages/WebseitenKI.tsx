@@ -7,7 +7,6 @@ import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Globe, Sparkles, ArrowRight, CheckCircle, Zap, Shield, TrendingUp, MessageSquare, Bot, Search, FileText, Image, Code, Palette, Smartphone, BarChart3, RefreshCw, ChevronDown, HelpCircle, Clock, Users } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
-import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 const featureIcons = [Bot, FileText, Image, Search, Users, BarChart3];
 
@@ -18,9 +17,9 @@ function WebseitenKI() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead 
-        title="Website mit KI-Chatbot | Automatische Lead-Generierung | ExtruCon"
-        description="Webseiten mit integriertem KI-Chatbot. ✓ 24/7 Kundenbetreuung ✓ Automatische Leads ✓ Für Handwerker, Ärzte & KMU. Jetzt Angebot einholen!"
-        keywords={PAGE_KEYWORDS.webseitenKI}
+        title="KI-Webseiten & Chatbots erstellen lassen | Webentwicklung Fürstenfeldbruck & München"
+        description="Professionelle Webseiten mit KI-Chatbots, NLP & automatischer Lead-Generierung. Webentwicklung aus Fürstenfeldbruck bei München – für Handwerker, Ärzte & Unternehmen in Bayern."
+        keywords="KI Webseite erstellen, Website mit Chatbot, Webentwicklung Fürstenfeldbruck, Webdesign München, KI Website Bayern, Chatbot für Website, NLP Webseite, Lead-Generierung Website, Webseite für Handwerker München, KI Agentur Bayern"
       />
       <Navbar />
       <main className="pt-24">

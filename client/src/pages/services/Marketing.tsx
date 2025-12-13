@@ -10,7 +10,6 @@ import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
-import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 function Marketing() {
   const { t } = useLanguage();
@@ -20,9 +19,9 @@ function Marketing() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Performance Marketing | Google Ads & SEO Agentur München | ExtruCon"
-        description="Messbare Ergebnisse mit Google Ads & SEO. ✓ ROAS-Optimierung ✓ A/B Testing ✓ Monatliche Reports. Kostenlose Ads-Analyse!"
-        keywords={PAGE_KEYWORDS.servicesMarketing}
+        title="Performance Marketing | Google Ads & Meta Ads | ExtruCon"
+        description="Datengetriebenes Performance Marketing. Google Ads, Meta Ads, SEO & Conversion-Optimierung. Agentur Fürstenfeldbruck."
+        keywords="Performance Marketing, Google Ads Agentur, Meta Ads, SEO Fürstenfeldbruck"
         canonical="https://extrucon.de/leistungen/marketing"
       />
       <Navbar />

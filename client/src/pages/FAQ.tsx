@@ -9,7 +9,6 @@ import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection } from "@/components/InternalLinks";
-import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 const categoryIcons = {
   allgemein: { icon: HelpCircle, color: "text-primary" },
@@ -61,8 +60,8 @@ function FAQ() {
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
         title="FAQ | Häufige Fragen zu KI & Automatisierung | ExtruCon"
-        description="Antworten auf alle Fragen: Was kostet ein KI-Agent? Wie lange dauert die Entwicklung? ✓ Preise ✓ Ablauf ✓ Technologie"
-        keywords={PAGE_KEYWORDS.faq}
+        description="Antworten auf häufig gestellte Fragen zu KI-Agenten, Automatisierungen, Webentwicklung und Marketing. ExtruCon GmbH Fürstenfeldbruck."
+        keywords="KI FAQ, Automatisierung Fragen, KI-Agenten FAQ, Webentwicklung FAQ"
         canonical="https://extrucon.de/faq"
       />
       <Navbar />

@@ -10,7 +10,6 @@ import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
-import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 function Web() {
   const { t } = useLanguage();
@@ -20,9 +19,9 @@ function Web() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Webentwicklung München | Websites mit KI-Chatbot | ExtruCon"
-        description="Professionelle Websites ab 3.000€. ✓ React & Next.js ✓ WordPress & Shopify ✓ KI-Chatbot inklusive. Jetzt Angebot anfordern!"
-        keywords={PAGE_KEYWORDS.servicesWeb}
+        title="Webentwicklung Fürstenfeldbruck | Professionelle Websites | ExtruCon"
+        description="Moderne Webentwicklung mit KI-Integration. React, Next.js, WordPress & Shopify. Webdesign Agentur Fürstenfeldbruck bei München."
+        keywords="Webentwicklung Fürstenfeldbruck, Webdesign München, Website erstellen, React Entwicklung"
         canonical="https://extrucon.de/leistungen/webentwicklung"
       />
       <Navbar />

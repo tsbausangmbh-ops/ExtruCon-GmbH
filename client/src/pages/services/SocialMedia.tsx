@@ -10,7 +10,6 @@ import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
-import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 function SocialMedia() {
   const { t } = useLanguage();
@@ -20,9 +19,9 @@ function SocialMedia() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Social Media Marketing München | Instagram & TikTok Agentur | ExtruCon"
-        description="Mehr Reichweite auf Instagram, TikTok & LinkedIn. ✓ Content-Erstellung ✓ Community Management ✓ Ads. Ab 500€/Monat!"
-        keywords={PAGE_KEYWORDS.servicesSocialMedia}
+        title="Social Media Marketing Fürstenfeldbruck | ExtruCon GmbH"
+        description="Professionelles Social Media Marketing. Instagram, TikTok, LinkedIn & Facebook Betreuung. Agentur aus Fürstenfeldbruck."
+        keywords="Social Media Marketing, Instagram Agentur, TikTok Marketing, Fürstenfeldbruck"
         canonical="https://extrucon.de/leistungen/social-media"
       />
       <Navbar />

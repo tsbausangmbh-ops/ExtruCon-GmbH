@@ -10,7 +10,6 @@ import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
-import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 function Brand() {
   const { t } = useLanguage();
@@ -18,9 +17,9 @@ function Brand() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Markenentwicklung & Logo Design München | Corporate Identity | ExtruCon"
-        description="Einzigartige Markenidentität entwickeln. ✓ Logo Design ✓ Corporate Design ✓ Brand Guidelines. Von der Idee zur starken Marke!"
-        keywords={PAGE_KEYWORDS.servicesBrand}
+        title="Markenentwicklung & Corporate Design | ExtruCon GmbH"
+        description="Professionelle Markenentwicklung und Corporate Design. Logo, Branding & visuelle Identität. Agentur Fürstenfeldbruck."
+        keywords="Markenentwicklung, Corporate Design, Logo Design, Branding Agentur"
         canonical="https://extrucon.de/leistungen/markenentwicklung"
       />
       <Navbar />

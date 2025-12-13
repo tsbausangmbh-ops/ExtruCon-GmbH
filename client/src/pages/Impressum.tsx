@@ -3,7 +3,6 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
-import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 function Impressum() {
   const { t, language } = useLanguage();
@@ -11,9 +10,9 @@ function Impressum() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Impressum | ExtruCon GmbH München"
-        description="Impressum der ExtruCon GmbH – Ihre KI-Agentur in München. Angaben gemäß § 5 DDG."
-        keywords={PAGE_KEYWORDS.impressum}
+        title="Impressum | ExtruCon GmbH Fürstenfeldbruck"
+        description="Impressum der ExtruCon GmbH. Angaben gemäß § 5 DDG. Hasenheide 8, 82256 Fürstenfeldbruck."
+        keywords="Impressum, ExtruCon GmbH, Fürstenfeldbruck"
         canonical="https://extrucon.de/impressum"
       />
       <Navbar />

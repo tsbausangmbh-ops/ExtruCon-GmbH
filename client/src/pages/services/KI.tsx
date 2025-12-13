@@ -10,7 +10,6 @@ import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
-import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 function KI() {
   const { t } = useLanguage();
@@ -18,9 +17,9 @@ function KI() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="KI-Lösungen für Unternehmen | ChatGPT & GPT-4 Integration | ExtruCon"
-        description="Maßgeschneiderte KI für Ihr Business. ✓ ChatGPT Integration ✓ Individuelle KI-Agenten ✓ ROI in 3 Monaten. Kostenlose Analyse!"
-        keywords={PAGE_KEYWORDS.servicesKI}
+        title="KI-Lösungen & Automatisierung | KI Agentur | ExtruCon"
+        description="Maßgeschneiderte KI-Lösungen für Ihr Unternehmen. KI-Agenten, ChatGPT Integration, Workflow-Automatisierung. Fürstenfeldbruck."
+        keywords="KI Agentur, KI-Lösungen, ChatGPT Integration, Automatisierung, Künstliche Intelligenz"
         canonical="https://extrucon.de/leistungen/ki"
       />
       <Navbar />

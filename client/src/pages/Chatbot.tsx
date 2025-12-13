@@ -5,7 +5,6 @@ import { SEOHead } from "@/components/SEOHead";
 import { Send, Bot, User, Loader2, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/lib/i18n";
-import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 interface Message {
   role: "user" | "assistant";
@@ -66,9 +65,9 @@ function Chatbot() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans flex flex-col">
       <SEOHead 
-        title="KI-Assistent | Live Demo unseres Chatbots | ExtruCon"
-        description="Testen Sie unseren KI-Assistenten live! Stellen Sie Fragen zu KI, Automatisierung & Preisen. ✓ Sofortige Antworten ✓ 24/7"
-        keywords={PAGE_KEYWORDS.chatbot}
+        title="KI-Assistent | ExtruCon GmbH – Fragen Sie unseren Bot"
+        description="Sprechen Sie mit unserem KI-Assistenten über KI-Agenten, Automatisierung und digitales Marketing. Kostenlos und unverbindlich."
+        keywords="KI Chatbot, ExtruCon Bot, KI Beratung, Automatisierung Beratung"
       />
       <Navbar />
       
