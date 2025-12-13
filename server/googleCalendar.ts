@@ -52,11 +52,13 @@ export async function getAvailableSlots(date: string): Promise<{ time: string; a
   try {
     const calendar = await getGoogleCalendarClient();
     
+    const BUFFER_HOURS = 2;
+    
     const startOfDay = new Date(date);
-    startOfDay.setHours(8, 0, 0, 0);
+    startOfDay.setHours(6, 0, 0, 0);
     
     const endOfDay = new Date(date);
-    endOfDay.setHours(17, 0, 0, 0);
+    endOfDay.setHours(19, 0, 0, 0);
 
     const response = await calendar.freebusy.query({
       requestBody: {
@@ -75,10 +77,15 @@ export async function getAvailableSlots(date: string): Promise<{ time: string; a
       const slotEnd = new Date(date);
       slotEnd.setHours(hour + 1, 0, 0, 0);
       
+      const bufferStart = new Date(slotStart);
+      bufferStart.setHours(bufferStart.getHours() - BUFFER_HOURS);
+      const bufferEnd = new Date(slotEnd);
+      bufferEnd.setHours(bufferEnd.getHours() + BUFFER_HOURS);
+      
       const isBusy = busySlots.some(busy => {
         const busyStart = new Date(busy.start!);
         const busyEnd = new Date(busy.end!);
-        return slotStart < busyEnd && slotEnd > busyStart;
+        return bufferStart < busyEnd && bufferEnd > busyStart;
       });
       
       slots.push({
