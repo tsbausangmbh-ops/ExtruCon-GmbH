@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Bot, Share2, Globe, PenTool, Fingerprint, TrendingUp, Cpu } from "lucide-react";
+import { Bot, Share2, Globe, PenTool, Fingerprint, TrendingUp, Cpu, Sparkles, Award } from "lucide-react";
 import aiImg from "@assets/generated_images/glowing_neural_network_brain.png";
 import socialImg from "@assets/generated_images/digital_social_connection_abstract_art.png";
 import webImg from "@assets/generated_images/holographic_creative_interface.png";
@@ -69,6 +69,22 @@ export function Services() {
       image: marketingImg,
       color: "text-orange-400",
       href: "/leistungen/marketing"
+    },
+    {
+      title: t.servicesPage.kiWebseiten?.title || "KI Webseiten",
+      description: t.servicesPage.kiWebseiten?.desc || "Moderne Websites mit integrierten KI-Features, Chatbots und automatischer SEO-Optimierung.",
+      icon: Sparkles,
+      image: webImg,
+      color: "text-secondary",
+      href: "/webseiten-ki"
+    },
+    {
+      title: t.servicesPage.referenzen?.title || "Referenzen",
+      description: t.servicesPage.referenzen?.desc || "Entdecken Sie unsere erfolgreich umgesetzten Projekte mit messbaren Ergebnissen.",
+      icon: Award,
+      image: brandImg,
+      color: "text-yellow-400",
+      href: "/referenzen"
     }
   ];
 
