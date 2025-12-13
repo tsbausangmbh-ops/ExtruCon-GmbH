@@ -18,6 +18,7 @@ export const translations = {
       contentCreation: 'Content Creation',
       marketing: 'Performance Marketing',
       seo: 'SEO & Geo-Optimierung',
+      referenzen: 'Referenzen',
     },
     geoLinks: {
       serviceIn: 'in:',
@@ -919,6 +920,27 @@ export const translations = {
       ctaSubtitle: 'Lassen Sie uns Ihre lokale Sichtbarkeit gemeinsam optimieren.',
       ctaButtonAlt: 'Jetzt SEO-Beratung starten'
     },
+    referenzenPage: {
+      breadcrumb: 'Referenzen',
+      badge: 'Erfolgsgeschichten',
+      title: 'Unsere Referenzen',
+      subtitle: 'Überzeugen Sie sich von unserer Arbeit. Entdecken Sie erfolgreiche Projekte aus verschiedenen Branchen.',
+      stat1: '50+ Projekte',
+      stat2: '100% Zufriedenheit',
+      stat3: '5-Sterne Bewertungen',
+      ctaButton: 'Ihr Projekt starten',
+      ctaSecondary: 'Projekte entdecken',
+      projectsTitle: 'Ausgewählte Projekte',
+      testimonialsTitle: 'Das sagen unsere Kunden',
+      testimonials: [
+        { text: 'ExtruCon hat unseren Kundenservice revolutioniert. Der KI-Chatbot beantwortet 85% aller Anfragen automatisch.', name: 'Thomas M.', company: 'E-Commerce Unternehmer' },
+        { text: 'Endlich gefunden werden! Durch die SEO-Optimierung sind wir jetzt auf Platz 1 bei Google für unsere wichtigsten Keywords.', name: 'Sandra K.', company: 'Fitnessstudio-Inhaberin' },
+        { text: 'Professionelle Betreuung von Anfang bis Ende. Unsere neue Website hat unsere Anfragen verdoppelt.', name: 'Michael B.', company: 'Handwerksmeister' }
+      ],
+      ctaTitle: 'Bereit für Ihr Erfolgsprojekt?',
+      ctaSubtitle: 'Lassen Sie uns gemeinsam Ihr nächstes Projekt zum Erfolg führen.',
+      ctaButtonAlt: 'Jetzt Kontakt aufnehmen'
+    },
     contactPage: {
       badge: 'Deutschlandweit für Sie da',
       title: 'Kontakt aufnehmen',
@@ -1108,6 +1130,7 @@ export const translations = {
       contentCreation: 'Content Creation',
       marketing: 'Performance Marketing',
       seo: 'SEO & Geo-Optimization',
+      referenzen: 'References',
     },
     geoLinks: {
       serviceIn: 'in:',
@@ -2009,6 +2032,27 @@ export const translations = {
       ctaSubtitle: 'Let us optimize your local visibility together.',
       ctaButtonAlt: 'Start SEO Consultation Now'
     },
+    referenzenPage: {
+      breadcrumb: 'References',
+      badge: 'Success Stories',
+      title: 'Our References',
+      subtitle: 'See our work for yourself. Discover successful projects from various industries.',
+      stat1: '50+ Projects',
+      stat2: '100% Satisfaction',
+      stat3: '5-Star Reviews',
+      ctaButton: 'Start Your Project',
+      ctaSecondary: 'Discover Projects',
+      projectsTitle: 'Selected Projects',
+      testimonialsTitle: 'What Our Clients Say',
+      testimonials: [
+        { text: 'ExtruCon revolutionized our customer service. The AI chatbot automatically answers 85% of all inquiries.', name: 'Thomas M.', company: 'E-Commerce Entrepreneur' },
+        { text: 'Finally being found! Thanks to SEO optimization, we are now #1 on Google for our most important keywords.', name: 'Sandra K.', company: 'Fitness Studio Owner' },
+        { text: 'Professional support from start to finish. Our new website has doubled our inquiries.', name: 'Michael B.', company: 'Master Craftsman' }
+      ],
+      ctaTitle: 'Ready for Your Success Project?',
+      ctaSubtitle: 'Let us lead your next project to success together.',
+      ctaButtonAlt: 'Contact Us Now'
+    },
     contactPage: {
       badge: 'Nationwide at Your Service',
       title: 'Get in Touch',
@@ -2198,6 +2242,7 @@ export const translations = {
       contentCreation: 'Kreiranje sadržaja',
       marketing: 'Performance Marketing',
       seo: 'SEO i Geo-Optimizacija',
+      referenzen: 'Reference',
     },
     geoLinks: {
       serviceIn: 'u:',
@@ -3099,6 +3144,27 @@ export const translations = {
       ctaSubtitle: 'Optimizirajmo zajedno vašu lokalnu vidljivost.',
       ctaButtonAlt: 'Započnite SEO konzultacije sada'
     },
+    referenzenPage: {
+      breadcrumb: 'Reference',
+      badge: 'Uspješne priče',
+      title: 'Naše reference',
+      subtitle: 'Uvjerite se sami u naš rad. Otkrijte uspješne projekte iz raznih industrija.',
+      stat1: '50+ projekata',
+      stat2: '100% zadovoljstvo',
+      stat3: '5 zvjezdica ocjene',
+      ctaButton: 'Pokrenite svoj projekt',
+      ctaSecondary: 'Otkrijte projekte',
+      projectsTitle: 'Odabrani projekti',
+      testimonialsTitle: 'Što kažu naši klijenti',
+      testimonials: [
+        { text: 'ExtruCon je revolucionirao našu korisničku službu. AI chatbot automatski odgovara na 85% svih upita.', name: 'Thomas M.', company: 'E-Commerce poduzetnik' },
+        { text: 'Konačno nas pronalaze! Zahvaljujući SEO optimizaciji, sada smo broj 1 na Googleu za naše najvažnije ključne riječi.', name: 'Sandra K.', company: 'Vlasnica fitness studija' },
+        { text: 'Profesionalna podrška od početka do kraja. Naša nova web stranica udvostručila je naše upite.', name: 'Michael B.', company: 'Majstor obrtnik' }
+      ],
+      ctaTitle: 'Spremni za vaš uspješni projekt?',
+      ctaSubtitle: 'Zajedno vodimo vaš sljedeći projekt do uspjeha.',
+      ctaButtonAlt: 'Kontaktirajte nas sada'
+    },
     contactPage: {
       badge: 'Dostupni diljem Njemačke',
       title: 'Kontaktirajte nas',
@@ -3288,6 +3354,7 @@ export const translations = {
       contentCreation: 'İçerik Oluşturma',
       marketing: 'Performans Pazarlama',
       seo: 'SEO ve Coğrafi Optimizasyon',
+      referenzen: 'Referanslar',
     },
     geoLinks: {
       serviceIn: 'konumu:',
@@ -3651,6 +3718,27 @@ export const translations = {
       ctaTitle: 'Daha İyi Sıralamalar İçin Hazır mısınız?',
       ctaSubtitle: 'Yerel görünürlüğünüzü birlikte optimize edelim.',
       ctaButtonAlt: 'Şimdi SEO Danışmanlığına Başlayın'
+    },
+    referenzenPage: {
+      breadcrumb: 'Referanslar',
+      badge: 'Başarı Hikayeleri',
+      title: 'Referanslarımız',
+      subtitle: 'Çalışmalarımızı kendiniz görün. Çeşitli sektörlerden başarılı projeleri keşfedin.',
+      stat1: '50+ Proje',
+      stat2: '%100 Memnuniyet',
+      stat3: '5 Yıldız Değerlendirmeler',
+      ctaButton: 'Projenizi Başlatın',
+      ctaSecondary: 'Projeleri Keşfedin',
+      projectsTitle: 'Seçilmiş Projeler',
+      testimonialsTitle: 'Müşterilerimiz Ne Diyor',
+      testimonials: [
+        { text: 'ExtruCon müşteri hizmetlerimizi devrimleştirdi. AI chatbot tüm soruların %85\'ini otomatik olarak yanıtlıyor.', name: 'Thomas M.', company: 'E-Ticaret Girişimcisi' },
+        { text: 'Sonunda bulunuyoruz! SEO optimizasyonu sayesinde en önemli anahtar kelimelerimizde Google\'da 1 numarayız.', name: 'Sandra K.', company: 'Fitness Stüdyosu Sahibi' },
+        { text: 'Baştan sona profesyonel destek. Yeni web sitemiz sorularımızı ikiye katladı.', name: 'Michael B.', company: 'Usta Zanaatkar' }
+      ],
+      ctaTitle: 'Başarı Projenize Hazır mısınız?',
+      ctaSubtitle: 'Bir sonraki projenizi birlikte başarıya taşıyalım.',
+      ctaButtonAlt: 'Şimdi İletişime Geçin'
     },
     contactPage: {
       badge: 'Almanya Genelinde Hizmetinizdeyiz',

@@ -63,6 +63,9 @@ export function Navbar() {
           <a href="/faq" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
             {t.nav.faq}
           </a>
+          <a href="/referenzen" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
+            {t.nav.referenzen}
+          </a>
           <a href="/ueber-uns" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
             {t.nav.about}
           </a>
@@ -118,6 +121,13 @@ export function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               {t.nav.faq}
+            </a>
+            <a
+              href="/referenzen"
+              className="text-lg font-medium text-gray-300 hover:text-primary transition-colors py-2"
+              onClick={() => setIsOpen(false)}
+            >
+              {t.nav.referenzen}
             </a>
             <a
               href="/ueber-uns"

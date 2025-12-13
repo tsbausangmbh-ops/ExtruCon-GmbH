@@ -23,6 +23,7 @@ import KI from "@/pages/services/KI";
 import Web from "@/pages/services/Web";
 import Marketing from "@/pages/services/Marketing";
 import SEO from "@/pages/services/SEO";
+import Referenzen from "@/pages/Referenzen";
 import Cookies from "@/pages/Cookies";
 import NotFound from "@/pages/not-found";
 import { ChatWidget } from "@/components/ChatWidget";
@@ -52,6 +53,7 @@ function Router() {
       <Route path="/leistungen/web" component={Web} />
       <Route path="/leistungen/marketing" component={Marketing} />
       <Route path="/leistungen/seo" component={SEO} />
+      <Route path="/referenzen" component={Referenzen} />
       <Route path="/cookies" component={Cookies} />
       <Route component={NotFound} />
     </Switch>
