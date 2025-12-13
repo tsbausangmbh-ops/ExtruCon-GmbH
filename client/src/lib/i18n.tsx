@@ -1237,6 +1237,8 @@ export const translations = {
       ki: { title: 'AI & Automation', desc: 'Custom AI bots and intelligent automation workflows to optimize your operations 24/7.' },
       web: { title: 'Web & Digital Platforms', desc: 'High-performance, visually stunning websites and web apps for the modern web.' },
       marketing: { title: 'Performance Marketing', desc: 'Data-driven campaigns and SEO strategies for measurable growth and maximum visibility.' },
+      kiWebseiten: { title: 'AI Websites', desc: 'Modern websites with integrated AI features, chatbots and automatic SEO optimization.' },
+      referenzen: { title: 'References', desc: 'Discover our successfully completed projects with measurable results.' },
     },
     problemSection: {
       title: 'Do you know these',
@@ -2290,6 +2292,8 @@ export const translations = {
       ki: { title: 'AI i automatizacija', desc: 'Prilagođeni AI botovi i inteligentni automatizacijski tijekovi rada za optimizaciju vašeg poslovanja 24/7.' },
       web: { title: 'Web i digitalne platforme', desc: 'Visoko učinkovite, vizualno impresivne web stranice i web aplikacije za moderni web.' },
       marketing: { title: 'Performance Marketing', desc: 'Kampanje vođene podacima i SEO strategije za mjerljiv rast i maksimalnu vidljivost.' },
+      kiWebseiten: { title: 'AI Web Stranice', desc: 'Moderne web stranice s integriranim AI značajkama, chatbotovima i automatskom SEO optimizacijom.' },
+      referenzen: { title: 'Reference', desc: 'Otkrijte naše uspješno završene projekte s mjerljivim rezultatima.' },
     },
     problemSection: {
       title: 'Poznajete li ove',
@@ -3233,6 +3237,8 @@ export const translations = {
       ki: { title: 'AI ve Otomasyon', desc: 'İşlemlerinizi 7/24 optimize etmek için özel AI botları ve akıllı otomasyon iş akışları.' },
       web: { title: 'Web ve Dijital Platformlar', desc: 'Modern web için yüksek performanslı, görsel olarak etkileyici web siteleri ve web uygulamaları.' },
       marketing: { title: 'Performans Pazarlama', desc: 'Ölçülebilir büyüme ve maksimum görünürlük için veri odaklı kampanyalar ve SEO stratejileri.' },
+      kiWebseiten: { title: 'AI Web Siteleri', desc: 'Entegre AI özellikleri, chatbotlar ve otomatik SEO optimizasyonu ile modern web siteleri.' },
+      referenzen: { title: 'Referanslar', desc: 'Ölçülebilir sonuçlarla başarıyla tamamlanan projelerimizi keşfedin.' },
     },
     contact: {
       title: 'İnovasyon için',
