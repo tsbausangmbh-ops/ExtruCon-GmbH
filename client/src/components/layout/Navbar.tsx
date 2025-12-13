@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Bot, Share2, Globe, TrendingUp, Palette, FileText } from "lucide-react";
+import { Menu, X, ChevronDown, Bot, Share2, Globe, TrendingUp, Palette, FileText, Search } from "lucide-react";
 import { useState } from "react";
 import logoImage from "@assets/Logo_mittel_Header_1765567902974.png";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -18,6 +18,7 @@ export function Navbar() {
     { name: t.nav.socialMedia, href: "/leistungen/social-media", icon: TrendingUp },
     { name: t.nav.contentCreation, href: "/leistungen/content", icon: FileText },
     { name: t.nav.marketing, href: "/leistungen/marketing", icon: Palette },
+    { name: t.nav.seo, href: "/leistungen/seo", icon: Search },
   ];
 
   return (

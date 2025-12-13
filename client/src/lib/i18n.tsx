@@ -17,6 +17,7 @@ export const translations = {
       socialMedia: 'Social Media',
       contentCreation: 'Content Creation',
       marketing: 'Performance Marketing',
+      seo: 'SEO & Geo-Optimierung',
     },
     geoLinks: {
       serviceIn: 'in:',
@@ -886,6 +887,37 @@ export const translations = {
       ctaSubtitle: 'Lassen Sie uns datengetriebene Kampagnen starten, die echte Ergebnisse liefern.',
       ctaButtonAlt: 'Jetzt Projekt starten'
     },
+    seoPage: {
+      badge: 'Leistung',
+      title: 'SEO & Geo-Optimierung',
+      subtitle: 'Lokale Sichtbarkeit maximieren. Werden Sie von Kunden in Ihrer Region gefunden – mit professioneller Suchmaschinenoptimierung und Geo-Targeting.',
+      ctaButton: 'Kostenlose SEO-Analyse',
+      servicesTitle: 'Unsere SEO-Leistungen',
+      services: [
+        { title: 'Technisches SEO', desc: 'Website-Struktur, Ladezeiten und mobile Optimierung für beste Rankings.' },
+        { title: 'Lokales SEO', desc: 'Google My Business, lokale Keywords und regionale Sichtbarkeit.' },
+        { title: 'On-Page SEO', desc: 'Content-Optimierung, Meta-Tags und strukturierte Daten.' },
+        { title: 'SEO-Monitoring', desc: 'Ranking-Tracking, Wettbewerbsanalyse und regelmäßige Reports.' }
+      ],
+      benefitsTitle: 'Ihre Vorteile',
+      benefits: [
+        'Bessere Sichtbarkeit in lokalen Suchergebnissen',
+        'Mehr qualifizierte Besucher aus Ihrer Region',
+        'Höhere Conversion-Raten durch gezielte Optimierung',
+        'Nachhaltige Rankings ohne laufende Werbekosten',
+        'Transparente Reports und messbare Ergebnisse'
+      ],
+      processTitle: 'Unser Prozess',
+      process: [
+        { title: 'Analyse', desc: 'Umfassende SEO-Analyse Ihrer aktuellen Situation.' },
+        { title: 'Strategie', desc: 'Individuelle SEO-Strategie für Ihre Ziele.' },
+        { title: 'Umsetzung', desc: 'Technische und inhaltliche Optimierungen.' },
+        { title: 'Monitoring', desc: 'Kontinuierliches Tracking und Anpassungen.' }
+      ],
+      ctaTitle: 'Bereit für bessere Rankings?',
+      ctaSubtitle: 'Lassen Sie uns Ihre lokale Sichtbarkeit gemeinsam optimieren.',
+      ctaButtonAlt: 'Jetzt SEO-Beratung starten'
+    },
     contactPage: {
       badge: 'Deutschlandweit für Sie da',
       title: 'Kontakt aufnehmen',
@@ -1074,6 +1106,7 @@ export const translations = {
       socialMedia: 'Social Media',
       contentCreation: 'Content Creation',
       marketing: 'Performance Marketing',
+      seo: 'SEO & Geo-Optimization',
     },
     geoLinks: {
       serviceIn: 'in:',
@@ -1943,6 +1976,37 @@ export const translations = {
       ctaSubtitle: 'Let us start data-driven campaigns that deliver real results.',
       ctaButtonAlt: 'Start Project Now'
     },
+    seoPage: {
+      badge: 'Service',
+      title: 'SEO & Geo-Optimization',
+      subtitle: 'Maximize local visibility. Get found by customers in your region – with professional search engine optimization and geo-targeting.',
+      ctaButton: 'Free SEO Analysis',
+      servicesTitle: 'Our SEO Services',
+      services: [
+        { title: 'Technical SEO', desc: 'Website structure, load times, and mobile optimization for best rankings.' },
+        { title: 'Local SEO', desc: 'Google My Business, local keywords, and regional visibility.' },
+        { title: 'On-Page SEO', desc: 'Content optimization, meta tags, and structured data.' },
+        { title: 'SEO Monitoring', desc: 'Ranking tracking, competitor analysis, and regular reports.' }
+      ],
+      benefitsTitle: 'Your Benefits',
+      benefits: [
+        'Better visibility in local search results',
+        'More qualified visitors from your region',
+        'Higher conversion rates through targeted optimization',
+        'Sustainable rankings without ongoing advertising costs',
+        'Transparent reports and measurable results'
+      ],
+      processTitle: 'Our Process',
+      process: [
+        { title: 'Analysis', desc: 'Comprehensive SEO analysis of your current situation.' },
+        { title: 'Strategy', desc: 'Individual SEO strategy for your goals.' },
+        { title: 'Implementation', desc: 'Technical and content optimizations.' },
+        { title: 'Monitoring', desc: 'Continuous tracking and adjustments.' }
+      ],
+      ctaTitle: 'Ready for Better Rankings?',
+      ctaSubtitle: 'Let us optimize your local visibility together.',
+      ctaButtonAlt: 'Start SEO Consultation Now'
+    },
     contactPage: {
       badge: 'Nationwide at Your Service',
       title: 'Get in Touch',
@@ -2131,6 +2195,7 @@ export const translations = {
       socialMedia: 'Društvene mreže',
       contentCreation: 'Kreiranje sadržaja',
       marketing: 'Performance Marketing',
+      seo: 'SEO i Geo-Optimizacija',
     },
     geoLinks: {
       serviceIn: 'u:',
@@ -3000,6 +3065,37 @@ export const translations = {
       ctaSubtitle: 'Pokrenimo kampanje temeljene na podacima koje donose stvarne rezultate.',
       ctaButtonAlt: 'Započnite projekt sada'
     },
+    seoPage: {
+      badge: 'Usluga',
+      title: 'SEO i Geo-Optimizacija',
+      subtitle: 'Maksimizirajte lokalnu vidljivost. Neka vas pronađu kupci u vašoj regiji – s profesionalnom optimizacijom za tražilice i geo-targetiranjem.',
+      ctaButton: 'Besplatna SEO analiza',
+      servicesTitle: 'Naše SEO usluge',
+      services: [
+        { title: 'Tehničko SEO', desc: 'Struktura web stranice, vrijeme učitavanja i mobilna optimizacija za najbolje rangiranje.' },
+        { title: 'Lokalno SEO', desc: 'Google My Business, lokalne ključne riječi i regionalna vidljivost.' },
+        { title: 'On-Page SEO', desc: 'Optimizacija sadržaja, meta oznake i strukturirani podaci.' },
+        { title: 'SEO praćenje', desc: 'Praćenje rangiranja, analiza konkurencije i redovita izvješća.' }
+      ],
+      benefitsTitle: 'Vaše prednosti',
+      benefits: [
+        'Bolja vidljivost u lokalnim rezultatima pretraživanja',
+        'Više kvalificiranih posjetitelja iz vaše regije',
+        'Veće stope konverzije kroz ciljanu optimizaciju',
+        'Održivo rangiranje bez trajnih troškova oglašavanja',
+        'Transparentna izvješća i mjerljivi rezultati'
+      ],
+      processTitle: 'Naš proces',
+      process: [
+        { title: 'Analiza', desc: 'Sveobuhvatna SEO analiza vaše trenutne situacije.' },
+        { title: 'Strategija', desc: 'Individualna SEO strategija za vaše ciljeve.' },
+        { title: 'Implementacija', desc: 'Tehničke i sadržajne optimizacije.' },
+        { title: 'Praćenje', desc: 'Kontinuirano praćenje i prilagodbe.' }
+      ],
+      ctaTitle: 'Spremni za bolje rangiranje?',
+      ctaSubtitle: 'Optimizirajmo zajedno vašu lokalnu vidljivost.',
+      ctaButtonAlt: 'Započnite SEO konzultacije sada'
+    },
     contactPage: {
       badge: 'Dostupni diljem Njemačke',
       title: 'Kontaktirajte nas',
@@ -3188,6 +3284,7 @@ export const translations = {
       socialMedia: 'Sosyal Medya',
       contentCreation: 'İçerik Oluşturma',
       marketing: 'Performans Pazarlama',
+      seo: 'SEO ve Coğrafi Optimizasyon',
     },
     geoLinks: {
       serviceIn: 'konumu:',
@@ -3519,6 +3616,37 @@ export const translations = {
         { q: 'Bir pazarlama ajansı ne kadar tutar?', a: 'Paketlerimiz 990€/aydan başlıyor. Bireysel danışmanlık ve özel teklif için ücretsiz iletişime geçin.' },
         { q: 'Tek hizmetler de sunuyor musunuz?', a: 'Evet, sadece sosyal medya, sadece web tasarımı veya sadece SEO – hizmetlerimizi ihtiyaçlarınıza göre şekillendiriyoruz. Kombine stratejiler genellikle en büyük etkiyi yaratır.' },
       ],
+    },
+    seoPage: {
+      badge: 'Hizmet',
+      title: 'SEO ve Coğrafi Optimizasyon',
+      subtitle: 'Yerel görünürlüğü maksimize edin. Bölgenizdeki müşteriler tarafından bulunun – profesyonel arama motoru optimizasyonu ve coğrafi hedefleme ile.',
+      ctaButton: 'Ücretsiz SEO Analizi',
+      servicesTitle: 'SEO Hizmetlerimiz',
+      services: [
+        { title: 'Teknik SEO', desc: 'En iyi sıralamalar için web sitesi yapısı, yükleme süreleri ve mobil optimizasyon.' },
+        { title: 'Yerel SEO', desc: 'Google My Business, yerel anahtar kelimeler ve bölgesel görünürlük.' },
+        { title: 'On-Page SEO', desc: 'İçerik optimizasyonu, meta etiketler ve yapılandırılmış veriler.' },
+        { title: 'SEO İzleme', desc: 'Sıralama takibi, rakip analizi ve düzenli raporlar.' }
+      ],
+      benefitsTitle: 'Avantajlarınız',
+      benefits: [
+        'Yerel arama sonuçlarında daha iyi görünürlük',
+        'Bölgenizden daha nitelikli ziyaretçiler',
+        'Hedefli optimizasyon ile daha yüksek dönüşüm oranları',
+        'Sürekli reklam maliyetleri olmadan sürdürülebilir sıralamalar',
+        'Şeffaf raporlar ve ölçülebilir sonuçlar'
+      ],
+      processTitle: 'Sürecimiz',
+      process: [
+        { title: 'Analiz', desc: 'Mevcut durumunuzun kapsamlı SEO analizi.' },
+        { title: 'Strateji', desc: 'Hedeflerinize yönelik bireysel SEO stratejisi.' },
+        { title: 'Uygulama', desc: 'Teknik ve içerik optimizasyonları.' },
+        { title: 'İzleme', desc: 'Sürekli takip ve ayarlamalar.' }
+      ],
+      ctaTitle: 'Daha İyi Sıralamalar İçin Hazır mısınız?',
+      ctaSubtitle: 'Yerel görünürlüğünüzü birlikte optimize edelim.',
+      ctaButtonAlt: 'Şimdi SEO Danışmanlığına Başlayın'
     },
     contactPage: {
       badge: 'Almanya Genelinde Hizmetinizdeyiz',
