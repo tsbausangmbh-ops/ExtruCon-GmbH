@@ -20,6 +20,14 @@ export default function Referenzen() {
       link: "https://dacharbeiten.089dach.de"
     },
     {
+      title: "AquaPro24 – Sanitär & Wasserinstallation München",
+      category: "Webentwicklung + KI",
+      description: "Professionelle Landingpage mit KI-Chatbot für Sanitär-Partnernetzwerk. Festpreis-Kalkulator und 24/7 Notdienst-Integration.",
+      results: ["2.500+ zufriedene Kunden", "4.9 Google-Bewertung", "Ab 60 Min vor Ort"],
+      color: "blue",
+      link: "https://aquapro24.de"
+    },
+    {
       title: "E-Commerce KI-Chatbot",
       category: "KI-Agent",
       description: "Automatisierter Kundenservice für Online-Shop mit 24/7 Verfügbarkeit",
