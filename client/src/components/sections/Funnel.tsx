@@ -37,6 +37,8 @@ export function Funnel() {
                 src={funnelImg} 
                 alt="Digital Marketing Funnel - SEO und Geo-Targeting System" 
                 className="w-full h-auto object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
               

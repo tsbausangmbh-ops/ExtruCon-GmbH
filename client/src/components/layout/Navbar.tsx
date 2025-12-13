@@ -24,7 +24,7 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-4 h-24 flex items-center justify-between py-1">
         <Link href="/" className="flex items-center">
-          <img src={logoImage} alt="ExtruCon GmbH" className="h-[5.5rem]" />
+          <img src={logoImage} alt="ExtruCon GmbH" className="h-[5.5rem]" loading="eager" decoding="async" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
