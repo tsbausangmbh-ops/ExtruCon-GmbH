@@ -10,97 +10,334 @@ export default function Referenzen() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = "KI-Agentur Referenzen & Portfolio | Webentwicklung München, Fürstenfeldbruck, Bayern | ExtruCon";
+    document.title = "KI-Agentur Referenzen & Portfolio | 50+ Projekte Deutschland | Webentwicklung München, Bayern | ExtruCon";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute("content", "Erfolgreiche KI-Projekte und Webentwicklung Referenzen aus München, Fürstenfeldbruck und Bayern. 50+ Projekte, 98% Zufriedenheit. KI-Agenten, Chatbots, Automatisierung für Unternehmen in Deutschland, Kroatien und Türkei.");
+      metaDescription.setAttribute("content", "Erfolgreiche KI-Projekte und Webentwicklung Referenzen deutschlandweit. 50+ Projekte, 98% Kundenzufriedenheit, 5x ROI. KI-Agenten, Chatbots, Automatisierung für Unternehmen in München, Fürstenfeldbruck, Bayern, Berlin, Hamburg, Frankfurt, Köln, Düsseldorf. International: Kroatien, Türkei.");
     }
+
+    const existingKeywords = document.querySelector('meta[name="keywords"]');
+    if (existingKeywords) existingKeywords.remove();
+    const metaKeywords = document.createElement('meta');
+    metaKeywords.name = 'keywords';
+    metaKeywords.content = 'KI-Agentur Referenzen, KI-Projekte Deutschland, Webentwicklung München, Chatbot Entwicklung, KI-Agenten Bayern, Automatisierung Unternehmen, Webdesign Fürstenfeldbruck, SEO Agentur München, Lead-Generierung KI, Marketing Automatisierung, KI-Agentur Berlin, KI-Agentur Hamburg, KI-Agentur Frankfurt, KI-Agentur Köln, KI-Agentur Düsseldorf, KI-Agentur Stuttgart, AI Agency Germany, Chatbot Deutschland';
+    document.head.appendChild(metaKeywords);
+
+    const existingGeoRegion = document.querySelector('meta[name="geo.region"]');
+    if (existingGeoRegion) existingGeoRegion.remove();
+    const geoRegion = document.createElement('meta');
+    geoRegion.name = 'geo.region';
+    geoRegion.content = 'DE';
+    document.head.appendChild(geoRegion);
+
+    const existingGeoPlacename = document.querySelector('meta[name="geo.placename"]');
+    if (existingGeoPlacename) existingGeoPlacename.remove();
+    const geoPlacename = document.createElement('meta');
+    geoPlacename.name = 'geo.placename';
+    geoPlacename.content = 'Deutschland, München, Fürstenfeldbruck, Bayern';
+    document.head.appendChild(geoPlacename);
+
+    const existingGeoPosition = document.querySelector('meta[name="geo.position"]');
+    if (existingGeoPosition) existingGeoPosition.remove();
+    const geoPosition = document.createElement('meta');
+    geoPosition.name = 'geo.position';
+    geoPosition.content = '48.1788;11.2553';
+    document.head.appendChild(geoPosition);
+
+    const existingIcbm = document.querySelector('meta[name="ICBM"]');
+    if (existingIcbm) existingIcbm.remove();
+    const icbm = document.createElement('meta');
+    icbm.name = 'ICBM';
+    icbm.content = '48.1788, 11.2553';
+    document.head.appendChild(icbm);
+
+    const existingRobots = document.querySelector('meta[name="robots"]');
+    if (existingRobots) existingRobots.remove();
+    const robots = document.createElement('meta');
+    robots.name = 'robots';
+    robots.content = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+    document.head.appendChild(robots);
+
+    const existingAuthor = document.querySelector('meta[name="author"]');
+    if (existingAuthor) existingAuthor.remove();
+    const author = document.createElement('meta');
+    author.name = 'author';
+    author.content = 'ExtruCon GmbH - KI-Agentur Deutschland';
+    document.head.appendChild(author);
+
+    const existingOgTitle = document.querySelector('meta[property="og:title"]');
+    if (existingOgTitle) existingOgTitle.remove();
+    const ogTitle = document.createElement('meta');
+    ogTitle.setAttribute('property', 'og:title');
+    ogTitle.content = 'KI-Agentur Referenzen & Portfolio | 50+ erfolgreiche Projekte deutschlandweit | ExtruCon';
+    document.head.appendChild(ogTitle);
+
+    const existingOgDescription = document.querySelector('meta[property="og:description"]');
+    if (existingOgDescription) existingOgDescription.remove();
+    const ogDescription = document.createElement('meta');
+    ogDescription.setAttribute('property', 'og:description');
+    ogDescription.content = 'Entdecken Sie 50+ erfolgreiche KI-Projekte: Chatbots, Automatisierung, Webentwicklung. 98% Kundenzufriedenheit. München, Bayern, deutschlandweit.';
+    document.head.appendChild(ogDescription);
+
+    const existingOgType = document.querySelector('meta[property="og:type"]');
+    if (existingOgType) existingOgType.remove();
+    const ogType = document.createElement('meta');
+    ogType.setAttribute('property', 'og:type');
+    ogType.content = 'website';
+    document.head.appendChild(ogType);
+
+    const existingOgLocale = document.querySelector('meta[property="og:locale"]');
+    if (existingOgLocale) existingOgLocale.remove();
+    const ogLocale = document.createElement('meta');
+    ogLocale.setAttribute('property', 'og:locale');
+    ogLocale.content = 'de_DE';
+    document.head.appendChild(ogLocale);
+
+    const existingOgSiteName = document.querySelector('meta[property="og:site_name"]');
+    if (existingOgSiteName) existingOgSiteName.remove();
+    const ogSiteName = document.createElement('meta');
+    ogSiteName.setAttribute('property', 'og:site_name');
+    ogSiteName.content = 'ExtruCon GmbH - KI-Agentur Deutschland';
+    document.head.appendChild(ogSiteName);
+
+    const existingTwitterCard = document.querySelector('meta[name="twitter:card"]');
+    if (existingTwitterCard) existingTwitterCard.remove();
+    const twitterCard = document.createElement('meta');
+    twitterCard.name = 'twitter:card';
+    twitterCard.content = 'summary_large_image';
+    document.head.appendChild(twitterCard);
+
+    const existingTwitterTitle = document.querySelector('meta[name="twitter:title"]');
+    if (existingTwitterTitle) existingTwitterTitle.remove();
+    const twitterTitle = document.createElement('meta');
+    twitterTitle.name = 'twitter:title';
+    twitterTitle.content = 'KI-Agentur Referenzen | 50+ Projekte Deutschland | ExtruCon';
+    document.head.appendChild(twitterTitle);
+
+    const existingTwitterDescription = document.querySelector('meta[name="twitter:description"]');
+    if (existingTwitterDescription) existingTwitterDescription.remove();
+    const twitterDescription = document.createElement('meta');
+    twitterDescription.name = 'twitter:description';
+    twitterDescription.content = '50+ erfolgreiche KI-Projekte: Chatbots, Automatisierung, Webentwicklung. 98% Kundenzufriedenheit deutschlandweit.';
+    document.head.appendChild(twitterDescription);
 
     const schemaScript = document.createElement('script');
     schemaScript.type = 'application/ld+json';
     schemaScript.id = 'referenzen-schema';
-    schemaScript.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "ExtruCon Referenzen und Portfolio",
-      "description": "Erfolgreiche KI-Projekte, Webentwicklung und Automatisierung für Unternehmen in München, Fürstenfeldbruck, Bayern, Kroatien und Türkei",
-      "numberOfItems": 6,
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "item": {
-            "@type": "CreativeWork",
-            "name": "089Dach GmbH - KI-Website für Dachdecker",
-            "description": "Meisterbetrieb für Dacharbeiten in München mit 24/7 Notdienst, KI-gestützter Beratung und automatisierter Anfrageverarbeitung",
-            "url": "https://dacharbeiten.089dach.de/",
-            "provider": { "@type": "Organization", "name": "ExtruCon GmbH" },
-            "areaServed": { "@type": "City", "name": "München" }
-          }
+    schemaScript.textContent = JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://extrucon.de/#organization",
+        "name": "ExtruCon GmbH",
+        "alternateName": ["ExtruCon KI-Agentur", "ExtruCon AI Agency", "KI-Agentur München", "KI-Agentur Deutschland"],
+        "description": "ExtruCon GmbH ist eine führende KI-Agentur in Deutschland. Wir entwickeln KI-Agenten, Chatbots, Automatisierungslösungen und moderne Webseiten für Unternehmen deutschlandweit.",
+        "url": "https://extrucon.de",
+        "logo": "https://extrucon.de/logo.png",
+        "image": "https://extrucon.de/og-image.png",
+        "telephone": "+49-xxx-xxxxxxx",
+        "email": "info@extrucon.de",
+        "foundingDate": "2023",
+        "priceRange": "€€-€€€",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Fürstenfeldbruck",
+          "addressLocality": "Fürstenfeldbruck",
+          "addressRegion": "Bayern",
+          "postalCode": "82256",
+          "addressCountry": "DE"
         },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "item": {
-            "@type": "CreativeWork",
-            "name": "089Bayern Ltd. - Energie-Website Türkei",
-            "description": "4-in-1 Energiesysteme für die Türkei: Wärmepumpen, Kühlung, Photovoltaik und Energiespeicher",
-            "url": "https://www.089bayern.com/",
-            "provider": { "@type": "Organization", "name": "ExtruCon GmbH" },
-            "areaServed": { "@type": "Country", "name": "Türkei" }
-          }
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "48.1788",
+          "longitude": "11.2553"
         },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "item": {
-            "@type": "CreativeWork",
-            "name": "AquaPro24 - Sanitär-Plattform München",
-            "description": "Partnernetzwerk für Sanitär, Heizung und Wasserinstallation in München mit KI-Kostenrechner",
-            "url": "https://aquapro24.de",
-            "provider": { "@type": "Organization", "name": "ExtruCon GmbH" },
-            "areaServed": { "@type": "City", "name": "München" }
-          }
+        "areaServed": [
+          { "@type": "Country", "name": "Deutschland" },
+          { "@type": "Country", "name": "Österreich" },
+          { "@type": "Country", "name": "Schweiz" },
+          { "@type": "State", "name": "Bayern" },
+          { "@type": "City", "name": "München" },
+          { "@type": "City", "name": "Berlin" },
+          { "@type": "City", "name": "Hamburg" },
+          { "@type": "City", "name": "Frankfurt" },
+          { "@type": "City", "name": "Köln" },
+          { "@type": "City", "name": "Düsseldorf" },
+          { "@type": "City", "name": "Stuttgart" },
+          { "@type": "City", "name": "Fürstenfeldbruck" },
+          { "@type": "Country", "name": "Kroatien" },
+          { "@type": "Country", "name": "Türkei" }
+        ],
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
         },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "item": {
-            "@type": "CreativeWork",
-            "name": "089-Sanierer - Sanierungsportal",
-            "description": "Full-Service Sanierung in München mit KI-Beratung und Handwerker-Vermittlung",
-            "url": "https://089-sanierer.de",
-            "provider": { "@type": "Organization", "name": "ExtruCon GmbH" },
-            "areaServed": { "@type": "City", "name": "München" }
-          }
+        "sameAs": [
+          "https://www.linkedin.com/company/extrucon",
+          "https://twitter.com/extrucon"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "50",
+          "bestRating": "5",
+          "worstRating": "1"
         },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "item": {
-            "@type": "CreativeWork",
-            "name": "ExtruCon Funnel - KI-Agenten Lead-System",
-            "description": "Lead-Funnel für KI-Agenten Entwicklung mit Chatbots und Geo-Targeting",
-            "url": "https://funnel.extrucon.de",
-            "provider": { "@type": "Organization", "name": "ExtruCon GmbH" },
-            "areaServed": { "@type": "State", "name": "Bayern" }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "item": {
-            "@type": "CreativeWork",
-            "name": "ExtruCon GmbH - KI-Agentur Website",
-            "description": "Hauptwebsite der KI-Agentur für digitales Marketing und Automatisierung",
-            "url": "https://extrucon.de",
-            "provider": { "@type": "Organization", "name": "ExtruCon GmbH" },
-            "areaServed": { "@type": "Country", "name": "Deutschland" }
-          }
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "KI-Services Deutschland",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "KI-Agenten Entwicklung",
+                "description": "Autonome KI-Agenten für Kundenservice, Lead-Qualifizierung und Prozessautomatisierung"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "KI-Chatbot Entwicklung",
+                "description": "Intelligente Chatbots mit GPT-Integration für 24/7 Kundenberatung"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Marketing Automatisierung",
+                "description": "Lead-Funnels, E-Mail-Automatisierung und CRM-Integration"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Webentwicklung mit KI",
+                "description": "Moderne Webseiten mit integrierten KI-Funktionen und SEO-Optimierung"
+              }
+            }
+          ]
         }
-      ]
-    });
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://extrucon.de"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Referenzen",
+            "item": "https://extrucon.de/referenzen"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "ExtruCon Referenzen und Portfolio",
+        "description": "Erfolgreiche KI-Projekte, Webentwicklung und Automatisierung für Unternehmen deutschlandweit",
+        "numberOfItems": 6,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "089Dach GmbH - KI-Website für Dachdecker",
+              "description": "Meisterbetrieb für Dacharbeiten in München mit 24/7 Notdienst, KI-gestützter Beratung und automatisierter Anfrageverarbeitung",
+              "url": "https://dacharbeiten.089dach.de/",
+              "provider": { "@type": "Organization", "name": "ExtruCon GmbH" },
+              "areaServed": { "@type": "City", "name": "München" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "089Bayern Ltd. - Energie-Website Türkei",
+              "description": "4-in-1 Energiesysteme für die Türkei: Wärmepumpen, Kühlung, Photovoltaik und Energiespeicher",
+              "url": "https://www.089bayern.com/",
+              "provider": { "@type": "Organization", "name": "ExtruCon GmbH" },
+              "areaServed": { "@type": "Country", "name": "Türkei" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "AquaPro24 - Sanitär-Plattform München",
+              "description": "Partnernetzwerk für Sanitär, Heizung und Wasserinstallation in München mit KI-Kostenrechner",
+              "url": "https://aquapro24.de",
+              "provider": { "@type": "Organization", "name": "ExtruCon GmbH" },
+              "areaServed": { "@type": "City", "name": "München" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "089-Sanierer - Sanierungsportal",
+              "description": "Full-Service Sanierung in München mit KI-Beratung und Handwerker-Vermittlung",
+              "url": "https://089-sanierer.de",
+              "provider": { "@type": "Organization", "name": "ExtruCon GmbH" },
+              "areaServed": { "@type": "City", "name": "München" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "ExtruCon Funnel - KI-Agenten Lead-System",
+              "description": "Lead-Funnel für KI-Agenten Entwicklung mit Chatbots und Geo-Targeting",
+              "url": "https://funnel.extrucon.de",
+              "provider": { "@type": "Organization", "name": "ExtruCon GmbH" },
+              "areaServed": { "@type": "State", "name": "Bayern" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "ExtruCon GmbH - KI-Agentur Website",
+              "description": "Hauptwebsite der KI-Agentur für digitales Marketing und Automatisierung",
+              "url": "https://extrucon.de",
+              "provider": { "@type": "Organization", "name": "ExtruCon GmbH" },
+              "areaServed": { "@type": "Country", "name": "Deutschland" }
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://extrucon.de/referenzen#webpage",
+        "url": "https://extrucon.de/referenzen",
+        "name": "KI-Agentur Referenzen & Portfolio | Deutschland | ExtruCon",
+        "description": "50+ erfolgreiche KI-Projekte deutschlandweit. Chatbots, Automatisierung, Webentwicklung mit 98% Kundenzufriedenheit.",
+        "isPartOf": { "@id": "https://extrucon.de/#website" },
+        "about": { "@id": "https://extrucon.de/#organization" },
+        "inLanguage": "de-DE",
+        "datePublished": "2024-01-01",
+        "dateModified": "2024-12-13"
+      }
+    ]);
 
     const existingSchema = document.getElementById('referenzen-schema');
     if (existingSchema) existingSchema.remove();
@@ -109,6 +346,21 @@ export default function Referenzen() {
     return () => {
       const script = document.getElementById('referenzen-schema');
       if (script) script.remove();
+      document.querySelector('meta[name="keywords"]')?.remove();
+      document.querySelector('meta[name="geo.region"]')?.remove();
+      document.querySelector('meta[name="geo.placename"]')?.remove();
+      document.querySelector('meta[name="geo.position"]')?.remove();
+      document.querySelector('meta[name="ICBM"]')?.remove();
+      document.querySelector('meta[name="robots"]')?.remove();
+      document.querySelector('meta[name="author"]')?.remove();
+      document.querySelector('meta[property="og:title"]')?.remove();
+      document.querySelector('meta[property="og:description"]')?.remove();
+      document.querySelector('meta[property="og:type"]')?.remove();
+      document.querySelector('meta[property="og:locale"]')?.remove();
+      document.querySelector('meta[property="og:site_name"]')?.remove();
+      document.querySelector('meta[name="twitter:card"]')?.remove();
+      document.querySelector('meta[name="twitter:title"]')?.remove();
+      document.querySelector('meta[name="twitter:description"]')?.remove();
     };
   }, []);
 
