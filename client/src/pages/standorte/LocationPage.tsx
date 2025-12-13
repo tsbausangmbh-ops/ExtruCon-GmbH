@@ -7,6 +7,7 @@ import { Link } from "wouter";
 import { MapPin, Phone, Mail, Clock, ArrowRight, Bot, Zap, Globe, TrendingUp } from "lucide-react";
 import { buildLocalBusinessSchema, buildServiceSchema, COMPANY_INFO, type BreadcrumbItem } from "@/lib/schema";
 import { motion } from "framer-motion";
+import { useLanguage, type Language } from "@/lib/i18n";
 
 export interface LocationData {
   slug: string;
@@ -15,78 +16,67 @@ export interface LocationData {
   country: string;
   latitude: number;
   longitude: number;
-  headline: string;
-  description: string;
-  seoTitle: string;
-  seoDescription: string;
-  seoKeywords: string;
   nearbyAreas: string[];
-  localContent: {
-    intro: string;
-    whyUs: string[];
-    industries: string[];
-  };
 }
 
 interface LocationPageProps {
   location: LocationData;
 }
 
-const services = [
-  {
-    icon: Bot,
-    title: "KI-Agenten",
-    description: "Intelligente Chatbots und virtuelle Assistenten für Kundenservice und Lead-Generierung.",
-    link: "/ki-agenten"
-  },
-  {
-    icon: Zap,
-    title: "Automatisierung",
-    description: "Workflow-Automatisierung mit n8n für effizientere Geschäftsprozesse.",
-    link: "/automatisierungen"
-  },
-  {
-    icon: Globe,
-    title: "Webseiten mit KI",
-    description: "Moderne Websites mit integrierten KI-Features und Chatbots.",
-    link: "/webseiten-ki"
-  },
-  {
-    icon: TrendingUp,
-    title: "Performance Marketing",
-    description: "Google Ads, Meta Ads und SEO für maximale Sichtbarkeit.",
-    link: "/leistungen/marketing"
-  }
-];
+type LocationKey = 'muenchen' | 'fuerstenfeldbruck' | 'bayern';
+
+function getLocalizedLocation(slug: string, t: any) {
+  const locationKey = slug as LocationKey;
+  const locationData = t.locations[locationKey];
+  const common = t.locations.common;
+  
+  return {
+    name: locationData?.name || slug,
+    region: locationData?.region || 'Bayern',
+    headline: locationData?.headline || '',
+    intro: locationData?.intro || '',
+    whyUs: locationData?.whyUs || [],
+    industries: locationData?.industries || [],
+    common
+  };
+}
+
+const serviceIcons = [Bot, Zap, Globe, TrendingUp];
+const serviceLinks = ["/ki-agenten", "/automatisierungen", "/webseiten-ki", "/leistungen/marketing"];
+const serviceKeys = ['kiAgents', 'automation', 'websites', 'marketing'] as const;
 
 export function LocationPage({ location }: LocationPageProps) {
+  const { t, language } = useLanguage();
+  const localized = getLocalizedLocation(location.slug, t);
+  const common = localized.common;
+
   const breadcrumb: BreadcrumbItem[] = [
-    { name: "Home", url: "https://extrucon.de/" },
-    { name: "Standorte", url: "https://extrucon.de/standorte" },
-    { name: location.name, url: `https://extrucon.de/standorte/${location.slug}` }
+    { name: common.breadcrumbHome, url: "https://extrucon.de/" },
+    { name: common.breadcrumbLocations, url: "https://extrucon.de/standorte" },
+    { name: localized.name, url: `https://extrucon.de/standorte/${location.slug}` }
   ];
 
   const localBusinessSchema = buildLocalBusinessSchema({
     locationKey: location.slug as keyof typeof import("@/lib/schema").LOCATIONS,
-    name: `ExtruCon GmbH - KI-Agentur ${location.name}`,
-    description: location.seoDescription,
+    name: `ExtruCon GmbH - ${common.kiAgency} ${localized.name}`,
+    description: localized.headline,
     url: `https://extrucon.de/standorte/${location.slug}`
   });
 
   const serviceSchema = buildServiceSchema({
-    name: `KI-Agentur ${location.name}`,
-    description: location.seoDescription,
+    name: `${common.kiAgency} ${localized.name}`,
+    description: localized.headline,
     url: `https://extrucon.de/standorte/${location.slug}`,
-    areaServed: [location.name, location.region, "Deutschland"]
+    areaServed: [localized.name, localized.region, common.region]
   });
 
   return (
     <div className="min-h-screen bg-black text-white">
       <SEOHead
-        title={location.seoTitle}
-        description={location.seoDescription}
+        title={`${common.kiAgency} ${localized.name} | ExtruCon GmbH`}
+        description={localized.headline}
         canonical={`https://extrucon.de/standorte/${location.slug}`}
-        keywords={location.seoKeywords}
+        keywords={`${common.seoKeywords} ${localized.name}`}
         type="website"
         breadcrumb={breadcrumb}
         structuredData={[localBusinessSchema, serviceSchema]}
@@ -105,29 +95,29 @@ export function LocationPage({ location }: LocationPageProps) {
             >
               <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full px-4 py-2 mb-6">
                 <MapPin className="w-4 h-4 text-cyan-400" />
-                <span className="text-cyan-400 text-sm font-medium">{location.region}, Deutschland</span>
+                <span className="text-cyan-400 text-sm font-medium">{localized.region}, {common.region}</span>
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-testid="text-headline">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-                  KI-Agentur {location.name}
+                  {common.kiAgency} {localized.name}
                 </span>
               </h1>
               
               <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" data-testid="text-description">
-                {location.headline}
+                {localized.headline}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/kontakt">
                   <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600" data-testid="button-contact">
-                    Kostenlose Beratung
+                    {common.freeConsultation}
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
                 <Link href="/terminbuchung">
                   <Button size="lg" variant="outline" className="border-white/20 hover:bg-white/10" data-testid="button-booking">
-                    Termin buchen
+                    {common.bookAppointment}
                   </Button>
                 </Link>
               </div>
@@ -144,13 +134,13 @@ export function LocationPage({ location }: LocationPageProps) {
                 viewport={{ once: true }}
               >
                 <h2 className="text-3xl font-bold mb-6">
-                  Ihr Partner für KI & Automatisierung in {location.name}
+                  {common.partnerTitle} {localized.name}
                 </h2>
                 <p className="text-white/70 mb-6 leading-relaxed">
-                  {location.localContent.intro}
+                  {localized.intro}
                 </p>
                 <ul className="space-y-3">
-                  {location.localContent.whyUs.map((point, index) => (
+                  {localized.whyUs.map((point: string, index: number) => (
                     <li key={index} className="flex items-start gap-3">
                       <div className="w-6 h-6 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-cyan-400 text-sm">✓</span>
@@ -170,7 +160,7 @@ export function LocationPage({ location }: LocationPageProps) {
                   <CardHeader>
                     <CardTitle className="text-white flex items-center gap-2">
                       <MapPin className="w-5 h-5 text-cyan-400" />
-                      Kontakt in {location.name}
+                      {common.contactIn} {localized.name}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
@@ -188,7 +178,7 @@ export function LocationPage({ location }: LocationPageProps) {
                     </div>
                     <div className="flex items-center gap-3">
                       <Clock className="w-5 h-5 text-cyan-400" />
-                      <span className="text-white/80">Mo-Fr: 08:00 - 18:00 Uhr</span>
+                      <span className="text-white/80">{common.hoursValue}</span>
                     </div>
                     <div className="pt-4 border-t border-white/10">
                       <a 
@@ -199,7 +189,7 @@ export function LocationPage({ location }: LocationPageProps) {
                         data-testid="link-maps"
                       >
                         <MapPin className="w-4 h-4" />
-                        Auf Google Maps anzeigen
+                        {common.showOnMaps}
                         <ArrowRight className="w-4 h-4" />
                       </a>
                     </div>
@@ -219,33 +209,37 @@ export function LocationPage({ location }: LocationPageProps) {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4">
-                Unsere Leistungen in {location.name}
+                {common.servicesTitle} {localized.name}
               </h2>
               <p className="text-white/70 max-w-2xl mx-auto">
-                Wir unterstützen Unternehmen in {location.name} und {location.region} mit innovativen KI-Lösungen.
+                {common.servicesSubtitle} {localized.name} {common.servicesSubtitleEnd}
               </p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {services.map((service, index) => (
-                <motion.div
-                  key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <Link href={service.link}>
-                    <Card className="bg-black/50 border-white/10 hover:border-cyan-500/50 transition-all duration-300 h-full cursor-pointer group" data-testid={`card-service-${index}`}>
-                      <CardContent className="pt-6">
-                        <service.icon className="w-10 h-10 text-cyan-400 mb-4 group-hover:scale-110 transition-transform" />
-                        <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
-                        <p className="text-white/60 text-sm">{service.description}</p>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                </motion.div>
-              ))}
+              {serviceKeys.map((key, index) => {
+                const Icon = serviceIcons[index];
+                const service = common.services[key];
+                return (
+                  <motion.div
+                    key={key}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    <Link href={serviceLinks[index]}>
+                      <Card className="bg-black/50 border-white/10 hover:border-cyan-500/50 transition-all duration-300 h-full cursor-pointer group" data-testid={`card-service-${index}`}>
+                        <CardContent className="pt-6">
+                          <Icon className="w-10 h-10 text-cyan-400 mb-4 group-hover:scale-110 transition-transform" />
+                          <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
+                          <p className="text-white/60 text-sm">{service.desc}</p>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -259,15 +253,15 @@ export function LocationPage({ location }: LocationPageProps) {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4">
-                Branchen in {location.name}
+                {common.industriesTitle} {localized.name}
               </h2>
               <p className="text-white/70 max-w-2xl mx-auto">
-                Wir haben Erfahrung mit verschiedenen Branchen in der Region.
+                {common.industriesSubtitle}
               </p>
             </motion.div>
 
             <div className="flex flex-wrap justify-center gap-3">
-              {location.localContent.industries.map((industry, index) => (
+              {localized.industries.map((industry: string, index: number) => (
                 <span
                   key={index}
                   className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-white/70 text-sm"
@@ -288,7 +282,7 @@ export function LocationPage({ location }: LocationPageProps) {
               className="text-center mb-8"
             >
               <h2 className="text-2xl font-bold mb-4">
-                Wir betreuen auch Unternehmen in der Umgebung
+                {common.nearbyTitle}
               </h2>
             </motion.div>
 
@@ -314,21 +308,21 @@ export function LocationPage({ location }: LocationPageProps) {
               className="max-w-3xl mx-auto text-center"
             >
               <h2 className="text-3xl font-bold mb-6">
-                Bereit für die digitale Zukunft in {location.name}?
+                {common.ctaTitle} {localized.name}?
               </h2>
               <p className="text-white/70 mb-8">
-                Lassen Sie uns gemeinsam herausfinden, wie KI und Automatisierung Ihr Unternehmen voranbringen können.
+                {common.ctaSubtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/kontakt">
                   <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600" data-testid="button-cta-contact">
-                    Jetzt Kontakt aufnehmen
+                    {common.ctaContact}
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
                 <Link href="/terminbuchung">
                   <Button size="lg" variant="outline" className="border-white/20 hover:bg-white/10" data-testid="button-cta-booking">
-                    Kostenloses Erstgespräch
+                    {common.ctaBooking}
                   </Button>
                 </Link>
               </div>
