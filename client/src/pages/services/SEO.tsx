@@ -34,7 +34,7 @@ export default function SEO() {
           { label: t.nav.seo }
         ]} />
         
-        <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-8 pb-8">
+        <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-4 pb-4">
           <div className="absolute inset-0 z-0">
             <img src={seoImg} alt="SEO & Geo-Optimierung" className="w-full h-full object-cover opacity-60" />
             <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
@@ -87,9 +87,9 @@ export default function SEO() {
           <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-background to-transparent z-20" />
         </section>
 
-        <section id="services" className="py-16 bg-card/20">
+        <section id="services" className="py-10 bg-card/20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold font-display text-white mb-12 text-center">{t.seoPage.servicesTitle}</h2>
+            <h2 className="text-3xl font-bold font-display text-white mb-8 text-center">{t.seoPage.servicesTitle}</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {t.seoPage.services.map((item, i) => {
                 const Icon = features[i]?.icon;
@@ -112,10 +112,10 @@ export default function SEO() {
           </div>
         </section>
 
-        <section className="py-16">
+        <section className="py-10">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold font-display text-white mb-8">{t.seoPage.benefitsTitle}</h2>
+              <h2 className="text-3xl font-bold font-display text-white mb-6">{t.seoPage.benefitsTitle}</h2>
               <div className="space-y-4 text-left">
                 {t.seoPage.benefits.map((item, i) => (
                   <div key={i} className="flex items-center gap-3 p-4 rounded-lg bg-card/30">
@@ -128,9 +128,9 @@ export default function SEO() {
           </div>
         </section>
 
-        <section className="py-16 bg-card/20">
+        <section className="py-10 bg-card/20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold font-display text-white mb-12 text-center">{t.seoPage.processTitle}</h2>
+            <h2 className="text-3xl font-bold font-display text-white mb-8 text-center">{t.seoPage.processTitle}</h2>
             <div className="grid md:grid-cols-4 gap-6">
               {t.seoPage.process.map((step, i) => (
                 <motion.div
@@ -152,7 +152,7 @@ export default function SEO() {
           </div>
         </section>
 
-        <section className="py-16 bg-gradient-to-r from-primary/20 to-orange-900/20">
+        <section className="py-10 bg-gradient-to-r from-primary/20 to-orange-900/20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold font-display text-white mb-4">{t.seoPage.ctaTitle}</h2>
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
