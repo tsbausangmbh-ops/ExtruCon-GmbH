@@ -12,7 +12,6 @@ export function Navbar() {
   const { t } = useLanguage();
 
   const services = [
-    { name: t.nav.websitesKI, href: "/webseiten-ki", icon: Globe },
     { name: t.nav.kiAgents, href: "/ki-agenten", icon: Bot },
     { name: t.nav.automation, href: "/automatisierungen", icon: Share2 },
     { name: t.nav.socialMedia, href: "/leistungen/social-media", icon: TrendingUp },
@@ -29,6 +28,9 @@ export function Navbar() {
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
+          <a href="/webseiten-ki" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
+            {t.nav.websitesKI}
+          </a>
           <div 
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
@@ -94,6 +96,13 @@ export function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-background border-b border-white/10 p-4 absolute w-full">
           <div className="flex flex-col gap-2">
+            <a
+              href="/webseiten-ki"
+              className="text-lg font-medium text-gray-300 hover:text-primary transition-colors py-2 border-b border-white/10 pb-3 mb-1"
+              onClick={() => setIsOpen(false)}
+            >
+              {t.nav.websitesKI}
+            </a>
             <div className="border-b border-white/10 pb-2 mb-2">
               <p className="text-xs text-gray-500 uppercase tracking-wider mb-2">{t.nav.services}</p>
               {services.map((service) => (
