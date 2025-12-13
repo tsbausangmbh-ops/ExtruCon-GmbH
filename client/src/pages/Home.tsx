@@ -9,6 +9,7 @@ import { About } from "@/components/sections/About";
 import { Contact } from "@/components/sections/Contact";
 import { SEOHead } from "@/components/SEOHead";
 import { KIWebseitenHighlight } from "@/components/sections/KIWebseitenHighlight";
+import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 function Home() {
   return (
@@ -16,7 +17,7 @@ function Home() {
       <SEOHead
         title="KI-Agentur München | Chatbots & Automatisierung ab 2.500€ | ExtruCon"
         description="KI-Agenten & Chatbots für Ihr Unternehmen. 80% Zeitersparnis durch Automatisierung. ✓ Kostenlose Erstberatung ✓ Made in Germany"
-        keywords="KI Agentur München, KI-Agenten entwickeln, Chatbot Entwicklung, Automatisierung Unternehmen, künstliche Intelligenz Bayern"
+        keywords={PAGE_KEYWORDS.home}
         canonical="https://extrucon.de"
       />
       <Navbar />

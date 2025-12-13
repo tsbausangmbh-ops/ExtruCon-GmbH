@@ -7,6 +7,7 @@ import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Bot, Zap, MessageSquare, BarChart3, Clock, Shield, Sparkles, ArrowRight, CheckCircle, Brain, Workflow, Users, Mail, Calendar, FileText, ShoppingCart, Headphones, TrendingUp, Settings, Database, Globe, Cpu, Lock, RefreshCw, HelpCircle, ChevronDown } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
+import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 const agentIcons = [MessageSquare, BarChart3, Workflow, Brain, Mail, Calendar, ShoppingCart, FileText];
 const agentColors = [
@@ -32,7 +33,7 @@ function KIAgenten() {
       <SEOHead 
         title="KI-Agenten entwickeln lassen | 24/7 Kundenservice automatisieren | ExtruCon"
         description="Intelligente KI-Agenten für Kundenservice & Lead-Generierung. ✓ 24/7 verfügbar ✓ Mehrsprachig ✓ Selbstlernend. Ab 2.500€ - Jetzt anfragen!"
-        keywords="KI-Agenten entwickeln, Chatbot Kundenservice, Lead-Generierung automatisieren, KI München, intelligente Assistenten"
+        keywords={PAGE_KEYWORDS.kiAgenten}
       />
       <Navbar />
       <main className="pt-24">

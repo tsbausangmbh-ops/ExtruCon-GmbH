@@ -3,6 +3,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
+import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 function Terms() {
   const { t, language } = useLanguage();
@@ -12,7 +13,7 @@ function Terms() {
       <SEOHead
         title="AGB | Allgemeine Geschäftsbedingungen | ExtruCon GmbH München"
         description="Allgemeine Geschäftsbedingungen der ExtruCon GmbH – KI-Agentur in München für KI, Marketing, Social Media und Webentwicklung."
-        keywords="AGB, Geschäftsbedingungen, ExtruCon"
+        keywords={PAGE_KEYWORDS.agb}
         canonical="https://extrucon.de/agb"
       />
       <Navbar />

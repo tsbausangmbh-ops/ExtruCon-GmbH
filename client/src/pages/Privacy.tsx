@@ -3,6 +3,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
+import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 function Privacy() {
   const { t, language } = useLanguage();
@@ -12,7 +13,7 @@ function Privacy() {
       <SEOHead
         title="Datenschutzerklärung | ExtruCon GmbH München"
         description="Datenschutzerklärung der ExtruCon GmbH – KI-Agentur in München gemäß DSGVO. Informationen zur Verarbeitung personenbezogener Daten."
-        keywords="Datenschutz, DSGVO, ExtruCon, Datenschutzerklärung"
+        keywords={PAGE_KEYWORDS.datenschutz}
         canonical="https://extrucon.de/datenschutz"
       />
       <Navbar />

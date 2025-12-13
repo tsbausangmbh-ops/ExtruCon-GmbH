@@ -10,6 +10,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
+import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 function Web() {
   const { t } = useLanguage();
@@ -21,7 +22,7 @@ function Web() {
       <SEOHead
         title="Webentwicklung München | Websites mit KI-Chatbot | ExtruCon"
         description="Professionelle Websites ab 3.000€. ✓ React & Next.js ✓ WordPress & Shopify ✓ KI-Chatbot inklusive. Jetzt Angebot anfordern!"
-        keywords="Webentwicklung München, Website erstellen lassen, React Entwicklung, Webdesign Agentur"
+        keywords={PAGE_KEYWORDS.servicesWeb}
         canonical="https://extrucon.de/leistungen/webentwicklung"
       />
       <Navbar />

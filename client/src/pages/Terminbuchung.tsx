@@ -9,6 +9,7 @@ import { Calendar, Clock, CheckCircle, Loader2, ChevronLeft, ChevronRight } from
 import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
+import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 const SERVICES = [
   { value: "ki-agenten", labelKey: "optionKI" },
@@ -154,7 +155,7 @@ function Terminbuchung() {
       <SEOHead
         title="Termin buchen | Kostenlose KI-Beratung in 48h | ExtruCon"
         description="Kostenlosen Beratungstermin online buchen. ✓ Innerhalb 48h ✓ 30 Min. Erstgespräch ✓ Unverbindlich. Jetzt Wunschtermin sichern!"
-        keywords="KI Beratung Termin, kostenlose Erstberatung, Automatisierung Beratung, Online Terminbuchung"
+        keywords={PAGE_KEYWORDS.terminbuchung}
         canonical="https://extrucon.de/terminbuchung"
       />
       <Navbar />

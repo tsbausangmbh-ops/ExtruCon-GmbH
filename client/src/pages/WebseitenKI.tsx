@@ -7,6 +7,7 @@ import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Globe, Sparkles, ArrowRight, CheckCircle, Zap, Shield, TrendingUp, MessageSquare, Bot, Search, FileText, Image, Code, Palette, Smartphone, BarChart3, RefreshCw, ChevronDown, HelpCircle, Clock, Users } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
+import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 const featureIcons = [Bot, FileText, Image, Search, Users, BarChart3];
 
@@ -19,7 +20,7 @@ function WebseitenKI() {
       <SEOHead 
         title="Website mit KI-Chatbot | Automatische Lead-Generierung | ExtruCon"
         description="Webseiten mit integriertem KI-Chatbot. ✓ 24/7 Kundenbetreuung ✓ Automatische Leads ✓ Für Handwerker, Ärzte & KMU. Jetzt Angebot einholen!"
-        keywords="Website mit Chatbot, KI Webseite erstellen, Lead-Generierung Website, Webdesign München, Chatbot Integration"
+        keywords={PAGE_KEYWORDS.webseitenKI}
       />
       <Navbar />
       <main className="pt-24">

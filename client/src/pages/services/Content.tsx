@@ -10,6 +10,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
+import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 function Content() {
   const { t } = useLanguage();
@@ -19,7 +20,7 @@ function Content() {
       <SEOHead
         title="Content-Erstellung mit KI | Texte, Videos & Grafiken | ExtruCon"
         description="Hochwertiger Content in Rekordzeit. ✓ KI-gestützt ✓ SEO-optimiert ✓ Für alle Kanäle. Schneller, günstiger, besser!"
-        keywords="Content Erstellung KI, SEO Texte, Video Content, Social Media Grafiken"
+        keywords={PAGE_KEYWORDS.servicesContent}
         canonical="https://extrucon.de/leistungen/content"
       />
       <Navbar />

@@ -10,6 +10,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
+import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 function Marketing() {
   const { t } = useLanguage();
@@ -21,7 +22,7 @@ function Marketing() {
       <SEOHead
         title="Performance Marketing | Google Ads & SEO Agentur München | ExtruCon"
         description="Messbare Ergebnisse mit Google Ads & SEO. ✓ ROAS-Optimierung ✓ A/B Testing ✓ Monatliche Reports. Kostenlose Ads-Analyse!"
-        keywords="Performance Marketing München, Google Ads Agentur, SEO Agentur, Meta Ads Optimierung"
+        keywords={PAGE_KEYWORDS.servicesMarketing}
         canonical="https://extrucon.de/leistungen/marketing"
       />
       <Navbar />

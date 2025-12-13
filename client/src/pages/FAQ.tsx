@@ -9,6 +9,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection } from "@/components/InternalLinks";
+import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 const categoryIcons = {
   allgemein: { icon: HelpCircle, color: "text-primary" },
@@ -61,7 +62,7 @@ function FAQ() {
       <SEOHead
         title="FAQ | Häufige Fragen zu KI & Automatisierung | ExtruCon"
         description="Antworten auf alle Fragen: Was kostet ein KI-Agent? Wie lange dauert die Entwicklung? ✓ Preise ✓ Ablauf ✓ Technologie"
-        keywords="KI FAQ, Automatisierung Kosten, KI-Agent Preis, Chatbot Entwicklung Dauer"
+        keywords={PAGE_KEYWORDS.faq}
         canonical="https://extrucon.de/faq"
       />
       <Navbar />

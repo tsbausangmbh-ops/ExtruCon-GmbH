@@ -7,6 +7,7 @@ import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Workflow, Zap, ArrowRight, CheckCircle, Clock, TrendingUp, Shield, RefreshCw, Mail, FileText, Users, ShoppingCart, Calendar, Database, Settings, Cpu, Link2, GitBranch, Layers, Play, ChevronDown, HelpCircle } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
+import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 const automationIcons = [Mail, Users, FileText, ShoppingCart, Calendar, Database, TrendingUp, Settings];
 const benefitIcons = [Clock, Shield, TrendingUp, Zap];
@@ -20,7 +21,7 @@ function Automatisierungen() {
       <SEOHead 
         title="Workflow-Automatisierung | 80% Zeitersparnis mit n8n | ExtruCon München"
         description="Automatisieren Sie E-Mail, CRM & Rechnungen. ✓ Bis zu 80% Zeitersparnis ✓ n8n Experten ✓ Kostenlose Analyse. Jetzt Prozesse optimieren!"
-        keywords="Workflow Automatisierung, n8n Agentur, Prozessautomatisierung München, Business Automation, Zapier Alternative"
+        keywords={PAGE_KEYWORDS.automatisierungen}
       />
       <Navbar />
       <main className="pt-24">

@@ -5,6 +5,7 @@ import { useLanguage } from "@/lib/i18n";
 import { Cookie, Shield, BarChart3, Megaphone, Settings, Scale, UserCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SEOHead } from "@/components/SEOHead";
+import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 type CookiePreferences = {
   necessary: boolean;
@@ -38,7 +39,7 @@ function Cookies() {
       <SEOHead
         title="Cookie-Richtlinie | ExtruCon GmbH München"
         description="Cookie-Richtlinie der ExtruCon GmbH – KI-Agentur in München. Cookie-Einstellungen verwalten und Datenschutz."
-        keywords="Cookies, Cookie-Richtlinie, Datenschutz, ExtruCon"
+        keywords={PAGE_KEYWORDS.cookies}
         canonical="https://extrucon.de/cookies"
       />
       <Navbar />

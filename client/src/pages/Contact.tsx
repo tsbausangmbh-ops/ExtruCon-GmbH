@@ -10,6 +10,7 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
+import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 function Contact() {
   const { t, language } = useLanguage();
@@ -57,7 +58,7 @@ function Contact() {
       <SEOHead
         title="Kontakt ExtruCon | Kostenlose KI-Beratung ☎ 089 444438879"
         description="Kostenlose Erstberatung für KI & Automatisierung. ✓ Schnelle Antwort ✓ Unverbindlich ✓ Vor Ort oder Online. Rufen Sie an: 089 444438879"
-        keywords="ExtruCon Kontakt, KI Beratung München, kostenlose Erstberatung, Automatisierung Anfrage"
+        keywords={PAGE_KEYWORDS.kontakt}
         canonical="https://extrucon.de/kontakt"
       />
       <Navbar />

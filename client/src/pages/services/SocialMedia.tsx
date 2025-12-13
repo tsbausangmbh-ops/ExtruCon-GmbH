@@ -10,6 +10,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
+import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 function SocialMedia() {
   const { t } = useLanguage();
@@ -21,7 +22,7 @@ function SocialMedia() {
       <SEOHead
         title="Social Media Marketing München | Instagram & TikTok Agentur | ExtruCon"
         description="Mehr Reichweite auf Instagram, TikTok & LinkedIn. ✓ Content-Erstellung ✓ Community Management ✓ Ads. Ab 500€/Monat!"
-        keywords="Social Media Marketing München, Instagram Agentur, TikTok Marketing, LinkedIn Marketing"
+        keywords={PAGE_KEYWORDS.servicesSocialMedia}
         canonical="https://extrucon.de/leistungen/social-media"
       />
       <Navbar />

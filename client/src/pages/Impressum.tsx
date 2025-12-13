@@ -3,6 +3,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
+import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 function Impressum() {
   const { t, language } = useLanguage();
@@ -12,7 +13,7 @@ function Impressum() {
       <SEOHead
         title="Impressum | ExtruCon GmbH München"
         description="Impressum der ExtruCon GmbH – Ihre KI-Agentur in München. Angaben gemäß § 5 DDG."
-        keywords="Impressum, ExtruCon GmbH, Fürstenfeldbruck"
+        keywords={PAGE_KEYWORDS.impressum}
         canonical="https://extrucon.de/impressum"
       />
       <Navbar />

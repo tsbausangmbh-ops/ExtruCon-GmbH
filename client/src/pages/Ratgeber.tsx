@@ -9,6 +9,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection } from "@/components/InternalLinks";
+import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 const articleMetadata: { id: number; category: string; featured: boolean }[] = [
   { id: 1, category: "ki", featured: true },
@@ -115,7 +116,7 @@ function Ratgeber() {
       <SEOHead
         title="KI-Ratgeber | Wissen zu Automatisierung & Chatbots | ExtruCon"
         description="Kostenloses Expertenwissen: KI-Trends, Automatisierungs-Tipps & Best Practices. ✓ Praxisnah ✓ Aktuell ✓ Von Experten"
-        keywords="KI Ratgeber, Automatisierung lernen, Chatbot Wissen, KI für Unternehmen"
+        keywords={PAGE_KEYWORDS.ratgeber}
         canonical="https://extrucon.de/ratgeber"
       />
       <Navbar />
