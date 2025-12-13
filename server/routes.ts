@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import OpenAI from "openai";
+import nodemailer from "nodemailer";
 
 // the newest OpenAI model is "gpt-5" which was released August 7, 2025. do not change this unless explicitly requested by the user
 // This is using Replit's AI Integrations service, which provides OpenAI-compatible API access without requiring your own OpenAI API key.
@@ -163,6 +164,127 @@ Am Ende freundlich anbieten: „Wenn Sie möchten, fasse ich Ihnen alles kurz zu
     } catch (error: any) {
       console.error("Chat API error:", error);
       res.status(500).json({ error: "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut." });
+    }
+  });
+
+  // Contact form API endpoint with email notifications
+  app.post("/api/contact", async (req, res) => {
+    try {
+      const { name, company, email, phone, service, message, language = 'de' } = req.body;
+      
+      if (!name || !email || !message) {
+        return res.status(400).json({ error: "Name, Email und Nachricht sind erforderlich" });
+      }
+
+      // Check if SMTP is configured
+      if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASSWORD) {
+        console.log("SMTP not configured - contact form submission:", { name, email, service });
+        return res.json({ success: true, message: "Anfrage erhalten (E-Mail-Versand nicht konfiguriert)" });
+      }
+
+      const transporter = nodemailer.createTransport({
+        host: process.env.SMTP_HOST,
+        port: parseInt(process.env.SMTP_PORT || '587'),
+        secure: process.env.SMTP_PORT === '465',
+        auth: {
+          user: process.env.SMTP_USER,
+          pass: process.env.SMTP_PASSWORD,
+        },
+      });
+
+      const fromEmail = process.env.SMTP_FROM_EMAIL || 'info@extrucon.de';
+      const serviceLabels: Record<string, string> = {
+        ki: 'KI-Agenten',
+        social: 'Social Media',
+        web: 'Webentwicklung',
+        marketing: 'Performance Marketing',
+        content: 'Content Creation',
+        brand: 'Branding',
+        other: 'Sonstiges'
+      };
+
+      // 1. Notification email to ExtruCon
+      await transporter.sendMail({
+        from: fromEmail,
+        to: 'info@extrucon.de',
+        replyTo: email,
+        subject: `Neue Kontaktanfrage: ${name} - ${serviceLabels[service] || 'Allgemein'}`,
+        html: `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+            <h2 style="color: #00d4ff;">Neue Kontaktanfrage</h2>
+            <table style="width: 100%; border-collapse: collapse;">
+              <tr><td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Name:</strong></td><td style="padding: 8px; border-bottom: 1px solid #eee;">${name}</td></tr>
+              <tr><td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Firma:</strong></td><td style="padding: 8px; border-bottom: 1px solid #eee;">${company || '-'}</td></tr>
+              <tr><td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>E-Mail:</strong></td><td style="padding: 8px; border-bottom: 1px solid #eee;"><a href="mailto:${email}">${email}</a></td></tr>
+              <tr><td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Telefon:</strong></td><td style="padding: 8px; border-bottom: 1px solid #eee;">${phone || '-'}</td></tr>
+              <tr><td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Interesse:</strong></td><td style="padding: 8px; border-bottom: 1px solid #eee;">${serviceLabels[service] || '-'}</td></tr>
+            </table>
+            <h3 style="margin-top: 20px;">Nachricht:</h3>
+            <p style="background: #f5f5f5; padding: 15px; border-radius: 8px;">${message.replace(/\n/g, '<br>')}</p>
+          </div>
+        `
+      });
+
+      // 2. Confirmation email to customer
+      const confirmationTemplates: Record<string, { subject: string; greeting: string; body: string; closing: string }> = {
+        de: {
+          subject: 'Ihre Anfrage bei ExtruCon GmbH - Bestätigung',
+          greeting: `Guten Tag ${name},`,
+          body: `vielen Dank für Ihre Kontaktanfrage! Wir haben Ihre Nachricht erhalten und werden uns schnellstmöglich bei Ihnen melden – in der Regel innerhalb von 24 Stunden an Werktagen.`,
+          closing: 'Mit freundlichen Grüßen,\nIhr ExtruCon Team'
+        },
+        en: {
+          subject: 'Your inquiry at ExtruCon GmbH - Confirmation',
+          greeting: `Hello ${name},`,
+          body: `Thank you for your contact request! We have received your message and will get back to you as soon as possible – usually within 24 hours on business days.`,
+          closing: 'Best regards,\nYour ExtruCon Team'
+        },
+        hr: {
+          subject: 'Vaš upit kod ExtruCon GmbH - Potvrda',
+          greeting: `Poštovani ${name},`,
+          body: `Hvala vam na vašem upitu! Primili smo vašu poruku i javit ćemo vam se što je prije moguće – obično unutar 24 sata radnim danom.`,
+          closing: 'S poštovanjem,\nVaš ExtruCon tim'
+        },
+        tr: {
+          subject: 'ExtruCon GmbH\'deki talebiniz - Onay',
+          greeting: `Sayın ${name},`,
+          body: `İletişim talebiniz için teşekkür ederiz! Mesajınızı aldık ve en kısa sürede size geri döneceğiz – genellikle iş günlerinde 24 saat içinde.`,
+          closing: 'Saygılarımızla,\nExtruCon Ekibiniz'
+        }
+      };
+
+      const template = confirmationTemplates[language] || confirmationTemplates.de;
+
+      await transporter.sendMail({
+        from: fromEmail,
+        to: email,
+        subject: template.subject,
+        html: `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+              <img src="https://extrucon.de/logo.png" alt="ExtruCon GmbH" style="max-width: 200px; height: auto;">
+            </div>
+            <p style="font-size: 16px;">${template.greeting}</p>
+            <p style="font-size: 16px; line-height: 1.6;">${template.body}</p>
+            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+              <p style="margin: 0; font-size: 14px; color: #666;"><strong>Ihre Nachricht:</strong></p>
+              <p style="margin: 10px 0 0; font-size: 14px;">${message.replace(/\n/g, '<br>')}</p>
+            </div>
+            <p style="font-size: 16px; white-space: pre-line;">${template.closing}</p>
+            <hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;">
+            <p style="font-size: 12px; color: #999; text-align: center;">
+              ExtruCon GmbH · Hasenheide 8 · 82256 Fürstenfeldbruck<br>
+              <a href="mailto:info@extrucon.de" style="color: #00d4ff;">info@extrucon.de</a> · 
+              <a href="tel:+4989444438879" style="color: #00d4ff;">089 444438879</a>
+            </p>
+          </div>
+        `
+      });
+
+      res.json({ success: true });
+    } catch (error: any) {
+      console.error("Contact form error:", error);
+      res.status(500).json({ error: "Fehler beim Senden. Bitte versuchen Sie es später erneut." });
     }
   });
 
