@@ -408,6 +408,18 @@ export default function Termin() {
                 onChangeMonth={handleChangeMonth}
               />
               
+              {/* Opening Hours */}
+              <div className="p-4 bg-slate-800/30 rounded-xl border border-slate-700">
+                <h4 className="text-white font-medium mb-2 flex items-center gap-2">
+                  <Clock className="w-4 h-4 text-cyan-400" />
+                  Öffnungszeiten
+                </h4>
+                <div className="text-sm text-slate-400 space-y-1">
+                  <p>Montag - Freitag: <span className="text-white">08:00 - 17:00 Uhr</span></p>
+                  <p>Samstag & Sonntag: <span className="text-red-400">Geschlossen</span></p>
+                </div>
+              </div>
+              
               {selectedDate && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -555,15 +567,6 @@ export default function Termin() {
                     * Pflichtfelder. Ihre Daten werden gemäß unserer Datenschutzerklärung verarbeitet.
                   </p>
                 </form>
-              </div>
-              
-              {/* Business Hours Info */}
-              <div className="mt-6 p-4 bg-slate-800/30 rounded-lg border border-slate-700">
-                <h4 className="text-white font-medium mb-2">Öffnungszeiten</h4>
-                <div className="text-sm text-slate-400 space-y-1">
-                  <p>Montag - Freitag: <span className="text-white">08:00 - 17:00 Uhr</span></p>
-                  <p>Samstag & Sonntag: <span className="text-red-400">Geschlossen</span></p>
-                </div>
               </div>
             </motion.div>
           </div>
