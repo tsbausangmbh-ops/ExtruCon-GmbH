@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
-import { Star, Building2, Users, TrendingUp, Quote, ExternalLink, MapPin, CheckCircle } from "lucide-react";
+import { Quote, ExternalLink, MapPin } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 import { useEffect } from "react";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 
 export default function Referenzen() {
   const { t } = useLanguage();
@@ -236,8 +238,11 @@ export default function Referenzen() {
   ];
 
   return (
-    <article className="min-h-screen bg-background pt-32 pb-20" itemScope itemType="https://schema.org/CollectionPage">
-      <div className="container mx-auto px-4">
+    <div className="min-h-screen bg-background text-foreground font-sans">
+      <Navbar />
+      <main>
+        <article className="pt-32 pb-20" itemScope itemType="https://schema.org/CollectionPage">
+          <div className="container mx-auto px-4">
         
         <header className="text-center mb-16">
           <motion.div
@@ -439,6 +444,9 @@ export default function Referenzen() {
         </section>
 
       </div>
-    </article>
+        </article>
+      </main>
+      <Footer />
+    </div>
   );
 }
