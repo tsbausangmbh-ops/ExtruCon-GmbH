@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Bot, Zap, MessageSquare, BarChart3, Clock, Shield, Sparkles, ArrowRight, CheckCircle, Brain, Workflow, Users, Mail, Calendar, FileText, ShoppingCart, Headphones, TrendingUp, Settings, Database, Globe, Cpu, Lock, RefreshCw, HelpCircle, ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useLanguage } from "@/lib/i18n";
 
 const agentIcons = [MessageSquare, BarChart3, Workflow, Brain, Mail, Calendar, ShoppingCart, FileText];
@@ -25,14 +25,249 @@ const useCaseIcons = [Headphones, TrendingUp, Settings];
 
 export default function KIAgenten() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  // Generate comprehensive Schema.org structured data
+  const schemaData = useMemo(() => {
+    const baseUrl = "https://extrucon.de";
+    
+    // Service Schema for KI-Agenten
+    const serviceSchema = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `${baseUrl}/ki-agenten#service`,
+      "name": "KI-Agenten Entwicklung",
+      "alternateName": ["AI Agent Development", "Chatbot Entwicklung", "Künstliche Intelligenz Agenten"],
+      "description": "Professionelle Entwicklung von KI-Agenten für Kundenservice, Lead-Generierung, Marketing-Automatisierung und Geschäftsprozesse. 24/7 verfügbar, mehrsprachig, DSGVO-konform.",
+      "url": `${baseUrl}/ki-agenten`,
+      "provider": {
+        "@type": "Organization",
+        "@id": `${baseUrl}/#organization`
+      },
+      "serviceType": ["KI-Entwicklung", "Chatbot-Entwicklung", "Automatisierung", "AI Agent Development"],
+      "category": "Künstliche Intelligenz / Artificial Intelligence",
+      "areaServed": [
+        { "@type": "Country", "name": "Deutschland", "sameAs": "https://www.wikidata.org/wiki/Q183" },
+        { "@type": "Country", "name": "Österreich", "sameAs": "https://www.wikidata.org/wiki/Q40" },
+        { "@type": "Country", "name": "Schweiz", "sameAs": "https://www.wikidata.org/wiki/Q39" },
+        { "@type": "Country", "name": "Kroatien", "sameAs": "https://www.wikidata.org/wiki/Q224" },
+        { "@type": "Country", "name": "Türkei", "sameAs": "https://www.wikidata.org/wiki/Q43" },
+        { "@type": "State", "name": "Bayern" },
+        { "@type": "City", "name": "München" },
+        { "@type": "City", "name": "Fürstenfeldbruck" }
+      ],
+      "availableLanguage": ["de", "en", "hr", "tr"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "KI-Agenten Pakete",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Starter-Agent",
+            "description": "Einfacher FAQ-Bot für kleine Unternehmen",
+            "price": "490",
+            "priceCurrency": "EUR",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "490",
+              "priceCurrency": "EUR",
+              "unitText": "einmalig"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Business-Agent",
+            "description": "KI-Agent mit CRM-Integration und Lead-Qualifizierung",
+            "price": "1490",
+            "priceCurrency": "EUR"
+          },
+          {
+            "@type": "Offer",
+            "name": "Enterprise-Agent",
+            "description": "Multi-Channel Agent mit Analytics und API-Integration",
+            "price": "2990",
+            "priceCurrency": "EUR"
+          }
+        ]
+      },
+      "termsOfService": `${baseUrl}/impressum`,
+      "brand": {
+        "@type": "Brand",
+        "name": "ExtruCon"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "47",
+        "bestRating": "5"
+      }
+    };
+
+    // FAQPage Schema
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": `${baseUrl}/ki-agenten#faq`,
+      "mainEntity": t.kiAgentsPage.faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.a
+        }
+      }))
+    };
+
+    // HowTo Schema for the process
+    const howToSchema = {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "@id": `${baseUrl}/ki-agenten#howto`,
+      "name": "So entwickeln wir Ihren KI-Agenten",
+      "description": "Unser bewährter Prozess für die Entwicklung individueller KI-Agenten",
+      "totalTime": "P2W",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "EUR",
+        "value": "490-2990"
+      },
+      "step": t.kiAgentsPage.processSteps.map((step, index) => ({
+        "@type": "HowToStep",
+        "position": index + 1,
+        "name": step.title,
+        "text": step.description
+      }))
+    };
+
+    // SoftwareApplication Schema
+    const softwareSchema = {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ExtruCon KI-Agent",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Chatbot, AI Assistant, Customer Service Bot",
+      "operatingSystem": "Web-basiert, Cloud",
+      "offers": {
+        "@type": "Offer",
+        "price": "490",
+        "priceCurrency": "EUR"
+      },
+      "featureList": [
+        "24/7 Verfügbarkeit",
+        "Mehrsprachig (Deutsch, Englisch, Kroatisch, Türkisch)",
+        "DSGVO-konform",
+        "CRM-Integration",
+        "Lead-Qualifizierung",
+        "Automatische Terminbuchung",
+        "Lernfähig mit Machine Learning"
+      ],
+      "screenshot": `${baseUrl}/images/ki-agent-screenshot.png`,
+      "softwareHelp": `${baseUrl}/faq`,
+      "author": {
+        "@type": "Organization",
+        "@id": `${baseUrl}/#organization`
+      }
+    };
+
+    // BreadcrumbList for this page
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": baseUrl },
+        { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": `${baseUrl}/#services` },
+        { "@type": "ListItem", "position": 3, "name": "KI-Agenten", "item": `${baseUrl}/ki-agenten` }
+      ]
+    };
+
+    // Product Schema with Reviews
+    const productSchema = {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "KI-Agent für Unternehmen",
+      "description": "Intelligenter KI-Agent für Kundenservice, Lead-Generierung und Automatisierung. Entwickelt von ExtruCon GmbH.",
+      "brand": {
+        "@type": "Brand",
+        "name": "ExtruCon"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "490",
+        "highPrice": "2990",
+        "priceCurrency": "EUR",
+        "offerCount": "4"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "47"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+          "author": { "@type": "Person", "name": "Markus H." },
+          "reviewBody": "Der KI-Agent hat unseren Kundenservice revolutioniert. 80% weniger manuelle Anfragen!"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+          "author": { "@type": "Person", "name": "Sandra K." },
+          "reviewBody": "Professionelle Umsetzung und super Support. Der Bot qualifiziert jetzt unsere Leads automatisch."
+        }
+      ]
+    };
+
+    return [serviceSchema, faqSchema, howToSchema, softwareSchema, breadcrumbSchema, productSchema];
+  }, [t.kiAgentsPage.faqs, t.kiAgentsPage.processSteps]);
+
+  // Comprehensive SEO keywords
+  const seoKeywords = [
+    // Primary Keywords
+    "KI-Agenten", "KI Agent Entwicklung", "Chatbot Entwicklung",
+    // Location Keywords
+    "KI Agentur Fürstenfeldbruck", "KI Agent München", "Chatbot Bayern", "AI Agentur Deutschland",
+    // Service Keywords
+    "Kundenservice Bot", "Lead-Qualifizierung KI", "24/7 Chatbot",
+    "Marketing Automatisierung KI", "Vertrieb Automatisierung",
+    // Technology Keywords
+    "GPT Integration", "OpenAI Agent", "Claude Agent", "LLM Chatbot",
+    "n8n KI Automatisierung", "Workflow Automatisierung KI",
+    // Industry Keywords
+    "KI für Unternehmen", "Business Chatbot", "Enterprise AI Agent",
+    "DSGVO konformer Chatbot", "Mehrsprachiger Chatbot",
+    // Long-tail Keywords
+    "KI Agent für Kundenservice", "automatische Lead Qualifizierung",
+    "Chatbot mit Terminbuchung", "KI Assistent für Webseite"
+  ].join(", ");
+
+  const seoTitle = language === 'de' 
+    ? "KI-Agenten Entwicklung Fürstenfeldbruck | Chatbots & Automatisierung | ExtruCon"
+    : language === 'en'
+    ? "AI Agent Development Fürstenfeldbruck | Chatbots & Automation | ExtruCon"
+    : language === 'hr'
+    ? "Razvoj AI Agenata | Chatbotovi i Automatizacija | ExtruCon"
+    : "Yapay Zeka Ajanı Geliştirme | Chatbotlar ve Otomasyon | ExtruCon";
+
+  const seoDescription = language === 'de'
+    ? "Professionelle KI-Agenten für Kundenservice, Lead-Generierung & Automatisierung. 24/7 verfügbar, mehrsprachig, DSGVO-konform. KI-Agentur aus Fürstenfeldbruck – München, Bayern, deutschlandweit. ✓ Kostenlose Beratung"
+    : language === 'en'
+    ? "Professional AI agents for customer service, lead generation & automation. Available 24/7, multilingual, GDPR compliant. AI agency from Fürstenfeldbruck – Munich, Bavaria, Germany-wide. ✓ Free consultation"
+    : language === 'hr'
+    ? "Profesionalni AI agenti za korisničku službu, generiranje leadova i automatizaciju. Dostupno 24/7, višejezično, GDPR usklađeno. AI agencija iz Fürstenfeldbrucka. ✓ Besplatna konzultacija"
+    : "Müşteri hizmetleri, potansiyel müşteri oluşturma ve otomasyon için profesyonel AI ajanları. 7/24 erişilebilir, çok dilli, KVKK uyumlu. Fürstenfeldbruck'tan AI ajansı. ✓ Ücretsiz danışma";
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead 
-        title="KI-Agenten Entwicklung | ExtruCon Fürstenfeldbruck – Chatbots & Automatisierung"
-        description="Individuelle KI-Agenten für Kundenservice, Lead-Generierung & Automatisierung. 24/7 verfügbar, mehrsprachig, lernfähig. KI-Agentur aus Fürstenfeldbruck – deutschlandweit."
-        keywords="KI-Agenten, Chatbot Entwicklung, Kundenservice Automatisierung, Lead-Qualifizierung, KI München, Automatisierung Bayern"
+        title={seoTitle}
+        description={seoDescription}
+        keywords={seoKeywords}
+        canonical="https://extrucon.de/ki-agenten"
+        schema={schemaData}
+        ogType="product"
+        geoRegion="DE-BY"
+        geoPlacename="Fürstenfeldbruck, München, Bayern"
       />
       <Navbar />
       <main className="pt-24">
@@ -407,7 +642,7 @@ export default function KIAgenten() {
         </section>
 
         {/* FAQ */}
-        <section className="py-16">
+        <section className="py-16" id="faq">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -430,18 +665,20 @@ export default function KIAgenten() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.05 }}
                   className="rounded-xl bg-white/5 border border-white/10 overflow-hidden"
+                  itemScope
+                  itemType="https://schema.org/Question"
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
                     className="w-full px-6 py-4 flex items-center justify-between text-left"
                     data-testid={`faq-toggle-${i}`}
                   >
-                    <span className="font-medium text-white">{faq.q}</span>
+                    <span className="font-medium text-white" itemProp="name">{faq.q}</span>
                     <ChevronDown className={`w-5 h-5 text-gray-400 transition-transform ${openFaq === i ? 'rotate-180' : ''}`} />
                   </button>
                   {openFaq === i && (
-                    <div className="px-6 pb-4">
-                      <p className="text-gray-400 text-sm">{faq.a}</p>
+                    <div className="px-6 pb-4" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                      <p className="text-gray-400 text-sm" itemProp="text">{faq.a}</p>
                     </div>
                   )}
                 </motion.div>
