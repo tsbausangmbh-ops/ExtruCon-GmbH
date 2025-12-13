@@ -5,7 +5,7 @@ import { useLanguage } from "@/lib/i18n";
 
 export function HomeFAQ() {
   const { t } = useLanguage();
-  const [openQuestion, setOpenQuestion] = useState<number | null>(0);
+  const [openQuestion, setOpenQuestion] = useState<number[]>([0, 1, 2, 3]);
 
   const faqs = [
     {
@@ -59,14 +59,14 @@ export function HomeFAQ() {
                 className="rounded-xl bg-card/30 border border-white/5 overflow-hidden"
               >
                 <button
-                  onClick={() => setOpenQuestion(openQuestion === i ? null : i)}
+                  onClick={() => setOpenQuestion(openQuestion.includes(i) ? openQuestion.filter(q => q !== i) : [...openQuestion, i])}
                   className="w-full p-5 text-left flex items-center justify-between gap-4"
                   data-testid={`home-faq-${i}`}
                 >
                   <span className="font-medium text-white">{faq.q}</span>
-                  <ChevronDown className={`w-5 h-5 text-gray-400 transition-transform flex-shrink-0 ${openQuestion === i ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-5 h-5 text-gray-400 transition-transform flex-shrink-0 ${openQuestion.includes(i) ? 'rotate-180' : ''}`} />
                 </button>
-                {openQuestion === i && (
+                {openQuestion.includes(i) && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
