@@ -14,8 +14,8 @@ function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden font-sans">
       <SEOHead
-        title="ExtruCon GmbH | KI-Agentur Fürstenfeldbruck bei München"
-        description="Ihre KI-Agentur in Fürstenfeldbruck. KI-Agenten, Automatisierungen, Webentwicklung & Marketing mit künstlicher Intelligenz. Kostenlose Beratung!"
+        title="KI Beratung München und Fürstenfeldbruck: Smarte Agentur-Lösungen"
+        description="Ihr Partner für KI Beratung in München: ExtruCon, die Agentur für clevere AI-Lösungen, bringt Effizienz in Ihre Prozesse. Jetzt Ihre KI-Zukunft starten!"
         keywords="KI Agentur Fürstenfeldbruck, KI Agentur München, künstliche Intelligenz Bayern, AI Agency, Automatisierung"
         canonical="https://extrucon.de"
       />
