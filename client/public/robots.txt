@@ -190,7 +190,7 @@ Disallow: /
 User-agent: *
 Allow: /
 
-# Wichtige Seiten für Crawling (DE, HR, TR)
+# Wichtige Seiten für Crawling (DE, HR, TR, EN)
 Allow: /ki-agenten
 Allow: /automatisierungen
 Allow: /webseiten-ki
@@ -201,6 +201,24 @@ Allow: /faq
 Allow: /ratgeber
 Allow: /impressum
 Allow: /datenschutz
+Allow: /ki-bot
+
+# ===========================================
+# MEHRSPRACHIGE INHALTE (Geo-Targeting)
+# DE = Deutsch, TR = Türkisch, HR = Kroatisch, EN = Englisch
+# ===========================================
+
+# Deutsche Version (Standard)
+Allow: /*
+
+# Türkische Version (für Türkei)
+Allow: /*?lang=tr
+
+# Kroatische Version (für Kroatien)
+Allow: /*?lang=hr
+
+# Englische Version (International)
+Allow: /*?lang=en
 
 # Blockierte Bereiche (nicht indizieren)
 Disallow: /api/
