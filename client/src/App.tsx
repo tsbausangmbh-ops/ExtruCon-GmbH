@@ -29,6 +29,9 @@ const Marketing = lazy(() => import("@/pages/services/Marketing"));
 const Cookies = lazy(() => import("@/pages/Cookies"));
 const Referenzen = lazy(() => import("@/pages/Referenzen"));
 const Terminbuchung = lazy(() => import("@/pages/Terminbuchung"));
+const StandortMuenchen = lazy(() => import("@/pages/standorte/Muenchen"));
+const StandortFFB = lazy(() => import("@/pages/standorte/Fuerstenfeldbruck"));
+const StandortBayern = lazy(() => import("@/pages/standorte/Bayern"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 function LoadingFallback() {
@@ -69,6 +72,9 @@ function Router() {
         <Route path="/cookies" component={Cookies} />
         <Route path="/referenzen" component={Referenzen} />
         <Route path="/terminbuchung" component={Terminbuchung} />
+        <Route path="/standorte/muenchen" component={StandortMuenchen} />
+        <Route path="/standorte/fuerstenfeldbruck" component={StandortFFB} />
+        <Route path="/standorte/bayern" component={StandortBayern} />
         <Route component={NotFound} />
       </Switch>
     </Suspense>

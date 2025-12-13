@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { COMPANY_INFO, buildWebPageSchema, buildBreadcrumbSchema, type BreadcrumbItem } from "@/lib/schema";
 
 interface SEOHeadProps {
   title: string;
@@ -6,117 +7,164 @@ interface SEOHeadProps {
   canonical?: string;
   keywords?: string;
   type?: "website" | "article" | "service";
-  structuredData?: object;
+  structuredData?: object | object[];
+  breadcrumb?: BreadcrumbItem[];
+  noIndex?: boolean;
+  language?: "de" | "en" | "hr" | "tr";
 }
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "ExtruCon GmbH",
-  "alternateName": "ExtruCon KI-Agentur",
-  "description": "KI-Agentur für Automatisierung, KI-Agenten und Webentwicklung in Fürstenfeldbruck bei München",
-  "url": "https://extrucon.de",
-  "logo": "https://extrucon.de/logo.png",
-  "image": "https://extrucon.de/og-image.png",
-  "telephone": "+49-89-444438879",
-  "email": "info@extrucon.de",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Hasenheide 8",
-    "addressLocality": "Fürstenfeldbruck",
-    "addressRegion": "Bayern",
-    "postalCode": "82256",
-    "addressCountry": "DE"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 48.1789,
-    "longitude": 11.2546
-  },
-  "areaServed": [
-    {
-      "@type": "City",
-      "name": "Fürstenfeldbruck"
-    },
-    {
-      "@type": "City", 
-      "name": "München"
-    },
-    {
-      "@type": "State",
-      "name": "Bayern"
-    },
-    {
-      "@type": "Country",
-      "name": "Deutschland"
-    }
-  ],
-  "serviceType": ["KI-Automatisierung", "KI-Agenten", "Webentwicklung", "Chatbots", "Performance Marketing"],
-  "priceRange": "€€",
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    "opens": "08:00",
-    "closes": "18:00"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/company/extrucon"
-  ]
+const BASE_URL = "https://extrucon.de";
+
+const LANGUAGE_CODES: Record<string, string> = {
+  de: "de_DE",
+  en: "en_US",
+  hr: "hr_HR",
+  tr: "tr_TR"
 };
 
-export function SEOHead({ title, description, canonical, keywords, type = "website", structuredData }: SEOHeadProps) {
+function getHreflangUrls(path: string) {
+  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  const basePath = cleanPath === '/' ? '' : cleanPath;
+  
+  return {
+    de: `${BASE_URL}${basePath}`,
+    en: `${BASE_URL}${basePath}${basePath ? '?' : '?'}lang=en`,
+    hr: `${BASE_URL}${basePath}${basePath ? '?' : '?'}lang=hr`,
+    tr: `${BASE_URL}${basePath}${basePath ? '?' : '?'}lang=tr`,
+    "x-default": `${BASE_URL}${basePath}`
+  };
+}
+
+export function SEOHead({ 
+  title, 
+  description, 
+  canonical, 
+  keywords, 
+  type = "website", 
+  structuredData,
+  breadcrumb,
+  noIndex = false,
+  language = "de"
+}: SEOHeadProps) {
   useEffect(() => {
     document.title = title;
     
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", description);
-    }
-    
-    if (keywords) {
-      let metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (metaKeywords) {
-        metaKeywords.setAttribute("content", keywords);
-      }
-    }
-    
-    if (canonical) {
-      let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-      if (link) {
-        link.href = canonical;
-      }
-    }
-    
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) ogTitle.setAttribute("content", title);
-    
-    const ogDesc = document.querySelector('meta[property="og:description"]');
-    if (ogDesc) ogDesc.setAttribute("content", description);
-    
-    const ogType = document.querySelector('meta[property="og:type"]');
-    if (ogType) ogType.setAttribute("content", type);
-    
-    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
-    if (twitterTitle) twitterTitle.setAttribute("content", title);
-    
-    const twitterDesc = document.querySelector('meta[name="twitter:description"]');
-    if (twitterDesc) twitterDesc.setAttribute("content", description);
+    const updateMeta = (selector: string, content: string, attr = "content") => {
+      const el = document.querySelector(selector);
+      if (el) el.setAttribute(attr, content);
+    };
 
-    let scriptTag = document.querySelector('script[type="application/ld+json"]#local-business');
-    if (!scriptTag) {
-      scriptTag = document.createElement("script");
-      scriptTag.setAttribute("type", "application/ld+json");
-      scriptTag.setAttribute("id", "local-business");
-      document.head.appendChild(scriptTag);
+    updateMeta('meta[name="description"]', description);
+    if (keywords) updateMeta('meta[name="keywords"]', keywords);
+    
+    const robotsContent = noIndex ? "noindex, nofollow" : "index, follow, max-snippet:-1, max-image-preview:large";
+    updateMeta('meta[name="robots"]', robotsContent);
+    
+    const canonicalUrl = canonical || window.location.href.split('?')[0];
+    let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (canonicalLink) {
+      canonicalLink.href = canonicalUrl;
     }
-    scriptTag.textContent = JSON.stringify(structuredData || localBusinessSchema);
+    
+    updateMeta('meta[property="og:title"]', title);
+    updateMeta('meta[property="og:description"]', description);
+    updateMeta('meta[property="og:type"]', type);
+    updateMeta('meta[property="og:url"]', canonicalUrl);
+    updateMeta('meta[property="og:locale"]', LANGUAGE_CODES[language] || "de_DE");
+    
+    updateMeta('meta[name="twitter:title"]', title);
+    updateMeta('meta[name="twitter:description"]', description);
+
+    const hreflangUrls = getHreflangUrls(window.location.pathname);
+    const existingHreflangLinks = document.querySelectorAll('link[rel="alternate"][hreflang]');
+    existingHreflangLinks.forEach(link => {
+      const hreflang = link.getAttribute('hreflang') as keyof typeof hreflangUrls;
+      if (hreflang && hreflangUrls[hreflang]) {
+        (link as HTMLLinkElement).href = hreflangUrls[hreflang];
+      }
+    });
+
+    const scriptIds: string[] = [];
+    
+    const addJsonLd = (id: string, data: object) => {
+      let scriptTag = document.querySelector(`script[type="application/ld+json"]#${id}`);
+      if (!scriptTag) {
+        scriptTag = document.createElement("script");
+        scriptTag.setAttribute("type", "application/ld+json");
+        scriptTag.setAttribute("id", id);
+        document.head.appendChild(scriptTag);
+      }
+      scriptTag.textContent = JSON.stringify(data);
+      scriptIds.push(id);
+    };
+
+    const localBusinessSchema = {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://extrucon.de/#profservice",
+      "name": COMPANY_INFO.name,
+      "alternateName": COMPANY_INFO.alternateName,
+      "description": "KI-Agentur für Automatisierung, KI-Agenten und Webentwicklung in Fürstenfeldbruck bei München",
+      "url": COMPANY_INFO.url,
+      "logo": COMPANY_INFO.logo,
+      "image": COMPANY_INFO.image,
+      "telephone": COMPANY_INFO.telephone,
+      "email": COMPANY_INFO.email,
+      "address": {
+        "@type": "PostalAddress",
+        ...COMPANY_INFO.address
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        ...COMPANY_INFO.geo
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Fürstenfeldbruck" },
+        { "@type": "City", "name": "München" },
+        { "@type": "State", "name": "Bayern" },
+        { "@type": "Country", "name": "Deutschland" }
+      ],
+      "priceRange": COMPANY_INFO.priceRange,
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        ...COMPANY_INFO.openingHours
+      },
+      "sameAs": COMPANY_INFO.sameAs
+    };
+
+    addJsonLd("local-business", localBusinessSchema);
+
+    if (breadcrumb && breadcrumb.length > 0) {
+      addJsonLd("breadcrumb", buildBreadcrumbSchema(breadcrumb));
+    }
+
+    const webPageSchema = buildWebPageSchema({
+      name: title,
+      description,
+      url: canonicalUrl,
+      breadcrumb
+    });
+    addJsonLd("webpage", webPageSchema);
+
+    if (structuredData) {
+      if (Array.isArray(structuredData)) {
+        structuredData.forEach((data, index) => {
+          addJsonLd(`custom-schema-${index}`, data);
+        });
+      } else {
+        addJsonLd("custom-schema", structuredData);
+      }
+    }
     
     return () => {
-      if (scriptTag && scriptTag.parentNode) {
-        scriptTag.parentNode.removeChild(scriptTag);
-      }
+      scriptIds.forEach(id => {
+        const scriptTag = document.querySelector(`script[type="application/ld+json"]#${id}`);
+        if (scriptTag && scriptTag.parentNode) {
+          scriptTag.parentNode.removeChild(scriptTag);
+        }
+      });
     };
-  }, [title, description, canonical, keywords, type, structuredData]);
+  }, [title, description, canonical, keywords, type, structuredData, breadcrumb, noIndex, language]);
 
   return null;
 }
