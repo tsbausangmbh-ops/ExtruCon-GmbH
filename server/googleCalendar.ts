@@ -58,7 +58,7 @@ export async function getAvailableSlots(date: string): Promise<{ time: string; a
     startOfDay.setHours(6, 0, 0, 0);
     
     const endOfDay = new Date(date);
-    endOfDay.setHours(19, 0, 0, 0);
+    endOfDay.setHours(20, 0, 0, 0);
 
     const response = await calendar.freebusy.query({
       requestBody: {
@@ -71,7 +71,7 @@ export async function getAvailableSlots(date: string): Promise<{ time: string; a
     const busySlots = response.data.calendars?.primary?.busy || [];
     
     const slots: { time: string; available: boolean }[] = [];
-    for (let hour = 8; hour < 17; hour++) {
+    for (let hour = 8; hour < 18; hour++) {
       const slotStart = new Date(date);
       slotStart.setHours(hour, 0, 0, 0);
       const slotEnd = new Date(date);
