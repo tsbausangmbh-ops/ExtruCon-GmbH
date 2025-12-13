@@ -1,12 +1,12 @@
-import { memo, useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Bot, Share2, Globe, TrendingUp, Palette, FileText } from "lucide-react";
+import { useState } from "react";
 import logoImage from "@assets/Logo_mittel_Header_1765567902974.png";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/lib/i18n";
 
-export const Navbar = memo(function Navbar() {
+export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const { t } = useLanguage();
@@ -24,10 +24,16 @@ export const Navbar = memo(function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-4 h-24 flex items-center justify-between py-1">
         <Link href="/" className="flex items-center">
-          <img src={logoImage} alt="ExtruCon GmbH" className="h-[5.5rem]" loading="eager" decoding="async" />
+          <img src={logoImage} alt="ExtruCon GmbH" className="h-[5.5rem]" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
+          <a href="/ki-agenten" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
+            {t.nav.kiAgents}
+          </a>
+          <a href="/webseiten-ki" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
+            {t.nav.websitesKI}
+          </a>
           <div 
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
@@ -56,12 +62,6 @@ export const Navbar = memo(function Navbar() {
             )}
           </div>
 
-          <a href="/webseiten-ki" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
-            {t.nav.websitesKI}
-          </a>
-          <a href="/referenzen" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
-            {t.nav.references}
-          </a>
           <a href="/ratgeber" className="text-sm font-medium text-gray-300 hover:text-primary transition-colors">
             {t.nav.ratgeber}
           </a>
@@ -111,20 +111,6 @@ export const Navbar = memo(function Navbar() {
               ))}
             </div>
             <a
-              href="/webseiten-ki"
-              className="text-lg font-bold text-secondary hover:text-primary transition-colors py-2"
-              onClick={() => setIsOpen(false)}
-            >
-              {t.nav.websitesKI}
-            </a>
-            <a
-              href="/referenzen"
-              className="text-lg font-medium text-gray-300 hover:text-primary transition-colors py-2"
-              onClick={() => setIsOpen(false)}
-            >
-              {t.nav.references}
-            </a>
-            <a
               href="/ratgeber"
               className="text-lg font-medium text-gray-300 hover:text-primary transition-colors py-2"
               onClick={() => setIsOpen(false)}
@@ -163,4 +149,4 @@ export const Navbar = memo(function Navbar() {
       
     </nav>
   );
-});
+}

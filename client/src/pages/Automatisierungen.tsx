@@ -1,4 +1,3 @@
-import { memo, useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
@@ -6,12 +5,13 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Workflow, Zap, ArrowRight, CheckCircle, Clock, TrendingUp, Shield, RefreshCw, Mail, FileText, Users, ShoppingCart, Calendar, Database, Settings, Cpu, Link2, GitBranch, Layers, Play, ChevronDown, HelpCircle } from "lucide-react";
+import { useState } from "react";
 import { useLanguage } from "@/lib/i18n";
 
 const automationIcons = [Mail, Users, FileText, ShoppingCart, Calendar, Database, TrendingUp, Settings];
 const benefitIcons = [Clock, Shield, TrendingUp, Zap];
 
-function Automatisierungen() {
+export default function Automatisierungen() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const { t } = useLanguage();
 
@@ -373,5 +373,3 @@ function Automatisierungen() {
     </div>
   );
 }
-
-export default memo(Automatisierungen);

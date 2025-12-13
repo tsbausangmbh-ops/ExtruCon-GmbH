@@ -1,9 +1,8 @@
-import { memo } from "react";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
 import logoImg from "@assets/Logo_1765563135323.png";
 import { useLanguage } from "@/lib/i18n";
 
-export const Footer = memo(function Footer() {
+export function Footer() {
   const { t } = useLanguage();
 
   return (
@@ -12,7 +11,7 @@ export const Footer = memo(function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
             <a href="https://extrucon.de" className="flex items-center gap-3 mb-4 hover:opacity-80 transition-opacity" itemProp="url">
-              <img src={logoImg} alt="ExtruCon GmbH Logo" className="h-10 w-10 object-contain" loading="lazy" decoding="async" />
+              <img src={logoImg} alt="ExtruCon GmbH Logo" className="h-10 w-10 object-contain" />
               <span className="text-xl font-bold font-display tracking-wider text-white" itemProp="name">
                 ExtruCon GmbH
               </span>
@@ -67,9 +66,8 @@ export const Footer = memo(function Footer() {
                 <meta itemProp="openingHours" content="Mo-Fr 08:00-17:00" />
               </li>
             </ul>
-            <div className="mt-4 space-y-2">
-              <a href="/kontakt" className="text-primary hover:underline text-sm font-medium block">→ {t.footer.contactLink}</a>
-              <a href="/terminbuchung" className="text-primary hover:underline text-sm font-medium block">→ {t.footer.bookAppointment}</a>
+            <div className="mt-4">
+              <a href="/kontakt" className="text-primary hover:underline text-sm font-medium">→ {t.footer.contactLink}</a>
             </div>
           </div>
         </div>
@@ -95,4 +93,4 @@ export const Footer = memo(function Footer() {
       </div>
     </footer>
   );
-});
+}

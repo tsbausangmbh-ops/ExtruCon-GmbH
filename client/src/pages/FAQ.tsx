@@ -1,8 +1,8 @@
-import { memo, useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import { HelpCircle, ChevronDown, Bot, Share2, Globe, TrendingUp, CreditCard, Users, Search } from "lucide-react";
+import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
@@ -21,7 +21,7 @@ const categoryIcons = {
 
 type CategoryId = keyof typeof categoryIcons;
 
-function FAQ() {
+export default function FAQ() {
   const { t } = useLanguage();
   const [activeCategory, setActiveCategory] = useState<CategoryId>("allgemein");
   const [openQuestions, setOpenQuestions] = useState<string[]>([]);
@@ -248,5 +248,3 @@ function FAQ() {
     </div>
   );
 }
-
-export default memo(FAQ);

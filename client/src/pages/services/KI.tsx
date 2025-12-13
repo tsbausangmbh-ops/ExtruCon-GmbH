@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -11,7 +10,7 @@ import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 
-function KI() {
+export default function KI() {
   const { t } = useLanguage();
 
   return (
@@ -31,7 +30,7 @@ function KI() {
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img src={aiImg} alt="KI Agentur Fürstenfeldbruck - Künstliche Intelligenz und Automatisierung" className="w-full h-full object-cover opacity-20" loading="lazy" decoding="async" />
+            <img src={aiImg} alt="KI Agentur Fürstenfeldbruck - Künstliche Intelligenz und Automatisierung" className="w-full h-full object-cover opacity-20" />
             <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
@@ -170,5 +169,3 @@ function KI() {
     </div>
   );
 }
-
-export default memo(KI);

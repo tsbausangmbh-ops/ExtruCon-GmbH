@@ -1,4 +1,4 @@
-import { memo, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { useLanguage } from "@/lib/i18n";
@@ -12,7 +12,7 @@ type CookiePreferences = {
   marketing: boolean;
 };
 
-function Cookies() {
+export default function Cookies() {
   const { t } = useLanguage();
   const [preferences, setPreferences] = useState<CookiePreferences | null>(null);
   const [consentDate, setConsentDate] = useState<string | null>(null);
@@ -180,5 +180,3 @@ function Cookies() {
     </div>
   );
 }
-
-export default memo(Cookies);

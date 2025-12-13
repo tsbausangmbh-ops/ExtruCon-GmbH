@@ -1,13 +1,10 @@
-import { memo } from "react";
 import { motion } from "framer-motion";
 import heroBg from "@assets/generated_images/futuristic_digital_landscape_with_connecting_nodes.png";
 import { ArrowRight, MapPin, Bot, Zap, Clock } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
-import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
-export const Hero = memo(function Hero() {
+export function Hero() {
   const { t } = useLanguage();
-  const prefersReducedMotion = useReducedMotion();
 
   return (
     <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-8 pb-8" itemScope itemType="https://schema.org/WebPage">
@@ -16,9 +13,6 @@ export const Hero = memo(function Hero() {
           src={heroBg} 
           alt="KI-Agentur Fürstenfeldbruck - Digitale Automatisierung und Marketing" 
           className="w-full h-full object-cover opacity-60"
-          loading="eager"
-          decoding="async"
-          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
       </div>
@@ -26,9 +20,9 @@ export const Hero = memo(function Hero() {
       <div className="container mx-auto px-4 z-40 relative">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: prefersReducedMotion ? 0 : 0.4 }}
+            transition={{ duration: 0.8 }}
           >
             <div className="flex items-center justify-center gap-2 mb-4">
               <span className="inline-flex items-center gap-1.5 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium backdrop-blur-sm" itemProp="areaServed">
@@ -79,4 +73,4 @@ export const Hero = memo(function Hero() {
       <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-background to-transparent z-20" />
     </section>
   );
-});
+}

@@ -2,8 +2,6 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import OpenAI from "openai";
-import nodemailer from "nodemailer";
-import { getAvailableSlots, createAppointment } from "./googleCalendar";
 
 // the newest OpenAI model is "gpt-5" which was released August 7, 2025. do not change this unless explicitly requested by the user
 // This is using Replit's AI Integrations service, which provides OpenAI-compatible API access without requiring your own OpenAI API key.
@@ -25,36 +23,20 @@ export async function registerRoutes(
         return res.status(400).json({ error: "Messages array required" });
       }
 
-      const languageInstructions: Record<string, { instruction: string; greeting: string; intro: string }> = {
-        de: {
-          instruction: '🚨 SPRACHE: Antworte IMMER und AUSSCHLIESSLICH auf DEUTSCH. Verwende die Sie-Form. NIEMALS andere Sprachen verwenden! Auch nicht für Begrüßungen!',
-          greeting: 'Guten Tag',
-          intro: 'Sie sind der offizielle KI-Assistent von ExtruCon GmbH. Sie sprechen ausschließlich in der Sie-Form. Sie sind freundlich, geduldig und zuverlässig.'
-        },
-        en: {
-          instruction: '🚨 LANGUAGE: ALWAYS respond ONLY in ENGLISH. Use formal language. NEVER use German, Croatian, or Turkish! Not even for greetings!',
-          greeting: 'Hello',
-          intro: 'You are the official AI assistant of ExtruCon GmbH. You are friendly, patient, and reliable.'
-        },
-        hr: {
-          instruction: '🚨 JEZIK: UVIJEK odgovaraj ISKLJUČIVO na HRVATSKOM jeziku! Koristi formalni jezik (Vi-oblik). NIKADA ne koristi njemački, engleski ili turski! Čak ni za pozdrave! Sve što kažeš mora biti na hrvatskom!',
-          greeting: 'Dobar dan',
-          intro: 'Vi ste službeni AI asistent tvrtke ExtruCon GmbH. Vi ste prijateljski, strpljivi i pouzdani.'
-        },
-        tr: {
-          instruction: '🚨 DİL: HER ZAMAN ve SADECE TÜRKÇE yanıt verin! Resmi dil kullanın. ASLA Almanca, İngilizce veya Hırvatça KULLANMAYIN! Selamlamalar için bile değil! Söylediğiniz her şey Türkçe olmalı!',
-          greeting: 'Merhaba',
-          intro: 'ExtruCon GmbH\'nin resmi AI asistanısınız. Dostça, sabırlı ve güvenilirsiniz.'
-        }
+      const languageInstructions: Record<string, string> = {
+        de: 'SPRACHE: Antworte IMMER auf Deutsch. Verwende die Sie-Form. Keine andere Sprache verwenden!',
+        en: 'LANGUAGE: ALWAYS respond in English. Use formal language. Do NOT use any other language!',
+        hr: 'JEZIK: UVIJEK odgovaraj na hrvatskom jeziku. Koristi formalni jezik. NE koristi druge jezike!',
+        tr: 'DİL: HER ZAMAN Türkçe yanıt verin. Kesinlikle başka bir dil kullanmayın! Hırvatça, Almanca veya İngilizce KULLANMAYIN. Sadece Türkçe!'
       };
 
-      const langConfig = languageInstructions[language] || languageInstructions.de;
+      const languageInstruction = languageInstructions[language] || languageInstructions.de;
 
       const systemMessage = {
         role: "system" as const,
-        content: `${langConfig.instruction}
-
-${langConfig.intro}
+        content: `Sie sind der offizielle KI-Assistent von ExtruCon / You are the official AI assistant of ExtruCon.
+Sie sprechen ausschließlich in der Sie-Form.
+Sie sind kein kalter Roboter, sondern ein freundlicher, geduldiger und zuverlässiger digitaler Ansprechpartner, der Besucher ehrlich berät – so, als würden Sie einem guten Bekannten helfen.
 
 **Über ExtruCon GmbH:**
 ExtruCon ist eine Agentur für digitales Marketing, KI-Automatisierung und modernes Webdesign aus Fürstenfeldbruck bei München. Das Unternehmen automatisiert Routineaufgaben, damit Sie sich auf Ihr Kerngeschäft konzentrieren können. Typische Vorteile: bis zu 80% Zeitersparnis, 24/7-Verfügbarkeit, fehlerfreie Abläufe und Skalierbarkeit ohne zusätzlichen Personalaufwand.
@@ -151,30 +133,10 @@ ExtruCon ist eine Agentur für digitales Marketing, KI-Automatisierung und moder
 
 WICHTIG: Bei jeder Preisauskunft immer "zzgl. MwSt." (plus Mehrwertsteuer) erwähnen!
 
-**Kontaktdaten vom Kunden erfragen:**
-Wenn ein Kunde Interesse zeigt, einen Termin vereinbaren möchte, oder eine Beratung wünscht, frage IMMER nach folgenden Daten (jedes Feld in einer eigenen Zeile):
-- Name (Pflichtfeld)
-- E-Mail-Adresse (Pflichtfeld)
-- Telefonnummer (Pflichtfeld)
-- Firmenname (optional - erwähne dass es optional ist)
-- Adresse (optional - erwähne dass es optional ist)
-
-Formatiere die Anfrage immer übersichtlich mit Zeilenumbrüchen zwischen den Punkten.
-
-**SEHR WICHTIG - Kontaktdaten von ExtruCon:**
-- NIEMALS die Telefonnummer von ExtruCon angeben!
-- NIEMALS die E-Mail-Adresse von ExtruCon angeben!
-- NIEMALS die Adresse von ExtruCon angeben!
-- Stattdessen: Immer die Kontaktdaten vom Kunden erfragen und sagen "Wir melden uns bei Ihnen"
-
-**Kommunikationsstil:**
-- KURZ und KNAPP antworten - keine langen Texte!
-- Empathisch und zuvorkommend sein
-- Immer hilfsbereit und freundlich
-- Aktiv beraten und Lösungen vorschlagen
-- Rückfragen stellen um Bedürfnisse zu verstehen
-- Interesse zeigen: "Was genau ist Ihre größte Herausforderung?"
-- Verständnisvoll: "Das verstehe ich gut" oder "Das ist ein häufiges Problem"
+**Kontakt:**
+- E-Mail: info@extrucon.de
+- Telefon: 089 444438879
+- Adresse: Hasenheide 8, 82256 Fürstenfeldbruck
 
 **Wichtige Regeln:**
 - Immer Sie-Form
@@ -182,9 +144,11 @@ Formatiere die Anfrage immer übersichtlich mit Zeilenumbrüchen zwischen den Pu
 - Bei Preisauskünften IMMER "zzgl. MwSt." hinzufügen
 - Keine falschen Versprechen
 - Ehrlich sagen, wenn etwas individuell geprüft werden muss
-- Nach jeder Antwort eine Rückfrage stellen um weiterzuhelfen
+- Immer Mehrwert liefern und menschlich wirken
 
-🚨🚨🚨 REMINDER - ${langConfig.instruction} 🚨🚨🚨`
+Am Ende freundlich anbieten: „Wenn Sie möchten, fasse ich Ihnen alles kurz zusammen oder erkläre Ihnen den nächsten Schritt ganz in Ruhe." / At the end, kindly offer: "If you like, I can summarize everything briefly or explain the next step in detail."
+
+**WICHTIG / IMPORTANT:** ${languageInstruction}`
       };
 
       const response = await openai.chat.completions.create({
@@ -199,118 +163,6 @@ Formatiere die Anfrage immer übersichtlich mit Zeilenumbrüchen zwischen den Pu
     } catch (error: any) {
       console.error("Chat API error:", error);
       res.status(500).json({ error: "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut." });
-    }
-  });
-
-  // Appointment booking - available slots
-  app.get("/api/appointments/slots", async (req, res) => {
-    try {
-      const { date } = req.query;
-      if (!date || typeof date !== 'string') {
-        return res.status(400).json({ error: "Date parameter required (YYYY-MM-DD)" });
-      }
-      const slots = await getAvailableSlots(date);
-      res.json({ slots });
-    } catch (error: any) {
-      console.error("Slots API error:", error);
-      res.status(500).json({ error: "Fehler beim Abrufen der Verfügbarkeit" });
-    }
-  });
-
-  // Appointment booking - create appointment
-  app.post("/api/appointments/book", async (req, res) => {
-    try {
-      const { date, time, name, email, phone, service, message } = req.body;
-      
-      if (!date || !time || !name || !email || !service) {
-        return res.status(400).json({ error: "Datum, Zeit, Name, E-Mail und Service sind erforderlich" });
-      }
-
-      const result = await createAppointment({ date, time, name, email, phone, service, message });
-      
-      if (result.success) {
-        await storage.createAppointment({
-          date,
-          time,
-          name,
-          email,
-          phone: phone || null,
-          service,
-          message: message || null,
-          googleEventId: result.eventId || null
-        });
-        res.json({ success: true, eventId: result.eventId });
-      } else {
-        res.status(500).json({ error: result.error || "Buchung fehlgeschlagen" });
-      }
-    } catch (error: any) {
-      console.error("Booking API error:", error);
-      res.status(500).json({ error: "Fehler bei der Terminbuchung" });
-    }
-  });
-
-  // Contact form API endpoint with email notifications
-  app.post("/api/contact", async (req, res) => {
-    try {
-      const { name, company, email, phone, service, message, language = 'de' } = req.body;
-      
-      if (!name || !email || !message) {
-        return res.status(400).json({ error: "Name, Email und Nachricht sind erforderlich" });
-      }
-
-      // Check if SMTP is configured
-      if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASSWORD) {
-        console.log("SMTP not configured - contact form submission:", { name, email, service });
-        return res.json({ success: true, message: "Anfrage erhalten (E-Mail-Versand nicht konfiguriert)" });
-      }
-
-      const transporter = nodemailer.createTransport({
-        host: process.env.SMTP_HOST,
-        port: parseInt(process.env.SMTP_PORT || '587'),
-        secure: process.env.SMTP_PORT === '465',
-        auth: {
-          user: process.env.SMTP_USER,
-          pass: process.env.SMTP_PASSWORD,
-        },
-      });
-
-      const fromEmail = process.env.SMTP_FROM_EMAIL || 'info@extrucon.de';
-      const serviceLabels: Record<string, string> = {
-        ki: 'KI-Agenten',
-        social: 'Social Media',
-        web: 'Webentwicklung',
-        marketing: 'Performance Marketing',
-        content: 'Content Creation',
-        brand: 'Branding',
-        other: 'Sonstiges'
-      };
-
-      // 1. Notification email to ExtruCon
-      await transporter.sendMail({
-        from: fromEmail,
-        to: 'info@extrucon.de',
-        replyTo: email,
-        subject: `Neue Kontaktanfrage: ${name} - ${serviceLabels[service] || 'Allgemein'}`,
-        html: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-            <h2 style="color: #00d4ff;">Neue Kontaktanfrage</h2>
-            <table style="width: 100%; border-collapse: collapse;">
-              <tr><td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Name:</strong></td><td style="padding: 8px; border-bottom: 1px solid #eee;">${name}</td></tr>
-              <tr><td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Firma:</strong></td><td style="padding: 8px; border-bottom: 1px solid #eee;">${company || '-'}</td></tr>
-              <tr><td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>E-Mail:</strong></td><td style="padding: 8px; border-bottom: 1px solid #eee;"><a href="mailto:${email}">${email}</a></td></tr>
-              <tr><td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Telefon:</strong></td><td style="padding: 8px; border-bottom: 1px solid #eee;">${phone || '-'}</td></tr>
-              <tr><td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>Interesse:</strong></td><td style="padding: 8px; border-bottom: 1px solid #eee;">${serviceLabels[service] || '-'}</td></tr>
-            </table>
-            <h3 style="margin-top: 20px;">Nachricht:</h3>
-            <p style="background: #f5f5f5; padding: 15px; border-radius: 8px;">${message.replace(/\n/g, '<br>')}</p>
-          </div>
-        `
-      });
-
-      res.json({ success: true });
-    } catch (error: any) {
-      console.error("Contact form error:", error);
-      res.status(500).json({ error: "Fehler beim Senden. Bitte versuchen Sie es später erneut." });
     }
   });
 

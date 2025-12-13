@@ -1,17 +1,16 @@
-import { memo } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 
-function Impressum() {
+export default function Impressum() {
   const { t, language } = useLanguage();
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
         title="Impressum | ExtruCon GmbH Fürstenfeldbruck"
-        description="Impressum der ExtruCon GmbH. Angaben gemäß § 5 DDG. Hasenheide 8, 82256 Fürstenfeldbruck."
+        description="Impressum der ExtruCon GmbH. Angaben gemäß § 5 TMG. Hasenheide 8, 82256 Fürstenfeldbruck."
         keywords="Impressum, ExtruCon GmbH, Fürstenfeldbruck"
         canonical="https://extrucon.de/impressum"
       />
@@ -26,9 +25,9 @@ function Impressum() {
             </p>
           )}
 
-          {/* Angaben gemäß § 5 DDG */}
+          {/* Angaben gemäß § 5 TMG */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">Angaben gemäß § 5 DDG</h2>
+            <h2 className="text-xl font-bold text-white mb-4">Angaben gemäß § 5 TMG</h2>
             <p className="text-gray-400 leading-relaxed">
               ExtruCon GmbH<br />
               Hasenheide 8<br />
@@ -106,7 +105,7 @@ function Impressum() {
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
             <h2 className="text-xl font-bold text-white mb-4">Haftung für Inhalte</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
-              Als Diensteanbieter sind wir gemäß § 7 Abs.1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+              Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
             </p>
             <p className="text-gray-400 leading-relaxed">
               Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
@@ -142,5 +141,3 @@ function Impressum() {
     </div>
   );
 }
-
-export default memo(Impressum);

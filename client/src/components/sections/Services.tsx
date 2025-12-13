@@ -1,28 +1,18 @@
-import { memo } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Bot, Share2, Globe, PenTool, Fingerprint, TrendingUp, Cpu, Sparkles, Award } from "lucide-react";
+import { Bot, Share2, Globe, PenTool, Fingerprint, TrendingUp } from "lucide-react";
 import aiImg from "@assets/generated_images/glowing_neural_network_brain.png";
 import socialImg from "@assets/generated_images/digital_social_connection_abstract_art.png";
 import webImg from "@assets/generated_images/holographic_creative_interface.png";
 import brandImg from "@assets/generated_images/abstract_digital_brand_identity_construction.png";
 import contentImg from "@assets/generated_images/abstract_content_creation_visualization.png";
 import marketingImg from "@assets/generated_images/abstract_performance_marketing_growth.png";
-import kiAgentsImg from "@assets/generated_images/futuristic_digital_landscape_with_connecting_nodes.png";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/i18n";
 
-export const Services = memo(function Services() {
+export function Services() {
   const { t } = useLanguage();
 
   const services = [
-    {
-      title: t.servicesPage.kiAgents.title,
-      description: t.servicesPage.kiAgents.desc,
-      icon: Cpu,
-      image: kiAgentsImg,
-      color: "text-emerald-400",
-      href: "/ki-agenten"
-    },
     {
       title: t.servicesPage.brand.title,
       description: t.servicesPage.brand.desc,
@@ -70,22 +60,6 @@ export const Services = memo(function Services() {
       image: marketingImg,
       color: "text-orange-400",
       href: "/leistungen/marketing"
-    },
-    {
-      title: t.servicesPage.kiWebseiten?.title || "KI Webseiten",
-      description: t.servicesPage.kiWebseiten?.desc || "Moderne Websites mit integrierten KI-Features, Chatbots und automatischer SEO-Optimierung.",
-      icon: Sparkles,
-      image: webImg,
-      color: "text-secondary",
-      href: "/webseiten-ki"
-    },
-    {
-      title: t.servicesPage.referenzen?.title || "Referenzen",
-      description: t.servicesPage.referenzen?.desc || "Entdecken Sie unsere erfolgreich umgesetzten Projekte mit messbaren Ergebnissen.",
-      icon: Award,
-      image: brandImg,
-      color: "text-yellow-400",
-      href: "/referenzen"
     }
   ];
 
@@ -116,8 +90,6 @@ export const Services = memo(function Services() {
                         src={service.image} 
                         alt={service.title}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        loading="lazy"
-                        decoding="async"
                       />
                     ) : (
                       <div className="w-full h-full bg-gradient-to-br from-purple-900 to-pink-900 flex items-center justify-center">
@@ -145,4 +117,4 @@ export const Services = memo(function Services() {
       </div>
     </section>
   );
-});
+}

@@ -32,55 +32,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// Geo-based language detection (IP/Country → Language)
-app.use((req, res, next) => {
-  // Skip API routes and static assets
-  if (req.path.startsWith('/api') || req.path.includes('.')) {
-    return next();
-  }
-  
-  // Skip if language already set via query parameter
-  if (req.query.lang) {
-    return next();
-  }
-  
-  // Get country from various headers (CDN/Proxy headers)
-  const country = (
-    req.headers['cf-ipcountry'] ||           // Cloudflare
-    req.headers['x-country-code'] ||         // Various CDNs
-    req.headers['x-vercel-ip-country'] ||    // Vercel
-    req.headers['x-appengine-country'] ||    // Google App Engine
-    ''
-  ) as string;
-  
-  // Map country codes to languages
-  const countryToLang: Record<string, string> = {
-    'TR': 'tr',  // Turkey → Turkish
-    'HR': 'hr',  // Croatia → Croatian
-    'BA': 'hr',  // Bosnia → Croatian
-    'RS': 'hr',  // Serbia → Croatian (similar)
-    'SI': 'hr',  // Slovenia → Croatian (similar)
-    'DE': 'de',  // Germany → German
-    'AT': 'de',  // Austria → German
-    'CH': 'de',  // Switzerland → German
-    'US': 'en',  // USA → English
-    'GB': 'en',  // UK → English
-    'AU': 'en',  // Australia → English
-    'CA': 'en',  // Canada → English
-  };
-  
-  const detectedLang = countryToLang[country.toUpperCase()];
-  
-  // Only redirect if we detect a non-German language
-  // German is default, so no redirect needed
-  if (detectedLang && detectedLang !== 'de') {
-    const separator = req.url.includes('?') ? '&' : '?';
-    return res.redirect(302, `${req.url}${separator}lang=${detectedLang}`);
-  }
-  
-  next();
-});
-
 export function log(message: string, source = "express") {
   const formattedTime = new Date().toLocaleTimeString("en-US", {
     hour: "numeric",

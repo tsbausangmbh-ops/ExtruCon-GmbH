@@ -1,8 +1,7 @@
-import { memo } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { AlertCircle } from "lucide-react";
 
-function NotFound() {
+export default function NotFound() {
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-gray-50">
       <Card className="w-full max-w-md mx-4">
@@ -20,5 +19,3 @@ function NotFound() {
     </div>
   );
 }
-
-export default memo(NotFound);

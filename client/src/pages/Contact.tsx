@@ -1,63 +1,30 @@
-import { memo, useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Loader2, Calendar } from "lucide-react";
-import { Link } from "wouter";
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 
-function Contact() {
-  const { t, language } = useLanguage();
+export default function Contact() {
+  const { t } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsLoading(true);
-    setError(null);
-
-    const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get('name') as string,
-      company: formData.get('company') as string,
-      email: formData.get('email') as string,
-      phone: formData.get('phone') as string,
-      service: formData.get('service') as string,
-      message: formData.get('message') as string,
-      language
-    };
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      });
-
-      if (!response.ok) {
-        throw new Error('Fehler beim Senden');
-      }
-
-      setSubmitted(true);
-    } catch (err) {
-      setError('Es gab ein Problem beim Senden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.');
-    } finally {
-      setIsLoading(false);
-    }
+    setSubmitted(true);
   };
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Kontakt | KI-Agentur Fürstenfeldbruck München | ExtruCon GmbH"
-        description="Kontaktieren Sie ExtruCon GmbH - Ihre KI-Agentur in Fürstenfeldbruck bei München. Kostenlose Erstberatung zu KI-Agenten, Automatisierung und Webentwicklung. ☎ 089 444438879"
-        keywords="KI Agentur Kontakt Fürstenfeldbruck, KI Beratung München, Automatisierung Bayern, Chatbot Entwicklung, KI Unternehmen Deutschland, ExtruCon Kontakt"
+        title="Kontakt | KI-Beratung Fürstenfeldbruck | ExtruCon GmbH"
+        description="Kontaktieren Sie ExtruCon für KI-Beratung in Fürstenfeldbruck bei München. Kostenlose Erstberatung zu KI-Agenten und Automatisierung."
+        keywords="KI Beratung Kontakt, Fürstenfeldbruck, München, ExtruCon Kontakt"
         canonical="https://extrucon.de/kontakt"
       />
       <Navbar />
@@ -118,8 +85,7 @@ function Contact() {
                         <div>
                           <Label htmlFor="name" className="text-gray-300">{t.contactPage.nameLabel}</Label>
                           <Input 
-                            id="name"
-                            name="name"
+                            id="name" 
                             placeholder={t.contactPage.namePlaceholder} 
                             required
                             className="bg-white/5 border-white/10 text-white mt-1"
@@ -129,8 +95,7 @@ function Contact() {
                         <div>
                           <Label htmlFor="company" className="text-gray-300">{t.contactPage.companyLabel}</Label>
                           <Input 
-                            id="company"
-                            name="company"
+                            id="company" 
                             placeholder={t.contactPage.companyPlaceholder}
                             className="bg-white/5 border-white/10 text-white mt-1"
                             data-testid="input-company"
@@ -142,8 +107,7 @@ function Contact() {
                         <div>
                           <Label htmlFor="email" className="text-gray-300">{t.contactPage.emailLabel}</Label>
                           <Input 
-                            id="email"
-                            name="email"
+                            id="email" 
                             type="email" 
                             placeholder={t.contactPage.emailPlaceholder} 
                             required
@@ -154,8 +118,7 @@ function Contact() {
                         <div>
                           <Label htmlFor="phone" className="text-gray-300">{t.contactPage.phoneLabel}</Label>
                           <Input 
-                            id="phone"
-                            name="phone"
+                            id="phone" 
                             type="tel" 
                             placeholder={t.contactPage.phonePlaceholder}
                             className="bg-white/5 border-white/10 text-white mt-1"
@@ -168,7 +131,6 @@ function Contact() {
                         <Label htmlFor="service" className="text-gray-300">{t.contactPage.interestLabel}</Label>
                         <select 
                           id="service"
-                          name="service"
                           className="w-full mt-1 px-3 py-2 rounded-md bg-white/5 border border-white/10 text-white"
                           data-testid="select-service"
                         >
@@ -186,8 +148,7 @@ function Contact() {
                       <div>
                         <Label htmlFor="message" className="text-gray-300">{t.contactPage.messageLabel}</Label>
                         <Textarea 
-                          id="message"
-                          name="message"
+                          id="message" 
                           placeholder={t.contactPage.messagePlaceholder} 
                           rows={5}
                           required
@@ -200,25 +161,14 @@ function Contact() {
                         {t.contactPage.privacyText} <a href="/privacy" className="text-primary hover:underline">{t.contactPage.privacyLink}</a> {t.contactPage.privacyEnd}
                       </p>
                       
-                      {error && (
-                        <p className="text-red-400 text-sm p-3 rounded-lg bg-red-400/10 border border-red-400/20">
-                          {error}
-                        </p>
-                      )}
-
                       <Button 
                         type="submit" 
                         size="lg" 
                         className="w-full bg-primary hover:bg-primary/90 text-background font-bold"
                         data-testid="button-submit-contact"
-                        disabled={isLoading}
                       >
-                        {isLoading ? (
-                          <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                        ) : (
-                          <Send className="w-4 h-4 mr-2" />
-                        )}
-                        {isLoading ? 'Wird gesendet...' : t.contactPage.submitButton}
+                        <Send className="w-4 h-4 mr-2" />
+                        {t.contactPage.submitButton}
                       </Button>
                     </form>
                   )}
@@ -289,34 +239,6 @@ function Contact() {
                   </div>
               </motion.div>
             </div>
-
-            {/* Terminbuchung CTA - Volle Breite */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="mt-10"
-            >
-              <Link href="/terminbuchung" data-testid="link-book-appointment-contact">
-                <div className="p-8 rounded-2xl bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 hover:border-cyan-500/50 transition-all cursor-pointer group">
-                  <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
-                    <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center shadow-lg shadow-cyan-500/25 flex-shrink-0">
-                      <Calendar className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-sm text-gray-400 mb-1">{t.contact.directAppointment}</p>
-                      <h4 className="text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors">{t.footer.bookAppointment}</h4>
-                      <p className="text-gray-400 mt-2">Wählen Sie einen passenden Termin für Ihr kostenloses Erstgespräch</p>
-                    </div>
-                    <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/5 group-hover:bg-cyan-500/20 transition-colors flex-shrink-0">
-                      <svg className="w-6 h-6 text-cyan-400 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
           </div>
         </section>
 
@@ -394,5 +316,3 @@ function Contact() {
     </div>
   );
 }
-
-export default memo(Contact);

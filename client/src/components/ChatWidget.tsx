@@ -68,16 +68,16 @@ export function ChatWidget() {
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            className="fixed bottom-40 right-4 z-50 w-[380px] max-w-[calc(100vw-2rem)] bg-background/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden"
+            className="fixed bottom-[40%] right-4 z-50 w-[350px] max-w-[calc(100vw-2rem)] bg-background/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden"
           >
-            <div className="bg-gradient-to-r from-primary to-secondary p-5 flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                  <Bot className="w-6 h-6 text-white" />
+            <div className="bg-gradient-to-r from-primary to-secondary p-4 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                  <Bot className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-lg">ExtruCon AI</h3>
-                  <p className="text-white/70 text-sm">{t.hero?.available || "24/7 verfügbar"}</p>
+                  <h3 className="text-white font-bold text-sm">ExtruCon AI</h3>
+                  <p className="text-white/70 text-xs">{t.hero?.available || "24/7 verfügbar"}</p>
                 </div>
               </div>
               <button
@@ -89,7 +89,7 @@ export function ChatWidget() {
               </button>
             </div>
 
-            <div className="h-[400px] overflow-y-auto p-4 space-y-3">
+            <div className="h-[300px] overflow-y-auto p-4 space-y-3">
               {messages.length === 0 && (
                 <div className="text-center py-8">
                   <Bot className="w-12 h-12 text-primary/50 mx-auto mb-3" />
@@ -105,7 +105,7 @@ export function ChatWidget() {
                   className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
                 >
                   <div
-                    className={`max-w-[80%] p-4 rounded-xl text-base whitespace-pre-wrap ${
+                    className={`max-w-[80%] p-3 rounded-xl text-sm ${
                       message.role === "user"
                         ? "bg-primary text-background rounded-br-sm"
                         : "bg-white/10 text-white rounded-bl-sm"
@@ -127,25 +127,25 @@ export function ChatWidget() {
               <div ref={messagesEndRef} />
             </div>
 
-            <div className="p-4 border-t border-white/10">
-              <div className="flex gap-3">
+            <div className="p-3 border-t border-white/10">
+              <div className="flex gap-2">
                 <input
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder={t.chatbot?.placeholder || "Ihre Frage..."}
-                  className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-base placeholder:text-gray-500 focus:outline-none focus:border-primary/50"
+                  className="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-white text-sm placeholder:text-gray-500 focus:outline-none focus:border-primary/50"
                   disabled={isLoading}
                   data-testid="input-chat-widget"
                 />
                 <button
                   onClick={sendMessage}
                   disabled={!input.trim() || isLoading}
-                  className="px-4 py-3 bg-primary text-background rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-50"
+                  className="px-3 py-2 bg-primary text-background rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-50"
                   data-testid="button-send-widget"
                 >
-                  <Send className="w-5 h-5" />
+                  <Send className="w-4 h-4" />
                 </button>
               </div>
             </div>
@@ -153,19 +153,19 @@ export function ChatWidget() {
         )}
       </AnimatePresence>
 
-      <div className="fixed bottom-48 right-4 z-50 flex items-center gap-3">
+      <div className="fixed bottom-1/3 right-4 z-50 flex items-center gap-3">
         {!isOpen && (
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-green-500/20 backdrop-blur-md border border-green-400/30 rounded-full px-5 py-3 text-base text-white shadow-lg"
+            className="bg-green-500/20 backdrop-blur-md border border-green-400/30 rounded-full px-4 py-2 text-sm text-white shadow-lg"
           >
-            <span className="font-semibold">{t.chatbot?.bubble || "Fragen? KI-Bot hilft!"}</span>
+            <span className="font-medium">{t.chatbot?.bubble || "Fragen? KI-Bot hilft!"}</span>
           </motion.div>
         )}
         <motion.button
           onClick={() => setIsOpen(!isOpen)}
-          className="w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform ring-4 ring-primary/30"
+          className="w-14 h-14 bg-gradient-to-r from-primary to-secondary rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           data-testid="button-chat-widget"
@@ -178,7 +178,7 @@ export function ChatWidget() {
                 animate={{ rotate: 0, opacity: 1 }}
                 exit={{ rotate: 90, opacity: 0 }}
               >
-                <X className="w-9 h-9 text-white" />
+                <X className="w-6 h-6 text-white" />
               </motion.div>
             ) : (
               <motion.div
@@ -187,7 +187,7 @@ export function ChatWidget() {
                 animate={{ rotate: 0, opacity: 1 }}
                 exit={{ rotate: -90, opacity: 0 }}
               >
-                <MessageCircle className="w-9 h-9 text-white" />
+                <MessageCircle className="w-6 h-6 text-white" />
               </motion.div>
             )}
           </AnimatePresence>

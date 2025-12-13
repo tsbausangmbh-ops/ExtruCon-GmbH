@@ -1,7 +1,7 @@
-import { memo, useState, useRef, useEffect } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
+import { useState, useRef, useEffect } from "react";
 import { Send, Bot, User, Loader2, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/lib/i18n";
@@ -11,7 +11,7 @@ interface Message {
   content: string;
 }
 
-function Chatbot() {
+export default function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -205,5 +205,3 @@ function Chatbot() {
     </div>
   );
 }
-
-export default memo(Chatbot);

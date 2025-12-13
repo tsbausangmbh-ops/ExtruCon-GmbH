@@ -1,4 +1,3 @@
-import { memo } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
@@ -8,9 +7,8 @@ import { Problem } from "@/components/sections/Problem";
 import { About } from "@/components/sections/About";
 import { Contact } from "@/components/sections/Contact";
 import { SEOHead } from "@/components/SEOHead";
-import { KIWebseitenHighlight } from "@/components/sections/KIWebseitenHighlight";
 
-function Home() {
+export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden font-sans">
       <SEOHead
@@ -26,8 +24,6 @@ function Home() {
         <Problem />
         {/* Funnel Logic: 2. The System/Solution */}
         <Funnel />
-        {/* KI Webseiten Highlight */}
-        <KIWebseitenHighlight />
         {/* Funnel Logic: 3. The Execution Tools (Services) */}
         <Services />
         {/* About Section */}
@@ -39,5 +35,3 @@ function Home() {
     </div>
   );
 }
-
-export default memo(Home);

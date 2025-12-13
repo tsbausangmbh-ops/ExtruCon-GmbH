@@ -1,11 +1,10 @@
-import { memo } from "react";
 import { motion } from "framer-motion";
 import funnelImg from "@assets/generated_images/futuristic_digital_marketing_funnel.png";
 import { MapPin, Search, Users, TrendingUp, Target, Zap, CheckCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/lib/i18n";
 
-export const Funnel = memo(function Funnel() {
+export function Funnel() {
   const { t } = useLanguage();
 
   return (
@@ -38,8 +37,6 @@ export const Funnel = memo(function Funnel() {
                 src={funnelImg} 
                 alt="Digital Marketing Funnel - SEO und Geo-Targeting System" 
                 className="w-full h-auto object-cover"
-                loading="lazy"
-                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
               
@@ -169,4 +166,4 @@ export const Funnel = memo(function Funnel() {
       </div>
     </section>
   );
-});
+}

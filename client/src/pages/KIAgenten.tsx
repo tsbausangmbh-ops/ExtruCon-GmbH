@@ -1,4 +1,3 @@
-import { memo, useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
@@ -6,6 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Bot, Zap, MessageSquare, BarChart3, Clock, Shield, Sparkles, ArrowRight, CheckCircle, Brain, Workflow, Users, Mail, Calendar, FileText, ShoppingCart, Headphones, TrendingUp, Settings, Database, Globe, Cpu, Lock, RefreshCw, HelpCircle, ChevronDown } from "lucide-react";
+import { useState } from "react";
 import { useLanguage } from "@/lib/i18n";
 
 const agentIcons = [MessageSquare, BarChart3, Workflow, Brain, Mail, Calendar, ShoppingCart, FileText];
@@ -23,7 +23,7 @@ const agentColors = [
 const benefitIcons = [Clock, Zap, Shield, Users, TrendingUp, Database];
 const useCaseIcons = [Headphones, TrendingUp, Settings];
 
-function KIAgenten() {
+export default function KIAgenten() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const { t } = useLanguage();
 
@@ -508,5 +508,3 @@ function KIAgenten() {
     </div>
   );
 }
-
-export default memo(KIAgenten);

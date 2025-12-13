@@ -1,8 +1,8 @@
-import { memo, useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import { BookOpen, Clock, ArrowRight, Search, Bot, Share2, Globe, TrendingUp, Sparkles, Mail, Lightbulb } from "lucide-react";
+import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
@@ -77,7 +77,7 @@ const categoryColors = {
   web: "text-blue-400",
 };
 
-function Ratgeber() {
+export default function Ratgeber() {
   const { t } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
@@ -339,5 +339,3 @@ function Ratgeber() {
     </div>
   );
 }
-
-export default memo(Ratgeber);
