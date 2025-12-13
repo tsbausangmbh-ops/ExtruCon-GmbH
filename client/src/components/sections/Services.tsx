@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Bot, Share2, Globe, PenTool, Fingerprint, TrendingUp, Search } from "lucide-react";
+import { Bot, Share2, Globe, PenTool, Fingerprint, TrendingUp, Search, Award, HelpCircle } from "lucide-react";
 import aiImg from "@assets/generated_images/glowing_neural_network_brain.png";
 import socialImg from "@assets/generated_images/digital_social_connection_abstract_art.png";
 import webImg from "@assets/generated_images/holographic_creative_interface.png";
@@ -69,6 +69,22 @@ export function Services() {
       image: seoImg,
       color: "text-green-400",
       href: "/leistungen/seo"
+    },
+    {
+      title: "Referenzen",
+      description: "Überzeugen Sie sich von unseren erfolgreichen Projekten und zufriedenen Kunden",
+      icon: Award,
+      image: null,
+      color: "text-yellow-400",
+      href: "/referenzen"
+    },
+    {
+      title: "FAQ",
+      description: "Antworten auf häufig gestellte Fragen zu unseren Leistungen und Prozessen",
+      icon: HelpCircle,
+      image: null,
+      color: "text-violet-400",
+      href: "/faq"
     }
   ];
 
