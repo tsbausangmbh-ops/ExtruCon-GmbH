@@ -225,62 +225,6 @@ Am Ende freundlich anbieten: „Wenn Sie möchten, fasse ich Ihnen alles kurz zu
         `
       });
 
-      // 2. Confirmation email to customer
-      const confirmationTemplates: Record<string, { subject: string; greeting: string; body: string; closing: string }> = {
-        de: {
-          subject: 'Ihre Anfrage bei ExtruCon GmbH - Bestätigung',
-          greeting: `Guten Tag ${name},`,
-          body: `vielen Dank für Ihre Kontaktanfrage! Wir haben Ihre Nachricht erhalten und werden uns schnellstmöglich bei Ihnen melden – in der Regel innerhalb von 24 Stunden an Werktagen.`,
-          closing: 'Mit freundlichen Grüßen,\nIhr ExtruCon Team'
-        },
-        en: {
-          subject: 'Your inquiry at ExtruCon GmbH - Confirmation',
-          greeting: `Hello ${name},`,
-          body: `Thank you for your contact request! We have received your message and will get back to you as soon as possible – usually within 24 hours on business days.`,
-          closing: 'Best regards,\nYour ExtruCon Team'
-        },
-        hr: {
-          subject: 'Vaš upit kod ExtruCon GmbH - Potvrda',
-          greeting: `Poštovani ${name},`,
-          body: `Hvala vam na vašem upitu! Primili smo vašu poruku i javit ćemo vam se što je prije moguće – obično unutar 24 sata radnim danom.`,
-          closing: 'S poštovanjem,\nVaš ExtruCon tim'
-        },
-        tr: {
-          subject: 'ExtruCon GmbH\'deki talebiniz - Onay',
-          greeting: `Sayın ${name},`,
-          body: `İletişim talebiniz için teşekkür ederiz! Mesajınızı aldık ve en kısa sürede size geri döneceğiz – genellikle iş günlerinde 24 saat içinde.`,
-          closing: 'Saygılarımızla,\nExtruCon Ekibiniz'
-        }
-      };
-
-      const template = confirmationTemplates[language] || confirmationTemplates.de;
-
-      await transporter.sendMail({
-        from: fromEmail,
-        to: email,
-        subject: template.subject,
-        html: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-            <div style="text-align: center; margin-bottom: 30px;">
-              <img src="https://extrucon.de/logo.png" alt="ExtruCon GmbH" style="max-width: 200px; height: auto;">
-            </div>
-            <p style="font-size: 16px;">${template.greeting}</p>
-            <p style="font-size: 16px; line-height: 1.6;">${template.body}</p>
-            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
-              <p style="margin: 0; font-size: 14px; color: #666;"><strong>Ihre Nachricht:</strong></p>
-              <p style="margin: 10px 0 0; font-size: 14px;">${message.replace(/\n/g, '<br>')}</p>
-            </div>
-            <p style="font-size: 16px; white-space: pre-line;">${template.closing}</p>
-            <hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;">
-            <p style="font-size: 12px; color: #999; text-align: center;">
-              ExtruCon GmbH · Hasenheide 8 · 82256 Fürstenfeldbruck<br>
-              <a href="mailto:info@extrucon.de" style="color: #00d4ff;">info@extrucon.de</a> · 
-              <a href="tel:+4989444438879" style="color: #00d4ff;">089 444438879</a>
-            </p>
-          </div>
-        `
-      });
-
       res.json({ success: true });
     } catch (error: any) {
       console.error("Contact form error:", error);
