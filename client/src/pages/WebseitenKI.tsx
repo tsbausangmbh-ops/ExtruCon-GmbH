@@ -17,9 +17,9 @@ export default function WebseitenKI() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead 
-        title="Webseiten mit KI-Features | ExtruCon Fürstenfeldbruck – Chatbots & SEO"
-        description="Moderne Websites mit integrierten KI-Features: Chatbots, automatische Content-Erstellung, intelligente SEO. Webentwicklung aus Fürstenfeldbruck – deutschlandweit."
-        keywords="Webseiten mit KI, Website Chatbot, KI Content, SEO Automatisierung, Webentwicklung München, React Website"
+        title="KI-Webseiten & Chatbots erstellen lassen | Webentwicklung Fürstenfeldbruck & München"
+        description="Professionelle Webseiten mit KI-Chatbots, NLP & automatischer Lead-Generierung. Webentwicklung aus Fürstenfeldbruck bei München – für Handwerker, Ärzte & Unternehmen in Bayern."
+        keywords="KI Webseite erstellen, Website mit Chatbot, Webentwicklung Fürstenfeldbruck, Webdesign München, KI Website Bayern, Chatbot für Website, NLP Webseite, Lead-Generierung Website, Webseite für Handwerker München, KI Agentur Bayern"
       />
       <Navbar />
       <main className="pt-24">
@@ -76,7 +76,7 @@ export default function WebseitenKI() {
             >
               <div className="text-center mb-6">
                 <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                  Kennen Sie das auch?
+                  Kennen Sie das auch? – Typische Probleme von Unternehmen in München & Bayern
                 </h2>
                 <p className="text-gray-400 text-lg max-w-2xl mx-auto">
                   Viele Unternehmer kämpfen täglich mit denselben Problemen. Sie sind nicht allein.
@@ -181,7 +181,7 @@ export default function WebseitenKI() {
                 Live Projekte
               </div>
               <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
-                Unsere KI-Webseiten Referenzen
+                KI-Webseiten Referenzen aus München, Fürstenfeldbruck & Bayern
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto text-lg">
                 Entdecken Sie unsere erfolgreich umgesetzten Projekte – jedes mit integrierten KI-Features, NLP-Chatbots und messbaren Ergebnissen.
@@ -294,7 +294,7 @@ export default function WebseitenKI() {
                   Natural Language Processing
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
-                  KI-Webseiten mit NLP: Ihr digitaler Problemlöser
+                  KI-Webseiten mit NLP-Chatbot – Ihre digitale Kundenbetreuung aus Fürstenfeldbruck
                 </h2>
                 <p className="text-gray-400 max-w-3xl mx-auto text-lg">
                   Unsere Webseiten verstehen Ihre Kunden – dank modernster NLP-Technologie (Natural Language Processing) 
@@ -390,7 +390,7 @@ export default function WebseitenKI() {
               className="text-center mb-6"
             >
               <h2 className="text-3xl font-bold font-display text-white mb-4">
-                So löst Ihre KI-Website Kundenprobleme
+                So löst Ihre KI-Website Kundenprobleme – Beispiele aus München & Umgebung
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
                 Echte Beispiele aus unseren Projekten – sehen Sie, wie NLP im Alltag funktioniert.
@@ -508,7 +508,7 @@ export default function WebseitenKI() {
               className="max-w-3xl mx-auto text-center"
             >
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                Investieren Sie in Ihre Zukunft – nicht in ein Problem
+                Webseiten-Preise transparent: KI-Websites für Unternehmen in Bayern
               </h2>
               <p className="text-gray-400 text-lg mb-6">
                 <strong className="text-white">Wir wissen:</strong> Eine Website ist eine Investition. Deshalb ist es uns wichtig, 
@@ -652,7 +652,7 @@ export default function WebseitenKI() {
               className="max-w-4xl mx-auto"
             >
               <h2 className="text-3xl font-bold font-display text-white mb-6 text-center">
-                Warum KI-Webseiten die Zukunft sind
+                Warum KI-Webseiten die Zukunft für Unternehmen in München & Fürstenfeldbruck sind
               </h2>
               <div className="prose prose-invert max-w-none">
                 <p className="text-gray-300 text-lg mb-4">
