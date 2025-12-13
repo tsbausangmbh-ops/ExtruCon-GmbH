@@ -4,8 +4,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
-import { Mail, Globe, Phone, Send, CheckCircle } from "lucide-react";
+import { Mail, Globe, Phone, Send, CheckCircle, Calendar } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
+import { Link } from "wouter";
 
 export const Contact = memo(function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -60,6 +61,18 @@ export const Contact = memo(function Contact() {
                   <a href="https://extrucon.de" target="_blank" rel="noopener noreferrer" className="font-medium hover:text-primary transition-colors">https://extrucon.de</a>
                 </div>
               </div>
+
+              <Link href="/terminbuchung" data-testid="link-book-appointment">
+                <div className="flex items-center gap-4 text-gray-300 p-4 -m-4 rounded-xl hover:bg-white/5 transition-all cursor-pointer group">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 flex items-center justify-center border border-cyan-500/30 group-hover:border-cyan-500/50 transition-colors">
+                    <Calendar className="w-5 h-5 text-cyan-400" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-500">{t.contact.directAppointment || 'Direkt-Termin'}</p>
+                    <span className="font-medium text-cyan-400 group-hover:text-cyan-300 transition-colors">{t.footer.bookAppointment}</span>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
 
