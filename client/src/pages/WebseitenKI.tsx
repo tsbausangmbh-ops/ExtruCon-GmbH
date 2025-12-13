@@ -655,23 +655,139 @@ export default function WebseitenKI() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="py-16 bg-gradient-to-r from-secondary/10 to-primary/10 border-y border-white/10">
-          <div className="container mx-auto px-4 text-center">
-            <Sparkles className="w-12 h-12 text-secondary mx-auto mb-4" />
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              {t.webKIPage.ctaTitle}
-            </h2>
-            <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-              {t.webKIPage.ctaSubtitle}
-            </p>
-            <a 
-              href="/kontakt" 
-              className="inline-flex items-center gap-2 px-8 py-4 bg-secondary text-background font-bold rounded-lg hover:bg-secondary/90 transition-colors text-lg"
-              data-testid="button-webseiten-contact"
-            >
-              {t.webKIPage.ctaPrimary} <ArrowRight className="w-5 h-5" />
-            </a>
+        {/* CTA - Erweitert */}
+        <section className="py-20 bg-gradient-to-b from-secondary/10 via-primary/5 to-background border-y border-white/10">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-center mb-12"
+              >
+                <Sparkles className="w-14 h-14 text-secondary mx-auto mb-6" />
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  Bereit für Ihre neue KI-Website?
+                </h2>
+                <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
+                  Lassen Sie uns besprechen, wie wir Ihre Online-Präsenz mit KI auf das nächste Level bringen.
+                </p>
+              </motion.div>
+
+              <div className="grid md:grid-cols-3 gap-6 mb-12">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
+                  className="p-6 bg-white/5 rounded-xl border border-white/10 text-center"
+                >
+                  <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-400" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">Kostenlose Erstberatung</h3>
+                  <p className="text-gray-400 text-sm">
+                    30 Minuten persönliches Gespräch. Wir analysieren Ihre Anforderungen und zeigen Möglichkeiten auf.
+                  </p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className="p-6 bg-white/5 rounded-xl border border-white/10 text-center"
+                >
+                  <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mx-auto mb-4">
+                    <FileText className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">Individuelles Angebot</h3>
+                  <p className="text-gray-400 text-sm">
+                    Maßgeschneidertes Konzept mit transparenten Preisen. Keine versteckten Kosten.
+                  </p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 }}
+                  className="p-6 bg-white/5 rounded-xl border border-white/10 text-center"
+                >
+                  <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-4">
+                    <Zap className="w-6 h-6 text-secondary" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">Schnelle Umsetzung</h3>
+                  <p className="text-gray-400 text-sm">
+                    Von der Idee zur fertigen KI-Website in 2-4 Wochen. Inkl. Training und Support.
+                  </p>
+                </motion.div>
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-r from-secondary/20 to-primary/20 rounded-2xl p-8 border border-secondary/30"
+              >
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-4">
+                      Was Sie erwartet:
+                    </h3>
+                    <ul className="space-y-3">
+                      {[
+                        "Persönliche Beratung durch KI-Experten",
+                        "Analyse Ihrer aktuellen Website & Konkurrenz",
+                        "Konzept für Ihren individuellen KI-Chatbot",
+                        "ROI-Berechnung: Was bringt Ihnen die KI-Website?",
+                        "Zeitplan und Meilensteine für Ihr Projekt"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                          <span className="text-gray-300">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-gray-400 mb-4">Jetzt unverbindlich anfragen</p>
+                    <a 
+                      href="/kontakt" 
+                      className="inline-flex items-center gap-2 px-8 py-4 bg-secondary text-background font-bold rounded-lg hover:bg-secondary/90 transition-colors text-lg shadow-lg shadow-secondary/20"
+                      data-testid="button-webseiten-contact"
+                    >
+                      Projekt starten <ArrowRight className="w-5 h-5" />
+                    </a>
+                    <p className="text-gray-500 text-sm mt-4">
+                      Oder rufen Sie an: <a href="tel:+4981419528080" className="text-secondary hover:underline">08141 9528080</a>
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <div className="mt-10 text-center">
+                <p className="text-gray-500 text-sm mb-4">Vertrauen Sie auf unsere Erfahrung:</p>
+                <div className="flex flex-wrap justify-center gap-8">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-white">50+</div>
+                    <div className="text-gray-500 text-xs">Projekte</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-white">100%</div>
+                    <div className="text-gray-500 text-xs">Kundenzufriedenheit</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-white">5★</div>
+                    <div className="text-gray-500 text-xs">Google Bewertung</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-white">Bayern</div>
+                    <div className="text-gray-500 text-xs">Standort FFB</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
