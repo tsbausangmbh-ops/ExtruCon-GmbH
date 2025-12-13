@@ -3711,16 +3711,40 @@ export const translations = {
       ],
     },
     socialMediaPage: {
-      heroTitle: 'Sosyal Medya',
-      heroSubtitle: 'AI destekli sosyal medya yönetimi',
-      heroDescription: 'Marka bilinirliğinizi artırın ve hedef kitlenizle etkileşimi güçlendirin.',
-      features: 'Özellikler',
-      benefits: 'Avantajlar',
-      pricing: 'Fiyatlandırma',
-      ctaTitle: 'Hemen Başlayın',
-      ctaSubtitle: 'Sosyal medya stratejinizi bir üst seviyeye taşıyın.',
-      ctaButton: 'Ücretsiz Danışmanlık',
-      ctaButtonAlt: 'Projeye Başla',
+      heroImageAlt: 'Sosyal Medya Ajansı Türkiye Geneli',
+      badge: 'Türkiye Geneli Sosyal Medya Ajansı',
+      title: 'Türkiye Geneli Sosyal Medya Pazarlama',
+      subtitle: 'Stratejik topluluk yönetimi, viral kampanyalar ve profesyonel içerik üretimi. İşletmenizi Instagram, TikTok, LinkedIn ve Facebook\'ta görünür kılıyoruz.',
+      ctaButton: 'Ücretsiz Sosyal Medya Analizi',
+      servicesTitle: 'Sosyal Medya Hizmetleri',
+      servicesSubtitle: 'Türkiye genelinde işletmeler için tam kapsamlı sosyal medya pazarlama.',
+      services: [
+        { title: 'Sosyal Medya Stratejisi', desc: 'Hedeflerinize ve hedef kitlenize dayalı bireysel strateji – Türkiye genelinde.' },
+        { title: 'İçerik Üretimi', desc: 'Maksimum erişim için profesyonelce üretilen yaratıcı paylaşımlar, hikayeler, reels ve videolar.' },
+        { title: 'Topluluk Yönetimi', desc: 'Zamanında yanıtlar ve etkileşim artırma ile topluluğunuzun aktif yönetimi.' },
+        { title: 'Influencer Pazarlama', desc: 'Otantik erişim için uygun influencerlarla iş birliği.' },
+        { title: 'Ücretli Sosyal Reklamlar', desc: 'Daha fazla potansiyel müşteri için Meta, TikTok ve LinkedIn\'de hedefli reklam kampanyaları.' },
+        { title: 'Raporlama & Analytics', desc: 'Kanallarınızın performansı, erişimi ve büyümesi hakkında aylık raporlar.' }
+      ],
+      platformsTitle: 'Yönettiğimiz Platformlar',
+      benefitsTitle: 'Sosyal Medya Ajansı Olarak Avantajlarımız',
+      benefits: [
+        'Tüm ilgili platformlarda profesyonel varlık',
+        'Büyüyen topluluk ve daha yüksek etkileşim oranları',
+        'Markanız için daha fazla erişim ve görünürlük',
+        'Hedef kitlenizle doğrudan bağlantı',
+        'Ölçülebilir sonuçlar ve şeffaf aylık raporlar'
+      ],
+      faqTitle: 'Sosyal Medya Pazarlama Hakkında Sık Sorulan Sorular',
+      faqs: [
+        { q: 'Sosyal medya pazarlama ne kadar tutar?', a: 'Paketlerimiz tek kanal yönetimi için aylık 790€\'dan başlar. İçerik üretimi dahil tam kapsamlı çoklu kanal stratejileri aylık 1.490€\'dan başlar.' },
+        { q: 'Sosyal medyada ne sıklıkla paylaşım yapılmalı?', a: 'Bu platforma bağlıdır. Instagram için haftada 3-5 paylaşım ve günlük hikayeler öneriyoruz. LinkedIn için haftada 2-3 kaliteli paylaşım yeterlidir.' },
+        { q: 'İşletmem için hangi platform en uygun?', a: 'Bunu ücretsiz ilk görüşmede analiz ediyoruz. B2B işletmeleri genellikle LinkedIn\'den, yerel hizmet sağlayıcıları Instagram ve Google Business\'tan faydalanır.' },
+        { q: 'İçerikleri siz mi oluşturuyorsunuz?', a: 'Evet! Metinler, grafikler, fotoğraflar ve videolar dahil tüm içerik üretimini üstleniyoruz. İstek üzerine yerinde çekimler de yapıyoruz.' }
+      ],
+      ctaTitle: 'Sosyal medya başarısı için hazır mısınız?',
+      ctaSubtitle: 'Sosyal medya varlığınızı bir üst seviyeye taşıyalım. Ücretsiz ilk analiz!',
+      ctaButtonAlt: 'Şimdi sosyal medya danışmanlığı başlat'
     },
     contentPage: {
       badge: 'Hizmet',
@@ -3749,16 +3773,31 @@ export const translations = {
       ctaButtonAlt: 'Şimdi projeye başla'
     },
     marketingPage: {
-      heroTitle: 'Performans Pazarlama',
-      heroSubtitle: 'Veri odaklı pazarlama stratejileri',
-      heroDescription: 'AI optimizasyonlu kampanyalarla ROI\'nizi maksimize edin.',
-      features: 'Özellikler',
-      benefits: 'Avantajlar',
-      pricing: 'Fiyatlandırma',
-      ctaTitle: 'Hemen Başlayın',
-      ctaSubtitle: 'Pazarlama performansınızı artırın.',
+      badge: 'Performans',
+      title: 'Performans Pazarlama',
+      subtitle: 'Ölçülebilir büyüme, maksimum görünürlük ve gerçek iş sonuçları için veri odaklı kampanyalar ve SEO stratejileri.',
       ctaButton: 'Ücretsiz Danışmanlık',
-      ctaButtonAlt: 'Projeye Başla',
+      servicesTitle: 'Sizin için neler yapıyoruz',
+      services: [
+        { title: 'Google Ads', desc: 'Hedefli erişim için arama motoru ve görüntülü reklamlar.' },
+        { title: 'Meta Ads', desc: 'Hedef kitleniz için Facebook ve Instagram reklamları.' },
+        { title: 'SEO Optimizasyonu', desc: 'Organik büyüme için sürdürülebilir arama motoru optimizasyonu.' },
+        { title: 'Dönüşüm Optimizasyonu', desc: 'Daha yüksek dönüşüm oranları için A/B testleri ve optimizasyon.' },
+        { title: 'Analytics & Tracking', desc: 'Hassas takip ve veri odaklı kararlar.' },
+        { title: 'Retargeting', desc: 'İlgili kişileri yeniden hedefleyip müşteriye dönüştürün.' }
+      ],
+      channelsTitle: 'Kanallarımız',
+      benefitsTitle: 'Avantajlarınız',
+      benefits: [
+        'Ölçülebilir sonuçlar ve şeffaf ROI hesaplaması',
+        'İdeal müşterilerinizi hedefli yaklaşım',
+        'Maksimum verimlilik için sürekli optimizasyon',
+        'Daha fazla nitelikli potansiyel müşteri ve sorgu',
+        'Sürdürülebilir büyüme için ölçeklenebilir kampanyalar'
+      ],
+      ctaTitle: 'Ölçülebilir büyüme için hazır mısınız?',
+      ctaSubtitle: 'Gerçek sonuçlar sunan veri odaklı kampanyalar başlatalım.',
+      ctaButtonAlt: 'Şimdi projeye başla'
     },
     brandPage: {
       badge: 'Hizmet',
@@ -3787,16 +3826,32 @@ export const translations = {
       ctaButtonAlt: 'Şimdi projeye başla'
     },
     webPage: {
-      heroTitle: 'Web Geliştirme',
-      heroSubtitle: 'Modern web çözümleri',
-      heroDescription: 'Hızlı, güvenli ve ölçeklenebilir web uygulamaları geliştiriyoruz.',
-      features: 'Özellikler',
-      benefits: 'Avantajlar',
-      pricing: 'Fiyatlandırma',
-      ctaTitle: 'Hemen Başlayın',
-      ctaSubtitle: 'Web projenizi hayata geçirin.',
+      heroImageAlt: 'Web Geliştirme Ajansı',
+      badge: 'Hizmet',
+      title: 'Web & Dijital Platformlar',
+      subtitle: 'Modern web için yüksek performanslı, görsel olarak etkileyici web siteleri ve web uygulamaları – duyarlı, hızlı ve kullanıcı dostu.',
       ctaButton: 'Ücretsiz Danışmanlık',
-      ctaButtonAlt: 'Projeye Başla',
+      servicesTitle: 'Sizin için neler yapıyoruz',
+      services: [
+        { title: 'Kurumsal Web Siteleri', desc: 'Modern tasarımlı profesyonel şirket web siteleri.' },
+        { title: 'E-Ticaret & Mağazalar', desc: 'Dijital işletmeniz için güçlü online mağazalar.' },
+        { title: 'Landing Page\'ler', desc: 'Kampanyalar ve ürünler için dönüşüm odaklı sayfalar.' },
+        { title: 'Web Uygulamaları', desc: 'Bireysel işlevselliğe sahip karmaşık web uygulamaları.' },
+        { title: 'CMS & Blog Sistemleri', desc: 'Kolay yönetilebilir içerik yönetim çözümleri.' },
+        { title: 'Bakım & Destek', desc: 'Sürekli bakım, güncellemeler ve teknik destek.' }
+      ],
+      techTitle: 'Teknolojilerimiz',
+      benefitsTitle: 'Avantajlarınız',
+      benefits: [
+        'Tüm cihazlar için modern, duyarlı tasarımlar',
+        'Daha iyi kullanıcı deneyimi için hızlı yükleme süreleri',
+        'Daha fazla görünürlük için SEO optimize yapı',
+        'WCAG standartlarına uygun erişilebilir tasarım',
+        'Güvenli ve bakımı kolay teknolojiler'
+      ],
+      ctaTitle: 'Yeni web siteniz için hazır mısınız?',
+      ctaSubtitle: 'Müşterilerinizi heyecanlandıran bir dijital varlık oluşturalım.',
+      ctaButtonAlt: 'Şimdi projeye başla'
     },
     legalPages: {
       impressumTitle: 'Yasal Bildirim',
