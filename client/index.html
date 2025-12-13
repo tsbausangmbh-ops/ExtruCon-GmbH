@@ -76,35 +76,57 @@
       "location": [
         {
           "@type": "Place",
-          "name": "ExtruCon Hauptsitz Deutschland",
+          "name": "ExtruCon Hauptsitz München",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Hasenheide 8",
-            "addressLocality": "Fürstenfeldbruck",
-            "postalCode": "82256",
+            "addressLocality": "München",
             "addressRegion": "Bayern",
             "addressCountry": "DE"
-          }
+          },
+          "geo": {"@type": "GeoCoordinates", "latitude": "48.1351", "longitude": "11.5820"}
         },
         {
           "@type": "Place",
-          "name": "ExtruCon Niederlassung Kroatien",
+          "name": "ExtruCon Niederlassung Berlin",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Berlin",
+            "addressCountry": "DE"
+          },
+          "geo": {"@type": "GeoCoordinates", "latitude": "52.5200", "longitude": "13.4050"}
+        },
+        {
+          "@type": "Place",
+          "name": "ExtruCon Niederlassung Zagreb",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Zagreb",
             "addressRegion": "Grad Zagreb",
             "addressCountry": "HR"
-          }
+          },
+          "geo": {"@type": "GeoCoordinates", "latitude": "45.8150", "longitude": "15.9819"}
         },
         {
           "@type": "Place",
-          "name": "ExtruCon Niederlassung Türkei",
+          "name": "ExtruCon Niederlassung Antalya",
           "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Antalya/Alanya",
+            "addressLocality": "Antalya",
             "addressRegion": "Antalya",
             "addressCountry": "TR"
-          }
+          },
+          "geo": {"@type": "GeoCoordinates", "latitude": "36.8969", "longitude": "30.7133"}
+        },
+        {
+          "@type": "Place",
+          "name": "ExtruCon Niederlassung Alanya",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Alanya",
+            "addressRegion": "Antalya",
+            "addressCountry": "TR"
+          },
+          "geo": {"@type": "GeoCoordinates", "latitude": "36.5434", "longitude": "32.0005"}
         }
       ],
       "contactPoint": [
@@ -146,38 +168,36 @@
     }
     </script>
 
-    <!-- Structured Data: ProfessionalService (Hauptsitz Deutschland) -->
+    <!-- Structured Data: ProfessionalService (Hauptsitz München) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "@id": "https://extrucon.de/#profservice",
-      "name": "ExtruCon GmbH - KI-Agentur Fürstenfeldbruck",
-      "alternateName": ["ExtruCon", "ExtruCon KI-Agentur", "ExtruCon Automatisierung"],
+      "name": "ExtruCon GmbH - KI-Agentur München",
+      "alternateName": ["ExtruCon", "ExtruCon KI-Agentur", "ExtruCon Automatisierung", "ExtruCon München"],
       "image": ["https://extrucon.de/logo.png", "https://extrucon.de/og-image.png"],
-      "description": "KI-Agentur für Automatisierung, KI-Agenten und digitales Marketing. Wir helfen Unternehmen in Deutschland, Kroatien und der Türkei, mit intelligenten Workflows Zeit zu sparen und mehr Kunden zu gewinnen.",
+      "description": "KI-Agentur für Automatisierung, KI-Agenten und digitales Marketing. Mit Niederlassungen in München, Berlin, Zagreb, Antalya und Alanya helfen wir Unternehmen in Deutschland, Kroatien und der Türkei.",
       "url": "https://extrucon.de",
       "telephone": "+4989444438879",
       "email": "info@extrucon.de",
       "priceRange": "€€-€€€",
       "currenciesAccepted": "EUR, HRK, TRY",
       "paymentAccepted": ["Überweisung", "PayPal", "Kreditkarte"],
-      "hasMap": "https://www.google.com/maps?q=48.1789,11.2546",
+      "hasMap": "https://www.google.com/maps?q=48.1351,11.5820",
       "isAccessibleForFree": false,
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Hasenheide 8",
-        "addressLocality": "Fürstenfeldbruck",
-        "postalCode": "82256",
+        "addressLocality": "München",
         "addressRegion": "Bayern",
         "addressCountry": "DE",
         "areaServed": "DE"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "48.1789",
-        "longitude": "11.2546",
-        "name": "ExtruCon Hauptsitz Fürstenfeldbruck"
+        "latitude": "48.1351",
+        "longitude": "11.5820",
+        "name": "ExtruCon Hauptsitz München"
       },
       "areaServed": [
         {
@@ -226,7 +246,7 @@
         {"@type": "Country", "name": "Türkiye", "alternateName": "Turkey", "sameAs": "https://www.wikidata.org/wiki/Q43"},
         {"@type": "State", "name": "Bayern", "sameAs": "https://www.wikidata.org/wiki/Q980"},
         {"@type": "City", "name": "München", "sameAs": "https://www.wikidata.org/wiki/Q1726"},
-        {"@type": "City", "name": "Fürstenfeldbruck", "sameAs": "https://www.wikidata.org/wiki/Q507486"}
+        {"@type": "City", "name": "Berlin", "sameAs": "https://www.wikidata.org/wiki/Q64"}
       ],
       "openingHoursSpecification": [
         {
@@ -249,6 +269,42 @@
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Webseiten mit KI-Features"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Social Media Marketing"}}
       ]
+    }
+    </script>
+
+    <!-- Structured Data: Niederlassung Berlin -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://extrucon.de/#location-berlin",
+      "name": "ExtruCon GmbH - Niederlassung Berlin",
+      "alternateName": ["ExtruCon Berlin"],
+      "description": "KI-Agentur und Automatisierungsexperten für Nord- und Ostdeutschland.",
+      "url": "https://extrucon.de",
+      "telephone": "+4989444438879",
+      "email": "info@extrucon.de",
+      "priceRange": "€€-€€€",
+      "parentOrganization": {"@type": "Organization", "@id": "https://extrucon.de/#organization"},
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Berlin",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "52.5200",
+        "longitude": "13.4050",
+        "name": "ExtruCon Berlin"
+      },
+      "hasMap": "https://www.google.com/maps?q=52.5200,13.4050",
+      "areaServed": [
+        {"@type": "State", "name": "Berlin", "sameAs": "https://www.wikidata.org/wiki/Q64"},
+        {"@type": "State", "name": "Brandenburg", "sameAs": "https://www.wikidata.org/wiki/Q1208"},
+        {"@type": "State", "name": "Sachsen", "sameAs": "https://www.wikidata.org/wiki/Q1202"},
+        {"@type": "State", "name": "Mecklenburg-Vorpommern", "sameAs": "https://www.wikidata.org/wiki/Q1196"}
+      ],
+      "availableLanguage": ["German", "English"]
     }
     </script>
 
@@ -363,77 +419,59 @@
     }
     </script>
 
-    <!-- Structured Data: Geo-Koordinaten aller Standorte -->
+    <!-- Structured Data: Geo-Koordinaten aller 5 Standorte -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Place",
       "@id": "https://extrucon.de/#places",
       "name": "ExtruCon Standorte",
-      "description": "Alle ExtruCon GmbH Standorte mit präzisen Geo-Koordinaten",
+      "description": "Alle 5 ExtruCon GmbH Standorte: München, Berlin, Zagreb, Antalya, Alanya",
       "containsPlace": [
         {
           "@type": "Place",
-          "@id": "https://extrucon.de/#place-ffb",
-          "name": "ExtruCon Hauptsitz Fürstenfeldbruck",
+          "@id": "https://extrucon.de/#place-munich",
+          "name": "ExtruCon Hauptsitz München",
           "description": "Hauptsitz der ExtruCon GmbH in Bayern, Deutschland",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Hasenheide 8",
-            "addressLocality": "Fürstenfeldbruck",
-            "postalCode": "82256",
-            "addressRegion": "Bayern",
-            "addressCountry": "DE"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "48.1789",
-            "longitude": "11.2546"
-          },
-          "hasMap": "https://www.google.com/maps?q=48.1789,11.2546",
-          "containedInPlace": {
-            "@type": "AdministrativeArea",
-            "name": "Landkreis Fürstenfeldbruck",
-            "containedInPlace": {
-              "@type": "State",
-              "name": "Bayern",
-              "sameAs": "https://www.wikidata.org/wiki/Q980"
-            }
-          }
+          "address": {"@type": "PostalAddress", "addressLocality": "München", "addressRegion": "Bayern", "addressCountry": "DE"},
+          "geo": {"@type": "GeoCoordinates", "latitude": "48.1351", "longitude": "11.5820"},
+          "hasMap": "https://www.google.com/maps?q=48.1351,11.5820",
+          "containedInPlace": {"@type": "State", "name": "Bayern", "sameAs": "https://www.wikidata.org/wiki/Q980"}
+        },
+        {
+          "@type": "Place",
+          "@id": "https://extrucon.de/#place-berlin",
+          "name": "ExtruCon Niederlassung Berlin",
+          "description": "Niederlassung für Nord- und Ostdeutschland",
+          "address": {"@type": "PostalAddress", "addressLocality": "Berlin", "addressCountry": "DE"},
+          "geo": {"@type": "GeoCoordinates", "latitude": "52.5200", "longitude": "13.4050"},
+          "hasMap": "https://www.google.com/maps?q=52.5200,13.4050"
         },
         {
           "@type": "Place",
           "@id": "https://extrucon.de/#place-zagreb",
           "name": "ExtruCon Niederlassung Zagreb",
           "description": "Kroatische Niederlassung für Balkan-Region",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Zagreb",
-            "addressCountry": "HR"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "45.8150",
-            "longitude": "15.9819"
-          },
+          "address": {"@type": "PostalAddress", "addressLocality": "Zagreb", "addressCountry": "HR"},
+          "geo": {"@type": "GeoCoordinates", "latitude": "45.8150", "longitude": "15.9819"},
           "hasMap": "https://www.google.com/maps?q=45.8150,15.9819"
+        },
+        {
+          "@type": "Place",
+          "@id": "https://extrucon.de/#place-antalya",
+          "name": "ExtruCon Niederlassung Antalya",
+          "description": "Türkische Niederlassung Antalya",
+          "address": {"@type": "PostalAddress", "addressLocality": "Antalya", "addressRegion": "Antalya", "addressCountry": "TR"},
+          "geo": {"@type": "GeoCoordinates", "latitude": "36.8969", "longitude": "30.7133"},
+          "hasMap": "https://www.google.com/maps?q=36.8969,30.7133"
         },
         {
           "@type": "Place",
           "@id": "https://extrucon.de/#place-alanya",
           "name": "ExtruCon Niederlassung Alanya",
-          "description": "Türkische Niederlassung für Türkei und Zypern",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Alanya",
-            "addressRegion": "Antalya",
-            "addressCountry": "TR"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "36.5434",
-            "longitude": "32.0005"
-          },
+          "description": "Türkische Niederlassung Alanya",
+          "address": {"@type": "PostalAddress", "addressLocality": "Alanya", "addressRegion": "Antalya", "addressCountry": "TR"},
+          "geo": {"@type": "GeoCoordinates", "latitude": "36.5434", "longitude": "32.0005"},
           "hasMap": "https://www.google.com/maps?q=36.5434,32.0005"
         }
       ]
