@@ -6,6 +6,7 @@ export const translations = {
   de: {
     nav: {
       services: 'Leistungen',
+      references: 'Referenzen',
       ratgeber: 'Ratgeber',
       faq: 'Häufige Fragen',
       about: 'Über uns',
@@ -1057,6 +1058,7 @@ export const translations = {
   en: {
     nav: {
       services: 'Services',
+      references: 'References',
       ratgeber: 'Resources',
       faq: 'FAQ',
       about: 'About Us',
@@ -2108,6 +2110,7 @@ export const translations = {
   hr: {
     nav: {
       services: 'Usluge',
+      references: 'Reference',
       ratgeber: 'Savjetnik',
       faq: 'Česta pitanja',
       about: 'O nama',
@@ -3159,6 +3162,7 @@ export const translations = {
   tr: {
     nav: {
       services: 'Hizmetler',
+      references: 'Referanslar',
       ratgeber: 'Rehber',
       faq: 'SSS',
       about: 'Hakkımızda',
