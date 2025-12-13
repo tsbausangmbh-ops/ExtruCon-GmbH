@@ -32,6 +32,15 @@ export default function Referenzen() {
       features: ["KI-Kostenrechner", "24/7 Notdienst", "Festpreis-Garantie", "2.500+ Kunden"],
       url: "https://aquapro24.de",
       location: "München, Deutschland"
+    },
+    {
+      company: "089-Sanierer",
+      industry: "Haussanierung & Renovierung",
+      logo: "🏗️",
+      description: "Full-Service Sanierung in München: Bad, Küche, Komplettsanierung mit Festpreisgarantie, 268+ Projekte und 20+ Jahre Erfahrung.",
+      features: ["KI-Beratung", "Festpreis-Garantie", "268+ Projekte", "Handwerker-Vermittlung"],
+      url: "https://089-sanierer.de",
+      location: "München, Deutschland"
     }
   ];
 
