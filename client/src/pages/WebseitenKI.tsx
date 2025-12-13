@@ -17,8 +17,8 @@ function WebseitenKI() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead 
-        title="KI-Webseiten & Chatbots erstellen lassen | München | ExtruCon"
-        description="Professionelle Webseiten mit KI-Chatbots, NLP & automatischer Lead-Generierung. Webentwicklung München – für Handwerker, Ärzte & Unternehmen."
+        title="Website mit KI-Chatbot erstellen lassen München | ExtruCon"
+        description="Professionelle Webseiten mit KI-Chatbots & automatischer Lead-Generierung. Für Handwerker, Ärzte & Unternehmen. Jetzt anfragen!"
         keywords="KI Webseite erstellen, Website mit Chatbot, Webentwicklung Fürstenfeldbruck, Webdesign München, KI Website Bayern, Chatbot für Website, NLP Webseite, Lead-Generierung Website, Webseite für Handwerker München, KI Agentur Bayern"
       />
       <Navbar />

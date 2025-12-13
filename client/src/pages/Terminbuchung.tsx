@@ -152,8 +152,8 @@ function Terminbuchung() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Termin buchen | Kostenlose KI-Beratung München | ExtruCon"
-        description="Buchen Sie jetzt Ihren kostenlosen Beratungstermin bei ExtruCon GmbH. KI-Agenten, Automatisierung, Chatbots und Webentwicklung in München. Online-Terminbuchung 24/7."
+        title="Kostenlose KI-Beratung buchen München | Termin online | ExtruCon"
+        description="Jetzt kostenlosen Beratungstermin buchen! KI-Agenten, Automatisierung & Chatbots. Online-Terminbuchung 24/7 verfügbar."
         keywords="KI Beratung Termin buchen, kostenlose Erstberatung München, Automatisierung Beratung Bayern, Chatbot Entwicklung Termin, KI Agentur Fürstenfeldbruck"
         canonical="https://extrucon.de/terminbuchung"
       />

@@ -19,8 +19,8 @@ function Web() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Webentwicklung München | Professionelle Websites | ExtruCon"
-        description="Moderne Webentwicklung mit KI-Integration. React, Next.js, WordPress & Shopify. Webdesign Agentur München."
+        title="Webentwicklung München | React, WordPress & KI-Integration | ExtruCon"
+        description="Moderne Websites mit KI-Chatbots. React, Next.js, WordPress & Shopify. Webdesign Agentur für professionelle Ergebnisse."
         keywords="Webentwicklung Fürstenfeldbruck, Webdesign München, Website erstellen, React Entwicklung"
         canonical="https://extrucon.de/leistungen/webentwicklung"
       />

@@ -55,8 +55,8 @@ function Contact() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Kontakt | KI-Agentur München | ExtruCon GmbH"
-        description="Kontaktieren Sie ExtruCon GmbH – Ihre KI-Agentur in München. Kostenlose Erstberatung zu KI-Agenten, Automatisierung und Webentwicklung. ☎ 089 444438879"
+        title="Kontakt | KI-Beratung München | ExtruCon GmbH ☎ 089 444438879"
+        description="Jetzt Kontakt aufnehmen! Kostenlose Erstberatung zu KI-Agenten, Automatisierung und Webentwicklung. ExtruCon GmbH München."
         keywords="KI Agentur Kontakt Fürstenfeldbruck, KI Beratung München, Automatisierung Bayern, Chatbot Entwicklung, KI Unternehmen Deutschland, ExtruCon Kontakt"
         canonical="https://extrucon.de/kontakt"
       />

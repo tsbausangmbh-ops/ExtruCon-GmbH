@@ -19,8 +19,8 @@ function Marketing() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Performance Marketing | München | ExtruCon"
-        description="Datengetriebenes Performance Marketing. Google Ads, Meta Ads, SEO & Conversion-Optimierung. Agentur München."
+        title="Performance Marketing München | Google Ads & SEO | ExtruCon"
+        description="Datengetriebenes Performance Marketing: Google Ads, Meta Ads, SEO & Conversion-Optimierung. Messbare Ergebnisse garantiert."
         keywords="Performance Marketing, Google Ads Agentur, Meta Ads, SEO Fürstenfeldbruck"
         canonical="https://extrucon.de/leistungen/marketing"
       />
