@@ -1,12 +1,22 @@
 # ExtruCon GmbH - Robots.txt
-# SEO & AI optimiert für Deutschland (DE), Kroatien (HR), Türkei (TR)
+# SEO & AI optimiert für: Deutschland (DE), Österreich (AT), Schweiz (CH),
+# Kroatien (HR), Bosnien (BA), Serbien (RS), Slowenien (SI), Montenegro (ME),
+# Türkei (TR), Zypern (CY), International (EN)
 # Letzte Aktualisierung: Dezember 2025
+
+# ===========================================
+# ZIELREGIONEN / TARGET REGIONS
+# ===========================================
+# DE-DACH: Deutschland, Österreich, Schweiz
+# HR-Balkan: Kroatien, Bosnien, Serbien, Slowenien, Montenegro
+# TR-Region: Türkei, Zypern
+# International: Englisch weltweit
 
 # ===========================================
 # STANDARD SUCHMASCHINEN - VOLLER ZUGRIFF
 # ===========================================
 
-# Google (inkl. Google Images, News, Video)
+# Google (inkl. Google Images, News, Video) - Alle Regionen
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
@@ -20,7 +30,7 @@ Allow: /
 User-agent: Googlebot-Video
 Allow: /
 
-# Bing
+# Bing - Deutschland, Österreich, Schweiz, International
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
@@ -28,16 +38,16 @@ Crawl-delay: 1
 User-agent: msnbot
 Allow: /
 
-# Yahoo
+# Yahoo - International
 User-agent: Slurp
 Allow: /
 Crawl-delay: 2
 
-# DuckDuckGo
+# DuckDuckGo - Datenschutz-fokussiert, beliebt in DACH
 User-agent: DuckDuckBot
 Allow: /
 
-# Yandex (Russland, internationale Reichweite)
+# Yandex (Russland, Balkan-Reichweite) - HR, RS, BA Besucher
 User-agent: Yandex
 Allow: /
 Crawl-delay: 2
@@ -51,13 +61,36 @@ User-agent: Baiduspider
 Allow: /
 Crawl-delay: 2
 
-# Seznam (Tschechien, Nähe zu HR-Markt)
+# Seznam (Tschechien) - Nahe HR/SI Märkte
 User-agent: SeznamBot
 Allow: /
 Crawl-delay: 2
 
 # Naver (Südkorea)
 User-agent: Yeti
+Allow: /
+Crawl-delay: 2
+
+# ===========================================
+# TÜRKISCHE SUCHMASCHINEN
+# ===========================================
+
+# Yandex Türkiye (beliebt in TR)
+User-agent: YandexTurk
+Allow: /
+Crawl-delay: 2
+
+# ===========================================
+# BALKAN / SÜDOSTEUROPA SUCHMASCHINEN
+# ===========================================
+
+# Najdi.si (Slowenien)
+User-agent: Najdi
+Allow: /
+Crawl-delay: 2
+
+# Pogodak (Kroatien/Serbien)
+User-agent: Pogodak
 Allow: /
 Crawl-delay: 2
 
@@ -205,16 +238,19 @@ Allow: /ki-bot
 
 # ===========================================
 # MEHRSPRACHIGE INHALTE (Geo-Targeting)
-# DE = Deutsch, TR = Türkisch, HR = Kroatisch, EN = Englisch
 # ===========================================
+# DEUTSCH (de): Deutschland, Österreich, Schweiz, Liechtenstein, Luxemburg
+# KROATISCH (hr): Kroatien, Bosnien-Herzegowina, Serbien, Slowenien, Montenegro
+# TÜRKISCH (tr): Türkei, Zypern, Nordzypern
+# ENGLISCH (en): International, UK, USA, Australien, etc.
 
-# Deutsche Version (Standard)
+# Deutsche Version (DACH-Region - Standard)
 Allow: /*
 
-# Türkische Version (für Türkei)
+# Türkische Version (für Türkei, Zypern)
 Allow: /*?lang=tr
 
-# Kroatische Version (für Kroatien)
+# Kroatische Version (für Balkan: HR, BA, RS, SI, ME)
 Allow: /*?lang=hr
 
 # Englische Version (International)
