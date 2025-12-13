@@ -65,6 +65,81 @@ export default function WebseitenKI() {
           </div>
         </section>
 
+        {/* Empathische Ansprache - Schmerzpunkte */}
+        <section className="py-16 bg-gradient-to-b from-background via-red-500/5 to-background">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="text-center mb-10">
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                  Kennen Sie das auch?
+                </h2>
+                <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+                  Viele Unternehmer kämpfen täglich mit denselben Problemen. Sie sind nicht allein.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-10">
+                <div className="p-6 bg-red-500/5 border border-red-500/20 rounded-xl">
+                  <h3 className="text-lg font-semibold text-red-400 mb-3">Anfragen gehen verloren</h3>
+                  <p className="text-gray-400">
+                    <strong className="text-white">Sie arbeiten hart</strong> – aber wenn ein Kunde um 21 Uhr schreibt, 
+                    antworten Sie erst am nächsten Morgen. Bis dahin hat er längst beim Mitbewerber gebucht. 
+                    <span className="text-red-400"> Das ist frustrierend</span>, weil Sie wissen: Diese Anfrage hätten Sie gewinnen können.
+                  </p>
+                </div>
+                <div className="p-6 bg-red-500/5 border border-red-500/20 rounded-xl">
+                  <h3 className="text-lg font-semibold text-red-400 mb-3">Immer dieselben Fragen</h3>
+                  <p className="text-gray-400">
+                    "Was kostet das?" "Wann haben Sie Zeit?" "Machen Sie auch...?" – <strong className="text-white">Sie beantworten täglich 
+                    dieselben Fragen</strong>, statt sich auf Ihr Kerngeschäft zu konzentrieren. 
+                    <span className="text-red-400"> Das raubt Energie und Zeit</span>, die Ihnen fehlt.
+                  </p>
+                </div>
+                <div className="p-6 bg-red-500/5 border border-red-500/20 rounded-xl">
+                  <h3 className="text-lg font-semibold text-red-400 mb-3">Kein Team für 24/7</h3>
+                  <p className="text-gray-400">
+                    <strong className="text-white">Einen Mitarbeiter nur für Kundenanfragen?</strong> Das können sich die wenigsten leisten. 
+                    Aber ohne schnelle Antworten verlieren Sie Kunden an größere Firmen. 
+                    <span className="text-red-400"> Dieses Dilemma kennen viele Selbstständige</span>.
+                  </p>
+                </div>
+                <div className="p-6 bg-red-500/5 border border-red-500/20 rounded-xl">
+                  <h3 className="text-lg font-semibold text-red-400 mb-3">Website bringt keine Kunden</h3>
+                  <p className="text-gray-400">
+                    <strong className="text-white">Sie haben in eine Website investiert</strong> – aber sie steht da wie ein digitales Schaufenster, 
+                    das niemand besucht. Oder Besucher kommen, aber niemand fragt an. 
+                    <span className="text-red-400"> Das ist enttäuschend</span>, denn Sie wissen, was Sie können.
+                  </p>
+                </div>
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="p-8 bg-gradient-to-r from-secondary/10 to-green-500/10 rounded-2xl border border-secondary/30 text-center"
+              >
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+                  Wir verstehen Sie – und wir haben die Lösung
+                </h3>
+                <p className="text-gray-300 max-w-2xl mx-auto mb-4">
+                  <strong className="text-secondary">Eine KI-Website übernimmt die Arbeit für Sie</strong>: Sie beantwortet Kundenanfragen sofort – 
+                  auch nachts, am Wochenende, an Feiertagen. Sie verlieren keine Anfrage mehr und gewinnen Zeit für das, 
+                  was Sie wirklich lieben: Ihr Handwerk, Ihre Dienstleistung, Ihre Kunden.
+                </p>
+                <p className="text-gray-400 text-sm">
+                  Kein kompliziertes System, keine Technik-Kenntnisse nötig. Wir kümmern uns um alles.
+                </p>
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Stats */}
         <section className="py-8 border-b border-white/10">
           <div className="container mx-auto px-4">
@@ -423,6 +498,32 @@ export default function WebseitenKI() {
           </div>
         </section>
 
+        {/* Empathisch vor Preisen */}
+        <section className="py-12 bg-gradient-to-b from-background to-card/10">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-3xl mx-auto text-center"
+            >
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Investieren Sie in Ihre Zukunft – nicht in ein Problem
+              </h2>
+              <p className="text-gray-400 text-lg mb-6">
+                <strong className="text-white">Wir wissen:</strong> Eine Website ist eine Investition. Deshalb ist es uns wichtig, 
+                dass Sie genau verstehen, was Sie bekommen. <span className="text-secondary">Keine versteckten Kosten, 
+                keine bösen Überraschungen.</span>
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
+                <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" />Faire, transparente Preise</span>
+                <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" />Persönliche Beratung inklusive</span>
+                <span className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-500" />Ratenzahlung möglich</span>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Website Types */}
         <section className="py-16 bg-card/20">
           <div className="container mx-auto px-4">
@@ -554,10 +655,15 @@ export default function WebseitenKI() {
                 Warum KI-Webseiten die Zukunft sind
               </h2>
               <div className="prose prose-invert max-w-none">
+                <p className="text-gray-300 text-lg mb-4">
+                  <strong className="text-white">Wir verstehen Sie:</strong> Sie haben viel zu tun. Zwischen Kundenaufträgen, 
+                  Rechnungen und Alltagsstress bleibt wenig Zeit, sich auch noch um die Website zu kümmern. 
+                  <span className="text-secondary"> Das ist völlig normal</span> – und genau deshalb haben wir eine Lösung entwickelt, 
+                  die Ihnen diese Last abnimmt.
+                </p>
                 <p className="text-gray-300 text-lg mb-6">
-                  In der heutigen digitalen Welt reicht eine einfache Website nicht mehr aus. Kunden erwarten sofortige Antworten, 
-                  personalisierte Erlebnisse und intelligente Interaktionen. Mit unseren <strong className="text-secondary">KI-gestützten Webseiten</strong> bieten 
-                  Sie genau das – und mehr.
+                  Eine KI-Website arbeitet für Sie, während Sie sich auf Ihr Geschäft konzentrieren. Sie beantwortet Kundenfragen, 
+                  generiert Leads und hält Ihre Seite aktuell – <strong className="text-secondary">automatisch, zuverlässig, 24 Stunden am Tag</strong>.
                 </p>
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
                   <div className="p-5 bg-white/5 rounded-xl border border-white/10">
