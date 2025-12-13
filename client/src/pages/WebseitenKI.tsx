@@ -157,7 +157,7 @@ export default function WebseitenKI() {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {t.webKIPage.websiteTypes.map((type, i) => (
                 <motion.div
                   key={type.title}
