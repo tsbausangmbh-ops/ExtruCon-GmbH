@@ -60,7 +60,7 @@ export default function WebseitenKI() {
                   {t.webKIPage.ctaSecondary}
                 </a>
               </div>
-              <GeoLinks service="KI-Webseiten Entwicklung" />
+              <GeoLinks serviceKey="kiWebsites" />
             </motion.div>
           </div>
         </section>

@@ -73,7 +73,7 @@ export default function KIAgenten() {
                   {t.kiAgentsPage.ctaSecondary}
                 </a>
               </div>
-              <GeoLinks service="KI-Agenten Entwicklung" />
+              <GeoLinks serviceKey="kiAgents" />
             </motion.div>
           </div>
         </section>

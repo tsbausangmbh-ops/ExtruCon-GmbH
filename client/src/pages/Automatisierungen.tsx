@@ -61,7 +61,7 @@ export default function Automatisierungen() {
                   {t.automationPage.ctaSecondary}
                 </a>
               </div>
-              <GeoLinks service="Workflow-Automatisierung" />
+              <GeoLinks serviceKey="workflowAutomation" />
             </motion.div>
           </div>
         </section>

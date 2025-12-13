@@ -18,6 +18,12 @@ export const translations = {
       contentCreation: 'Content Creation',
       marketing: 'Performance Marketing',
     },
+    geoLinks: {
+      serviceIn: 'in:',
+      kiWebsites: 'KI-Webseiten Entwicklung',
+      kiAgents: 'KI-Agenten Entwicklung',
+      workflowAutomation: 'Workflow-Automatisierung',
+    },
     hero: {
       location: 'Fürstenfeldbruck · München · Bayern · Deutschlandweit',
       badge: 'Zeitersparnis durch intelligente KI-Automatisierung',
@@ -1068,6 +1074,12 @@ export const translations = {
       socialMedia: 'Social Media',
       contentCreation: 'Content Creation',
       marketing: 'Performance Marketing',
+    },
+    geoLinks: {
+      serviceIn: 'in:',
+      kiWebsites: 'AI Website Development',
+      kiAgents: 'AI Agent Development',
+      workflowAutomation: 'Workflow Automation',
     },
     hero: {
       location: 'Fürstenfeldbruck · Munich · Bavaria · Germany-wide',
@@ -2120,6 +2132,12 @@ export const translations = {
       contentCreation: 'Kreiranje sadržaja',
       marketing: 'Performance Marketing',
     },
+    geoLinks: {
+      serviceIn: 'u:',
+      kiWebsites: 'Razvoj AI web stranica',
+      kiAgents: 'Razvoj AI agenata',
+      workflowAutomation: 'Automatizacija tijeka rada',
+    },
     hero: {
       location: 'Fürstenfeldbruck · München · Bavarska · Cijela Njemačka',
       badge: 'Uštedite vrijeme uz inteligentnu AI automatizaciju',
@@ -3170,6 +3188,12 @@ export const translations = {
       socialMedia: 'Sosyal Medya',
       contentCreation: 'İçerik Oluşturma',
       marketing: 'Performans Pazarlama',
+    },
+    geoLinks: {
+      serviceIn: 'konumu:',
+      kiWebsites: 'Yapay Zeka Web Sitesi Geliştirme',
+      kiAgents: 'Yapay Zeka Ajanı Geliştirme',
+      workflowAutomation: 'İş Akışı Otomasyonu',
     },
     hero: {
       location: 'Fürstenfeldbruck · Münih · Bavyera · Almanya Geneli',

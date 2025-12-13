@@ -54,22 +54,19 @@ export function ExploreMoreSection() {
 }
 
 interface GeoLinksProps {
-  service: string;
+  serviceKey: 'kiWebsites' | 'kiAgents' | 'workflowAutomation';
 }
 
-export function GeoLinks({ service }: GeoLinksProps) {
-  const locations = [
-    { name: "Fürstenfeldbruck", region: "bei München" },
-    { name: "München", region: "und Umgebung" },
-    { name: "Bayern", region: "deutschlandweit" },
-  ];
+export function GeoLinks({ serviceKey }: GeoLinksProps) {
+  const { t } = useLanguage();
+  const locations = ["Fürstenfeldbruck", "München", "Bayern"];
 
   return (
     <div className="text-sm text-gray-400 mt-4">
-      <span className="font-medium text-gray-300">{service} in: </span>
+      <span className="font-medium text-gray-300">{t.geoLinks[serviceKey]} {t.geoLinks.serviceIn} </span>
       {locations.map((loc, i) => (
-        <span key={loc.name}>
-          <a href="/kontakt" className="text-primary hover:underline">{loc.name}</a>
+        <span key={loc}>
+          <a href="/kontakt" className="text-primary hover:underline">{loc}</a>
           {i < locations.length - 1 && " · "}
         </span>
       ))}
