@@ -258,6 +258,184 @@ export default function WebseitenKI() {
           </div>
         </section>
 
+        {/* Why KI Websites */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-3xl font-bold font-display text-white mb-6 text-center">
+                Warum KI-Webseiten die Zukunft sind
+              </h2>
+              <div className="prose prose-invert max-w-none">
+                <p className="text-gray-300 text-lg mb-6">
+                  In der heutigen digitalen Welt reicht eine einfache Website nicht mehr aus. Kunden erwarten sofortige Antworten, 
+                  personalisierte Erlebnisse und intelligente Interaktionen. Mit unseren <strong className="text-secondary">KI-gestützten Webseiten</strong> bieten 
+                  Sie genau das – und mehr.
+                </p>
+                <div className="grid md:grid-cols-2 gap-6 mb-8">
+                  <div className="p-5 bg-white/5 rounded-xl border border-white/10">
+                    <h3 className="text-white font-bold mb-2 flex items-center gap-2">
+                      <MessageSquare className="w-5 h-5 text-secondary" />
+                      24/7 Kundenbetreuung
+                    </h3>
+                    <p className="text-gray-400 text-sm">
+                      Ihr KI-Chatbot beantwortet Kundenanfragen rund um die Uhr, qualifiziert Leads automatisch und 
+                      leitet komplexe Fälle an Ihr Team weiter. Keine Wartezeiten, keine verlorenen Kunden.
+                    </p>
+                  </div>
+                  <div className="p-5 bg-white/5 rounded-xl border border-white/10">
+                    <h3 className="text-white font-bold mb-2 flex items-center gap-2">
+                      <Search className="w-5 h-5 text-secondary" />
+                      Automatische SEO-Optimierung
+                    </h3>
+                    <p className="text-gray-400 text-sm">
+                      KI-gestützte Content-Erstellung und automatische Meta-Tag-Generierung sorgen dafür, dass 
+                      Ihre Website bei Google besser gefunden wird – ohne manuellen Aufwand.
+                    </p>
+                  </div>
+                  <div className="p-5 bg-white/5 rounded-xl border border-white/10">
+                    <h3 className="text-white font-bold mb-2 flex items-center gap-2">
+                      <TrendingUp className="w-5 h-5 text-secondary" />
+                      Höhere Conversion-Raten
+                    </h3>
+                    <p className="text-gray-400 text-sm">
+                      Personalisierte Inhalte und intelligente Formulare steigern die Conversion-Rate um durchschnittlich 
+                      40%. Mehr Besucher werden zu zahlenden Kunden.
+                    </p>
+                  </div>
+                  <div className="p-5 bg-white/5 rounded-xl border border-white/10">
+                    <h3 className="text-white font-bold mb-2 flex items-center gap-2">
+                      <RefreshCw className="w-5 h-5 text-secondary" />
+                      Automatische Updates
+                    </h3>
+                    <p className="text-gray-400 text-sm">
+                      Ihre Website bleibt immer aktuell. KI-generierte Inhalte, automatische Bildoptimierung und 
+                      dynamische Anpassungen halten Ihre Seite frisch und relevant.
+                    </p>
+                  </div>
+                </div>
+                <p className="text-gray-300 text-lg">
+                  Als <strong className="text-white">KI-Agentur aus Fürstenfeldbruck</strong> bei München entwickeln wir moderne Webseiten mit 
+                  integrierten KI-Features für Unternehmen in ganz Deutschland. Von Handwerksbetrieben über Arztpraxen bis 
+                  zu E-Commerce-Shops – wir finden die perfekte Lösung für Ihre Branche.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Referenzen */}
+        <section className="py-16 bg-gradient-to-b from-card/30 to-background">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold font-display text-white mb-4">
+                Unsere KI-Webseiten Referenzen
+              </h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                Entdecken Sie unsere erfolgreich umgesetzten Projekte – jedes mit integrierten KI-Features und messbaren Ergebnissen.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              {[
+                {
+                  name: "089Dach GmbH",
+                  url: "https://dacharbeiten.089dach.de/",
+                  industry: "Dachdecker München",
+                  features: ["KI-Chatbot", "Multi-Step Formular", "SEO-Optimiert"],
+                  result: "+45% mehr qualifizierte Anfragen"
+                },
+                {
+                  name: "AquaPro24",
+                  url: "https://aquapro24.de",
+                  industry: "Sanitär & Heizung",
+                  features: ["KI-Kostenrechner", "24/7 Notdienst", "Lead-Qualifizierung"],
+                  result: "2.500+ zufriedene Kunden"
+                },
+                {
+                  name: "089-Sanierer",
+                  url: "https://089-sanierer.de",
+                  industry: "Haussanierung",
+                  features: ["KI-Beratung", "Projekt-Konfigurator", "Handwerker-Matching"],
+                  result: "268+ erfolgreiche Projekte"
+                },
+                {
+                  name: "089Bayern Ltd.",
+                  url: "https://www.089bayern.com/",
+                  industry: "Energie & Solar",
+                  features: ["Mehrsprachig (TR/DE)", "Produktkonfigurator", "B2B-Portal"],
+                  result: "Erfolgreiche Markteinführung Türkei"
+                },
+                {
+                  name: "ExtruCon Funnel",
+                  url: "https://funnel.extrucon.de",
+                  industry: "Lead-Generierung",
+                  features: ["Conversion-Funnel", "Geo-Targeting", "KI-Chatbot"],
+                  result: "25% Conversion-Rate"
+                },
+                {
+                  name: "ExtruCon GmbH",
+                  url: "https://extrucon.de",
+                  industry: "KI-Agentur",
+                  features: ["Multi-Language", "KI-Assistent", "Full SEO"],
+                  result: "Top-Rankings Bayern"
+                }
+              ].map((project, i) => (
+                <motion.a
+                  key={project.name}
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="block p-6 bg-white/5 border border-white/10 rounded-xl hover:border-secondary/50 hover:bg-white/10 transition-all group"
+                  data-testid={`referenz-${i}`}
+                >
+                  <div className="flex items-start justify-between mb-3">
+                    <div>
+                      <h3 className="text-lg font-bold text-white group-hover:text-secondary transition-colors">{project.name}</h3>
+                      <p className="text-sm text-gray-500">{project.industry}</p>
+                    </div>
+                    <ArrowRight className="w-5 h-5 text-gray-500 group-hover:text-secondary group-hover:translate-x-1 transition-all" />
+                  </div>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.features.map((feature) => (
+                      <span key={feature} className="px-2 py-1 text-xs rounded bg-secondary/10 text-secondary">
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-gray-300">{project.result}</span>
+                  </div>
+                </motion.a>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <a 
+                href="/referenzen" 
+                className="inline-flex items-center gap-2 px-6 py-3 bg-secondary/10 text-secondary font-medium rounded-lg hover:bg-secondary/20 transition-colors border border-secondary/30"
+                data-testid="link-alle-referenzen"
+              >
+                Alle Referenzen ansehen <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="py-16">
           <div className="container mx-auto px-4">
