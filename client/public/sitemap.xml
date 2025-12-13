@@ -222,6 +222,32 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- Termin buchen -->
+  <url>
+    <loc>https://extrucon.de/termin</loc>
+    <lastmod>2025-12-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/termin"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/termin?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/termin?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/termin?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/termin"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Referenzen -->
+  <url>
+    <loc>https://extrucon.de/referenzen</loc>
+    <lastmod>2025-12-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/referenzen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/referenzen?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/referenzen?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/referenzen?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/referenzen"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Impressum -->
   <url>
     <loc>https://extrucon.de/impressum</loc>

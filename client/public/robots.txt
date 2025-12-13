@@ -1,6 +1,7 @@
 # ExtruCon GmbH - Robots.txt
 # SEO & AI optimiert für Deutschland (DE), Kroatien (HR), Türkei (TR)
-# Letzte Aktualisierung: Dezember 2025
+# Letzte Aktualisierung: 13. Dezember 2025
+# Optimiert für: KI-Agenten, Geo (DE-BY, HR, TR)
 
 # ===========================================
 # STANDARD SUCHMASCHINEN - VOLLER ZUGRIFF
@@ -196,9 +197,11 @@ Allow: /automatisierungen
 Allow: /webseiten-ki
 Allow: /leistungen/
 Allow: /kontakt
+Allow: /termin
 Allow: /ueber-uns
 Allow: /faq
 Allow: /ratgeber
+Allow: /referenzen
 Allow: /impressum
 Allow: /datenschutz
 
