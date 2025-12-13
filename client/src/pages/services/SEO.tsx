@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { Button } from "@/components/ui/button";
 import { Search, Check, ArrowRight, MapPin, Globe, BarChart3 } from "lucide-react";
 import { motion } from "framer-motion";
 import seoImg from "@assets/generated_images/abstract_seo_geo-optimization_visual.png";
@@ -35,35 +34,60 @@ export default function SEO() {
           { label: t.nav.seo }
         ]} />
         
-        <section className="relative py-20 overflow-hidden">
+        <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-8 pb-8">
           <div className="absolute inset-0 z-0">
-            <img src={seoImg} alt="SEO & Geo-Optimierung" className="w-full h-full object-cover opacity-20" />
-            <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+            <img src={seoImg} alt="SEO & Geo-Optimierung" className="w-full h-full object-cover opacity-60" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
           </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="max-w-3xl"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <Search className="w-12 h-12 text-primary" />
-                <span className="text-primary font-semibold">{t.seoPage.badge}</span>
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold font-display text-white mb-6">
-                {t.seoPage.title}
-              </h1>
-              <p className="text-xl text-gray-400 mb-8">
-                {t.seoPage.subtitle}
-              </p>
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-black" data-testid="button-contact-seo">
-                {t.seoPage.ctaButton} <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </motion.div>
+          <div className="container mx-auto px-4 z-40 relative">
+            <div className="max-w-4xl mx-auto text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <div className="flex items-center justify-center gap-2 mb-4">
+                  <span className="inline-flex items-center gap-1.5 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium backdrop-blur-sm">
+                    <MapPin className="w-3.5 h-3.5" />
+                    Fürstenfeldbruck & München
+                  </span>
+                </div>
+                
+                <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-sm font-medium mb-6 mt-6 backdrop-blur-sm">
+                  <Search className="w-4 h-4" />
+                  {t.seoPage.badge}
+                </span>
+                
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-display text-white mb-6 leading-tight">
+                  {t.seoPage.title.split(" ").slice(0, 2).join(" ")}{" "}
+                  <span className="text-gradient">{t.seoPage.title.split(" ").slice(2).join(" ")}</span>
+                </h1>
+                
+                <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-2xl mx-auto leading-relaxed font-medium">
+                  {t.seoPage.subtitle}
+                </p>
+                
+                <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400 mb-8">
+                  <span className="flex items-center gap-1.5"><Search className="w-4 h-4 text-primary" /> Keyword-Analyse</span>
+                  <span className="flex items-center gap-1.5"><MapPin className="w-4 h-4 text-primary" /> Lokale SEO</span>
+                  <span className="flex items-center gap-1.5"><Globe className="w-4 h-4 text-primary" /> Google My Business</span>
+                </div>
+                
+                <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-30">
+                  <a href="/kontakt" className="inline-flex items-center justify-center h-12 px-8 bg-primary text-background hover:bg-primary/90 font-bold text-lg rounded-md transition-colors cursor-pointer" data-testid="button-contact-seo">
+                    {t.seoPage.ctaButton} <ArrowRight className="ml-2 w-4 h-4" />
+                  </a>
+                  <a href="#services" className="inline-flex items-center justify-center h-12 px-8 border border-white/20 text-white hover:bg-white/10 font-medium text-lg rounded-md transition-colors group cursor-pointer" data-testid="button-seo-services">
+                    Unsere Leistungen <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+              </motion.div>
+            </div>
           </div>
+          <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-background to-transparent z-20" />
         </section>
 
-        <section className="py-16 bg-card/20">
+        <section id="services" className="py-16 bg-card/20">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold font-display text-white mb-12 text-center">{t.seoPage.servicesTitle}</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -134,9 +158,9 @@ export default function SEO() {
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
               {t.seoPage.ctaSubtitle}
             </p>
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-black" data-testid="button-cta-seo">
-              {t.seoPage.ctaButtonAlt} <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <a href="/kontakt" className="inline-flex items-center justify-center h-12 px-8 bg-primary text-background hover:bg-primary/90 font-bold text-lg rounded-md transition-colors cursor-pointer" data-testid="button-cta-seo">
+              {t.seoPage.ctaButtonAlt} <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
           </div>
         </section>
 
