@@ -44,6 +44,14 @@ export default function Referenzen() {
       link: "https://www.089bayern.com"
     },
     {
+      title: "ExtruCon Funnel – KI Agenten Landingpage",
+      category: "Webentwicklung + Marketing",
+      description: "Conversion-optimierte Landingpage für KI-Agentur. Mehrstufiger Sales-Funnel mit emotionalem Storytelling und Leadgenerierung.",
+      results: ["3-Schritte Funnel", "Conversion-optimiert", "KI-Chatbot integriert"],
+      color: "purple",
+      link: "https://funnel.extrucon.de"
+    },
+    {
       title: "Restaurant Social Media",
       category: "Social Media",
       description: "Content-Strategie und Community Management für Gastronomie",
