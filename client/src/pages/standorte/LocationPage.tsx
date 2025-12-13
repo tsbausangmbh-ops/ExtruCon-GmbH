@@ -80,6 +80,14 @@ export function LocationPage({ location }: LocationPageProps) {
         type="website"
         breadcrumb={breadcrumb}
         structuredData={[localBusinessSchema, serviceSchema]}
+        language={language}
+        geo={{
+          latitude: location.latitude,
+          longitude: location.longitude,
+          placename: localized.name,
+          region: localized.region === 'Bayern' || localized.region === 'Bavaria' || localized.region === 'Bavarska' || localized.region === 'Bavyera' ? 'BY' : localized.region,
+          countryCode: location.country
+        }}
       />
       <Navbar />
 

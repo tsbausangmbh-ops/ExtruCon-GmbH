@@ -1,6 +1,14 @@
 import { useEffect } from "react";
 import { COMPANY_INFO, buildWebPageSchema, buildBreadcrumbSchema, type BreadcrumbItem } from "@/lib/schema";
 
+interface GeoData {
+  latitude: number;
+  longitude: number;
+  placename: string;
+  region: string;
+  countryCode: string;
+}
+
 interface SEOHeadProps {
   title: string;
   description: string;
@@ -11,6 +19,7 @@ interface SEOHeadProps {
   breadcrumb?: BreadcrumbItem[];
   noIndex?: boolean;
   language?: "de" | "en" | "hr" | "tr";
+  geo?: GeoData;
 }
 
 const BASE_URL = "https://extrucon.de";
@@ -44,7 +53,8 @@ export function SEOHead({
   structuredData,
   breadcrumb,
   noIndex = false,
-  language = "de"
+  language = "de",
+  geo
 }: SEOHeadProps) {
   useEffect(() => {
     document.title = title;
@@ -83,6 +93,25 @@ export function SEOHead({
         (link as HTMLLinkElement).href = hreflangUrls[hreflang];
       }
     });
+
+    const geoMetaIds: string[] = [];
+    const createOrUpdateGeoMeta = (name: string, content: string) => {
+      let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+      if (!meta) {
+        meta = document.createElement("meta");
+        meta.setAttribute("name", name);
+        document.head.appendChild(meta);
+        geoMetaIds.push(name);
+      }
+      meta.setAttribute("content", content);
+    };
+
+    if (geo) {
+      createOrUpdateGeoMeta("geo.region", `${geo.countryCode}-${geo.region}`);
+      createOrUpdateGeoMeta("geo.placename", geo.placename);
+      createOrUpdateGeoMeta("geo.position", `${geo.latitude};${geo.longitude}`);
+      createOrUpdateGeoMeta("ICBM", `${geo.latitude}, ${geo.longitude}`);
+    }
 
     const scriptIds: string[] = [];
     
@@ -165,7 +194,7 @@ export function SEOHead({
         }
       });
     };
-  }, [title, description, canonical, keywords, type, structuredData, breadcrumb, noIndex, language]);
+  }, [title, description, canonical, keywords, type, structuredData, breadcrumb, noIndex, language, geo]);
 
   return null;
 }
