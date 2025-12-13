@@ -105,7 +105,7 @@ export function ChatWidget() {
                   className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
                 >
                   <div
-                    className={`max-w-[80%] p-4 rounded-xl text-base ${
+                    className={`max-w-[80%] p-4 rounded-xl text-base whitespace-pre-wrap ${
                       message.role === "user"
                         ? "bg-primary text-background rounded-br-sm"
                         : "bg-white/10 text-white rounded-bl-sm"
