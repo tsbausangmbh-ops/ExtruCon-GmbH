@@ -229,6 +229,16 @@ Formatiere die Anfrage immer übersichtlich mit Zeilenumbrüchen zwischen den Pu
       const result = await createAppointment({ date, time, name, email, phone, service, message });
       
       if (result.success) {
+        await storage.createAppointment({
+          date,
+          time,
+          name,
+          email,
+          phone: phone || null,
+          service,
+          message: message || null,
+          googleEventId: result.eventId || null
+        });
         res.json({ success: true, eventId: result.eventId });
       } else {
         res.status(500).json({ error: result.error || "Buchung fehlgeschlagen" });

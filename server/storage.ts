@@ -1,5 +1,6 @@
-import { type User, type InsertUser, type Appointment, type InsertAppointment } from "@shared/schema";
-import { randomUUID } from "crypto";
+import { type User, type InsertUser, type Appointment, type InsertAppointment, users, appointments } from "@shared/schema";
+import { db } from "./db";
+import { eq } from "drizzle-orm";
 
 export interface IStorage {
   getUser(id: string): Promise<User | undefined>;
@@ -9,36 +10,24 @@ export interface IStorage {
   getAppointmentsByDate(date: string): Promise<Appointment[]>;
 }
 
-export class MemStorage implements IStorage {
-  private users: Map<string, User>;
-  private appointments: Map<string, Appointment>;
-
-  constructor() {
-    this.users = new Map();
-    this.appointments = new Map();
-  }
-
+export class DatabaseStorage implements IStorage {
   async getUser(id: string): Promise<User | undefined> {
-    return this.users.get(id);
+    const [user] = await db.select().from(users).where(eq(users.id, id));
+    return user;
   }
 
   async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
-    );
+    const [user] = await db.select().from(users).where(eq(users.username, username));
+    return user;
   }
 
   async createUser(insertUser: InsertUser): Promise<User> {
-    const id = randomUUID();
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
+    const [user] = await db.insert(users).values(insertUser).returning();
     return user;
   }
 
   async createAppointment(insertAppointment: InsertAppointment): Promise<Appointment> {
-    const id = randomUUID();
-    const appointment: Appointment = { 
-      id,
+    const [appointment] = await db.insert(appointments).values({
       date: insertAppointment.date,
       time: insertAppointment.time,
       name: insertAppointment.name,
@@ -47,17 +36,13 @@ export class MemStorage implements IStorage {
       service: insertAppointment.service,
       message: insertAppointment.message ?? null,
       googleEventId: insertAppointment.googleEventId ?? null,
-      createdAt: new Date() 
-    };
-    this.appointments.set(id, appointment);
+    }).returning();
     return appointment;
   }
 
   async getAppointmentsByDate(date: string): Promise<Appointment[]> {
-    return Array.from(this.appointments.values()).filter(
-      (appointment) => appointment.date === date
-    );
+    return db.select().from(appointments).where(eq(appointments.date, date));
   }
 }
 
-export const storage = new MemStorage();
+export const storage = new DatabaseStorage();
