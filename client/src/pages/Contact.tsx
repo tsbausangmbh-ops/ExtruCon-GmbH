@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Loader2, Calendar } from "lucide-react";
+import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
@@ -284,6 +285,26 @@ function Contact() {
                       </p>
                     </div>
                   </div>
+
+                  {/* Terminbuchung CTA */}
+                  <Link href="/terminbuchung" data-testid="link-book-appointment-contact">
+                    <div className="p-6 rounded-xl bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 hover:border-cyan-500/50 transition-all cursor-pointer group">
+                      <div className="flex items-center gap-4">
+                        <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center shadow-lg shadow-cyan-500/25">
+                          <Calendar className="w-7 h-7 text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <p className="text-sm text-gray-400">{t.contact.directAppointment}</p>
+                          <h4 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">{t.footer.bookAppointment}</h4>
+                        </div>
+                        <div className="hidden sm:flex items-center justify-center w-10 h-10 rounded-full bg-white/5 group-hover:bg-cyan-500/20 transition-colors">
+                          <svg className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
 
                   </div>
               </motion.div>
