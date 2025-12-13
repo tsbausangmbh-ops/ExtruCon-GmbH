@@ -3449,12 +3449,12 @@ export const translations = {
         }
       },
       muenchen: {
-        name: 'München',
+        name: 'Minhen',
         region: 'Bavarska',
-        headline: 'Vaša AI agencija za München i okolicu. Automatiziramo procese, razvijamo AI agente i stvaramo moderne web stranice.',
-        intro: 'Kao AI agencija sa sjedištem u metropolitanskom području Münchena, razumijemo zahtjeve bavarskih tvrtki. Od startupa u Schwabingu do etabliranih srednjih poduzeća u regiji – razvijamo prilagođena AI rješenja koja optimiziraju vaše procese i ubrzavaju vaš rast.',
+        headline: 'Vaša AI agencija za Minhen i okolicu. Automatiziramo procese, razvijamo AI agente i stvaramo moderne web stranice.',
+        intro: 'Kao AI agencija sa sjedištem u metropolitanskom području Minhena, razumijemo zahtjeve bavarskih tvrtki. Od startupa u Schwabingu do etabliranih srednjih poduzeća u regiji – razvijamo prilagođena AI rješenja koja optimiziraju vaše procese i ubrzavaju vaš rast.',
         whyUs: [
-          'Lokalna prisutnost u metropolitanskom području Münchena',
+          'Lokalna prisutnost u metropolitanskom području Minhena',
           'Iskustvo s bavarskim tvrtkama svih veličina',
           'Brzo vrijeme odziva i osobna podrška',
           'Podrška i dokumentacija na njemačkom jeziku',
@@ -3479,7 +3479,7 @@ export const translations = {
       bayern: {
         name: 'Bavarska',
         region: 'Bavarska',
-        headline: 'Vaša AI agencija za cijelu Bavarsku. Od Münchena do Nürnberga, od Augsburga do Regensburga – tu smo za vas.',
+        headline: 'Vaša AI agencija za cijelu Bavarsku. Od Minhena do Nürnberga, od Augsburga do Regensburga – tu smo za vas.',
         intro: 'Bavarska je poslovna lokacija s raznovrsnim industrijama – od automobilske industrije preko strojogradnje do inovativnih startupa. Kao bavarska AI agencija, razumijemo potrebe regionalnog gospodarstva i razvijamo rješenja koja odgovaraju vašoj tvrtki.',
         whyUs: [
           'Bavarska tvrtka s lokalnim znanjem',
