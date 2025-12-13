@@ -48,7 +48,7 @@ export function HomeFAQ() {
         </motion.div>
 
         <div className="max-w-3xl mx-auto">
-          <div className="space-y-3">
+          <div className="space-y-4">
             {faqs.map((faq, i) => (
               <motion.div
                 key={i}
@@ -56,7 +56,7 @@ export function HomeFAQ() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="rounded-xl bg-card/30 border border-white/5 overflow-hidden"
+                className="rounded-xl bg-card/50 border border-white/10 overflow-hidden shadow-lg"
               >
                 <button
                   onClick={() => setOpenQuestion(openQuestion.includes(i) ? openQuestion.filter(q => q !== i) : [...openQuestion, i])}
