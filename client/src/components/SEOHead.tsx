@@ -142,7 +142,8 @@ export function SEOHead({
       name: title,
       description,
       url: canonicalUrl,
-      breadcrumb
+      breadcrumb,
+      language
     });
     addJsonLd("webpage", webPageSchema);
 

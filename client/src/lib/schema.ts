@@ -35,51 +35,86 @@ export const LOCATIONS = {
     name: "Fürstenfeldbruck",
     region: "Bayern",
     country: "DE",
+    countryName: "Deutschland",
     latitude: 48.1789,
-    longitude: 11.2546
+    longitude: 11.2546,
+    streetAddress: "Hasenheide 8",
+    postalCode: "82256",
+    isHeadquarters: true
   },
   muenchen: {
     name: "München",
     region: "Bayern", 
     country: "DE",
+    countryName: "Deutschland",
     latitude: 48.1351,
-    longitude: 11.5820
+    longitude: 11.5820,
+    streetAddress: null,
+    postalCode: null,
+    isHeadquarters: false
   },
   bayern: {
     name: "Bayern",
     region: "Bayern",
     country: "DE",
+    countryName: "Deutschland",
     latitude: 48.7904,
-    longitude: 11.4979
+    longitude: 11.4979,
+    streetAddress: null,
+    postalCode: null,
+    isHeadquarters: false
   },
   berlin: {
     name: "Berlin",
     region: "Berlin",
     country: "DE",
+    countryName: "Deutschland",
     latitude: 52.5200,
-    longitude: 13.4050
+    longitude: 13.4050,
+    streetAddress: null,
+    postalCode: null,
+    isHeadquarters: false
   },
   zagreb: {
     name: "Zagreb",
     region: "Grad Zagreb",
     country: "HR",
+    countryName: "Hrvatska",
     latitude: 45.8150,
-    longitude: 15.9819
+    longitude: 15.9819,
+    streetAddress: null,
+    postalCode: null,
+    isHeadquarters: false
   },
   antalya: {
     name: "Antalya",
     region: "Antalya",
     country: "TR",
+    countryName: "Türkiye",
     latitude: 36.8969,
-    longitude: 30.7133
+    longitude: 30.7133,
+    streetAddress: null,
+    postalCode: null,
+    isHeadquarters: false
   },
   alanya: {
     name: "Alanya",
     region: "Antalya",
     country: "TR",
+    countryName: "Türkiye",
     latitude: 36.5434,
-    longitude: 32.0005
+    longitude: 32.0005,
+    streetAddress: null,
+    postalCode: null,
+    isHeadquarters: false
   }
+};
+
+export const LANGUAGE_TO_LOCALE: Record<string, string> = {
+  de: "de-DE",
+  en: "en-US",
+  hr: "hr-HR",
+  tr: "tr-TR"
 };
 
 export interface BreadcrumbItem {
@@ -202,6 +237,20 @@ export interface LocalBusinessSchemaOptions {
 export function buildLocalBusinessSchema(options: LocalBusinessSchemaOptions) {
   const location = LOCATIONS[options.locationKey];
   
+  const address: Record<string, string> = {
+    "@type": "PostalAddress",
+    "addressLocality": location.name,
+    "addressRegion": location.region,
+    "addressCountry": location.country
+  };
+  
+  if (location.streetAddress) {
+    address.streetAddress = location.streetAddress;
+  }
+  if (location.postalCode) {
+    address.postalCode = location.postalCode;
+  }
+  
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
@@ -214,12 +263,7 @@ export function buildLocalBusinessSchema(options: LocalBusinessSchemaOptions) {
     "logo": COMPANY_INFO.logo,
     "image": COMPANY_INFO.image,
     "priceRange": COMPANY_INFO.priceRange,
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": location.name,
-      "addressRegion": location.region,
-      "addressCountry": location.country
-    },
+    "address": address,
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": location.latitude,
@@ -245,7 +289,10 @@ export function buildWebPageSchema(options: {
   description: string;
   url: string;
   breadcrumb?: BreadcrumbItem[];
+  language?: string;
 }) {
+  const inLanguage = options.language ? (LANGUAGE_TO_LOCALE[options.language] || "de-DE") : "de-DE";
+  
   const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -263,7 +310,7 @@ export function buildWebPageSchema(options: {
       "@type": "Organization",
       "@id": "https://extrucon.de/#organization"
     },
-    "inLanguage": "de-DE"
+    "inLanguage": inLanguage
   };
 
   if (options.breadcrumb && options.breadcrumb.length > 0) {
