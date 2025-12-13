@@ -182,6 +182,8 @@ export const translations = {
       ki: { title: 'KI & Automatisierung', desc: 'Maßgeschneiderte KI-Bots und intelligente Automatisierungs-Workflows zur Optimierung Ihrer Abläufe rund um die Uhr.' },
       web: { title: 'Web & Digitale Plattformen', desc: 'Hochleistungsfähige, visuell beeindruckende Webseiten und Web-Apps für das moderne Web.' },
       marketing: { title: 'Performance Marketing', desc: 'Datengetriebene Kampagnen und SEO-Strategien für messbares Wachstum und maximale Sichtbarkeit.' },
+      kiWebseiten: { title: 'KI Webseiten', desc: 'Moderne Websites mit integrierten KI-Features, Chatbots und automatischer SEO-Optimierung.' },
+      referenzen: { title: 'Referenzen', desc: 'Entdecken Sie unsere erfolgreich umgesetzten Projekte mit messbaren Ergebnissen.' },
     },
     problemSection: {
       title: 'Kennen Sie diese',

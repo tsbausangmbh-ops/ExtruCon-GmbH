@@ -1,10 +1,11 @@
+import { memo } from "react";
 import { motion } from "framer-motion";
 import funnelImg from "@assets/generated_images/futuristic_digital_marketing_funnel.png";
 import { MapPin, Search, Users, TrendingUp, Target, Zap, CheckCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/lib/i18n";
 
-export function Funnel() {
+export const Funnel = memo(function Funnel() {
   const { t } = useLanguage();
 
   return (
@@ -168,4 +169,4 @@ export function Funnel() {
       </div>
     </section>
   );
-}
+});

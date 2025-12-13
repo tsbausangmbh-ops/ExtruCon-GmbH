@@ -1,8 +1,9 @@
+import { memo } from "react";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
 import logoImg from "@assets/Logo_1765563135323.png";
 import { useLanguage } from "@/lib/i18n";
 
-export function Footer() {
+export const Footer = memo(function Footer() {
   const { t } = useLanguage();
 
   return (
@@ -93,4 +94,4 @@ export function Footer() {
       </div>
     </footer>
   );
-}
+});

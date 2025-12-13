@@ -1,12 +1,12 @@
+import { memo, useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Bot, Share2, Globe, TrendingUp, Palette, FileText } from "lucide-react";
-import { useState } from "react";
 import logoImage from "@assets/Logo_mittel_Header_1765567902974.png";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/lib/i18n";
 
-export function Navbar() {
+export const Navbar = memo(function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const { t } = useLanguage();
@@ -163,4 +163,4 @@ export function Navbar() {
       
     </nav>
   );
-}
+});

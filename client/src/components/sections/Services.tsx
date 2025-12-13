@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Bot, Share2, Globe, PenTool, Fingerprint, TrendingUp, Cpu, Sparkles, Award } from "lucide-react";
 import aiImg from "@assets/generated_images/glowing_neural_network_brain.png";
@@ -10,7 +11,7 @@ import kiAgentsImg from "@assets/generated_images/futuristic_digital_landscape_w
 import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/i18n";
 
-export function Services() {
+export const Services = memo(function Services() {
   const { t } = useLanguage();
 
   const services = [
@@ -144,4 +145,4 @@ export function Services() {
       </div>
     </section>
   );
-}
+});

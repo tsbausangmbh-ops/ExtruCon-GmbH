@@ -1,13 +1,13 @@
+import { memo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
 import { Mail, Globe, Phone, Send, CheckCircle } from "lucide-react";
-import { useState } from "react";
 import { useLanguage } from "@/lib/i18n";
 
-export function Contact() {
+export const Contact = memo(function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const { t } = useLanguage();
 
@@ -171,4 +171,4 @@ export function Contact() {
       </div>
     </section>
   );
-}
+});
