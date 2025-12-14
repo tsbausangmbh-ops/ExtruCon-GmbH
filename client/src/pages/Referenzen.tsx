@@ -15,7 +15,7 @@ export default function Referenzen() {
       title: "089Dach GmbH – Dachdecker München",
       category: "Webentwicklung + KI",
       description: "Moderne Landingpage mit KI-Chatbot für Dachdecker-Meisterbetrieb. Mehrstufiges Anfrageformular und 24/7 Notdienst-Integration.",
-      results: ["260+ zufriedene Kunden", "4.9 Google-Bewertung", "90 Min Reaktionszeit"],
+      results: ["100+ zufriedene Kunden", "4.9 Google-Bewertung", "90 Min Reaktionszeit"],
       color: "orange",
       link: "https://089dach.de"
     },
