@@ -6,7 +6,94 @@ import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Bot, Zap, MessageSquare, BarChart3, Clock, Shield, Sparkles, ArrowRight, CheckCircle, Brain, Workflow, Users, Mail, Calendar, FileText, ShoppingCart, Headphones, TrendingUp, Settings, Database, Globe, Cpu, Lock, RefreshCw, HelpCircle, ChevronDown } from "lucide-react";
 import { useState, useMemo } from "react";
-import { useLanguage } from "@/lib/i18n";
+import { useLanguage, Language } from "@/lib/i18n";
+
+const localTranslations: Record<Language, {
+  industriesTitle: string;
+  industriesSubtitle: string;
+  industries: { title: string; desc: string }[];
+  comparisonTitle: string;
+  comparisonSubtitle: string;
+  classicTitle: string;
+  classicPoints: string[];
+  kiAgentTitle: string;
+  kiAgentPoints: string[];
+}> = {
+  de: {
+    industriesTitle: "KI-Agenten für jede Branche",
+    industriesSubtitle: "Unsere KI-Agenten sind vielseitig einsetzbar und passen sich an die Anforderungen verschiedener Branchen an.",
+    industries: [
+      { title: "Gesundheitswesen", desc: "Terminmanagement, Patientenkommunikation, FAQ-Bots für Praxen und Kliniken. DSGVO-konform und sicher." },
+      { title: "Immobilien", desc: "Automatische Objektanfragen, virtuelle Besichtigungen, Lead-Qualifizierung und Exposé-Versand." },
+      { title: "Recht & Steuer", desc: "Mandantenanfragen automatisieren, Dokumentenmanagement, intelligente Terminbuchung." },
+      { title: "E-Commerce", desc: "Produktberatung, Bestellstatus, Retouren-Handling und personalisierte Empfehlungen." },
+      { title: "Handwerk", desc: "Terminbuchung, Angebotserstellung, Kundennachfragen und automatische Erinnerungen." },
+      { title: "Gastronomie", desc: "Tischreservierungen, Speisekarten-Auskünfte, Bewertungsmanagement und Events." }
+    ],
+    comparisonTitle: "KI-Agent vs. klassischer Kundenservice",
+    comparisonSubtitle: "Vergleichen Sie die Vorteile eines KI-Agenten mit herkömmlichem Support.",
+    classicTitle: "Klassischer Support",
+    classicPoints: ["Nur während Geschäftszeiten erreichbar", "Wartezeiten bei hohem Anfragevolumen", "Personalkosten steigen mit Wachstum", "Schulungsaufwand bei neuen Mitarbeitern", "Menschliche Fehler bei Routineaufgaben", "Schwer skalierbar bei Spitzenzeiten"],
+    kiAgentTitle: "ExtruCon KI-Agent",
+    kiAgentPoints: ["24/7 verfügbar, auch an Feiertagen", "Sofortige Antworten, keine Wartezeiten", "Fixkosten unabhängig vom Volumen", "Einmal trainiert, immer aktuell", "Konsistente, fehlerfreie Antworten", "Unbegrenzt skalierbar in Sekunden"]
+  },
+  en: {
+    industriesTitle: "AI Agents for Every Industry",
+    industriesSubtitle: "Our AI agents are versatile and adapt to the requirements of different industries.",
+    industries: [
+      { title: "Healthcare", desc: "Appointment management, patient communication, FAQ bots for practices and clinics. GDPR-compliant and secure." },
+      { title: "Real Estate", desc: "Automatic property inquiries, virtual tours, lead qualification, and exposé delivery." },
+      { title: "Legal & Tax", desc: "Automate client inquiries, document management, intelligent appointment booking." },
+      { title: "E-Commerce", desc: "Product advice, order status, returns handling, and personalized recommendations." },
+      { title: "Trades", desc: "Appointment booking, quote creation, customer inquiries, and automatic reminders." },
+      { title: "Gastronomy", desc: "Table reservations, menu information, review management, and events." }
+    ],
+    comparisonTitle: "AI Agent vs. Traditional Customer Service",
+    comparisonSubtitle: "Compare the advantages of an AI agent with traditional support.",
+    classicTitle: "Traditional Support",
+    classicPoints: ["Only available during business hours", "Wait times during high inquiry volume", "Personnel costs increase with growth", "Training effort for new employees", "Human errors in routine tasks", "Difficult to scale during peak times"],
+    kiAgentTitle: "ExtruCon AI Agent",
+    kiAgentPoints: ["Available 24/7, even on holidays", "Instant responses, no wait times", "Fixed costs regardless of volume", "Once trained, always up-to-date", "Consistent, error-free responses", "Infinitely scalable in seconds"]
+  },
+  hr: {
+    industriesTitle: "AI agenti za svaku industriju",
+    industriesSubtitle: "Naši AI agenti su svestrani i prilagođavaju se zahtjevima različitih industrija.",
+    industries: [
+      { title: "Zdravstvo", desc: "Upravljanje terminima, komunikacija s pacijentima, FAQ botovi za ordinacije i klinike. GDPR-sukladni i sigurni." },
+      { title: "Nekretnine", desc: "Automatski upiti za objekte, virtualni obilasci, kvalifikacija potencijalnih kupaca." },
+      { title: "Pravo i porez", desc: "Automatizacija upita klijenata, upravljanje dokumentima, inteligentno zakazivanje termina." },
+      { title: "E-trgovina", desc: "Savjeti o proizvodima, status narudžbe, obrada povrata i personalizirane preporuke." },
+      { title: "Obrt", desc: "Zakazivanje termina, izrada ponuda, upiti kupaca i automatski podsjetnici." },
+      { title: "Ugostiteljstvo", desc: "Rezervacije stolova, informacije o jelovniku, upravljanje recenzijama i događaji." }
+    ],
+    comparisonTitle: "AI agent naspram klasične korisničke službe",
+    comparisonSubtitle: "Usporedite prednosti AI agenta s tradicionalnom podrškom.",
+    classicTitle: "Tradicionalna podrška",
+    classicPoints: ["Dostupno samo tijekom radnog vremena", "Vrijeme čekanja kod velikog broja upita", "Troškovi osoblja rastu s rastom", "Napor ulaganja u obuku novih zaposlenika", "Ljudske greške u rutinskim zadacima", "Teško skaliranje u vršnim vremenima"],
+    kiAgentTitle: "ExtruCon AI agent",
+    kiAgentPoints: ["Dostupno 24/7, čak i praznikom", "Trenutni odgovori, bez čekanja", "Fiksni troškovi neovisno o volumenu", "Jednom obučen, uvijek ažuran", "Dosljedni odgovori bez grešaka", "Neograničeno skalabilno u sekundama"]
+  },
+  tr: {
+    industriesTitle: "Her Sektör İçin Yapay Zeka Temsilcileri",
+    industriesSubtitle: "Yapay zeka temsilcilerimiz çok yönlüdür ve farklı sektörlerin gereksinimlerine uyum sağlar.",
+    industries: [
+      { title: "Sağlık", desc: "Randevu yönetimi, hasta iletişimi, klinikler için SSS botları. KVKK uyumlu ve güvenli." },
+      { title: "Gayrimenkul", desc: "Otomatik mülk sorguları, sanal turlar, potansiyel müşteri kalifikasyonu." },
+      { title: "Hukuk ve Vergi", desc: "Müşteri sorgularını otomatikleştirin, belge yönetimi, akıllı randevu alma." },
+      { title: "E-Ticaret", desc: "Ürün danışmanlığı, sipariş durumu, iade işlemleri ve kişiselleştirilmiş öneriler." },
+      { title: "Zanaat", desc: "Randevu alma, teklif oluşturma, müşteri sorguları ve otomatik hatırlatmalar." },
+      { title: "Gastronomi", desc: "Masa rezervasyonları, menü bilgileri, yorum yönetimi ve etkinlikler." }
+    ],
+    comparisonTitle: "Yapay Zeka Temsilcisi vs. Geleneksel Müşteri Hizmeti",
+    comparisonSubtitle: "Yapay zeka temsilcisinin geleneksel destekle karşılaştırmalı avantajlarını görün.",
+    classicTitle: "Geleneksel Destek",
+    classicPoints: ["Sadece mesai saatlerinde ulaşılabilir", "Yoğun dönemlerde bekleme süreleri", "Büyümeyle birlikte personel maliyetleri artar", "Yeni çalışanlar için eğitim çabası", "Rutin görevlerde insan hataları", "Yoğun dönemlerde ölçekleme zor"],
+    kiAgentTitle: "ExtruCon Yapay Zeka Temsilcisi",
+    kiAgentPoints: ["Tatillerde bile 7/24 kullanılabilir", "Anında yanıtlar, bekleme yok", "Hacimden bağımsız sabit maliyetler", "Bir kez eğitilmiş, her zaman güncel", "Tutarlı, hatasız yanıtlar", "Saniyeler içinde sınırsız ölçeklenebilir"]
+  }
+};
+
+const industryIcons = ["🏥", "🏢", "⚖️", "🛒", "🔧", "🍽️"];
 
 const agentIcons = [MessageSquare, BarChart3, Workflow, Brain, Mail, Calendar, ShoppingCart, FileText];
 const agentColors = [
@@ -572,6 +659,80 @@ export default function KIAgenten() {
                   </div>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Industries Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold text-white mb-4">
+                {localTranslations[language].industriesTitle}
+              </h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                {localTranslations[language].industriesSubtitle}
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {localTranslations[language].industries.map((industry, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="p-6 bg-white/5 border border-white/10 rounded-xl hover:border-primary/50 transition-all"
+                >
+                  <div className="text-4xl mb-4">{industryIcons[index]}</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{industry.title}</h3>
+                  <p className="text-sm text-gray-400">{industry.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Comparison Section */}
+        <section className="py-16 bg-card/30">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold text-white mb-4">
+                {localTranslations[language].comparisonTitle}
+              </h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                {localTranslations[language].comparisonSubtitle}
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+              <div className="p-6 bg-red-500/10 border border-red-500/30 rounded-xl">
+                <h3 className="text-xl font-bold text-red-400 mb-4">❌ {localTranslations[language].classicTitle}</h3>
+                <ul className="space-y-3 text-gray-400">
+                  {localTranslations[language].classicPoints.map((point, i) => (
+                    <li key={i}>• {point}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="p-6 bg-green-500/10 border border-green-500/30 rounded-xl">
+                <h3 className="text-xl font-bold text-green-400 mb-4">✓ {localTranslations[language].kiAgentTitle}</h3>
+                <ul className="space-y-3 text-gray-400">
+                  {localTranslations[language].kiAgentPoints.map((point, i) => (
+                    <li key={i}>• {point}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </section>

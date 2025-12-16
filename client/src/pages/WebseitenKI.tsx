@@ -6,9 +6,106 @@ import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Globe, Sparkles, ArrowRight, CheckCircle, Zap, Shield, TrendingUp, MessageSquare, Bot, Search, FileText, Image, Code, Palette, Smartphone, BarChart3, RefreshCw, ChevronDown, HelpCircle, Clock, Users } from "lucide-react";
 import { useState } from "react";
-import { useLanguage } from "@/lib/i18n";
+import { useLanguage, Language } from "@/lib/i18n";
 
-const featureIcons = [Bot, FileText, Image, Search, Users, BarChart3];
+const localTranslations: Record<Language, {
+  whyTitle: string;
+  whySubtitle: string;
+  features: { title: string; desc: string }[];
+  pricingTitle: string;
+  pricingSubtitle: string;
+  packages: { name: string; desc: string; features: string[] }[];
+  pricingNote: string;
+  popular: string;
+}> = {
+  de: {
+    whyTitle: "Warum eine Website mit KI-Features?",
+    whySubtitle: "Moderne Websites sind mehr als digitale Visitenkarten – sie arbeiten aktiv für Ihren Geschäftserfolg.",
+    features: [
+      { title: "24/7 Kundenservice", desc: "Ein KI-Chatbot beantwortet Fragen rund um die Uhr und qualifiziert Leads automatisch." },
+      { title: "Automatische Content-Erstellung", desc: "KI generiert SEO-optimierte Texte, Produktbeschreibungen und Blog-Artikel." },
+      { title: "Intelligente Suche", desc: "Besucher finden sofort, was sie suchen – dank KI-gestützter Suchfunktion." },
+      { title: "Personalisierung", desc: "Inhalte werden individuell auf jeden Besucher zugeschnitten für höhere Conversions." },
+      { title: "Predictive Analytics", desc: "KI analysiert Nutzerverhalten und prognostiziert Trends und Kundenbedürfnisse." },
+      { title: "Mehrsprachigkeit", desc: "Automatische Übersetzung in beliebig viele Sprachen ohne manuellen Aufwand." }
+    ],
+    pricingTitle: "Transparente Preise",
+    pricingSubtitle: "Von der einfachen Landing Page bis zur komplexen Web-App – wir haben das passende Paket.",
+    packages: [
+      { name: "Landing Page", desc: "Perfekt für Produktlaunches und Kampagnen", features: ["1 Seite, responsive Design", "Kontaktformular", "SEO-Grundoptimierung", "KI-Chatbot (optional)", "2 Wochen Entwicklung"] },
+      { name: "Business Website", desc: "Für etablierte Unternehmen", features: ["5-10 Seiten", "CMS für eigene Bearbeitung", "KI-Chatbot integriert", "SEO-Optimierung", "Blog-Funktion", "4-6 Wochen Entwicklung"] },
+      { name: "Web-Applikation", desc: "Komplexe digitale Lösungen", features: ["Unbegrenzte Seiten/Features", "Kundenportal", "Volle KI-Integration", "API-Anbindungen", "Individuelle Entwicklung", "6-12 Wochen Entwicklung"] }
+    ],
+    pricingNote: "Alle Preise zzgl. MwSt. Monatliche Wartung ab 99€/Monat optional.",
+    popular: "Beliebt"
+  },
+  en: {
+    whyTitle: "Why a Website with AI Features?",
+    whySubtitle: "Modern websites are more than digital business cards – they actively work for your business success.",
+    features: [
+      { title: "24/7 Customer Service", desc: "An AI chatbot answers questions around the clock and automatically qualifies leads." },
+      { title: "Automatic Content Creation", desc: "AI generates SEO-optimized texts, product descriptions, and blog articles." },
+      { title: "Intelligent Search", desc: "Visitors instantly find what they're looking for – thanks to AI-powered search." },
+      { title: "Personalization", desc: "Content is individually tailored to each visitor for higher conversions." },
+      { title: "Predictive Analytics", desc: "AI analyzes user behavior and predicts trends and customer needs." },
+      { title: "Multilingual", desc: "Automatic translation into any number of languages without manual effort." }
+    ],
+    pricingTitle: "Transparent Pricing",
+    pricingSubtitle: "From simple landing pages to complex web apps – we have the right package for you.",
+    packages: [
+      { name: "Landing Page", desc: "Perfect for product launches and campaigns", features: ["1 page, responsive design", "Contact form", "Basic SEO optimization", "AI chatbot (optional)", "2 weeks development"] },
+      { name: "Business Website", desc: "For established companies", features: ["5-10 pages", "CMS for self-editing", "AI chatbot integrated", "SEO optimization", "Blog function", "4-6 weeks development"] },
+      { name: "Web Application", desc: "Complex digital solutions", features: ["Unlimited pages/features", "Customer portal", "Full AI integration", "API connections", "Custom development", "6-12 weeks development"] }
+    ],
+    pricingNote: "All prices plus VAT. Monthly maintenance from €99/month optional.",
+    popular: "Popular"
+  },
+  hr: {
+    whyTitle: "Zašto web stranica s AI značajkama?",
+    whySubtitle: "Moderne web stranice su više od digitalnih posjetnica – aktivno rade za vaš poslovni uspjeh.",
+    features: [
+      { title: "24/7 Korisnička služba", desc: "AI chatbot odgovara na pitanja non-stop i automatski kvalificira potencijalne kupce." },
+      { title: "Automatsko stvaranje sadržaja", desc: "AI generira SEO-optimizirane tekstove, opise proizvoda i blog članke." },
+      { title: "Inteligentna pretraga", desc: "Posjetitelji odmah pronalaze ono što traže – zahvaljujući AI-podržanoj pretrazi." },
+      { title: "Personalizacija", desc: "Sadržaj je individualno prilagođen svakom posjetitelju za veće konverzije." },
+      { title: "Prediktivna analitika", desc: "AI analizira ponašanje korisnika i predviđa trendove i potrebe kupaca." },
+      { title: "Višejezičnost", desc: "Automatski prijevod na bilo koji broj jezika bez ručnog napora." }
+    ],
+    pricingTitle: "Transparentne cijene",
+    pricingSubtitle: "Od jednostavnih odredišnih stranica do složenih web aplikacija – imamo pravi paket za vas.",
+    packages: [
+      { name: "Odredišna stranica", desc: "Savršeno za lansiranja proizvoda i kampanje", features: ["1 stranica, responzivni dizajn", "Kontaktni obrazac", "Osnovna SEO optimizacija", "AI chatbot (opcionalno)", "2 tjedna razvoja"] },
+      { name: "Poslovna web stranica", desc: "Za etablirane tvrtke", features: ["5-10 stranica", "CMS za samostalno uređivanje", "Integrirani AI chatbot", "SEO optimizacija", "Blog funkcija", "4-6 tjedana razvoja"] },
+      { name: "Web aplikacija", desc: "Složena digitalna rješenja", features: ["Neograničene stranice/značajke", "Korisnički portal", "Puna AI integracija", "API povezivanja", "Prilagođeni razvoj", "6-12 tjedana razvoja"] }
+    ],
+    pricingNote: "Sve cijene bez PDV-a. Mjesečno održavanje od 99€/mjesec opcionalno.",
+    popular: "Popularno"
+  },
+  tr: {
+    whyTitle: "Neden Yapay Zeka Özellikli Bir Web Sitesi?",
+    whySubtitle: "Modern web siteleri dijital kartvizitlerden fazlasıdır – işletme başarınız için aktif olarak çalışırlar.",
+    features: [
+      { title: "7/24 Müşteri Hizmeti", desc: "Yapay zeka sohbet botu soruları günün her saati yanıtlar ve potansiyel müşterileri otomatik olarak niteler." },
+      { title: "Otomatik İçerik Oluşturma", desc: "Yapay zeka SEO optimize edilmiş metinler, ürün açıklamaları ve blog makaleleri üretir." },
+      { title: "Akıllı Arama", desc: "Ziyaretçiler aradıklarını anında bulur – yapay zeka destekli arama sayesinde." },
+      { title: "Kişiselleştirme", desc: "İçerik, daha yüksek dönüşümler için her ziyaretçiye bireysel olarak uyarlanır." },
+      { title: "Prediktif Analitik", desc: "Yapay zeka kullanıcı davranışını analiz eder ve trendleri ve müşteri ihtiyaçlarını tahmin eder." },
+      { title: "Çok Dillilik", desc: "Manuel çaba olmadan istediğiniz sayıda dile otomatik çeviri." }
+    ],
+    pricingTitle: "Şeffaf Fiyatlandırma",
+    pricingSubtitle: "Basit açılış sayfalarından karmaşık web uygulamalarına – sizin için doğru pakete sahibiz.",
+    packages: [
+      { name: "Açılış Sayfası", desc: "Ürün lansmanları ve kampanyalar için mükemmel", features: ["1 sayfa, duyarlı tasarım", "İletişim formu", "Temel SEO optimizasyonu", "Yapay zeka sohbet botu (isteğe bağlı)", "2 hafta geliştirme"] },
+      { name: "İşletme Web Sitesi", desc: "Yerleşik şirketler için", features: ["5-10 sayfa", "Kendi düzenlemeniz için CMS", "Entegre yapay zeka sohbet botu", "SEO optimizasyonu", "Blog işlevi", "4-6 hafta geliştirme"] },
+      { name: "Web Uygulaması", desc: "Karmaşık dijital çözümler", features: ["Sınırsız sayfa/özellik", "Müşteri portalı", "Tam yapay zeka entegrasyonu", "API bağlantıları", "Özel geliştirme", "6-12 hafta geliştirme"] }
+    ],
+    pricingNote: "Tüm fiyatlar KDV hariçtir. Aylık bakım 99€/aydan itibaren isteğe bağlıdır.",
+    popular: "Popüler"
+  }
+};
+
+const featureIcons = ["🤖", "📝", "🔍", "👤", "📊", "🌐"];
+const componentFeatureIcons = [Bot, FileText, Image, Search, Users, BarChart3];
 
 const webseitenSchema = [
   {
@@ -302,6 +399,99 @@ export default function WebseitenKI() {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Why KI Website Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold text-white mb-4">
+                {localTranslations[language].whyTitle}
+              </h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                {localTranslations[language].whySubtitle}
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {localTranslations[language].features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="p-6 bg-white/5 border border-white/10 rounded-xl hover:border-secondary/50 transition-all"
+                >
+                  <div className="text-3xl mb-3">{featureIcons[index]}</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-sm text-gray-400">{feature.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Comparison */}
+        <section className="py-16 bg-card/30">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold text-white mb-4">
+                {localTranslations[language].pricingTitle}
+              </h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                {localTranslations[language].pricingSubtitle}
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {localTranslations[language].packages.map((plan, index) => {
+                const prices = ["ab 2.500€", "ab 5.000€", "ab 10.000€"];
+                const isPopular = index === 1;
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className={`relative p-6 rounded-2xl ${isPopular ? 'bg-secondary/10 border-2 border-secondary' : 'bg-white/5 border border-white/10'}`}
+                  >
+                    {isPopular && (
+                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-secondary text-background text-xs font-bold rounded-full">
+                        {localTranslations[language].popular}
+                      </div>
+                    )}
+                    <h3 className="text-xl font-bold text-white mb-1">{plan.name}</h3>
+                    <div className="text-2xl font-bold text-secondary mb-2">{prices[index]}</div>
+                    <p className="text-sm text-gray-400 mb-4">{plan.desc}</p>
+                    <ul className="space-y-2">
+                      {plan.features.map((feature, i) => (
+                        <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                );
+              })}
+            </div>
+
+            <p className="text-center text-gray-500 text-sm mt-8">
+              {localTranslations[language].pricingNote}
+            </p>
           </div>
         </section>
 

@@ -6,7 +6,126 @@ import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Workflow, Zap, ArrowRight, CheckCircle, Clock, TrendingUp, Shield, RefreshCw, Mail, FileText, Users, ShoppingCart, Calendar, Database, Settings, Cpu, Link2, GitBranch, Layers, Play, ChevronDown, HelpCircle } from "lucide-react";
 import { useState } from "react";
-import { useLanguage } from "@/lib/i18n";
+import { useLanguage, Language } from "@/lib/i18n";
+
+const localTranslations: Record<Language, {
+  roiTitle: string;
+  roiSubtitle: string;
+  roiStats: { value: string; label: string; desc: string }[];
+  exampleTitle: string;
+  beforeTitle: string;
+  beforePoints: string[];
+  afterTitle: string;
+  afterPoints: string[];
+  useCasesTitle: string;
+  useCasesSubtitle: string;
+  useCases: { title: string; desc: string }[];
+}> = {
+  de: {
+    roiTitle: "Ihre Investition rechnet sich schnell",
+    roiSubtitle: "Automatisierung ist keine Ausgabe, sondern eine Investition mit messbarem ROI.",
+    roiStats: [
+      { value: "80%", label: "Zeitersparnis", desc: "Bei wiederkehrenden Aufgaben wie E-Mail-Verarbeitung, Dateneingabe und Reporting." },
+      { value: "50%", label: "Kostenreduktion", desc: "Durch automatisierte Prozesse sinken Personalkosten für Routinearbeiten." },
+      { value: "3-6", label: "Monate ROI", desc: "Die meisten Automatisierungsprojekte amortisieren sich innerhalb eines halben Jahres." }
+    ],
+    exampleTitle: "Beispiel-Rechnung: E-Mail-Automatisierung",
+    beforeTitle: "Vorher (manuell)",
+    beforePoints: ["2 Stunden täglich für E-Mail-Bearbeitung", "50€/Std. Personalkosten = 100€/Tag", "20 Arbeitstage/Monat = 2.000€/Monat", "= 24.000€/Jahr"],
+    afterTitle: "Nachher (automatisiert)",
+    afterPoints: ["Einmalige Einrichtung: 2.500€", "Wartung: 200€/Monat = 2.400€/Jahr", "Ersparnis: 24.000€ - 4.900€", "= 19.100€ Ersparnis/Jahr"],
+    useCasesTitle: "Beliebte Automatisierungs-Workflows",
+    useCasesSubtitle: "Diese Prozesse automatisieren wir am häufigsten für unsere Kunden.",
+    useCases: [
+      { title: "Lead zu CRM", desc: "Neue Leads automatisch von Webformularen in Ihr CRM übertragen und Vertrieb benachrichtigen." },
+      { title: "Rechnungsversand", desc: "Rechnungen automatisch erstellen, versenden und in Buchhaltungssoftware erfassen." },
+      { title: "Social Media Posting", desc: "Content automatisch auf mehreren Plattformen veröffentlichen und analysieren." },
+      { title: "Termin-Erinnerungen", desc: "Automatische E-Mails und SMS vor Terminen an Kunden senden." },
+      { title: "Bestandsmanagement", desc: "Lagerbestände überwachen und automatisch Nachbestellungen auslösen." },
+      { title: "Kundenfeedback", desc: "Nach Abschluss automatisch Bewertungsanfragen senden und sammeln." },
+      { title: "Report-Erstellung", desc: "Tägliche/wöchentliche Reports automatisch generieren und versenden." },
+      { title: "Daten-Synchronisation", desc: "Daten zwischen verschiedenen Systemen automatisch abgleichen." }
+    ]
+  },
+  en: {
+    roiTitle: "Your Investment Pays Off Quickly",
+    roiSubtitle: "Automation is not an expense, but an investment with measurable ROI.",
+    roiStats: [
+      { value: "80%", label: "Time Saved", desc: "On recurring tasks like email processing, data entry, and reporting." },
+      { value: "50%", label: "Cost Reduction", desc: "Automated processes reduce personnel costs for routine work." },
+      { value: "3-6", label: "Months ROI", desc: "Most automation projects pay for themselves within half a year." }
+    ],
+    exampleTitle: "Example Calculation: Email Automation",
+    beforeTitle: "Before (manual)",
+    beforePoints: ["2 hours daily for email processing", "€50/hr personnel costs = €100/day", "20 working days/month = €2,000/month", "= €24,000/year"],
+    afterTitle: "After (automated)",
+    afterPoints: ["One-time setup: €2,500", "Maintenance: €200/month = €2,400/year", "Savings: €24,000 - €4,900", "= €19,100 savings/year"],
+    useCasesTitle: "Popular Automation Workflows",
+    useCasesSubtitle: "These are the processes we automate most frequently for our clients.",
+    useCases: [
+      { title: "Lead to CRM", desc: "Automatically transfer new leads from web forms to your CRM and notify sales." },
+      { title: "Invoice Sending", desc: "Automatically create, send invoices and record them in accounting software." },
+      { title: "Social Media Posting", desc: "Automatically publish and analyze content on multiple platforms." },
+      { title: "Appointment Reminders", desc: "Send automatic emails and SMS to customers before appointments." },
+      { title: "Inventory Management", desc: "Monitor inventory levels and automatically trigger reorders." },
+      { title: "Customer Feedback", desc: "Automatically send and collect review requests after completion." },
+      { title: "Report Generation", desc: "Automatically generate and send daily/weekly reports." },
+      { title: "Data Synchronization", desc: "Automatically sync data between different systems." }
+    ]
+  },
+  hr: {
+    roiTitle: "Vaša investicija se brzo isplati",
+    roiSubtitle: "Automatizacija nije trošak, već investicija s mjerljivim povratom.",
+    roiStats: [
+      { value: "80%", label: "Ušteda vremena", desc: "Na ponavljajućim zadacima poput obrade e-pošte, unosa podataka i izvještavanja." },
+      { value: "50%", label: "Smanjenje troškova", desc: "Automatizirani procesi smanjuju troškove osoblja za rutinske poslove." },
+      { value: "3-6", label: "Mjeseci ROI", desc: "Većina projekata automatizacije se isplati unutar pola godine." }
+    ],
+    exampleTitle: "Primjer izračuna: Automatizacija e-pošte",
+    beforeTitle: "Prije (ručno)",
+    beforePoints: ["2 sata dnevno za obradu e-pošte", "50€/sat troškovi osoblja = 100€/dan", "20 radnih dana/mjesec = 2.000€/mjesec", "= 24.000€/godišnje"],
+    afterTitle: "Poslije (automatizirano)",
+    afterPoints: ["Jednokratna postava: 2.500€", "Održavanje: 200€/mjesec = 2.400€/godišnje", "Ušteda: 24.000€ - 4.900€", "= 19.100€ uštede/godišnje"],
+    useCasesTitle: "Popularni automatizirani procesi",
+    useCasesSubtitle: "Ovo su procesi koje najčešće automatiziramo za naše klijente.",
+    useCases: [
+      { title: "Lead u CRM", desc: "Automatski prenesite nove potencijalne kupce iz web obrazaca u vaš CRM." },
+      { title: "Slanje računa", desc: "Automatski kreirajte i šaljite račune te ih evidentirajte u računovodstvenom softveru." },
+      { title: "Objave na društvenim mrežama", desc: "Automatski objavljujte i analizirajte sadržaj na više platformi." },
+      { title: "Podsjetnici za termine", desc: "Šaljite automatske e-mailove i SMS poruke kupcima prije termina." },
+      { title: "Upravljanje zalihama", desc: "Pratite razine zaliha i automatski pokrenite narudžbe." },
+      { title: "Povratne informacije kupaca", desc: "Automatski šaljite i prikupljajte zahtjeve za recenzije." },
+      { title: "Generiranje izvještaja", desc: "Automatski generirajte i šaljite dnevne/tjedne izvještaje." },
+      { title: "Sinkronizacija podataka", desc: "Automatski sinkronizirajte podatke između različitih sustava." }
+    ]
+  },
+  tr: {
+    roiTitle: "Yatırımınız Hızla Geri Döner",
+    roiSubtitle: "Otomasyon bir gider değil, ölçülebilir yatırım getirisi olan bir yatırımdır.",
+    roiStats: [
+      { value: "80%", label: "Zaman Tasarrufu", desc: "E-posta işleme, veri girişi ve raporlama gibi tekrarlayan görevlerde." },
+      { value: "50%", label: "Maliyet Azaltma", desc: "Otomatik süreçler rutin işler için personel maliyetlerini düşürür." },
+      { value: "3-6", label: "Ay ROI", desc: "Çoğu otomasyon projesi yarım yıl içinde kendini amorti eder." }
+    ],
+    exampleTitle: "Örnek Hesaplama: E-posta Otomasyonu",
+    beforeTitle: "Önce (manuel)",
+    beforePoints: ["E-posta işleme için günlük 2 saat", "50€/saat personel maliyeti = 100€/gün", "Ayda 20 iş günü = 2.000€/ay", "= Yıllık 24.000€"],
+    afterTitle: "Sonra (otomatik)",
+    afterPoints: ["Tek seferlik kurulum: 2.500€", "Bakım: 200€/ay = 2.400€/yıl", "Tasarruf: 24.000€ - 4.900€", "= Yıllık 19.100€ tasarruf"],
+    useCasesTitle: "Popüler Otomasyon İş Akışları",
+    useCasesSubtitle: "Müşterilerimiz için en sık otomatikleştirdiğimiz süreçler bunlar.",
+    useCases: [
+      { title: "Lead'den CRM'e", desc: "Web formlarından yeni potansiyel müşterileri otomatik olarak CRM'inize aktarın." },
+      { title: "Fatura Gönderimi", desc: "Faturaları otomatik olarak oluşturun, gönderin ve muhasebe yazılımına kaydedin." },
+      { title: "Sosyal Medya Paylaşımı", desc: "Birden fazla platformda içerikleri otomatik olarak yayınlayın ve analiz edin." },
+      { title: "Randevu Hatırlatmaları", desc: "Randevulardan önce müşterilere otomatik e-posta ve SMS gönderin." },
+      { title: "Envanter Yönetimi", desc: "Stok seviyelerini izleyin ve otomatik olarak yeniden sipariş verin." },
+      { title: "Müşteri Geri Bildirimi", desc: "Tamamlandıktan sonra otomatik olarak değerlendirme talepleri gönderin." },
+      { title: "Rapor Oluşturma", desc: "Günlük/haftalık raporları otomatik olarak oluşturun ve gönderin." },
+      { title: "Veri Senkronizasyonu", desc: "Farklı sistemler arasındaki verileri otomatik olarak senkronize edin." }
+    ]
+  }
+};
 
 const automationIcons = [Mail, Users, FileText, ShoppingCart, Calendar, Database, TrendingUp, Settings];
 const benefitIcons = [Clock, Shield, TrendingUp, Zap];
@@ -316,6 +435,107 @@ export default function Automatisierungen() {
                   </div>
                   <h3 className="text-sm font-bold text-white mb-1">{item.title}</h3>
                   <p className="text-gray-400 text-xs">{item.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ROI Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <TrendingUp className="w-10 h-10 text-orange-400 mx-auto mb-4" />
+              <h2 className="text-3xl font-bold text-white mb-4">
+                {localTranslations[language].roiTitle}
+              </h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                {localTranslations[language].roiSubtitle}
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+              {localTranslations[language].roiStats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="text-center p-6 bg-orange-500/10 border border-orange-500/30 rounded-2xl"
+                >
+                  <div className="text-4xl font-bold text-orange-400 mb-2">{stat.value}</div>
+                  <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
+                  <p className="text-sm text-gray-400">{stat.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-gray-800/50 border border-gray-700/50 rounded-2xl p-8 max-w-4xl mx-auto"
+            >
+              <h3 className="text-xl font-bold text-white mb-6 text-center">{localTranslations[language].exampleTitle}</h3>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="text-orange-400 font-semibold mb-4">{localTranslations[language].beforeTitle}</h4>
+                  <ul className="space-y-2 text-gray-400 text-sm">
+                    {localTranslations[language].beforePoints.slice(0, 3).map((point, i) => (
+                      <li key={i}>• {point}</li>
+                    ))}
+                    <li className="font-semibold text-white">{localTranslations[language].beforePoints[3]}</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-green-400 font-semibold mb-4">{localTranslations[language].afterTitle}</h4>
+                  <ul className="space-y-2 text-gray-400 text-sm">
+                    {localTranslations[language].afterPoints.slice(0, 3).map((point, i) => (
+                      <li key={i}>• {point}</li>
+                    ))}
+                    <li className="font-semibold text-green-400">{localTranslations[language].afterPoints[3]}</li>
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-16 bg-card/30">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold text-white mb-4">
+                {localTranslations[language].useCasesTitle}
+              </h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                {localTranslations[language].useCasesSubtitle}
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {localTranslations[language].useCases.map((useCase, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.05 }}
+                  className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-orange-500/50 transition-all"
+                >
+                  <h3 className="text-base font-semibold text-white mb-2">{useCase.title}</h3>
+                  <p className="text-xs text-gray-400">{useCase.desc}</p>
                 </motion.div>
               ))}
             </div>
