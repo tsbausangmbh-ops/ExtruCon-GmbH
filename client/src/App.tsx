@@ -29,6 +29,8 @@ import Termin from "@/pages/Termin";
 import NotFound from "@/pages/not-found";
 import { ChatWidget } from "@/components/ChatWidget";
 import { CookieConsent } from "@/components/CookieConsent";
+import ChristmasPopup from "@/components/ChristmasPopup";
+import NewYearPopup from "@/components/NewYearPopup";
 
 function Router() {
   return (
@@ -71,6 +73,8 @@ function App() {
           <Router />
           <ChatWidget />
           <CookieConsent />
+          <ChristmasPopup />
+          <NewYearPopup />
         </TooltipProvider>
       </LanguageProvider>
     </QueryClientProvider>
