@@ -59,7 +59,7 @@ export default function ChristmasPopup() {
           className="w-full h-auto"
         />
         
-        <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/90 via-emerald-900/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-900/70 to-transparent" />
         
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
           <p 
