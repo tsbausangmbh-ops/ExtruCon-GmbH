@@ -8,6 +8,9 @@ import { About } from "@/components/sections/About";
 import { Contact } from "@/components/sections/Contact";
 import { References } from "@/components/sections/References";
 import { HomeFAQ } from "@/components/sections/HomeFAQ";
+import { Statistics } from "@/components/sections/Statistics";
+import { Process } from "@/components/sections/Process";
+import { TrustSignals } from "@/components/sections/TrustSignals";
 import { SEOHead } from "@/components/SEOHead";
 
 const homeSchema = [
@@ -124,12 +127,18 @@ export default function Home() {
         <Hero />
         {/* Funnel Logic: 1. Problem Awareness */}
         <Problem />
+        {/* Statistics Section */}
+        <Statistics />
         {/* Funnel Logic: 2. The System/Solution */}
         <Funnel />
         {/* Funnel Logic: 3. The Execution Tools (Services) */}
         <Services />
+        {/* Process Section */}
+        <Process />
         {/* References Section */}
         <References />
+        {/* Trust Signals */}
+        <TrustSignals />
         {/* FAQ Section */}
         <HomeFAQ />
         {/* About Section */}

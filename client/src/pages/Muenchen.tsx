@@ -254,6 +254,96 @@ export default function Muenchen() {
           </div>
         </section>
 
+        {/* Industries Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Branchenlösungen für Münchner Unternehmen
+              </h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                Egal ob Handwerk, Dienstleistung oder E-Commerce – wir haben die passende KI-Lösung für Ihre Branche.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { title: "Handwerksbetriebe", desc: "Automatisierte Terminbuchung, Angebotserstellung und Kundenkommunikation für Dachdecker, Elektriker, Sanitär und mehr.", icon: "🔧" },
+                { title: "Gastronomie & Hotels", desc: "KI-Chatbots für Reservierungen, automatische Bewertungsantworten und personalisiertes Marketing.", icon: "🍽️" },
+                { title: "Ärzte & Praxen", desc: "Online-Terminbuchung, Patientenkommunikation und automatische Erinnerungen. DSGVO-konform.", icon: "⚕️" },
+                { title: "Rechtsanwälte & Steuerberater", desc: "Dokumenten-Automatisierung, Mandantenkommunikation und intelligente FAQ-Bots.", icon: "⚖️" },
+                { title: "E-Commerce & Shops", desc: "Produktempfehlungen, automatisierter Kundenservice und Bestandsmanagement.", icon: "🛒" },
+                { title: "Immobilien & Makler", desc: "Automatische Objektanfragen, virtuelle Besichtigungen und Lead-Qualifizierung.", icon: "🏠" }
+              ].map((industry, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="p-6 bg-gray-800/30 border border-gray-700/30 rounded-xl hover:border-cyan-500/30 transition-all"
+                >
+                  <div className="text-4xl mb-4">{industry.icon}</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{industry.title}</h3>
+                  <p className="text-sm text-gray-400">{industry.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-20 bg-gray-900/30">
+          <div className="container mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Das sagen Münchner Kunden
+              </h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                Überzeugen Sie sich von den Erfahrungen unserer Kunden aus München und Umgebung.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                { quote: "ExtruCon hat unseren Kundenservice revolutioniert. Der KI-Chatbot bearbeitet 80% der Anfragen automatisch.", author: "Stefan M.", company: "Dachdeckerei München", stars: 5 },
+                { quote: "Die Automatisierung unserer Terminbuchung spart uns täglich Stunden. Absolut empfehlenswert!", author: "Dr. Maria K.", company: "Zahnarztpraxis Schwabing", stars: 5 },
+                { quote: "Professionell, schnell und immer erreichbar. Die beste Investition für unser Unternehmen.", author: "Thomas B.", company: "Immobilienbüro Bogenhausen", stars: 5 }
+              ].map((testimonial, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="p-6 bg-gray-800/50 border border-gray-700/50 rounded-xl"
+                >
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(testimonial.stars)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4 italic">"{testimonial.quote}"</p>
+                  <div>
+                    <p className="text-white font-semibold">{testimonial.author}</p>
+                    <p className="text-sm text-gray-400">{testimonial.company}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Local Coverage Section */}
         <section className="py-20">
           <div className="container mx-auto px-6">
