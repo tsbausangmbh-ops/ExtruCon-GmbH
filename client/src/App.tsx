@@ -26,6 +26,7 @@ import SEO from "@/pages/services/SEO";
 import Referenzen from "@/pages/Referenzen";
 import Cookies from "@/pages/Cookies";
 import Termin from "@/pages/Termin";
+import Muenchen from "@/pages/Muenchen";
 import NotFound from "@/pages/not-found";
 import { ChatWidget } from "@/components/ChatWidget";
 import { CookieConsent } from "@/components/CookieConsent";
@@ -59,6 +60,7 @@ function Router() {
       <Route path="/referenzen" component={Referenzen} />
       <Route path="/cookies" component={Cookies} />
       <Route path="/termin" component={Termin} />
+      <Route path="/muenchen" component={Muenchen} />
       <Route component={NotFound} />
     </Switch>
   );
