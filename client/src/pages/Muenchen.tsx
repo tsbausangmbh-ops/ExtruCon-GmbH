@@ -171,7 +171,7 @@ export default function Muenchen() {
         </section>
 
         {/* Services Section */}
-        <section className="py-20 relative">
+        <section className="py-12 relative">
           <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -215,7 +215,7 @@ export default function Muenchen() {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-gray-900/50">
+        <section className="py-12 bg-gray-900/50">
           <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -255,7 +255,7 @@ export default function Muenchen() {
         </section>
 
         {/* Industries Section */}
-        <section className="py-20">
+        <section className="py-12">
           <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -298,7 +298,7 @@ export default function Muenchen() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 bg-gray-900/30">
+        <section className="py-12 bg-gray-900/30">
           <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -345,7 +345,7 @@ export default function Muenchen() {
         </section>
 
         {/* Local Coverage Section */}
-        <section className="py-20">
+        <section className="py-12">
           <div className="container mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-12">
               <motion.div
@@ -398,7 +398,7 @@ export default function Muenchen() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-cyan-900/20 to-blue-900/20">
+        <section className="py-12 bg-gradient-to-br from-cyan-900/20 to-blue-900/20">
           <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

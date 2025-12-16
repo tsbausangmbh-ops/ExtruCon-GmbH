@@ -209,7 +209,7 @@ const automationSchema = [
 
 export default function Automatisierungen() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
@@ -229,7 +229,7 @@ export default function Automatisierungen() {
           { label: t.nav.automation }
         ]} />
         {/* Hero */}
-        <section className="py-16 bg-gradient-to-b from-orange-500/5 to-background">
+        <section className="py-10 bg-gradient-to-b from-orange-500/5 to-background">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -294,7 +294,7 @@ export default function Automatisierungen() {
         </section>
 
         {/* Automations Grid */}
-        <section id="automations" className="py-16">
+        <section id="automations" className="py-10">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -340,7 +340,7 @@ export default function Automatisierungen() {
         </section>
 
         {/* n8n Feature */}
-        <section className="py-16 bg-card/20">
+        <section className="py-10 bg-card/20">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
               <motion.div
@@ -401,7 +401,7 @@ export default function Automatisierungen() {
         </section>
 
         {/* Process */}
-        <section className="py-16">
+        <section className="py-10">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -442,7 +442,7 @@ export default function Automatisierungen() {
         </section>
 
         {/* ROI Section */}
-        <section className="py-16">
+        <section className="py-10">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -508,7 +508,7 @@ export default function Automatisierungen() {
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-16 bg-card/30">
+        <section className="py-10 bg-card/30">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -543,7 +543,7 @@ export default function Automatisierungen() {
         </section>
 
         {/* Tools */}
-        <section className="py-16 bg-card/20">
+        <section className="py-10 bg-card/20">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -581,7 +581,7 @@ export default function Automatisierungen() {
         </section>
 
         {/* FAQ */}
-        <section className="py-16">
+        <section className="py-10">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -625,7 +625,7 @@ export default function Automatisierungen() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-gradient-to-r from-orange-500/10 to-orange-600/10 border-y border-white/10">
+        <section className="py-10 bg-gradient-to-r from-orange-500/10 to-orange-600/10 border-y border-white/10">
           <div className="container mx-auto px-4 text-center">
             <Play className="w-12 h-12 text-orange-400 mx-auto mb-4" />
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">

@@ -363,7 +363,7 @@ export default function KIAgenten() {
           { label: t.nav.kiAgents }
         ]} />
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-b from-primary/5 to-background">
+        <section className="py-10 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -466,7 +466,7 @@ export default function KIAgenten() {
         </section>
 
         {/* Agents Grid */}
-        <section id="agents" className="py-16 bg-card/20">
+        <section id="agents" className="py-10 bg-card/20">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -535,7 +535,7 @@ export default function KIAgenten() {
         </section>
 
         {/* Use Cases */}
-        <section className="py-16">
+        <section className="py-10">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -583,7 +583,7 @@ export default function KIAgenten() {
         </section>
 
         {/* How it works */}
-        <section className="py-16 bg-card/20">
+        <section className="py-10 bg-card/20">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -624,7 +624,7 @@ export default function KIAgenten() {
         </section>
 
         {/* Technology */}
-        <section className="py-16">
+        <section className="py-10">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -664,7 +664,7 @@ export default function KIAgenten() {
         </section>
 
         {/* Industries Section */}
-        <section className="py-16">
+        <section className="py-10">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -700,7 +700,7 @@ export default function KIAgenten() {
         </section>
 
         {/* Comparison Section */}
-        <section className="py-16 bg-card/30">
+        <section className="py-10 bg-card/30">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -738,7 +738,7 @@ export default function KIAgenten() {
         </section>
 
         {/* Pricing */}
-        <section className="py-16 bg-card/20">
+        <section className="py-10 bg-card/20">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -803,7 +803,7 @@ export default function KIAgenten() {
         </section>
 
         {/* FAQ */}
-        <section className="py-16" id="faq">
+        <section className="py-10" id="faq">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -849,7 +849,7 @@ export default function KIAgenten() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-gradient-to-r from-primary/10 to-secondary/10 border-y border-white/10">
+        <section className="py-10 bg-gradient-to-r from-primary/10 to-secondary/10 border-y border-white/10">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
               {t.kiAgentsPage.ctaTitle}

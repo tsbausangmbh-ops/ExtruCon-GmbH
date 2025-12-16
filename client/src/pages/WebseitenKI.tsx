@@ -185,7 +185,7 @@ const webseitenSchema = [
 
 export default function WebseitenKI() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
@@ -205,7 +205,7 @@ export default function WebseitenKI() {
           { label: t.nav.websitesKI }
         ]} />
         {/* Hero */}
-        <section className="py-16 bg-gradient-to-b from-secondary/10 to-background">
+        <section className="py-10 bg-gradient-to-b from-secondary/10 to-background">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -270,7 +270,7 @@ export default function WebseitenKI() {
         </section>
 
         {/* KI Features */}
-        <section id="features" className="py-16">
+        <section id="features" className="py-10">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -318,7 +318,7 @@ export default function WebseitenKI() {
         </section>
 
         {/* Website Types */}
-        <section className="py-16 bg-card/20">
+        <section className="py-10 bg-card/20">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -362,7 +362,7 @@ export default function WebseitenKI() {
         </section>
 
         {/* Process */}
-        <section className="py-16">
+        <section className="py-10">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -403,7 +403,7 @@ export default function WebseitenKI() {
         </section>
 
         {/* Why KI Website Section */}
-        <section className="py-16">
+        <section className="py-10">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -439,7 +439,7 @@ export default function WebseitenKI() {
         </section>
 
         {/* Pricing Comparison */}
-        <section className="py-16 bg-card/30">
+        <section className="py-10 bg-card/30">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -529,7 +529,7 @@ export default function WebseitenKI() {
         </section>
 
         {/* FAQ */}
-        <section className="py-16">
+        <section className="py-10">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -573,7 +573,7 @@ export default function WebseitenKI() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-gradient-to-r from-secondary/10 to-primary/10 border-y border-white/10">
+        <section className="py-10 bg-gradient-to-r from-secondary/10 to-primary/10 border-y border-white/10">
           <div className="container mx-auto px-4 text-center">
             <Sparkles className="w-12 h-12 text-secondary mx-auto mb-4" />
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">

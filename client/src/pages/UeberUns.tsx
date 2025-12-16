@@ -27,7 +27,7 @@ export default function UeberUns() {
           { label: about.badge }
         ]} />
         {/* Hero */}
-        <section className="py-16 bg-gradient-to-b from-primary/5 to-background">
+        <section className="py-10 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -74,7 +74,7 @@ export default function UeberUns() {
         </section>
 
         {/* Wer wir sind */}
-        <section className="py-16">
+        <section className="py-10">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
               <motion.div
@@ -150,7 +150,7 @@ export default function UeberUns() {
         </section>
 
         {/* Vision Timeline */}
-        <section className="py-16 bg-card/20">
+        <section className="py-10 bg-card/20">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -193,7 +193,7 @@ export default function UeberUns() {
         </section>
 
         {/* Unsere Werte */}
-        <section className="py-16">
+        <section className="py-10">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -234,7 +234,7 @@ export default function UeberUns() {
         </section>
 
         {/* Unsere Leistungen */}
-        <section className="py-16 bg-card/20">
+        <section className="py-10 bg-card/20">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -272,7 +272,7 @@ export default function UeberUns() {
         </section>
 
         {/* Warum ExtruCon */}
-        <section className="py-16">
+        <section className="py-10">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -344,7 +344,7 @@ export default function UeberUns() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-gradient-to-r from-primary/10 to-secondary/10 border-y border-white/10">
+        <section className="py-10 bg-gradient-to-r from-primary/10 to-secondary/10 border-y border-white/10">
           <div className="container mx-auto px-4 text-center">
             <Sparkles className="w-12 h-12 text-primary mx-auto mb-4" />
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
