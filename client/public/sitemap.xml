@@ -248,6 +248,16 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- München - Lokale Landingpage -->
+  <url>
+    <loc>https://extrucon.de/muenchen</loc>
+    <lastmod>2025-12-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Impressum -->
   <url>
     <loc>https://extrucon.de/impressum</loc>
