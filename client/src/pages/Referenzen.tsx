@@ -156,7 +156,7 @@ export default function Referenzen() {
         
         <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-4 pb-4">
           <div className="absolute inset-0 z-0">
-            <img src={heroImg} alt="Referenzen & Erfolgsgeschichten" className="w-full h-full object-cover opacity-60" />
+            <img src={heroImg} alt="Referenzen & Erfolgsgeschichten" className="w-full h-full object-cover opacity-60" loading="lazy" />
             <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
           </div>
           <div className="container mx-auto px-4 z-40 relative">
