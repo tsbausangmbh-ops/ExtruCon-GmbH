@@ -21,6 +21,12 @@ export default function NewYearPopup() {
     }
 
     const year = new Date().getFullYear();
+    const storageKey = `extrucon_newyear_popup_${year}`;
+    
+    if (localStorage.getItem(storageKey)) {
+      return;
+    }
+
     setCurrentYear(year);
     setLastYear(year - 1);
 
@@ -31,6 +37,10 @@ export default function NewYearPopup() {
   }, []);
 
   const handleClose = () => {
+    const year = new Date().getFullYear();
+    const storageKey = `extrucon_newyear_popup_${year}`;
+    localStorage.setItem(storageKey, "seen");
+    
     setIsClosing(true);
     setTimeout(() => {
       setIsVisible(false);

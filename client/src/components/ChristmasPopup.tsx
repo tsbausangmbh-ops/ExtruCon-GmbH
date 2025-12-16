@@ -21,6 +21,12 @@ export default function ChristmasPopup() {
     }
 
     const year = new Date().getFullYear();
+    const storageKey = `extrucon_christmas_popup_${year}`;
+    
+    if (localStorage.getItem(storageKey)) {
+      return;
+    }
+
     setCurrentYear(year);
     setNextYear(year + 1);
 
@@ -31,6 +37,10 @@ export default function ChristmasPopup() {
   }, []);
 
   const handleClose = () => {
+    const year = new Date().getFullYear();
+    const storageKey = `extrucon_christmas_popup_${year}`;
+    localStorage.setItem(storageKey, "seen");
+    
     setIsClosing(true);
     setTimeout(() => {
       setIsVisible(false);
