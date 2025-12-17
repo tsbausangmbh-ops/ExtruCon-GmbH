@@ -1,7 +1,7 @@
 # ExtruCon GmbH - Robots.txt
 # SEO & AI optimiert für Deutschland (DE), Kroatien (HR), Türkei (TR)
-# Letzte Aktualisierung: 13. Dezember 2025
-# Optimiert für: KI-Agenten, Geo (DE-BY, HR, TR)
+# Letzte Aktualisierung: 17. Dezember 2025
+# Optimiert für: KI-Agenten, Geo (München, FFB, Starnberg, Dachau)
 
 # ===========================================
 # STANDARD SUCHMASCHINEN - VOLLER ZUGRIFF
@@ -204,6 +204,19 @@ Allow: /ratgeber
 Allow: /referenzen
 Allow: /impressum
 Allow: /datenschutz
+
+# Geo-SEO Landingpages München & Umland
+Allow: /muenchen
+Allow: /muenchen/bogenhausen
+Allow: /muenchen/schwabing
+Allow: /muenchen/nymphenburg
+Allow: /muenchen/gruenwald
+Allow: /muenchen/harlaching
+Allow: /starnberg
+Allow: /dachau
+Allow: /germering
+Allow: /puchheim
+Allow: /olching
 
 # Blockierte Bereiche (nicht indizieren)
 Disallow: /api/
