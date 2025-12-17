@@ -1,0 +1,546 @@
+export const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <url>
+    <loc>https://extrucon.de/favicon.ico</loc>
+    <lastmod>2025-12-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/logo.png</loc>
+    <lastmod>2025-12-17</lastmod>
+    <image:image>
+      <image:loc>https://extrucon.de/logo.png</image:loc>
+      <image:title>ExtruCon GmbH Logo - KI-Agentur Fürstenfeldbruck</image:title>
+    </image:image>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/</loc>
+    <lastmod>2025-12-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/ki-agenten</loc>
+    <lastmod>2025-12-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/ki-agenten"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/ki-agenten?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/ki-agenten?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/ki-agenten?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/ki-agenten"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/automatisierungen</loc>
+    <lastmod>2025-12-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/automatisierungen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/automatisierungen?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/automatisierungen?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/automatisierungen?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/automatisierungen"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/webseiten-ki</loc>
+    <lastmod>2025-12-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/webseiten-ki"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/webseiten-ki?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/webseiten-ki?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/webseiten-ki?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/webseiten-ki"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/leistungen/marketing</loc>
+    <lastmod>2025-12-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/leistungen/marketing"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/leistungen/marketing?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/leistungen/marketing?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/leistungen/marketing?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/leistungen/marketing"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/leistungen/social-media</loc>
+    <lastmod>2025-12-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/leistungen/social-media"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/leistungen/social-media?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/leistungen/social-media?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/leistungen/social-media?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/leistungen/social-media"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/leistungen/content</loc>
+    <lastmod>2025-12-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/leistungen/content"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/leistungen/content?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/leistungen/content?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/leistungen/content?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/leistungen/content"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/leistungen/brand</loc>
+    <lastmod>2025-12-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/leistungen/brand"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/leistungen/brand?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/leistungen/brand?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/leistungen/brand?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/leistungen/brand"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/leistungen/web</loc>
+    <lastmod>2025-12-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/leistungen/web"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/leistungen/web?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/leistungen/web?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/leistungen/web?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/leistungen/web"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/leistungen/ki</loc>
+    <lastmod>2025-12-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/leistungen/ki"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/leistungen/ki?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/leistungen/ki?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/leistungen/ki?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/leistungen/ki"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/kontakt</loc>
+    <lastmod>2025-12-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/kontakt?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/kontakt?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/kontakt?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/kontakt"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/ueber-uns</loc>
+    <lastmod>2025-12-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/ueber-uns"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/ueber-uns?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/ueber-uns?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/ueber-uns?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/ueber-uns"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/faq</loc>
+    <lastmod>2025-12-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/faq?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/faq?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/faq?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/faq"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/ratgeber</loc>
+    <lastmod>2025-12-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/ratgeber"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/ratgeber?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/ratgeber?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/ratgeber?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/ratgeber"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/ki-bot</loc>
+    <lastmod>2025-12-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/ki-bot"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/ki-bot?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/ki-bot?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/ki-bot?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/ki-bot"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/termin</loc>
+    <lastmod>2025-12-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/termin"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/termin?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/termin?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/termin?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/termin"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/referenzen</loc>
+    <lastmod>2025-12-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/referenzen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/referenzen?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/referenzen?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/referenzen?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/referenzen"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/muenchen</loc>
+    <lastmod>2025-12-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/muenchen/bogenhausen</loc>
+    <lastmod>2025-12-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen/bogenhausen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen/bogenhausen"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/muenchen/schwabing</loc>
+    <lastmod>2025-12-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen/schwabing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen/schwabing"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/muenchen/nymphenburg</loc>
+    <lastmod>2025-12-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen/nymphenburg"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen/nymphenburg"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/muenchen/gruenwald</loc>
+    <lastmod>2025-12-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen/gruenwald"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen/gruenwald"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/muenchen/harlaching</loc>
+    <lastmod>2025-12-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen/harlaching"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen/harlaching"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/starnberg</loc>
+    <lastmod>2025-12-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/starnberg"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/starnberg"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/dachau</loc>
+    <lastmod>2025-12-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/dachau"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/dachau"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/germering</loc>
+    <lastmod>2025-12-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/germering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/germering"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/puchheim</loc>
+    <lastmod>2025-12-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/puchheim"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/puchheim"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/olching</loc>
+    <lastmod>2025-12-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/olching"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/olching"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/impressum</loc>
+    <lastmod>2025-12-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/datenschutz</loc>
+    <lastmod>2025-12-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/agb</loc>
+    <lastmod>2025-12-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/cookies</loc>
+    <lastmod>2025-12-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>`;
+
+export const ROBOTS_TXT = `# ExtruCon GmbH - Robots.txt
+# SEO & AI optimiert für Deutschland (DE), Kroatien (HR), Türkei (TR)
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: msnbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: SeznamBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Yeti
+Allow: /
+Crawl-delay: 2
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: GoogleOther
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+User-agent: img2dataset
+Disallow: /
+
+User-agent: Sidetrade
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: *
+Allow: /
+
+Allow: /ki-agenten
+Allow: /automatisierungen
+Allow: /webseiten-ki
+Allow: /leistungen/
+Allow: /kontakt
+Allow: /termin
+Allow: /ueber-uns
+Allow: /faq
+Allow: /ratgeber
+Allow: /referenzen
+Allow: /impressum
+Allow: /datenschutz
+
+Allow: /muenchen
+Allow: /muenchen/bogenhausen
+Allow: /muenchen/schwabing
+Allow: /muenchen/nymphenburg
+Allow: /muenchen/gruenwald
+Allow: /muenchen/harlaching
+Allow: /starnberg
+Allow: /dachau
+Allow: /germering
+Allow: /puchheim
+Allow: /olching
+
+Disallow: /api/
+Disallow: /_*
+Disallow: /admin/
+Disallow: /login/
+Disallow: /search?
+Disallow: /*?filter=
+Disallow: /*?sort=
+Disallow: /*.json$
+Disallow: /node_modules/
+
+Sitemap: https://extrucon.de/sitemap.xml
+
+Allow: /favicon.ico
+Allow: /logo.png
+
+User-agent: *
+Crawl-delay: 2
+
+Host: https://extrucon.de`;

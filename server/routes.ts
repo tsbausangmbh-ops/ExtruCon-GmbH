@@ -4,12 +4,7 @@ import { storage } from "./storage";
 import OpenAI from "openai";
 import { listEvents, createEvent, getAvailableSlots, isBusinessHour, getAlternativeSlots } from "./lib/googleCalendar";
 import { sendContactEmail } from "./lib/email";
-import path from "path";
-import fs from "fs";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import { SITEMAP_XML, ROBOTS_TXT } from "./seoFiles";
 
 const openai = new OpenAI({
   baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
@@ -20,44 +15,16 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  // Helper to read file from dev or prod paths
-  const readStaticFile = (filename: string): string | null => {
-    const paths = [
-      path.join(process.cwd(), "client", "public", filename),
-      path.join(process.cwd(), "dist", "public", filename),
-      path.join(__dirname, "public", filename),
-      path.join(__dirname, "..", "public", filename)
-    ];
-    for (const p of paths) {
-      try {
-        if (fs.existsSync(p)) {
-          return fs.readFileSync(p, "utf-8");
-        }
-      } catch {}
-    }
-    return null;
-  };
-
   // Serve sitemap.xml explicitly before catch-all routes
   app.get("/sitemap.xml", (_req, res) => {
-    const content = readStaticFile("sitemap.xml");
-    if (content) {
-      res.set("Content-Type", "application/xml");
-      res.send(content);
-    } else {
-      res.status(404).send("Sitemap not found");
-    }
+    res.set("Content-Type", "application/xml");
+    res.send(SITEMAP_XML);
   });
 
   // Serve robots.txt explicitly
   app.get("/robots.txt", (_req, res) => {
-    const content = readStaticFile("robots.txt");
-    if (content) {
-      res.set("Content-Type", "text/plain");
-      res.send(content);
-    } else {
-      res.status(404).send("Robots.txt not found");
-    }
+    res.set("Content-Type", "text/plain");
+    res.send(ROBOTS_TXT);
   });
   // Chat API endpoint for KI-Bot
   app.post("/api/chat", async (req, res) => {
