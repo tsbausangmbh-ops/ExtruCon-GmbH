@@ -16,10 +16,19 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
+  // Helper to find file in dev or prod paths
+  const findStaticFile = (filename: string): string | null => {
+    const devPath = path.resolve(process.cwd(), "client", "public", filename);
+    const prodPath = path.resolve(process.cwd(), "dist", "public", filename);
+    if (fs.existsSync(devPath)) return devPath;
+    if (fs.existsSync(prodPath)) return prodPath;
+    return null;
+  };
+
   // Serve sitemap.xml explicitly before catch-all routes
   app.get("/sitemap.xml", (_req, res) => {
-    const sitemapPath = path.resolve(process.cwd(), "client", "public", "sitemap.xml");
-    if (fs.existsSync(sitemapPath)) {
+    const sitemapPath = findStaticFile("sitemap.xml");
+    if (sitemapPath) {
       res.set("Content-Type", "application/xml");
       res.sendFile(sitemapPath);
     } else {
@@ -29,8 +38,8 @@ export async function registerRoutes(
 
   // Serve robots.txt explicitly
   app.get("/robots.txt", (_req, res) => {
-    const robotsPath = path.resolve(process.cwd(), "client", "public", "robots.txt");
-    if (fs.existsSync(robotsPath)) {
+    const robotsPath = findStaticFile("robots.txt");
+    if (robotsPath) {
       res.set("Content-Type", "text/plain");
       res.sendFile(robotsPath);
     } else {
