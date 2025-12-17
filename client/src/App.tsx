@@ -32,7 +32,6 @@ import Schwabing from "@/pages/districts/Schwabing";
 import Nymphenburg from "@/pages/districts/Nymphenburg";
 import Gruenwald from "@/pages/districts/Gruenwald";
 import Harlaching from "@/pages/districts/Harlaching";
-import Notdienst from "@/pages/Notdienst";
 import Starnberg from "@/pages/umland/Starnberg";
 import Dachau from "@/pages/umland/Dachau";
 import Germering from "@/pages/umland/Germering";
@@ -77,7 +76,6 @@ function Router() {
       <Route path="/muenchen/nymphenburg" component={Nymphenburg} />
       <Route path="/muenchen/gruenwald" component={Gruenwald} />
       <Route path="/muenchen/harlaching" component={Harlaching} />
-      <Route path="/notdienst" component={Notdienst} />
       <Route path="/starnberg" component={Starnberg} />
       <Route path="/dachau" component={Dachau} />
       <Route path="/germering" component={Germering} />
