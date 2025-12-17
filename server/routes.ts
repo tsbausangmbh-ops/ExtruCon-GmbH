@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import OpenAI from "openai";
 import { listEvents, createEvent, getAvailableSlots, isBusinessHour, getAlternativeSlots } from "./lib/googleCalendar";
+import { sendContactEmail } from "./lib/email";
 
 const openai = new OpenAI({
   baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
@@ -306,6 +307,33 @@ ${message ? `Nachricht: ${message}` : ''}
     } catch (error: any) {
       console.error("Calendar booking error:", error);
       res.status(500).json({ error: "Termin konnte nicht gebucht werden. Bitte versuchen Sie es erneut." });
+    }
+  });
+
+  // Contact form API endpoint
+  app.post("/api/contact", async (req, res) => {
+    try {
+      const { name, email, company, phone, service, message } = req.body;
+
+      if (!name || !email || !message) {
+        return res.status(400).json({ error: "Name, E-Mail und Nachricht sind erforderlich." });
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        return res.status(400).json({ error: "Bitte geben Sie eine gültige E-Mail-Adresse ein." });
+      }
+
+      const success = await sendContactEmail({ name, email, company, phone, service, message });
+
+      if (success) {
+        res.json({ success: true, message: "Ihre Nachricht wurde erfolgreich gesendet!" });
+      } else {
+        res.status(500).json({ error: "E-Mail konnte nicht gesendet werden. Bitte versuchen Sie es später erneut." });
+      }
+    } catch (error: any) {
+      console.error("Contact form error:", error);
+      res.status(500).json({ error: "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut." });
     }
   });
 

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Calendar, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Calendar, ArrowRight, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useLanguage } from "@/lib/i18n";
@@ -14,10 +14,43 @@ import { Link } from "wouter";
 export default function Contact() {
   const { t } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      company: formData.get('company') as string,
+      phone: formData.get('phone') as string,
+      service: formData.get('service') as string,
+      message: formData.get('message') as string,
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        setError(result.error || 'Ein Fehler ist aufgetreten.');
+      }
+    } catch (err) {
+      setError('Verbindungsfehler. Bitte versuchen Sie es später erneut.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -86,7 +119,8 @@ export default function Contact() {
                         <div>
                           <Label htmlFor="name" className="text-gray-300">{t.contactPage.nameLabel}</Label>
                           <Input 
-                            id="name" 
+                            id="name"
+                            name="name"
                             placeholder={t.contactPage.namePlaceholder} 
                             required
                             className="bg-white/5 border-white/10 text-white mt-1"
@@ -96,7 +130,8 @@ export default function Contact() {
                         <div>
                           <Label htmlFor="company" className="text-gray-300">{t.contactPage.companyLabel}</Label>
                           <Input 
-                            id="company" 
+                            id="company"
+                            name="company"
                             placeholder={t.contactPage.companyPlaceholder}
                             className="bg-white/5 border-white/10 text-white mt-1"
                             data-testid="input-company"
@@ -108,7 +143,8 @@ export default function Contact() {
                         <div>
                           <Label htmlFor="email" className="text-gray-300">{t.contactPage.emailLabel}</Label>
                           <Input 
-                            id="email" 
+                            id="email"
+                            name="email"
                             type="email" 
                             placeholder={t.contactPage.emailPlaceholder} 
                             required
@@ -119,7 +155,8 @@ export default function Contact() {
                         <div>
                           <Label htmlFor="phone" className="text-gray-300">{t.contactPage.phoneLabel}</Label>
                           <Input 
-                            id="phone" 
+                            id="phone"
+                            name="phone"
                             type="tel" 
                             placeholder={t.contactPage.phonePlaceholder}
                             className="bg-white/5 border-white/10 text-white mt-1"
@@ -132,6 +169,7 @@ export default function Contact() {
                         <Label htmlFor="service" className="text-gray-300">{t.contactPage.interestLabel}</Label>
                         <select 
                           id="service"
+                          name="service"
                           className="w-full mt-1 px-3 py-2 rounded-md bg-white/5 border border-white/10 text-white"
                           data-testid="select-service"
                         >
@@ -149,7 +187,8 @@ export default function Contact() {
                       <div>
                         <Label htmlFor="message" className="text-gray-300">{t.contactPage.messageLabel}</Label>
                         <Textarea 
-                          id="message" 
+                          id="message"
+                          name="message"
                           placeholder={t.contactPage.messagePlaceholder} 
                           rows={5}
                           required
@@ -161,14 +200,25 @@ export default function Contact() {
                       <p className="text-xs text-gray-500">
                         {t.contactPage.privacyText} <a href="/privacy" className="text-primary hover:underline">{t.contactPage.privacyLink}</a> {t.contactPage.privacyEnd}
                       </p>
+
+                      {error && (
+                        <div className="p-3 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm">
+                          {error}
+                        </div>
+                      )}
                       
                       <Button 
                         type="submit" 
                         size="lg" 
                         className="w-full bg-primary hover:bg-primary/90 text-background font-bold"
                         data-testid="button-submit-contact"
+                        disabled={loading}
                       >
-                        <Send className="w-4 h-4 mr-2" />
+                        {loading ? (
+                          <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                        ) : (
+                          <Send className="w-4 h-4 mr-2" />
+                        )}
                         {t.contactPage.submitButton}
                       </Button>
                     </form>
