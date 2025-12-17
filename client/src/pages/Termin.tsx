@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useQuery, useMutation } from '@tanstack/react-query';
 import { motion } from 'framer-motion';
-import { Calendar, Clock, User, Mail, Phone, MessageSquare, CheckCircle, AlertCircle, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Calendar, Clock, User, Mail, Phone, MessageSquare, CheckCircle, AlertCircle, ChevronLeft, ChevronRight, Building } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -294,8 +294,10 @@ export default function Termin() {
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: '',
+    company: '',
     email: '',
     phone: '',
+    service: '',
     message: '',
   });
   const [bookingSuccess, setBookingSuccess] = useState(false);
@@ -306,8 +308,10 @@ export default function Termin() {
       date: string;
       time: string;
       name: string;
+      company?: string;
       email: string;
       phone?: string;
+      service?: string;
       message?: string;
     }) => {
       const res = await fetch('/api/calendar/book', {
@@ -353,8 +357,10 @@ export default function Termin() {
       date: selectedDate.toISOString().split('T')[0],
       time: selectedTime,
       name: formData.name,
+      company: formData.company || undefined,
       email: formData.email,
       phone: formData.phone || undefined,
+      service: formData.service || undefined,
       message: formData.message || undefined,
     });
   };
@@ -404,7 +410,7 @@ export default function Termin() {
                   setBookingSuccess(false);
                   setSelectedDate(null);
                   setSelectedTime(null);
-                  setFormData({ name: '', email: '', phone: '', message: '' });
+                  setFormData({ name: '', company: '', email: '', phone: '', service: '', message: '' });
                 }}
                 className="bg-cyan-500 hover:bg-cyan-600"
                 data-testid="button-new-booking"
@@ -508,51 +514,87 @@ export default function Termin() {
                 )}
                 
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <label className="block text-sm text-slate-400 mb-1">
-                      <User className="w-4 h-4 inline mr-1" />
-                      {t.terminPage.name}
-                    </label>
-                    <Input
-                      type="text"
-                      required
-                      value={formData.name}
-                      onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                      placeholder={t.terminPage.namePlaceholder}
-                      className="bg-slate-700 border-slate-600 text-white"
-                      data-testid="input-name"
-                    />
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm text-slate-400 mb-1">
+                        <User className="w-4 h-4 inline mr-1" />
+                        {t.terminPage.name}
+                      </label>
+                      <Input
+                        type="text"
+                        required
+                        value={formData.name}
+                        onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+                        placeholder={t.terminPage.namePlaceholder}
+                        className="bg-slate-700 border-slate-600 text-white"
+                        data-testid="input-name"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm text-slate-400 mb-1">
+                        <Building className="w-4 h-4 inline mr-1" />
+                        {t.terminPage.company}
+                      </label>
+                      <Input
+                        type="text"
+                        value={formData.company}
+                        onChange={(e) => setFormData(prev => ({ ...prev, company: e.target.value }))}
+                        placeholder={t.terminPage.companyPlaceholder}
+                        className="bg-slate-700 border-slate-600 text-white"
+                        data-testid="input-company"
+                      />
+                    </div>
                   </div>
                   
-                  <div>
-                    <label className="block text-sm text-slate-400 mb-1">
-                      <Mail className="w-4 h-4 inline mr-1" />
-                      {t.terminPage.email}
-                    </label>
-                    <Input
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                      placeholder={t.terminPage.emailPlaceholder}
-                      className="bg-slate-700 border-slate-600 text-white"
-                      data-testid="input-email"
-                    />
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm text-slate-400 mb-1">
+                        <Mail className="w-4 h-4 inline mr-1" />
+                        {t.terminPage.email}
+                      </label>
+                      <Input
+                        type="email"
+                        required
+                        value={formData.email}
+                        onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                        placeholder={t.terminPage.emailPlaceholder}
+                        className="bg-slate-700 border-slate-600 text-white"
+                        data-testid="input-email"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm text-slate-400 mb-1">
+                        <Phone className="w-4 h-4 inline mr-1" />
+                        {t.terminPage.phone}
+                      </label>
+                      <Input
+                        type="tel"
+                        value={formData.phone}
+                        onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
+                        placeholder={t.terminPage.phonePlaceholder}
+                        className="bg-slate-700 border-slate-600 text-white"
+                        data-testid="input-phone"
+                      />
+                    </div>
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm text-slate-400 mb-1">
-                      <Phone className="w-4 h-4 inline mr-1" />
-                      {t.terminPage.phone}
+                      {t.terminPage.serviceLabel}
                     </label>
-                    <Input
-                      type="tel"
-                      value={formData.phone}
-                      onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                      placeholder={t.terminPage.phonePlaceholder}
-                      className="bg-slate-700 border-slate-600 text-white"
-                      data-testid="input-phone"
-                    />
+                    <select 
+                      value={formData.service}
+                      onChange={(e) => setFormData(prev => ({ ...prev, service: e.target.value }))}
+                      className="w-full px-3 py-2 rounded-md bg-slate-700 border border-slate-600 text-white"
+                      data-testid="select-service"
+                    >
+                      <option value="" className="bg-slate-800">{t.terminPage.selectPlaceholder}</option>
+                      <option value="ki" className="bg-slate-800">{t.terminPage.optionKI}</option>
+                      <option value="automation" className="bg-slate-800">{t.terminPage.optionAutomation}</option>
+                      <option value="web" className="bg-slate-800">{t.terminPage.optionWeb}</option>
+                      <option value="marketing" className="bg-slate-800">{t.terminPage.optionMarketing}</option>
+                      <option value="other" className="bg-slate-800">{t.terminPage.optionOther}</option>
+                    </select>
                   </div>
                   
                   <div>
