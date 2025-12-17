@@ -251,11 +251,111 @@
   <!-- München - Lokale Landingpage -->
   <url>
     <loc>https://extrucon.de/muenchen</loc>
-    <lastmod>2025-12-16</lastmod>
+    <lastmod>2025-12-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- München Bogenhausen - Premium Stadtteil -->
+  <url>
+    <loc>https://extrucon.de/muenchen/bogenhausen</loc>
+    <lastmod>2025-12-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen/bogenhausen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen/bogenhausen"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- München Schwabing - Premium Stadtteil -->
+  <url>
+    <loc>https://extrucon.de/muenchen/schwabing</loc>
+    <lastmod>2025-12-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen/schwabing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen/schwabing"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- München Nymphenburg - Premium Stadtteil -->
+  <url>
+    <loc>https://extrucon.de/muenchen/nymphenburg</loc>
+    <lastmod>2025-12-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen/nymphenburg"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen/nymphenburg"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- München Grünwald - Premium Stadtteil -->
+  <url>
+    <loc>https://extrucon.de/muenchen/gruenwald</loc>
+    <lastmod>2025-12-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen/gruenwald"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen/gruenwald"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- München Harlaching - Premium Stadtteil -->
+  <url>
+    <loc>https://extrucon.de/muenchen/harlaching</loc>
+    <lastmod>2025-12-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen/harlaching"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen/harlaching"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Starnberg - Umland -->
+  <url>
+    <loc>https://extrucon.de/starnberg</loc>
+    <lastmod>2025-12-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/starnberg"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/starnberg"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Dachau - Umland -->
+  <url>
+    <loc>https://extrucon.de/dachau</loc>
+    <lastmod>2025-12-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/dachau"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/dachau"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Germering - Umland -->
+  <url>
+    <loc>https://extrucon.de/germering</loc>
+    <lastmod>2025-12-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/germering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/germering"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Puchheim - Umland -->
+  <url>
+    <loc>https://extrucon.de/puchheim</loc>
+    <lastmod>2025-12-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/puchheim"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/puchheim"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Olching - Umland -->
+  <url>
+    <loc>https://extrucon.de/olching</loc>
+    <lastmod>2025-12-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/olching"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/olching"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- Impressum -->
