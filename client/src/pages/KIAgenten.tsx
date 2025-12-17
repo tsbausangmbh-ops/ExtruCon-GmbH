@@ -181,12 +181,6 @@ export default function KIAgenten() {
       "brand": {
         "@type": "Brand",
         "name": "ExtruCon"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "47",
-        "bestRating": "5"
       }
     };
 
