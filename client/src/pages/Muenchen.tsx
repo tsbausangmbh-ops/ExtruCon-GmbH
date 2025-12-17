@@ -85,15 +85,30 @@ export default function Muenchen() {
     { icon: Star, title: "Top-Bewertungen", description: "4.9/5 Sterne von unseren Kunden" }
   ];
 
+  const premiumDistricts = [
+    { name: "Bogenhausen", link: "/muenchen/bogenhausen" },
+    { name: "Schwabing", link: "/muenchen/schwabing" },
+    { name: "Nymphenburg", link: "/muenchen/nymphenburg" },
+    { name: "Grünwald", link: "/muenchen/gruenwald" },
+    { name: "Harlaching", link: "/muenchen/harlaching" },
+  ];
+
   const districts = [
-    "München Zentrum", "Schwabing", "Maxvorstadt", "Bogenhausen", "Haidhausen",
+    "München Zentrum", "Maxvorstadt", "Haidhausen",
     "Sendling", "Laim", "Pasing", "Neuhausen", "Moosach", "Milbertshofen",
     "Trudering", "Riem", "Berg am Laim", "Giesing", "Thalkirchen"
   ];
 
+  const nearbyAreasWithLinks = [
+    { name: "Starnberg", link: "/starnberg" },
+    { name: "Dachau", link: "/dachau" },
+    { name: "Germering", link: "/germering" },
+    { name: "Puchheim", link: "/puchheim" },
+    { name: "Olching", link: "/olching" },
+  ];
+
   const nearbyAreas = [
-    "Fürstenfeldbruck", "Dachau", "Starnberg", "Germering", "Puchheim",
-    "Gröbenzell", "Olching", "Maisach", "Eichenau", "Grafrath"
+    "Fürstenfeldbruck", "Gröbenzell", "Maisach", "Eichenau", "Grafrath"
   ];
 
   return (
@@ -360,6 +375,13 @@ export default function Muenchen() {
                   Wir betreuen Unternehmen in allen Münchner Stadtteilen – von Schwabing bis Sendling, von Pasing bis Bogenhausen.
                 </p>
                 <div className="flex flex-wrap gap-2">
+                  {premiumDistricts.map((district, index) => (
+                    <Link key={index} href={district.link}>
+                      <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full text-sm text-cyan-300 hover:bg-cyan-500/30 transition-colors cursor-pointer">
+                        {district.name}
+                      </span>
+                    </Link>
+                  ))}
                   {districts.map((district, index) => (
                     <span
                       key={index}
@@ -383,6 +405,13 @@ export default function Muenchen() {
                   Unser Hauptsitz in Fürstenfeldbruck ermöglicht uns schnellen Vor-Ort-Service in der gesamten Region.
                 </p>
                 <div className="flex flex-wrap gap-2">
+                  {nearbyAreasWithLinks.map((area, index) => (
+                    <Link key={index} href={area.link}>
+                      <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-500/40 rounded-full text-sm text-cyan-300 hover:bg-cyan-500/30 transition-colors cursor-pointer">
+                        {area.name}
+                      </span>
+                    </Link>
+                  ))}
                   {nearbyAreas.map((area, index) => (
                     <span
                       key={index}

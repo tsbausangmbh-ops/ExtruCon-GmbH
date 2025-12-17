@@ -27,6 +27,17 @@ import Referenzen from "@/pages/Referenzen";
 import Cookies from "@/pages/Cookies";
 import Termin from "@/pages/Termin";
 import Muenchen from "@/pages/Muenchen";
+import Bogenhausen from "@/pages/districts/Bogenhausen";
+import Schwabing from "@/pages/districts/Schwabing";
+import Nymphenburg from "@/pages/districts/Nymphenburg";
+import Gruenwald from "@/pages/districts/Gruenwald";
+import Harlaching from "@/pages/districts/Harlaching";
+import Notdienst from "@/pages/Notdienst";
+import Starnberg from "@/pages/umland/Starnberg";
+import Dachau from "@/pages/umland/Dachau";
+import Germering from "@/pages/umland/Germering";
+import Puchheim from "@/pages/umland/Puchheim";
+import Olching from "@/pages/umland/Olching";
 import NotFound from "@/pages/not-found";
 import { ChatWidget } from "@/components/ChatWidget";
 import { CookieConsent } from "@/components/CookieConsent";
@@ -61,6 +72,17 @@ function Router() {
       <Route path="/cookies" component={Cookies} />
       <Route path="/termin" component={Termin} />
       <Route path="/muenchen" component={Muenchen} />
+      <Route path="/muenchen/bogenhausen" component={Bogenhausen} />
+      <Route path="/muenchen/schwabing" component={Schwabing} />
+      <Route path="/muenchen/nymphenburg" component={Nymphenburg} />
+      <Route path="/muenchen/gruenwald" component={Gruenwald} />
+      <Route path="/muenchen/harlaching" component={Harlaching} />
+      <Route path="/notdienst" component={Notdienst} />
+      <Route path="/starnberg" component={Starnberg} />
+      <Route path="/dachau" component={Dachau} />
+      <Route path="/germering" component={Germering} />
+      <Route path="/puchheim" component={Puchheim} />
+      <Route path="/olching" component={Olching} />
       <Route component={NotFound} />
     </Switch>
   );
