@@ -18,7 +18,7 @@ export async function registerRoutes(
 ): Promise<Server> {
   // Serve sitemap.xml explicitly before catch-all routes
   app.get("/sitemap.xml", (_req, res) => {
-    const sitemapPath = path.resolve(import.meta.dirname, "..", "client", "public", "sitemap.xml");
+    const sitemapPath = path.resolve(process.cwd(), "client", "public", "sitemap.xml");
     if (fs.existsSync(sitemapPath)) {
       res.set("Content-Type", "application/xml");
       res.sendFile(sitemapPath);
@@ -29,7 +29,7 @@ export async function registerRoutes(
 
   // Serve robots.txt explicitly
   app.get("/robots.txt", (_req, res) => {
-    const robotsPath = path.resolve(import.meta.dirname, "..", "client", "public", "robots.txt");
+    const robotsPath = path.resolve(process.cwd(), "client", "public", "robots.txt");
     if (fs.existsSync(robotsPath)) {
       res.set("Content-Type", "text/plain");
       res.sendFile(robotsPath);
