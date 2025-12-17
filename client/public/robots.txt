@@ -236,7 +236,7 @@ Disallow: /node_modules/
 Sitemap: https://extrucon.de/sitemap.xml
 
 # Favicon & Logo für Suchmaschinen
-Allow: /favicon.png
+Allow: /favicon.ico
 Allow: /logo.png
 
 # ===========================================
