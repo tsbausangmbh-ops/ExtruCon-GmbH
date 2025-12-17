@@ -35,7 +35,8 @@ export default function Germering() {
   const services = [
     { icon: Bot, title: "KI für Handwerk", description: "Praktische KI-Assistenten für Anfragen, Termine und Kundenkommunikation.", link: "/ki-agenten" },
     { icon: Workflow, title: "Büro-Automatisierung", description: "Automatisierte Angebotserstellung, Rechnungen und Kundenverwaltung.", link: "/automatisierungen" },
-    { icon: Globe, title: "Lokale Websites", description: "Handwerker- und Unternehmens-Websites mit KI-Funktionen.", link: "/webseiten-ki" }
+    { icon: Globe, title: "Lokale Websites", description: "Handwerker- und Unternehmens-Websites mit KI-Funktionen.", link: "/webseiten-ki" },
+    { icon: Wrench, title: "Handwerker-Marketing", description: "Lokale SEO und Online-Marketing für Handwerksbetriebe.", link: "/leistungen/marketing" }
   ];
 
   const industries = [

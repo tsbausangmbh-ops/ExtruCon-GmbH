@@ -35,7 +35,8 @@ export default function Puchheim() {
   const services = [
     { icon: Bot, title: "Lokale KI-Agenten", description: "Smarte Assistenten für kleine und mittlere Unternehmen in Puchheim.", link: "/ki-agenten" },
     { icon: Workflow, title: "Büro-Automatisierung", description: "Automatisierte Verwaltung, Termine und Kundenkommunikation.", link: "/automatisierungen" },
-    { icon: Globe, title: "Moderne Websites", description: "Professionelle Webauftritte mit KI für lokale Unternehmen.", link: "/webseiten-ki" }
+    { icon: Globe, title: "Moderne Websites", description: "Professionelle Webauftritte mit KI für lokale Unternehmen.", link: "/webseiten-ki" },
+    { icon: Users, title: "Lokales Marketing", description: "Online-Marketing und SEO für lokale Dienstleister und Unternehmen.", link: "/leistungen/marketing" }
   ];
 
   const industries = [

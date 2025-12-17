@@ -35,7 +35,8 @@ export default function Harlaching() {
   const services = [
     { icon: Bot, title: "Healthcare KI-Agenten", description: "Spezialisierte KI-Assistenten für Kliniken, Praxen und Gesundheitseinrichtungen.", link: "/ki-agenten" },
     { icon: Workflow, title: "Praxis-Automatisierung", description: "Effiziente Workflows für Terminbuchung, Patientenverwaltung und Dokumentation.", link: "/automatisierungen" },
-    { icon: Globe, title: "Medizinische Websites", description: "DSGVO-konforme Webauftritte mit Patientenportal und Online-Terminbuchung.", link: "/webseiten-ki" }
+    { icon: Globe, title: "Medizinische Websites", description: "DSGVO-konforme Webauftritte mit Patientenportal und Online-Terminbuchung.", link: "/webseiten-ki" },
+    { icon: Heart, title: "Healthcare Marketing", description: "Patientengewinnung durch Online-Marketing und lokale SEO für Praxen.", link: "/leistungen/marketing" }
   ];
 
   const industries = [

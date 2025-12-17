@@ -36,7 +36,8 @@ export default function Bogenhausen() {
   const services = [
     { icon: Bot, title: "Premium KI-Agenten", description: "Maßgeschneiderte KI-Assistenten für exklusive Dienstleister und Premiummarken in Bogenhausen.", link: "/ki-agenten" },
     { icon: Workflow, title: "Diskrete Automatisierung", description: "Hochwertige Workflow-Automatisierung für Anwaltskanzleien, Vermögensverwalter und Private Offices.", link: "/automatisierungen" },
-    { icon: Globe, title: "Exklusive Websites", description: "Repräsentative Webauftritte mit KI-Features für den gehobenen Anspruch.", link: "/webseiten-ki" }
+    { icon: Globe, title: "Exklusive Websites", description: "Repräsentative Webauftritte mit KI-Features für den gehobenen Anspruch.", link: "/webseiten-ki" },
+    { icon: TrendingUp, title: "Premium Marketing", description: "Strategisches Online-Marketing und SEO für gehobene Marken und Luxusdienstleister.", link: "/leistungen/marketing" }
   ];
 
   const industries = [

@@ -35,7 +35,8 @@ export default function Schwabing() {
   const services = [
     { icon: Bot, title: "Startup-KI-Agenten", description: "Skalierbare KI-Assistenten für schnell wachsende Startups und Tech-Unternehmen.", link: "/ki-agenten" },
     { icon: Workflow, title: "Agile Automatisierung", description: "Flexible Workflows für Agenturen und kreative Teams in Schwabing.", link: "/automatisierungen" },
-    { icon: Globe, title: "Innovative Websites", description: "Cutting-edge Webentwicklung mit KI für die kreative Szene.", link: "/webseiten-ki" }
+    { icon: Globe, title: "Innovative Websites", description: "Cutting-edge Webentwicklung mit KI für die kreative Szene.", link: "/webseiten-ki" },
+    { icon: Rocket, title: "Growth Marketing", description: "Datengetriebenes Online-Marketing und SEO für Startups und Agenturen.", link: "/leistungen/marketing" }
   ];
 
   const industries = [

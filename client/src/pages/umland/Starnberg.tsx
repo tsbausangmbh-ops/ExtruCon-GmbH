@@ -36,7 +36,8 @@ export default function Starnberg() {
   const services = [
     { icon: Bot, title: "Premium KI-Agenten", description: "Intelligente Assistenten für gehobene Dienstleister und Tourismus am Starnberger See.", link: "/ki-agenten" },
     { icon: Workflow, title: "Workflow-Automatisierung", description: "Effiziente Prozesse für Hotels, Restaurants und lokale Unternehmen.", link: "/automatisierungen" },
-    { icon: Globe, title: "Stilvolle Websites", description: "Moderne Webauftritte mit KI für das Fünfseenland.", link: "/webseiten-ki" }
+    { icon: Globe, title: "Stilvolle Websites", description: "Moderne Webauftritte mit KI für das Fünfseenland.", link: "/webseiten-ki" },
+    { icon: Anchor, title: "Tourismus-Marketing", description: "Online-Marketing und SEO für Hotels, Restaurants und Freizeitanbieter.", link: "/leistungen/marketing" }
   ];
 
   const industries = [

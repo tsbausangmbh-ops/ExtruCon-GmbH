@@ -35,7 +35,8 @@ export default function Nymphenburg() {
   const services = [
     { icon: Bot, title: "Elegante KI-Agenten", description: "Stilvolle KI-Assistenten für traditionsreiche Unternehmen und gehobene Dienstleister.", link: "/ki-agenten" },
     { icon: Workflow, title: "Prozessoptimierung", description: "Diskrete Automatisierung für Familienunternehmen und etablierte Betriebe.", link: "/automatisierungen" },
-    { icon: Globe, title: "Repräsentative Websites", description: "Hochwertige Webauftritte mit KI für Nymphenburger Unternehmen.", link: "/webseiten-ki" }
+    { icon: Globe, title: "Repräsentative Websites", description: "Hochwertige Webauftritte mit KI für Nymphenburger Unternehmen.", link: "/webseiten-ki" },
+    { icon: Briefcase, title: "B2B Marketing", description: "Professionelles Online-Marketing und SEO für etablierte Unternehmen.", link: "/leistungen/marketing" }
   ];
 
   const industries = [

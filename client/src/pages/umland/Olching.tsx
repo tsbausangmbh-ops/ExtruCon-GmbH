@@ -35,7 +35,8 @@ export default function Olching() {
   const services = [
     { icon: Bot, title: "KI für lokale Betriebe", description: "Praktische KI-Assistenten für Anfragen, Reservierungen und Service.", link: "/ki-agenten" },
     { icon: Workflow, title: "Gastronomie-Automation", description: "Reservierungssysteme und Bestellverwaltung für Restaurants.", link: "/automatisierungen" },
-    { icon: Globe, title: "Lokale Websites", description: "Ansprechende Webauftritte mit Online-Reservierung und KI-Chat.", link: "/webseiten-ki" }
+    { icon: Globe, title: "Lokale Websites", description: "Ansprechende Webauftritte mit Online-Reservierung und KI-Chat.", link: "/webseiten-ki" },
+    { icon: Utensils, title: "Gastro-Marketing", description: "Online-Marketing und SEO für Restaurants und Cafés.", link: "/leistungen/marketing" }
   ];
 
   const industries = [

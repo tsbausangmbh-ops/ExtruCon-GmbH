@@ -35,7 +35,8 @@ export default function Dachau() {
   const services = [
     { icon: Bot, title: "KI-Agenten für KMU", description: "Smarte Assistenten für mittelständische Unternehmen und Handwerksbetriebe.", link: "/ki-agenten" },
     { icon: Workflow, title: "Produktions-Automatisierung", description: "Workflow-Optimierung für Fertigung, Logistik und Verwaltung.", link: "/automatisierungen" },
-    { icon: Globe, title: "Lokale Websites", description: "SEO-optimierte Webauftritte mit KI für den Dachauer Markt.", link: "/webseiten-ki" }
+    { icon: Globe, title: "Lokale Websites", description: "SEO-optimierte Webauftritte mit KI für den Dachauer Markt.", link: "/webseiten-ki" },
+    { icon: Factory, title: "B2B Marketing", description: "Online-Marketing und SEO für produzierende Unternehmen und Logistik.", link: "/leistungen/marketing" }
   ];
 
   const industries = [

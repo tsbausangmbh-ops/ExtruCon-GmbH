@@ -35,7 +35,8 @@ export default function Gruenwald() {
   const services = [
     { icon: Bot, title: "VIP KI-Agenten", description: "Hochexklusive KI-Assistenten für anspruchsvolle Privatkundschaft und Family Offices.", link: "/ki-agenten" },
     { icon: Workflow, title: "Private Automatisierung", description: "Diskrete Prozessautomatisierung für Vermögensverwalter und Private Offices.", link: "/automatisierungen" },
-    { icon: Globe, title: "Luxus-Webauftritte", description: "Prestigeträchtige Websites für Grünwalder Unternehmen und Dienstleister.", link: "/webseiten-ki" }
+    { icon: Globe, title: "Luxus-Webauftritte", description: "Prestigeträchtige Websites für Grünwalder Unternehmen und Dienstleister.", link: "/webseiten-ki" },
+    { icon: Gem, title: "Luxus-Marketing", description: "Exklusives Online-Marketing und SEO für Premium-Marken und Dienstleister.", link: "/leistungen/marketing" }
   ];
 
   const industries = [
