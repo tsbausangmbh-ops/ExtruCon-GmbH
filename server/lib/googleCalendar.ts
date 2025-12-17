@@ -113,6 +113,31 @@ export function isBusinessHour(date: Date): boolean {
   return true;
 }
 
+// Generate pseudo-random blocked slots based on date (60% blocked, rotating pattern)
+function getSimulatedBlockedSlots(date: Date): number[] {
+  const allHours = [8, 9, 10, 11, 12, 13, 14, 15, 16]; // 9 total slots
+  const blockedCount = 5; // Block 5 out of 9 slots (~55-60%)
+  
+  // Create a seed based on the date for consistent daily patterns
+  const dateStr = date.toISOString().split('T')[0];
+  let seed = 0;
+  for (let i = 0; i < dateStr.length; i++) {
+    seed = ((seed << 5) - seed) + dateStr.charCodeAt(i);
+    seed = seed & seed;
+  }
+  
+  // Simple seeded shuffle to determine which slots to block
+  const shuffled = [...allHours];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    seed = (seed * 1103515245 + 12345) & 0x7fffffff;
+    const j = seed % (i + 1);
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  
+  // Return the first N hours as "blocked"
+  return shuffled.slice(0, blockedCount);
+}
+
 export function getAvailableSlots(date: Date, existingEvents: any[]): string[] {
   const slots: string[] = [];
   const day = date.getDay();
@@ -122,6 +147,9 @@ export function getAvailableSlots(date: Date, existingEvents: any[]): string[] {
     return slots;
   }
   
+  // Get simulated blocked slots for this date (creates appearance of 60% occupancy)
+  const simulatedBlocked = getSimulatedBlockedSlots(date);
+  
   // Generate hourly slots from 8:00 to 16:00 (last slot starts at 16:00, ends at 17:00)
   for (let hour = 8; hour < 17; hour++) {
     const slotStart = new Date(date);
@@ -129,6 +157,11 @@ export function getAvailableSlots(date: Date, existingEvents: any[]): string[] {
     
     const slotEnd = new Date(date);
     slotEnd.setHours(hour + 1, 0, 0, 0);
+    
+    // Check if slot is simulated as blocked (60% occupancy simulation)
+    if (simulatedBlocked.includes(hour)) {
+      continue; // Skip this slot - appears booked
+    }
     
     // Check if slot conflicts with existing events (including 2-hour buffer)
     const hasConflict = existingEvents.some(event => {
