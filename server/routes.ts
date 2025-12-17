@@ -4,6 +4,8 @@ import { storage } from "./storage";
 import OpenAI from "openai";
 import { listEvents, createEvent, getAvailableSlots, isBusinessHour, getAlternativeSlots } from "./lib/googleCalendar";
 import { sendContactEmail } from "./lib/email";
+import path from "path";
+import fs from "fs";
 
 const openai = new OpenAI({
   baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
@@ -14,6 +16,27 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
+  // Serve sitemap.xml explicitly before catch-all routes
+  app.get("/sitemap.xml", (_req, res) => {
+    const sitemapPath = path.resolve(import.meta.dirname, "..", "client", "public", "sitemap.xml");
+    if (fs.existsSync(sitemapPath)) {
+      res.set("Content-Type", "application/xml");
+      res.sendFile(sitemapPath);
+    } else {
+      res.status(404).send("Sitemap not found");
+    }
+  });
+
+  // Serve robots.txt explicitly
+  app.get("/robots.txt", (_req, res) => {
+    const robotsPath = path.resolve(import.meta.dirname, "..", "client", "public", "robots.txt");
+    if (fs.existsSync(robotsPath)) {
+      res.set("Content-Type", "text/plain");
+      res.sendFile(robotsPath);
+    } else {
+      res.status(404).send("Robots.txt not found");
+    }
+  });
   // Chat API endpoint for KI-Bot
   app.post("/api/chat", async (req, res) => {
     try {
