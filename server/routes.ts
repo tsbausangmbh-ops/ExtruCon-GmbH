@@ -6,6 +6,10 @@ import { listEvents, createEvent, getAvailableSlots, isBusinessHour, getAlternat
 import { sendContactEmail } from "./lib/email";
 import path from "path";
 import fs from "fs";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const openai = new OpenAI({
   baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
@@ -16,21 +20,30 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  // Helper to find file in dev or prod paths
-  const findStaticFile = (filename: string): string | null => {
-    const devPath = path.resolve(process.cwd(), "client", "public", filename);
-    const prodPath = path.resolve(process.cwd(), "dist", "public", filename);
-    if (fs.existsSync(devPath)) return devPath;
-    if (fs.existsSync(prodPath)) return prodPath;
+  // Helper to read file from dev or prod paths
+  const readStaticFile = (filename: string): string | null => {
+    const paths = [
+      path.join(process.cwd(), "client", "public", filename),
+      path.join(process.cwd(), "dist", "public", filename),
+      path.join(__dirname, "public", filename),
+      path.join(__dirname, "..", "public", filename)
+    ];
+    for (const p of paths) {
+      try {
+        if (fs.existsSync(p)) {
+          return fs.readFileSync(p, "utf-8");
+        }
+      } catch {}
+    }
     return null;
   };
 
   // Serve sitemap.xml explicitly before catch-all routes
   app.get("/sitemap.xml", (_req, res) => {
-    const sitemapPath = findStaticFile("sitemap.xml");
-    if (sitemapPath) {
+    const content = readStaticFile("sitemap.xml");
+    if (content) {
       res.set("Content-Type", "application/xml");
-      res.sendFile(sitemapPath);
+      res.send(content);
     } else {
       res.status(404).send("Sitemap not found");
     }
@@ -38,10 +51,10 @@ export async function registerRoutes(
 
   // Serve robots.txt explicitly
   app.get("/robots.txt", (_req, res) => {
-    const robotsPath = findStaticFile("robots.txt");
-    if (robotsPath) {
+    const content = readStaticFile("robots.txt");
+    if (content) {
       res.set("Content-Type", "text/plain");
-      res.sendFile(robotsPath);
+      res.send(content);
     } else {
       res.status(404).send("Robots.txt not found");
     }
