@@ -9,9 +9,9 @@ export default function Privacy() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Datenschutzerklärung | ExtruCon GmbH"
-        description="Datenschutzerklärung der ExtruCon GmbH gemäß DSGVO. Informationen zur Verarbeitung personenbezogener Daten."
-        keywords="Datenschutz, DSGVO, ExtruCon, Datenschutzerklärung"
+        title="Datenschutzerklärung | ExtruCon GmbH – DSGVO-konform"
+        description="Datenschutzerklärung der ExtruCon GmbH gemäß DSGVO. Informationen zur Verarbeitung personenbezogener Daten bei Ihrer KI-Agentur Fürstenfeldbruck."
+        keywords="Datenschutz, DSGVO, ExtruCon, Datenschutzerklärung, KI-Agentur"
         canonical="https://extrucon.de/datenschutz"
       />
       <Navbar />

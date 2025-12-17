@@ -36,9 +36,9 @@ export default function Cookies() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Cookie-Richtlinie | ExtruCon GmbH"
-        description="Informationen zu Cookies auf extrucon.de. Cookie-Einstellungen verwalten und Datenschutz."
-        keywords="Cookies, Cookie-Richtlinie, Datenschutz, ExtruCon"
+        title="Cookie-Richtlinie | ExtruCon GmbH – Einstellungen & Datenschutz"
+        description="Cookie-Richtlinie der ExtruCon GmbH. Verwalten Sie Ihre Cookie-Einstellungen für extrucon.de. DSGVO-konform, transparent, sicher."
+        keywords="Cookies, Cookie-Richtlinie, Datenschutz, ExtruCon, Cookie-Einstellungen"
         canonical="https://extrucon.de/cookies"
       />
       <Navbar />

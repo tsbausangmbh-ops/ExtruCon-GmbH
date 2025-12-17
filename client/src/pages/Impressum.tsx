@@ -9,9 +9,9 @@ export default function Impressum() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Impressum | ExtruCon GmbH Fürstenfeldbruck"
-        description="Impressum der ExtruCon GmbH. Angaben gemäß § 5 TMG. Hasenheide 8, 82256 Fürstenfeldbruck."
-        keywords="Impressum, ExtruCon GmbH, Fürstenfeldbruck"
+        title="Impressum | ExtruCon GmbH – KI-Agentur Fürstenfeldbruck"
+        description="Impressum der ExtruCon GmbH. Angaben gemäß § 5 TMG. KI-Agentur für Automatisierung, Hasenheide 8, 82256 Fürstenfeldbruck bei München."
+        keywords="Impressum, ExtruCon GmbH, KI-Agentur Fürstenfeldbruck, Kontakt"
         canonical="https://extrucon.de/impressum"
       />
       <Navbar />
