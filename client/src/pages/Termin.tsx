@@ -378,8 +378,8 @@ export default function Termin() {
     return (
       <div className="min-h-screen bg-slate-900">
         <SEOHead 
-          title="Termin gebucht | Kostenlose KI-Beratung | ExtruCon GmbH"
-          description="Ihr Beratungstermin bei ExtruCon wurde erfolgreich gebucht. Wir freuen uns auf Ihr Gespräch zu KI-Agenten und Automatisierung!"
+          title="Termin gebucht | KI-Beratung bestätigt | ExtruCon GmbH"
+          description="Ihr Beratungstermin bei der ExtruCon GmbH wurde erfolgreich gebucht. Wir freuen uns auf Ihr Gespräch zu KI-Agenten, Automatisierung und digitaler Transformation."
           canonical="https://extrucon.de/termin"
           geoRegion="DE-BY"
           geoPlacename="Fürstenfeldbruck"
