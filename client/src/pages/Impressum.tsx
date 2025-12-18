@@ -124,13 +124,24 @@ export default function Impressum() {
           </section>
 
           {/* Urheberrecht */}
-          <section className="p-6 rounded-xl bg-card/30 border border-white/5">
+          <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
             <h2 className="text-xl font-bold text-white mb-4">Urheberrecht</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
             </p>
             <p className="text-gray-400 leading-relaxed">
               Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+            </p>
+          </section>
+
+          {/* KI-Hinweis gemäß EU AI Act */}
+          <section className="p-6 rounded-xl bg-cyan-500/10 border border-cyan-500/20">
+            <h2 className="text-xl font-bold text-white mb-4">KI-Hinweis gemäß EU AI Act (Art. 50)</h2>
+            <p className="text-gray-400 mb-4 leading-relaxed">
+              <strong className="text-cyan-400">Transparenzhinweis:</strong> ExtruCon GmbH setzt zur Unterstützung der Geschäftsprozesse KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen und verantwortet.
+            </p>
+            <p className="text-gray-500 text-sm">
+              <strong>Rechtsgrundlage:</strong> Verordnung (EU) 2024/1689 (EU AI Act), Art. 22 DSGVO
             </p>
           </section>
 
