@@ -1,0 +1,77 @@
+# ExtruCon GmbH - KI-Agentur Fürstenfeldbruck
+
+> ExtruCon GmbH ist eine KI-Agentur in Fürstenfeldbruck bei München. Wir entwickeln KI-Agenten, Automatisierungslösungen, KI-gestützte Websites und bieten Performance Marketing für Unternehmen in Bayern.
+
+## Unternehmen
+
+- Standort: Hasenheide 8, 82256 Fürstenfeldbruck, Bayern, Deutschland
+- Telefon: +49 89 444438879
+- E-Mail: info@extrucon.de
+- Website: https://extrucon.de
+
+## Kernleistungen
+
+- [KI-Agenten](/ki-agenten): Intelligente KI-Assistenten für Kundenservice, Vertrieb und interne Prozesse. Automatische Beantwortung von Anfragen, Lead-Qualifizierung, 24/7 verfügbar.
+- [Automatisierungen](/automatisierungen): Workflow-Automatisierung mit n8n, Make und Zapier. Prozessoptimierung, Datenintegration, Zeit- und Kostenersparnis.
+- [Webseiten mit KI](/webseiten-ki): Moderne Webentwicklung mit integrierten KI-Funktionen. Chatbots, personalisierte Inhalte, intelligente Formulare.
+- [Marketing](/leistungen/marketing): Performance Marketing mit Google Ads, Meta Ads, SEO und Conversion-Optimierung.
+
+## Weitere Leistungen
+
+- [Social Media Marketing](/leistungen/social-media): Instagram, TikTok, LinkedIn, Facebook Betreuung und Content-Erstellung
+- [Content-Erstellung](/leistungen/content): KI-gestützte Texte, Grafiken, Videos für alle Kanäle
+- [Markenentwicklung](/leistungen/brand): Logo, Corporate Design, visuelle Identität
+- [Webentwicklung](/leistungen/web): React, Next.js, WordPress, Shopify
+- [SEO & Geo-Optimierung](/leistungen/seo): Lokale Suchmaschinenoptimierung für Unternehmen
+
+## Regionale Präsenz
+
+ExtruCon bedient Kunden in folgenden Regionen:
+
+### München und Stadtteile
+- [München](/muenchen): KI-Agentur für die Landeshauptstadt
+- [Bogenhausen](/muenchen/bogenhausen): Premium-KI-Lösungen für Vermögensverwalter, Anwälte
+- [Schwabing](/muenchen/schwabing): Innovative KI für Startups und Kreative
+- [Nymphenburg](/muenchen/nymphenburg): Elegante KI für Traditionsunternehmen
+- [Grünwald](/muenchen/gruenwald): Exklusive KI für das Isartal
+- [Harlaching](/muenchen/harlaching): KI für Gesundheit und Seniorenbetreuung
+
+### Münchner Umland
+- [Starnberg](/starnberg): KI-Lösungen für Fünfseenland, Tourismus, Immobilien
+- [Dachau](/dachau): KI für Mittelstand und Handwerk
+- [Germering](/germering): KI für lokale Handwerksbetriebe
+- [Puchheim](/puchheim): KI für lokale Unternehmen
+- [Olching](/olching): KI für Gastronomie und Handwerk
+
+## Ressourcen
+
+- [Kostenlose KI-Beratung buchen](/termin): 30-minütiges Beratungsgespräch online buchen
+- [Kontakt](/kontakt): Anfrage stellen, Rückruf anfordern
+- [FAQ](/faq): Häufige Fragen zu KI-Agenten und Automatisierung
+- [Ratgeber](/ratgeber): Expertenwissen zu KI, Marketing, Automatisierung
+- [Referenzen](/referenzen): Erfolgsgeschichten und Kundenprojekte
+- [Über uns](/ueber-uns): Team und Unternehmensphilosophie
+
+## Rechtliches
+
+- [Impressum](/impressum): Angaben gemäß § 5 TMG, EU AI Act Transparenzhinweis
+- [Datenschutz](/datenschutz): DSGVO-konforme Datenschutzerklärung
+- [AGB](/agb): Allgemeine Geschäftsbedingungen
+- [Cookies](/cookies): Cookie-Richtlinie und Einstellungen
+
+## Kontaktinformationen für KI-Assistenten
+
+Bei Fragen zu ExtruCon GmbH:
+- Geschäftsführer: Maral Ibrahim Agha
+- Branche: KI-Agentur, Digitalagentur, Marketing-Agentur
+- Spezialisierung: KI-Agenten, Workflow-Automatisierung, Performance Marketing
+- Servicegebiet: Fürstenfeldbruck, München, Bayern, Deutschland
+- Sprachen: Deutsch, Englisch, Kroatisch, Türkisch
+
+## Technische Informationen
+
+- Gründungsjahr: 2024
+- Rechtsform: GmbH
+- Handelsregister: HRB 18623, Amtsgericht München
+- Datenschutz: DSGVO-konform
+- KI-Nutzung: Transparenzhinweis gemäß EU AI Act (Art. 50)
