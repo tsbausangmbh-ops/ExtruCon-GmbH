@@ -42,6 +42,7 @@ import { ChatWidget } from "@/components/ChatWidget";
 import { CookieConsent } from "@/components/CookieConsent";
 import ChristmasPopup from "@/components/ChristmasPopup";
 import NewYearPopup from "@/components/NewYearPopup";
+import { BackButton } from "@/components/BackButton";
 
 function Router() {
   return (
@@ -93,6 +94,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <BackButton />
           <ChatWidget />
           <CookieConsent />
           <ChristmasPopup />
