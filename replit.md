@@ -73,3 +73,23 @@ shared/           # Shared types and schemas
 - **@replit/vite-plugin-runtime-error-modal**: Error overlay in development
 - **@replit/vite-plugin-cartographer**: Development tooling
 - **@replit/vite-plugin-dev-banner**: Development environment indicator
+
+## SEO & Internal Linking
+
+### Internal Linking Strategy
+- **RelatedServices Component**: Located in `client/src/components/InternalLinks.tsx` - displays 3 contextual related services based on current page
+- **ExploreMoreSection Component**: Also in `InternalLinks.tsx` - displays all navigation links in a tag-cloud style
+- **GeoLinks Component**: Adds geo-targeted links for local SEO (Fürstenfeldbruck, München, Bayern)
+
+### Pages with RelatedServices
+Main service pages use the new `RelatedServices` component from `InternalLinks.tsx`:
+- KIAgenten.tsx → Links to Automatisierungen, WebseitenKI, Chatbot
+- Automatisierungen.tsx → Links to KI-Agenten, WebseitenKI, Contact
+- WebseitenKI.tsx → Links to KI-Agenten, Automatisierungen, Referenzen
+- FAQ.tsx, Chatbot.tsx, Contact.tsx, Referenzen.tsx → Contextual service links
+
+Sub-service pages use the legacy `RelatedServices` from `client/src/components/RelatedServices.tsx`:
+- services/Marketing.tsx, services/SocialMedia.tsx, services/Content.tsx, etc.
+
+### i18n for Related Services
+All `relatedServices` translations are in `client/src/lib/i18n.tsx` for DE, EN, HR, TR languages
