@@ -6,9 +6,8 @@ import { motion } from "framer-motion";
 import marketingImg from "@assets/generated_images/abstract_performance_marketing_growth.png";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
-import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
+import { RelatedServices, ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 
 export default function Marketing() {
   const { t } = useLanguage();
@@ -132,7 +131,7 @@ export default function Marketing() {
           </div>
         </section>
 
-        <RelatedServices currentPath="/leistungen/marketing" />
+        <RelatedServices currentPage="marketing" />
         <ExploreMoreSection />
       </main>
       <Footer />

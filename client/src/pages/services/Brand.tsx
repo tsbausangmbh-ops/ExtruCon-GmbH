@@ -6,9 +6,8 @@ import { motion } from "framer-motion";
 import brandImg from "@assets/generated_images/abstract_digital_brand_identity_construction.png";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
-import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
+import { RelatedServices, ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 
 export default function Brand() {
   const { t } = useLanguage();
@@ -109,7 +108,7 @@ export default function Brand() {
           </div>
         </section>
 
-        <RelatedServices currentPath="/leistungen/markenaufbau" />
+        <RelatedServices currentPage="brand" />
         <ExploreMoreSection />
       </main>
       <Footer />

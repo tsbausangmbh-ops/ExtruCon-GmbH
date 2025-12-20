@@ -104,7 +104,7 @@ interface RelatedService {
 }
 
 interface RelatedServicesProps {
-  currentPage: 'ki-agenten' | 'automatisierungen' | 'webseiten-ki' | 'faq' | 'chatbot' | 'contact' | 'referenzen';
+  currentPage: 'ki-agenten' | 'automatisierungen' | 'webseiten-ki' | 'faq' | 'chatbot' | 'contact' | 'referenzen' | 'marketing' | 'social-media' | 'content' | 'brand' | 'web' | 'ki-automatisierung' | 'seo' | 'ratgeber' | 'ueber-uns';
 }
 
 export function RelatedServices({ currentPage }: RelatedServicesProps) {
@@ -166,6 +166,38 @@ export function RelatedServices({ currentPage }: RelatedServicesProps) {
       icon: Users,
       colorClass: 'text-blue-400',
       bgClass: 'from-blue-500/20 to-blue-500/5'
+    },
+    'marketing': {
+      href: '/leistungen/marketing',
+      title: t.nav.marketing,
+      description: t.services.marketing.desc,
+      icon: Bot,
+      colorClass: 'text-orange-400',
+      bgClass: 'from-orange-500/20 to-orange-500/5'
+    },
+    'social-media': {
+      href: '/leistungen/social-media',
+      title: t.nav.socialMedia,
+      description: t.services.socialMedia.desc,
+      icon: Globe,
+      colorClass: 'text-purple-400',
+      bgClass: 'from-purple-500/20 to-purple-500/5'
+    },
+    'content': {
+      href: '/leistungen/content',
+      title: t.nav.contentCreation,
+      description: t.services.content.desc,
+      icon: Bot,
+      colorClass: 'text-pink-400',
+      bgClass: 'from-pink-500/20 to-pink-500/5'
+    },
+    'ratgeber': {
+      href: '/ratgeber',
+      title: t.nav.ratgeber,
+      description: t.services.ratgeber?.desc || 'Wissen und Tipps',
+      icon: HelpCircle,
+      colorClass: 'text-blue-400',
+      bgClass: 'from-blue-500/20 to-blue-500/5'
     }
   };
 
@@ -185,6 +217,22 @@ export function RelatedServices({ currentPage }: RelatedServicesProps) {
         return [allServices['ki-agenten'], allServices['automatisierungen'], allServices['webseiten-ki']];
       case 'referenzen':
         return [allServices['ki-agenten'], allServices['automatisierungen'], allServices['webseiten-ki']];
+      case 'marketing':
+        return [allServices['ki-agenten'], allServices['social-media'], allServices['content']];
+      case 'social-media':
+        return [allServices['marketing'], allServices['content'], allServices['ki-agenten']];
+      case 'content':
+        return [allServices['social-media'], allServices['marketing'], allServices['webseiten-ki']];
+      case 'brand':
+      case 'web':
+      case 'ki-automatisierung':
+        return [allServices['ki-agenten'], allServices['automatisierungen'], allServices['webseiten-ki']];
+      case 'seo':
+        return [allServices['marketing'], allServices['webseiten-ki'], allServices['content']];
+      case 'ratgeber':
+        return [allServices['ki-agenten'], allServices['faq'], allServices['contact']];
+      case 'ueber-uns':
+        return [allServices['referenzen'], allServices['ki-agenten'], allServices['contact']];
       default:
         return [allServices['ki-agenten'], allServices['automatisierungen'], allServices['webseiten-ki']];
     }

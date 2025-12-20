@@ -6,9 +6,8 @@ import { motion } from "framer-motion";
 import contentImg from "@assets/generated_images/abstract_content_creation_visualization.png";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
-import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
+import { RelatedServices, ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 
 export default function Content() {
   const { t } = useLanguage();
@@ -109,7 +108,7 @@ export default function Content() {
           </div>
         </section>
 
-        <RelatedServices currentPath="/leistungen/content" />
+        <RelatedServices currentPage="content" />
         <ExploreMoreSection />
       </main>
       <Footer />

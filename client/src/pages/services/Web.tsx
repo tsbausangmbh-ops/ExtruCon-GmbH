@@ -6,9 +6,8 @@ import { motion } from "framer-motion";
 import webImg from "@assets/generated_images/holographic_creative_interface.png";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
-import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
+import { RelatedServices, ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 
 export default function Web() {
   const { t } = useLanguage();
@@ -132,7 +131,7 @@ export default function Web() {
           </div>
         </section>
 
-        <RelatedServices currentPath="/leistungen/web" />
+        <RelatedServices currentPage="web" />
         <ExploreMoreSection />
       </main>
       <Footer />

@@ -5,9 +5,8 @@ import { motion } from "framer-motion";
 import seoImg from "@assets/generated_images/abstract_seo_geo-optimization_visual.png";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
-import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ExploreMoreSection } from "@/components/InternalLinks";
+import { RelatedServices, ExploreMoreSection } from "@/components/InternalLinks";
 
 export default function SEO() {
   const { t } = useLanguage();
@@ -164,7 +163,7 @@ export default function SEO() {
           </div>
         </section>
 
-        <RelatedServices currentPath="/leistungen/seo" />
+        <RelatedServices currentPage="seo" />
         <ExploreMoreSection />
       </main>
       <Footer />

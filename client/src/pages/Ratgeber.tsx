@@ -6,9 +6,8 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
-import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ExploreMoreSection } from "@/components/InternalLinks";
+import { RelatedServices, ExploreMoreSection } from "@/components/InternalLinks";
 
 const articleMetadata: { id: number; category: string; featured: boolean }[] = [
   { id: 1, category: "ki", featured: true },
@@ -332,7 +331,7 @@ export default function Ratgeber() {
           </div>
         </section>
 
-        <RelatedServices currentPath="/ratgeber" />
+        <RelatedServices currentPage="ratgeber" />
         <ExploreMoreSection />
       </main>
       <Footer />

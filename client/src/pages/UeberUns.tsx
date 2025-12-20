@@ -2,11 +2,10 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ExploreMoreSection } from "@/components/InternalLinks";
+import { RelatedServices, ExploreMoreSection } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Users, Target, Lightbulb, Rocket, Heart, Award, MapPin, Mail, Phone, Clock, CheckCircle, ArrowRight, Zap, Shield, TrendingUp, Sparkles } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
-import { RelatedServices } from "@/components/RelatedServices";
 
 const valueIcons = [Lightbulb, Heart, Shield, Zap];
 
@@ -372,7 +371,7 @@ export default function UeberUns() {
           </div>
         </section>
 
-        <RelatedServices currentPath="/ueber-uns" />
+        <RelatedServices currentPage="ueber-uns" />
         <ExploreMoreSection />
       </main>
       <Footer />

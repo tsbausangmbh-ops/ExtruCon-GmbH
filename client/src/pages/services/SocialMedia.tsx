@@ -6,9 +6,8 @@ import { motion } from "framer-motion";
 import socialImg from "@assets/generated_images/digital_social_connection_abstract_art.png";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
-import { RelatedServices } from "@/components/RelatedServices";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
+import { RelatedServices, ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
 
 export default function SocialMedia() {
   const { t } = useLanguage();
@@ -162,7 +161,7 @@ export default function SocialMedia() {
           </div>
         </section>
 
-        <RelatedServices currentPath="/leistungen/social-media" />
+        <RelatedServices currentPage="social-media" />
         <ExploreMoreSection />
       </main>
       <Footer />
