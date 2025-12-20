@@ -258,7 +258,7 @@ export const translations = {
     },
     kiAgentsPage: {
       badge: 'KI-Agenten für Ihr Business',
-      title: 'KI-Agenten für Unternehmen in München & Bayern',
+      title: 'KI-Agenten entwickeln lassen – Agentur für Chatbots & Automatisierung München',
       subtitle: 'Unsere KI-Agenten automatisieren Routineaufgaben, beantworten Kundenanfragen und analysieren Daten – damit Sie sich auf Ihr Kerngeschäft konzentrieren können.',
       ctaPrimary: 'Kostenlose Beratung',
       ctaSecondary: 'Agenten entdecken',
@@ -342,7 +342,7 @@ export const translations = {
     },
     automationPage: {
       badge: 'Workflow-Automatisierung',
-      title: 'Workflow-Automatisierung für Ihr Unternehmen',
+      title: 'Prozesse automatisieren mit n8n – Workflow-Automatisierung Agentur München',
       subtitle: 'Wir verbinden Ihre Tools und automatisieren wiederkehrende Aufgaben – damit Sie sich auf das Wesentliche konzentrieren können.',
       ctaPrimary: 'Kostenlose Beratung',
       ctaSecondary: 'Möglichkeiten entdecken',
@@ -412,7 +412,7 @@ export const translations = {
     },
     webKIPage: {
       badge: 'Webseiten mit KI',
-      title: 'KI-Websites: Schnell, intelligent & conversion-optimiert',
+      title: 'Website erstellen lassen mit KI – Webdesign Agentur Fürstenfeldbruck & München',
       subtitle: 'Wir entwickeln moderne Websites mit integrierten KI-Features: Chatbots, automatische Content-Erstellung, intelligente SEO und mehr.',
       ctaPrimary: 'Projekt starten',
       ctaSecondary: 'KI-Features entdecken',
@@ -1422,7 +1422,7 @@ export const translations = {
     },
     kiAgentsPage: {
       badge: 'AI Agents for Your Business',
-      title: 'AI Agents for Companies in Munich & Bavaria',
+      title: 'Custom AI Agent Development – Chatbot & Automation Agency Munich',
       subtitle: 'Our AI agents automate routine tasks, answer customer inquiries, and analyze data – so you can focus on your core business.',
       ctaPrimary: 'Free Consultation',
       ctaSecondary: 'Discover Agents',
@@ -1506,7 +1506,7 @@ export const translations = {
     },
     automationPage: {
       badge: 'Workflow Automation',
-      title: 'Workflow Automation for Your Business',
+      title: 'Automate Processes with n8n – Workflow Automation Agency Munich',
       subtitle: 'We connect your tools and automate recurring tasks – so you can focus on what matters.',
       ctaPrimary: 'Free Consultation',
       ctaSecondary: 'Discover Possibilities',
@@ -1576,7 +1576,7 @@ export const translations = {
     },
     webKIPage: {
       badge: 'AI Websites',
-      title: 'AI Websites: Fast, Intelligent & Conversion-Optimized',
+      title: 'Professional Website Design with AI – Web Agency Fürstenfeldbruck & Munich',
       subtitle: 'We develop modern websites with integrated AI features: chatbots, automatic content creation, intelligent SEO, and more.',
       ctaPrimary: 'Start Project',
       ctaSecondary: 'Discover AI Features',
@@ -2586,7 +2586,7 @@ export const translations = {
     },
     kiAgentsPage: {
       badge: 'AI Agenti za Vaše Poslovanje',
-      title: 'AI Agenti za Tvrtke u Münchenu i Bavarskoj',
+      title: 'Razvoj AI Agenata – Agencija za Chatbotove i Automatizaciju München',
       subtitle: 'Naši AI agenti automatiziraju rutinske zadatke, odgovaraju na upite klijenata i analiziraju podatke – kako biste se mogli fokusirati na svoje osnovno poslovanje.',
       ctaPrimary: 'Besplatna Konzultacija',
       ctaSecondary: 'Otkrijte Agente',
@@ -2670,7 +2670,7 @@ export const translations = {
     },
     automationPage: {
       badge: 'Automatizacija Tijekova Rada',
-      title: 'Automatizacija Tijekova Rada za Vaše Poslovanje',
+      title: 'Automatizacija Procesa s n8n – Agencija za Workflow München',
       subtitle: 'Povezujemo vaše alate i automatiziramo ponavljajuće zadatke – kako biste se mogli fokusirati na ono što je važno.',
       ctaPrimary: 'Besplatna Konzultacija',
       ctaSecondary: 'Otkrijte Mogućnosti',
@@ -2740,7 +2740,7 @@ export const translations = {
     },
     webKIPage: {
       badge: 'Web Stranice s AI',
-      title: 'AI Web Stranice: Brze, Inteligentne i Optimizirane za Konverziju',
+      title: 'Izrada Web Stranica s AI – Web Dizajn Agencija Fürstenfeldbruck i München',
       subtitle: 'Razvijamo moderne web stranice s integriranim AI značajkama: chatbotovi, automatska izrada sadržaja, inteligentni SEO i više.',
       ctaPrimary: 'Započnite Projekt',
       ctaSecondary: 'Otkrijte AI Značajke',
@@ -4003,7 +4003,7 @@ export const translations = {
     },
     kiAgentsPage: {
       badge: 'İşletmeniz için AI Ajanları',
-      title: 'Münih ve Bavyera Şirketleri için AI Ajanları',
+      title: 'AI Ajan Gelistirme – Chatbot ve Otomasyon Ajansi Munih',
       subtitle: 'AI ajanlarımız rutin görevleri otomatikleştirir, müşteri sorularını yanıtlar ve verileri analiz eder – böylece ana işinize odaklanabilirsiniz.',
       ctaPrimary: 'Ücretsiz Danışmanlık',
       ctaSecondary: 'Ajanları Keşfet',
@@ -4086,7 +4086,7 @@ export const translations = {
       ],
     },
     automationPage: {
-      heroTitle: 'Otomasyon',
+      heroTitle: 'n8n ile Surecleri Otomatiklestirin – Is Akisi Otomasyon Ajansi Munih',
       heroSubtitle: 'İş süreçlerinizi otomatikleştirin',
       heroDescription: 'Tekrarlayan görevleri otomatikleştirerek ekibinizin stratejik işlere odaklanmasını sağlayın.',
       features: 'Özellikler',
@@ -4111,7 +4111,7 @@ export const translations = {
     },
     webKIPage: {
       badge: 'AI Web Siteleri',
-      title: 'AI Web Siteleri: Hızlı, Akıllı ve Dönüşüm Odaklı',
+      title: 'AI ile Web Sitesi Yaptirin – Web Tasarim Ajansi Furstenfeldbruck ve Munih',
       subtitle: 'Entegre AI özellikleriyle modern web siteleri geliştiriyoruz: Chatbotlar, otomatik içerik oluşturma, akıllı SEO ve daha fazlası.',
       ctaPrimary: 'Projeye başla',
       ctaSecondary: 'AI özelliklerini keşfet',
