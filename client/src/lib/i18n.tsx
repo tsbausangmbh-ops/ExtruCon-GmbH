@@ -258,7 +258,7 @@ export const translations = {
     },
     kiAgentsPage: {
       badge: 'KI-Agenten für Ihr Business',
-      title: 'Intelligente Agenten, die für Sie arbeiten',
+      title: 'KI-Agenten für Unternehmen in München & Bayern',
       subtitle: 'Unsere KI-Agenten automatisieren Routineaufgaben, beantworten Kundenanfragen und analysieren Daten – damit Sie sich auf Ihr Kerngeschäft konzentrieren können.',
       ctaPrimary: 'Kostenlose Beratung',
       ctaSecondary: 'Agenten entdecken',
@@ -342,7 +342,7 @@ export const translations = {
     },
     automationPage: {
       badge: 'Workflow-Automatisierung',
-      title: 'Automatisieren Sie Ihr Business',
+      title: 'Workflow-Automatisierung für Ihr Unternehmen',
       subtitle: 'Wir verbinden Ihre Tools und automatisieren wiederkehrende Aufgaben – damit Sie sich auf das Wesentliche konzentrieren können.',
       ctaPrimary: 'Kostenlose Beratung',
       ctaSecondary: 'Möglichkeiten entdecken',
@@ -412,7 +412,7 @@ export const translations = {
     },
     webKIPage: {
       badge: 'Webseiten mit KI',
-      title: 'Intelligente Websites, die arbeiten',
+      title: 'KI-Websites: Schnell, intelligent & conversion-optimiert',
       subtitle: 'Wir entwickeln moderne Websites mit integrierten KI-Features: Chatbots, automatische Content-Erstellung, intelligente SEO und mehr.',
       ctaPrimary: 'Projekt starten',
       ctaSecondary: 'KI-Features entdecken',
@@ -1422,7 +1422,7 @@ export const translations = {
     },
     kiAgentsPage: {
       badge: 'AI Agents for Your Business',
-      title: 'Intelligent Agents That Work for You',
+      title: 'AI Agents for Companies in Munich & Bavaria',
       subtitle: 'Our AI agents automate routine tasks, answer customer inquiries, and analyze data – so you can focus on your core business.',
       ctaPrimary: 'Free Consultation',
       ctaSecondary: 'Discover Agents',
@@ -1506,7 +1506,7 @@ export const translations = {
     },
     automationPage: {
       badge: 'Workflow Automation',
-      title: 'Automate Your Business',
+      title: 'Workflow Automation for Your Business',
       subtitle: 'We connect your tools and automate recurring tasks – so you can focus on what matters.',
       ctaPrimary: 'Free Consultation',
       ctaSecondary: 'Discover Possibilities',
@@ -1576,7 +1576,7 @@ export const translations = {
     },
     webKIPage: {
       badge: 'AI Websites',
-      title: 'Intelligent Websites That Work',
+      title: 'AI Websites: Fast, Intelligent & Conversion-Optimized',
       subtitle: 'We develop modern websites with integrated AI features: chatbots, automatic content creation, intelligent SEO, and more.',
       ctaPrimary: 'Start Project',
       ctaSecondary: 'Discover AI Features',
@@ -2586,7 +2586,7 @@ export const translations = {
     },
     kiAgentsPage: {
       badge: 'AI Agenti za Vaše Poslovanje',
-      title: 'Inteligentni Agenti Koji Rade za Vas',
+      title: 'AI Agenti za Tvrtke u Münchenu i Bavarskoj',
       subtitle: 'Naši AI agenti automatiziraju rutinske zadatke, odgovaraju na upite klijenata i analiziraju podatke – kako biste se mogli fokusirati na svoje osnovno poslovanje.',
       ctaPrimary: 'Besplatna Konzultacija',
       ctaSecondary: 'Otkrijte Agente',
@@ -2670,7 +2670,7 @@ export const translations = {
     },
     automationPage: {
       badge: 'Automatizacija Tijekova Rada',
-      title: 'Automatizirajte Svoje Poslovanje',
+      title: 'Automatizacija Tijekova Rada za Vaše Poslovanje',
       subtitle: 'Povezujemo vaše alate i automatiziramo ponavljajuće zadatke – kako biste se mogli fokusirati na ono što je važno.',
       ctaPrimary: 'Besplatna Konzultacija',
       ctaSecondary: 'Otkrijte Mogućnosti',
@@ -2740,7 +2740,7 @@ export const translations = {
     },
     webKIPage: {
       badge: 'Web Stranice s AI',
-      title: 'Inteligentne Web Stranice Koje Rade',
+      title: 'AI Web Stranice: Brze, Inteligentne i Optimizirane za Konverziju',
       subtitle: 'Razvijamo moderne web stranice s integriranim AI značajkama: chatbotovi, automatska izrada sadržaja, inteligentni SEO i više.',
       ctaPrimary: 'Započnite Projekt',
       ctaSecondary: 'Otkrijte AI Značajke',
@@ -4003,7 +4003,7 @@ export const translations = {
     },
     kiAgentsPage: {
       badge: 'İşletmeniz için AI Ajanları',
-      title: 'Sizin için çalışan akıllı ajanlar',
+      title: 'Münih ve Bavyera'daki Şirketler için AI Ajanları',
       subtitle: 'AI ajanlarımız rutin görevleri otomatikleştirir, müşteri sorularını yanıtlar ve verileri analiz eder – böylece ana işinize odaklanabilirsiniz.',
       ctaPrimary: 'Ücretsiz Danışmanlık',
       ctaSecondary: 'Ajanları Keşfet',
@@ -4111,7 +4111,7 @@ export const translations = {
     },
     webKIPage: {
       badge: 'AI Web Siteleri',
-      title: 'Sizin için çalışan akıllı web siteleri',
+      title: 'AI Web Siteleri: Hızlı, Akıllı ve Dönüşüm Odaklı',
       subtitle: 'Entegre AI özellikleriyle modern web siteleri geliştiriyoruz: Chatbotlar, otomatik içerik oluşturma, akıllı SEO ve daha fazlası.',
       ctaPrimary: 'Projeye başla',
       ctaSecondary: 'AI özelliklerini keşfet',
