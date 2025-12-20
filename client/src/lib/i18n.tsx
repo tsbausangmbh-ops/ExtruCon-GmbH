@@ -282,34 +282,34 @@ export const translations = {
       ctaTitle: 'Jetzt KI-Agent anfragen – Kostenlose Beratung',
       ctaSubtitle: 'Lassen Sie uns besprechen, wie KI-Agenten Ihr Business transformieren können. Kostenlose Erstberatung ohne Risiko.',
       agents: [
-        { title: 'Kundenservice-Agent', description: 'Automatisierte Beantwortung von Kundenanfragen rund um die Uhr. Der Agent versteht Kontext, beantwortet FAQs und leitet komplexe Fälle intelligent an Mitarbeiter weiter.', features: ['24/7 verfügbar', 'Mehrsprachig', 'Lernfähig', 'CRM-Integration'], useCases: ['Live-Chat auf Website', 'E-Mail-Support', 'WhatsApp Business', 'Facebook Messenger'] },
-        { title: 'Analyse-Agent', description: 'Automatische Auswertung von Marketing-Daten, Erstellung von Reports und Handlungsempfehlungen basierend auf KI-Analyse Ihrer Geschäftskennzahlen.', features: ['Echtzeit-Daten', 'Automatische Reports', 'Trend-Erkennung', 'ROI-Tracking'], useCases: ['Google Analytics Auswertung', 'Social Media Insights', 'Kampagnen-Performance', 'Umsatzprognosen'] },
-        { title: 'Automatisierungs-Agent', description: 'Verbindet Ihre Tools und automatisiert Workflows – von Lead-Erfassung über E-Mail-Versand bis zur Rechnungsstellung. Basierend auf n8n für maximale Flexibilität.', features: ['n8n-basiert', '500+ Integrationen', 'Keine Coding-Skills nötig', 'Skalierbar'], useCases: ['Lead-Nurturing', 'Rechnungsautomatisierung', 'Daten-Synchronisation', 'Benachrichtigungen'] },
-        { title: 'Content-Agent', description: 'Generiert Social Media Posts, Blog-Artikel und Marketing-Texte in Ihrem Markenstil – mit menschlicher Qualitätskontrolle für perfekte Ergebnisse.', features: ['Markenkonform', 'SEO-optimiert', 'Multi-Plattform', 'Schnelle Erstellung'], useCases: ['Social Media Posts', 'Blog-Artikel', 'Newsletter-Texte', 'Produktbeschreibungen'] },
-        { title: 'E-Mail-Agent', description: 'Intelligente E-Mail-Automatisierung mit personalisierten Antworten, automatischer Kategorisierung und Priorisierung eingehender Nachrichten.', features: ['Auto-Kategorisierung', 'Personalisierte Antworten', 'Spam-Filter', 'Follow-up Reminder'], useCases: ['Inbox-Management', 'Newsletter-Versand', 'Terminanfragen', 'Angebotsversand'] },
-        { title: 'Termin-Agent', description: 'Automatisiert Ihre Terminplanung: Koordiniert Verfügbarkeiten, sendet Erinnerungen und verwaltet Absagen oder Verschiebungen selbstständig.', features: ['Kalender-Sync', 'Automatische Erinnerungen', 'Zeitzonenmanagement', 'Konfliktlösung'], useCases: ['Kundentermine', 'Team-Meetings', 'Webinar-Buchungen', 'Servicezeiten'] },
-        { title: 'E-Commerce-Agent', description: 'Unterstützt Kunden beim Einkauf, beantwortet Produktfragen, verfolgt Bestellungen und kümmert sich um Retouren-Anfragen automatisch.', features: ['Produktberatung', 'Bestellstatus', 'Retouren-Handling', 'Upselling'], useCases: ['Shop-Assistenz', 'Warenkorbabbruch', 'Größenberatung', 'Liefertracking'] },
-        { title: 'Dokumenten-Agent', description: 'Verarbeitet Dokumente automatisch: Extrahiert Daten aus PDFs, kategorisiert Unterlagen und erstellt strukturierte Zusammenfassungen.', features: ['PDF-Extraktion', 'OCR-Erkennung', 'Auto-Kategorisierung', 'Datenexport'], useCases: ['Rechnungsverarbeitung', 'Vertragsanalyse', 'Bewerbungsmanagement', 'Archivierung'] }
+        { title: 'KI-Chatbot für Kundenservice', description: 'Automatisierte Beantwortung von Kundenanfragen rund um die Uhr. Der Agent versteht Kontext, beantwortet FAQs und leitet komplexe Fälle intelligent an Mitarbeiter weiter.', features: ['24/7 verfügbar', 'Mehrsprachig', 'Lernfähig', 'CRM-Integration'], useCases: ['Live-Chat auf Website', 'E-Mail-Support', 'WhatsApp Business', 'Facebook Messenger'] },
+        { title: 'KI-Agent für Datenanalyse', description: 'Automatische Auswertung von Marketing-Daten, Erstellung von Reports und Handlungsempfehlungen basierend auf KI-Analyse Ihrer Geschäftskennzahlen.', features: ['Echtzeit-Daten', 'Automatische Reports', 'Trend-Erkennung', 'ROI-Tracking'], useCases: ['Google Analytics Auswertung', 'Social Media Insights', 'Kampagnen-Performance', 'Umsatzprognosen'] },
+        { title: 'Workflow-Automatisierung mit KI', description: 'Verbindet Ihre Tools und automatisiert Workflows – von Lead-Erfassung über E-Mail-Versand bis zur Rechnungsstellung. Basierend auf n8n für maximale Flexibilität.', features: ['n8n-basiert', '500+ Integrationen', 'Keine Coding-Skills nötig', 'Skalierbar'], useCases: ['Lead-Nurturing', 'Rechnungsautomatisierung', 'Daten-Synchronisation', 'Benachrichtigungen'] },
+        { title: 'KI-Content-Erstellung & Texte', description: 'Generiert Social Media Posts, Blog-Artikel und Marketing-Texte in Ihrem Markenstil – mit menschlicher Qualitätskontrolle für perfekte Ergebnisse.', features: ['Markenkonform', 'SEO-optimiert', 'Multi-Plattform', 'Schnelle Erstellung'], useCases: ['Social Media Posts', 'Blog-Artikel', 'Newsletter-Texte', 'Produktbeschreibungen'] },
+        { title: 'E-Mail-Automatisierung mit KI', description: 'Intelligente E-Mail-Automatisierung mit personalisierten Antworten, automatischer Kategorisierung und Priorisierung eingehender Nachrichten.', features: ['Auto-Kategorisierung', 'Personalisierte Antworten', 'Spam-Filter', 'Follow-up Reminder'], useCases: ['Inbox-Management', 'Newsletter-Versand', 'Terminanfragen', 'Angebotsversand'] },
+        { title: 'Terminbuchung & Kalenderverwaltung', description: 'Automatisiert Ihre Terminplanung: Koordiniert Verfügbarkeiten, sendet Erinnerungen und verwaltet Absagen oder Verschiebungen selbstständig.', features: ['Kalender-Sync', 'Automatische Erinnerungen', 'Zeitzonenmanagement', 'Konfliktlösung'], useCases: ['Kundentermine', 'Team-Meetings', 'Webinar-Buchungen', 'Servicezeiten'] },
+        { title: 'KI für E-Commerce & Online-Shops', description: 'Unterstützt Kunden beim Einkauf, beantwortet Produktfragen, verfolgt Bestellungen und kümmert sich um Retouren-Anfragen automatisch.', features: ['Produktberatung', 'Bestellstatus', 'Retouren-Handling', 'Upselling'], useCases: ['Shop-Assistenz', 'Warenkorbabbruch', 'Größenberatung', 'Liefertracking'] },
+        { title: 'Dokumentenverarbeitung & OCR', description: 'Verarbeitet Dokumente automatisch: Extrahiert Daten aus PDFs, kategorisiert Unterlagen und erstellt strukturierte Zusammenfassungen.', features: ['PDF-Extraktion', 'OCR-Erkennung', 'Auto-Kategorisierung', 'Datenexport'], useCases: ['Rechnungsverarbeitung', 'Vertragsanalyse', 'Bewerbungsmanagement', 'Archivierung'] }
       ],
       benefits: [
-        { title: 'Zeit sparen', description: 'Bis zu 80% weniger manuelle Arbeit durch intelligente Automatisierung.' },
-        { title: 'Schneller reagieren', description: 'Sofortige Antworten und Aktionen – 24 Stunden am Tag, 7 Tage die Woche.' },
-        { title: 'Fehler reduzieren', description: 'Konsistente Qualität ohne menschliche Flüchtigkeitsfehler.' },
-        { title: 'Team entlasten', description: 'Mitarbeiter können sich auf wertschöpfende Aufgaben konzentrieren.' },
-        { title: 'Skalierbar wachsen', description: 'Agenten wachsen mit Ihrem Unternehmen – ohne zusätzliches Personal.' },
-        { title: 'Daten nutzen', description: 'Wandeln Sie Daten in verwertbare Insights und bessere Entscheidungen um.' }
+        { title: 'Bis zu 80% Zeitersparnis', description: 'Bis zu 80% weniger manuelle Arbeit durch intelligente Automatisierung.' },
+        { title: '24/7 Verfügbarkeit garantiert', description: 'Sofortige Antworten und Aktionen – 24 Stunden am Tag, 7 Tage die Woche.' },
+        { title: 'Weniger Fehler & mehr Qualität', description: 'Konsistente Qualität ohne menschliche Flüchtigkeitsfehler.' },
+        { title: 'Mitarbeiter entlasten', description: 'Mitarbeiter können sich auf wertschöpfende Aufgaben konzentrieren.' },
+        { title: 'Skalierbar ohne Mehrkosten', description: 'Agenten wachsen mit Ihrem Unternehmen – ohne zusätzliches Personal.' },
+        { title: 'Datengetriebene Entscheidungen', description: 'Wandeln Sie Daten in verwertbare Insights und bessere Entscheidungen um.' }
       ],
       useCaseCategories: [
-        { title: 'Kundenservice', examples: ['Automatische Beantwortung von FAQ-Anfragen', '24/7 Chat-Support auf Ihrer Website', 'Ticket-Kategorisierung und Priorisierung', 'Mehrsprachiger Support ohne Mehrkosten'] },
-        { title: 'Marketing & Vertrieb', examples: ['Lead-Qualifizierung und -Scoring', 'Personalisierte E-Mail-Kampagnen', 'Social Media Content-Erstellung', 'Automatische Angebotserstellung'] },
-        { title: 'Operations', examples: ['Automatische Rechnungsverarbeitung', 'Terminplanung und Ressourcenmanagement', 'Dokumentenanalyse und -extraktion', 'Workflow-Automatisierung zwischen Tools'] }
+        { title: 'KI im Kundenservice & Support', examples: ['Automatische Beantwortung von FAQ-Anfragen', '24/7 Chat-Support auf Ihrer Website', 'Ticket-Kategorisierung und Priorisierung', 'Mehrsprachiger Support ohne Mehrkosten'] },
+        { title: 'KI für Marketing & Vertrieb', examples: ['Lead-Qualifizierung und -Scoring', 'Personalisierte E-Mail-Kampagnen', 'Social Media Content-Erstellung', 'Automatische Angebotserstellung'] },
+        { title: 'KI für Geschäftsprozesse', examples: ['Automatische Rechnungsverarbeitung', 'Terminplanung und Ressourcenmanagement', 'Dokumentenanalyse und -extraktion', 'Workflow-Automatisierung zwischen Tools'] }
       ],
       processSteps: [
-        { title: 'Gespräch', description: 'Wir verstehen Ihre Anforderungen und Prozesse.' },
-        { title: 'Analyse', description: 'Identifikation von Automatisierungspotenzialen.' },
-        { title: 'Konzept', description: 'Entwicklung einer maßgeschneiderten Lösung.' },
-        { title: 'Umsetzung', description: 'Konfiguration und Training des Agenten.' },
-        { title: 'Go-Live', description: 'Integration und kontinuierliche Optimierung.' }
+        { title: '1. Bedarfsanalyse', description: 'Wir verstehen Ihre Anforderungen und Prozesse.' },
+        { title: '2. Potenzialanalyse', description: 'Identifikation von Automatisierungspotenzialen.' },
+        { title: '3. Konzeptentwicklung', description: 'Entwicklung einer maßgeschneiderten Lösung.' },
+        { title: '4. Implementierung', description: 'Konfiguration und Training des Agenten.' },
+        { title: '5. Launch & Optimierung', description: 'Integration und kontinuierliche Optimierung.' }
       ],
       technologies: [
         { name: 'OpenAI GPT-4', description: 'Modernste Sprachverarbeitung für natürliche Konversationen' },
@@ -371,20 +371,20 @@ export const translations = {
       workflowSteps: ['Trigger', 'Bedingung', 'Aktion 1', 'Aktion 2'],
       ctaSubtitle: 'Lassen Sie uns analysieren, welche Prozesse wir für Sie automatisieren können. Kostenlose Erstberatung.',
       automations: [
-        { title: 'E-Mail-Automatisierung', description: 'Automatischer Versand, Sortierung und Beantwortung von E-Mails. Willkommens-Sequenzen, Follow-ups und personalisierte Kampagnen auf Autopilot.', examples: ['Willkommens-E-Mails', 'Lead-Nurturing', 'Warenkorbabbrecher', 'Newsletter-Segmentierung'] },
-        { title: 'Lead-Management', description: 'Leads automatisch erfassen, qualifizieren und an den Vertrieb übergeben. Integration mit Ihrem CRM und automatisches Scoring.', examples: ['Formulare → CRM', 'Lead-Scoring', 'Automatische Zuweisung', 'Nachfass-Reminder'] },
-        { title: 'Dokumenten-Workflows', description: 'Rechnungen, Verträge und Dokumente automatisch verarbeiten, archivieren und weiterleiten. OCR-Erkennung inklusive.', examples: ['Rechnungsverarbeitung', 'Vertragsmanagement', 'Digitale Unterschriften', 'Archivierung'] },
-        { title: 'E-Commerce-Automation', description: 'Bestellungen, Lagerbestände und Versand automatisch verwalten. Synchronisation zwischen Shop, Buchhaltung und Versand.', examples: ['Bestellbestätigungen', 'Lager-Sync', 'Retouren-Workflow', 'Bewertungsanfragen'] },
-        { title: 'Termin-Automatisierung', description: 'Buchungen, Erinnerungen und Kalenderabgleich vollautomatisch. Keine doppelten Termine, keine vergessenen Meetings.', examples: ['Online-Buchung', 'Erinnerungen', 'Kalender-Sync', 'No-Show-Management'] },
-        { title: 'Daten-Synchronisation', description: 'Halten Sie alle Ihre Systeme synchron. Änderungen in einem Tool werden automatisch in allen anderen übernommen.', examples: ['CRM ↔ Buchhaltung', 'Shop ↔ Warenwirtschaft', 'Kontakte synchron', 'Bestandsabgleich'] },
-        { title: 'Reporting-Automation', description: 'Automatische Erstellung und Versand von Reports. Tägliche, wöchentliche oder monatliche Auswertungen ohne manuellen Aufwand.', examples: ['Umsatzreports', 'Marketing-KPIs', 'Mitarbeiter-Dashboards', 'Kundenanalysen'] },
-        { title: 'Prozess-Workflows', description: 'Komplexe Geschäftsprozesse automatisieren: Freigaben, Eskalationen und mehrstufige Abläufe mit intelligenten Regeln.', examples: ['Freigabe-Workflows', 'Eskalationsketten', 'Onboarding', 'Checklisten'] }
+        { title: 'E-Mail-Marketing automatisieren', description: 'Automatischer Versand, Sortierung und Beantwortung von E-Mails. Willkommens-Sequenzen, Follow-ups und personalisierte Kampagnen auf Autopilot.', examples: ['Willkommens-E-Mails', 'Lead-Nurturing', 'Warenkorbabbrecher', 'Newsletter-Segmentierung'] },
+        { title: 'Lead-Management & CRM-Integration', description: 'Leads automatisch erfassen, qualifizieren und an den Vertrieb übergeben. Integration mit Ihrem CRM und automatisches Scoring.', examples: ['Formulare → CRM', 'Lead-Scoring', 'Automatische Zuweisung', 'Nachfass-Reminder'] },
+        { title: 'Dokumenten-Automatisierung & OCR', description: 'Rechnungen, Verträge und Dokumente automatisch verarbeiten, archivieren und weiterleiten. OCR-Erkennung inklusive.', examples: ['Rechnungsverarbeitung', 'Vertragsmanagement', 'Digitale Unterschriften', 'Archivierung'] },
+        { title: 'E-Commerce & Shop-Automatisierung', description: 'Bestellungen, Lagerbestände und Versand automatisch verwalten. Synchronisation zwischen Shop, Buchhaltung und Versand.', examples: ['Bestellbestätigungen', 'Lager-Sync', 'Retouren-Workflow', 'Bewertungsanfragen'] },
+        { title: 'Online-Terminbuchung automatisieren', description: 'Buchungen, Erinnerungen und Kalenderabgleich vollautomatisch. Keine doppelten Termine, keine vergessenen Meetings.', examples: ['Online-Buchung', 'Erinnerungen', 'Kalender-Sync', 'No-Show-Management'] },
+        { title: 'Daten & Systeme synchronisieren', description: 'Halten Sie alle Ihre Systeme synchron. Änderungen in einem Tool werden automatisch in allen anderen übernommen.', examples: ['CRM ↔ Buchhaltung', 'Shop ↔ Warenwirtschaft', 'Kontakte synchron', 'Bestandsabgleich'] },
+        { title: 'Automatische Reports & Dashboards', description: 'Automatische Erstellung und Versand von Reports. Tägliche, wöchentliche oder monatliche Auswertungen ohne manuellen Aufwand.', examples: ['Umsatzreports', 'Marketing-KPIs', 'Mitarbeiter-Dashboards', 'Kundenanalysen'] },
+        { title: 'Geschäftsprozesse digitalisieren', description: 'Komplexe Geschäftsprozesse automatisieren: Freigaben, Eskalationen und mehrstufige Abläufe mit intelligenten Regeln.', examples: ['Freigabe-Workflows', 'Eskalationsketten', 'Onboarding', 'Checklisten'] }
       ],
       benefits: [
-        { title: '80% Zeitersparnis', description: 'Manuelle Aufgaben werden automatisch erledigt' },
-        { title: 'Weniger Fehler', description: 'Konsistente Prozesse ohne Flüchtigkeitsfehler' },
-        { title: 'Skalierbar', description: 'Mehr Volumen ohne mehr Personal' },
-        { title: 'Schneller', description: 'Prozesse laufen 24/7 in Sekunden' }
+        { title: 'Bis zu 80% Zeitersparnis', description: 'Manuelle Aufgaben werden automatisch erledigt' },
+        { title: 'Weniger Fehler, mehr Qualität', description: 'Konsistente Prozesse ohne Flüchtigkeitsfehler' },
+        { title: 'Skalierbar ohne Mehrkosten', description: 'Mehr Volumen ohne mehr Personal' },
+        { title: '24/7 Prozesse in Echtzeit', description: 'Prozesse laufen 24/7 in Sekunden' }
       ],
       tools: [
         { name: 'n8n', description: 'Unser Haupt-Tool für komplexe Automatisierungen' },
@@ -395,11 +395,11 @@ export const translations = {
         { name: 'Google Workspace', description: 'Sheets, Docs, Gmail-Integration' }
       ],
       processSteps: [
-        { title: 'Analyse', description: 'Wir verstehen Ihre aktuellen Prozesse und identifizieren Automatisierungspotenzial.' },
-        { title: 'Konzept', description: 'Gemeinsam definieren wir den optimalen Workflow und wählen die passenden Tools.' },
-        { title: 'Umsetzung', description: 'Wir bauen Ihre Automatisierung mit n8n oder dem passenden Tool.' },
-        { title: 'Testing', description: 'Ausgiebige Tests stellen sicher, dass alles reibungslos funktioniert.' },
-        { title: 'Go-Live', description: 'Ihr Workflow geht live – mit Monitoring und kontinuierlicher Optimierung.' }
+        { title: '1. Prozessanalyse', description: 'Wir verstehen Ihre aktuellen Prozesse und identifizieren Automatisierungspotenzial.' },
+        { title: '2. Workflow-Konzept', description: 'Gemeinsam definieren wir den optimalen Workflow und wählen die passenden Tools.' },
+        { title: '3. Technische Umsetzung', description: 'Wir bauen Ihre Automatisierung mit n8n oder dem passenden Tool.' },
+        { title: '4. Qualitätssicherung', description: 'Ausgiebige Tests stellen sicher, dass alles reibungslos funktioniert.' },
+        { title: '5. Launch & Monitoring', description: 'Ihr Workflow geht live – mit Monitoring und kontinuierlicher Optimierung.' }
       ],
       faqs: [
         { q: 'Was kostet eine Automatisierung?', a: 'Einfache Automatisierungen starten ab 500€. Komplexere Workflows mit mehreren Systemen beginnen bei 1.500€. In der kostenlosen Erstberatung erstellen wir einen konkreten Kostenvoranschlag.' },
@@ -430,27 +430,27 @@ export const translations = {
       ctaTitle: 'Website anfragen – Kostenlose Beratung',
       ctaSubtitle: 'Lassen Sie uns besprechen, wie wir Ihre Online-Präsenz mit KI auf das nächste Level bringen. Kostenlose Erstberatung.',
       features: [
-        { title: 'KI-Chatbot Integration', description: 'Intelligente Chatbots, die Kundenanfragen 24/7 beantworten, Leads qualifizieren und Termine buchen – direkt auf Ihrer Website.', benefits: ['Sofortige Antworten', 'Lead-Generierung', 'Terminbuchung', 'FAQ-Automatisierung'] },
-        { title: 'KI-Content-Erstellung', description: 'SEO-optimierte Texte, Produktbeschreibungen und Blog-Artikel werden mit KI erstellt und von Experten geprüft.', benefits: ['SEO-optimiert', 'Markenkonform', 'Schnelle Erstellung', 'Regelmäßige Updates'] },
-        { title: 'KI-Bildoptimierung', description: 'Automatische Bildoptimierung, Alt-Text-Generierung und intelligente Bildauswahl für maximale Performance.', benefits: ['Schnelle Ladezeiten', 'Auto Alt-Texte', 'Responsive Bilder', 'WebP-Konvertierung'] },
-        { title: 'KI-SEO-Analyse', description: 'Kontinuierliche SEO-Überwachung mit KI-gestützten Empfehlungen für bessere Rankings bei Google.', benefits: ['Keyword-Tracking', 'Konkurrenz-Analyse', 'Auto-Optimierung', 'Ranking-Reports'] },
-        { title: 'Personalisierung', description: 'KI analysiert Besucherverhalten und zeigt personalisierte Inhalte, Produkte und Angebote.', benefits: ['Höhere Conversion', 'Relevante Inhalte', 'A/B-Testing', 'Nutzerprofile'] },
-        { title: 'Intelligente Analytics', description: 'KI-gestützte Auswertung Ihrer Website-Daten mit automatischen Handlungsempfehlungen.', benefits: ['Automatische Insights', 'Conversion-Tracking', 'Nutzerverhalten', 'Optimierungsvorschläge'] }
+        { title: 'KI-Chatbot für Websites', description: 'Intelligente Chatbots, die Kundenanfragen 24/7 beantworten, Leads qualifizieren und Termine buchen – direkt auf Ihrer Website.', benefits: ['Sofortige Antworten', 'Lead-Generierung', 'Terminbuchung', 'FAQ-Automatisierung'] },
+        { title: 'SEO-Content mit KI erstellen', description: 'SEO-optimierte Texte, Produktbeschreibungen und Blog-Artikel werden mit KI erstellt und von Experten geprüft.', benefits: ['SEO-optimiert', 'Markenkonform', 'Schnelle Erstellung', 'Regelmäßige Updates'] },
+        { title: 'Automatische Bildoptimierung', description: 'Automatische Bildoptimierung, Alt-Text-Generierung und intelligente Bildauswahl für maximale Performance.', benefits: ['Schnelle Ladezeiten', 'Auto Alt-Texte', 'Responsive Bilder', 'WebP-Konvertierung'] },
+        { title: 'KI-SEO-Analyse & Optimierung', description: 'Kontinuierliche SEO-Überwachung mit KI-gestützten Empfehlungen für bessere Rankings bei Google.', benefits: ['Keyword-Tracking', 'Konkurrenz-Analyse', 'Auto-Optimierung', 'Ranking-Reports'] },
+        { title: 'Website-Personalisierung mit KI', description: 'KI analysiert Besucherverhalten und zeigt personalisierte Inhalte, Produkte und Angebote.', benefits: ['Höhere Conversion', 'Relevante Inhalte', 'A/B-Testing', 'Nutzerprofile'] },
+        { title: 'KI-Analytics & Insights', description: 'KI-gestützte Auswertung Ihrer Website-Daten mit automatischen Handlungsempfehlungen.', benefits: ['Automatische Insights', 'Conversion-Tracking', 'Nutzerverhalten', 'Optimierungsvorschläge'] }
       ],
       websiteTypes: [
-        { title: 'Unternehmenswebsite', description: 'Professionelle Präsenz mit KI-Chatbot, SEO-Optimierung und Content-Management.', price: 'ab 3.500€', features: ['Responsives Design', 'KI-Chatbot', 'SEO-Optimierung', 'CMS', 'Kontaktformular', 'Analytics'] },
-        { title: 'Landing Page', description: 'Conversion-optimierte Seite für Kampagnen, Produkte oder Dienstleistungen.', price: 'ab 1.500€', features: ['Conversion-Design', 'A/B-Testing', 'Lead-Formulare', 'Tracking', 'Mobile-First', 'Schnelle Ladezeit'] },
-        { title: 'E-Commerce Shop', description: 'Online-Shop mit KI-Produktempfehlungen und automatisiertem Marketing.', price: 'ab 5.000€', features: ['Produktkatalog', 'KI-Empfehlungen', 'Zahlungsintegration', 'Warenkorbabbruch-Mail', 'SEO', 'Analytics'] },
-        { title: 'Blog / Content-Plattform', description: 'Content-Hub mit KI-gestützter Texterstellung und SEO-Automatisierung.', price: 'ab 2.500€', features: ['KI-Content', 'SEO-Tools', 'Kategorien', 'Newsletter', 'Social Sharing', 'Autorenprofile'] },
+        { title: 'Professionelle Unternehmenswebsite', description: 'Professionelle Präsenz mit KI-Chatbot, SEO-Optimierung und Content-Management.', price: 'ab 3.500€', features: ['Responsives Design', 'KI-Chatbot', 'SEO-Optimierung', 'CMS', 'Kontaktformular', 'Analytics'] },
+        { title: 'Conversion-optimierte Landing Page', description: 'Conversion-optimierte Seite für Kampagnen, Produkte oder Dienstleistungen.', price: 'ab 1.500€', features: ['Conversion-Design', 'A/B-Testing', 'Lead-Formulare', 'Tracking', 'Mobile-First', 'Schnelle Ladezeit'] },
+        { title: 'E-Commerce Shop mit KI', description: 'Online-Shop mit KI-Produktempfehlungen und automatisiertem Marketing.', price: 'ab 5.000€', features: ['Produktkatalog', 'KI-Empfehlungen', 'Zahlungsintegration', 'Warenkorbabbruch-Mail', 'SEO', 'Analytics'] },
+        { title: 'Blog & Content-Plattform', description: 'Content-Hub mit KI-gestützter Texterstellung und SEO-Automatisierung.', price: 'ab 2.500€', features: ['KI-Content', 'SEO-Tools', 'Kategorien', 'Newsletter', 'Social Sharing', 'Autorenprofile'] },
         { title: 'Komplexe E-Commerce-Lösungen', description: 'Großprojekte mit individuellen Integrationen und erweiterten Funktionen.', price: 'ab 7.000€', features: ['Individuelle Integrationen', 'ERP-Anbindung', 'Mehrsprachigkeit', 'Erweiterte Reports', 'API-Integrationen', 'Individuelle Workflows'] },
         { title: 'Hosting & Wartung', description: 'Sicheres, schnelles Hosting und regelmäßige Wartungsservices.', price: 'ab 49€/Monat', features: ['SSL-Zertifikat', 'Tägliche Backups', 'Sicherheitsupdates', 'Performance-Optimierung', 'E-Mail-Support', '99,9% Uptime'] }
       ],
       processSteps: [
-        { title: 'Briefing', description: 'Wir verstehen Ihre Ziele, Zielgruppe und Anforderungen.' },
-        { title: 'Konzept', description: 'Struktur, Design-Richtung und KI-Features werden definiert.' },
-        { title: 'Design', description: 'Modernes UI/UX-Design mit Fokus auf Conversion.' },
-        { title: 'Entwicklung', description: 'Technische Umsetzung mit KI-Integrationen.' },
-        { title: 'Launch', description: 'Go-Live mit SEO-Setup und Monitoring.' }
+        { title: '1. Briefing & Bedarfsanalyse', description: 'Wir verstehen Ihre Ziele, Zielgruppe und Anforderungen.' },
+        { title: '2. Konzept & Planung', description: 'Struktur, Design-Richtung und KI-Features werden definiert.' },
+        { title: '3. UI/UX Design', description: 'Modernes UI/UX-Design mit Fokus auf Conversion.' },
+        { title: '4. Entwicklung & Integration', description: 'Technische Umsetzung mit KI-Integrationen.' },
+        { title: '5. Launch & SEO-Setup', description: 'Go-Live mit SEO-Setup und Monitoring.' }
       ],
       technologies: [
         { name: 'React / Next.js', category: 'Frontend' },
@@ -1446,34 +1446,34 @@ export const translations = {
       ctaTitle: 'Request AI Agent Now – Free Consultation',
       ctaSubtitle: 'Let\'s discuss how AI agents can transform your business. Free initial consultation with no risk.',
       agents: [
-        { title: 'Customer Service Agent', description: 'Automated answering of customer inquiries around the clock. The agent understands context, answers FAQs, and intelligently routes complex cases to staff.', features: ['24/7 Available', 'Multilingual', 'Learning', 'CRM Integration'], useCases: ['Website Live Chat', 'Email Support', 'WhatsApp Business', 'Facebook Messenger'] },
-        { title: 'Analytics Agent', description: 'Automatic evaluation of marketing data, report creation, and recommendations based on AI analysis of your business metrics.', features: ['Real-time Data', 'Automatic Reports', 'Trend Detection', 'ROI Tracking'], useCases: ['Google Analytics Evaluation', 'Social Media Insights', 'Campaign Performance', 'Revenue Forecasts'] },
-        { title: 'Automation Agent', description: 'Connects your tools and automates workflows – from lead capture to email sending to invoicing. Based on n8n for maximum flexibility.', features: ['n8n-based', '500+ Integrations', 'No Coding Skills Needed', 'Scalable'], useCases: ['Lead Nurturing', 'Invoice Automation', 'Data Synchronization', 'Notifications'] },
-        { title: 'Content Agent', description: 'Generates social media posts, blog articles, and marketing copy in your brand style – with human quality control for perfect results.', features: ['Brand-Compliant', 'SEO-Optimized', 'Multi-Platform', 'Fast Creation'], useCases: ['Social Media Posts', 'Blog Articles', 'Newsletter Copy', 'Product Descriptions'] },
-        { title: 'Email Agent', description: 'Intelligent email automation with personalized responses, automatic categorization, and prioritization of incoming messages.', features: ['Auto-Categorization', 'Personalized Responses', 'Spam Filter', 'Follow-up Reminders'], useCases: ['Inbox Management', 'Newsletter Sending', 'Appointment Requests', 'Quote Sending'] },
-        { title: 'Appointment Agent', description: 'Automates your scheduling: coordinates availability, sends reminders, and manages cancellations or rescheduling independently.', features: ['Calendar Sync', 'Automatic Reminders', 'Timezone Management', 'Conflict Resolution'], useCases: ['Client Meetings', 'Team Meetings', 'Webinar Bookings', 'Service Hours'] },
-        { title: 'E-Commerce Agent', description: 'Supports customers with shopping, answers product questions, tracks orders, and handles return requests automatically.', features: ['Product Advice', 'Order Status', 'Return Handling', 'Upselling'], useCases: ['Shop Assistance', 'Cart Abandonment', 'Size Advice', 'Delivery Tracking'] },
-        { title: 'Document Agent', description: 'Processes documents automatically: extracts data from PDFs, categorizes files, and creates structured summaries.', features: ['PDF Extraction', 'OCR Recognition', 'Auto-Categorization', 'Data Export'], useCases: ['Invoice Processing', 'Contract Analysis', 'Application Management', 'Archiving'] }
+        { title: 'AI Chatbot for Customer Service', description: 'Automated answering of customer inquiries around the clock. The agent understands context, answers FAQs, and intelligently routes complex cases to staff.', features: ['24/7 Available', 'Multilingual', 'Learning', 'CRM Integration'], useCases: ['Website Live Chat', 'Email Support', 'WhatsApp Business', 'Facebook Messenger'] },
+        { title: 'AI Agent for Data Analytics', description: 'Automatic evaluation of marketing data, report creation, and recommendations based on AI analysis of your business metrics.', features: ['Real-time Data', 'Automatic Reports', 'Trend Detection', 'ROI Tracking'], useCases: ['Google Analytics Evaluation', 'Social Media Insights', 'Campaign Performance', 'Revenue Forecasts'] },
+        { title: 'Workflow Automation with AI', description: 'Connects your tools and automates workflows – from lead capture to email sending to invoicing. Based on n8n for maximum flexibility.', features: ['n8n-based', '500+ Integrations', 'No Coding Skills Needed', 'Scalable'], useCases: ['Lead Nurturing', 'Invoice Automation', 'Data Synchronization', 'Notifications'] },
+        { title: 'AI Content Creation & Copywriting', description: 'Generates social media posts, blog articles, and marketing copy in your brand style – with human quality control for perfect results.', features: ['Brand-Compliant', 'SEO-Optimized', 'Multi-Platform', 'Fast Creation'], useCases: ['Social Media Posts', 'Blog Articles', 'Newsletter Copy', 'Product Descriptions'] },
+        { title: 'Email Automation with AI', description: 'Intelligent email automation with personalized responses, automatic categorization, and prioritization of incoming messages.', features: ['Auto-Categorization', 'Personalized Responses', 'Spam Filter', 'Follow-up Reminders'], useCases: ['Inbox Management', 'Newsletter Sending', 'Appointment Requests', 'Quote Sending'] },
+        { title: 'Appointment Scheduling & Calendar', description: 'Automates your scheduling: coordinates availability, sends reminders, and manages cancellations or rescheduling independently.', features: ['Calendar Sync', 'Automatic Reminders', 'Timezone Management', 'Conflict Resolution'], useCases: ['Client Meetings', 'Team Meetings', 'Webinar Bookings', 'Service Hours'] },
+        { title: 'AI for E-Commerce & Online Shops', description: 'Supports customers with shopping, answers product questions, tracks orders, and handles return requests automatically.', features: ['Product Advice', 'Order Status', 'Return Handling', 'Upselling'], useCases: ['Shop Assistance', 'Cart Abandonment', 'Size Advice', 'Delivery Tracking'] },
+        { title: 'Document Processing & OCR', description: 'Processes documents automatically: extracts data from PDFs, categorizes files, and creates structured summaries.', features: ['PDF Extraction', 'OCR Recognition', 'Auto-Categorization', 'Data Export'], useCases: ['Invoice Processing', 'Contract Analysis', 'Application Management', 'Archiving'] }
       ],
       benefits: [
-        { title: 'Save Time', description: 'Up to 80% less manual work through intelligent automation.' },
-        { title: 'Respond Faster', description: 'Instant responses and actions – 24 hours a day, 7 days a week.' },
-        { title: 'Reduce Errors', description: 'Consistent quality without human careless mistakes.' },
-        { title: 'Relieve Your Team', description: 'Employees can focus on value-adding tasks.' },
-        { title: 'Scale Growth', description: 'Agents grow with your company – without additional staff.' },
-        { title: 'Leverage Data', description: 'Transform data into actionable insights and better decisions.' }
+        { title: 'Up to 80% Time Savings', description: 'Up to 80% less manual work through intelligent automation.' },
+        { title: '24/7 Availability Guaranteed', description: 'Instant responses and actions – 24 hours a day, 7 days a week.' },
+        { title: 'Fewer Errors & Higher Quality', description: 'Consistent quality without human careless mistakes.' },
+        { title: 'Relieve Your Employees', description: 'Employees can focus on value-adding tasks.' },
+        { title: 'Scalable Without Extra Costs', description: 'Agents grow with your company – without additional staff.' },
+        { title: 'Data-Driven Decisions', description: 'Transform data into actionable insights and better decisions.' }
       ],
       useCaseCategories: [
-        { title: 'Customer Service', examples: ['Automatic answering of FAQ inquiries', '24/7 chat support on your website', 'Ticket categorization and prioritization', 'Multilingual support at no extra cost'] },
-        { title: 'Marketing & Sales', examples: ['Lead qualification and scoring', 'Personalized email campaigns', 'Social media content creation', 'Automatic quote generation'] },
-        { title: 'Operations', examples: ['Automatic invoice processing', 'Scheduling and resource management', 'Document analysis and extraction', 'Workflow automation between tools'] }
+        { title: 'AI in Customer Service & Support', examples: ['Automatic answering of FAQ inquiries', '24/7 chat support on your website', 'Ticket categorization and prioritization', 'Multilingual support at no extra cost'] },
+        { title: 'AI for Marketing & Sales', examples: ['Lead qualification and scoring', 'Personalized email campaigns', 'Social media content creation', 'Automatic quote generation'] },
+        { title: 'AI for Business Processes', examples: ['Automatic invoice processing', 'Scheduling and resource management', 'Document analysis and extraction', 'Workflow automation between tools'] }
       ],
       processSteps: [
-        { title: 'Conversation', description: 'We understand your requirements and processes.' },
-        { title: 'Analysis', description: 'Identification of automation potential.' },
-        { title: 'Concept', description: 'Development of a customized solution.' },
-        { title: 'Implementation', description: 'Configuration and training of the agent.' },
-        { title: 'Go-Live', description: 'Integration and continuous optimization.' }
+        { title: '1. Needs Analysis', description: 'We understand your requirements and processes.' },
+        { title: '2. Potential Analysis', description: 'Identification of automation potential.' },
+        { title: '3. Concept Development', description: 'Development of a customized solution.' },
+        { title: '4. Implementation', description: 'Configuration and training of the agent.' },
+        { title: '5. Launch & Optimization', description: 'Integration and continuous optimization.' }
       ],
       technologies: [
         { name: 'OpenAI GPT-4', description: 'State-of-the-art language processing for natural conversations' },
@@ -1535,20 +1535,20 @@ export const translations = {
       workflowSteps: ['Trigger', 'Condition', 'Action 1', 'Action 2'],
       ctaSubtitle: 'Let us analyze which processes we can automate for you. Free initial consultation.',
       automations: [
-        { title: 'Email Automation', description: 'Automatic sending, sorting, and answering of emails. Welcome sequences, follow-ups, and personalized campaigns on autopilot.', examples: ['Welcome Emails', 'Lead Nurturing', 'Cart Abandonment', 'Newsletter Segmentation'] },
-        { title: 'Lead Management', description: 'Automatically capture, qualify, and hand over leads to sales. Integration with your CRM and automatic scoring.', examples: ['Forms → CRM', 'Lead Scoring', 'Automatic Assignment', 'Follow-up Reminders'] },
-        { title: 'Document Workflows', description: 'Automatically process, archive, and forward invoices, contracts, and documents. OCR recognition included.', examples: ['Invoice Processing', 'Contract Management', 'Digital Signatures', 'Archiving'] },
-        { title: 'E-Commerce Automation', description: 'Automatically manage orders, inventory, and shipping. Synchronization between shop, accounting, and shipping.', examples: ['Order Confirmations', 'Inventory Sync', 'Return Workflow', 'Review Requests'] },
-        { title: 'Appointment Automation', description: 'Bookings, reminders, and calendar sync fully automatic. No double bookings, no forgotten meetings.', examples: ['Online Booking', 'Reminders', 'Calendar Sync', 'No-Show Management'] },
-        { title: 'Data Synchronization', description: 'Keep all your systems in sync. Changes in one tool are automatically applied to all others.', examples: ['CRM ↔ Accounting', 'Shop ↔ Inventory', 'Contacts Sync', 'Stock Matching'] },
-        { title: 'Reporting Automation', description: 'Automatic creation and sending of reports. Daily, weekly, or monthly evaluations without manual effort.', examples: ['Revenue Reports', 'Marketing KPIs', 'Employee Dashboards', 'Customer Analytics'] },
-        { title: 'Process Workflows', description: 'Automate complex business processes: approvals, escalations, and multi-step procedures with intelligent rules.', examples: ['Approval Workflows', 'Escalation Chains', 'Onboarding', 'Checklists'] }
+        { title: 'Automate Email Marketing', description: 'Automatic sending, sorting, and answering of emails. Welcome sequences, follow-ups, and personalized campaigns on autopilot.', examples: ['Welcome Emails', 'Lead Nurturing', 'Cart Abandonment', 'Newsletter Segmentation'] },
+        { title: 'Lead Management & CRM Integration', description: 'Automatically capture, qualify, and hand over leads to sales. Integration with your CRM and automatic scoring.', examples: ['Forms → CRM', 'Lead Scoring', 'Automatic Assignment', 'Follow-up Reminders'] },
+        { title: 'Document Automation & OCR', description: 'Automatically process, archive, and forward invoices, contracts, and documents. OCR recognition included.', examples: ['Invoice Processing', 'Contract Management', 'Digital Signatures', 'Archiving'] },
+        { title: 'E-Commerce & Shop Automation', description: 'Automatically manage orders, inventory, and shipping. Synchronization between shop, accounting, and shipping.', examples: ['Order Confirmations', 'Inventory Sync', 'Return Workflow', 'Review Requests'] },
+        { title: 'Automate Online Booking', description: 'Bookings, reminders, and calendar sync fully automatic. No double bookings, no forgotten meetings.', examples: ['Online Booking', 'Reminders', 'Calendar Sync', 'No-Show Management'] },
+        { title: 'Sync Data & Systems', description: 'Keep all your systems in sync. Changes in one tool are automatically applied to all others.', examples: ['CRM ↔ Accounting', 'Shop ↔ Inventory', 'Contacts Sync', 'Stock Matching'] },
+        { title: 'Automatic Reports & Dashboards', description: 'Automatic creation and sending of reports. Daily, weekly, or monthly evaluations without manual effort.', examples: ['Revenue Reports', 'Marketing KPIs', 'Employee Dashboards', 'Customer Analytics'] },
+        { title: 'Digitize Business Processes', description: 'Automate complex business processes: approvals, escalations, and multi-step procedures with intelligent rules.', examples: ['Approval Workflows', 'Escalation Chains', 'Onboarding', 'Checklists'] }
       ],
       benefits: [
-        { title: '80% Time Savings', description: 'Manual tasks are completed automatically' },
-        { title: 'Fewer Errors', description: 'Consistent processes without careless mistakes' },
-        { title: 'Scalable', description: 'More volume without more staff' },
-        { title: 'Faster', description: 'Processes run 24/7 in seconds' }
+        { title: 'Up to 80% Time Savings', description: 'Manual tasks are completed automatically' },
+        { title: 'Fewer Errors, More Quality', description: 'Consistent processes without careless mistakes' },
+        { title: 'Scalable Without Extra Costs', description: 'More volume without more staff' },
+        { title: '24/7 Real-Time Processes', description: 'Processes run 24/7 in seconds' }
       ],
       tools: [
         { name: 'n8n', description: 'Our main tool for complex automations' },
@@ -1559,11 +1559,11 @@ export const translations = {
         { name: 'Google Workspace', description: 'Sheets, Docs, Gmail integration' }
       ],
       processSteps: [
-        { title: 'Analysis', description: 'We understand your current processes and identify automation potential.' },
-        { title: 'Concept', description: 'Together we define the optimal workflow and select the right tools.' },
-        { title: 'Implementation', description: 'We build your automation with n8n or the appropriate tool.' },
-        { title: 'Testing', description: 'Extensive testing ensures everything works smoothly.' },
-        { title: 'Go-Live', description: 'Your workflow goes live – with monitoring and continuous optimization.' }
+        { title: '1. Process Analysis', description: 'We understand your current processes and identify automation potential.' },
+        { title: '2. Workflow Concept', description: 'Together we define the optimal workflow and select the right tools.' },
+        { title: '3. Technical Implementation', description: 'We build your automation with n8n or the appropriate tool.' },
+        { title: '4. Quality Assurance', description: 'Extensive testing ensures everything works smoothly.' },
+        { title: '5. Launch & Monitoring', description: 'Your workflow goes live – with monitoring and continuous optimization.' }
       ],
       faqs: [
         { q: 'What does automation cost?', a: 'Simple automations start at €500. More complex workflows with multiple systems begin at €1,500. In the free initial consultation, we create a concrete cost estimate.' },
@@ -1594,27 +1594,27 @@ export const translations = {
       ctaTitle: 'Request Website – Free Consultation',
       ctaSubtitle: 'Let\'s discuss how we can take your online presence to the next level with AI. Free initial consultation.',
       features: [
-        { title: 'AI Chatbot Integration', description: 'Intelligent chatbots that answer customer inquiries 24/7, qualify leads, and book appointments – directly on your website.', benefits: ['Instant Responses', 'Lead Generation', 'Appointment Booking', 'FAQ Automation'] },
-        { title: 'AI Content Creation', description: 'SEO-optimized texts, product descriptions, and blog articles created with AI and reviewed by experts.', benefits: ['SEO-Optimized', 'Brand-Compliant', 'Fast Creation', 'Regular Updates'] },
-        { title: 'AI Image Optimization', description: 'Automatic image optimization, alt-text generation, and intelligent image selection for maximum performance.', benefits: ['Fast Load Times', 'Auto Alt-Texts', 'Responsive Images', 'WebP Conversion'] },
-        { title: 'AI SEO Analysis', description: 'Continuous SEO monitoring with AI-powered recommendations for better rankings on Google.', benefits: ['Keyword Tracking', 'Competitor Analysis', 'Auto-Optimization', 'Ranking Reports'] },
-        { title: 'Personalization', description: 'AI analyzes visitor behavior and shows personalized content, products, and offers.', benefits: ['Higher Conversion', 'Relevant Content', 'A/B Testing', 'User Profiles'] },
-        { title: 'Intelligent Analytics', description: 'AI-powered evaluation of your website data with automatic action recommendations.', benefits: ['Automatic Insights', 'Conversion Tracking', 'User Behavior', 'Optimization Suggestions'] }
+        { title: 'AI Chatbot for Websites', description: 'Intelligent chatbots that answer customer inquiries 24/7, qualify leads, and book appointments – directly on your website.', benefits: ['Instant Responses', 'Lead Generation', 'Appointment Booking', 'FAQ Automation'] },
+        { title: 'Create SEO Content with AI', description: 'SEO-optimized texts, product descriptions, and blog articles created with AI and reviewed by experts.', benefits: ['SEO-Optimized', 'Brand-Compliant', 'Fast Creation', 'Regular Updates'] },
+        { title: 'Automatic Image Optimization', description: 'Automatic image optimization, alt-text generation, and intelligent image selection for maximum performance.', benefits: ['Fast Load Times', 'Auto Alt-Texts', 'Responsive Images', 'WebP Conversion'] },
+        { title: 'AI SEO Analysis & Optimization', description: 'Continuous SEO monitoring with AI-powered recommendations for better rankings on Google.', benefits: ['Keyword Tracking', 'Competitor Analysis', 'Auto-Optimization', 'Ranking Reports'] },
+        { title: 'Website Personalization with AI', description: 'AI analyzes visitor behavior and shows personalized content, products, and offers.', benefits: ['Higher Conversion', 'Relevant Content', 'A/B Testing', 'User Profiles'] },
+        { title: 'AI Analytics & Insights', description: 'AI-powered evaluation of your website data with automatic action recommendations.', benefits: ['Automatic Insights', 'Conversion Tracking', 'User Behavior', 'Optimization Suggestions'] }
       ],
       websiteTypes: [
-        { title: 'Business Website', description: 'Professional presence with AI chatbot, SEO optimization, and content management.', price: 'from €3,500', features: ['Responsive Design', 'AI Chatbot', 'SEO Optimization', 'CMS', 'Contact Form', 'Analytics'] },
-        { title: 'Landing Page', description: 'Conversion-optimized page for campaigns, products, or services.', price: 'from €1,500', features: ['Conversion Design', 'A/B Testing', 'Lead Forms', 'Tracking', 'Mobile-First', 'Fast Load Time'] },
-        { title: 'E-Commerce Shop', description: 'Online shop with AI product recommendations and automated marketing.', price: 'from €5,000', features: ['Product Catalog', 'AI Recommendations', 'Payment Integration', 'Cart Abandonment Email', 'SEO', 'Analytics'] },
-        { title: 'Blog / Content Platform', description: 'Content hub with AI-powered text creation and SEO automation.', price: 'from €2,500', features: ['AI Content', 'SEO Tools', 'Categories', 'Newsletter', 'Social Sharing', 'Author Profiles'] },
+        { title: 'Professional Business Website', description: 'Professional presence with AI chatbot, SEO optimization, and content management.', price: 'from €3,500', features: ['Responsive Design', 'AI Chatbot', 'SEO Optimization', 'CMS', 'Contact Form', 'Analytics'] },
+        { title: 'Conversion-Optimized Landing Page', description: 'Conversion-optimized page for campaigns, products, or services.', price: 'from €1,500', features: ['Conversion Design', 'A/B Testing', 'Lead Forms', 'Tracking', 'Mobile-First', 'Fast Load Time'] },
+        { title: 'E-Commerce Shop with AI', description: 'Online shop with AI product recommendations and automated marketing.', price: 'from €5,000', features: ['Product Catalog', 'AI Recommendations', 'Payment Integration', 'Cart Abandonment Email', 'SEO', 'Analytics'] },
+        { title: 'Blog & Content Platform', description: 'Content hub with AI-powered text creation and SEO automation.', price: 'from €2,500', features: ['AI Content', 'SEO Tools', 'Categories', 'Newsletter', 'Social Sharing', 'Author Profiles'] },
         { title: 'Complex E-Commerce Solutions', description: 'Large-scale projects with custom integrations and advanced features.', price: 'from €7,000', features: ['Custom Integrations', 'ERP Connection', 'Multi-Language', 'Advanced Reporting', 'API Integrations', 'Custom Workflows'] },
         { title: 'Hosting & Maintenance', description: 'Secure, fast hosting and regular maintenance services.', price: 'from €49/month', features: ['SSL Certificate', 'Daily Backups', 'Security Updates', 'Performance Optimization', 'Email Support', '99.9% Uptime'] }
       ],
       processSteps: [
-        { title: 'Briefing', description: 'We understand your goals, target audience, and requirements.' },
-        { title: 'Concept', description: 'Structure, design direction, and AI features are defined.' },
-        { title: 'Design', description: 'Modern UI/UX design with focus on conversion.' },
-        { title: 'Development', description: 'Technical implementation with AI integrations.' },
-        { title: 'Launch', description: 'Go-live with SEO setup and monitoring.' }
+        { title: '1. Briefing & Needs Analysis', description: 'We understand your goals, target audience, and requirements.' },
+        { title: '2. Concept & Planning', description: 'Structure, design direction, and AI features are defined.' },
+        { title: '3. UI/UX Design', description: 'Modern UI/UX design with focus on conversion.' },
+        { title: '4. Development & Integration', description: 'Technical implementation with AI integrations.' },
+        { title: '5. Launch & SEO Setup', description: 'Go-live with SEO setup and monitoring.' }
       ],
       technologies: [
         { name: 'React / Next.js', category: 'Frontend' },
@@ -2610,34 +2610,34 @@ export const translations = {
       ctaTitle: 'Zatražite AI Agenta – Besplatna Konzultacija',
       ctaSubtitle: 'Razgovarajmo o tome kako AI agenti mogu transformirati vaše poslovanje. Besplatna početna konzultacija bez rizika.',
       agents: [
-        { title: 'Agent za Korisničku Službu', description: 'Automatizirano odgovaranje na upite klijenata non-stop. Agent razumije kontekst, odgovara na FAQ i inteligentno preusmjerava složene slučajeve osoblju.', features: ['24/7 Dostupan', 'Višejezičan', 'Uči', 'CRM Integracija'], useCases: ['Live Chat na Web Stranici', 'Email Podrška', 'WhatsApp Business', 'Facebook Messenger'] },
-        { title: 'Agent za Analitiku', description: 'Automatska procjena marketinških podataka, izrada izvještaja i preporuke temeljene na AI analizi vaših poslovnih pokazatelja.', features: ['Podaci u Realnom Vremenu', 'Automatski Izvještaji', 'Prepoznavanje Trendova', 'ROI Praćenje'], useCases: ['Google Analytics Procjena', 'Social Media Uvidi', 'Performanse Kampanja', 'Prognoze Prihoda'] },
-        { title: 'Agent za Automatizaciju', description: 'Povezuje vaše alate i automatizira tijekove rada – od hvatanja leadova do slanja e-pošte do fakturiranja. Temeljen na n8n za maksimalnu fleksibilnost.', features: ['Temeljen na n8n', '500+ Integracija', 'Bez Potrebe za Kodiranjem', 'Skalabilan'], useCases: ['Njegovanje Leadova', 'Automatizacija Faktura', 'Sinkronizacija Podataka', 'Obavijesti'] },
-        { title: 'Agent za Sadržaj', description: 'Generira objave na društvenim mrežama, blog članke i marketinške tekstove u vašem stilu brenda – uz ljudsku kontrolu kvalitete za savršene rezultate.', features: ['Usklađen s Brendom', 'SEO Optimiziran', 'Više Platformi', 'Brza Izrada'], useCases: ['Objave na Društvenim Mrežama', 'Blog Članci', 'Newsletter Tekstovi', 'Opisi Proizvoda'] },
-        { title: 'Email Agent', description: 'Inteligentna email automatizacija s personaliziranim odgovorima, automatskom kategorizacijom i prioritizacijom dolaznih poruka.', features: ['Auto-Kategorizacija', 'Personalizirani Odgovori', 'Spam Filter', 'Podsjetnici za Praćenje'], useCases: ['Upravljanje Inboxom', 'Slanje Newslettera', 'Zahtjevi za Termine', 'Slanje Ponuda'] },
-        { title: 'Agent za Termine', description: 'Automatizira vaše zakazivanje: koordinira dostupnost, šalje podsjetnike i samostalno upravlja otkazivanjima ili preraspoređivanjima.', features: ['Sinkronizacija Kalendara', 'Automatski Podsjetnici', 'Upravljanje Vremenskim Zonama', 'Rješavanje Konflikata'], useCases: ['Sastanci s Klijentima', 'Timski Sastanci', 'Rezervacije Webinara', 'Radno Vrijeme'] },
-        { title: 'E-Commerce Agent', description: 'Podržava kupce pri kupnji, odgovara na pitanja o proizvodima, prati narudžbe i automatski obrađuje zahtjeve za povrat.', features: ['Savjeti o Proizvodima', 'Status Narudžbe', 'Obrada Povrata', 'Upselling'], useCases: ['Pomoć u Kupnji', 'Napuštena Košarica', 'Savjeti o Veličini', 'Praćenje Dostave'] },
-        { title: 'Agent za Dokumente', description: 'Automatski obrađuje dokumente: izdvaja podatke iz PDF-ova, kategorizira datoteke i stvara strukturirane sažetke.', features: ['PDF Ekstrakcija', 'OCR Prepoznavanje', 'Auto-Kategorizacija', 'Izvoz Podataka'], useCases: ['Obrada Faktura', 'Analiza Ugovora', 'Upravljanje Prijavama', 'Arhiviranje'] }
+        { title: 'AI Chatbot za Korisničku Službu', description: 'Automatizirano odgovaranje na upite klijenata non-stop. Agent razumije kontekst, odgovara na FAQ i inteligentno preusmjerava složene slučajeve osoblju.', features: ['24/7 Dostupan', 'Višejezičan', 'Uči', 'CRM Integracija'], useCases: ['Live Chat na Web Stranici', 'Email Podrška', 'WhatsApp Business', 'Facebook Messenger'] },
+        { title: 'AI Agent za Analizu Podataka', description: 'Automatska procjena marketinških podataka, izrada izvještaja i preporuke temeljene na AI analizi vaših poslovnih pokazatelja.', features: ['Podaci u Realnom Vremenu', 'Automatski Izvještaji', 'Prepoznavanje Trendova', 'ROI Praćenje'], useCases: ['Google Analytics Procjena', 'Social Media Uvidi', 'Performanse Kampanja', 'Prognoze Prihoda'] },
+        { title: 'Automatizacija Tijeka Rada s AI', description: 'Povezuje vaše alate i automatizira tijekove rada – od hvatanja leadova do slanja e-pošte do fakturiranja. Temeljen na n8n za maksimalnu fleksibilnost.', features: ['Temeljen na n8n', '500+ Integracija', 'Bez Potrebe za Kodiranjem', 'Skalabilan'], useCases: ['Njegovanje Leadova', 'Automatizacija Faktura', 'Sinkronizacija Podataka', 'Obavijesti'] },
+        { title: 'AI Kreiranje Sadržaja i Tekstova', description: 'Generira objave na društvenim mrežama, blog članke i marketinške tekstove u vašem stilu brenda – uz ljudsku kontrolu kvalitete za savršene rezultate.', features: ['Usklađen s Brendom', 'SEO Optimiziran', 'Više Platformi', 'Brza Izrada'], useCases: ['Objave na Društvenim Mrežama', 'Blog Članci', 'Newsletter Tekstovi', 'Opisi Proizvoda'] },
+        { title: 'Email Automatizacija s AI', description: 'Inteligentna email automatizacija s personaliziranim odgovorima, automatskom kategorizacijom i prioritizacijom dolaznih poruka.', features: ['Auto-Kategorizacija', 'Personalizirani Odgovori', 'Spam Filter', 'Podsjetnici za Praćenje'], useCases: ['Upravljanje Inboxom', 'Slanje Newslettera', 'Zahtjevi za Termine', 'Slanje Ponuda'] },
+        { title: 'Rezervacija Termina i Kalendar', description: 'Automatizira vaše zakazivanje: koordinira dostupnost, šalje podsjetnike i samostalno upravlja otkazivanjima ili preraspoređivanjima.', features: ['Sinkronizacija Kalendara', 'Automatski Podsjetnici', 'Upravljanje Vremenskim Zonama', 'Rješavanje Konflikata'], useCases: ['Sastanci s Klijentima', 'Timski Sastanci', 'Rezervacije Webinara', 'Radno Vrijeme'] },
+        { title: 'AI za E-Commerce i Online Shopove', description: 'Podržava kupce pri kupnji, odgovara na pitanja o proizvodima, prati narudžbe i automatski obrađuje zahtjeve za povrat.', features: ['Savjeti o Proizvodima', 'Status Narudžbe', 'Obrada Povrata', 'Upselling'], useCases: ['Pomoć u Kupnji', 'Napuštena Košarica', 'Savjeti o Veličini', 'Praćenje Dostave'] },
+        { title: 'Obrada Dokumenata i OCR', description: 'Automatski obrađuje dokumente: izdvaja podatke iz PDF-ova, kategorizira datoteke i stvara strukturirane sažetke.', features: ['PDF Ekstrakcija', 'OCR Prepoznavanje', 'Auto-Kategorizacija', 'Izvoz Podataka'], useCases: ['Obrada Faktura', 'Analiza Ugovora', 'Upravljanje Prijavama', 'Arhiviranje'] }
       ],
       benefits: [
-        { title: 'Uštedite Vrijeme', description: 'Do 80% manje ručnog rada kroz inteligentnu automatizaciju.' },
-        { title: 'Brže Reagirajte', description: 'Trenutni odgovori i akcije – 24 sata dnevno, 7 dana u tjednu.' },
-        { title: 'Smanjite Pogreške', description: 'Dosljedna kvaliteta bez ljudskih grešaka.' },
-        { title: 'Rasteretite Tim', description: 'Zaposlenici se mogu fokusirati na zadatke koji dodaju vrijednost.' },
-        { title: 'Skalirajte Rast', description: 'Agenti rastu s vašom tvrtkom – bez dodatnog osoblja.' },
-        { title: 'Iskoristite Podatke', description: 'Transformirajte podatke u djelotvorne uvide i bolje odluke.' }
+        { title: 'Do 80% Uštede Vremena', description: 'Do 80% manje ručnog rada kroz inteligentnu automatizaciju.' },
+        { title: '24/7 Dostupnost Garantirana', description: 'Trenutni odgovori i akcije – 24 sata dnevno, 7 dana u tjednu.' },
+        { title: 'Manje Grešaka, Veća Kvaliteta', description: 'Dosljedna kvaliteta bez ljudskih grešaka.' },
+        { title: 'Rasteretite Zaposlenike', description: 'Zaposlenici se mogu fokusirati na zadatke koji dodaju vrijednost.' },
+        { title: 'Skalabilno Bez Dodatnih Troškova', description: 'Agenti rastu s vašom tvrtkom – bez dodatnog osoblja.' },
+        { title: 'Odluke Temeljene na Podacima', description: 'Transformirajte podatke u djelotvorne uvide i bolje odluke.' }
       ],
       useCaseCategories: [
-        { title: 'Korisnička Služba', examples: ['Automatsko odgovaranje na FAQ upite', '24/7 chat podrška na vašoj web stranici', 'Kategorizacija i prioritizacija tiketa', 'Višejezična podrška bez dodatnih troškova'] },
-        { title: 'Marketing i Prodaja', examples: ['Kvalifikacija i scoring leadova', 'Personalizirane email kampanje', 'Kreiranje sadržaja za društvene mreže', 'Automatsko generiranje ponuda'] },
-        { title: 'Operacije', examples: ['Automatska obrada faktura', 'Planiranje i upravljanje resursima', 'Analiza i ekstrakcija dokumenata', 'Automatizacija tijekova rada između alata'] }
+        { title: 'AI u Korisničkoj Službi i Podršci', examples: ['Automatsko odgovaranje na FAQ upite', '24/7 chat podrška na vašoj web stranici', 'Kategorizacija i prioritizacija tiketa', 'Višejezična podrška bez dodatnih troškova'] },
+        { title: 'AI za Marketing i Prodaju', examples: ['Kvalifikacija i scoring leadova', 'Personalizirane email kampanje', 'Kreiranje sadržaja za društvene mreže', 'Automatsko generiranje ponuda'] },
+        { title: 'AI za Poslovne Procese', examples: ['Automatska obrada faktura', 'Planiranje i upravljanje resursima', 'Analiza i ekstrakcija dokumenata', 'Automatizacija tijekova rada između alata'] }
       ],
       processSteps: [
-        { title: 'Razgovor', description: 'Razumijemo vaše zahtjeve i procese.' },
-        { title: 'Analiza', description: 'Identifikacija potencijala za automatizaciju.' },
-        { title: 'Koncept', description: 'Razvoj prilagođenog rješenja.' },
-        { title: 'Implementacija', description: 'Konfiguracija i obuka agenta.' },
-        { title: 'Go-Live', description: 'Integracija i kontinuirana optimizacija.' }
+        { title: '1. Analiza Potreba', description: 'Razumijemo vaše zahtjeve i procese.' },
+        { title: '2. Analiza Potencijala', description: 'Identifikacija potencijala za automatizaciju.' },
+        { title: '3. Razvoj Koncepta', description: 'Razvoj prilagođenog rješenja.' },
+        { title: '4. Implementacija', description: 'Konfiguracija i obuka agenta.' },
+        { title: '5. Lansiranje i Optimizacija', description: 'Integracija i kontinuirana optimizacija.' }
       ],
       technologies: [
         { name: 'OpenAI GPT-4', description: 'Najsuvremenija obrada jezika za prirodne razgovore' },
@@ -2699,20 +2699,20 @@ export const translations = {
       ctaTitle: 'Zatražite Automatizaciju – Besplatna Konzultacija',
       ctaSubtitle: 'Dopustite nam analizirati koje procese možemo automatizirati za vas. Besplatna početna konzultacija.',
       automations: [
-        { title: 'Email Automatizacija', description: 'Automatsko slanje, sortiranje i odgovaranje na e-mailove. Sekvence dobrodošlice, praćenja i personalizirane kampanje na autopilotu.', examples: ['E-mailovi Dobrodošlice', 'Njegovanje Leadova', 'Napuštena Košarica', 'Segmentacija Newslettera'] },
-        { title: 'Upravljanje Leadovima', description: 'Automatski hvatajte, kvalificirajte i predajte leadove prodaji. Integracija s vašim CRM-om i automatsko ocjenjivanje.', examples: ['Forme → CRM', 'Ocjenjivanje Leadova', 'Automatska Dodjela', 'Podsjetnici za Praćenje'] },
-        { title: 'Tijekovi Rada s Dokumentima', description: 'Automatski obrađujte, arhivirajte i prosljeđujte fakture, ugovore i dokumente. OCR prepoznavanje uključeno.', examples: ['Obrada Faktura', 'Upravljanje Ugovorima', 'Digitalni Potpisi', 'Arhiviranje'] },
-        { title: 'E-Commerce Automatizacija', description: 'Automatski upravljajte narudžbama, zalihama i dostavom. Sinkronizacija između trgovine, računovodstva i dostave.', examples: ['Potvrde Narudžbi', 'Sinkronizacija Zaliha', 'Tijek Rada za Povrate', 'Zahtjevi za Recenzije'] },
-        { title: 'Automatizacija Termina', description: 'Rezervacije, podsjetnici i sinkronizacija kalendara potpuno automatski. Bez dvostrukih rezervacija, bez zaboravljenih sastanaka.', examples: ['Online Rezervacija', 'Podsjetnici', 'Sinkronizacija Kalendara', 'Upravljanje Nedolascima'] },
-        { title: 'Sinkronizacija Podataka', description: 'Održavajte sve svoje sustave sinkroniziranima. Promjene u jednom alatu automatski se primjenjuju na sve ostale.', examples: ['CRM ↔ Računovodstvo', 'Trgovina ↔ Zalihe', 'Sinkronizacija Kontakata', 'Usklađivanje Stanja'] },
-        { title: 'Automatizacija Izvještavanja', description: 'Automatska izrada i slanje izvještaja. Dnevne, tjedne ili mjesečne procjene bez ručnog truda.', examples: ['Izvještaji o Prihodima', 'Marketing KPI-jevi', 'Nadzorne Ploče Zaposlenika', 'Analize Klijenata'] },
-        { title: 'Procesni Tijekovi Rada', description: 'Automatizirajte složene poslovne procese: odobrenja, eskalacije i višestupanjske postupke s inteligentnim pravilima.', examples: ['Tijekovi Rada za Odobrenja', 'Lanci Eskalacija', 'Onboarding', 'Kontrolne Liste'] }
+        { title: 'Automatizacija Email Marketinga', description: 'Automatsko slanje, sortiranje i odgovaranje na e-mailove. Sekvence dobrodošlice, praćenja i personalizirane kampanje na autopilotu.', examples: ['E-mailovi Dobrodošlice', 'Njegovanje Leadova', 'Napuštena Košarica', 'Segmentacija Newslettera'] },
+        { title: 'Upravljanje Leadovima i CRM Integracija', description: 'Automatski hvatajte, kvalificirajte i predajte leadove prodaji. Integracija s vašim CRM-om i automatsko ocjenjivanje.', examples: ['Forme → CRM', 'Ocjenjivanje Leadova', 'Automatska Dodjela', 'Podsjetnici za Praćenje'] },
+        { title: 'Automatizacija Dokumenata i OCR', description: 'Automatski obrađujte, arhivirajte i prosljeđujte fakture, ugovore i dokumente. OCR prepoznavanje uključeno.', examples: ['Obrada Faktura', 'Upravljanje Ugovorima', 'Digitalni Potpisi', 'Arhiviranje'] },
+        { title: 'Automatizacija E-Commerce i Trgovine', description: 'Automatski upravljajte narudžbama, zalihama i dostavom. Sinkronizacija između trgovine, računovodstva i dostave.', examples: ['Potvrde Narudžbi', 'Sinkronizacija Zaliha', 'Tijek Rada za Povrate', 'Zahtjevi za Recenzije'] },
+        { title: 'Automatizacija Online Rezervacija', description: 'Rezervacije, podsjetnici i sinkronizacija kalendara potpuno automatski. Bez dvostrukih rezervacija, bez zaboravljenih sastanaka.', examples: ['Online Rezervacija', 'Podsjetnici', 'Sinkronizacija Kalendara', 'Upravljanje Nedolascima'] },
+        { title: 'Sinkronizacija Podataka i Sustava', description: 'Održavajte sve svoje sustave sinkroniziranima. Promjene u jednom alatu automatski se primjenjuju na sve ostale.', examples: ['CRM ↔ Računovodstvo', 'Trgovina ↔ Zalihe', 'Sinkronizacija Kontakata', 'Usklađivanje Stanja'] },
+        { title: 'Automatski Izvještaji i Dashboardi', description: 'Automatska izrada i slanje izvještaja. Dnevne, tjedne ili mjesečne procjene bez ručnog truda.', examples: ['Izvještaji o Prihodima', 'Marketing KPI-jevi', 'Nadzorne Ploče Zaposlenika', 'Analize Klijenata'] },
+        { title: 'Digitalizacija Poslovnih Procesa', description: 'Automatizirajte složene poslovne procese: odobrenja, eskalacije i višestupanjske postupke s inteligentnim pravilima.', examples: ['Tijekovi Rada za Odobrenja', 'Lanci Eskalacija', 'Onboarding', 'Kontrolne Liste'] }
       ],
       benefits: [
-        { title: '80% Uštede Vremena', description: 'Ručni zadaci se automatski završavaju' },
-        { title: 'Manje Pogrešaka', description: 'Dosljedni procesi bez grešaka' },
-        { title: 'Skalabilno', description: 'Više volumena bez više osoblja' },
-        { title: 'Brže', description: 'Procesi se odvijaju 24/7 u sekundama' }
+        { title: 'Do 80% Uštede Vremena', description: 'Ručni zadaci se automatski završavaju' },
+        { title: 'Manje Pogrešaka, Više Kvalitete', description: 'Dosljedni procesi bez grešaka' },
+        { title: 'Skalabilno Bez Dodatnih Troškova', description: 'Više volumena bez više osoblja' },
+        { title: '24/7 Procesi u Realnom Vremenu', description: 'Procesi se odvijaju 24/7 u sekundama' }
       ],
       tools: [
         { name: 'n8n', description: 'Naš glavni alat za složene automatizacije' },
@@ -2723,11 +2723,11 @@ export const translations = {
         { name: 'Google Workspace', description: 'Sheets, Docs, Gmail integracija' }
       ],
       processSteps: [
-        { title: 'Analiza', description: 'Razumijemo vaše trenutne procese i identificiramo potencijal za automatizaciju.' },
-        { title: 'Koncept', description: 'Zajedno definiramo optimalni tijek rada i odabiremo prave alate.' },
-        { title: 'Implementacija', description: 'Gradimo vašu automatizaciju s n8n ili odgovarajućim alatom.' },
-        { title: 'Testiranje', description: 'Opsežno testiranje osigurava da sve funkcionira glatko.' },
-        { title: 'Go-Live', description: 'Vaš tijek rada kreće uživo – s nadzorom i kontinuiranom optimizacijom.' }
+        { title: '1. Analiza Procesa', description: 'Razumijemo vaše trenutne procese i identificiramo potencijal za automatizaciju.' },
+        { title: '2. Koncept Tijeka Rada', description: 'Zajedno definiramo optimalni tijek rada i odabiremo prave alate.' },
+        { title: '3. Tehnička Implementacija', description: 'Gradimo vašu automatizaciju s n8n ili odgovarajućim alatom.' },
+        { title: '4. Osiguranje Kvalitete', description: 'Opsežno testiranje osigurava da sve funkcionira glatko.' },
+        { title: '5. Lansiranje i Monitoring', description: 'Vaš tijek rada kreće uživo – s nadzorom i kontinuiranom optimizacijom.' }
       ],
       faqs: [
         { q: 'Koliko košta automatizacija?', a: 'Jednostavne automatizacije počinju od 500€. Složeniji tijekovi rada s više sustava počinju od 1.500€. Na besplatnoj početnoj konzultaciji izrađujemo konkretnu procjenu troškova.' },
@@ -2758,27 +2758,27 @@ export const translations = {
       ctaTitle: 'Zatražite Web Stranicu – Besplatna Konzultacija',
       ctaSubtitle: 'Razgovarajmo o tome kako možemo podići vašu online prisutnost na sljedeću razinu s AI. Besplatna početna konzultacija.',
       features: [
-        { title: 'AI Chatbot Integracija', description: 'Inteligentni chatbotovi koji odgovaraju na upite klijenata 24/7, kvalificiraju leadove i rezerviraju termine – direktno na vašoj web stranici.', benefits: ['Trenutni Odgovori', 'Generiranje Leadova', 'Rezervacija Termina', 'FAQ Automatizacija'] },
-        { title: 'AI Izrada Sadržaja', description: 'SEO-optimizirani tekstovi, opisi proizvoda i blog članci kreirani s AI i pregledani od stručnjaka.', benefits: ['SEO-Optimizirano', 'Usklađeno s Brendom', 'Brza Izrada', 'Redovita Ažuriranja'] },
-        { title: 'AI Optimizacija Slika', description: 'Automatska optimizacija slika, generiranje alt-teksta i inteligentni odabir slika za maksimalnu performansu.', benefits: ['Brzo Učitavanje', 'Auto Alt-Tekstovi', 'Responzivne Slike', 'WebP Konverzija'] },
-        { title: 'AI SEO Analiza', description: 'Kontinuirani SEO nadzor s AI preporukama za bolje rangiranje na Googleu.', benefits: ['Praćenje Ključnih Riječi', 'Analiza Konkurencije', 'Auto-Optimizacija', 'Izvještaji o Rangu'] },
-        { title: 'Personalizacija', description: 'AI analizira ponašanje posjetitelja i prikazuje personalizirani sadržaj, proizvode i ponude.', benefits: ['Viša Konverzija', 'Relevantan Sadržaj', 'A/B Testiranje', 'Korisnički Profili'] },
-        { title: 'Inteligentna Analitika', description: 'AI-pogonjena procjena podataka vaše web stranice s automatskim preporukama za akcije.', benefits: ['Automatski Uvidi', 'Praćenje Konverzija', 'Ponašanje Korisnika', 'Prijedlozi za Optimizaciju'] }
+        { title: 'AI Chatbot za Web Stranice', description: 'Inteligentni chatbotovi koji odgovaraju na upite klijenata 24/7, kvalificiraju leadove i rezerviraju termine – direktno na vašoj web stranici.', benefits: ['Trenutni Odgovori', 'Generiranje Leadova', 'Rezervacija Termina', 'FAQ Automatizacija'] },
+        { title: 'Izrada SEO Sadržaja s AI', description: 'SEO-optimizirani tekstovi, opisi proizvoda i blog članci kreirani s AI i pregledani od stručnjaka.', benefits: ['SEO-Optimizirano', 'Usklađeno s Brendom', 'Brza Izrada', 'Redovita Ažuriranja'] },
+        { title: 'Automatska Optimizacija Slika', description: 'Automatska optimizacija slika, generiranje alt-teksta i inteligentni odabir slika za maksimalnu performansu.', benefits: ['Brzo Učitavanje', 'Auto Alt-Tekstovi', 'Responzivne Slike', 'WebP Konverzija'] },
+        { title: 'AI SEO Analiza i Optimizacija', description: 'Kontinuirani SEO nadzor s AI preporukama za bolje rangiranje na Googleu.', benefits: ['Praćenje Ključnih Riječi', 'Analiza Konkurencije', 'Auto-Optimizacija', 'Izvještaji o Rangu'] },
+        { title: 'Personalizacija Web Stranica s AI', description: 'AI analizira ponašanje posjetitelja i prikazuje personalizirani sadržaj, proizvode i ponude.', benefits: ['Viša Konverzija', 'Relevantan Sadržaj', 'A/B Testiranje', 'Korisnički Profili'] },
+        { title: 'AI Analitika i Uvidi', description: 'AI-pogonjena procjena podataka vaše web stranice s automatskim preporukama za akcije.', benefits: ['Automatski Uvidi', 'Praćenje Konverzija', 'Ponašanje Korisnika', 'Prijedlozi za Optimizaciju'] }
       ],
       websiteTypes: [
-        { title: 'Poslovna Web Stranica', description: 'Profesionalna prisutnost s AI chatbotom, SEO optimizacijom i upravljanjem sadržajem.', price: 'od 3.500€', features: ['Responzivan Dizajn', 'AI Chatbot', 'SEO Optimizacija', 'CMS', 'Kontakt Forma', 'Analitika'] },
-        { title: 'Landing Stranica', description: 'Konverzijski optimizirana stranica za kampanje, proizvode ili usluge.', price: 'od 1.500€', features: ['Konverzijski Dizajn', 'A/B Testiranje', 'Lead Forme', 'Praćenje', 'Mobile-First', 'Brzo Učitavanje'] },
-        { title: 'E-Commerce Trgovina', description: 'Online trgovina s AI preporukama proizvoda i automatiziranim marketingom.', price: 'od 5.000€', features: ['Katalog Proizvoda', 'AI Preporuke', 'Integracija Plaćanja', 'Email za Napuštenu Košaricu', 'SEO', 'Analitika'] },
-        { title: 'Blog / Platforma za Sadržaj', description: 'Hub za sadržaj s AI-pogonenom izradom teksta i SEO automatizacijom.', price: 'od 2.500€', features: ['AI Sadržaj', 'SEO Alati', 'Kategorije', 'Newsletter', 'Dijeljenje na Društvenim Mrežama', 'Profili Autora'] },
+        { title: 'Profesionalna Poslovna Web Stranica', description: 'Profesionalna prisutnost s AI chatbotom, SEO optimizacijom i upravljanjem sadržajem.', price: 'od 3.500€', features: ['Responzivan Dizajn', 'AI Chatbot', 'SEO Optimizacija', 'CMS', 'Kontakt Forma', 'Analitika'] },
+        { title: 'Konverzijski Optimizirana Landing Stranica', description: 'Konverzijski optimizirana stranica za kampanje, proizvode ili usluge.', price: 'od 1.500€', features: ['Konverzijski Dizajn', 'A/B Testiranje', 'Lead Forme', 'Praćenje', 'Mobile-First', 'Brzo Učitavanje'] },
+        { title: 'E-Commerce Trgovina s AI', description: 'Online trgovina s AI preporukama proizvoda i automatiziranim marketingom.', price: 'od 5.000€', features: ['Katalog Proizvoda', 'AI Preporuke', 'Integracija Plaćanja', 'Email za Napuštenu Košaricu', 'SEO', 'Analitika'] },
+        { title: 'Blog i Platforma za Sadržaj', description: 'Hub za sadržaj s AI-pogonenom izradom teksta i SEO automatizacijom.', price: 'od 2.500€', features: ['AI Sadržaj', 'SEO Alati', 'Kategorije', 'Newsletter', 'Dijeljenje na Društvenim Mrežama', 'Profili Autora'] },
         { title: 'Složena E-Commerce Rješenja', description: 'Veliki projekti s prilagođenim integracijama i naprednim značajkama.', price: 'od 7.000€', features: ['Prilagođene Integracije', 'ERP Povezivanje', 'Višejezičnost', 'Napredno Izvještavanje', 'API Integracije', 'Prilagođeni Tokovi Rada'] },
         { title: 'Hosting i Održavanje', description: 'Sigurno, brzo hosting i redoviti servisi održavanja.', price: 'od 49€/mjesečno', features: ['SSL Certifikat', 'Dnevne Sigurnosne Kopije', 'Sigurnosna Ažuriranja', 'Optimizacija Performansi', 'Email Podrška', '99,9% Uptime'] }
       ],
       processSteps: [
-        { title: 'Briefing', description: 'Razumijemo vaše ciljeve, ciljnu publiku i zahtjeve.' },
-        { title: 'Koncept', description: 'Definiraju se struktura, smjer dizajna i AI značajke.' },
-        { title: 'Dizajn', description: 'Moderan UI/UX dizajn s fokusom na konverziju.' },
-        { title: 'Razvoj', description: 'Tehnička implementacija s AI integracijama.' },
-        { title: 'Lansiranje', description: 'Go-live sa SEO postavkom i nadzorom.' }
+        { title: '1. Briefing i Analiza Potreba', description: 'Razumijemo vaše ciljeve, ciljnu publiku i zahtjeve.' },
+        { title: '2. Koncept i Planiranje', description: 'Definiraju se struktura, smjer dizajna i AI značajke.' },
+        { title: '3. UI/UX Dizajn', description: 'Moderan UI/UX dizajn s fokusom na konverziju.' },
+        { title: '4. Razvoj i Integracija', description: 'Tehnička implementacija s AI integracijama.' },
+        { title: '5. Lansiranje i SEO Postavljanje', description: 'Go-live sa SEO postavkom i nadzorom.' }
       ],
       technologies: [
         { name: 'React / Next.js', category: 'Frontend' },
@@ -4027,34 +4027,34 @@ export const translations = {
       ctaTitle: 'AI Ajani Talep Edin – Ucretsiz Danismanlik',
       ctaSubtitle: 'AI ajanlarının işletmenizi nasıl dönüştürebileceğini konuşalım. Risksiz ücretsiz ilk danışmanlık.',
       agents: [
-        { title: 'Müşteri Hizmetleri Ajanı', description: 'Müşteri sorularının 7/24 otomatik yanıtlanması. Ajan bağlamı anlar, SSS\'leri yanıtlar ve karmaşık vakaları akıllıca çalışanlara yönlendirir.', features: ['7/24 erişilebilir', 'Çok dilli', 'Öğrenebilir', 'CRM Entegrasyonu'], useCases: ['Web sitesinde canlı sohbet', 'E-posta desteği', 'WhatsApp Business', 'Facebook Messenger'] },
-        { title: 'Analiz Ajanı', description: 'Pazarlama verilerinin otomatik değerlendirilmesi, rapor oluşturma ve iş metriklerinizin AI analizi temelinde eylem önerileri.', features: ['Gerçek zamanlı veri', 'Otomatik raporlar', 'Trend tespiti', 'ROI takibi'], useCases: ['Google Analytics değerlendirmesi', 'Sosyal medya içgörüleri', 'Kampanya performansı', 'Gelir tahminleri'] },
-        { title: 'Otomasyon Ajanı', description: 'Araçlarınızı bağlar ve iş akışlarını otomatikleştirir – müşteri adayı yakalamadan e-posta göndermeye ve faturalamaya kadar. Maksimum esneklik için n8n tabanlı.', features: ['n8n tabanlı', '500+ entegrasyon', 'Kodlama gerektirmez', 'Ölçeklenebilir'], useCases: ['Müşteri adayı takibi', 'Fatura otomasyonu', 'Veri senkronizasyonu', 'Bildirimler'] },
-        { title: 'İçerik Ajanı', description: 'Marka tarzınıza uygun sosyal medya gönderileri, blog makaleleri ve pazarlama metinleri üretir – mükemmel sonuçlar için insan kalite kontrolü ile.', features: ['Markaya uygun', 'SEO optimize', 'Çoklu platform', 'Hızlı üretim'], useCases: ['Sosyal medya gönderileri', 'Blog makaleleri', 'Bülten metinleri', 'Ürün açıklamaları'] },
-        { title: 'E-posta Ajanı', description: 'Kişiselleştirilmiş yanıtlar, otomatik kategorizasyon ve gelen mesajların önceliklendirmesi ile akıllı e-posta otomasyonu.', features: ['Otomatik kategorizasyon', 'Kişiselleştirilmiş yanıtlar', 'Spam filtresi', 'Takip hatırlatıcıları'], useCases: ['Gelen kutusu yönetimi', 'Bülten gönderimi', 'Randevu talepleri', 'Teklif gönderimi'] },
-        { title: 'Randevu Ajanı', description: 'Randevu planlamanızı otomatikleştirir: uygunlukları koordine eder, hatırlatmalar gönderir ve iptalleri veya değişiklikleri bağımsız olarak yönetir.', features: ['Takvim senkronizasyonu', 'Otomatik hatırlatmalar', 'Saat dilimi yönetimi', 'Çakışma çözümü'], useCases: ['Müşteri randevuları', 'Ekip toplantıları', 'Webinar rezervasyonları', 'Hizmet süreleri'] },
-        { title: 'E-ticaret Ajanı', description: 'Müşterilere alışverişte yardımcı olur, ürün sorularını yanıtlar, siparişleri takip eder ve iade taleplerini otomatik olarak yönetir.', features: ['Ürün danışmanlığı', 'Sipariş durumu', 'İade yönetimi', 'Çapraz satış'], useCases: ['Mağaza asistanı', 'Sepet terk takibi', 'Beden danışmanlığı', 'Teslimat takibi'] },
-        { title: 'Belge Ajanı', description: 'Belgeleri otomatik işler: PDF\'lerden veri çıkarır, belgeleri kategorize eder ve yapılandırılmış özetler oluşturur.', features: ['PDF çıkarma', 'OCR tanıma', 'Otomatik kategorizasyon', 'Veri dışa aktarma'], useCases: ['Fatura işleme', 'Sözleşme analizi', 'Başvuru yönetimi', 'Arşivleme'] }
+        { title: 'Musteri Hizmetleri icin AI Chatbot', description: 'Müşteri sorularının 7/24 otomatik yanıtlanması. Ajan bağlamı anlar, SSS\'leri yanıtlar ve karmaşık vakaları akıllıca çalışanlara yönlendirir.', features: ['7/24 erişilebilir', 'Çok dilli', 'Öğrenebilir', 'CRM Entegrasyonu'], useCases: ['Web sitesinde canlı sohbet', 'E-posta desteği', 'WhatsApp Business', 'Facebook Messenger'] },
+        { title: 'Veri Analizi icin AI Ajani', description: 'Pazarlama verilerinin otomatik değerlendirilmesi, rapor oluşturma ve iş metriklerinizin AI analizi temelinde eylem önerileri.', features: ['Gerçek zamanlı veri', 'Otomatik raporlar', 'Trend tespiti', 'ROI takibi'], useCases: ['Google Analytics değerlendirmesi', 'Sosyal medya içgörüleri', 'Kampanya performansı', 'Gelir tahminleri'] },
+        { title: 'AI ile Is Akisi Otomasyonu', description: 'Araçlarınızı bağlar ve iş akışlarını otomatikleştirir – müşteri adayı yakalamadan e-posta göndermeye ve faturalamaya kadar. Maksimum esneklik için n8n tabanlı.', features: ['n8n tabanlı', '500+ entegrasyon', 'Kodlama gerektirmez', 'Ölçeklenebilir'], useCases: ['Müşteri adayı takibi', 'Fatura otomasyonu', 'Veri senkronizasyonu', 'Bildirimler'] },
+        { title: 'AI Icerik Olusturma ve Metinler', description: 'Marka tarzınıza uygun sosyal medya gönderileri, blog makaleleri ve pazarlama metinleri üretir – mükemmel sonuçlar için insan kalite kontrolü ile.', features: ['Markaya uygun', 'SEO optimize', 'Çoklu platform', 'Hızlı üretim'], useCases: ['Sosyal medya gönderileri', 'Blog makaleleri', 'Bülten metinleri', 'Ürün açıklamaları'] },
+        { title: 'AI ile E-posta Otomasyonu', description: 'Kişiselleştirilmiş yanıtlar, otomatik kategorizasyon ve gelen mesajların önceliklendirmesi ile akıllı e-posta otomasyonu.', features: ['Otomatik kategorizasyon', 'Kişiselleştirilmiş yanıtlar', 'Spam filtresi', 'Takip hatırlatıcıları'], useCases: ['Gelen kutusu yönetimi', 'Bülten gönderimi', 'Randevu talepleri', 'Teklif gönderimi'] },
+        { title: 'Randevu Rezervasyon ve Takvim', description: 'Randevu planlamanızı otomatikleştirir: uygunlukları koordine eder, hatırlatmalar gönderir ve iptalleri veya değişiklikleri bağımsız olarak yönetir.', features: ['Takvim senkronizasyonu', 'Otomatik hatırlatmalar', 'Saat dilimi yönetimi', 'Çakışma çözümü'], useCases: ['Müşteri randevuları', 'Ekip toplantıları', 'Webinar rezervasyonları', 'Hizmet süreleri'] },
+        { title: 'E-Ticaret ve Online Magazalar icin AI', description: 'Müşterilere alışverişte yardımcı olur, ürün sorularını yanıtlar, siparişleri takip eder ve iade taleplerini otomatik olarak yönetir.', features: ['Ürün danışmanlığı', 'Sipariş durumu', 'İade yönetimi', 'Çapraz satış'], useCases: ['Mağaza asistanı', 'Sepet terk takibi', 'Beden danışmanlığı', 'Teslimat takibi'] },
+        { title: 'Belge Isleme ve OCR', description: 'Belgeleri otomatik işler: PDF\'lerden veri çıkarır, belgeleri kategorize eder ve yapılandırılmış özetler oluşturur.', features: ['PDF çıkarma', 'OCR tanıma', 'Otomatik kategorizasyon', 'Veri dışa aktarma'], useCases: ['Fatura işleme', 'Sözleşme analizi', 'Başvuru yönetimi', 'Arşivleme'] }
       ],
       benefits: [
-        { title: 'Zaman Tasarrufu', description: 'Akıllı otomasyon ile manuel işte %80\'e kadar azalma.' },
-        { title: 'Daha Hızlı Tepki', description: 'Anında yanıtlar ve işlemler – günde 24 saat, haftada 7 gün.' },
-        { title: 'Hata Azaltma', description: 'İnsan dikkatsizlik hataları olmadan tutarlı kalite.' },
-        { title: 'Ekibi Rahatlat', description: 'Çalışanlar katma değerli görevlere odaklanabilir.' },
-        { title: 'Ölçeklenebilir Büyüme', description: 'Ajanlar işletmenizle birlikte büyür – ek personel olmadan.' },
-        { title: 'Verileri Kullan', description: 'Verileri eyleme dönüştürülebilir içgörülere ve daha iyi kararlara dönüştürün.' }
+        { title: 'Yuzde 80e Kadar Zaman Tasarrufu', description: 'Akıllı otomasyon ile manuel işte %80\'e kadar azalma.' },
+        { title: '7 gun 24 Saat Erisim Garantisi', description: 'Anında yanıtlar ve işlemler – günde 24 saat, haftada 7 gün.' },
+        { title: 'Daha Az Hata, Daha Fazla Kalite', description: 'İnsan dikkatsizlik hataları olmadan tutarlı kalite.' },
+        { title: 'Calisanlari Rahatlatin', description: 'Çalışanlar katma değerli görevlere odaklanabilir.' },
+        { title: 'Ek Maliyet Olmadan Olceklenebilir', description: 'Ajanlar işletmenizle birlikte büyür – ek personel olmadan.' },
+        { title: 'Verilere Dayali Kararlar', description: 'Verileri eyleme dönüştürülebilir içgörülere ve daha iyi kararlara dönüştürün.' }
       ],
       useCaseCategories: [
-        { title: 'Müşteri Hizmetleri', examples: ['SSS sorularının otomatik yanıtlanması', 'Web sitenizde 7/24 sohbet desteği', 'Bilet kategorizasyonu ve önceliklendirme', 'Ek maliyet olmadan çok dilli destek'] },
-        { title: 'Pazarlama ve Satış', examples: ['Müşteri adayı değerlendirme ve puanlama', 'Kişiselleştirilmiş e-posta kampanyaları', 'Sosyal medya içerik oluşturma', 'Otomatik teklif oluşturma'] },
-        { title: 'Operasyonlar', examples: ['Otomatik fatura işleme', 'Randevu planlama ve kaynak yönetimi', 'Belge analizi ve çıkarma', 'Araçlar arası iş akışı otomasyonu'] }
+        { title: 'Musteri Hizmetleri ve Destek icin AI', examples: ['SSS sorularının otomatik yanıtlanması', 'Web sitenizde 7/24 sohbet desteği', 'Bilet kategorizasyonu ve önceliklendirme', 'Ek maliyet olmadan çok dilli destek'] },
+        { title: 'Pazarlama ve Satis icin AI', examples: ['Müşteri adayı değerlendirme ve puanlama', 'Kişiselleştirilmiş e-posta kampanyaları', 'Sosyal medya içerik oluşturma', 'Otomatik teklif oluşturma'] },
+        { title: 'Is Surecleri icin AI', examples: ['Otomatik fatura işleme', 'Randevu planlama ve kaynak yönetimi', 'Belge analizi ve çıkarma', 'Araçlar arası iş akışı otomasyonu'] }
       ],
       processSteps: [
-        { title: 'Görüşme', description: 'Gereksinimlerinizi ve süreçlerinizi anlıyoruz.' },
-        { title: 'Analiz', description: 'Otomasyon potansiyellerini belirliyoruz.' },
-        { title: 'Konsept', description: 'Özel bir çözüm geliştiriyoruz.' },
-        { title: 'Uygulama', description: 'Ajanı yapılandırıp eğitiyoruz.' },
-        { title: 'Canlıya Geçiş', description: 'Entegrasyon ve sürekli optimizasyon.' }
+        { title: '1. Ihtiyac Analizi', description: 'Gereksinimlerinizi ve süreçlerinizi anlıyoruz.' },
+        { title: '2. Potansiyel Analizi', description: 'Otomasyon potansiyellerini belirliyoruz.' },
+        { title: '3. Konsept Gelistirme', description: 'Özel bir çözüm geliştiriyoruz.' },
+        { title: '4. Uygulama', description: 'Ajanı yapılandırıp eğitiyoruz.' },
+        { title: '5. Lansman ve Optimizasyon', description: 'Entegrasyon ve sürekli optimizasyon.' }
       ],
       technologies: [
         { name: 'OpenAI GPT-4', description: 'Doğal konuşmalar için en modern dil işleme' },
@@ -4129,27 +4129,27 @@ export const translations = {
       ctaTitle: 'Web Sitesi Talep Edin – Ucretsiz Danismanlik',
       ctaSubtitle: 'Online varlığınızı AI ile nasıl bir üst seviyeye taşıyacağımızı konuşalım. Ücretsiz ilk danışmanlık.',
       features: [
-        { title: 'AI Chatbot Entegrasyonu', description: 'Müşteri sorularını 7/24 yanıtlayan, potansiyel müşterileri değerlendiren ve randevu alan akıllı chatbotlar – doğrudan web sitenizde.', benefits: ['Anında yanıtlar', 'Potansiyel müşteri oluşturma', 'Randevu alma', 'SSS otomasyonu'] },
-        { title: 'AI İçerik Oluşturma', description: 'SEO optimize metinler, ürün açıklamaları ve blog makaleleri AI ile oluşturulur ve uzmanlar tarafından kontrol edilir.', benefits: ['SEO optimize', 'Marka uyumlu', 'Hızlı oluşturma', 'Düzenli güncellemeler'] },
-        { title: 'AI Görsel Optimizasyonu', description: 'Maksimum performans için otomatik görsel optimizasyonu, alt metin oluşturma ve akıllı görsel seçimi.', benefits: ['Hızlı yükleme', 'Otomatik alt metinler', 'Responsive görseller', 'WebP dönüşümü'] },
-        { title: 'AI SEO Analizi', description: 'Google\'da daha iyi sıralamalar için AI destekli önerilerle sürekli SEO izleme.', benefits: ['Anahtar kelime takibi', 'Rakip analizi', 'Otomatik optimizasyon', 'Sıralama raporları'] },
-        { title: 'Kişiselleştirme', description: 'AI ziyaretçi davranışını analiz eder ve kişiselleştirilmiş içerik, ürün ve teklifler gösterir.', benefits: ['Daha yüksek dönüşüm', 'İlgili içerik', 'A/B testi', 'Kullanıcı profilleri'] },
-        { title: 'Akıllı Analytics', description: 'Otomatik eylem önerileriyle web sitesi verilerinizin AI destekli analizi.', benefits: ['Otomatik içgörüler', 'Dönüşüm takibi', 'Kullanıcı davranışı', 'Optimizasyon önerileri'] }
+        { title: 'Web Siteleri icin AI Chatbot', description: 'Müşteri sorularını 7/24 yanıtlayan, potansiyel müşterileri değerlendiren ve randevu alan akıllı chatbotlar – doğrudan web sitenizde.', benefits: ['Anında yanıtlar', 'Potansiyel müşteri oluşturma', 'Randevu alma', 'SSS otomasyonu'] },
+        { title: 'AI ile SEO Icerik Olusturma', description: 'SEO optimize metinler, ürün açıklamaları ve blog makaleleri AI ile oluşturulur ve uzmanlar tarafından kontrol edilir.', benefits: ['SEO optimize', 'Marka uyumlu', 'Hızlı oluşturma', 'Düzenli güncellemeler'] },
+        { title: 'Otomatik Gorsel Optimizasyonu', description: 'Maksimum performans için otomatik görsel optimizasyonu, alt metin oluşturma ve akıllı görsel seçimi.', benefits: ['Hızlı yükleme', 'Otomatik alt metinler', 'Responsive görseller', 'WebP dönüşümü'] },
+        { title: 'AI SEO Analizi ve Optimizasyonu', description: 'Google\'da daha iyi sıralamalar için AI destekli önerilerle sürekli SEO izleme.', benefits: ['Anahtar kelime takibi', 'Rakip analizi', 'Otomatik optimizasyon', 'Sıralama raporları'] },
+        { title: 'AI ile Web Sitesi Kisisellestirme', description: 'AI ziyaretçi davranışını analiz eder ve kişiselleştirilmiş içerik, ürün ve teklifler gösterir.', benefits: ['Daha yüksek dönüşüm', 'İlgili içerik', 'A/B testi', 'Kullanıcı profilleri'] },
+        { title: 'AI Analytics ve Icgoruler', description: 'Otomatik eylem önerileriyle web sitesi verilerinizin AI destekli analizi.', benefits: ['Otomatik içgörüler', 'Dönüşüm takibi', 'Kullanıcı davranışı', 'Optimizasyon önerileri'] }
       ],
       websiteTypes: [
-        { title: 'Kurumsal Web Sitesi', description: 'AI chatbot, SEO optimizasyonu ve içerik yönetimi ile profesyonel varlık.', price: '3.500€\'dan itibaren', features: ['Responsive tasarım', 'AI chatbot', 'SEO optimizasyonu', 'CMS', 'İletişim formu', 'Analytics'] },
-        { title: 'Landing Page', description: 'Kampanyalar, ürünler veya hizmetler için dönüşüm odaklı sayfa.', price: '1.500€\'dan itibaren', features: ['Dönüşüm tasarımı', 'A/B testi', 'Potansiyel müşteri formları', 'Takip', 'Mobile-first', 'Hızlı yükleme'] },
-        { title: 'E-Ticaret Mağazası', description: 'AI ürün önerileri ve otomatik pazarlama ile online mağaza.', price: '5.000€\'dan itibaren', features: ['Ürün kataloğu', 'AI önerileri', 'Ödeme entegrasyonu', 'Terk edilmiş sepet e-postası', 'SEO', 'Analytics'] },
-        { title: 'Blog / İçerik Platformu', description: 'AI destekli metin oluşturma ve SEO otomasyonu ile içerik merkezi.', price: '2.500€\'dan itibaren', features: ['AI içerik', 'SEO araçları', 'Kategoriler', 'Bülten', 'Sosyal paylaşım', 'Yazar profilleri'] },
-        { title: 'Karmaşık E-Ticaret Çözümleri', description: 'Özel entegrasyonlar ve gelişmiş özelliklerle büyük ölçekli e-ticaret projeleri.', price: '7.000€\'dan itibaren', features: ['Özel entegrasyonlar', 'ERP bağlantısı', 'Çoklu dil', 'Gelişmiş raporlama', 'API entegrasyonları', 'Özel iş akışları'] },
-        { title: 'Hosting ve Bakım', description: 'Güvenli, hızlı hosting ve düzenli bakım hizmetleri.', price: '49€/aydan itibaren', features: ['SSL sertifikası', 'Günlük yedekleme', 'Güvenlik güncellemeleri', 'Performans optimizasyonu', 'E-posta desteği', '99.9% çalışma süresi'] }
+        { title: 'Profesyonel Kurumsal Web Sitesi', description: 'AI chatbot, SEO optimizasyonu ve içerik yönetimi ile profesyonel varlık.', price: '3.500€\'dan itibaren', features: ['Responsive tasarım', 'AI chatbot', 'SEO optimizasyonu', 'CMS', 'İletişim formu', 'Analytics'] },
+        { title: 'Donusum Odakli Landing Page', description: 'Kampanyalar, ürünler veya hizmetler için dönüşüm odaklı sayfa.', price: '1.500€\'dan itibaren', features: ['Dönüşüm tasarımı', 'A/B testi', 'Potansiyel müşteri formları', 'Takip', 'Mobile-first', 'Hızlı yükleme'] },
+        { title: 'AI ile E-Ticaret Magazasi', description: 'AI ürün önerileri ve otomatik pazarlama ile online mağaza.', price: '5.000€\'dan itibaren', features: ['Ürün kataloğu', 'AI önerileri', 'Ödeme entegrasyonu', 'Terk edilmiş sepet e-postası', 'SEO', 'Analytics'] },
+        { title: 'Blog ve Icerik Platformu', description: 'AI destekli metin oluşturma ve SEO otomasyonu ile içerik merkezi.', price: '2.500€\'dan itibaren', features: ['AI içerik', 'SEO araçları', 'Kategoriler', 'Bülten', 'Sosyal paylaşım', 'Yazar profilleri'] },
+        { title: 'Karmasik E-Ticaret Cozumleri', description: 'Özel entegrasyonlar ve gelişmiş özelliklerle büyük ölçekli e-ticaret projeleri.', price: '7.000€\'dan itibaren', features: ['Özel entegrasyonlar', 'ERP bağlantısı', 'Çoklu dil', 'Gelişmiş raporlama', 'API entegrasyonları', 'Özel iş akışları'] },
+        { title: 'Hosting ve Bakim', description: 'Güvenli, hızlı hosting ve düzenli bakım hizmetleri.', price: '49€/aydan itibaren', features: ['SSL sertifikası', 'Günlük yedekleme', 'Güvenlik güncellemeleri', 'Performans optimizasyonu', 'E-posta desteği', '99.9% çalışma süresi'] }
       ],
       processSteps: [
-        { title: 'Brifing', description: 'Hedeflerinizi, hedef kitlenizi ve gereksinimlerinizi anlıyoruz.' },
-        { title: 'Konsept', description: 'Yapı, tasarım yönü ve AI özellikleri belirlenir.' },
-        { title: 'Tasarım', description: 'Dönüşüm odaklı modern UI/UX tasarımı.' },
-        { title: 'Geliştirme', description: 'AI entegrasyonlarıyla teknik uygulama.' },
-        { title: 'Lansman', description: 'SEO kurulumu ve izleme ile yayına alma.' }
+        { title: '1. Brifing ve Ihtiyac Analizi', description: 'Hedeflerinizi, hedef kitlenizi ve gereksinimlerinizi anlıyoruz.' },
+        { title: '2. Konsept ve Planlama', description: 'Yapı, tasarım yönü ve AI özellikleri belirlenir.' },
+        { title: '3. UI/UX Tasarim', description: 'Dönüşüm odaklı modern UI/UX tasarımı.' },
+        { title: '4. Gelistirme ve Entegrasyon', description: 'AI entegrasyonlarıyla teknik uygulama.' },
+        { title: '5. Lansman ve SEO Kurulumu', description: 'SEO kurulumu ve izleme ile yayına alma.' }
       ],
       technologies: [
         { name: 'React / Next.js', category: 'Frontend' },

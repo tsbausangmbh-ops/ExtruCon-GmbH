@@ -23,12 +23,12 @@ const localTranslations: Record<Language, {
     industriesTitle: "KI-Agenten für jede Branche",
     industriesSubtitle: "Unsere KI-Agenten sind vielseitig einsetzbar und passen sich an die Anforderungen verschiedener Branchen an.",
     industries: [
-      { title: "Gesundheitswesen", desc: "Terminmanagement, Patientenkommunikation, FAQ-Bots für Praxen und Kliniken. DSGVO-konform und sicher." },
-      { title: "Immobilien", desc: "Automatische Objektanfragen, virtuelle Besichtigungen, Lead-Qualifizierung und Exposé-Versand." },
-      { title: "Recht & Steuer", desc: "Mandantenanfragen automatisieren, Dokumentenmanagement, intelligente Terminbuchung." },
-      { title: "E-Commerce", desc: "Produktberatung, Bestellstatus, Retouren-Handling und personalisierte Empfehlungen." },
-      { title: "Handwerk", desc: "Terminbuchung, Angebotserstellung, Kundennachfragen und automatische Erinnerungen." },
-      { title: "Gastronomie", desc: "Tischreservierungen, Speisekarten-Auskünfte, Bewertungsmanagement und Events." }
+      { title: "KI für Gesundheitswesen & Praxen", desc: "Terminmanagement, Patientenkommunikation, FAQ-Bots für Praxen und Kliniken. DSGVO-konform und sicher." },
+      { title: "KI für Immobilienmakler", desc: "Automatische Objektanfragen, virtuelle Besichtigungen, Lead-Qualifizierung und Exposé-Versand." },
+      { title: "KI für Kanzleien & Steuerberater", desc: "Mandantenanfragen automatisieren, Dokumentenmanagement, intelligente Terminbuchung." },
+      { title: "KI für E-Commerce & Online-Shops", desc: "Produktberatung, Bestellstatus, Retouren-Handling und personalisierte Empfehlungen." },
+      { title: "KI für Handwerksbetriebe", desc: "Terminbuchung, Angebotserstellung, Kundennachfragen und automatische Erinnerungen." },
+      { title: "KI für Gastronomie & Hotels", desc: "Tischreservierungen, Speisekarten-Auskünfte, Bewertungsmanagement und Events." }
     ],
     comparisonTitle: "KI-Agent vs. klassischer Kundenservice",
     comparisonSubtitle: "Vergleichen Sie die Vorteile eines KI-Agenten mit herkömmlichem Support.",
@@ -41,12 +41,12 @@ const localTranslations: Record<Language, {
     industriesTitle: "AI Agents for Every Industry",
     industriesSubtitle: "Our AI agents are versatile and adapt to the requirements of different industries.",
     industries: [
-      { title: "Healthcare", desc: "Appointment management, patient communication, FAQ bots for practices and clinics. GDPR-compliant and secure." },
-      { title: "Real Estate", desc: "Automatic property inquiries, virtual tours, lead qualification, and exposé delivery." },
-      { title: "Legal & Tax", desc: "Automate client inquiries, document management, intelligent appointment booking." },
-      { title: "E-Commerce", desc: "Product advice, order status, returns handling, and personalized recommendations." },
-      { title: "Trades", desc: "Appointment booking, quote creation, customer inquiries, and automatic reminders." },
-      { title: "Gastronomy", desc: "Table reservations, menu information, review management, and events." }
+      { title: "AI for Healthcare & Clinics", desc: "Appointment management, patient communication, FAQ bots for practices and clinics. GDPR-compliant and secure." },
+      { title: "AI for Real Estate Agents", desc: "Automatic property inquiries, virtual tours, lead qualification, and exposé delivery." },
+      { title: "AI for Law Firms & Tax Advisors", desc: "Automate client inquiries, document management, intelligent appointment booking." },
+      { title: "AI for E-Commerce & Online Shops", desc: "Product advice, order status, returns handling, and personalized recommendations." },
+      { title: "AI for Trades & Craftsmen", desc: "Appointment booking, quote creation, customer inquiries, and automatic reminders." },
+      { title: "AI for Restaurants & Hotels", desc: "Table reservations, menu information, review management, and events." }
     ],
     comparisonTitle: "AI Agent vs. Traditional Customer Service",
     comparisonSubtitle: "Compare the advantages of an AI agent with traditional support.",
@@ -59,12 +59,12 @@ const localTranslations: Record<Language, {
     industriesTitle: "AI agenti za svaku industriju",
     industriesSubtitle: "Naši AI agenti su svestrani i prilagođavaju se zahtjevima različitih industrija.",
     industries: [
-      { title: "Zdravstvo", desc: "Upravljanje terminima, komunikacija s pacijentima, FAQ botovi za ordinacije i klinike. GDPR-sukladni i sigurni." },
-      { title: "Nekretnine", desc: "Automatski upiti za objekte, virtualni obilasci, kvalifikacija potencijalnih kupaca." },
-      { title: "Pravo i porez", desc: "Automatizacija upita klijenata, upravljanje dokumentima, inteligentno zakazivanje termina." },
-      { title: "E-trgovina", desc: "Savjeti o proizvodima, status narudžbe, obrada povrata i personalizirane preporuke." },
-      { title: "Obrt", desc: "Zakazivanje termina, izrada ponuda, upiti kupaca i automatski podsjetnici." },
-      { title: "Ugostiteljstvo", desc: "Rezervacije stolova, informacije o jelovniku, upravljanje recenzijama i događaji." }
+      { title: "AI za zdravstvo i ordinacije", desc: "Upravljanje terminima, komunikacija s pacijentima, FAQ botovi za ordinacije i klinike. GDPR-sukladni i sigurni." },
+      { title: "AI za agente za nekretnine", desc: "Automatski upiti za objekte, virtualni obilasci, kvalifikacija potencijalnih kupaca." },
+      { title: "AI za odvjetnike i porezne savjetnike", desc: "Automatizacija upita klijenata, upravljanje dokumentima, inteligentno zakazivanje termina." },
+      { title: "AI za e-trgovinu i online shopove", desc: "Savjeti o proizvodima, status narudžbe, obrada povrata i personalizirane preporuke." },
+      { title: "AI za obrtnike i majstore", desc: "Zakazivanje termina, izrada ponuda, upiti kupaca i automatski podsjetnici." },
+      { title: "AI za restorane i hotele", desc: "Rezervacije stolova, informacije o jelovniku, upravljanje recenzijama i događaji." }
     ],
     comparisonTitle: "AI agent naspram klasične korisničke službe",
     comparisonSubtitle: "Usporedite prednosti AI agenta s tradicionalnom podrškom.",
@@ -74,15 +74,15 @@ const localTranslations: Record<Language, {
     kiAgentPoints: ["Dostupno 24/7, čak i praznikom", "Trenutni odgovori, bez čekanja", "Fiksni troškovi neovisno o volumenu", "Jednom obučen, uvijek ažuran", "Dosljedni odgovori bez grešaka", "Neograničeno skalabilno u sekundama"]
   },
   tr: {
-    industriesTitle: "Her Sektör İçin Yapay Zeka Temsilcileri",
+    industriesTitle: "Her Sektor Icin Yapay Zeka Ajanları",
     industriesSubtitle: "Yapay zeka temsilcilerimiz çok yönlüdür ve farklı sektörlerin gereksinimlerine uyum sağlar.",
     industries: [
-      { title: "Sağlık", desc: "Randevu yönetimi, hasta iletişimi, klinikler için SSS botları. KVKK uyumlu ve güvenli." },
-      { title: "Gayrimenkul", desc: "Otomatik mülk sorguları, sanal turlar, potansiyel müşteri kalifikasyonu." },
-      { title: "Hukuk ve Vergi", desc: "Müşteri sorgularını otomatikleştirin, belge yönetimi, akıllı randevu alma." },
-      { title: "E-Ticaret", desc: "Ürün danışmanlığı, sipariş durumu, iade işlemleri ve kişiselleştirilmiş öneriler." },
-      { title: "Zanaat", desc: "Randevu alma, teklif oluşturma, müşteri sorguları ve otomatik hatırlatmalar." },
-      { title: "Gastronomi", desc: "Masa rezervasyonları, menü bilgileri, yorum yönetimi ve etkinlikler." }
+      { title: "Saglik Sektoru icin AI", desc: "Randevu yönetimi, hasta iletişimi, klinikler için SSS botları. KVKK uyumlu ve güvenli." },
+      { title: "Gayrimenkul Acenteleri icin AI", desc: "Otomatik mülk sorguları, sanal turlar, potansiyel müşteri kalifikasyonu." },
+      { title: "Hukuk ve Vergi Danismanlari icin AI", desc: "Müşteri sorgularını otomatikleştirin, belge yönetimi, akıllı randevu alma." },
+      { title: "E-Ticaret ve Online Magazalar icin AI", desc: "Ürün danışmanlığı, sipariş durumu, iade işlemleri ve kişiselleştirilmiş öneriler." },
+      { title: "Zanaat ve Esnaflar icin AI", desc: "Randevu alma, teklif oluşturma, müşteri sorguları ve otomatik hatırlatmalar." },
+      { title: "Restoranlar ve Oteller icin AI", desc: "Masa rezervasyonları, menü bilgileri, yorum yönetimi ve etkinlikler." }
     ],
     comparisonTitle: "Yapay Zeka Temsilcisi vs. Geleneksel Müşteri Hizmeti",
     comparisonSubtitle: "Yapay zeka temsilcisinin geleneksel destekle karşılaştırmalı avantajlarını görün.",
