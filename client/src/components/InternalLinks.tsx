@@ -93,3 +93,159 @@ export function ContextualCTA() {
     </div>
   );
 }
+
+interface RelatedService {
+  href: string;
+  title: string;
+  description: string;
+  icon: React.ElementType;
+  colorClass: string;
+  bgClass: string;
+}
+
+interface RelatedServicesProps {
+  currentPage: 'ki-agenten' | 'automatisierungen' | 'webseiten-ki' | 'faq' | 'chatbot' | 'contact' | 'referenzen';
+}
+
+export function RelatedServices({ currentPage }: RelatedServicesProps) {
+  const { t } = useLanguage();
+
+  const allServices: Record<string, RelatedService> = {
+    'ki-agenten': {
+      href: '/ki-agenten',
+      title: t.relatedServices?.kiAgents?.title || t.nav.kiAgents,
+      description: t.relatedServices?.kiAgents?.desc || t.services.kiAgents.desc,
+      icon: Bot,
+      colorClass: 'text-cyan-400',
+      bgClass: 'from-cyan-500/20 to-cyan-500/5'
+    },
+    'automatisierungen': {
+      href: '/automatisierungen',
+      title: t.relatedServices?.automation?.title || t.nav.automation,
+      description: t.relatedServices?.automation?.desc || t.services.automation.desc,
+      icon: Workflow,
+      colorClass: 'text-orange-400',
+      bgClass: 'from-orange-500/20 to-orange-500/5'
+    },
+    'webseiten-ki': {
+      href: '/webseiten-ki',
+      title: t.relatedServices?.websites?.title || t.nav.websitesKI,
+      description: t.relatedServices?.websites?.desc || t.services.websites.desc,
+      icon: Globe,
+      colorClass: 'text-emerald-400',
+      bgClass: 'from-emerald-500/20 to-emerald-500/5'
+    },
+    'faq': {
+      href: '/faq',
+      title: t.relatedServices?.faq?.title || t.nav.faq,
+      description: t.relatedServices?.faq?.desc || 'Antworten auf häufige Fragen',
+      icon: HelpCircle,
+      colorClass: 'text-yellow-400',
+      bgClass: 'from-yellow-500/20 to-yellow-500/5'
+    },
+    'chatbot': {
+      href: '/chatbot',
+      title: t.relatedServices?.chatbot?.title || 'KI-Chatbot',
+      description: t.relatedServices?.chatbot?.desc || 'Testen Sie unseren AI-Assistenten',
+      icon: Bot,
+      colorClass: 'text-purple-400',
+      bgClass: 'from-purple-500/20 to-purple-500/5'
+    },
+    'contact': {
+      href: '/kontakt',
+      title: t.relatedServices?.contact?.title || t.nav.contact,
+      description: t.relatedServices?.contact?.desc || 'Kontaktieren Sie uns',
+      icon: Users,
+      colorClass: 'text-primary',
+      bgClass: 'from-primary/20 to-primary/5'
+    },
+    'referenzen': {
+      href: '/referenzen',
+      title: t.relatedServices?.referenzen?.title || t.nav.referenzen,
+      description: t.relatedServices?.referenzen?.desc || 'Unsere erfolgreichen Projekte',
+      icon: Users,
+      colorClass: 'text-blue-400',
+      bgClass: 'from-blue-500/20 to-blue-500/5'
+    }
+  };
+
+  const getRelatedForPage = (): RelatedService[] => {
+    switch (currentPage) {
+      case 'ki-agenten':
+        return [allServices['automatisierungen'], allServices['webseiten-ki'], allServices['chatbot']];
+      case 'automatisierungen':
+        return [allServices['ki-agenten'], allServices['webseiten-ki'], allServices['contact']];
+      case 'webseiten-ki':
+        return [allServices['ki-agenten'], allServices['automatisierungen'], allServices['referenzen']];
+      case 'faq':
+        return [allServices['ki-agenten'], allServices['automatisierungen'], allServices['webseiten-ki']];
+      case 'chatbot':
+        return [allServices['ki-agenten'], allServices['automatisierungen'], allServices['contact']];
+      case 'contact':
+        return [allServices['ki-agenten'], allServices['automatisierungen'], allServices['webseiten-ki']];
+      case 'referenzen':
+        return [allServices['ki-agenten'], allServices['automatisierungen'], allServices['webseiten-ki']];
+      default:
+        return [allServices['ki-agenten'], allServices['automatisierungen'], allServices['webseiten-ki']];
+    }
+  };
+
+  const related = getRelatedForPage();
+
+  return (
+    <section className="py-16 border-t border-white/10">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+            {t.relatedServices?.title || 'Das könnte Sie auch interessieren'}
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            {t.relatedServices?.subtitle || 'Entdecken Sie weitere Leistungen unserer KI-Agentur aus Fürstenfeldbruck'}
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {related.map((service, i) => {
+            const Icon = service.icon;
+            return (
+              <motion.a
+                key={service.href}
+                href={service.href}
+                className={`block p-6 rounded-xl bg-gradient-to-br ${service.bgClass} border border-white/10 hover:border-white/20 transition-all group`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                data-testid={`related-service-${i}`}
+              >
+                <div className={`w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mb-4 ${service.colorClass}`}>
+                  <Icon className="w-6 h-6" />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-gray-400 text-sm mb-4">
+                  {service.description}
+                </p>
+                <span className="inline-flex items-center gap-2 text-primary text-sm font-medium group-hover:gap-3 transition-all">
+                  {t.relatedServices?.learnMore || 'Mehr erfahren'} <ArrowRight className="w-4 h-4" />
+                </span>
+              </motion.a>
+            );
+          })}
+        </div>
+
+        <div className="text-center mt-10">
+          <a
+            href="/kontakt"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
+            data-testid="related-cta-button"
+          >
+            {t.relatedServices?.ctaButton || 'Kostenlose Beratung anfragen'}
+            <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}

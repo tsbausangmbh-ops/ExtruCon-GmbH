@@ -2,7 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
+import { ExploreMoreSection, GeoLinks, RelatedServices } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Bot, Zap, MessageSquare, BarChart3, Clock, Shield, Sparkles, ArrowRight, CheckCircle, Brain, Workflow, Users, Mail, Calendar, FileText, ShoppingCart, Headphones, TrendingUp, Settings, Database, Globe, Cpu, Lock, RefreshCw, HelpCircle, ChevronDown } from "lucide-react";
 import { useState, useMemo } from "react";
@@ -870,30 +870,7 @@ export default function KIAgenten() {
           </div>
         </section>
 
-        {/* Related Services */}
-        <section className="py-12 bg-white/5">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold text-white text-center mb-8">{t.nav.services}</h2>
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <a href="/automatisierungen" className="p-6 bg-white/5 border border-white/10 rounded-xl hover:border-orange-500/50 transition-colors group">
-                <Workflow className="w-8 h-8 text-orange-500 mb-3" />
-                <h3 className="text-lg font-bold text-white mb-2">{t.nav.automation}</h3>
-                <p className="text-sm text-gray-400">{t.services.automation.desc}</p>
-              </a>
-              <a href="/webseiten-ki" className="p-6 bg-white/5 border border-white/10 rounded-xl hover:border-secondary/50 transition-colors group">
-                <Globe className="w-8 h-8 text-secondary mb-3" />
-                <h3 className="text-lg font-bold text-white mb-2">{t.nav.websitesKI}</h3>
-                <p className="text-sm text-gray-400">{t.services.websites.desc}</p>
-              </a>
-              <a href="/kontakt" className="p-6 bg-white/5 border border-white/10 rounded-xl hover:border-primary/50 transition-colors group">
-                <Users className="w-8 h-8 text-primary mb-3" />
-                <h3 className="text-lg font-bold text-white mb-2">{t.nav.contact}</h3>
-                <p className="text-sm text-gray-400">{t.hero.freeConsultation}</p>
-              </a>
-            </div>
-          </div>
-        </section>
-
+        <RelatedServices currentPage="ki-agenten" />
         <ExploreMoreSection />
       </main>
       <Footer />

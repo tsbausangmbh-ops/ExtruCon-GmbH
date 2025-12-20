@@ -1120,6 +1120,19 @@ export const translations = {
       enabled: 'Aktiviert',
       disabled: 'Deaktiviert'
     },
+    relatedServices: {
+      title: 'Das könnte Sie auch interessieren',
+      subtitle: 'Entdecken Sie weitere Leistungen unserer KI-Agentur aus Fürstenfeldbruck',
+      learnMore: 'Mehr erfahren',
+      ctaButton: 'Kostenlose Beratung anfragen',
+      kiAgents: { title: 'KI-Agenten & Chatbots', desc: 'Intelligente Automatisierung für Kundenservice, Support und Lead-Generierung' },
+      automation: { title: 'Workflow-Automatisierung', desc: 'Prozesse automatisieren und Zeit sparen mit n8n und individuellen Workflows' },
+      websites: { title: 'Webseiten mit KI', desc: 'Moderne Websites mit integrierten KI-Features für mehr Conversions' },
+      faq: { title: 'Häufige Fragen', desc: 'Antworten auf die wichtigsten Fragen zu unseren Leistungen' },
+      chatbot: { title: 'KI-Chatbot testen', desc: 'Erleben Sie live, wie ein intelligenter AI-Agent funktioniert' },
+      contact: { title: 'Kontakt aufnehmen', desc: 'Kostenlose Beratung für Ihr KI-Projekt anfragen' },
+      referenzen: { title: 'Referenzen & Projekte', desc: 'Erfolgreiche Kundenprojekte aus München und Bayern' }
+    },
     terminPage: {
       badge: 'Kostenlose Erstberatung',
       title: 'Termin',
@@ -2283,6 +2296,19 @@ export const translations = {
       notSet: 'Not yet set',
       enabled: 'Enabled',
       disabled: 'Disabled'
+    },
+    relatedServices: {
+      title: 'You might also be interested in',
+      subtitle: 'Discover more services from our AI agency in Fürstenfeldbruck',
+      learnMore: 'Learn more',
+      ctaButton: 'Request free consultation',
+      kiAgents: { title: 'AI Agents & Chatbots', desc: 'Intelligent automation for customer service, support, and lead generation' },
+      automation: { title: 'Workflow Automation', desc: 'Automate processes and save time with n8n and custom workflows' },
+      websites: { title: 'AI Websites', desc: 'Modern websites with integrated AI features for more conversions' },
+      faq: { title: 'FAQ', desc: 'Answers to the most important questions about our services' },
+      chatbot: { title: 'Test AI Chatbot', desc: 'Experience live how an intelligent AI agent works' },
+      contact: { title: 'Contact Us', desc: 'Request a free consultation for your AI project' },
+      referenzen: { title: 'References & Projects', desc: 'Successful customer projects from Munich and Bavaria' }
     },
     terminPage: {
       badge: 'Free Initial Consultation',
@@ -3448,6 +3474,19 @@ export const translations = {
       enabled: 'Omogućeno',
       disabled: 'Onemogućeno'
     },
+    relatedServices: {
+      title: 'Možda vas zanima i',
+      subtitle: 'Otkrijte više usluga naše AI agencije iz Fürstenfeldbrucka',
+      learnMore: 'Saznajte više',
+      ctaButton: 'Zatražite besplatnu konzultaciju',
+      kiAgents: { title: 'AI Agenti i Chatbotovi', desc: 'Inteligentna automatizacija za korisničku službu, podršku i generiranje potencijalnih kupaca' },
+      automation: { title: 'Automatizacija Tijekova Rada', desc: 'Automatizirajte procese i uštedite vrijeme s n8n i prilagođenim tijekovima rada' },
+      websites: { title: 'Web Stranice s AI', desc: 'Moderne web stranice s integriranim AI značajkama za više konverzija' },
+      faq: { title: 'Česta Pitanja', desc: 'Odgovori na najvažnija pitanja o našim uslugama' },
+      chatbot: { title: 'Testirajte AI Chatbot', desc: 'Doživite uživo kako funkcionira inteligentni AI agent' },
+      contact: { title: 'Kontaktirajte Nas', desc: 'Zatražite besplatnu konzultaciju za vaš AI projekt' },
+      referenzen: { title: 'Reference i Projekti', desc: 'Uspješni projekti klijenata iz Münchena i Bavarske' }
+    },
     terminPage: {
       badge: 'Besplatna prva konzultacija',
       title: 'Rezervirajte',
@@ -4398,6 +4437,19 @@ export const translations = {
       notSet: 'Henüz ayarlanmadı',
       enabled: 'Etkin',
       disabled: 'Devre Dışı'
+    },
+    relatedServices: {
+      title: 'Ilginizi cekebilir',
+      subtitle: 'Furstenfeldbruck AI ajansindan daha fazla hizmet kesfet',
+      learnMore: 'Daha fazla bilgi',
+      ctaButton: 'Ucretsiz danismanlik talep edin',
+      kiAgents: { title: 'AI Ajanlar ve Chatbotlar', desc: 'Musteri hizmeti, destek ve potansiyel musteri uretimi icin akilli otomasyon' },
+      automation: { title: 'Is Akisi Otomasyonu', desc: 'n8n ve ozel is akislariyla surecleri otomatiklestirin ve zaman kazanin' },
+      websites: { title: 'AI Web Siteleri', desc: 'Daha fazla donusum icin entegre AI ozellikleriyle modern web siteleri' },
+      faq: { title: 'Sikca Sorulan Sorular', desc: 'Hizmetlerimiz hakkinda en onemli sorularin yanitlari' },
+      chatbot: { title: 'AI Chatbotu Test Edin', desc: 'Akilli bir AI ajaninin nasil calistigini canli deneyimleyin' },
+      contact: { title: 'Iletisime Gecin', desc: 'AI projeniz icin ucretsiz danismanlik talep edin' },
+      referenzen: { title: 'Referanslar ve Projeler', desc: 'Munih ve Bavyeradan basarili musteri projeleri' }
     },
     terminPage: {
       badge: 'Ücretsiz İlk Danışma',
