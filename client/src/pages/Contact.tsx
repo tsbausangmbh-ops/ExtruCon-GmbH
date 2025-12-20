@@ -10,6 +10,7 @@ import { useState } from "react";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { Link } from "wouter";
+import { RelatedServices, ExploreMoreSection } from "@/components/InternalLinks";
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -396,6 +397,9 @@ export default function Contact() {
             </motion.div>
           </div>
         </section>
+
+        <RelatedServices currentPage="contact" />
+        <ExploreMoreSection />
       </main>
       <Footer />
     </div>

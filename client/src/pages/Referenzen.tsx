@@ -6,6 +6,7 @@ import heroImg from "@assets/generated_images/portfolio_showcase_tech_visual.png
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { RelatedServices, ExploreMoreSection } from "@/components/InternalLinks";
 
 export default function Referenzen() {
   const { t } = useLanguage();
@@ -300,6 +301,9 @@ export default function Referenzen() {
             </a>
           </div>
         </section>
+
+        <RelatedServices currentPage="referenzen" />
+        <ExploreMoreSection />
       </main>
       <Footer />
     </div>
