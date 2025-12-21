@@ -37,7 +37,6 @@ import Dachau from "@/pages/umland/Dachau";
 import Germering from "@/pages/umland/Germering";
 import Puchheim from "@/pages/umland/Puchheim";
 import Olching from "@/pages/umland/Olching";
-import Kroatien from "@/pages/Kroatien";
 import NotFound from "@/pages/not-found";
 import { ChatWidget } from "@/components/ChatWidget";
 import { CookieConsent } from "@/components/CookieConsent";
@@ -83,7 +82,6 @@ function Router() {
       <Route path="/germering" component={Germering} />
       <Route path="/puchheim" component={Puchheim} />
       <Route path="/olching" component={Olching} />
-      <Route path="/kroatien" component={Kroatien} />
       <Route component={NotFound} />
     </Switch>
   );
