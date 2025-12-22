@@ -21,6 +21,27 @@ export default function Web() {
         description="Moderne Webentwicklung mit KI-Integration. React, Next.js, WordPress & Shopify. Webdesign Agentur Fürstenfeldbruck bei München."
         keywords="Webentwicklung Fürstenfeldbruck, Webdesign München, Website erstellen, React Entwicklung"
         canonical="https://extrucon.de/leistungen/webentwicklung"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": "https://extrucon.de/leistungen/webentwicklung#service",
+            "name": "Webentwicklung",
+            "description": "Moderne Webentwicklung mit React, Next.js, WordPress und Shopify. KI-Integration für intelligente Websites.",
+            "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
+            "areaServed": ["Fürstenfeldbruck", "München", "Bayern", "Deutschland"],
+            "serviceType": "Web Development"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "Was kostet eine Website?", "acceptedAnswer": { "@type": "Answer", "text": "Eine professionelle Website beginnt ab 2.500€ für eine Landing Page bis 15.000€+ für komplexe Web-Applikationen." } },
+              { "@type": "Question", "name": "Welche Technologien nutzen Sie?", "acceptedAnswer": { "@type": "Answer", "text": "Wir arbeiten mit React, Next.js, TypeScript, Node.js, WordPress, Shopify und Tailwind CSS." } },
+              { "@type": "Question", "name": "Wie lange dauert die Entwicklung?", "acceptedAnswer": { "@type": "Answer", "text": "Eine Landing Page ist in 2-3 Wochen fertig. Komplexere Projekte dauern 4-8 Wochen." } }
+            ]
+          }
+        ]}
       />
       <Navbar />
       <main className="pt-24">

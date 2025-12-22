@@ -19,6 +19,27 @@ export default function Content() {
         description="Professionelle Content-Erstellung mit KI-Unterstützung. Texte, Grafiken, Videos & Social Media Content. Fürstenfeldbruck."
         keywords="Content Erstellung, KI Content, Social Media Content, Texterstellung"
         canonical="https://extrucon.de/leistungen/content"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": "https://extrucon.de/leistungen/content#service",
+            "name": "Content-Erstellung",
+            "description": "Professionelle Content-Erstellung mit KI-Unterstützung. Texte, Grafiken, Videos und Social Media Content.",
+            "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
+            "areaServed": ["Fürstenfeldbruck", "München", "Bayern", "Deutschland"],
+            "serviceType": "Content Creation"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "Welche Content-Formate bieten Sie an?", "acceptedAnswer": { "@type": "Answer", "text": "Wir erstellen Texte, Grafiken, Videos, Infografiken, Social Media Posts und Blog-Artikel." } },
+              { "@type": "Question", "name": "Nutzen Sie KI für die Content-Erstellung?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir nutzen KI-Tools wie GPT-4 und Midjourney zur effizienten Content-Erstellung, immer mit menschlicher Qualitätskontrolle." } },
+              { "@type": "Question", "name": "Wie schnell ist Content verfügbar?", "acceptedAnswer": { "@type": "Answer", "text": "Je nach Umfang liefern wir Content innerhalb von 2-5 Werktagen. Rush-Aufträge sind möglich." } }
+            ]
+          }
+        ]}
       />
       <Navbar />
       <main className="pt-24">

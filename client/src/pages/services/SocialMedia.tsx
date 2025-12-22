@@ -21,6 +21,27 @@ export default function SocialMedia() {
         description="Professionelles Social Media Marketing. Instagram, TikTok, LinkedIn & Facebook Betreuung. Agentur aus Fürstenfeldbruck."
         keywords="Social Media Marketing, Instagram Agentur, TikTok Marketing, Fürstenfeldbruck"
         canonical="https://extrucon.de/leistungen/social-media"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": "https://extrucon.de/leistungen/social-media#service",
+            "name": "Social Media Marketing",
+            "description": "Professionelles Social Media Marketing für Instagram, TikTok, LinkedIn und Facebook. Community Management und Content-Erstellung.",
+            "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
+            "areaServed": ["Fürstenfeldbruck", "München", "Bayern", "Deutschland"],
+            "serviceType": "Social Media Management"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "Welche Plattformen betreuen Sie?", "acceptedAnswer": { "@type": "Answer", "text": "Wir betreuen Instagram, TikTok, LinkedIn, Facebook, YouTube, X (Twitter) und Pinterest professionell." } },
+              { "@type": "Question", "name": "Wie oft wird gepostet?", "acceptedAnswer": { "@type": "Answer", "text": "Die Posting-Frequenz richtet sich nach Ihren Zielen. Üblich sind 3-5 Posts pro Woche plus Stories." } },
+              { "@type": "Question", "name": "Erstellen Sie auch Content?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir übernehmen die komplette Content-Erstellung inklusive Texte, Grafiken und Videos." } }
+            ]
+          }
+        ]}
       />
       <Navbar />
       <main className="pt-24">

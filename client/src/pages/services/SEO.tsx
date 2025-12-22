@@ -25,6 +25,27 @@ export default function SEO() {
         description="Professionelle SEO & Geo-Optimierung für lokale Unternehmen. Google My Business, lokale Keywords, strukturierte Daten. Agentur Fürstenfeldbruck bei München."
         keywords="SEO Agentur, Geo-Optimierung, lokale SEO, Google My Business, Suchmaschinenoptimierung Fürstenfeldbruck, Local SEO München"
         canonical="https://extrucon.de/leistungen/seo"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": "https://extrucon.de/leistungen/seo#service",
+            "name": "SEO & Geo-Optimierung",
+            "description": "Professionelle Suchmaschinenoptimierung mit Fokus auf lokale SEO, Google My Business und Geo-Targeting für maximale Sichtbarkeit.",
+            "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
+            "areaServed": ["Fürstenfeldbruck", "München", "Bayern", "Deutschland"],
+            "serviceType": "SEO"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "Wie lange dauert SEO bis ich Ergebnisse sehe?", "acceptedAnswer": { "@type": "Answer", "text": "Erste Verbesserungen sind nach 2-3 Monaten sichtbar. Für Top-Rankings braucht es typischerweise 6-12 Monate." } },
+              { "@type": "Question", "name": "Was ist lokale SEO?", "acceptedAnswer": { "@type": "Answer", "text": "Lokale SEO optimiert Ihre Website für standortbezogene Suchanfragen wie 'Agentur Fürstenfeldbruck' oder 'KI München'." } },
+              { "@type": "Question", "name": "Was kostet SEO-Betreuung?", "acceptedAnswer": { "@type": "Answer", "text": "SEO-Betreuung beginnt ab 500€/Monat. Umfang und Preis richten sich nach Ihren Zielen und der Wettbewerbssituation." } }
+            ]
+          }
+        ]}
       />
       <Navbar />
       <main className="pt-24">

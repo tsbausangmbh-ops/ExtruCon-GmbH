@@ -19,6 +19,27 @@ export default function KI() {
         description="Maßgeschneiderte KI-Lösungen für Ihr Unternehmen. KI-Agenten, ChatGPT Integration, Workflow-Automatisierung. Fürstenfeldbruck."
         keywords="KI Agentur, KI-Lösungen, ChatGPT Integration, Automatisierung, Künstliche Intelligenz"
         canonical="https://extrucon.de/leistungen/ki"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": "https://extrucon.de/leistungen/ki#service",
+            "name": "KI-Lösungen & Automatisierung",
+            "description": "Maßgeschneiderte KI-Lösungen mit GPT-4, Claude AI, Gemini. KI-Agenten und Workflow-Automatisierung für Ihr Unternehmen.",
+            "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
+            "areaServed": ["Fürstenfeldbruck", "München", "Bayern", "Deutschland"],
+            "serviceType": "AI Solutions"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "Welche KI-Technologien nutzen Sie?", "acceptedAnswer": { "@type": "Answer", "text": "Wir arbeiten mit OpenAI GPT-4, Claude AI, Google Gemini, Midjourney und DALL-E sowie Automatisierungstools wie n8n." } },
+              { "@type": "Question", "name": "Was kann ein KI-Agent für mich tun?", "acceptedAnswer": { "@type": "Answer", "text": "KI-Agenten automatisieren Kundenservice, Lead-Generierung, E-Mail-Beantwortung und viele weitere repetitive Aufgaben." } },
+              { "@type": "Question", "name": "Ist meine Daten sicher?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir setzen auf DSGVO-konforme Lösungen und können KI auch auf Ihrer eigenen Infrastruktur betreiben." } }
+            ]
+          }
+        ]}
       />
       <Navbar />
       <main className="pt-24">

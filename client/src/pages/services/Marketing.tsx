@@ -21,6 +21,27 @@ export default function Marketing() {
         description="Datengetriebenes Performance Marketing. Google Ads, Meta Ads, SEO & Conversion-Optimierung. Agentur Fürstenfeldbruck."
         keywords="Performance Marketing, Google Ads Agentur, Meta Ads, SEO Fürstenfeldbruck"
         canonical="https://extrucon.de/leistungen/marketing"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": "https://extrucon.de/leistungen/marketing#service",
+            "name": "Performance Marketing",
+            "description": "Datengetriebenes Performance Marketing mit Google Ads, Meta Ads, SEO und Conversion-Optimierung für maximalen ROI.",
+            "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
+            "areaServed": ["Fürstenfeldbruck", "München", "Bayern", "Deutschland"],
+            "serviceType": "Digital Marketing"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "Was kostet Performance Marketing?", "acceptedAnswer": { "@type": "Answer", "text": "Die Kosten variieren je nach Kampagnenumfang. Wir bieten transparente Preismodelle ab 500€/Monat für kleinere Kampagnen." } },
+              { "@type": "Question", "name": "Welche Plattformen nutzen Sie?", "acceptedAnswer": { "@type": "Answer", "text": "Wir arbeiten mit Google Ads, Meta Ads (Facebook/Instagram), LinkedIn Ads, TikTok Ads und YouTube Ads." } },
+              { "@type": "Question", "name": "Wie schnell sehe ich Ergebnisse?", "acceptedAnswer": { "@type": "Answer", "text": "Erste Ergebnisse sind oft innerhalb von 2-4 Wochen sichtbar, optimale Performance nach 2-3 Monaten Optimierung." } }
+            ]
+          }
+        ]}
       />
       <Navbar />
       <main className="pt-24">

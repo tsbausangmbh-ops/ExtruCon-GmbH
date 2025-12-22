@@ -19,6 +19,27 @@ export default function Brand() {
         description="Professionelle Markenentwicklung und Corporate Design. Logo, Branding & visuelle Identität. Agentur Fürstenfeldbruck."
         keywords="Markenentwicklung, Corporate Design, Logo Design, Branding Agentur"
         canonical="https://extrucon.de/leistungen/markenentwicklung"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": "https://extrucon.de/leistungen/markenentwicklung#service",
+            "name": "Markenentwicklung & Corporate Design",
+            "description": "Professionelle Markenentwicklung mit Logo-Design, Corporate Design und visueller Identität für starke Marken.",
+            "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
+            "areaServed": ["Fürstenfeldbruck", "München", "Bayern", "Deutschland"],
+            "serviceType": "Branding"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "Was kostet ein Logo-Design?", "acceptedAnswer": { "@type": "Answer", "text": "Ein professionelles Logo-Design beginnt bei 800€ und beinhaltet mehrere Entwürfe und Korrekturrunden." } },
+              { "@type": "Question", "name": "Was gehört zum Corporate Design?", "acceptedAnswer": { "@type": "Answer", "text": "Corporate Design umfasst Logo, Farbpalette, Typografie, Bildsprache, Geschäftspapiere und Designrichtlinien." } },
+              { "@type": "Question", "name": "Wie lange dauert eine Markenentwicklung?", "acceptedAnswer": { "@type": "Answer", "text": "Eine vollständige Markenentwicklung dauert typischerweise 4-8 Wochen, abhängig vom Projektumfang." } }
+            ]
+          }
+        ]}
       />
       <Navbar />
       <main className="pt-24">
