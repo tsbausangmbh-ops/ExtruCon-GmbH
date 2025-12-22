@@ -134,7 +134,7 @@
     }
     </script>
 
-    <!-- Structured Data: Website -->
+    <!-- Structured Data: Website with SiteNavigationElement and SearchAction -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -144,7 +144,56 @@
       "name": "ExtruCon GmbH",
       "description": "KI-Agentur für Automatisierung und digitales Marketing",
       "publisher": {"@type": "Organization", "@id": "https://extrucon.de/#organization"},
-      "inLanguage": "de-DE"
+      "inLanguage": "de-DE",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://extrucon.de/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Structured Data: Speakable for Voice Search (Google Assistant, Alexa, Siri) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://extrucon.de/#webpage",
+      "url": "https://extrucon.de",
+      "name": "ExtruCon GmbH - KI-Agentur Fürstenfeldbruck",
+      "description": "ExtruCon ist eine KI-Agentur aus Fürstenfeldbruck bei München. Wir entwickeln KI-Agenten, automatisieren Geschäftsprozesse und erstellen moderne Websites mit KI-Features.",
+      "isPartOf": {"@id": "https://extrucon.de/#website"},
+      "about": {"@id": "https://extrucon.de/#organization"},
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://extrucon.de/logo.png"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".hero-description", ".service-description"]
+      },
+      "mainEntity": {
+        "@type": "LocalBusiness",
+        "@id": "https://extrucon.de/#localbusiness"
+      }
+    }
+    </script>
+
+    <!-- Structured Data: SiteNavigationElement for AI Crawlers -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "ExtruCon Hauptnavigation",
+      "itemListElement": [
+        {"@type": "SiteNavigationElement", "position": 1, "name": "KI-Agenten", "url": "https://extrucon.de/ki-agenten"},
+        {"@type": "SiteNavigationElement", "position": 2, "name": "Automatisierungen", "url": "https://extrucon.de/automatisierungen"},
+        {"@type": "SiteNavigationElement", "position": 3, "name": "Webseiten mit KI", "url": "https://extrucon.de/webseiten-ki"},
+        {"@type": "SiteNavigationElement", "position": 4, "name": "Performance Marketing", "url": "https://extrucon.de/leistungen/marketing"},
+        {"@type": "SiteNavigationElement", "position": 5, "name": "Social Media", "url": "https://extrucon.de/leistungen/social-media"},
+        {"@type": "SiteNavigationElement", "position": 6, "name": "SEO & Geo-Optimierung", "url": "https://extrucon.de/leistungen/seo"},
+        {"@type": "SiteNavigationElement", "position": 7, "name": "Kontakt", "url": "https://extrucon.de/kontakt"}
+      ]
     }
     </script>
 
