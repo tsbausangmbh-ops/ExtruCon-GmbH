@@ -82,14 +82,31 @@ shared/           # Shared types and schemas
 - **GeoLinks Component**: Adds geo-targeted links for local SEO (Fürstenfeldbruck, München, Bayern)
 
 ### Pages with RelatedServices
-Main service pages use the new `RelatedServices` component from `InternalLinks.tsx`:
-- KIAgenten.tsx → Links to Automatisierungen, WebseitenKI, Chatbot
-- Automatisierungen.tsx → Links to KI-Agenten, WebseitenKI, Contact
-- WebseitenKI.tsx → Links to KI-Agenten, Automatisierungen, Referenzen
-- FAQ.tsx, Chatbot.tsx, Contact.tsx, Referenzen.tsx → Contextual service links
-
-Sub-service pages use the legacy `RelatedServices` from `client/src/components/RelatedServices.tsx`:
-- services/Marketing.tsx, services/SocialMedia.tsx, services/Content.tsx, etc.
+All pages now use the unified `RelatedServices` component from `InternalLinks.tsx` with the `currentPage` prop:
+- Main services: ki-agenten, automatisierungen, webseiten-ki
+- Landing pages: marketing, social-media, content, brand, web, ki-automatisierung, seo
+- Other pages: faq, chatbot, contact, referenzen, ratgeber, ueber-uns
 
 ### i18n for Related Services
 All `relatedServices` translations are in `client/src/lib/i18n.tsx` for DE, EN, HR, TR languages
+
+## Pre-Rendering for SEO
+
+### Setup
+A custom Puppeteer-based pre-rendering script is available at `script/prerender.ts` to generate static HTML for all routes, enabling better SEO for search engines and AI assistants.
+
+### Usage
+```bash
+# First build the app
+npm run build
+
+# Then run pre-rendering
+npx tsx script/prerender.ts
+```
+
+### Rendered Routes
+The script pre-renders all main routes including:
+- Homepage and main service pages
+- All /leistungen/* sub-pages
+- Location pages (/muenchen/*, /starnberg, etc.)
+- Legal pages (impressum, datenschutz, etc.)
