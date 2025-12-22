@@ -3,39 +3,27 @@ export const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
-  <url>
-    <loc>https://extrucon.de/favicon.ico</loc>
-    <lastmod>2025-12-17</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/logo.png</loc>
-    <lastmod>2025-12-17</lastmod>
-    <image:image>
-      <image:loc>https://extrucon.de/logo.png</image:loc>
-      <image:title>ExtruCon GmbH Logo - KI-Agentur Fürstenfeldbruck</image:title>
-    </image:image>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
+  <!-- Homepage - Höchste Priorität -->
   <url>
     <loc>https://extrucon.de/</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/?lang=hr"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/?lang=tr"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/"/>
+    <image:image>
+      <image:loc>https://extrucon.de/logo.png</image:loc>
+      <image:title>ExtruCon GmbH - KI-Agentur Fürstenfeldbruck</image:title>
+    </image:image>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- Hauptseiten - Hohe Priorität (0.9) -->
   <url>
     <loc>https://extrucon.de/ki-agenten</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/ki-agenten"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/ki-agenten?lang=en"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/ki-agenten?lang=hr"/>
@@ -47,7 +35,7 @@ export const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
 
   <url>
     <loc>https://extrucon.de/automatisierungen</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/automatisierungen"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/automatisierungen?lang=en"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/automatisierungen?lang=hr"/>
@@ -59,7 +47,7 @@ export const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
 
   <url>
     <loc>https://extrucon.de/webseiten-ki</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/webseiten-ki"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/webseiten-ki?lang=en"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/webseiten-ki?lang=hr"/>
@@ -69,9 +57,10 @@ export const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
     <priority>0.9</priority>
   </url>
 
+  <!-- Leistungsseiten - Hohe Priorität (0.8) -->
   <url>
     <loc>https://extrucon.de/leistungen/marketing</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/leistungen/marketing"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/leistungen/marketing?lang=en"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/leistungen/marketing?lang=hr"/>
@@ -83,7 +72,7 @@ export const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
 
   <url>
     <loc>https://extrucon.de/leistungen/social-media</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/leistungen/social-media"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/leistungen/social-media?lang=en"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/leistungen/social-media?lang=hr"/>
@@ -95,7 +84,7 @@ export const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
 
   <url>
     <loc>https://extrucon.de/leistungen/content</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/leistungen/content"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/leistungen/content?lang=en"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/leistungen/content?lang=hr"/>
@@ -106,32 +95,44 @@ export const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
   </url>
 
   <url>
-    <loc>https://extrucon.de/leistungen/brand</loc>
-    <lastmod>2025-12-12</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/leistungen/brand"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/leistungen/brand?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/leistungen/brand?lang=hr"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/leistungen/brand?lang=tr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/leistungen/brand"/>
+    <loc>https://extrucon.de/leistungen/markenentwicklung</loc>
+    <lastmod>2025-12-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/leistungen/markenentwicklung"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/leistungen/markenentwicklung?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/leistungen/markenentwicklung?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/leistungen/markenentwicklung?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/leistungen/markenentwicklung"/>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://extrucon.de/leistungen/web</loc>
-    <lastmod>2025-12-12</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/leistungen/web"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/leistungen/web?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/leistungen/web?lang=hr"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/leistungen/web?lang=tr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/leistungen/web"/>
+    <loc>https://extrucon.de/leistungen/webentwicklung</loc>
+    <lastmod>2025-12-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/leistungen/webentwicklung"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/leistungen/webentwicklung?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/leistungen/webentwicklung?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/leistungen/webentwicklung?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/leistungen/webentwicklung"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/leistungen/seo</loc>
+    <lastmod>2025-12-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/leistungen/seo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/leistungen/seo?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/leistungen/seo?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/leistungen/seo?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/leistungen/seo"/>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://extrucon.de/leistungen/ki</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/leistungen/ki"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/leistungen/ki?lang=en"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/leistungen/ki?lang=hr"/>
@@ -141,9 +142,10 @@ export const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
     <priority>0.8</priority>
   </url>
 
+  <!-- Kontakt & Termin - Hohe Priorität (0.8) -->
   <url>
     <loc>https://extrucon.de/kontakt</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/kontakt"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/kontakt?lang=en"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/kontakt?lang=hr"/>
@@ -154,8 +156,122 @@ export const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
   </url>
 
   <url>
+    <loc>https://extrucon.de/termin</loc>
+    <lastmod>2025-12-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/termin"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/termin?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/termin?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/termin?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/termin"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Standortseiten München - Hohe Priorität für lokales SEO -->
+  <url>
+    <loc>https://extrucon.de/muenchen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/muenchen/bogenhausen</loc>
+    <lastmod>2025-12-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen/bogenhausen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen/bogenhausen"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/muenchen/schwabing</loc>
+    <lastmod>2025-12-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen/schwabing"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen/schwabing"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/muenchen/nymphenburg</loc>
+    <lastmod>2025-12-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen/nymphenburg"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen/nymphenburg"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/muenchen/gruenwald</loc>
+    <lastmod>2025-12-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen/gruenwald"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen/gruenwald"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/muenchen/harlaching</loc>
+    <lastmod>2025-12-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen/harlaching"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen/harlaching"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Weitere Standortseiten -->
+  <url>
+    <loc>https://extrucon.de/starnberg</loc>
+    <lastmod>2025-12-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/starnberg"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/starnberg"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/dachau</loc>
+    <lastmod>2025-12-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/dachau"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/dachau"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/germering</loc>
+    <lastmod>2025-12-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/germering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/germering"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/puchheim</loc>
+    <lastmod>2025-12-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/puchheim"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/puchheim"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/olching</loc>
+    <lastmod>2025-12-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/olching"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/olching"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Informationsseiten - Mittlere Priorität (0.7) -->
+  <url>
     <loc>https://extrucon.de/ueber-uns</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/ueber-uns"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/ueber-uns?lang=en"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/ueber-uns?lang=hr"/>
@@ -167,7 +283,7 @@ export const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
 
   <url>
     <loc>https://extrucon.de/faq</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/faq"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/faq?lang=en"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/faq?lang=hr"/>
@@ -179,7 +295,7 @@ export const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
 
   <url>
     <loc>https://extrucon.de/ratgeber</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/ratgeber"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/ratgeber?lang=en"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/ratgeber?lang=hr"/>
@@ -190,32 +306,8 @@ export const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
   </url>
 
   <url>
-    <loc>https://extrucon.de/ki-bot</loc>
-    <lastmod>2025-12-12</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/ki-bot"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/ki-bot?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/ki-bot?lang=hr"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/ki-bot?lang=tr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/ki-bot"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/termin</loc>
-    <lastmod>2025-12-13</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/termin"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/termin?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/termin?lang=hr"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/termin?lang=tr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/termin"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
     <loc>https://extrucon.de/referenzen</loc>
-    <lastmod>2025-12-13</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/referenzen"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/referenzen?lang=en"/>
     <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/referenzen?lang=hr"/>
@@ -226,128 +318,42 @@ export const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
   </url>
 
   <url>
-    <loc>https://extrucon.de/muenchen</loc>
-    <lastmod>2025-12-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen"/>
+    <loc>https://extrucon.de/ki-bot</loc>
+    <lastmod>2025-12-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/ki-bot"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/ki-bot?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/ki-bot?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/ki-bot?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/ki-bot"/>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
 
-  <url>
-    <loc>https://extrucon.de/muenchen/bogenhausen</loc>
-    <lastmod>2025-12-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen/bogenhausen"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen/bogenhausen"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/muenchen/schwabing</loc>
-    <lastmod>2025-12-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen/schwabing"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen/schwabing"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/muenchen/nymphenburg</loc>
-    <lastmod>2025-12-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen/nymphenburg"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen/nymphenburg"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/muenchen/gruenwald</loc>
-    <lastmod>2025-12-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen/gruenwald"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen/gruenwald"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/muenchen/harlaching</loc>
-    <lastmod>2025-12-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/muenchen/harlaching"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/muenchen/harlaching"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/starnberg</loc>
-    <lastmod>2025-12-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/starnberg"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/starnberg"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/dachau</loc>
-    <lastmod>2025-12-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/dachau"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/dachau"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/germering</loc>
-    <lastmod>2025-12-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/germering"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/germering"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/puchheim</loc>
-    <lastmod>2025-12-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/puchheim"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/puchheim"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/olching</loc>
-    <lastmod>2025-12-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/olching"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/olching"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
+  <!-- Rechtliche Seiten - Niedrige Priorität (0.3) -->
   <url>
     <loc>https://extrucon.de/impressum</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://extrucon.de/datenschutz</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://extrucon.de/agb</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://extrucon.de/cookies</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
