@@ -90,6 +90,27 @@ All pages now use the unified `RelatedServices` component from `InternalLinks.ts
 ### i18n for Related Services
 All `relatedServices` translations are in `client/src/lib/i18n.tsx` for DE, EN, HR, TR languages
 
+## Structured Data & Schema Markup
+
+### Global Schemas (index.html)
+- **Organization**: Complete company information with contact details, address, social links
+- **LocalBusiness**: Local business info with geo-coordinates, opening hours, area served
+- **WebSite**: Site identification with publisher reference
+- **WebPage with Speakable**: Voice search optimization for Google Assistant/Alexa using XPath selectors
+
+### Service Page Schemas
+All 7 service pages (`/leistungen/*`) include:
+- **Service Schema**: Service type, provider, area served, description
+- **FAQPage Schema**: 3 relevant FAQs per service for rich snippets
+
+Service pages with schemas:
+- Marketing, SocialMedia, Content, Brand, Web, SEO, KI
+
+### Geo-Targeting
+- Geo meta tags: DE-BY region, Fürstenfeldbruck placename, coordinates
+- LocalBusiness areaServed: Germany, Croatia, Turkey, Bayern, München, Fürstenfeldbruck
+- GeoLinks component for location-specific internal links
+
 ## Pre-Rendering for SEO
 
 ### Setup
