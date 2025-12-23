@@ -112,28 +112,21 @@ const webseitenSchema = [
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": "https://extrucon.de/webseiten-ki#service",
-    "name": "Webseiten mit KI-Features",
-    "description": "Moderne Websites mit integrierten KI-Features: Chatbots, automatische Content-Erstellung, intelligente SEO. Professionelle Webentwicklung mit React und TypeScript.",
+    "name": "Webseiten mit GPT-4 Chatbot & KI-Features",
+    "alternateName": ["AI Website Development", "GPT-4 Website Integration", "KI-Website mit Chatbot"],
+    "description": "Moderne Websites mit GPT-4 Chatbots, Claude AI Integration und automatischer Content-Erstellung. React, Next.js mit KI-Features für intelligente Kundeninteraktion.",
     "provider": {
       "@type": "LocalBusiness",
       "name": "ExtruCon GmbH",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Hasenheide 8",
-        "addressLocality": "Fürstenfeldbruck",
-        "postalCode": "82256",
-        "addressRegion": "Bayern",
-        "addressCountry": "DE"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 48.1789,
-        "longitude": 11.2546
-      },
-      "telephone": "+49-89-444438879"
+      "@id": "https://extrucon.de/#organization"
     },
-    "areaServed": ["Bayern", "Deutschland", "Österreich", "Schweiz"],
-    "serviceType": "Webentwicklung mit KI",
+    "areaServed": [
+      { "@type": "City", "name": "Fürstenfeldbruck" },
+      { "@type": "City", "name": "München" },
+      { "@type": "State", "name": "Bayern" },
+      { "@type": "Country", "name": "Deutschland" }
+    ],
+    "serviceType": ["KI-Website", "GPT-4 Chatbot Integration", "AI Web Development"],
     "offers": {
       "@type": "AggregateOffer",
       "priceCurrency": "EUR",
@@ -157,26 +150,26 @@ const webseitenSchema = [
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Was kostet eine Website mit KI-Features?",
+        "name": "Welche KI-Modelle integrieren Sie in Websites?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Unsere Websites starten ab 2.500€ für eine Landing Page und reichen bis zu 15.000€+ für komplexe Web-Applikationen mit umfassenden KI-Integrationen."
+          "text": "Wir integrieren GPT-4 und Claude AI für Chatbots, Midjourney und DALL-E für Bildgenerierung, sowie OpenAI Embeddings für intelligente Suchfunktionen auf Ihrer Website."
         }
       },
       {
         "@type": "Question",
-        "name": "Welche KI-Features können integriert werden?",
+        "name": "Was kostet eine Website mit GPT-4 Chatbot?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Wir integrieren KI-Chatbots für Kundenservice, automatische Content-Generierung, intelligente SEO-Optimierung, personalisierte Empfehlungen und Bild-Analyse."
+          "text": "Eine Website mit GPT-4 Chatbot startet ab 4.000€. Komplexe Web-Applikationen mit umfassenden KI-Integrationen kosten 10.000€ - 15.000€+."
         }
       },
       {
         "@type": "Question",
-        "name": "Wie lange dauert die Entwicklung?",
+        "name": "Ist ein KI-Chatbot DSGVO-konform?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Eine Landing Page ist in 2-3 Wochen fertig. Komplexere Projekte dauern 4-8 Wochen, abhängig von den gewünschten Features und Integrationen."
+          "text": "Ja, unsere KI-Chatbots sind DSGVO-konform. Wir nutzen europäische Server, anonymisieren Daten und informieren Nutzer transparent über die KI-Verarbeitung."
         }
       }
     ]
@@ -190,9 +183,9 @@ export default function WebseitenKI() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead 
-        title="Webseiten mit KI-Features | ExtruCon Fürstenfeldbruck – Chatbots & SEO"
-        description="Moderne Websites mit integrierten KI-Features: Chatbots, automatische Content-Erstellung, intelligente SEO. Webentwicklung aus Fürstenfeldbruck – deutschlandweit."
-        keywords="Webseiten mit KI, Website Chatbot, KI Content, SEO Automatisierung, Webentwicklung München, React Website, KI Website Agentur"
+        title="Webseiten mit GPT-4 Chatbot | KI-Website Entwicklung | ExtruCon"
+        description="Moderne Websites mit GPT-4 Chatbot, Claude AI Integration & automatischer Content-Erstellung. React, Next.js mit KI-Features. Webentwicklung Fürstenfeldbruck."
+        keywords="Website mit GPT-4 Chatbot, KI Website, Claude AI Website, Webseiten mit KI, AI Chatbot Integration, KI Content Website, React KI Website, Next.js AI, Webentwicklung München KI"
         canonical="https://extrucon.de/webseiten-ki"
         geoRegion="DE-BY"
         geoPlacename="Fürstenfeldbruck"

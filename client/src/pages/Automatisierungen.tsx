@@ -135,28 +135,21 @@ const automationSchema = [
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": "https://extrucon.de/automatisierungen#service",
-    "name": "Workflow-Automatisierung mit n8n",
-    "description": "Professionelle Geschäftsprozess-Automatisierung mit n8n. E-Mail, CRM, Rechnungen und mehr automatisieren. Bis zu 80% Zeitersparnis.",
+    "name": "KI-Workflow-Automatisierung mit n8n & GPT-4",
+    "alternateName": ["AI Automation", "GPT-4 Workflow Automation", "KI-gestützte Prozessautomatisierung"],
+    "description": "Professionelle KI-gestützte Geschäftsprozess-Automatisierung mit n8n, Make und GPT-4. E-Mail, CRM, Rechnungen automatisieren. Bis zu 80% Zeitersparnis durch intelligente Workflows.",
     "provider": {
       "@type": "LocalBusiness",
       "name": "ExtruCon GmbH",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Hasenheide 8",
-        "addressLocality": "Fürstenfeldbruck",
-        "postalCode": "82256",
-        "addressRegion": "Bayern",
-        "addressCountry": "DE"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 48.1789,
-        "longitude": 11.2546
-      },
-      "telephone": "+49-89-444438879"
+      "@id": "https://extrucon.de/#organization"
     },
-    "areaServed": ["Bayern", "Deutschland", "Österreich", "Schweiz"],
-    "serviceType": "Workflow-Automatisierung",
+    "areaServed": [
+      { "@type": "City", "name": "Fürstenfeldbruck" },
+      { "@type": "City", "name": "München" },
+      { "@type": "State", "name": "Bayern" },
+      { "@type": "Country", "name": "Deutschland" }
+    ],
+    "serviceType": ["KI-Automatisierung", "Workflow Automation", "GPT-4 Integration", "n8n Workflows"],
     "offers": {
       "@type": "Offer",
       "availability": "https://schema.org/InStock",
@@ -181,26 +174,26 @@ const automationSchema = [
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Was ist n8n und warum nutzt ExtruCon es?",
+        "name": "Wie nutzt ExtruCon KI für Workflow-Automatisierung?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "n8n ist eine leistungsstarke Open-Source Workflow-Automatisierungsplattform. Wir nutzen n8n, weil es flexibel, skalierbar und kosteneffizient ist – ideal für maßgeschneiderte Automatisierungslösungen."
+          "text": "Wir integrieren GPT-4 und Claude AI in n8n-Workflows für intelligente E-Mail-Klassifizierung, automatische Dokumentenverarbeitung und KI-gestützte Entscheidungsfindung in Geschäftsprozessen."
         }
       },
       {
         "@type": "Question",
-        "name": "Welche Prozesse können automatisiert werden?",
+        "name": "Was ist n8n und warum nutzt ExtruCon es mit KI?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Nahezu alle wiederkehrenden Geschäftsprozesse: E-Mail-Workflows, CRM-Synchronisation, Rechnungsstellung, Bestandsmanagement, Kundenkommunikation und viele mehr."
+          "text": "n8n ist eine leistungsstarke Open-Source Workflow-Plattform. Kombiniert mit GPT-4 und KI-Nodes ermöglicht sie intelligente Automatisierungen, die über einfache Wenn-Dann-Regeln hinausgehen."
         }
       },
       {
         "@type": "Question",
-        "name": "Wie viel Zeit kann ich mit Automatisierung sparen?",
+        "name": "Welche KI-gestützten Prozesse können automatisiert werden?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Unsere Kunden berichten von Zeiteinsparungen von bis zu 80% bei wiederkehrenden Aufgaben. Die genaue Ersparnis hängt von Ihren spezifischen Prozessen ab."
+          "text": "KI-gestützte E-Mail-Triage, intelligente Lead-Qualifizierung mit GPT-4, automatische Dokumentenextraktion, KI-Chatbot-Integrationen, und Sentiment-Analyse für Kundenfeedback."
         }
       }
     ]
@@ -214,9 +207,9 @@ export default function Automatisierungen() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead 
-        title="Workflow-Automatisierung mit n8n | ExtruCon Fürstenfeldbruck – 80% Zeit sparen"
-        description="Automatisieren Sie Ihre Geschäftsprozesse mit n8n: E-Mail, CRM, Rechnungen & mehr. Bis zu 80% Zeitersparnis. KI-Agentur aus Fürstenfeldbruck – deutschlandweit."
-        keywords="n8n Automatisierung, Workflow Automatisierung, Prozessautomatisierung, Business Automation, Zapier Alternative, Make Alternative, Automatisierung München, n8n Agentur"
+        title="KI-Workflow-Automatisierung mit n8n & GPT-4 | ExtruCon – 80% Zeit sparen"
+        description="KI-gestützte Workflow-Automatisierung mit n8n, Make & GPT-4. E-Mail, CRM, Rechnungen automatisieren. Bis zu 80% Zeitersparnis. KI-Agentur Fürstenfeldbruck."
+        keywords="KI Automatisierung, n8n GPT-4, Workflow Automatisierung KI, AI Prozessautomatisierung, Business Automation KI, Zapier Alternative, Make Alternative, n8n Agentur München, Claude AI Integration, GPT-4 Workflow"
         canonical="https://extrucon.de/automatisierungen"
         geoRegion="DE-BY"
         geoPlacename="Fürstenfeldbruck"
