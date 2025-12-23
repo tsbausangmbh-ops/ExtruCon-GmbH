@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="bg-background border-t border-white/10 py-8 mt-0" itemScope itemType="https://schema.org/LocalBusiness">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid md:grid-cols-5 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
             <a href="https://extrucon.de" className="flex items-center gap-3 mb-4 hover:opacity-80 transition-opacity" itemProp="url">
               <img src={logoImg} alt="ExtruCon GmbH Logo" className="h-10 w-10 object-contain" loading="lazy" />
@@ -20,10 +20,10 @@ export function Footer() {
               {t.footer.slogan}
             </p>
             <div className="flex flex-wrap gap-2 text-xs">
-              <span className="px-2 py-1 rounded bg-primary/10 text-primary">{t.nav.kiAgents}</span>
-              <span className="px-2 py-1 rounded bg-primary/10 text-primary">{t.nav.automation}</span>
-              <span className="px-2 py-1 rounded bg-primary/10 text-primary">{t.nav.websitesKI}</span>
-              <span className="px-2 py-1 rounded bg-primary/10 text-primary">{t.nav.marketing}</span>
+              <a href="/ki-agenten" className="px-2 py-1 rounded bg-primary/10 text-primary hover:bg-primary/20 transition-colors">{t.nav.kiAgents}</a>
+              <a href="/automatisierungen" className="px-2 py-1 rounded bg-primary/10 text-primary hover:bg-primary/20 transition-colors">{t.nav.automation}</a>
+              <a href="/webseiten-ki" className="px-2 py-1 rounded bg-primary/10 text-primary hover:bg-primary/20 transition-colors">{t.nav.websitesKI}</a>
+              <a href="/leistungen/marketing" className="px-2 py-1 rounded bg-primary/10 text-primary hover:bg-primary/20 transition-colors">{t.nav.marketing}</a>
             </div>
           </div>
           
@@ -36,6 +36,21 @@ export function Footer() {
               <li><a href="/leistungen/social-media" className="hover:text-primary transition-colors">{t.nav.socialMedia}</a></li>
               <li><a href="/leistungen/marketing" className="hover:text-primary transition-colors">{t.nav.marketing}</a></li>
               <li><a href="/leistungen/content" className="hover:text-primary transition-colors">{t.nav.contentCreation}</a></li>
+              <li><a href="/leistungen/seo" className="hover:text-primary transition-colors">{t.nav.seo}</a></li>
+              <li><a href="/leistungen/brand" className="hover:text-primary transition-colors">Branding</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-white mb-4">Standorte</h3>
+            <ul className="space-y-2 text-gray-400 text-sm">
+              <li><a href="/muenchen" className="hover:text-primary transition-colors">München</a></li>
+              <li><a href="/muenchen/schwabing" className="hover:text-primary transition-colors">Schwabing</a></li>
+              <li><a href="/muenchen/bogenhausen" className="hover:text-primary transition-colors">Bogenhausen</a></li>
+              <li><a href="/muenchen/nymphenburg" className="hover:text-primary transition-colors">Nymphenburg</a></li>
+              <li><a href="/starnberg" className="hover:text-primary transition-colors">Starnberg</a></li>
+              <li><a href="/dachau" className="hover:text-primary transition-colors">Dachau</a></li>
+              <li><a href="/germering" className="hover:text-primary transition-colors">Germering</a></li>
             </ul>
           </div>
 
@@ -82,8 +97,11 @@ export function Footer() {
           <p>&copy; {new Date().getFullYear()} ExtruCon GmbH. {t.footer.allRights}</p>
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
             <a href="/ueber-uns" className="hover:text-white transition-colors">{t.footer.about}</a>
+            <a href="/referenzen" className="hover:text-white transition-colors">{t.nav.referenzen}</a>
             <a href="/faq" className="hover:text-white transition-colors">{t.footer.faq}</a>
             <a href="/ratgeber" className="hover:text-white transition-colors">{t.footer.ratgeber}</a>
+            <a href="/ki-bot" className="hover:text-white transition-colors">KI-Chatbot</a>
+            <a href="/termin" className="hover:text-white transition-colors">Termin buchen</a>
             <a href="/datenschutz" className="hover:text-white transition-colors">{t.footer.privacy}</a>
             <a href="/agb" className="hover:text-white transition-colors">{t.footer.terms}</a>
             <a href="/impressum" className="hover:text-white transition-colors">{t.footer.impressum}</a>

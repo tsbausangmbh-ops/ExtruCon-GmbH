@@ -19,7 +19,6 @@ export function Navbar() {
     { name: t.nav.marketing, href: "/leistungen/marketing", icon: Palette },
     { name: t.nav.seo, href: "/leistungen/seo", icon: Search },
     { name: t.nav.referenzen, href: "/referenzen", icon: Award },
-    { name: t.nav.faq, href: "/faq", icon: HelpCircle },
   ];
 
   return (
