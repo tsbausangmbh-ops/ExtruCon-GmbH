@@ -144,10 +144,12 @@ export default function Referenzen() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Referenzen & Erfolgsgeschichten | ExtruCon KI-Agentur"
-        description="Unsere erfolgreichen Projekte: KI-Agenten, Websites, Automatisierungen und mehr. Überzeugen Sie sich von unserer Arbeit. Agentur Fürstenfeldbruck."
-        keywords="Referenzen, Portfolio, Erfolgsgeschichten, KI Projekte, Webdesign Projekte, Fürstenfeldbruck"
+        title="Referenzen | GPT-4 Chatbots & KI-Projekte | ExtruCon Portfolio"
+        description="100+ erfolgreiche KI-Projekte: GPT-4 Chatbots, n8n Automatisierungen, KI-Websites. Referenzen von Ihrer KI-Agentur Fürstenfeldbruck bei München."
+        keywords="KI Referenzen, GPT-4 Projekte, Chatbot Portfolio, n8n Automatisierung Beispiele, KI-Website Referenzen, ExtruCon Portfolio"
         canonical="https://extrucon.de/referenzen"
+        geoRegion="DE-BY"
+        geoPlacename="Fürstenfeldbruck"
       />
       <Navbar />
       <main className="pt-24">

@@ -58,10 +58,12 @@ export default function FAQ() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="FAQ | Häufige Fragen zu KI & Automatisierung | ExtruCon"
-        description="Antworten auf häufig gestellte Fragen zu KI-Agenten, Automatisierungen, Webentwicklung und Marketing. ExtruCon GmbH Fürstenfeldbruck."
-        keywords="KI FAQ, Automatisierung Fragen, KI-Agenten FAQ, Webentwicklung FAQ"
+        title="FAQ | GPT-4, KI-Agenten & n8n Automatisierung Fragen | ExtruCon"
+        description="Häufige Fragen zu GPT-4 Chatbots, KI-Agenten, n8n/Make Automatisierung & KI-Websites. Expertenantworten von ExtruCon GmbH Fürstenfeldbruck."
+        keywords="KI FAQ, GPT-4 Fragen, KI-Agenten FAQ, n8n Automatisierung FAQ, Chatbot Kosten, Claude AI FAQ, DSGVO KI"
         canonical="https://extrucon.de/faq"
+        geoRegion="DE-BY"
+        geoPlacename="Fürstenfeldbruck"
       />
       <Navbar />
       <main className="pt-24">

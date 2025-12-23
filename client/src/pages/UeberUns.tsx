@@ -16,9 +16,12 @@ export default function UeberUns() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead 
-        title="Über uns | ExtruCon GmbH Fürstenfeldbruck – KI-Agentur & Automatisierung"
-        description="ExtruCon GmbH: Ihre KI-Agentur aus Fürstenfeldbruck bei München. Wir entwickeln KI-Agenten, automatisieren Prozesse und erstellen intelligente Websites – deutschlandweit."
-        keywords="ExtruCon GmbH, KI-Agentur Fürstenfeldbruck, Automatisierung München, Marketing Agentur Bayern, HRB 18623"
+        title="Über ExtruCon | GPT-4 & Claude AI Experten | Fürstenfeldbruck"
+        description="ExtruCon GmbH: KI-Agentur mit GPT-4, Claude AI & n8n Expertise aus Fürstenfeldbruck bei München. 100+ Projekte, 500+ Automatisierungen. Deutschlandweit."
+        keywords="ExtruCon GmbH, GPT-4 Agentur, Claude AI Experten, KI-Agentur Fürstenfeldbruck, n8n Spezialisten, HRB 18623 München"
+        canonical="https://extrucon.de/ueber-uns"
+        geoRegion="DE-BY"
+        geoPlacename="Fürstenfeldbruck"
       />
       <Navbar />
       <main className="pt-24">

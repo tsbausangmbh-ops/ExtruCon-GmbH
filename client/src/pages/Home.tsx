@@ -20,12 +20,13 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden font-sans">
       <SEOHead
-        title="ExtruCon GmbH | KI-Agentur Fürstenfeldbruck bei München"
-        description="Ihre KI-Agentur in Fürstenfeldbruck. KI-Agenten, Automatisierungen, Webentwicklung & Marketing mit künstlicher Intelligenz. Kostenlose Beratung!"
-        keywords="KI Agentur Fürstenfeldbruck, KI Agentur München, künstliche Intelligenz Bayern, AI Agency, Automatisierung, KI Beratung, n8n Automatisierung"
+        title="ExtruCon GmbH | KI-Agentur mit GPT-4 & Claude AI | Fürstenfeldbruck"
+        description="KI-Agentur Fürstenfeldbruck: GPT-4 Chatbots, Claude AI Agenten, n8n Automatisierung & KI-Websites. Kostenlose Beratung für München & Bayern!"
+        keywords="KI Agentur Fürstenfeldbruck, GPT-4 Agentur München, Claude AI Bayern, KI Chatbot, n8n Automatisierung, Midjourney, DALL-E, AI Agency Deutschland, KI Beratung"
         canonical="https://extrucon.de"
         geoRegion="DE-BY"
         geoPlacename="Fürstenfeldbruck"
+        ogType="website"
       />
       <Navbar />
       <main>

@@ -57,10 +57,12 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Kontakt | KI-Beratung Fürstenfeldbruck | ExtruCon GmbH"
-        description="Kontaktieren Sie ExtruCon für KI-Beratung in Fürstenfeldbruck bei München. Kostenlose Erstberatung zu KI-Agenten und Automatisierung."
-        keywords="KI Beratung Kontakt, Fürstenfeldbruck, München, ExtruCon Kontakt"
+        title="Kontakt | Kostenlose GPT-4 & KI-Beratung | ExtruCon Fürstenfeldbruck"
+        description="Kostenlose KI-Beratung in Fürstenfeldbruck/München: GPT-4 Chatbots, Claude AI Agenten, n8n Automatisierung. Jetzt Termin vereinbaren!"
+        keywords="KI Beratung kostenlos, GPT-4 Beratung, ExtruCon Kontakt, Fürstenfeldbruck, München KI Agentur, Automatisierung Beratung"
         canonical="https://extrucon.de/kontakt"
+        geoRegion="DE-BY"
+        geoPlacename="Fürstenfeldbruck"
       />
       <Navbar />
       <main className="pt-24">
