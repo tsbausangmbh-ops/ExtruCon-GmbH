@@ -9,10 +9,12 @@ export default function Privacy() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Datenschutzerklärung | ExtruCon GmbH – DSGVO-konform"
-        description="Datenschutzerklärung der ExtruCon GmbH gemäß DSGVO. Erfahren Sie, wie wir personenbezogene Daten schützen. Ihre KI-Agentur in Fürstenfeldbruck bei München. Transparent & sicher."
-        keywords="Datenschutz, DSGVO, ExtruCon, Datenschutzerklärung, KI-Agentur"
+        title="Datenschutzerklärung | DSGVO-konform | ExtruCon GmbH"
+        description="Datenschutzerklärung der ExtruCon GmbH gemäß DSGVO & BDSG. Sichere Datenverarbeitung bei GPT-4 & KI-Diensten. KI-Agentur Fürstenfeldbruck bei München."
+        keywords="Datenschutz ExtruCon, DSGVO KI-Agentur, Datenschutzerklärung, KI Datenschutz, GPT-4 DSGVO, AI Privacy"
         canonical="https://extrucon.de/datenschutz"
+        geoRegion="DE-BY"
+        geoPlacename="Fürstenfeldbruck"
       />
       <Navbar />
       <main className="pt-24">
