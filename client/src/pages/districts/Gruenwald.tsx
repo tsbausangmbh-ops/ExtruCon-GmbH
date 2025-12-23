@@ -7,30 +7,49 @@ import { Bot, MapPin, Phone, ArrowRight, Workflow, Globe, Building2, Gem, Shield
 import { Link } from "wouter";
 
 export default function Gruenwald() {
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "KI-Agentur Grünwald | ExtruCon GmbH",
-    "description": "KI-Agentur für Grünwald bei München. Exklusive KI-Lösungen für Luxusimmobilien, Vermögensverwaltung und gehobene Privatkundschaft.",
-    "url": "https://extrucon.de/muenchen/gruenwald",
-    "mainEntity": {
-      "@type": "LocalBusiness",
-      "@id": "https://extrucon.de/#localbusiness"
-    },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de" },
-        { "@type": "ListItem", "position": 2, "name": "München", "item": "https://extrucon.de/muenchen" },
-        { "@type": "ListItem", "position": 3, "name": "Grünwald", "item": "https://extrucon.de/muenchen/gruenwald" }
+  const schemaData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "KI-Agentur Grünwald | ExtruCon GmbH",
+      "description": "Exklusive KI-Agentur für Grünwald: VIP KI-Agenten mit GPT-4 & Claude AI für Luxusimmobilien, Vermögensverwaltung und Family Offices.",
+      "url": "https://extrucon.de/muenchen/gruenwald",
+      "mainEntity": { "@type": "LocalBusiness", "@id": "https://extrucon.de/#localbusiness" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de" },
+          { "@type": "ListItem", "position": 2, "name": "München", "item": "https://extrucon.de/muenchen" },
+          { "@type": "ListItem", "position": 3, "name": "Grünwald", "item": "https://extrucon.de/muenchen/gruenwald" }
+        ]
+      },
+      "areaServed": [
+        { "@type": "Place", "name": "Grünwald" },
+        { "@type": "Place", "name": "Pullach" },
+        { "@type": "Place", "name": "Straßlach" }
       ]
     },
-    "areaServed": [
-      { "@type": "Place", "name": "Grünwald" },
-      { "@type": "Place", "name": "Pullach" },
-      { "@type": "Place", "name": "Straßlach" }
-    ]
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://extrucon.de/muenchen/gruenwald#service",
+      "name": "VIP KI-Lösungen Grünwald",
+      "alternateName": ["Premium AI Solutions", "GPT-4 VIP Service"],
+      "description": "Exklusive KI-Agenten mit GPT-4 & Claude AI für Family Offices, Vermögensverwalter und Luxusimmobilien in Grünwald. Höchste Diskretion.",
+      "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
+      "areaServed": { "@type": "Place", "name": "Grünwald" },
+      "serviceType": ["VIP KI-Agenten", "GPT-4 Chatbot", "Diskrete Automatisierung"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Welche KI-Modelle nutzt ExtruCon für VIP-Kunden?", "acceptedAnswer": { "@type": "Answer", "text": "Für VIP-Kunden in Grünwald setzen wir GPT-4 und Claude AI ein – die fortschrittlichsten KI-Modelle für höchste Ansprüche. Alle Daten bleiben DSGVO-konform in Europa." } },
+        { "@type": "Question", "name": "Ist ein GPT-4 Chatbot für Family Offices geeignet?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir entwickeln diskrete GPT-4 Chatbots für Family Offices, die Kundenanfragen intelligent beantworten, Reports erstellen und vertrauliche Kommunikation automatisieren." } },
+        { "@type": "Question", "name": "Bietet ExtruCon Vor-Ort-Service in Grünwald?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir bieten diskrete Vor-Ort-Beratung in Grünwald, Pullach und Straßlach. Von Fürstenfeldbruck sind wir in 25 Minuten bei Ihnen." } }
+      ]
+    }
+  ];
 
   const services = [
     { icon: Bot, title: "VIP KI-Agenten", description: "Hochexklusive KI-Assistenten für anspruchsvolle Privatkundschaft und Family Offices.", link: "/ki-agenten" },
@@ -49,9 +68,12 @@ export default function Gruenwald() {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="KI-Agentur Grünwald | ExtruCon – Exklusive KI für das Isartal"
-        description="KI-Agentur Grünwald bei München: VIP KI-Agenten & Automatisierung für Luxusimmobilien, Vermögensverwaltung und gehobene Dienstleister. ✓ Exklusiv ✓ Diskret"
+        title="KI-Agentur Grünwald | GPT-4 & Claude AI für VIP-Kunden | ExtruCon"
+        description="Exklusive KI-Agentur Grünwald: VIP KI-Agenten mit GPT-4 & Claude AI für Luxusimmobilien, Vermögensverwaltung, Family Offices. ✓ Höchste Diskretion ✓ DSGVO"
+        keywords="KI Agentur Grünwald, GPT-4 Vermögensverwaltung, Claude AI Family Office, KI Luxusimmobilien, VIP Chatbot München, Pullach KI, Isartal Automatisierung"
         canonical="https://extrucon.de/muenchen/gruenwald"
+        geoRegion="DE-BY"
+        geoPlacename="Grünwald"
         schema={schemaData}
       />
       <Navbar />

@@ -34,19 +34,20 @@ export default function Nymphenburg() {
       "@context": "https://schema.org",
       "@type": "Service",
       "@id": "https://extrucon.de/muenchen/nymphenburg#service",
-      "name": "Elegante KI-Lösungen Nymphenburg",
-      "description": "Stilvolle KI-Agenten und Automatisierung für Traditionsunternehmen, Familienunternehmen und gehobene Dienstleister in Nymphenburg.",
+      "name": "Elegante KI-Lösungen mit GPT-4 Nymphenburg",
+      "alternateName": ["Premium Business AI", "GPT-4 Traditionsunternehmen"],
+      "description": "Stilvolle KI-Agenten mit GPT-4 & Claude AI für Traditionsunternehmen, Familienunternehmen und gehobene Dienstleister in Nymphenburg.",
       "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
       "areaServed": { "@type": "Place", "name": "München-Nymphenburg" },
-      "serviceType": ["Traditions-KI", "Familienunternehmen Automatisierung", "B2B KI"]
+      "serviceType": ["GPT-4 Traditionsunternehmen", "Claude AI Familienunternehmen", "B2B KI-Automatisierung"]
     },
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "Bietet ExtruCon Vor-Ort-Service in Nymphenburg?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir bieten diskrete Vor-Ort-Beratung in Nymphenburg, Neuhausen und Gern. Von Fürstenfeldbruck sind wir in 25 Minuten bei Ihnen." } },
-        { "@type": "Question", "name": "Welche KI-Lösungen eignen sich für Traditionsunternehmen?", "acceptedAnswer": { "@type": "Answer", "text": "Wir entwickeln elegante KI-Agenten für Kundenkommunikation, diskrete Workflow-Automatisierung und moderne Digitalisierung – unter Bewahrung Ihrer Unternehmenstradition." } },
-        { "@type": "Question", "name": "Können KI-Agenten für Hausverwaltungen eingesetzt werden?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir entwickeln KI-Agenten für automatisierte Mieterkommunikation, Schadensmeldungen und intelligentes Objektmanagement – ideal für Hausverwaltungen in Nymphenburg." } }
+        { "@type": "Question", "name": "Welche KI-Modelle nutzt ExtruCon für Traditionsunternehmen?", "acceptedAnswer": { "@type": "Answer", "text": "Wir setzen GPT-4 und Claude AI für elegante Kundenkommunikation ein. Die KI wird an Ihren Unternehmensstil angepasst – diskret und professionell." } },
+        { "@type": "Question", "name": "Ist GPT-4 für Hausverwaltungen in Nymphenburg geeignet?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, GPT-4 Chatbots automatisieren Mieterkommunikation, Schadensmeldungen und Terminvereinbarungen – 24/7 verfügbar, DSGVO-konform." } },
+        { "@type": "Question", "name": "Bietet ExtruCon Vor-Ort-Service in Nymphenburg?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir bieten diskrete Vor-Ort-Beratung in Nymphenburg, Neuhausen und Gern. Von Fürstenfeldbruck sind wir in 25 Minuten bei Ihnen." } }
       ]
     }
   ];

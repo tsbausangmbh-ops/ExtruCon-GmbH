@@ -77,10 +77,10 @@ export default function Muenchen() {
       },
       {
         "@type": "Question",
-        "name": "Welche KI-Lösungen eignen sich für Münchner Unternehmen?",
+        "name": "Welche KI-Modelle setzt ExtruCon für Münchner Unternehmen ein?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Wir entwickeln KI-Agenten für Kundenservice, Workflow-Automatisierung mit n8n und Websites mit KI-Features. Speziell für Branchen wie Gesundheit, Immobilien, Recht und E-Commerce in München."
+          "text": "Wir nutzen GPT-4, Claude AI und Gemini für intelligente KI-Agenten. Für Bilder Midjourney und DALL-E. Workflow-Automatisierung mit n8n, Make und Zapier – alles DSGVO-konform."
         }
       }
     ]
