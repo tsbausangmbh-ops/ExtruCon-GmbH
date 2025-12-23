@@ -15,6 +15,36 @@ import { useLanguage } from "@/lib/i18n";
 export function Services() {
   const { t } = useLanguage();
 
+  const mainServices = [
+    {
+      title: t.nav.kiAgents,
+      description: "GPT-4 & Claude AI Chatbots für 24/7 Kundenservice, Lead-Generierung und automatisierte Beratung",
+      icon: Bot,
+      image: aiImg,
+      color: "text-cyan-400",
+      href: "/ki-agenten",
+      featured: true
+    },
+    {
+      title: t.nav.automation,
+      description: "n8n & Make Workflows für automatisierte Geschäftsprozesse und nahtlose System-Integration",
+      icon: Share2,
+      image: socialImg,
+      color: "text-orange-400",
+      href: "/automatisierungen",
+      featured: true
+    },
+    {
+      title: t.nav.websitesKI,
+      description: "Moderne Websites mit KI-Chatbot, SEO-Optimierung und Conversion-Fokus",
+      icon: Globe,
+      image: webImg,
+      color: "text-emerald-400",
+      href: "/webseiten-ki",
+      featured: true
+    }
+  ];
+
   const services = [
     {
       title: t.servicesPage.brand.title,
@@ -100,6 +130,47 @@ export function Services() {
           </p>
         </div>
 
+        {/* Main Services - Featured */}
+        <div className="grid md:grid-cols-3 gap-6 mb-10">
+          {mainServices.map((service, index) => (
+            <motion.div
+              key={`main-${index}`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <a href={service.href} className="block h-full" data-testid={`link-main-service-${index}`}>
+                <Card className="glass-card border-2 border-primary/30 overflow-hidden group hover:bg-white/10 hover:border-primary/50 transition-all duration-300 h-full flex flex-col cursor-pointer">
+                  <div className="h-48 overflow-hidden relative">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80" />
+                    <div className="absolute top-4 right-4">
+                      <span className="px-2 py-1 bg-primary/20 border border-primary/40 rounded-full text-xs text-primary font-medium">Featured</span>
+                    </div>
+                    <div className="absolute bottom-4 left-4">
+                      <service.icon className={`w-8 h-8 ${service.color} drop-shadow-lg`} />
+                    </div>
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-xl text-white font-display tracking-wide">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-gray-400 text-base">
+                      {service.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </a>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Additional Services */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div

@@ -12,7 +12,7 @@ import { Statistics } from "@/components/sections/Statistics";
 import { Process } from "@/components/sections/Process";
 import { TrustSignals } from "@/components/sections/TrustSignals";
 import { SEOHead } from "@/components/SEOHead";
-import { ExploreMoreSection } from "@/components/InternalLinks";
+import { ExploreMoreSection, LocationLinks } from "@/components/InternalLinks";
 
 // Homepage uses schemas from index.html - no duplicates needed
 
@@ -51,6 +51,8 @@ export default function Home() {
         <About />
         {/* Funnel Logic: 4. Action */}
         <Contact />
+        {/* Location Links for Local SEO */}
+        <LocationLinks />
         {/* Explore More Links for SEO */}
         <ExploreMoreSection />
       </main>

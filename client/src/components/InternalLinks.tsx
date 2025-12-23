@@ -103,6 +103,75 @@ export function ContextualCTA() {
   );
 }
 
+export function LocationLinks() {
+  const locations = [
+    { name: "München", href: "/muenchen" },
+    { name: "Schwabing", href: "/muenchen/schwabing" },
+    { name: "Bogenhausen", href: "/muenchen/bogenhausen" },
+    { name: "Nymphenburg", href: "/muenchen/nymphenburg" },
+    { name: "Grünwald", href: "/muenchen/gruenwald" },
+    { name: "Harlaching", href: "/muenchen/harlaching" },
+    { name: "Starnberg", href: "/starnberg" },
+    { name: "Dachau", href: "/dachau" },
+    { name: "Germering", href: "/germering" },
+    { name: "Puchheim", href: "/puchheim" },
+    { name: "Olching", href: "/olching" },
+  ];
+
+  return (
+    <section className="py-8 border-t border-white/10">
+      <div className="container mx-auto px-4">
+        <h3 className="text-lg font-bold text-white mb-4 text-center flex items-center justify-center gap-2">
+          <MapPin className="w-5 h-5 text-primary" />
+          Unsere Standorte in Bayern
+        </h3>
+        <div className="flex flex-wrap justify-center gap-2">
+          {locations.map((loc) => (
+            <a
+              key={loc.href}
+              href={loc.href}
+              className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300 hover:text-white hover:bg-primary/20 hover:border-primary/30 transition-colors"
+            >
+              {loc.name}
+            </a>
+          ))}
+        </div>
+        <p className="text-center text-gray-500 text-sm mt-4">
+          KI-Agentur für <a href="/muenchen" className="text-primary hover:underline">München</a> und Umgebung · 
+          <a href="/kontakt" className="text-primary hover:underline ml-1">Kostenlose Beratung</a>
+        </p>
+      </div>
+    </section>
+  );
+}
+
+export function ServiceQuickLinks() {
+  const services = [
+    { name: "KI-Agenten", href: "/ki-agenten" },
+    { name: "Automatisierungen", href: "/automatisierungen" },
+    { name: "Webseiten mit KI", href: "/webseiten-ki" },
+    { name: "Social Media", href: "/leistungen/social-media" },
+    { name: "Marketing", href: "/leistungen/marketing" },
+    { name: "Content", href: "/leistungen/content" },
+    { name: "SEO", href: "/leistungen/seo" },
+    { name: "Branding", href: "/leistungen/markenaufbau" },
+  ];
+
+  return (
+    <div className="flex flex-wrap justify-center gap-2 py-4">
+      {services.map((svc) => (
+        <a
+          key={svc.href}
+          href={svc.href}
+          className="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-sm text-primary hover:bg-primary/20 transition-colors"
+        >
+          {svc.name}
+        </a>
+      ))}
+    </div>
+  );
+}
+
 interface RelatedService {
   href: string;
   title: string;
