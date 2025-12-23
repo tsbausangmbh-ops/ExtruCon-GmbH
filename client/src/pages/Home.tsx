@@ -28,7 +28,7 @@ export default function Home() {
         geoPlacename="Fürstenfeldbruck"
       />
       <Navbar />
-      <main id="main-content" role="main" aria-label="Hauptinhalt">
+      <main>
         <Hero />
         {/* Funnel Logic: 1. Problem Awareness */}
         <Problem />

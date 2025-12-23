@@ -57,7 +57,7 @@ export default function Bogenhausen() {
       />
       <Navbar />
       
-      <main id="main-content" role="main" aria-label="Hauptinhalt" className="pt-24">
+      <main>
         <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
           <div className="absolute inset-0 bg-gradient-to-br from-amber-900/20 via-background to-cyan-900/10" />
           <div className="container mx-auto px-6 relative z-10">

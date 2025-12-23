@@ -360,37 +360,9 @@ export const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
 
 </urlset>`;
 
-export const ROBOTS_TXT = `# ============================================================
-# ExtruCon GmbH - Robots.txt
-# KI-Agentur | Fürstenfeldbruck | München | Bayern
-# ============================================================
-# Optimiert für: SEO, Geo-Targeting, KI-Suchmaschinen
-# Sprachen: Deutsch (DE), English (EN), Hrvatski (HR), Türkçe (TR)
-# Geo-Fokus: Deutschland, Kroatien, Türkei
-# Letzte Aktualisierung: 2025-12-23
-# ============================================================
+export const ROBOTS_TXT = `# ExtruCon GmbH - Robots.txt
+# SEO & AI optimiert für Deutschland (DE), Kroatien (HR), Türkei (TR)
 
-# ============================================================
-# SITEMAPS & KI-RESSOURCEN
-# ============================================================
-Sitemap: https://extrucon.de/sitemap-index.xml
-Sitemap: https://extrucon.de/sitemap.xml
-Sitemap: https://extrucon.de/ai-sitemap.xml
-LLMs-TXT: https://extrucon.de/llms.txt
-
-# ============================================================
-# WEBSITE-INFORMATIONEN
-# ============================================================
-# Canonical Host
-Host: https://extrucon.de
-
-# Geo-Location: Fürstenfeldbruck, Bayern, Deutschland
-# Koordinaten: 48.1789, 11.2546
-# Einzugsgebiet: München, Starnberg, Dachau, Germering, Puchheim, Olching
-
-# ============================================================
-# SUCHMASCHINEN - PRIORITÄT 1 (Schnelles Crawling)
-# ============================================================
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
@@ -411,9 +383,6 @@ Crawl-delay: 1
 User-agent: msnbot
 Allow: /
 
-# ============================================================
-# SUCHMASCHINEN - PRIORITÄT 2 (Internationale Crawler)
-# ============================================================
 User-agent: Slurp
 Allow: /
 Crawl-delay: 2
@@ -421,16 +390,6 @@ Crawl-delay: 2
 User-agent: DuckDuckBot
 Allow: /
 
-User-agent: Qwantify
-Allow: /
-
-User-agent: Ecosia
-Allow: /
-
-# ============================================================
-# REGIONALE SUCHMASCHINEN (DE, HR, TR)
-# ============================================================
-# Yandex - Osteuropa/Kroatien
 User-agent: Yandex
 Allow: /
 Crawl-delay: 2
@@ -439,64 +398,39 @@ User-agent: YandexBot
 Allow: /
 Crawl-delay: 2
 
-# Baidu - International
 User-agent: Baiduspider
 Allow: /
 Crawl-delay: 2
 
-# Seznam - Tschechien/Osteuropa
 User-agent: SeznamBot
 Allow: /
 Crawl-delay: 2
 
-# Naver - Südkorea
 User-agent: Yeti
 Allow: /
 Crawl-delay: 2
 
-# ============================================================
-# KI-SUCHMASCHINEN - ERLAUBT (Search & Discovery)
-# ============================================================
-# OpenAI SearchBot (ChatGPT Search)
 User-agent: OAI-SearchBot
 Allow: /
 
-# ChatGPT Browser-Nutzer
 User-agent: ChatGPT-User
 Allow: /
 
-# Perplexity AI
 User-agent: PerplexityBot
 Allow: /
 
-# DuckDuckGo AI Assistant
 User-agent: DuckAssistBot
 Allow: /
 
-# You.com AI Search
 User-agent: YouBot
 Allow: /
 
-# Cohere AI
 User-agent: cohere-ai
 Allow: /
 
-# Microsoft Copilot
-User-agent: CopilotBot
-Allow: /
-
-# Brave Search AI
-User-agent: BraveBot
-Allow: /
-
-# ============================================================
-# KI-TRAINING BOTS - BLOCKIERT (Kein Training erlaubt)
-# ============================================================
-# OpenAI GPT Training
 User-agent: GPTBot
 Disallow: /
 
-# Anthropic Claude Training
 User-agent: ClaudeBot
 Disallow: /
 
@@ -506,18 +440,15 @@ Disallow: /
 User-agent: Claude-Web
 Disallow: /
 
-# Google AI Training
 User-agent: Google-Extended
 Disallow: /
 
 User-agent: GoogleOther
 Disallow: /
 
-# Apple AI Training
 User-agent: Applebot-Extended
 Disallow: /
 
-# Meta/Facebook AI Training
 User-agent: Meta-ExternalAgent
 Disallow: /
 
@@ -527,25 +458,33 @@ Disallow: /
 User-agent: meta-externalagent
 Disallow: /
 
-# ByteDance/TikTok
 User-agent: Bytespider
 Disallow: /
 
-# Common Crawl (AI Training Datasets)
 User-agent: CCBot
 Disallow: /
 
-# Diffbot
 User-agent: Diffbot
 Disallow: /
 
-# Amazon AI
 User-agent: Amazonbot
 Disallow: /
 
-# ============================================================
-# SCRAPER & SEO-TOOLS - BLOCKIERT
-# ============================================================
+User-agent: omgili
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+User-agent: img2dataset
+Disallow: /
+
+User-agent: Sidetrade
+Disallow: /
+
 User-agent: AhrefsBot
 Disallow: /
 
@@ -564,107 +503,34 @@ Disallow: /
 User-agent: DataForSeoBot
 Disallow: /
 
-User-agent: Scrapy
-Disallow: /
-
-User-agent: img2dataset
-Disallow: /
-
-User-agent: Sidetrade
-Disallow: /
-
-User-agent: omgili
-Disallow: /
-
-User-agent: omgilibot
-Disallow: /
-
-User-agent: PetalBot
-Disallow: /
-
-User-agent: Sogou
-Disallow: /
-
-# ============================================================
-# STANDARDREGEL - ALLE ANDEREN BOTS
-# ============================================================
 User-agent: *
 Allow: /
-Crawl-delay: 2
 
-# ============================================================
-# HAUPTSEITEN - PRIORISIERT FÜR INDEXIERUNG
-# ============================================================
-# Kernservices
 Allow: /ki-agenten
 Allow: /automatisierungen
 Allow: /webseiten-ki
-
-# Leistungsseiten
 Allow: /leistungen/
-Allow: /leistungen/marketing
-Allow: /leistungen/social-media
-Allow: /leistungen/content
-Allow: /leistungen/markenaufbau
-Allow: /leistungen/web
-Allow: /leistungen/ki-automatisierung
-Allow: /leistungen/seo
-
-# Informationsseiten
 Allow: /kontakt
 Allow: /termin
 Allow: /ueber-uns
 Allow: /faq
 Allow: /ratgeber
 Allow: /referenzen
-Allow: /ki-bot
+Allow: /impressum
+Allow: /datenschutz
 
-# ============================================================
-# GEO-SEITEN - LOKALES SEO (München & Umgebung)
-# ============================================================
-# München Stadtteile
 Allow: /muenchen
 Allow: /muenchen/bogenhausen
 Allow: /muenchen/schwabing
 Allow: /muenchen/nymphenburg
 Allow: /muenchen/gruenwald
 Allow: /muenchen/harlaching
-
-# Landkreis Fürstenfeldbruck
+Allow: /starnberg
+Allow: /dachau
 Allow: /germering
 Allow: /puchheim
 Allow: /olching
 
-# Weitere Städte
-Allow: /starnberg
-Allow: /dachau
-
-# ============================================================
-# RECHTLICHE SEITEN
-# ============================================================
-Allow: /impressum
-Allow: /datenschutz
-Allow: /agb
-Allow: /cookies
-Allow: /privacy
-Allow: /terms
-
-# ============================================================
-# ASSETS & RESSOURCEN - ERLAUBT
-# ============================================================
-Allow: /favicon.ico
-Allow: /logo.png
-Allow: /opengraph.jpg
-Allow: /assets/
-Allow: /manifest.json
-Allow: /humans.txt
-Allow: /ads.txt
-Allow: /openapi.yaml
-Allow: /.well-known/
-
-# ============================================================
-# BLOCKIERTE PFADE - NICHT INDEXIEREN
-# ============================================================
 Disallow: /api/
 Disallow: /_*
 Disallow: /admin/
@@ -674,316 +540,13 @@ Disallow: /*?filter=
 Disallow: /*?sort=
 Disallow: /*.json$
 Disallow: /node_modules/
-Disallow: /dist/
-Disallow: /.git/
-Disallow: /server/
 
-# ============================================================
-# ENDE DER ROBOTS.TXT
-# ============================================================`;
+Sitemap: https://extrucon.de/sitemap.xml
 
-export const AI_SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:ai="http://www.sitemaps.org/schemas/ai/1.0">
-  
-  <!-- AI-optimierte Sitemap für KI-Suchmaschinen und Assistenten -->
-  <!-- Optimiert für: ChatGPT, Perplexity, You.com, Bing Chat, Google AI -->
-  
-  <url>
-    <loc>https://extrucon.de/</loc>
-    <lastmod>2025-12-23</lastmod>
-    <ai:content-type>landing-page</ai:content-type>
-    <ai:topic>KI-Agentur, Automatisierung, Marketing</ai:topic>
-    <ai:summary>ExtruCon GmbH ist eine KI-Agentur aus Fürstenfeldbruck bei München. Spezialisiert auf KI-Agenten, Workflow-Automatisierung mit n8n, und KI-gestützte Websites.</ai:summary>
-    <ai:language>de</ai:language>
-    <ai:audience>Unternehmen, Geschäftsführer, Marketing-Manager</ai:audience>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+Allow: /favicon.ico
+Allow: /logo.png
 
-  <url>
-    <loc>https://extrucon.de/ki-agenten</loc>
-    <lastmod>2025-12-23</lastmod>
-    <ai:content-type>service-page</ai:content-type>
-    <ai:topic>KI-Agenten, Chatbots, Kundenservice-Automatisierung</ai:topic>
-    <ai:summary>Maßgeschneiderte KI-Agenten für Kundenservice, Lead-Generierung und Geschäftsprozesse. Technologien: GPT-4, Claude AI, Custom LLMs.</ai:summary>
-    <ai:language>de, en, hr, tr</ai:language>
-    <ai:keywords>KI-Agent, Chatbot, Kundenservice Bot, Lead-Generierung, GPT-4 Integration</ai:keywords>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+User-agent: *
+Crawl-delay: 2
 
-  <url>
-    <loc>https://extrucon.de/automatisierungen</loc>
-    <lastmod>2025-12-23</lastmod>
-    <ai:content-type>service-page</ai:content-type>
-    <ai:topic>Workflow-Automatisierung, n8n, Prozessoptimierung</ai:topic>
-    <ai:summary>Workflow-Automatisierung mit n8n für Geschäftsprozesse. E-Mail-Workflows, CRM-Integration, Rechnungsstellung, API-Verbindungen.</ai:summary>
-    <ai:language>de, en, hr, tr</ai:language>
-    <ai:keywords>n8n Automatisierung, Workflow Automation, Prozessoptimierung, API Integration</ai:keywords>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/webseiten-ki</loc>
-    <lastmod>2025-12-23</lastmod>
-    <ai:content-type>service-page</ai:content-type>
-    <ai:topic>Webentwicklung, KI-Integration, React, Next.js</ai:topic>
-    <ai:summary>Moderne Webentwicklung mit KI-Features. React, Next.js, TypeScript. KI-Chatbots, automatische Content-Generierung, intelligente SEO.</ai:summary>
-    <ai:language>de, en, hr, tr</ai:language>
-    <ai:keywords>Webentwicklung KI, React Website, Next.js, KI-Chatbot Integration</ai:keywords>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/leistungen/marketing</loc>
-    <lastmod>2025-12-23</lastmod>
-    <ai:content-type>service-page</ai:content-type>
-    <ai:topic>Performance Marketing, Google Ads, Meta Ads</ai:topic>
-    <ai:summary>Datengetriebenes Performance Marketing mit Google Ads, Meta Ads, LinkedIn Ads. ROI-optimierte Kampagnen.</ai:summary>
-    <ai:language>de, en, hr, tr</ai:language>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/leistungen/social-media</loc>
-    <lastmod>2025-12-23</lastmod>
-    <ai:content-type>service-page</ai:content-type>
-    <ai:topic>Social Media Marketing, Instagram, TikTok, LinkedIn</ai:topic>
-    <ai:summary>Social Media Management für Instagram, TikTok, LinkedIn, Facebook. Content-Erstellung und Community Management.</ai:summary>
-    <ai:language>de, en, hr, tr</ai:language>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/leistungen/seo</loc>
-    <lastmod>2025-12-23</lastmod>
-    <ai:content-type>service-page</ai:content-type>
-    <ai:topic>SEO, Geo-Optimierung, Local SEO, Google My Business</ai:topic>
-    <ai:summary>Suchmaschinenoptimierung mit Fokus auf lokale SEO für München und Fürstenfeldbruck. Google My Business Optimierung.</ai:summary>
-    <ai:language>de, en, hr, tr</ai:language>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/leistungen/ki</loc>
-    <lastmod>2025-12-23</lastmod>
-    <ai:content-type>service-page</ai:content-type>
-    <ai:topic>KI-Lösungen, GPT-4, Claude AI, Gemini, Automatisierung</ai:topic>
-    <ai:summary>Maßgeschneiderte KI-Lösungen mit OpenAI GPT-4, Claude AI, Google Gemini. KI-Agenten und Workflow-Automatisierung.</ai:summary>
-    <ai:language>de, en, hr, tr</ai:language>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/leistungen/content</loc>
-    <lastmod>2025-12-23</lastmod>
-    <ai:content-type>service-page</ai:content-type>
-    <ai:topic>Content-Erstellung, KI-Content, Texte, Grafiken</ai:topic>
-    <ai:summary>KI-gestützte Content-Erstellung. Texte, Grafiken, Videos, Social Media Posts mit GPT-4 und Midjourney.</ai:summary>
-    <ai:language>de, en, hr, tr</ai:language>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/leistungen/markenentwicklung</loc>
-    <lastmod>2025-12-23</lastmod>
-    <ai:content-type>service-page</ai:content-type>
-    <ai:topic>Markenentwicklung, Corporate Design, Logo Design</ai:topic>
-    <ai:summary>Professionelle Markenentwicklung mit Logo-Design, Corporate Design und visueller Identität.</ai:summary>
-    <ai:language>de, en, hr, tr</ai:language>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/leistungen/webentwicklung</loc>
-    <lastmod>2025-12-23</lastmod>
-    <ai:content-type>service-page</ai:content-type>
-    <ai:topic>Webentwicklung, React, Next.js, WordPress, Shopify</ai:topic>
-    <ai:summary>Moderne Webentwicklung mit React, Next.js, WordPress, Shopify. KI-Integration für intelligente Websites.</ai:summary>
-    <ai:language>de, en, hr, tr</ai:language>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/faq</loc>
-    <lastmod>2025-12-23</lastmod>
-    <ai:content-type>faq-page</ai:content-type>
-    <ai:topic>Häufige Fragen zu KI-Agenten und Automatisierung</ai:topic>
-    <ai:summary>Antworten auf häufige Fragen zu KI-Agenten, Workflow-Automatisierung, Preisen und Projektablauf.</ai:summary>
-    <ai:language>de, en, hr, tr</ai:language>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/kontakt</loc>
-    <lastmod>2025-12-23</lastmod>
-    <ai:content-type>contact-page</ai:content-type>
-    <ai:topic>Kontakt, Anfrage, Beratung</ai:topic>
-    <ai:summary>Kontaktformular für kostenlose Beratung. ExtruCon GmbH, Hasenheide 8, 82256 Fürstenfeldbruck. Tel: +49 89 444438879</ai:summary>
-    <ai:language>de, en, hr, tr</ai:language>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/muenchen</loc>
-    <lastmod>2025-12-23</lastmod>
-    <ai:content-type>location-page</ai:content-type>
-    <ai:topic>KI-Agentur München</ai:topic>
-    <ai:summary>KI-Agentur für München und Umgebung. KI-Agenten, Automatisierung und Marketing-Services.</ai:summary>
-    <ai:geo-target>München, Bayern, Deutschland</ai:geo-target>
-    <ai:language>de</ai:language>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/muenchen/schwabing</loc>
-    <lastmod>2025-12-23</lastmod>
-    <ai:content-type>location-page</ai:content-type>
-    <ai:topic>KI-Agentur München Schwabing</ai:topic>
-    <ai:summary>KI-Lösungen für Startups und Kreative in Schwabing. Chatbots, Automatisierung, Webentwicklung.</ai:summary>
-    <ai:geo-target>Schwabing, München</ai:geo-target>
-    <ai:language>de</ai:language>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/muenchen/bogenhausen</loc>
-    <lastmod>2025-12-23</lastmod>
-    <ai:content-type>location-page</ai:content-type>
-    <ai:topic>KI-Agentur München Bogenhausen</ai:topic>
-    <ai:summary>Premium KI-Lösungen für Vermögensverwalter und Anwälte in Bogenhausen.</ai:summary>
-    <ai:geo-target>Bogenhausen, München</ai:geo-target>
-    <ai:language>de</ai:language>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/starnberg</loc>
-    <lastmod>2025-12-23</lastmod>
-    <ai:content-type>location-page</ai:content-type>
-    <ai:topic>KI-Agentur Starnberg</ai:topic>
-    <ai:summary>KI-Lösungen für Fünfseenland, Tourismus und Immobilien in Starnberg.</ai:summary>
-    <ai:geo-target>Starnberg, Bayern</ai:geo-target>
-    <ai:language>de</ai:language>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/dachau</loc>
-    <lastmod>2025-12-23</lastmod>
-    <ai:content-type>location-page</ai:content-type>
-    <ai:topic>KI-Agentur Dachau</ai:topic>
-    <ai:summary>KI-Lösungen für Mittelstand und Handwerk in Dachau.</ai:summary>
-    <ai:geo-target>Dachau, Bayern</ai:geo-target>
-    <ai:language>de</ai:language>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/ueber-uns</loc>
-    <lastmod>2025-12-23</lastmod>
-    <ai:content-type>about-page</ai:content-type>
-    <ai:topic>Über ExtruCon GmbH, Team, Geschichte</ai:topic>
-    <ai:summary>Informationen über ExtruCon GmbH, das Team und die Unternehmensphilosophie.</ai:summary>
-    <ai:language>de, en, hr, tr</ai:language>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/referenzen</loc>
-    <lastmod>2025-12-23</lastmod>
-    <ai:content-type>portfolio-page</ai:content-type>
-    <ai:topic>Referenzen, Kundenprojekte, Case Studies</ai:topic>
-    <ai:summary>Erfolgreiche Kundenprojekte im Bereich KI-Agenten, Automatisierung und Webentwicklung.</ai:summary>
-    <ai:language>de, en, hr, tr</ai:language>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://extrucon.de/termin</loc>
-    <lastmod>2025-12-23</lastmod>
-    <ai:content-type>booking-page</ai:content-type>
-    <ai:topic>Kostenlose Beratung buchen</ai:topic>
-    <ai:summary>30-minütiges kostenloses Beratungsgespräch online buchen.</ai:summary>
-    <ai:language>de, en, hr, tr</ai:language>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-</urlset>`;
-
-export const LLMS_TXT = `# ExtruCon GmbH - KI-Agentur Fürstenfeldbruck
-
-> ExtruCon GmbH ist eine KI-Agentur in Fürstenfeldbruck bei München. Wir entwickeln KI-Agenten, Automatisierungslösungen, KI-gestützte Websites und bieten Performance Marketing für Unternehmen in Bayern.
-
-## Unternehmen
-
-- Standort: Hasenheide 8, 82256 Fürstenfeldbruck, Bayern, Deutschland
-- Telefon: +49 89 444438879
-- E-Mail: info@extrucon.de
-- Website: https://extrucon.de
-- Geo-Koordinaten: 48.1789, 11.2546
-
-## Kernleistungen
-
-- KI-Agenten: Intelligente KI-Assistenten für Kundenservice, Vertrieb und interne Prozesse
-- Automatisierungen: Workflow-Automatisierung mit n8n, Make und Zapier
-- Webseiten mit KI: Moderne Webentwicklung mit integrierten KI-Funktionen
-- Marketing: Performance Marketing mit Google Ads, Meta Ads, SEO
-
-## Weitere Leistungen
-
-- Social Media Marketing: Instagram, TikTok, LinkedIn, Facebook
-- Content-Erstellung: KI-gestützte Texte, Grafiken, Videos
-- Markenentwicklung: Logo, Corporate Design, visuelle Identität
-- Webentwicklung: React, Next.js, WordPress, Shopify
-- SEO & Geo-Optimierung: Lokale Suchmaschinenoptimierung
-
-## Regionale Präsenz
-
-München, Bogenhausen, Schwabing, Nymphenburg, Grünwald, Harlaching, Starnberg, Dachau, Germering, Puchheim, Olching
-
-## Technologien
-
-- KI: OpenAI GPT-4, Anthropic Claude, Google Gemini
-- Automatisierung: n8n (500+ Integrationen)
-- Web: React, Next.js, TypeScript, Tailwind CSS
-
-## FAQ
-
-### Was macht ExtruCon?
-ExtruCon ist eine KI-Agentur aus Fürstenfeldbruck bei München. Wir entwickeln KI-Agenten, automatisieren Geschäftsprozesse und erstellen Websites mit KI-Features.
-
-### Bietet ExtruCon kostenlose Beratung?
-Ja, unter https://extrucon.de/termin
-
-### Sprachen?
-Deutsch, Englisch, Kroatisch, Türkisch
-
-## Kontakt
-
-- Geschäftsführer: Maral Ibrahim Agha
-- Branche: KI-Agentur, Digitalagentur
-- Handelsregister: HRB 18623, Amtsgericht München
-- Öffnungszeiten: Mo-Fr 08:00-17:00 Uhr
-
-Letzte Aktualisierung: 2025-12-23`;
+Host: https://extrucon.de`;

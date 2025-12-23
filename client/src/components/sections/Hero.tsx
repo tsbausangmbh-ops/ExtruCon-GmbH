@@ -7,16 +7,12 @@ export function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-28 pb-8" itemScope itemType="https://schema.org/WebPage">
+    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-8 pb-8" itemScope itemType="https://schema.org/WebPage">
       <div className="absolute inset-0 z-0">
         <img 
           src={heroBg} 
           alt="KI-Agentur Fürstenfeldbruck - Digitale Automatisierung und Marketing" 
           className="w-full h-full object-cover opacity-60"
-          fetchPriority="high"
-          decoding="async"
-          width="1920"
-          height="1080"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
       </div>

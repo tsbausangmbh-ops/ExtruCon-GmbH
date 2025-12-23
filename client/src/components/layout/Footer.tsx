@@ -6,13 +6,7 @@ export function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer 
-      className="bg-background border-t border-white/10 py-8 mt-0" 
-      itemScope 
-      itemType="https://schema.org/LocalBusiness"
-      role="contentinfo"
-      aria-label="Fußbereich"
-    >
+    <footer className="bg-background border-t border-white/10 py-8 mt-0" itemScope itemType="https://schema.org/LocalBusiness">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">

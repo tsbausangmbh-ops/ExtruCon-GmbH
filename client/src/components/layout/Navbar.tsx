@@ -23,14 +23,10 @@ export function Navbar() {
   ];
 
   return (
-    <nav 
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/10"
-      role="navigation"
-      aria-label="Hauptnavigation"
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-4 h-24 flex items-center justify-between py-1">
-        <Link href="/" className="flex items-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background rounded-lg" aria-label="ExtruCon GmbH - Zur Startseite">
-          <img src={logoImage} alt="ExtruCon GmbH Logo" className="h-[5.5rem]" />
+        <Link href="/" className="flex items-center">
+          <img src={logoImage} alt="ExtruCon GmbH" className="h-[5.5rem]" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
@@ -42,15 +38,9 @@ export function Navbar() {
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
-            <button 
-              className="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background rounded"
-              aria-expanded={servicesOpen}
-              aria-haspopup="true"
-              aria-label="Leistungen Menü"
-              onClick={() => setServicesOpen(!servicesOpen)}
-            >
+            <button className="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-primary transition-colors">
               {t.nav.services}
-              <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
+              <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
             </button>
             
             {servicesOpen && (
@@ -94,19 +84,16 @@ export function Navbar() {
         <div className="flex items-center gap-2 md:hidden">
           <LanguageSwitcher />
           <button
-            className="text-white min-w-[44px] min-h-[44px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-primary rounded-lg"
+            className="text-white"
             onClick={() => setIsOpen(!isOpen)}
-            aria-expanded={isOpen}
-            aria-controls="mobile-menu"
-            aria-label={isOpen ? "Menü schließen" : "Menü öffnen"}
           >
-            {isOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+            {isOpen ? <X /> : <Menu />}
           </button>
         </div>
       </div>
 
       {isOpen && (
-        <div id="mobile-menu" className="md:hidden bg-background border-b border-white/10 p-4 absolute w-full" role="menu" aria-label="Mobile Navigation">
+        <div className="md:hidden bg-background border-b border-white/10 p-4 absolute w-full">
           <div className="flex flex-col gap-2">
             <a
               href="/webseiten-ki"
