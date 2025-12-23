@@ -19,6 +19,8 @@ export default function Brand() {
         description="KI-gestützte Markenentwicklung mit Midjourney und DALL-E. Logo-Design, Corporate Design & visuelle Identität. Schneller, kreativer, einzigartig."
         keywords="KI Logo Design, Midjourney Branding, AI Corporate Design, KI Markenentwicklung, Branding Agentur München, DALL-E Logo, AI Brand Design"
         canonical="https://extrucon.de/leistungen/markenentwicklung"
+        geoRegion="DE-BY"
+        geoPlacename="Fürstenfeldbruck"
         schema={[
           {
             "@context": "https://schema.org",

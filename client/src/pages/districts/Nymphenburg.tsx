@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ExploreMoreSection, LocationLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Bot, MapPin, Phone, ArrowRight, Workflow, Globe, Building2, Heart, Briefcase, GraduationCap } from "lucide-react";
 import { Link } from "wouter";
@@ -158,6 +159,9 @@ export default function Nymphenburg() {
             </div>
           </div>
         </section>
+
+        <LocationLinks />
+        <ExploreMoreSection />
       </main>
       <Footer />
     </div>

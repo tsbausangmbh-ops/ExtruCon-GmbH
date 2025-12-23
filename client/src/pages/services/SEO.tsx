@@ -25,6 +25,8 @@ export default function SEO() {
         description="KI-gestützte SEO & Geo-Optimierung für lokale Unternehmen. GPT-4 Content-Optimierung, Google My Business, strukturierte Daten. Agentur Fürstenfeldbruck."
         keywords="KI SEO, AI SEO, Geo-Optimierung, lokale SEO, Google My Business, Suchmaschinenoptimierung Fürstenfeldbruck, Local SEO München, GPT-4 SEO, KI Content Optimierung"
         canonical="https://extrucon.de/leistungen/seo"
+        geoRegion="DE-BY"
+        geoPlacename="Fürstenfeldbruck"
         schema={[
           {
             "@context": "https://schema.org",

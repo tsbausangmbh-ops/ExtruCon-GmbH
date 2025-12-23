@@ -21,6 +21,8 @@ export default function SocialMedia() {
         description="KI-gestütztes Social Media Marketing. GPT-4 Texte, Midjourney Grafiken, automatisierte Content-Planung. Instagram, TikTok, LinkedIn. Fürstenfeldbruck."
         keywords="KI Social Media, Social Media KI, GPT-4 Social Media, Midjourney Content, Instagram Agentur, TikTok Marketing KI, AI Social Media München"
         canonical="https://extrucon.de/leistungen/social-media"
+        geoRegion="DE-BY"
+        geoPlacename="Fürstenfeldbruck"
         schema={[
           {
             "@context": "https://schema.org",

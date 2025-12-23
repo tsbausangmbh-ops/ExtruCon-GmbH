@@ -21,6 +21,8 @@ export default function Web() {
         description="Moderne KI-Webentwicklung mit GPT-4 Chatbot-Integration. React, Next.js, WordPress mit KI-Features. Intelligente Websites für Ihr Unternehmen."
         keywords="KI Webentwicklung, Website mit Chatbot, GPT-4 Website, KI Webdesign München, React KI Integration, Chatbot Website, AI Website Fürstenfeldbruck"
         canonical="https://extrucon.de/leistungen/webentwicklung"
+        geoRegion="DE-BY"
+        geoPlacename="Fürstenfeldbruck"
         schema={[
           {
             "@context": "https://schema.org",

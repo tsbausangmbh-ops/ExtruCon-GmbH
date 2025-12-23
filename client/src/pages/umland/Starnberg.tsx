@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ExploreMoreSection, LocationLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Bot, MapPin, Phone, ArrowRight, Workflow, Globe, Anchor, Building2, Heart, Briefcase } from "lucide-react";
 import { Link } from "wouter";
@@ -161,6 +162,9 @@ export default function Starnberg() {
             </div>
           </div>
         </section>
+
+        <LocationLinks />
+        <ExploreMoreSection />
       </main>
       <Footer />
     </div>

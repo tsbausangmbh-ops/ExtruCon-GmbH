@@ -19,6 +19,8 @@ export default function Content() {
         description="KI-gestützte Content-Erstellung mit GPT-4 & Midjourney. Texte, Grafiken, Videos & Social Media Content. Schnell, qualitativ, skalierbar. Fürstenfeldbruck."
         keywords="KI Content, GPT-4 Texte, Midjourney Grafiken, AI Content Creation, KI Texterstellung, Social Media Content KI, KI Bilder, DALL-E, Claude AI Content"
         canonical="https://extrucon.de/leistungen/content"
+        geoRegion="DE-BY"
+        geoPlacename="Fürstenfeldbruck"
         schema={[
           {
             "@context": "https://schema.org",

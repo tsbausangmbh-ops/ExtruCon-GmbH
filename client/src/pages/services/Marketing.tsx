@@ -21,6 +21,8 @@ export default function Marketing() {
         description="KI-gestütztes Performance Marketing mit GPT-4 Optimierung. Google Ads, Meta Ads, SEO & Conversion-Tracking. Datengetriebene Kampagnen für maximalen ROI."
         keywords="KI Marketing, Performance Marketing KI, Google Ads Agentur, Meta Ads, KI-gestützte Werbung, Marketing Automatisierung, AI Marketing München, GPT-4 Marketing"
         canonical="https://extrucon.de/leistungen/marketing"
+        geoRegion="DE-BY"
+        geoPlacename="Fürstenfeldbruck"
         schema={[
           {
             "@context": "https://schema.org",
