@@ -17,28 +17,34 @@ export default function Web() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Webentwicklung Fürstenfeldbruck | Professionelle Websites | ExtruCon"
-        description="Moderne Webentwicklung mit KI-Integration. React, Next.js, WordPress & Shopify. Webdesign Agentur Fürstenfeldbruck bei München."
-        keywords="Webentwicklung Fürstenfeldbruck, Webdesign München, Website erstellen, React Entwicklung"
+        title="KI-Webentwicklung | Websites mit GPT-4 Chatbot | ExtruCon"
+        description="Moderne KI-Webentwicklung mit GPT-4 Chatbot-Integration. React, Next.js, WordPress mit KI-Features. Intelligente Websites für Ihr Unternehmen."
+        keywords="KI Webentwicklung, Website mit Chatbot, GPT-4 Website, KI Webdesign München, React KI Integration, Chatbot Website, AI Website Fürstenfeldbruck"
         canonical="https://extrucon.de/leistungen/webentwicklung"
         schema={[
           {
             "@context": "https://schema.org",
             "@type": "Service",
             "@id": "https://extrucon.de/leistungen/webentwicklung#service",
-            "name": "Webentwicklung",
-            "description": "Moderne Webentwicklung mit React, Next.js, WordPress und Shopify. KI-Integration für intelligente Websites.",
+            "name": "KI-Webentwicklung",
+            "alternateName": ["AI Web Development", "Website mit Chatbot", "KI-integrierte Website"],
+            "description": "Moderne Webentwicklung mit KI-Integration. React, Next.js, WordPress mit GPT-4 Chatbots, intelligente Suchfunktionen und personalisierte Inhalte.",
             "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
-            "areaServed": ["Fürstenfeldbruck", "München", "Bayern", "Deutschland"],
-            "serviceType": "Web Development"
+            "areaServed": [
+              { "@type": "City", "name": "Fürstenfeldbruck" },
+              { "@type": "City", "name": "München" },
+              { "@type": "State", "name": "Bayern" },
+              { "@type": "Country", "name": "Deutschland" }
+            ],
+            "serviceType": ["AI Web Development", "KI Website", "Chatbot Integration"]
           },
           {
             "@context": "https://schema.org",
             "@type": "FAQPage",
             "mainEntity": [
-              { "@type": "Question", "name": "Was kostet eine Website?", "acceptedAnswer": { "@type": "Answer", "text": "Eine professionelle Website beginnt ab 2.500€ für eine Landing Page bis 15.000€+ für komplexe Web-Applikationen." } },
-              { "@type": "Question", "name": "Welche Technologien nutzen Sie?", "acceptedAnswer": { "@type": "Answer", "text": "Wir arbeiten mit React, Next.js, TypeScript, Node.js, WordPress, Shopify und Tailwind CSS." } },
-              { "@type": "Question", "name": "Wie lange dauert die Entwicklung?", "acceptedAnswer": { "@type": "Answer", "text": "Eine Landing Page ist in 2-3 Wochen fertig. Komplexere Projekte dauern 4-8 Wochen." } }
+              { "@type": "Question", "name": "Kann ich einen KI-Chatbot auf meiner Website haben?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir integrieren GPT-4 oder Claude AI Chatbots, die Kundenanfragen automatisch beantworten und Leads qualifizieren." } },
+              { "@type": "Question", "name": "Welche KI-Features bieten Sie für Websites?", "acceptedAnswer": { "@type": "Answer", "text": "Chatbots, intelligente Suche, personalisierte Inhalte, automatische FAQ-Generierung und KI-gestützte Produktempfehlungen." } },
+              { "@type": "Question", "name": "Was kostet eine Website mit KI-Integration?", "acceptedAnswer": { "@type": "Answer", "text": "Eine Website mit KI-Chatbot beginnt ab 4.000€. Komplexe KI-Web-Applikationen kosten 10.000€+." } }
             ]
           }
         ]}

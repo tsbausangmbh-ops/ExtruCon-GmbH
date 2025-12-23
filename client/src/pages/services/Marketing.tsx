@@ -17,28 +17,34 @@ export default function Marketing() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Performance Marketing | Google Ads & Meta Ads | ExtruCon"
-        description="Datengetriebenes Performance Marketing. Google Ads, Meta Ads, SEO & Conversion-Optimierung. Agentur Fürstenfeldbruck."
-        keywords="Performance Marketing, Google Ads Agentur, Meta Ads, SEO Fürstenfeldbruck"
+        title="KI-gestütztes Performance Marketing | Google Ads & Meta Ads | ExtruCon"
+        description="KI-gestütztes Performance Marketing mit GPT-4 Optimierung. Google Ads, Meta Ads, SEO & Conversion-Tracking. Datengetriebene Kampagnen für maximalen ROI."
+        keywords="KI Marketing, Performance Marketing KI, Google Ads Agentur, Meta Ads, KI-gestützte Werbung, Marketing Automatisierung, AI Marketing München, GPT-4 Marketing"
         canonical="https://extrucon.de/leistungen/marketing"
         schema={[
           {
             "@context": "https://schema.org",
             "@type": "Service",
             "@id": "https://extrucon.de/leistungen/marketing#service",
-            "name": "Performance Marketing",
-            "description": "Datengetriebenes Performance Marketing mit Google Ads, Meta Ads, SEO und Conversion-Optimierung für maximalen ROI.",
+            "name": "KI-gestütztes Performance Marketing",
+            "alternateName": ["AI Marketing", "KI Marketing Agentur"],
+            "description": "Datengetriebenes Performance Marketing mit KI-Optimierung. Google Ads, Meta Ads, SEO und Conversion-Optimierung für maximalen ROI. KI-gestützte Kampagnenanalyse.",
             "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
-            "areaServed": ["Fürstenfeldbruck", "München", "Bayern", "Deutschland"],
-            "serviceType": "Digital Marketing"
+            "areaServed": [
+              { "@type": "City", "name": "Fürstenfeldbruck" },
+              { "@type": "City", "name": "München" },
+              { "@type": "State", "name": "Bayern" },
+              { "@type": "Country", "name": "Deutschland" }
+            ],
+            "serviceType": ["Digital Marketing", "AI Marketing", "Performance Marketing"]
           },
           {
             "@context": "https://schema.org",
             "@type": "FAQPage",
             "mainEntity": [
-              { "@type": "Question", "name": "Was kostet Performance Marketing?", "acceptedAnswer": { "@type": "Answer", "text": "Die Kosten variieren je nach Kampagnenumfang. Wir bieten transparente Preismodelle ab 500€/Monat für kleinere Kampagnen." } },
-              { "@type": "Question", "name": "Welche Plattformen nutzen Sie?", "acceptedAnswer": { "@type": "Answer", "text": "Wir arbeiten mit Google Ads, Meta Ads (Facebook/Instagram), LinkedIn Ads, TikTok Ads und YouTube Ads." } },
-              { "@type": "Question", "name": "Wie schnell sehe ich Ergebnisse?", "acceptedAnswer": { "@type": "Answer", "text": "Erste Ergebnisse sind oft innerhalb von 2-4 Wochen sichtbar, optimale Performance nach 2-3 Monaten Optimierung." } }
+              { "@type": "Question", "name": "Was kostet KI-gestütztes Performance Marketing?", "acceptedAnswer": { "@type": "Answer", "text": "Die Kosten variieren je nach Kampagnenumfang. Wir bieten transparente Preismodelle ab 500€/Monat für kleinere Kampagnen mit KI-Optimierung." } },
+              { "@type": "Question", "name": "Wie nutzt ExtruCon KI im Marketing?", "acceptedAnswer": { "@type": "Answer", "text": "Wir nutzen GPT-4 für Anzeigentexte, KI-gestützte Zielgruppenanalyse, automatische Bid-Optimierung und Predictive Analytics für bessere Kampagnenergebnisse." } },
+              { "@type": "Question", "name": "Welche Plattformen nutzen Sie?", "acceptedAnswer": { "@type": "Answer", "text": "Wir arbeiten mit Google Ads, Meta Ads (Facebook/Instagram), LinkedIn Ads, TikTok Ads und YouTube Ads – alle mit KI-gestützter Optimierung." } }
             ]
           }
         ]}

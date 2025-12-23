@@ -17,28 +17,34 @@ export default function SocialMedia() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Social Media Marketing Fürstenfeldbruck | ExtruCon GmbH"
-        description="Professionelles Social Media Marketing. Instagram, TikTok, LinkedIn & Facebook Betreuung. Agentur aus Fürstenfeldbruck."
-        keywords="Social Media Marketing, Instagram Agentur, TikTok Marketing, Fürstenfeldbruck"
+        title="KI-Social Media Marketing | GPT-4 & Midjourney Content | ExtruCon"
+        description="KI-gestütztes Social Media Marketing. GPT-4 Texte, Midjourney Grafiken, automatisierte Content-Planung. Instagram, TikTok, LinkedIn. Fürstenfeldbruck."
+        keywords="KI Social Media, Social Media KI, GPT-4 Social Media, Midjourney Content, Instagram Agentur, TikTok Marketing KI, AI Social Media München"
         canonical="https://extrucon.de/leistungen/social-media"
         schema={[
           {
             "@context": "https://schema.org",
             "@type": "Service",
             "@id": "https://extrucon.de/leistungen/social-media#service",
-            "name": "Social Media Marketing",
-            "description": "Professionelles Social Media Marketing für Instagram, TikTok, LinkedIn und Facebook. Community Management und Content-Erstellung.",
+            "name": "KI-Social Media Marketing",
+            "alternateName": ["AI Social Media", "GPT-4 Social Media Content"],
+            "description": "KI-gestütztes Social Media Marketing mit GPT-4 und Midjourney. Automatisierte Content-Erstellung und intelligente Posting-Planung für maximale Reichweite.",
             "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
-            "areaServed": ["Fürstenfeldbruck", "München", "Bayern", "Deutschland"],
-            "serviceType": "Social Media Management"
+            "areaServed": [
+              { "@type": "City", "name": "Fürstenfeldbruck" },
+              { "@type": "City", "name": "München" },
+              { "@type": "State", "name": "Bayern" },
+              { "@type": "Country", "name": "Deutschland" }
+            ],
+            "serviceType": ["AI Social Media", "KI Content Creation", "Social Media Automation"]
           },
           {
             "@context": "https://schema.org",
             "@type": "FAQPage",
             "mainEntity": [
-              { "@type": "Question", "name": "Welche Plattformen betreuen Sie?", "acceptedAnswer": { "@type": "Answer", "text": "Wir betreuen Instagram, TikTok, LinkedIn, Facebook, YouTube, X (Twitter) und Pinterest professionell." } },
-              { "@type": "Question", "name": "Wie oft wird gepostet?", "acceptedAnswer": { "@type": "Answer", "text": "Die Posting-Frequenz richtet sich nach Ihren Zielen. Üblich sind 3-5 Posts pro Woche plus Stories." } },
-              { "@type": "Question", "name": "Erstellen Sie auch Content?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir übernehmen die komplette Content-Erstellung inklusive Texte, Grafiken und Videos." } }
+              { "@type": "Question", "name": "Nutzen Sie KI für Social Media Content?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir nutzen GPT-4 für Captions und Texte, Midjourney für Grafiken und KI-Tools für optimale Posting-Zeiten und Hashtag-Analyse." } },
+              { "@type": "Question", "name": "Welche Plattformen betreuen Sie mit KI?", "acceptedAnswer": { "@type": "Answer", "text": "Wir betreuen Instagram, TikTok, LinkedIn, Facebook, YouTube und Pinterest mit KI-gestützter Content-Erstellung und Analyse." } },
+              { "@type": "Question", "name": "Wie schnell entsteht KI-Content für Social Media?", "acceptedAnswer": { "@type": "Answer", "text": "Mit KI-Unterstützung erstellen wir wöchentliche Content-Pakete in 1-2 Tagen statt einer Woche. Qualitätskontrolle durch unsere Experten inklusive." } }
             ]
           }
         ]}

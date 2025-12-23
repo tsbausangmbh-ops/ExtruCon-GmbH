@@ -15,28 +15,34 @@ export default function Brand() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Markenentwicklung & Corporate Design | ExtruCon GmbH"
-        description="Professionelle Markenentwicklung und Corporate Design. Logo, Branding & visuelle Identität. Agentur Fürstenfeldbruck."
-        keywords="Markenentwicklung, Corporate Design, Logo Design, Branding Agentur"
+        title="KI-Markenentwicklung | Midjourney Logo & Corporate Design | ExtruCon"
+        description="KI-gestützte Markenentwicklung mit Midjourney und DALL-E. Logo-Design, Corporate Design & visuelle Identität. Schneller, kreativer, einzigartig."
+        keywords="KI Logo Design, Midjourney Branding, AI Corporate Design, KI Markenentwicklung, Branding Agentur München, DALL-E Logo, AI Brand Design"
         canonical="https://extrucon.de/leistungen/markenentwicklung"
         schema={[
           {
             "@context": "https://schema.org",
             "@type": "Service",
             "@id": "https://extrucon.de/leistungen/markenentwicklung#service",
-            "name": "Markenentwicklung & Corporate Design",
-            "description": "Professionelle Markenentwicklung mit Logo-Design, Corporate Design und visueller Identität für starke Marken.",
+            "name": "KI-Markenentwicklung & Corporate Design",
+            "alternateName": ["AI Branding", "Midjourney Logo Design", "KI Corporate Design"],
+            "description": "KI-gestützte Markenentwicklung mit Midjourney und DALL-E. Logo-Design, Corporate Design und visuelle Identität – schneller und kreativer.",
             "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
-            "areaServed": ["Fürstenfeldbruck", "München", "Bayern", "Deutschland"],
-            "serviceType": "Branding"
+            "areaServed": [
+              { "@type": "City", "name": "Fürstenfeldbruck" },
+              { "@type": "City", "name": "München" },
+              { "@type": "State", "name": "Bayern" },
+              { "@type": "Country", "name": "Deutschland" }
+            ],
+            "serviceType": ["AI Branding", "KI Logo Design", "Corporate Design"]
           },
           {
             "@context": "https://schema.org",
             "@type": "FAQPage",
             "mainEntity": [
-              { "@type": "Question", "name": "Was kostet ein Logo-Design?", "acceptedAnswer": { "@type": "Answer", "text": "Ein professionelles Logo-Design beginnt bei 800€ und beinhaltet mehrere Entwürfe und Korrekturrunden." } },
-              { "@type": "Question", "name": "Was gehört zum Corporate Design?", "acceptedAnswer": { "@type": "Answer", "text": "Corporate Design umfasst Logo, Farbpalette, Typografie, Bildsprache, Geschäftspapiere und Designrichtlinien." } },
-              { "@type": "Question", "name": "Wie lange dauert eine Markenentwicklung?", "acceptedAnswer": { "@type": "Answer", "text": "Eine vollständige Markenentwicklung dauert typischerweise 4-8 Wochen, abhängig vom Projektumfang." } }
+              { "@type": "Question", "name": "Nutzen Sie KI für Logo-Design?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir nutzen Midjourney und DALL-E für schnelle Konzeptentwicklung und Inspiration. Die finale Ausarbeitung erfolgt durch unsere Designer." } },
+              { "@type": "Question", "name": "Wie beschleunigt KI die Markenentwicklung?", "acceptedAnswer": { "@type": "Answer", "text": "Mit KI generieren wir in Stunden Hunderte von Konzepten und Varianten. Das verkürzt die Entwicklungszeit um 40-50%." } },
+              { "@type": "Question", "name": "Ist KI-generiertes Design einzigartig?", "acceptedAnswer": { "@type": "Answer", "text": "Absolut. Wir nutzen KI als kreatives Werkzeug und verfeinern alle Designs manuell zu 100% einzigartigen, rechtlich geschützten Markenidentitäten." } }
             ]
           }
         ]}
