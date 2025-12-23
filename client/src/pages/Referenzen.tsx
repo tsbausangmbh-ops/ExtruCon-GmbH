@@ -61,10 +61,10 @@ export default function Referenzen() {
       link: "https://komplettsanierungen-haus-wohnung.de"
     },
     {
-      title: "KSHW Mont – Montageservice München",
-      category: "Webentwicklung",
-      description: "Professionelle Website für Montage- und Handwerksdienstleistungen. Schnelle Reaktionszeiten und umfassender Service für Privat- und Gewerbekunden.",
-      results: ["Schneller Service", "Zuverlässige Montage", "Privat & Gewerbe"],
+      title: "KSHW Mont – KI-Agentur München",
+      category: "Webentwicklung + KI",
+      description: "Moderne KI-Agentur Website mit integrierten KI-Bots und professionellem Webdesign. Automatisierte Kundenberatung und Lead-Generierung.",
+      results: ["KI-Chatbot integriert", "Modernes Webdesign", "Automatisierte Beratung"],
       color: "cyan",
       link: "https://kshwmont.com"
     },
