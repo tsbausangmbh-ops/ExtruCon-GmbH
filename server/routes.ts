@@ -29,6 +29,18 @@ export async function registerRoutes(
   // Static assets caching for mobile performance
   app.use("/assets", (_req, res, next) => {
     res.set("Cache-Control", "public, max-age=31536000, immutable");
+    res.set("X-Content-Type-Options", "nosniff");
+    next();
+  });
+
+  // Favicon and common assets caching
+  app.use("/favicon.ico", (_req, res, next) => {
+    res.set("Cache-Control", "public, max-age=604800");
+    next();
+  });
+
+  app.use("/logo.png", (_req, res, next) => {
+    res.set("Cache-Control", "public, max-age=604800");
     next();
   });
 
