@@ -121,7 +121,7 @@ export default function Muenchen() {
       />
       <Navbar />
       
-      <main id="main-content" role="main" aria-label="Hauptinhalt">
+      <main id="main-content" role="main" aria-label="Hauptinhalt" className="pt-24">
         {/* Hero Section */}
         <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-32 pb-20">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-background to-cyan-900/10" />

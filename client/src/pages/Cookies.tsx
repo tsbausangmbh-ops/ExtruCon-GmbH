@@ -42,7 +42,7 @@ export default function Cookies() {
         canonical="https://extrucon.de/cookies"
       />
       <Navbar />
-      <main className="container mx-auto px-4 py-16">
+      <main id="main-content" role="main" aria-label="Hauptinhalt" className="container mx-auto px-4 py-16 pt-32">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/20 mb-6">
