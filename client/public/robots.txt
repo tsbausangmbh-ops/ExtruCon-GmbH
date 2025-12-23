@@ -1,6 +1,6 @@
 # ExtruCon GmbH - Robots.txt
 # SEO & AI optimiert für Deutschland (DE), Kroatien (HR), Türkei (TR)
-# Letzte Aktualisierung: 19. Dezember 2025
+# Letzte Aktualisierung: 23. Dezember 2025
 # Optimiert für: KI-Agenten, Geo (München, FFB, Starnberg, Dachau), LLMs
 
 # ===========================================
