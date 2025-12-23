@@ -7,30 +7,49 @@ import { Bot, Zap, MapPin, Phone, ArrowRight, Workflow, Globe, Palette, Coffee, 
 import { Link } from "wouter";
 
 export default function Schwabing() {
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "KI-Agentur Schwabing | ExtruCon GmbH",
-    "description": "KI-Agentur für München-Schwabing. Innovative KI-Lösungen für Startups, Agenturen und kreative Unternehmen.",
-    "url": "https://extrucon.de/muenchen/schwabing",
-    "mainEntity": {
-      "@type": "LocalBusiness",
-      "@id": "https://extrucon.de/#localbusiness"
-    },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de" },
-        { "@type": "ListItem", "position": 2, "name": "München", "item": "https://extrucon.de/muenchen" },
-        { "@type": "ListItem", "position": 3, "name": "Schwabing", "item": "https://extrucon.de/muenchen/schwabing" }
+  const schemaData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "KI-Agentur Schwabing | ExtruCon GmbH",
+      "description": "Innovative KI-Agentur für München-Schwabing. GPT-4 und Claude AI Lösungen für Startups, Agenturen und kreative Unternehmen.",
+      "url": "https://extrucon.de/muenchen/schwabing",
+      "mainEntity": { "@type": "LocalBusiness", "@id": "https://extrucon.de/#localbusiness" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de" },
+          { "@type": "ListItem", "position": 2, "name": "München", "item": "https://extrucon.de/muenchen" },
+          { "@type": "ListItem", "position": 3, "name": "Schwabing", "item": "https://extrucon.de/muenchen/schwabing" }
+        ]
+      },
+      "areaServed": [
+        { "@type": "Place", "name": "Schwabing-West" },
+        { "@type": "Place", "name": "Schwabing-Freimann" },
+        { "@type": "Place", "name": "Maxvorstadt" },
+        { "@type": "Place", "name": "Leopoldstraße" }
       ]
     },
-    "areaServed": [
-      { "@type": "Place", "name": "Schwabing-West" },
-      { "@type": "Place", "name": "Schwabing-Freimann" },
-      { "@type": "Place", "name": "Maxvorstadt" }
-    ]
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://extrucon.de/muenchen/schwabing#service",
+      "name": "Innovative KI-Lösungen Schwabing",
+      "description": "Cutting-edge KI-Agenten und Automatisierung für Startups, Kreativagenturen und Tech-Unternehmen in Schwabing. GPT-4, Claude AI, LangChain.",
+      "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
+      "areaServed": { "@type": "Place", "name": "München-Schwabing" },
+      "serviceType": ["Startup KI", "Agentur Automatisierung", "Growth Marketing AI"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Welche KI-Technologien nutzt ExtruCon für Startups?", "acceptedAnswer": { "@type": "Answer", "text": "Wir arbeiten mit GPT-4, Claude AI, Gemini und Open-Source-Modellen. Für Workflows nutzen wir n8n, Make und Zapier – je nach Skalierungsbedarf." } },
+        { "@type": "Question", "name": "Bietet ExtruCon Vor-Ort-Service in Schwabing?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir kommen gerne zu Ihnen in Schwabing, an die Leopoldstraße oder in die Maxvorstadt. Von Fürstenfeldbruck sind wir in 30 Minuten bei Ihnen." } },
+        { "@type": "Question", "name": "Können KI-Lösungen schnell skaliert werden?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, unsere KI-Agenten sind Cloud-basiert und skalieren automatisch mit Ihrem Wachstum. Ideal für Startups mit schnellem User-Wachstum." } }
+      ]
+    }
+  ];
 
   const services = [
     { icon: Bot, title: "Startup-KI-Agenten", description: "Skalierbare KI-Assistenten für schnell wachsende Startups und Tech-Unternehmen.", link: "/ki-agenten" },
@@ -49,9 +68,12 @@ export default function Schwabing() {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="KI-Agentur Schwabing | ExtruCon – Innovative KI für Startups & Kreative"
-        description="KI-Agentur München-Schwabing: KI-Agenten & Automatisierung für Startups, Agenturen und Kreative. ✓ Innovativ ✓ Agil ✓ Skalierbar"
+        title="KI-Agentur Schwabing | GPT-4 & Claude AI für Startups | ExtruCon"
+        description="Innovative KI-Agentur für München-Schwabing: KI-Agenten mit GPT-4 & Claude AI für Startups, Agenturen, Kreative. ✓ Skalierbar ✓ Agil ✓ Cloud-basiert"
+        keywords="KI Agentur Schwabing, KI Startup München, GPT-4 Agentur, Claude AI Schwabing, Automatisierung Kreativagentur, Leopoldstraße KI, Maxvorstadt AI"
         canonical="https://extrucon.de/muenchen/schwabing"
+        geoRegion="DE-BY"
+        geoPlacename="München-Schwabing"
         schema={schemaData}
       />
       <Navbar />

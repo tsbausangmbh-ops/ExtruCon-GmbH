@@ -7,30 +7,49 @@ import { Bot, MapPin, Phone, ArrowRight, Workflow, Globe, Wrench, ShoppingBag, U
 import { Link } from "wouter";
 
 export default function Olching() {
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "KI-Agentur Olching | ExtruCon GmbH",
-    "description": "KI-Agentur für Olching. KI-Agenten, Automatisierung und Websites für lokale Unternehmen und Gastronomiebetriebe.",
-    "url": "https://extrucon.de/olching",
-    "mainEntity": {
-      "@type": "LocalBusiness",
-      "@id": "https://extrucon.de/#localbusiness"
-    },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de" },
-        { "@type": "ListItem", "position": 2, "name": "München", "item": "https://extrucon.de/muenchen" },
-        { "@type": "ListItem", "position": 3, "name": "Olching", "item": "https://extrucon.de/olching" }
+  const schemaData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "KI-Agentur Olching | ExtruCon GmbH",
+      "description": "KI-Agentur für Olching. KI-Agenten mit GPT-4, Automatisierung und Websites für Gastronomie, Handwerk und lokale Unternehmen.",
+      "url": "https://extrucon.de/olching",
+      "mainEntity": { "@type": "LocalBusiness", "@id": "https://extrucon.de/#localbusiness" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de" },
+          { "@type": "ListItem", "position": 2, "name": "München", "item": "https://extrucon.de/muenchen" },
+          { "@type": "ListItem", "position": 3, "name": "Olching", "item": "https://extrucon.de/olching" }
+        ]
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Olching" },
+        { "@type": "City", "name": "Maisach" },
+        { "@type": "City", "name": "Gröbenzell" },
+        { "@type": "City", "name": "Esting" }
       ]
     },
-    "areaServed": [
-      { "@type": "City", "name": "Olching" },
-      { "@type": "City", "name": "Maisach" },
-      { "@type": "City", "name": "Gröbenzell" }
-    ]
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://extrucon.de/olching#service",
+      "name": "KI-Lösungen Olching",
+      "description": "KI-Agenten und Automatisierung für Gastronomie, Handwerk und lokale Unternehmen in Olching und dem Ampertal. GPT-4 powered.",
+      "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
+      "areaServed": { "@type": "City", "name": "Olching" },
+      "serviceType": ["Gastronomie KI", "Reservierungssysteme", "Lokale Unternehmen"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Wie weit ist ExtruCon von Olching entfernt?", "acceptedAnswer": { "@type": "Answer", "text": "Nur 10 Minuten! Von Fürstenfeldbruck sind wir schnell bei Ihnen in Olching, Maisach oder Gröbenzell." } },
+        { "@type": "Question", "name": "Welche KI-Lösungen eignen sich für Restaurants?", "acceptedAnswer": { "@type": "Answer", "text": "Für Gastronomie entwickeln wir KI-gestützte Reservierungssysteme, automatische Bestellbestätigungen und intelligente Bewertungsmanagement-Tools." } },
+        { "@type": "Question", "name": "Sind KI-Agenten auch für kleine Lokale erschwinglich?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir bieten Gastronomie-KI-Lösungen ab 490€ einmalig. Ideal für Restaurants, Cafés und Imbisse in Olching und Umgebung." } }
+      ]
+    }
+  ];
 
   const services = [
     { icon: Bot, title: "KI für lokale Betriebe", description: "Praktische KI-Assistenten für Anfragen, Reservierungen und Service.", link: "/ki-agenten" },
@@ -49,9 +68,12 @@ export default function Olching() {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="KI-Agentur Olching | ExtruCon – KI für Gastronomie & Handwerk"
-        description="KI-Agentur für Olching: KI-Agenten und Automatisierung für Gastronomie und lokale Betriebe. ✓ 10 Min. ab FFB ✓ Reservierungssysteme ✓ Faire Preise"
+        title="KI-Agentur Olching | GPT-4 für Gastronomie & Handwerk | ExtruCon"
+        description="KI-Agentur für Olching: KI-Agenten mit GPT-4 für Gastronomie, Restaurants, Handwerk. ✓ Reservierungssysteme ✓ 10 Min. ab FFB ✓ Ab 490€ ✓ DSGVO"
+        keywords="KI Agentur Olching, KI Gastronomie, GPT-4 Restaurant, Reservierungssystem KI, Maisach KI, Gröbenzell Automatisierung, Ampertal KI"
         canonical="https://extrucon.de/olching"
+        geoRegion="DE-BY"
+        geoPlacename="Olching"
         schema={schemaData}
       />
       <Navbar />

@@ -7,30 +7,49 @@ import { Bot, MapPin, Phone, ArrowRight, Workflow, Globe, Building2, Heart, Brie
 import { Link } from "wouter";
 
 export default function Nymphenburg() {
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "KI-Agentur Nymphenburg | ExtruCon GmbH",
-    "description": "KI-Agentur für München-Nymphenburg. Elegante KI-Lösungen für Traditionsunternehmen und gehobene Dienstleister.",
-    "url": "https://extrucon.de/muenchen/nymphenburg",
-    "mainEntity": {
-      "@type": "LocalBusiness",
-      "@id": "https://extrucon.de/#localbusiness"
-    },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de" },
-        { "@type": "ListItem", "position": 2, "name": "München", "item": "https://extrucon.de/muenchen" },
-        { "@type": "ListItem", "position": 3, "name": "Nymphenburg", "item": "https://extrucon.de/muenchen/nymphenburg" }
+  const schemaData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "KI-Agentur Nymphenburg | ExtruCon GmbH",
+      "description": "Elegante KI-Agentur für München-Nymphenburg. GPT-4 Lösungen für Traditionsunternehmen und gehobene Dienstleister.",
+      "url": "https://extrucon.de/muenchen/nymphenburg",
+      "mainEntity": { "@type": "LocalBusiness", "@id": "https://extrucon.de/#localbusiness" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de" },
+          { "@type": "ListItem", "position": 2, "name": "München", "item": "https://extrucon.de/muenchen" },
+          { "@type": "ListItem", "position": 3, "name": "Nymphenburg", "item": "https://extrucon.de/muenchen/nymphenburg" }
+        ]
+      },
+      "areaServed": [
+        { "@type": "Place", "name": "Nymphenburg" },
+        { "@type": "Place", "name": "Neuhausen" },
+        { "@type": "Place", "name": "Gern" },
+        { "@type": "Place", "name": "Nymphenburger Schlosspark" }
       ]
     },
-    "areaServed": [
-      { "@type": "Place", "name": "Nymphenburg" },
-      { "@type": "Place", "name": "Neuhausen" },
-      { "@type": "Place", "name": "Gern" }
-    ]
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://extrucon.de/muenchen/nymphenburg#service",
+      "name": "Elegante KI-Lösungen Nymphenburg",
+      "description": "Stilvolle KI-Agenten und Automatisierung für Traditionsunternehmen, Familienunternehmen und gehobene Dienstleister in Nymphenburg.",
+      "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
+      "areaServed": { "@type": "Place", "name": "München-Nymphenburg" },
+      "serviceType": ["Traditions-KI", "Familienunternehmen Automatisierung", "B2B KI"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Bietet ExtruCon Vor-Ort-Service in Nymphenburg?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir bieten diskrete Vor-Ort-Beratung in Nymphenburg, Neuhausen und Gern. Von Fürstenfeldbruck sind wir in 25 Minuten bei Ihnen." } },
+        { "@type": "Question", "name": "Welche KI-Lösungen eignen sich für Traditionsunternehmen?", "acceptedAnswer": { "@type": "Answer", "text": "Wir entwickeln elegante KI-Agenten für Kundenkommunikation, diskrete Workflow-Automatisierung und moderne Digitalisierung – unter Bewahrung Ihrer Unternehmenstradition." } },
+        { "@type": "Question", "name": "Können KI-Agenten für Hausverwaltungen eingesetzt werden?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir entwickeln KI-Agenten für automatisierte Mieterkommunikation, Schadensmeldungen und intelligentes Objektmanagement – ideal für Hausverwaltungen in Nymphenburg." } }
+      ]
+    }
+  ];
 
   const services = [
     { icon: Bot, title: "Elegante KI-Agenten", description: "Stilvolle KI-Assistenten für traditionsreiche Unternehmen und gehobene Dienstleister.", link: "/ki-agenten" },
@@ -49,9 +68,12 @@ export default function Nymphenburg() {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="KI-Agentur Nymphenburg | ExtruCon – Elegante KI-Lösungen München"
-        description="KI-Agentur München-Nymphenburg: KI-Agenten & Automatisierung für Traditionsunternehmen und gehobene Dienstleister. ✓ Elegant ✓ Diskret ✓ Professionell"
+        title="KI-Agentur Nymphenburg | GPT-4 für Traditionsunternehmen | ExtruCon"
+        description="Elegante KI-Agentur für München-Nymphenburg: KI-Agenten mit GPT-4 für Traditionsunternehmen, Familienunternehmen, Hausverwaltungen. ✓ Diskret ✓ Professionell ✓ DSGVO"
+        keywords="KI Agentur Nymphenburg, KI Traditionsunternehmen, GPT-4 Familienunternehmen, Neuhausen KI, Gern Automatisierung, Hausverwaltung KI München"
         canonical="https://extrucon.de/muenchen/nymphenburg"
+        geoRegion="DE-BY"
+        geoPlacename="München-Nymphenburg"
         schema={schemaData}
       />
       <Navbar />

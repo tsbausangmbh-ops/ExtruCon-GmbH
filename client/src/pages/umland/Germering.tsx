@@ -7,30 +7,49 @@ import { Bot, MapPin, Phone, ArrowRight, Workflow, Globe, Wrench, ShoppingBag, H
 import { Link } from "wouter";
 
 export default function Germering() {
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "KI-Agentur Germering | ExtruCon GmbH",
-    "description": "KI-Agentur für Germering. KI-Agenten, Automatisierung und Websites für Handwerk, Einzelhandel und Dienstleister.",
-    "url": "https://extrucon.de/germering",
-    "mainEntity": {
-      "@type": "LocalBusiness",
-      "@id": "https://extrucon.de/#localbusiness"
-    },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de" },
-        { "@type": "ListItem", "position": 2, "name": "München", "item": "https://extrucon.de/muenchen" },
-        { "@type": "ListItem", "position": 3, "name": "Germering", "item": "https://extrucon.de/germering" }
+  const schemaData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "KI-Agentur Germering | ExtruCon GmbH",
+      "description": "KI-Agentur für Germering. KI-Agenten mit GPT-4, Automatisierung und Websites für Handwerk, Einzelhandel und Dienstleister.",
+      "url": "https://extrucon.de/germering",
+      "mainEntity": { "@type": "LocalBusiness", "@id": "https://extrucon.de/#localbusiness" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de" },
+          { "@type": "ListItem", "position": 2, "name": "München", "item": "https://extrucon.de/muenchen" },
+          { "@type": "ListItem", "position": 3, "name": "Germering", "item": "https://extrucon.de/germering" }
+        ]
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Germering" },
+        { "@type": "City", "name": "Unterpfaffenhofen" },
+        { "@type": "City", "name": "Gilching" },
+        { "@type": "City", "name": "Puchheim" }
       ]
     },
-    "areaServed": [
-      { "@type": "City", "name": "Germering" },
-      { "@type": "City", "name": "Unterpfaffenhofen" },
-      { "@type": "City", "name": "Gilching" }
-    ]
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://extrucon.de/germering#service",
+      "name": "KI-Lösungen Germering",
+      "description": "KI-Agenten und Büro-Automatisierung für Handwerksbetriebe und lokale Unternehmen in Germering. GPT-4 powered, erschwinglich.",
+      "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
+      "areaServed": { "@type": "City", "name": "Germering" },
+      "serviceType": ["Handwerk KI", "Büro-Automatisierung", "Lokale SEO"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Wie weit ist ExtruCon von Germering entfernt?", "acceptedAnswer": { "@type": "Answer", "text": "Nur 10 Minuten! Von unserem Standort in Fürstenfeldbruck sind wir schnell bei Ihnen in Germering, Unterpfaffenhofen oder Gilching." } },
+        { "@type": "Question", "name": "Sind KI-Lösungen auch für kleine Handwerksbetriebe bezahlbar?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir bieten KI-Agenten bereits ab 490€ einmalig. Ideal für Elektriker, Maler, Installateure und andere Handwerksbetriebe." } },
+        { "@type": "Question", "name": "Welche Prozesse können für Handwerker automatisiert werden?", "acceptedAnswer": { "@type": "Answer", "text": "Anfragen-Management, automatische Terminbuchung, Angebotserstellung, Rechnungsversand und Kundenkommunikation – alles DSGVO-konform." } }
+      ]
+    }
+  ];
 
   const services = [
     { icon: Bot, title: "KI für Handwerk", description: "Praktische KI-Assistenten für Anfragen, Termine und Kundenkommunikation.", link: "/ki-agenten" },
@@ -49,9 +68,12 @@ export default function Germering() {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="KI-Agentur Germering | ExtruCon – KI für Handwerk & Einzelhandel"
-        description="KI-Agentur für Germering: KI-Agenten und Automatisierung für Handwerksbetriebe und lokale Unternehmen. ✓ Praktisch ✓ Bezahlbar ✓ 10 Min. ab FFB"
+        title="KI-Agentur Germering | GPT-4 für Handwerk & Einzelhandel | ExtruCon"
+        description="KI-Agentur für Germering: KI-Agenten mit GPT-4 & Automatisierung für Handwerksbetriebe, Einzelhandel, Dienstleister. ✓ Bezahlbar ab 490€ ✓ 10 Min. ab FFB ✓ DSGVO"
+        keywords="KI Agentur Germering, KI Handwerk, GPT-4 Handwerksbetrieb, Automatisierung Germering, Unterpfaffenhofen KI, Gilching Automatisierung"
         canonical="https://extrucon.de/germering"
+        geoRegion="DE-BY"
+        geoPlacename="Germering"
         schema={schemaData}
       />
       <Navbar />
