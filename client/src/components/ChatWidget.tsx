@@ -82,10 +82,11 @@ export function ChatWidget() {
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-white/80 hover:text-white transition-colors"
+                className="text-white/80 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded"
                 data-testid="button-close-chat"
+                aria-label="Chat schließen"
               >
-                <X className="w-5 h-5" />
+                <X className="w-5 h-5" aria-hidden="true" />
               </button>
             </div>
 
@@ -142,10 +143,11 @@ export function ChatWidget() {
                 <button
                   onClick={sendMessage}
                   disabled={!input.trim() || isLoading}
-                  className="px-3 py-2 bg-primary text-background rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-50"
+                  className="px-3 py-2 bg-primary text-background rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                   data-testid="button-send-widget"
+                  aria-label="Nachricht senden"
                 >
-                  <Send className="w-4 h-4" />
+                  <Send className="w-4 h-4" aria-hidden="true" />
                 </button>
               </div>
             </div>
@@ -165,10 +167,12 @@ export function ChatWidget() {
         )}
         <motion.button
           onClick={() => setIsOpen(!isOpen)}
-          className="w-14 h-14 bg-gradient-to-r from-primary to-secondary rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform"
+          className="w-14 h-14 bg-gradient-to-r from-primary to-secondary rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           data-testid="button-chat-widget"
+          aria-label={isOpen ? "Chat schließen" : "Chat öffnen"}
+          aria-expanded={isOpen}
         >
           <AnimatePresence mode="wait">
             {isOpen ? (

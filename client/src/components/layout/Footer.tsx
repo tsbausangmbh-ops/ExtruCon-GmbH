@@ -6,11 +6,17 @@ export function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-background border-t border-white/10 py-8 mt-0" itemScope itemType="https://schema.org/LocalBusiness">
+    <footer 
+      className="bg-background border-t border-white/10 py-8 mt-0" 
+      itemScope 
+      itemType="https://schema.org/LocalBusiness"
+      role="contentinfo"
+      aria-label="Seitenfuß"
+    >
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-5 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
-            <a href="https://extrucon.de" className="flex items-center gap-3 mb-4 hover:opacity-80 transition-opacity" itemProp="url">
+            <a href="https://extrucon.de" className="flex items-center gap-3 mb-4 hover:opacity-80 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded" itemProp="url" aria-label="ExtruCon GmbH Startseite">
               <img src={logoImg} alt="ExtruCon GmbH Logo" className="h-10 w-10 object-contain" loading="lazy" />
               <span className="text-xl font-bold font-display tracking-wider text-white" itemProp="name">
                 ExtruCon GmbH
@@ -27,9 +33,9 @@ export function Footer() {
             </div>
           </div>
           
-          <div>
-            <h3 className="font-bold text-white mb-4">{t.footer.services}</h3>
-            <ul className="space-y-2 text-gray-400 text-sm">
+          <nav aria-label="Leistungen">
+            <h3 className="font-bold text-white mb-4" id="footer-services">{t.footer.services}</h3>
+            <ul className="space-y-2 text-gray-400 text-sm" aria-labelledby="footer-services">
               <li><a href="/ki-agenten" className="hover:text-primary transition-colors">{t.nav.kiAgents}</a></li>
               <li><a href="/automatisierungen" className="hover:text-primary transition-colors">{t.nav.automation}</a></li>
               <li><a href="/webseiten-ki" className="hover:text-primary transition-colors">{t.nav.websitesKI}</a></li>
@@ -39,13 +45,13 @@ export function Footer() {
               <li><a href="/leistungen/seo" className="hover:text-primary transition-colors">{t.nav.seo}</a></li>
               <li><a href="/leistungen/markenaufbau" className="hover:text-primary transition-colors">Branding</a></li>
               <li><a href="/leistungen/web" className="hover:text-primary transition-colors">Webentwicklung</a></li>
-              <li><a href="/leistungen/ki-automatisierung" className="hover:text-primary transition-colors">KI-Automatisierung</a></li>
+              <li><a href="/leistungen/ki-automatisierung" className="hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">KI-Automatisierung</a></li>
             </ul>
-          </div>
+          </nav>
 
-          <div>
-            <h3 className="font-bold text-white mb-4">Standorte</h3>
-            <ul className="space-y-2 text-gray-400 text-sm">
+          <nav aria-label="Standorte">
+            <h3 className="font-bold text-white mb-4" id="footer-locations">Standorte</h3>
+            <ul className="space-y-2 text-gray-400 text-sm" aria-labelledby="footer-locations">
               <li><a href="/muenchen" className="hover:text-primary transition-colors">München</a></li>
               <li><a href="/muenchen/schwabing" className="hover:text-primary transition-colors">Schwabing</a></li>
               <li><a href="/muenchen/bogenhausen" className="hover:text-primary transition-colors">Bogenhausen</a></li>
@@ -56,9 +62,9 @@ export function Footer() {
               <li><a href="/dachau" className="hover:text-primary transition-colors">Dachau</a></li>
               <li><a href="/germering" className="hover:text-primary transition-colors">Germering</a></li>
               <li><a href="/puchheim" className="hover:text-primary transition-colors">Puchheim</a></li>
-              <li><a href="/olching" className="hover:text-primary transition-colors">Olching</a></li>
+              <li><a href="/olching" className="hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded">Olching</a></li>
             </ul>
-          </div>
+          </nav>
 
           <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
             <h3 className="font-bold text-white mb-4">{t.footer.contact}</h3>
