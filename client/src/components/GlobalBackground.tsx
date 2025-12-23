@@ -2,7 +2,7 @@ import aiImg from "@assets/generated_images/glowing_neural_network_brain.png";
 
 export function GlobalBackground() {
   return (
-    <div className="fixed inset-0 z-0 pointer-events-none">
+    <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -1 }}>
       <img 
         src={aiImg} 
         alt="" 
