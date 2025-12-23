@@ -1,6 +1,7 @@
+import React from "react";
 import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
-import { QueryClientProvider } from "@tanstack/react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/lib/i18n";
@@ -44,7 +45,7 @@ import ChristmasPopup from "@/components/ChristmasPopup";
 import NewYearPopup from "@/components/NewYearPopup";
 import { BackButton } from "@/components/BackButton";
 
-function Router() {
+export function AppRouter() {
   return (
     <Switch>
       <Route path="/" component={Home} />
@@ -87,21 +88,37 @@ function Router() {
   );
 }
 
-function App() {
+export function AppContent() {
   return (
-    <QueryClientProvider client={queryClient}>
+    <>
+      <Toaster />
+      <AppRouter />
+      <BackButton />
+      <ChatWidget />
+      <CookieConsent />
+      <ChristmasPopup />
+      <NewYearPopup />
+    </>
+  );
+}
+
+export function AppShell({ children, client }: { children: React.ReactNode; client?: QueryClient }) {
+  return (
+    <QueryClientProvider client={client || queryClient}>
       <LanguageProvider>
         <TooltipProvider>
-          <Toaster />
-          <Router />
-          <BackButton />
-          <ChatWidget />
-          <CookieConsent />
-          <ChristmasPopup />
-          <NewYearPopup />
+          {children}
         </TooltipProvider>
       </LanguageProvider>
     </QueryClientProvider>
+  );
+}
+
+function App() {
+  return (
+    <AppShell>
+      <AppContent />
+    </AppShell>
   );
 }
 
