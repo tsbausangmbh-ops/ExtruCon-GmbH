@@ -36,6 +36,7 @@
 - [Markenentwicklung](/leistungen/brand): Logo, Corporate Design, visuelle Identität
 - [Webentwicklung](/leistungen/web): React, Next.js, WordPress, Shopify
 - [SEO & Geo-Optimierung](/leistungen/seo): Lokale Suchmaschinenoptimierung für Unternehmen
+- [KI-Automatisierung](/leistungen/ki): Komplette KI-Integration für Unternehmen – von Chatbots bis Prozessautomation
 
 ## Regionale Präsenz
 
