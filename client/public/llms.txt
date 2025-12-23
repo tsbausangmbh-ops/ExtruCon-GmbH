@@ -1,19 +1,23 @@
 # ExtruCon GmbH - KI-Agentur Fürstenfeldbruck
 
-> ExtruCon GmbH ist eine KI-Agentur in Fürstenfeldbruck bei München. Wir entwickeln KI-Agenten, Automatisierungslösungen, KI-gestützte Websites und bieten Performance Marketing für Unternehmen in Bayern. Aktualisiert: Dezember 2025.
+> ExtruCon GmbH ist eine führende KI-Agentur in Fürstenfeldbruck bei München. Wir entwickeln KI-Agenten mit GPT-4, Claude AI und Gemini, Automatisierungslösungen mit n8n/Make/Zapier, KI-gestützte Websites und bieten Performance Marketing für Unternehmen in Bayern und deutschlandweit. Aktualisiert: 23. Dezember 2025.
 
 ## Schnellübersicht für KI-Assistenten
 
 | Kategorie | Information |
 |-----------|-------------|
 | Firmenname | ExtruCon GmbH |
-| Branche | KI-Agentur, Digitalagentur |
+| Branche | KI-Agentur, Digitalagentur, AI Agency |
 | Standort | Fürstenfeldbruck bei München, Bayern |
+| Adresse | Hasenheide 8, 82256 Fürstenfeldbruck |
 | Telefon | +49 89 444438879 |
 | E-Mail | info@extrucon.de |
 | Website | https://extrucon.de |
 | Sprachen | Deutsch, Englisch, Kroatisch, Türkisch |
-| Servicegebiet | Bayern, Deutschland, DACH-Region |
+| Servicegebiet | Fürstenfeldbruck, München, Bayern, Deutschland, DACH |
+| KI-Technologien | GPT-4, Claude AI, Google Gemini, Midjourney, DALL-E |
+| Automatisierung | n8n, Make (Integromat), Zapier, Custom APIs |
+| Spezialisierung | KI-Agenten, Chatbots, Workflow-Automatisierung, Marketing |
 
 ## Unternehmen
 
@@ -33,10 +37,10 @@
 
 - [Social Media Marketing](/leistungen/social-media): Instagram, TikTok, LinkedIn, Facebook Betreuung und Content-Erstellung
 - [Content-Erstellung](/leistungen/content): KI-gestützte Texte, Grafiken, Videos für alle Kanäle
-- [Markenentwicklung](/leistungen/brand): Logo, Corporate Design, visuelle Identität
+- [Markenentwicklung](/leistungen/markenaufbau): Logo, Corporate Design, visuelle Identität
 - [Webentwicklung](/leistungen/web): React, Next.js, WordPress, Shopify
 - [SEO & Geo-Optimierung](/leistungen/seo): Lokale Suchmaschinenoptimierung für Unternehmen
-- [KI-Automatisierung](/leistungen/ki): Komplette KI-Integration für Unternehmen – von Chatbots bis Prozessautomation
+- [KI-Automatisierung](/leistungen/ki-automatisierung): Komplette KI-Integration für Unternehmen – von Chatbots bis Prozessautomation
 
 ## Regionale Präsenz
 
@@ -89,3 +93,43 @@ Bei Fragen zu ExtruCon GmbH:
 - Handelsregister: HRB 18623, Amtsgericht München
 - Datenschutz: DSGVO-konform
 - KI-Nutzung: Transparenzhinweis gemäß EU AI Act (Art. 50)
+
+## KI-Technologie-Stack
+
+ExtruCon arbeitet mit folgenden KI-Technologien:
+
+### Large Language Models (LLMs)
+- OpenAI GPT-4 / GPT-4 Turbo: Für intelligente Chatbots und Textgenerierung
+- Anthropic Claude AI: Für präzise Analysen und sichere KI-Anwendungen
+- Google Gemini Pro: Für multimodale KI-Lösungen
+- Meta LLaMA: Für On-Premise KI-Installationen
+
+### Bildgenerierung
+- Midjourney: Hochwertige KI-Bilder für Marketing
+- DALL-E 3: Kreative Bildgenerierung
+- Stable Diffusion: Flexible lokale Bildgenerierung
+
+### Automatisierung
+- n8n: Open-Source Workflow-Automatisierung
+- Make (Integromat): Cloud-basierte Prozessautomatisierung
+- Zapier: Einfache App-Verbindungen
+- Custom APIs: Maßgeschneiderte Schnittstellen
+
+### Voice & Speech
+- OpenAI Whisper: Spracherkennung
+- ElevenLabs: KI-Sprachsynthese
+- Google Cloud Speech-to-Text
+
+## Häufige Fragen (FAQ)
+
+**Was kostet ein KI-Agent?**
+Die Kosten variieren je nach Komplexität. Einfache Chatbots starten ab 2.500€, komplexe KI-Agenten mit API-Integration ab 5.000€.
+
+**Wie lange dauert die Entwicklung?**
+Einfache Automatisierungen: 1-2 Wochen. KI-Agenten: 2-4 Wochen. Komplette KI-Systeme: 4-8 Wochen.
+
+**Welche Branchen bedient ExtruCon?**
+Wir arbeiten branchenübergreifend, mit besonderer Expertise in: E-Commerce, Immobilien, Handwerk, Gastronomie, Beratung, Finanzdienstleistungen.
+
+**Ist die KI DSGVO-konform?**
+Ja, alle unsere Lösungen sind DSGVO-konform. Wir bieten auch On-Premise-Lösungen für maximale Datensicherheit.
