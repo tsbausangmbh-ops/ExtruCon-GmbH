@@ -15,28 +15,67 @@ export default function KI() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="KI-Lösungen & Automatisierung | KI Agentur | ExtruCon"
-        description="Maßgeschneiderte KI-Lösungen für Ihr Unternehmen. KI-Agenten, ChatGPT Integration, Workflow-Automatisierung. Fürstenfeldbruck."
-        keywords="KI Agentur, KI-Lösungen, ChatGPT Integration, Automatisierung, Künstliche Intelligenz"
-        canonical="https://extrucon.de/leistungen/ki"
+        title="KI-Automatisierung & KI-Lösungen | GPT-4, Claude AI, Gemini | ExtruCon"
+        description="Professionelle KI-Automatisierung für Ihr Unternehmen. GPT-4, Claude AI, Gemini Integration. KI-Agenten, Chatbots, Workflow-Automatisierung. DSGVO-konform. Fürstenfeldbruck & München."
+        keywords="KI Automatisierung, KI-Lösungen, GPT-4 Integration, Claude AI, Google Gemini, ChatGPT Integration, KI Agentur München, Künstliche Intelligenz Bayern, n8n Automatisierung, Chatbot Entwicklung, Machine Learning, AI Agent Development"
+        canonical="https://extrucon.de/leistungen/ki-automatisierung"
+        geoRegion="DE-BY"
+        geoPlacename="Fürstenfeldbruck"
         schema={[
           {
             "@context": "https://schema.org",
             "@type": "Service",
-            "@id": "https://extrucon.de/leistungen/ki#service",
-            "name": "KI-Lösungen & Automatisierung",
-            "description": "Maßgeschneiderte KI-Lösungen mit GPT-4, Claude AI, Gemini. KI-Agenten und Workflow-Automatisierung für Ihr Unternehmen.",
+            "@id": "https://extrucon.de/leistungen/ki-automatisierung#service",
+            "name": "KI-Automatisierung & KI-Lösungen",
+            "alternateName": ["AI Automation", "Künstliche Intelligenz Lösungen", "AI Solutions"],
+            "description": "Professionelle KI-Automatisierung mit GPT-4, Claude AI, Google Gemini. Entwicklung von KI-Agenten, Chatbots und Workflow-Automatisierung für Unternehmen. DSGVO-konform.",
             "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
-            "areaServed": ["Fürstenfeldbruck", "München", "Bayern", "Deutschland"],
-            "serviceType": "AI Solutions"
+            "areaServed": [
+              { "@type": "City", "name": "Fürstenfeldbruck" },
+              { "@type": "City", "name": "München" },
+              { "@type": "State", "name": "Bayern" },
+              { "@type": "Country", "name": "Deutschland" }
+            ],
+            "serviceType": ["AI Solutions", "KI-Automatisierung", "Chatbot Development", "Workflow Automation"],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "KI-Dienstleistungen",
+              "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "GPT-4 Integration", "description": "Integration von OpenAI GPT-4 in Ihre Geschäftsprozesse" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Claude AI Integration", "description": "Anthropic Claude AI für präzise und sichere KI-Anwendungen" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Chatbot Entwicklung", "description": "Maßgeschneiderte KI-Chatbots für Kundenservice und Lead-Generierung" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "n8n Workflow-Automatisierung", "description": "Automatisierung von Geschäftsprozessen mit n8n und Make" } }
+              ]
+            }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "ExtruCon KI-Agent",
+            "applicationCategory": "BusinessApplication",
+            "applicationSubCategory": "AI Chatbot",
+            "operatingSystem": "Web-basiert",
+            "description": "Intelligenter KI-Agent für Kundenservice, Lead-Qualifizierung und Prozessautomatisierung. Powered by GPT-4 und Claude AI.",
+            "offers": { "@type": "Offer", "price": "490", "priceCurrency": "EUR" },
+            "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" }
           },
           {
             "@context": "https://schema.org",
             "@type": "FAQPage",
             "mainEntity": [
-              { "@type": "Question", "name": "Welche KI-Technologien nutzen Sie?", "acceptedAnswer": { "@type": "Answer", "text": "Wir arbeiten mit OpenAI GPT-4, Claude AI, Google Gemini, Midjourney und DALL-E sowie Automatisierungstools wie n8n." } },
-              { "@type": "Question", "name": "Was kann ein KI-Agent für mich tun?", "acceptedAnswer": { "@type": "Answer", "text": "KI-Agenten automatisieren Kundenservice, Lead-Generierung, E-Mail-Beantwortung und viele weitere repetitive Aufgaben." } },
-              { "@type": "Question", "name": "Ist meine Daten sicher?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir setzen auf DSGVO-konforme Lösungen und können KI auch auf Ihrer eigenen Infrastruktur betreiben." } }
+              { "@type": "Question", "name": "Welche KI-Technologien nutzen Sie?", "acceptedAnswer": { "@type": "Answer", "text": "Wir arbeiten mit OpenAI GPT-4 und GPT-4 Turbo, Anthropic Claude AI, Google Gemini Pro, Midjourney, DALL-E 3 sowie Automatisierungstools wie n8n, Make und Zapier." } },
+              { "@type": "Question", "name": "Was kann ein KI-Agent für mein Unternehmen tun?", "acceptedAnswer": { "@type": "Answer", "text": "KI-Agenten automatisieren Kundenservice 24/7, qualifizieren Leads, beantworten E-Mails, erstellen Angebote und optimieren viele weitere Geschäftsprozesse - bis zu 80% Zeitersparnis." } },
+              { "@type": "Question", "name": "Sind Ihre KI-Lösungen DSGVO-konform?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, alle unsere KI-Lösungen sind vollständig DSGVO-konform. Wir bieten auch On-Premise-Installationen für maximale Datensicherheit und können KI auf Ihrer eigenen Infrastruktur betreiben." } },
+              { "@type": "Question", "name": "Wie lange dauert die Implementierung einer KI-Lösung?", "acceptedAnswer": { "@type": "Answer", "text": "Einfache Chatbots sind in 1-2 Wochen einsatzbereit. Komplexe KI-Agenten mit CRM-Integration benötigen 2-4 Wochen. Enterprise-Lösungen 4-8 Wochen." } }
+            ]
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://extrucon.de" },
+              { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://extrucon.de/#services" },
+              { "@type": "ListItem", "position": 3, "name": "KI-Automatisierung", "item": "https://extrucon.de/leistungen/ki-automatisierung" }
             ]
           }
         ]}
