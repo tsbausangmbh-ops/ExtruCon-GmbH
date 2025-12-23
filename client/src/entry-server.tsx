@@ -1,6 +1,6 @@
 import { renderToString } from "react-dom/server";
 import { Router as WouterRouter } from "wouter";
-import staticLocationHook from "wouter/static-location";
+import { memoryLocation } from "wouter/memory-location";
 import { QueryClient } from "@tanstack/react-query";
 import { AppShell, AppContent } from "./App";
 
@@ -14,8 +14,10 @@ export function render(url: string) {
     },
   });
 
+  const { hook } = memoryLocation({ path: url, static: true });
+
   const html = renderToString(
-    <WouterRouter hook={staticLocationHook(url)}>
+    <WouterRouter hook={hook}>
       <AppShell client={queryClient}>
         <AppContent />
       </AppShell>
