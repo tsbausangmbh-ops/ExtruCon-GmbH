@@ -799,7 +799,14 @@ export const translations = {
       ],
       ctaTitle: 'Bereit für Ihre starke Marke?',
       ctaSubtitle: 'Lassen Sie uns gemeinsam eine Marke entwickeln, die Ihre Werte verkörpert und Ihre Zielgruppe begeistert.',
-      ctaButtonAlt: 'Jetzt Projekt starten'
+      ctaButtonAlt: 'Jetzt Projekt starten',
+      seoTitle: 'KI-gestützte Markenentwicklung mit Midjourney & DALL-E',
+      seoContent: [
+        'ExtruCon GmbH aus Fürstenfeldbruck verbindet modernste KI-Technologie mit klassischem Branding-Know-how. Unsere KI-gestützte Markenentwicklung nutzt Midjourney und DALL-E, um in Rekordzeit Hunderte von Logo-Varianten und Corporate-Design-Konzepten zu generieren.',
+        'Wir sind Ihre KI-Agentur für Markenaufbau in München und Bayern. Unser Team kombiniert die kreative Leistungsfähigkeit von GPT-4 für Naming und Texte mit der visuellen Kraft von Midjourney für Logo-Design, Farbpaletten und visuelle Identitäten.',
+        'Von Startup-Branding bis zur Rebranding-Strategie für etablierte Unternehmen – wir unterstützen Unternehmen in Fürstenfeldbruck, München, Starnberg und deutschlandweit. Unsere KI-Markenentwicklung umfasst Logo-Design, Corporate Design, Brand Guidelines und digitale Markenführung.',
+        'Vorteile der KI-Markenentwicklung: 40-50% kürzere Entwicklungszeit, mehr Kreativität durch Hunderte von Konzeptvarianten, konsistente visuelle Identität über alle Kanäle hinweg, und deutlich günstigere Preise als bei traditionellen Agenturen.'
+      ]
     },
     contentPage: {
       badge: 'Leistung',
@@ -825,7 +832,14 @@ export const translations = {
       ],
       ctaTitle: 'Bereit für Content, der wirkt?',
       ctaSubtitle: 'Lassen Sie uns Inhalte erstellen, die Ihre Zielgruppe begeistern und zum Handeln bewegen.',
-      ctaButtonAlt: 'Jetzt Projekt starten'
+      ctaButtonAlt: 'Jetzt Projekt starten',
+      seoTitle: 'Professionelle KI-Content-Erstellung mit GPT-4 & Midjourney',
+      seoContent: [
+        'ExtruCon GmbH revolutioniert die Content-Erstellung mit modernster KI-Technologie. Unsere KI-gestützte Content-Produktion nutzt GPT-4 und Claude AI für Texte sowie Midjourney und DALL-E für visuelle Inhalte – perfekt für Unternehmen in Fürstenfeldbruck, München und ganz Bayern.',
+        'Als KI-Content-Agentur erstellen wir Blogbeiträge, Website-Texte, Social-Media-Posts, Produktbeschreibungen, Newsletter und Werbetexte. Jeder Inhalt wird von unseren Redakteuren geprüft, SEO-optimiert und auf Ihre Marke abgestimmt.',
+        'Unsere KI-Content-Tools umfassen: GPT-4 für lange Formate und komplexe Texte, Claude AI für nuancierte Kommunikation, Midjourney für Social-Media-Grafiken und Blogbilder, DALL-E für Produktvisualisierungen, und ElevenLabs für professionelle Voiceover.',
+        'Vorteile unserer KI-Content-Produktion: Lieferung innerhalb von 1-3 Werktagen, konsistente Qualität über alle Kanäle, skalierbar für große Content-Mengen, SEO-optimiert für bessere Rankings, und 30-50% günstiger als traditionelle Content-Agenturen.'
+      ]
     },
     kiServicePage: {
       badge: 'KI Agentur Deutschlandweit',
@@ -887,7 +901,14 @@ export const translations = {
       ],
       ctaTitle: 'Bereit für messbares Wachstum?',
       ctaSubtitle: 'Lassen Sie uns datengetriebene Kampagnen starten, die echte Ergebnisse liefern.',
-      ctaButtonAlt: 'Jetzt Projekt starten'
+      ctaButtonAlt: 'Jetzt Projekt starten',
+      seoTitle: 'KI-gestütztes Performance Marketing für maximalen ROI',
+      seoContent: [
+        'ExtruCon GmbH ist Ihre KI-Marketing-Agentur in Fürstenfeldbruck für datengetriebene Kampagnen mit messbarem Erfolg. Wir nutzen GPT-4 für intelligente Anzeigentexte, KI-gestützte Zielgruppenanalyse und automatische Bid-Optimierung.',
+        'Unsere KI-Performance-Marketing-Strategie umfasst Google Ads, Meta Ads (Facebook & Instagram), LinkedIn Ads, TikTok Ads und YouTube Ads. Wir optimieren Ihre Kampagnen kontinuierlich mit maschinellem Lernen und Predictive Analytics.',
+        'Wie wir KI im Marketing einsetzen: GPT-4 generiert performante Anzeigentexte in Sekunden, KI-Algorithmen identifizieren die besten Zielgruppen, automatische A/B-Tests optimieren Creatives, und Predictive Analytics prognostiziert Kampagnenerfolge.',
+        'Ob Lead-Generierung, E-Commerce-Kampagnen oder Brand-Awareness – wir entwickeln maßgeschneiderte Strategien für Ihr Geschäftsziel. Transparentes Reporting, klar definierte KPIs und regelmäßige Optimierung gehören zu unserem Standard.'
+      ]
     },
     seoPage: {
       badge: 'Leistung',
@@ -1036,7 +1057,14 @@ export const translations = {
       ],
       ctaTitle: 'Bereit für Social Media Erfolg?',
       ctaSubtitle: 'Lassen Sie uns Ihre Social Media Präsenz auf das nächste Level bringen. Kostenlose Erstanalyse!',
-      ctaButtonAlt: 'Jetzt Social Media Beratung starten'
+      ctaButtonAlt: 'Jetzt Social Media Beratung starten',
+      seoTitle: 'KI-Social Media Marketing für mehr Reichweite & Engagement',
+      seoContent: [
+        'ExtruCon GmbH bringt Ihr Social Media auf das nächste Level mit KI-gestütztem Content. Wir nutzen GPT-4 für fesselnde Texte und Midjourney für visuell ansprechende Grafiken – perfekt abgestimmt auf Instagram, TikTok, LinkedIn und Facebook.',
+        'Unsere KI-Content-Strategie spart Zeit und liefert Ergebnisse: automatisierte Content-Planung, KI-generierte Posting-Texte, Trendanalyse und optimale Posting-Zeiten durch maschinelles Lernen.',
+        'Unsere Social Media Services: Instagram Marketing mit Reels und Stories, TikTok-Strategien für virale Reichweite, LinkedIn für B2B-Leadgenerierung, Facebook Community Management und YouTube Shorts. Alle Inhalte werden mit GPT-4 getextet und mit Midjourney visuell gestaltet.',
+        'Ob Influencer-Kooperationen, Social Ads oder Community Management – wir bieten Full-Service Social Media Marketing. Starten Sie mit einer kostenlosen Analyse Ihrer aktuellen Kanäle und entdecken Sie das Potenzial von KI-gestütztem Social Media.'
+      ]
     },
     webPage: {
       heroImageAlt: 'Web Entwicklung Agentur',
@@ -1064,7 +1092,14 @@ export const translations = {
       ],
       ctaTitle: 'Bereit für Ihre neue Website?',
       ctaSubtitle: 'Lassen Sie uns eine digitale Präsenz schaffen, die Ihre Kunden begeistert.',
-      ctaButtonAlt: 'Jetzt Projekt starten'
+      ctaButtonAlt: 'Jetzt Projekt starten',
+      seoTitle: 'Moderne KI-Webentwicklung mit GPT-4 Chatbot-Integration',
+      seoContent: [
+        'ExtruCon GmbH entwickelt intelligente Websites mit GPT-4 Chatbot-Integration für Unternehmen in Fürstenfeldbruck, München und deutschlandweit. Unsere Websites sind nicht nur schön, sondern auch intelligent – mit KI-gestützten Funktionen für bessere Benutzererfahrung und mehr Conversions.',
+        'Als KI-Webentwicklungs-Agentur nutzen wir modernste Technologien: React, Next.js, TypeScript und Tailwind CSS für schnelle, responsive Websites. GPT-4 für intelligente Chatbots, die Kundenanfragen 24/7 beantworten. Claude AI für komplexe Interaktionen direkt auf Ihrer Website.',
+        'Unsere KI-Web-Features: Intelligente Chatbots für Kundenservice und Leadgenerierung, personalisierte Produktempfehlungen, automatische FAQ-Beantwortung, KI-gestützte Suchfunktionen und dynamische Inhaltsanpassung basierend auf Nutzerverhalten. Alles DSGVO-konform.',
+        'Ob Unternehmenswebsite, E-Commerce-Shop oder Web-App – wir liefern maßgeschneiderte Lösungen mit KI-Integration. SEO-optimiert für beste Google-Rankings, barrierefrei und mobil-optimiert. Fordern Sie ein unverbindliches Angebot an.'
+      ]
     },
     legalPages: {
       impressumTitle: 'Impressum',
@@ -1976,7 +2011,14 @@ export const translations = {
       ],
       ctaTitle: 'Ready for Your Strong Brand?',
       ctaSubtitle: 'Let\'s develop a brand together that embodies your values and inspires your target audience.',
-      ctaButtonAlt: 'Start Project Now'
+      ctaButtonAlt: 'Start Project Now',
+      seoTitle: 'AI-Powered Brand Development with Midjourney & DALL-E',
+      seoContent: [
+        'ExtruCon GmbH from Fürstenfeldbruck combines cutting-edge AI technology with classic branding expertise. Our AI-powered brand development uses Midjourney and DALL-E to generate hundreds of logo variants and corporate design concepts in record time.',
+        'We are your AI agency for brand building in Munich and Bavaria. Our team combines the creative power of GPT-4 for naming and copy with the visual strength of Midjourney for logo design, color palettes, and visual identities.',
+        'From startup branding to rebranding strategies for established companies – we support businesses in Fürstenfeldbruck, Munich, Starnberg, and throughout Germany. Our AI brand development includes logo design, corporate design, brand guidelines, and digital brand management.',
+        'Benefits of AI brand development: 40-50% shorter development time, more creativity through hundreds of concept variants, consistent visual identity across all channels, and significantly lower prices than traditional agencies.'
+      ]
     },
     contentPage: {
       badge: 'Service',
@@ -2002,7 +2044,14 @@ export const translations = {
       ],
       ctaTitle: 'Ready for Content That Works?',
       ctaSubtitle: 'Let us create content that excites your target audience and moves them to action.',
-      ctaButtonAlt: 'Start Project Now'
+      ctaButtonAlt: 'Start Project Now',
+      seoTitle: 'Professional AI Content Creation with GPT-4 & Midjourney',
+      seoContent: [
+        'ExtruCon GmbH revolutionizes content creation with cutting-edge AI technology. Our AI-powered content production uses GPT-4 and Claude AI for text, plus Midjourney and DALL-E for visual content – perfect for businesses in Fürstenfeldbruck, Munich, and all of Bavaria.',
+        'As an AI content agency, we create blog posts, website copy, social media posts, product descriptions, newsletters, and advertising copy. Every piece is reviewed by our editors, SEO-optimized, and tailored to your brand.',
+        'Our AI content tools include: GPT-4 for long-form content and complex texts, Claude AI for nuanced communication, Midjourney for social media graphics and blog images, DALL-E for product visualizations, and ElevenLabs for professional voiceovers.',
+        'Benefits of our AI content production: Delivery within 1-3 business days, consistent quality across all channels, scalable for large content volumes, SEO-optimized for better rankings, and 30-50% more affordable than traditional content agencies.'
+      ]
     },
     kiServicePage: {
       badge: 'AI Agency Nationwide',
@@ -2064,7 +2113,14 @@ export const translations = {
       ],
       ctaTitle: 'Ready for Measurable Growth?',
       ctaSubtitle: 'Let us start data-driven campaigns that deliver real results.',
-      ctaButtonAlt: 'Start Project Now'
+      ctaButtonAlt: 'Start Project Now',
+      seoTitle: 'AI-Powered Performance Marketing for Maximum ROI',
+      seoContent: [
+        'ExtruCon GmbH is your AI marketing agency in Fürstenfeldbruck for data-driven campaigns with measurable success. We use GPT-4 for intelligent ad copy, AI-powered audience analysis, and automatic bid optimization.',
+        'Our AI performance marketing strategy covers Google Ads, Meta Ads (Facebook & Instagram), LinkedIn Ads, TikTok Ads, and YouTube Ads. We continuously optimize your campaigns with machine learning and predictive analytics.',
+        'How we use AI in marketing: GPT-4 generates high-performing ad copy in seconds, AI algorithms identify the best audiences, automatic A/B tests optimize creatives, and predictive analytics forecasts campaign success.',
+        'Whether lead generation, e-commerce campaigns, or brand awareness – we develop tailored strategies for your business goals. Transparent reporting, clearly defined KPIs, and regular optimization are our standard.'
+      ]
     },
     seoPage: {
       badge: 'Service',
@@ -2213,7 +2269,14 @@ export const translations = {
       ],
       ctaTitle: 'Ready for Social Media Success?',
       ctaSubtitle: 'Let us take your social media presence to the next level. Free initial analysis!',
-      ctaButtonAlt: 'Start Social Media Consultation Now'
+      ctaButtonAlt: 'Start Social Media Consultation Now',
+      seoTitle: 'AI Social Media Marketing for More Reach & Engagement',
+      seoContent: [
+        'ExtruCon GmbH takes your social media to the next level with AI-powered content. We use GPT-4 for captivating copy and Midjourney for visually appealing graphics – perfectly tailored for Instagram, TikTok, LinkedIn, and Facebook.',
+        'Our AI content strategy saves time and delivers results: automated content planning, AI-generated post copy, trend analysis, and optimal posting times through machine learning.',
+        'Our social media services: Instagram marketing with Reels and Stories, TikTok strategies for viral reach, LinkedIn for B2B lead generation, Facebook community management, and YouTube Shorts. All content is written with GPT-4 and visually designed with Midjourney.',
+        'Whether influencer collaborations, social ads, or community management – we offer full-service social media marketing. Start with a free analysis of your current channels and discover the potential of AI-powered social media.'
+      ]
     },
     webPage: {
       heroImageAlt: 'Web Development Agency',
@@ -2241,7 +2304,14 @@ export const translations = {
       ],
       ctaTitle: 'Ready for Your New Website?',
       ctaSubtitle: 'Let us create a digital presence that delights your customers.',
-      ctaButtonAlt: 'Start Project Now'
+      ctaButtonAlt: 'Start Project Now',
+      seoTitle: 'Modern AI Web Development with GPT-4 Chatbot Integration',
+      seoContent: [
+        'ExtruCon GmbH develops intelligent websites with GPT-4 chatbot integration for businesses in Fürstenfeldbruck, Munich, and throughout Germany. Our websites are not only beautiful but also intelligent – with AI-powered features for better user experience and more conversions.',
+        'As an AI web development agency, we use cutting-edge technologies: React, Next.js, TypeScript, and Tailwind CSS for fast, responsive websites. GPT-4 for intelligent chatbots that answer customer inquiries 24/7. Claude AI for complex interactions directly on your website.',
+        'Our AI web features: Intelligent chatbots for customer service and lead generation, personalized product recommendations, automatic FAQ answering, AI-powered search functions, and dynamic content adaptation based on user behavior. All GDPR-compliant.',
+        'Whether corporate website, e-commerce shop, or web app – we deliver tailored solutions with AI integration. SEO-optimized for best Google rankings, accessible, and mobile-optimized. Request a free quote.'
+      ]
     },
     legalPages: {
       impressumTitle: 'Legal Notice',
@@ -3153,7 +3223,14 @@ export const translations = {
       ],
       ctaTitle: 'Spremni za vaš snažan brend?',
       ctaSubtitle: 'Razvijmo zajedno brend koji utjelovljuje vaše vrijednosti i oduševljava vašu ciljanu publiku.',
-      ctaButtonAlt: 'Započnite projekt sada'
+      ctaButtonAlt: 'Započnite projekt sada',
+      seoTitle: 'AI razvoj brenda s Midjourney i DALL-E',
+      seoContent: [
+        'ExtruCon GmbH iz Fürstenfeldbrucka kombinira najmoderniju AI tehnologiju s klasičnom branding stručnošću. Naš AI razvoj brendova koristi Midjourney i DALL-E za generiranje stotina varijanti logotipa i korporativnog dizajna u rekordnom vremenu.',
+        'Mi smo vaša AI agencija za izgradnju brendova u Münchenu i Bavarskoj. Naš tim kombinira kreativnu snagu GPT-4 za imenovanje i tekstove s vizualnom snagom Midjourneya za dizajn logotipa, palete boja i vizualne identitete.',
+        'Od startup brandinga do rebrandinga za etablirane tvrtke – podržavamo tvrtke u Fürstenfeldbrucku, Münchenu, Starnbergu i diljem Njemačke. Naš AI razvoj brenda uključuje dizajn logotipa, korporativni dizajn, brand smjernice i digitalno upravljanje brendom.',
+        'Prednosti AI razvoja brenda: 40-50% kraće vrijeme razvoja, više kreativnosti kroz stotine varijanti koncepata, konzistentan vizualni identitet na svim kanalima i značajno niže cijene od tradicionalnih agencija.'
+      ]
     },
     contentPage: {
       badge: 'Usluga',
@@ -3179,7 +3256,14 @@ export const translations = {
       ],
       ctaTitle: 'Spremni za sadržaj koji djeluje?',
       ctaSubtitle: 'Dopustite nam da kreiramo sadržaj koji oduševljava vašu ciljanu publiku i potiče ih na akciju.',
-      ctaButtonAlt: 'Započnite projekt sada'
+      ctaButtonAlt: 'Započnite projekt sada',
+      seoTitle: 'Profesionalna AI kreacija sadržaja s GPT-4 i Midjourney',
+      seoContent: [
+        'ExtruCon GmbH revolucionira kreaciju sadržaja s najmodernijom AI tehnologijom. Naša AI produkcija sadržaja koristi GPT-4 i Claude AI za tekstove, te Midjourney i DALL-E za vizualni sadržaj – savršeno za tvrtke u Fürstenfeldbrucku, Münchenu i cijeloj Bavarskoj.',
+        'Kao AI agencija za sadržaj, izrađujemo blog postove, web tekstove, objave na društvenim mrežama, opise proizvoda, newslettere i reklamne tekstove. Svaki sadržaj pregledaju naši urednici, SEO je optimiziran i prilagođen vašem brendu.',
+        'Naši AI alati za sadržaj uključuju: GPT-4 za dugačke formate i kompleksne tekstove, Claude AI za nijansiranu komunikaciju, Midjourney za grafike društvenih mreža i slike za blog, DALL-E za vizualizacije proizvoda i ElevenLabs za profesionalne voiceovere.',
+        'Prednosti naše AI produkcije sadržaja: Isporuka u roku od 1-3 radna dana, konzistentna kvaliteta na svim kanalima, skalabilno za velike količine sadržaja, SEO optimizirano za bolje rangiranje i 30-50% povoljnije od tradicionalnih agencija za sadržaj.'
+      ]
     },
     kiServicePage: {
       badge: 'AI Agencija diljem Njemačke',
@@ -3241,7 +3325,14 @@ export const translations = {
       ],
       ctaTitle: 'Spremni za mjerljiv rast?',
       ctaSubtitle: 'Pokrenimo kampanje temeljene na podacima koje donose stvarne rezultate.',
-      ctaButtonAlt: 'Započnite projekt sada'
+      ctaButtonAlt: 'Započnite projekt sada',
+      seoTitle: 'AI Performance Marketing za maksimalni ROI',
+      seoContent: [
+        'ExtruCon GmbH je vaša AI marketing agencija u Fürstenfeldbrucku za kampanje temeljene na podacima s mjerljivim uspjehom. Koristimo GPT-4 za inteligentne reklamne tekstove, AI analizu ciljane publike i automatsku optimizaciju ponuda.',
+        'Naša AI strategija performance marketinga pokriva Google Ads, Meta Ads (Facebook i Instagram), LinkedIn Ads, TikTok Ads i YouTube Ads. Kontinuirano optimiziramo vaše kampanje strojnim učenjem i prediktivnom analitikom.',
+        'Kako koristimo AI u marketingu: GPT-4 generira učinkovite reklamne tekstove u sekundama, AI algoritmi identificiraju najbolje publike, automatski A/B testovi optimiziraju kreative, a prediktivna analitika prognozira uspjeh kampanja.',
+        'Bilo da se radi o generiranju potencijalnih klijenata, e-commerce kampanjama ili brand awarenessu – razvijamo prilagođene strategije za vaše poslovne ciljeve. Transparentno izvještavanje, jasno definirani KPI-jevi i redovna optimizacija su naš standard.'
+      ]
     },
     seoPage: {
       badge: 'Usluga',
@@ -3390,7 +3481,14 @@ export const translations = {
       ],
       ctaTitle: 'Spremni za uspjeh na društvenim mrežama?',
       ctaSubtitle: 'Dopustite nam da podignemo vašu prisutnost na društvenim mrežama na višu razinu. Besplatna prva analiza!',
-      ctaButtonAlt: 'Započnite konzultacije za društvene mreže sada'
+      ctaButtonAlt: 'Započnite konzultacije za društvene mreže sada',
+      seoTitle: 'AI Marketing na društvenim mrežama za veći doseg i angažman',
+      seoContent: [
+        'ExtruCon GmbH podiže vaše društvene mreže na višu razinu s AI sadržajem. Koristimo GPT-4 za privlačne tekstove i Midjourney za vizualno atraktivne grafike – savršeno prilagođeno za Instagram, TikTok, LinkedIn i Facebook.',
+        'Naša AI strategija sadržaja štedi vrijeme i donosi rezultate: automatsko planiranje sadržaja, AI generirani tekstovi objava, analiza trendova i optimalna vremena objave putem strojnog učenja.',
+        'Naše usluge na društvenim mrežama: Instagram marketing s Reelsima i Storiesima, TikTok strategije za viralni doseg, LinkedIn za B2B generiranje potencijalnih klijenata, Facebook upravljanje zajednicom i YouTube Shorts. Sav sadržaj piše GPT-4 i vizualno dizajnira Midjourney.',
+        'Bilo da se radi o suradnjama s influencerima, društvenim oglasima ili upravljanju zajednicom – nudimo full-service marketing na društvenim mrežama. Započnite s besplatnom analizom vaših trenutnih kanala i otkrijte potencijal AI marketinga na društvenim mrežama.'
+      ]
     },
     webPage: {
       heroImageAlt: 'Agencija za web razvoj',
@@ -3418,7 +3516,14 @@ export const translations = {
       ],
       ctaTitle: 'Spremni za svoju novu web stranicu?',
       ctaSubtitle: 'Dopustite nam da stvorimo digitalnu prisutnost koja oduševljava vaše kupce.',
-      ctaButtonAlt: 'Započnite projekt sada'
+      ctaButtonAlt: 'Započnite projekt sada',
+      seoTitle: 'Moderni AI web razvoj s integracijom GPT-4 chatbota',
+      seoContent: [
+        'ExtruCon GmbH razvija inteligentne web stranice s integracijom GPT-4 chatbota za tvrtke u Fürstenfeldbrucku, Münchenu i diljem Njemačke. Naše web stranice nisu samo lijepe, već i inteligentne – s AI funkcijama za bolje korisničko iskustvo i više konverzija.',
+        'Kao AI agencija za web razvoj, koristimo najmodernije tehnologije: React, Next.js, TypeScript i Tailwind CSS za brze, responzivne web stranice. GPT-4 za inteligentne chatbotove koji odgovaraju na upite kupaca 24/7. Claude AI za složene interakcije izravno na vašoj web stranici.',
+        'Naše AI web značajke: Inteligentni chatbotovi za korisničku službu i generiranje potencijalnih klijenata, personalizirane preporuke proizvoda, automatsko odgovaranje na FAQ, AI pretraživanje i dinamička prilagodba sadržaja na temelju ponašanja korisnika. Sve u skladu s GDPR-om.',
+        'Bilo da se radi o korporativnoj web stranici, e-commerce trgovini ili web aplikaciji – isporučujemo prilagođena rješenja s AI integracijom. SEO optimizirano za najbolje Google rangiranje, pristupačno i optimizirano za mobilne uređaje. Zatražite besplatnu ponudu.'
+      ]
     },
     legalPages: {
       impressumTitle: 'Pravna obavijest',
@@ -4220,6 +4325,13 @@ export const translations = {
       ctaSubtitle: 'Sosyal medya stratejinizi bir üst seviyeye taşıyın.',
       ctaButton: 'Ücretsiz Danışmanlık',
       ctaButtonAlt: 'Projeye Başla',
+      seoTitle: 'Daha Fazla Erişim ve Etkileşim için AI Sosyal Medya Pazarlama',
+      seoContent: [
+        'ExtruCon GmbH, AI destekli içerikle sosyal medyanızı bir üst seviyeye taşıyor. Etkileyici metinler için GPT-4 ve görsel açıdan çekici grafikler için Midjourney kullanıyoruz - Instagram, TikTok, LinkedIn ve Facebook için mükemmel şekilde uyarlanmış.',
+        'AI içerik stratejimiz zaman kazandırır ve sonuç verir: otomatik içerik planlaması, AI tarafından oluşturulan gönderi metinleri, trend analizi ve makine öğrenimi yoluyla optimum paylaşım zamanları.',
+        'Sosyal medya hizmetlerimiz: Reels ve Stories ile Instagram pazarlama, viral erişim için TikTok stratejileri, B2B lead üretimi için LinkedIn, Facebook topluluk yönetimi ve YouTube Shorts. Tüm içerik GPT-4 ile yazılır ve Midjourney ile görsel olarak tasarlanır.',
+        'Influencer işbirlikleri, sosyal reklamlar veya topluluk yönetimi olsun - tam hizmet sosyal medya pazarlama sunuyoruz. Mevcut kanallarınızın ücretsiz analizi ile başlayın ve AI destekli sosyal medyanın potansiyelini keşfedin.'
+      ]
     },
     contentPage: {
       heroTitle: 'İçerik Oluşturma',
@@ -4232,6 +4344,13 @@ export const translations = {
       ctaSubtitle: 'İçerik stratejinizi AI ile güçlendirin.',
       ctaButton: 'Ücretsiz Danışmanlık',
       ctaButtonAlt: 'Projeye Başla',
+      seoTitle: 'GPT-4 & Midjourney ile Profesyonel AI İçerik Üretimi',
+      seoContent: [
+        'ExtruCon GmbH, son teknoloji AI ile içerik oluşturmayı devrimleştiriyor. AI destekli içerik üretimimiz metin için GPT-4 ve Claude AI, görsel içerik için Midjourney ve DALL-E kullanır - Fürstenfeldbruck, Münih ve tüm Bavyera\'daki işletmeler için ideal.',
+        'AI içerik ajansı olarak blog yazıları, web sitesi metinleri, sosyal medya gönderileri, ürün açıklamaları, bültenler ve reklam metinleri oluşturuyoruz. Her içerik editörlerimiz tarafından gözden geçirilir, SEO optimize edilir ve markanıza uyarlanır.',
+        'AI içerik araçlarımız şunları içerir: Uzun formatlı içerik ve karmaşık metinler için GPT-4, nüanslı iletişim için Claude AI, sosyal medya grafikleri ve blog görselleri için Midjourney, ürün görselleştirmeleri için DALL-E ve profesyonel seslendirmeler için ElevenLabs.',
+        'AI içerik üretimimizin avantajları: 1-3 iş günü içinde teslimat, tüm kanallarda tutarlı kalite, büyük içerik hacimleri için ölçeklenebilir, daha iyi sıralamalar için SEO optimize edilmiş ve geleneksel içerik ajanslarından %30-50 daha uygun fiyatlı.'
+      ]
     },
     marketingPage: {
       heroTitle: 'Performans Pazarlama',
@@ -4244,6 +4363,13 @@ export const translations = {
       ctaSubtitle: 'Pazarlama performansınızı artırın.',
       ctaButton: 'Ücretsiz Danışmanlık',
       ctaButtonAlt: 'Projeye Başla',
+      seoTitle: 'Maksimum ROI için AI Destekli Performans Pazarlama',
+      seoContent: [
+        'ExtruCon GmbH, ölçülebilir başarı ile veri odaklı kampanyalar için Fürstenfeldbruck\'taki AI pazarlama ajansınızdır. Akıllı reklam metinleri, AI destekli hedef kitle analizi ve otomatik teklif optimizasyonu için GPT-4 kullanıyoruz.',
+        'AI performans pazarlama stratejimiz Google Ads, Meta Ads (Facebook ve Instagram), LinkedIn Ads, TikTok Ads ve YouTube Ads\'i kapsar. Kampanyalarınızı makine öğrenimi ve tahmine dayalı analitikle sürekli optimize ediyoruz.',
+        'Pazarlamada AI\'yı nasıl kullanıyoruz: GPT-4 saniyeler içinde yüksek performanslı reklam metinleri üretir, AI algoritmaları en iyi hedef kitleleri belirler, otomatik A/B testleri kreatif resimleri optimize eder ve tahmine dayalı analitik kampanya başarısını öngörür.',
+        'Lead üretimi, e-ticaret kampanyaları veya marka bilinirliği olsun - iş hedefleriniz için özelleştirilmiş stratejiler geliştiriyoruz. Şeffaf raporlama, net tanımlanmış KPI\'lar ve düzenli optimizasyon standardımızdır.'
+      ]
     },
     brandPage: {
       heroTitle: 'Marka Kimliği',
@@ -4256,6 +4382,13 @@ export const translations = {
       ctaSubtitle: 'Markanızı bir sonraki seviyeye taşıyın.',
       ctaButton: 'Ücretsiz Danışmanlık',
       ctaButtonAlt: 'Projeye Başla',
+      seoTitle: 'Midjourney & DALL-E ile AI Destekli Marka Geliştirme',
+      seoContent: [
+        'Fürstenfeldbruck merkezli ExtruCon GmbH, son teknoloji AI ile klasik marka uzmanlığını birleştirmektedir. AI destekli marka geliştirmemiz, rekor sürede yüzlerce logo varyantı ve kurumsal tasarım konsepti oluşturmak için Midjourney ve DALL-E kullanır.',
+        'Münih ve Bavyera\'da marka oluşturma için AI ajansınızız. Ekibimiz, isimlendirme ve metin için GPT-4\'ün yaratıcı gücünü, logo tasarımı, renk paletleri ve görsel kimlikler için Midjourney\'in görsel gücüyle birleştirir.',
+        'Startup markalamasından köklü şirketler için yeniden markalaşma stratejilerine kadar - Fürstenfeldbruck, Münih, Starnberg ve Almanya genelinde işletmeleri destekliyoruz. AI marka geliştirmemiz logo tasarımı, kurumsal tasarım, marka yönergeleri ve dijital marka yönetimini kapsar.',
+        'AI marka geliştirmenin avantajları: %40-50 daha kısa geliştirme süresi, yüzlerce konsept varyantıyla daha fazla yaratıcılık, tüm kanallarda tutarlı görsel kimlik ve geleneksel ajanslardan önemli ölçüde düşük fiyatlar.'
+      ]
     },
     webPage: {
       heroTitle: 'Web Geliştirme',
@@ -4268,6 +4401,13 @@ export const translations = {
       ctaSubtitle: 'Web projenizi hayata geçirin.',
       ctaButton: 'Ücretsiz Danışmanlık',
       ctaButtonAlt: 'Projeye Başla',
+      seoTitle: 'GPT-4 Chatbot Entegrasyonlu Modern AI Web Geliştirme',
+      seoContent: [
+        'ExtruCon GmbH, Fürstenfeldbruck, Münih ve Almanya genelindeki işletmeler için GPT-4 chatbot entegrasyonlu akıllı web siteleri geliştiriyor. Web sitelerimiz sadece güzel değil, aynı zamanda akıllı - daha iyi kullanıcı deneyimi ve daha fazla dönüşüm için AI destekli özelliklerle.',
+        'AI web geliştirme ajansı olarak en son teknolojileri kullanıyoruz: Hızlı, duyarlı web siteleri için React, Next.js, TypeScript ve Tailwind CSS. Müşteri sorularını 7/24 yanıtlayan akıllı chatbotlar için GPT-4. Web sitenizde doğrudan karmaşık etkileşimler için Claude AI.',
+        'AI web özelliklerimiz: Müşteri hizmetleri ve lead üretimi için akıllı chatbotlar, kişiselleştirilmiş ürün önerileri, otomatik SSS yanıtlama, AI destekli arama fonksiyonları ve kullanıcı davranışına dayalı dinamik içerik uyarlaması. Tümü GDPR uyumlu.',
+        'Kurumsal web sitesi, e-ticaret mağazası veya web uygulaması olsun - AI entegrasyonlu özelleştirilmiş çözümler sunuyoruz. En iyi Google sıralamaları için SEO optimize edilmiş, erişilebilir ve mobil optimize. Ücretsiz teklif isteyin.'
+      ]
     },
     aboutPage: {
       badge: 'ExtruCon Hakkında',

@@ -124,6 +124,22 @@ export default function Brand() {
           </div>
         </section>
 
+        {/* SEO Content Section */}
+        {t.brandPage.seoContent && (
+          <section className="py-16 bg-card/10">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl font-bold font-display text-white mb-8">{t.brandPage.seoTitle}</h2>
+                <div className="prose prose-invert max-w-none text-gray-300 space-y-6">
+                  {t.brandPage.seoContent.map((paragraph, i) => (
+                    <p key={i}>{paragraph}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* CTA */}
         <section className="py-16 bg-gradient-to-r from-amber-900/20 to-orange-900/20">
           <div className="container mx-auto px-4 text-center">
