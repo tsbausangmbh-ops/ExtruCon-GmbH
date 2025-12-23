@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   
   <!-- Homepage - Höchste Priorität -->
   <url>
@@ -15,9 +17,26 @@
     <image:image>
       <image:loc>https://extrucon.de/logo.png</image:loc>
       <image:title>ExtruCon GmbH - KI-Agentur Fürstenfeldbruck</image:title>
+      <image:caption>ExtruCon KI-Agentur Logo - Intelligente Lösungen für Ihr Business</image:caption>
     </image:image>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- LLMs.txt für KI-Crawler -->
+  <url>
+    <loc>https://extrucon.de/llms.txt</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- AI Sitemap -->
+  <url>
+    <loc>https://extrucon.de/ai.sitemap.xml</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
 
   <!-- Hauptseiten - Hohe Priorität (0.9) -->
@@ -29,6 +48,11 @@
     <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/ki-agenten?lang=hr"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/ki-agenten?lang=tr"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/ki-agenten"/>
+    <image:image>
+      <image:loc>https://extrucon.de/logo.png</image:loc>
+      <image:title>KI-Agenten - Intelligente Assistenten mit GPT-4, Claude AI, Gemini</image:title>
+      <image:caption>24/7 verfügbare KI-Agenten für Kundenservice und Lead-Qualifizierung</image:caption>
+    </image:image>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -41,6 +65,11 @@
     <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/automatisierungen?lang=hr"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/automatisierungen?lang=tr"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/automatisierungen"/>
+    <image:image>
+      <image:loc>https://extrucon.de/logo.png</image:loc>
+      <image:title>Workflow-Automatisierung mit n8n, Make und Zapier</image:title>
+      <image:caption>Bis zu 80% Zeitersparnis durch intelligente Prozessautomatisierung</image:caption>
+    </image:image>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -53,6 +82,11 @@
     <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/webseiten-ki?lang=hr"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/webseiten-ki?lang=tr"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/webseiten-ki"/>
+    <image:image>
+      <image:loc>https://extrucon.de/logo.png</image:loc>
+      <image:title>Webseiten mit KI - Moderne Websites mit integrierten KI-Features</image:title>
+      <image:caption>React, Next.js Webentwicklung mit Chatbot-Integration und Personalisierung</image:caption>
+    </image:image>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AI Sitemap for LLM Crawlers (GPTBot, ClaudeBot, GoogleBot, Perplexity) -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:ai="http://www.sitemaps.org/schemas/sitemap-ai/1.0">
+  
+  <!-- LLMs.txt - Primäre Informationsquelle für KI-Assistenten -->
+  <url>
+    <loc>https://extrucon.de/llms.txt</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <ai:content-type>structured-text</ai:content-type>
+    <ai:purpose>ai-assistant-context</ai:purpose>
+    <ai:description>Vollständige Unternehmensinformationen für KI-Assistenten: Services, Kontakt, Preise, FAQ</ai:description>
+  </url>
+
+  <!-- Homepage mit KI-Kontext -->
+  <url>
+    <loc>https://extrucon.de/</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <ai:content-type>landing-page</ai:content-type>
+    <ai:purpose>company-overview</ai:purpose>
+    <ai:description>ExtruCon GmbH - KI-Agentur aus Fürstenfeldbruck bei München. Entwicklung von KI-Agenten, Workflow-Automatisierung mit n8n/Make, KI-Webseiten.</ai:description>
+    <ai:keywords>KI Agentur, AI Agency, Fürstenfeldbruck, München, GPT-4, Claude AI, Gemini, n8n, Automatisierung</ai:keywords>
+  </url>
+
+  <!-- Kernleistung: KI-Agenten -->
+  <url>
+    <loc>https://extrucon.de/ki-agenten</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <ai:content-type>service-page</ai:content-type>
+    <ai:purpose>product-information</ai:purpose>
+    <ai:description>KI-Agenten für Kundenservice, Lead-Qualifizierung, Terminbuchung. Basierend auf GPT-4, Claude AI, Gemini Pro. 24/7 verfügbar, mehrsprachig.</ai:description>
+    <ai:keywords>KI Agent, Chatbot, GPT-4, Claude, Gemini, Kundenservice, Lead-Generierung, 24/7 Support</ai:keywords>
+    <ai:pricing>ab 2.500 EUR</ai:pricing>
+  </url>
+
+  <!-- Kernleistung: Automatisierungen -->
+  <url>
+    <loc>https://extrucon.de/automatisierungen</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <ai:content-type>service-page</ai:content-type>
+    <ai:purpose>product-information</ai:purpose>
+    <ai:description>Workflow-Automatisierung mit n8n, Make, Zapier. Prozessoptimierung, API-Integration, bis 80% Zeitersparnis.</ai:description>
+    <ai:keywords>n8n, Make, Zapier, Workflow Automation, API Integration, Prozessautomatisierung</ai:keywords>
+    <ai:pricing>ab 1.500 EUR</ai:pricing>
+  </url>
+
+  <!-- Kernleistung: Webseiten mit KI -->
+  <url>
+    <loc>https://extrucon.de/webseiten-ki</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <ai:content-type>service-page</ai:content-type>
+    <ai:purpose>product-information</ai:purpose>
+    <ai:description>Moderne Webseiten mit integrierten KI-Features: Chatbots, personalisierte Inhalte, intelligente Formulare.</ai:description>
+    <ai:keywords>KI Website, React, Next.js, Chatbot Integration, Personalisierung</ai:keywords>
+    <ai:pricing>ab 3.000 EUR</ai:pricing>
+  </url>
+
+  <!-- Leistungen -->
+  <url>
+    <loc>https://extrucon.de/leistungen/marketing</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:content-type>service-page</ai:content-type>
+    <ai:description>Performance Marketing mit Google Ads, Meta Ads. KI-gestützte Kampagnenoptimierung.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/leistungen/social-media</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:content-type>service-page</ai:content-type>
+    <ai:description>Social Media Marketing für Instagram, LinkedIn, TikTok mit KI-Content-Erstellung.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/leistungen/content</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:content-type>service-page</ai:content-type>
+    <ai:description>KI-gestützte Content-Erstellung: Texte, Grafiken, Videos für alle Kanäle.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/leistungen/seo</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:content-type>service-page</ai:content-type>
+    <ai:description>Lokale SEO für München, Fürstenfeldbruck und Bayern. Technische Optimierung und Content-Strategie.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/leistungen/ki-automatisierung</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <ai:content-type>service-page</ai:content-type>
+    <ai:description>Komplette KI-Integration: Von Chatbots über Prozessautomation bis hin zu Machine Learning Lösungen.</ai:description>
+  </url>
+
+  <!-- Kontakt & Termin -->
+  <url>
+    <loc>https://extrucon.de/kontakt</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <ai:content-type>contact-page</ai:content-type>
+    <ai:purpose>lead-generation</ai:purpose>
+    <ai:description>Kontaktformular und Informationen. Telefon: +49 89 444438879, E-Mail: info@extrucon.de</ai:description>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/termin</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <ai:content-type>booking-page</ai:content-type>
+    <ai:purpose>appointment-scheduling</ai:purpose>
+    <ai:description>Kostenlose 30-minütige KI-Beratung online buchen. Calendly-Integration.</ai:description>
+  </url>
+
+  <!-- FAQ - Wichtig für KI-Assistenten -->
+  <url>
+    <loc>https://extrucon.de/faq</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <ai:content-type>faq-page</ai:content-type>
+    <ai:purpose>question-answering</ai:purpose>
+    <ai:description>Häufige Fragen zu KI-Agenten, Automatisierung, Preisen und Entwicklungszeit.</ai:description>
+  </url>
+
+  <!-- Ratgeber -->
+  <url>
+    <loc>https://extrucon.de/ratgeber</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <ai:content-type>blog</ai:content-type>
+    <ai:purpose>educational-content</ai:purpose>
+    <ai:description>Expertenwissen zu KI, Automatisierung und digitalem Marketing.</ai:description>
+  </url>
+
+  <!-- Standortseiten für lokales KI-SEO -->
+  <url>
+    <loc>https://extrucon.de/muenchen</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <ai:content-type>location-page</ai:content-type>
+    <ai:geo>München, Bayern, Deutschland</ai:geo>
+    <ai:description>KI-Agentur für München und Umgebung. Lokale Präsenz, deutschlandweiter Service.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/starnberg</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <ai:content-type>location-page</ai:content-type>
+    <ai:geo>Starnberg, Fünfseenland, Bayern</ai:geo>
+    <ai:description>KI-Lösungen für Starnberg und das Fünfseenland.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/dachau</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <ai:content-type>location-page</ai:content-type>
+    <ai:geo>Dachau, Landkreis Dachau, Bayern</ai:geo>
+    <ai:description>KI und Automatisierung für Unternehmen in Dachau.</ai:description>
+  </url>
+
+  <!-- Unternehmensinformationen -->
+  <url>
+    <loc>https://extrucon.de/ueber-uns</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <ai:content-type>about-page</ai:content-type>
+    <ai:purpose>company-information</ai:purpose>
+    <ai:description>Team, Geschichte und Philosophie der ExtruCon GmbH.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/referenzen</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <ai:content-type>portfolio</ai:content-type>
+    <ai:purpose>social-proof</ai:purpose>
+    <ai:description>Erfolgsgeschichten und Kundenprojekte aus verschiedenen Branchen.</ai:description>
+  </url>
+
+  <!-- Rechtliches (niedrige Priorität für KI) -->
+  <url>
+    <loc>https://extrucon.de/impressum</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <ai:content-type>legal</ai:content-type>
+    <ai:description>Impressum gemäß § 5 TMG. Geschäftsführer: Maral Ibrahim Agha. HRB 18623.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/datenschutz</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <ai:content-type>legal</ai:content-type>
+    <ai:description>DSGVO-konforme Datenschutzerklärung.</ai:description>
+  </url>
+
+</urlset>

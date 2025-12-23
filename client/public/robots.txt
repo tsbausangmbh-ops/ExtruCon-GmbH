@@ -236,9 +236,11 @@ Disallow: /node_modules/
 # ===========================================
 
 Sitemap: https://extrucon.de/sitemap.xml
+Sitemap: https://extrucon.de/ai.sitemap.xml
 
 # LLMs.txt für KI-Suchmaschinen (ChatGPT, Perplexity, etc.)
 Allow: /llms.txt
+Allow: /ai.sitemap.xml
 
 # Favicon & Logo für Suchmaschinen
 Allow: /favicon.ico
