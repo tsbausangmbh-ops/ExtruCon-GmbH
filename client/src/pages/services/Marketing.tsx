@@ -8,6 +8,7 @@ import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedServices, ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
+import { LinkedParagraph } from "@/components/KeywordLinker";
 
 export default function Marketing() {
   const { t } = useLanguage();
@@ -155,7 +156,9 @@ export default function Marketing() {
                 <h2 className="text-3xl font-bold font-display text-white mb-8">{t.marketingPage.seoTitle}</h2>
                 <div className="prose prose-invert max-w-none text-gray-300 space-y-6">
                   {t.marketingPage.seoContent.map((paragraph, i) => (
-                    <p key={i}>{paragraph}</p>
+                    <LinkedParagraph key={i} maxLinks={2} currentPage="/leistungen/marketing" excludeKeywords={["Performance Marketing", "performance marketing", "performans pazarlama"]}>
+                      {paragraph}
+                    </LinkedParagraph>
                   ))}
                 </div>
               </div>

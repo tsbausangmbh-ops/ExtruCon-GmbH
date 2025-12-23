@@ -8,6 +8,7 @@ import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedServices, ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
+import { LinkedParagraph } from "@/components/KeywordLinker";
 
 export default function SocialMedia() {
   const { t } = useLanguage();
@@ -185,7 +186,9 @@ export default function SocialMedia() {
                 <h2 className="text-3xl font-bold font-display text-white mb-8">{t.socialMediaPage.seoTitle}</h2>
                 <div className="prose prose-invert max-w-none text-gray-300 space-y-6">
                   {t.socialMediaPage.seoContent.map((paragraph, i) => (
-                    <p key={i}>{paragraph}</p>
+                    <LinkedParagraph key={i} maxLinks={2} currentPage="/leistungen/social-media" excludeKeywords={["Social Media Marketing", "social media marketing", "sosyal medya pazarlama", "marketing na društvenim mrežama"]}>
+                      {paragraph}
+                    </LinkedParagraph>
                   ))}
                 </div>
               </div>
