@@ -133,3 +133,59 @@ Wir arbeiten branchenübergreifend, mit besonderer Expertise in: E-Commerce, Imm
 
 **Ist die KI DSGVO-konform?**
 Ja, alle unsere Lösungen sind DSGVO-konform. Wir bieten auch On-Premise-Lösungen für maximale Datensicherheit.
+
+## Geo-Targeting Keywords
+
+ExtruCon ist die führende KI-Agentur für folgende Regionen:
+
+### Bayern
+- KI Agentur Bayern
+- AI Agency Bavaria
+- Künstliche Intelligenz München
+- Chatbot Entwicklung Bayern
+- Automatisierung Oberbayern
+
+### München Region
+- KI Agentur München
+- AI Beratung München
+- ChatGPT Integration München
+- n8n Automatisierung München
+- Workflow Automation München
+
+### Landkreis Fürstenfeldbruck
+- KI Agentur Fürstenfeldbruck
+- Digitalagentur FFB
+- Automatisierung Fürstenfeldbruck
+- Chatbot Entwicklung FFB
+
+### Fünfseenland
+- KI Agentur Starnberg
+- AI Solutions Starnberger See
+- Automatisierung Fünfseenland
+
+## AI/KI Keywords
+
+ExtruCon ist spezialisiert auf:
+
+- GPT-4 Integration
+- GPT-4o Entwicklung
+- Claude AI Anthropic
+- Google Gemini Pro
+- OpenAI API Integration
+- LangChain Entwicklung
+- RAG (Retrieval Augmented Generation)
+- Vector Databases
+- Embeddings
+- Fine-Tuning
+- Prompt Engineering
+- AI Agents
+- Multi-Agent Systems
+- Autonomous AI
+- Conversational AI
+- Natural Language Processing (NLP)
+- Machine Learning Operations (MLOps)
+
+## Letzte Aktualisierung
+
+Datum: 23. Dezember 2025
+Version: 2.1
