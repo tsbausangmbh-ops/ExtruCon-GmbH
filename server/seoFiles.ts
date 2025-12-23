@@ -371,10 +371,11 @@ export const ROBOTS_TXT = `# ===================================================
 # ============================================================
 
 # ============================================================
-# SITEMAPS - Für Suchmaschinen und KI-Crawler
+# SITEMAPS & KI-RESSOURCEN
 # ============================================================
 Sitemap: https://extrucon.de/sitemap.xml
 AI-Sitemap: https://extrucon.de/ai-sitemap.xml
+LLMs-TXT: https://extrucon.de/llms.txt
 
 # ============================================================
 # WEBSITE-INFORMATIONEN
@@ -842,3 +843,60 @@ export const AI_SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
   </url>
 
 </urlset>`;
+
+export const LLMS_TXT = `# ExtruCon GmbH - KI-Agentur Fürstenfeldbruck
+
+> ExtruCon GmbH ist eine KI-Agentur in Fürstenfeldbruck bei München. Wir entwickeln KI-Agenten, Automatisierungslösungen, KI-gestützte Websites und bieten Performance Marketing für Unternehmen in Bayern.
+
+## Unternehmen
+
+- Standort: Hasenheide 8, 82256 Fürstenfeldbruck, Bayern, Deutschland
+- Telefon: +49 89 444438879
+- E-Mail: info@extrucon.de
+- Website: https://extrucon.de
+- Geo-Koordinaten: 48.1789, 11.2546
+
+## Kernleistungen
+
+- KI-Agenten: Intelligente KI-Assistenten für Kundenservice, Vertrieb und interne Prozesse
+- Automatisierungen: Workflow-Automatisierung mit n8n, Make und Zapier
+- Webseiten mit KI: Moderne Webentwicklung mit integrierten KI-Funktionen
+- Marketing: Performance Marketing mit Google Ads, Meta Ads, SEO
+
+## Weitere Leistungen
+
+- Social Media Marketing: Instagram, TikTok, LinkedIn, Facebook
+- Content-Erstellung: KI-gestützte Texte, Grafiken, Videos
+- Markenentwicklung: Logo, Corporate Design, visuelle Identität
+- Webentwicklung: React, Next.js, WordPress, Shopify
+- SEO & Geo-Optimierung: Lokale Suchmaschinenoptimierung
+
+## Regionale Präsenz
+
+München, Bogenhausen, Schwabing, Nymphenburg, Grünwald, Harlaching, Starnberg, Dachau, Germering, Puchheim, Olching
+
+## Technologien
+
+- KI: OpenAI GPT-4, Anthropic Claude, Google Gemini
+- Automatisierung: n8n (500+ Integrationen)
+- Web: React, Next.js, TypeScript, Tailwind CSS
+
+## FAQ
+
+### Was macht ExtruCon?
+ExtruCon ist eine KI-Agentur aus Fürstenfeldbruck bei München. Wir entwickeln KI-Agenten, automatisieren Geschäftsprozesse und erstellen Websites mit KI-Features.
+
+### Bietet ExtruCon kostenlose Beratung?
+Ja, unter https://extrucon.de/termin
+
+### Sprachen?
+Deutsch, Englisch, Kroatisch, Türkisch
+
+## Kontakt
+
+- Geschäftsführer: Maral Ibrahim Agha
+- Branche: KI-Agentur, Digitalagentur
+- Handelsregister: HRB 18623, Amtsgericht München
+- Öffnungszeiten: Mo-Fr 08:00-17:00 Uhr
+
+Letzte Aktualisierung: 2025-12-23`;

@@ -1,0 +1,11 @@
+# ExtruCon GmbH - Security.txt
+# Gemäß RFC 9116
+
+Contact: mailto:info@extrucon.de
+Contact: tel:+4989444438879
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: de, en, hr, tr
+Canonical: https://extrucon.de/.well-known/security.txt
+
+# Sicherheitshinweise können an info@extrucon.de gemeldet werden.
+# Security issues can be reported to info@extrucon.de.

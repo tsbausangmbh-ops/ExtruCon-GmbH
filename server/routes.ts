@@ -4,7 +4,7 @@ import { storage } from "./storage";
 import OpenAI from "openai";
 import { listEvents, createEvent, getAvailableSlots, isBusinessHour, getAlternativeSlots } from "./lib/googleCalendar";
 import { sendContactEmail } from "./lib/email";
-import { SITEMAP_XML, ROBOTS_TXT, AI_SITEMAP_XML } from "./seoFiles";
+import { SITEMAP_XML, ROBOTS_TXT, AI_SITEMAP_XML, LLMS_TXT } from "./seoFiles";
 
 const openai = new OpenAI({
   baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
@@ -32,6 +32,13 @@ export async function registerRoutes(
     res.set("Content-Type", "application/xml");
     res.send(AI_SITEMAP_XML);
   });
+
+  // Serve llms.txt for LLM crawlers
+  app.get("/llms.txt", (_req, res) => {
+    res.set("Content-Type", "text/plain; charset=utf-8");
+    res.send(LLMS_TXT);
+  });
+
   // Chat API endpoint for KI-Bot
   app.post("/api/chat", async (req, res) => {
     try {

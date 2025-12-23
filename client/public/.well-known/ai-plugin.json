@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "ExtruCon GmbH",
+  "name_for_model": "extrucon",
+  "description_for_human": "KI-Agentur aus Fürstenfeldbruck bei München. KI-Agenten, Automatisierung, Webentwicklung.",
+  "description_for_model": "ExtruCon GmbH ist eine KI-Agentur aus Fürstenfeldbruck bei München, Deutschland. Das Unternehmen bietet: 1) KI-Agenten (Chatbots für Kundenservice, Lead-Generierung, E-Mail-Automatisierung), 2) Workflow-Automatisierung mit n8n (500+ Integrationen), 3) Webentwicklung mit KI-Features (React, Next.js), 4) Marketing-Services (Google Ads, Meta Ads, SEO, Social Media). Kontakt: info@extrucon.de, +49 89 444438879. Standort: Hasenheide 8, 82256 Fürstenfeldbruck. Sprachen: Deutsch, Englisch, Kroatisch, Türkisch.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://extrucon.de/openapi.yaml"
+  },
+  "logo_url": "https://extrucon.de/logo.png",
+  "contact_email": "info@extrucon.de",
+  "legal_info_url": "https://extrucon.de/impressum"
+}
