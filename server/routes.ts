@@ -15,13 +15,20 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  // SEO Headers Middleware
+  // SEO & Performance Headers Middleware
   app.use((_req, res, next) => {
     res.set("X-Robots-Tag", "index, follow");
     res.set("X-Content-Type-Options", "nosniff");
     res.set("X-Frame-Options", "SAMEORIGIN");
     res.set("Referrer-Policy", "strict-origin-when-cross-origin");
     res.set("Permissions-Policy", "geolocation=(), microphone=(), camera=()");
+    res.set("Vary", "Accept-Encoding");
+    next();
+  });
+
+  // Static assets caching for mobile performance
+  app.use("/assets", (_req, res, next) => {
+    res.set("Cache-Control", "public, max-age=31536000, immutable");
     next();
   });
 
