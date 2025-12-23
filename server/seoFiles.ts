@@ -360,9 +360,35 @@ export const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
 
 </urlset>`;
 
-export const ROBOTS_TXT = `# ExtruCon GmbH - Robots.txt
-# SEO & AI optimiert für Deutschland (DE), Kroatien (HR), Türkei (TR)
+export const ROBOTS_TXT = `# ============================================================
+# ExtruCon GmbH - Robots.txt
+# KI-Agentur | Fürstenfeldbruck | München | Bayern
+# ============================================================
+# Optimiert für: SEO, Geo-Targeting, KI-Suchmaschinen
+# Sprachen: Deutsch (DE), English (EN), Hrvatski (HR), Türkçe (TR)
+# Geo-Fokus: Deutschland, Kroatien, Türkei
+# Letzte Aktualisierung: 2025-12-23
+# ============================================================
 
+# ============================================================
+# SITEMAPS - Für Suchmaschinen und KI-Crawler
+# ============================================================
+Sitemap: https://extrucon.de/sitemap.xml
+AI-Sitemap: https://extrucon.de/ai-sitemap.xml
+
+# ============================================================
+# WEBSITE-INFORMATIONEN
+# ============================================================
+# Canonical Host
+Host: https://extrucon.de
+
+# Geo-Location: Fürstenfeldbruck, Bayern, Deutschland
+# Koordinaten: 48.1789, 11.2546
+# Einzugsgebiet: München, Starnberg, Dachau, Germering, Puchheim, Olching
+
+# ============================================================
+# SUCHMASCHINEN - PRIORITÄT 1 (Schnelles Crawling)
+# ============================================================
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
@@ -383,6 +409,9 @@ Crawl-delay: 1
 User-agent: msnbot
 Allow: /
 
+# ============================================================
+# SUCHMASCHINEN - PRIORITÄT 2 (Internationale Crawler)
+# ============================================================
 User-agent: Slurp
 Allow: /
 Crawl-delay: 2
@@ -390,6 +419,16 @@ Crawl-delay: 2
 User-agent: DuckDuckBot
 Allow: /
 
+User-agent: Qwantify
+Allow: /
+
+User-agent: Ecosia
+Allow: /
+
+# ============================================================
+# REGIONALE SUCHMASCHINEN (DE, HR, TR)
+# ============================================================
+# Yandex - Osteuropa/Kroatien
 User-agent: Yandex
 Allow: /
 Crawl-delay: 2
@@ -398,39 +437,64 @@ User-agent: YandexBot
 Allow: /
 Crawl-delay: 2
 
+# Baidu - International
 User-agent: Baiduspider
 Allow: /
 Crawl-delay: 2
 
+# Seznam - Tschechien/Osteuropa
 User-agent: SeznamBot
 Allow: /
 Crawl-delay: 2
 
+# Naver - Südkorea
 User-agent: Yeti
 Allow: /
 Crawl-delay: 2
 
+# ============================================================
+# KI-SUCHMASCHINEN - ERLAUBT (Search & Discovery)
+# ============================================================
+# OpenAI SearchBot (ChatGPT Search)
 User-agent: OAI-SearchBot
 Allow: /
 
+# ChatGPT Browser-Nutzer
 User-agent: ChatGPT-User
 Allow: /
 
+# Perplexity AI
 User-agent: PerplexityBot
 Allow: /
 
+# DuckDuckGo AI Assistant
 User-agent: DuckAssistBot
 Allow: /
 
+# You.com AI Search
 User-agent: YouBot
 Allow: /
 
+# Cohere AI
 User-agent: cohere-ai
 Allow: /
 
+# Microsoft Copilot
+User-agent: CopilotBot
+Allow: /
+
+# Brave Search AI
+User-agent: BraveBot
+Allow: /
+
+# ============================================================
+# KI-TRAINING BOTS - BLOCKIERT (Kein Training erlaubt)
+# ============================================================
+# OpenAI GPT Training
 User-agent: GPTBot
 Disallow: /
 
+# Anthropic Claude Training
 User-agent: ClaudeBot
 Disallow: /
 
@@ -440,15 +504,18 @@ Disallow: /
 User-agent: Claude-Web
 Disallow: /
 
+# Google AI Training
 User-agent: Google-Extended
 Disallow: /
 
 User-agent: GoogleOther
 Disallow: /
 
+# Apple AI Training
 User-agent: Applebot-Extended
 Disallow: /
 
+# Meta/Facebook AI Training
 User-agent: Meta-ExternalAgent
 Disallow: /
 
@@ -458,33 +525,25 @@ Disallow: /
 User-agent: meta-externalagent
 Disallow: /
 
+# ByteDance/TikTok
 User-agent: Bytespider
 Disallow: /
 
+# Common Crawl (AI Training Datasets)
 User-agent: CCBot
 Disallow: /
 
+# Diffbot
 User-agent: Diffbot
 Disallow: /
 
+# Amazon AI
 User-agent: Amazonbot
 Disallow: /
 
-User-agent: omgili
-Disallow: /
-
-User-agent: omgilibot
-Disallow: /
-
-User-agent: Scrapy
-Disallow: /
-
-User-agent: img2dataset
-Disallow: /
-
-User-agent: Sidetrade
-Disallow: /
-
+# ============================================================
+# SCRAPER & SEO-TOOLS - BLOCKIERT
+# ============================================================
 User-agent: AhrefsBot
 Disallow: /
 
@@ -503,34 +562,102 @@ Disallow: /
 User-agent: DataForSeoBot
 Disallow: /
 
+User-agent: Scrapy
+Disallow: /
+
+User-agent: img2dataset
+Disallow: /
+
+User-agent: Sidetrade
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: Sogou
+Disallow: /
+
+# ============================================================
+# STANDARDREGEL - ALLE ANDEREN BOTS
+# ============================================================
 User-agent: *
 Allow: /
+Crawl-delay: 2
 
+# ============================================================
+# HAUPTSEITEN - PRIORISIERT FÜR INDEXIERUNG
+# ============================================================
+# Kernservices
 Allow: /ki-agenten
 Allow: /automatisierungen
 Allow: /webseiten-ki
+
+# Leistungsseiten
 Allow: /leistungen/
+Allow: /leistungen/marketing
+Allow: /leistungen/social-media
+Allow: /leistungen/content
+Allow: /leistungen/markenaufbau
+Allow: /leistungen/web
+Allow: /leistungen/ki-automatisierung
+Allow: /leistungen/seo
+
+# Informationsseiten
 Allow: /kontakt
 Allow: /termin
 Allow: /ueber-uns
 Allow: /faq
 Allow: /ratgeber
 Allow: /referenzen
-Allow: /impressum
-Allow: /datenschutz
+Allow: /ki-bot
 
+# ============================================================
+# GEO-SEITEN - LOKALES SEO (München & Umgebung)
+# ============================================================
+# München Stadtteile
 Allow: /muenchen
 Allow: /muenchen/bogenhausen
 Allow: /muenchen/schwabing
 Allow: /muenchen/nymphenburg
 Allow: /muenchen/gruenwald
 Allow: /muenchen/harlaching
-Allow: /starnberg
-Allow: /dachau
+
+# Landkreis Fürstenfeldbruck
 Allow: /germering
 Allow: /puchheim
 Allow: /olching
 
+# Weitere Städte
+Allow: /starnberg
+Allow: /dachau
+
+# ============================================================
+# RECHTLICHE SEITEN
+# ============================================================
+Allow: /impressum
+Allow: /datenschutz
+Allow: /agb
+Allow: /cookies
+Allow: /privacy
+Allow: /terms
+
+# ============================================================
+# ASSETS - ERLAUBT
+# ============================================================
+Allow: /favicon.ico
+Allow: /logo.png
+Allow: /opengraph.jpg
+Allow: /assets/
+
+# ============================================================
+# BLOCKIERTE PFADE - NICHT INDEXIEREN
+# ============================================================
 Disallow: /api/
 Disallow: /_*
 Disallow: /admin/
@@ -540,18 +667,13 @@ Disallow: /*?filter=
 Disallow: /*?sort=
 Disallow: /*.json$
 Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /.git/
+Disallow: /server/
 
-Sitemap: https://extrucon.de/sitemap.xml
-
-Allow: /favicon.ico
-Allow: /logo.png
-
-User-agent: *
-Crawl-delay: 2
-
-Host: https://extrucon.de
-
-AI-Sitemap: https://extrucon.de/ai-sitemap.xml`;
+# ============================================================
+# ENDE DER ROBOTS.TXT
+# ============================================================`;
 
 export const AI_SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
