@@ -847,6 +847,87 @@ export const AI_SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://extrucon.de/muenchen/schwabing</loc>
+    <lastmod>2025-12-23</lastmod>
+    <ai:content-type>location-page</ai:content-type>
+    <ai:topic>KI-Agentur München Schwabing</ai:topic>
+    <ai:summary>KI-Lösungen für Startups und Kreative in Schwabing. Chatbots, Automatisierung, Webentwicklung.</ai:summary>
+    <ai:geo-target>Schwabing, München</ai:geo-target>
+    <ai:language>de</ai:language>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/muenchen/bogenhausen</loc>
+    <lastmod>2025-12-23</lastmod>
+    <ai:content-type>location-page</ai:content-type>
+    <ai:topic>KI-Agentur München Bogenhausen</ai:topic>
+    <ai:summary>Premium KI-Lösungen für Vermögensverwalter und Anwälte in Bogenhausen.</ai:summary>
+    <ai:geo-target>Bogenhausen, München</ai:geo-target>
+    <ai:language>de</ai:language>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/starnberg</loc>
+    <lastmod>2025-12-23</lastmod>
+    <ai:content-type>location-page</ai:content-type>
+    <ai:topic>KI-Agentur Starnberg</ai:topic>
+    <ai:summary>KI-Lösungen für Fünfseenland, Tourismus und Immobilien in Starnberg.</ai:summary>
+    <ai:geo-target>Starnberg, Bayern</ai:geo-target>
+    <ai:language>de</ai:language>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/dachau</loc>
+    <lastmod>2025-12-23</lastmod>
+    <ai:content-type>location-page</ai:content-type>
+    <ai:topic>KI-Agentur Dachau</ai:topic>
+    <ai:summary>KI-Lösungen für Mittelstand und Handwerk in Dachau.</ai:summary>
+    <ai:geo-target>Dachau, Bayern</ai:geo-target>
+    <ai:language>de</ai:language>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/ueber-uns</loc>
+    <lastmod>2025-12-23</lastmod>
+    <ai:content-type>about-page</ai:content-type>
+    <ai:topic>Über ExtruCon GmbH, Team, Geschichte</ai:topic>
+    <ai:summary>Informationen über ExtruCon GmbH, das Team und die Unternehmensphilosophie.</ai:summary>
+    <ai:language>de, en, hr, tr</ai:language>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/referenzen</loc>
+    <lastmod>2025-12-23</lastmod>
+    <ai:content-type>portfolio-page</ai:content-type>
+    <ai:topic>Referenzen, Kundenprojekte, Case Studies</ai:topic>
+    <ai:summary>Erfolgreiche Kundenprojekte im Bereich KI-Agenten, Automatisierung und Webentwicklung.</ai:summary>
+    <ai:language>de, en, hr, tr</ai:language>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://extrucon.de/termin</loc>
+    <lastmod>2025-12-23</lastmod>
+    <ai:content-type>booking-page</ai:content-type>
+    <ai:topic>Kostenlose Beratung buchen</ai:topic>
+    <ai:summary>30-minütiges kostenloses Beratungsgespräch online buchen.</ai:summary>
+    <ai:language>de, en, hr, tr</ai:language>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>`;
 
 export const LLMS_TXT = `# ExtruCon GmbH - KI-Agentur Fürstenfeldbruck
