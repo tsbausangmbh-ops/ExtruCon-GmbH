@@ -43,6 +43,7 @@ import { CookieConsent } from "@/components/CookieConsent";
 import ChristmasPopup from "@/components/ChristmasPopup";
 import NewYearPopup from "@/components/NewYearPopup";
 import { BackButton } from "@/components/BackButton";
+import { SkipLink } from "@/components/SkipLink";
 
 function Router() {
   return (
@@ -92,6 +93,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
         <TooltipProvider>
+          <SkipLink />
           <Toaster />
           <Router />
           <BackButton />

@@ -23,10 +23,14 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/10">
+    <nav 
+      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/10"
+      role="navigation"
+      aria-label="Hauptnavigation"
+    >
       <div className="container mx-auto px-4 h-24 flex items-center justify-between py-1">
-        <Link href="/" className="flex items-center">
-          <img src={logoImage} alt="ExtruCon GmbH" className="h-[5.5rem]" />
+        <Link href="/" className="flex items-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background rounded-lg" aria-label="ExtruCon GmbH - Zur Startseite">
+          <img src={logoImage} alt="ExtruCon GmbH Logo" className="h-[5.5rem]" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
@@ -38,9 +42,15 @@ export function Navbar() {
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
-            <button className="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-primary transition-colors">
+            <button 
+              className="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background rounded"
+              aria-expanded={servicesOpen}
+              aria-haspopup="true"
+              aria-label="Leistungen Menü"
+              onClick={() => setServicesOpen(!servicesOpen)}
+            >
               {t.nav.services}
-              <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+              <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
             </button>
             
             {servicesOpen && (

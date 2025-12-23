@@ -56,7 +56,7 @@ export default function Olching() {
       />
       <Navbar />
       
-      <main>
+      <main id="main-content" role="main" aria-label="Hauptinhalt">
         <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
           <div className="absolute inset-0 bg-gradient-to-br from-sky-900/20 via-background to-blue-900/10" />
           <div className="container mx-auto px-6 relative z-10">
