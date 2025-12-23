@@ -157,7 +157,7 @@
     }
     </script>
 
-    <!-- Structured Data: Website -->
+    <!-- Structured Data: Website with SearchAction -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -167,7 +167,84 @@
       "name": "ExtruCon GmbH",
       "description": "KI-Agentur für Automatisierung und digitales Marketing",
       "publisher": {"@type": "Organization", "@id": "https://extrucon.de/#organization"},
-      "inLanguage": "de-DE"
+      "inLanguage": "de-DE",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://extrucon.de/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Structured Data: ProfessionalService -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://extrucon.de/#service",
+      "name": "ExtruCon GmbH - KI-Agentur",
+      "description": "Professionelle KI-Dienstleistungen: KI-Agenten, Workflow-Automatisierung, KI-Websites und Performance Marketing",
+      "url": "https://extrucon.de",
+      "logo": "https://extrucon.de/logo.png",
+      "image": "https://extrucon.de/logo.png",
+      "telephone": "+4989444438879",
+      "email": "info@extrucon.de",
+      "priceRange": "€€€",
+      "paymentAccepted": ["Rechnung", "Überweisung", "PayPal"],
+      "currenciesAccepted": "EUR",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hasenheide 8",
+        "addressLocality": "Fürstenfeldbruck",
+        "postalCode": "82256",
+        "addressRegion": "Bayern",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.1789,
+        "longitude": 11.2546
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "KI-Dienstleistungen",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "KI-Agenten",
+              "description": "Intelligente KI-Assistenten für Kundenservice, Vertrieb und Prozessautomatisierung",
+              "url": "https://extrucon.de/ki-agenten"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Workflow-Automatisierung",
+              "description": "Automatisierung von Geschäftsprozessen mit n8n, Make und Zapier",
+              "url": "https://extrucon.de/automatisierungen"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "KI-Websites",
+              "description": "Moderne Webentwicklung mit integrierten KI-Features und Chatbots",
+              "url": "https://extrucon.de/webseiten-ki"
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "12",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
     }
     </script>
 

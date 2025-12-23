@@ -373,8 +373,9 @@ export const ROBOTS_TXT = `# ===================================================
 # ============================================================
 # SITEMAPS & KI-RESSOURCEN
 # ============================================================
+Sitemap: https://extrucon.de/sitemap-index.xml
 Sitemap: https://extrucon.de/sitemap.xml
-AI-Sitemap: https://extrucon.de/ai-sitemap.xml
+Sitemap: https://extrucon.de/ai-sitemap.xml
 LLMs-TXT: https://extrucon.de/llms.txt
 
 # ============================================================
