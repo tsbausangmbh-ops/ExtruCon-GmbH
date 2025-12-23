@@ -15,27 +15,41 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
+  // SEO Headers Middleware
+  app.use((_req, res, next) => {
+    res.set("X-Robots-Tag", "index, follow");
+    res.set("X-Content-Type-Options", "nosniff");
+    res.set("X-Frame-Options", "SAMEORIGIN");
+    res.set("Referrer-Policy", "strict-origin-when-cross-origin");
+    res.set("Permissions-Policy", "geolocation=(), microphone=(), camera=()");
+    next();
+  });
+
   // Serve sitemap.xml explicitly before catch-all routes
   app.get("/sitemap.xml", (_req, res) => {
     res.set("Content-Type", "application/xml");
+    res.set("Cache-Control", "public, max-age=86400");
     res.send(SITEMAP_XML);
   });
 
   // Serve robots.txt explicitly
   app.get("/robots.txt", (_req, res) => {
     res.set("Content-Type", "text/plain");
+    res.set("Cache-Control", "public, max-age=86400");
     res.send(ROBOTS_TXT);
   });
 
   // Serve AI-optimized sitemap for AI crawlers
   app.get("/ai-sitemap.xml", (_req, res) => {
     res.set("Content-Type", "application/xml");
+    res.set("Cache-Control", "public, max-age=86400");
     res.send(AI_SITEMAP_XML);
   });
 
   // Serve llms.txt for LLM crawlers
   app.get("/llms.txt", (_req, res) => {
     res.set("Content-Type", "text/plain; charset=utf-8");
+    res.set("Cache-Control", "public, max-age=86400");
     res.send(LLMS_TXT);
   });
 
