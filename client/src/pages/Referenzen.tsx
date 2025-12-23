@@ -61,6 +61,14 @@ export default function Referenzen() {
       link: "https://komplettsanierungen-haus-wohnung.de"
     },
     {
+      title: "KSHW Mont – Montageservice München",
+      category: "Webentwicklung",
+      description: "Professionelle Website für Montage- und Handwerksdienstleistungen. Schnelle Reaktionszeiten und umfassender Service für Privat- und Gewerbekunden.",
+      results: ["Schneller Service", "Zuverlässige Montage", "Privat & Gewerbe"],
+      color: "cyan",
+      link: "https://kshwmont.com"
+    },
+    {
       title: "FitLife München – Fitness-Studio Kette",
       category: "SEO & Geo-Optimierung",
       description: "Lokale Suchmaschinenoptimierung für Fitnessstudio-Kette mit 5 Standorten in München. Google My Business Optimierung und lokale Keyword-Strategie.",
