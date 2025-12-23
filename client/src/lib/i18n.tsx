@@ -339,6 +339,13 @@ export const translations = {
         { q: 'Welche laufenden Kosten entstehen?', a: 'Neben der einmaligen Entwicklung fallen monatliche Kosten für Hosting, API-Nutzung und optional Wartung an. Ein typischer Agent kostet 50-200€ monatlich je nach Nutzungsvolumen und Komplexität.' },
         { q: 'Kann ich den Agenten später erweitern?', a: 'Absolut! KI-Agenten sind modular aufgebaut. Sie können jederzeit neue Funktionen, Integrationen oder Sprachfähigkeiten hinzufügen. Wir begleiten Sie bei der Weiterentwicklung.' }
       ],
+      seoTitle: 'KI-Agenten und Chatbots für Unternehmen entwickeln lassen',
+      seoContent: [
+        'ExtruCon GmbH aus Fürstenfeldbruck entwickelt intelligente KI-Agenten und Chatbots für Unternehmen. Mit GPT-4, Claude AI und LangChain automatisieren wir Kundenservice, Lead-Generierung und Geschäftsprozesse – DSGVO-konform und maßgeschneidert.',
+        'Unsere KI-Chatbots beantworten Kundenanfragen 24/7 in mehreren Sprachen, qualifizieren Leads automatisch und integrieren sich nahtlos in CRM-Systeme wie HubSpot oder Salesforce. Ideal für Unternehmen in München, Bayern und deutschlandweit.',
+        'Als Agentur für künstliche Intelligenz kombinieren wir Chatbot-Entwicklung mit n8n-Workflow-Automatisierung. Von der Terminbuchung über E-Mail-Automatisierung bis zur Dokumentenverarbeitung – wir entwickeln KI-Lösungen, die Zeit sparen.',
+        'Vorteile: 80% weniger manuelle Arbeit, 24/7 Verfügbarkeit, skalierbar ohne Mehrkosten. Kostenlose Erstberatung für Ihr KI-Projekt – kontaktieren Sie uns in Fürstenfeldbruck bei München.'
+      ],
     },
     automationPage: {
       badge: 'Workflow-Automatisierung',
@@ -370,6 +377,13 @@ export const translations = {
       visualWorkflowsDesc: 'Klar, verständlich, wartbar',
       workflowSteps: ['Trigger', 'Bedingung', 'Aktion 1', 'Aktion 2'],
       ctaSubtitle: 'Lassen Sie uns analysieren, welche Prozesse wir für Sie automatisieren können. Kostenlose Erstberatung.',
+      seoTitle: 'Workflow-Automatisierung mit n8n und Make für Unternehmen',
+      seoContent: [
+        'ExtruCon GmbH aus Fürstenfeldbruck ist Ihre Agentur für professionelle Workflow-Automatisierung. Mit n8n, Make und Zapier verbinden wir Ihre Tools und automatisieren wiederkehrende Aufgaben – von E-Mail-Workflows bis zur kompletten Prozessautomatisierung.',
+        'Unsere KI-gestützte Automatisierung spart Zeit und Kosten: Leads automatisch ins CRM übertragen, Rechnungen versenden, Social Media planen, Termin-Erinnerungen senden. Wir entwickeln maßgeschneiderte Workflows für Unternehmen in München, Bayern und deutschlandweit.',
+        'Als n8n-Experten bieten wir über 500 Integrationen, keine Limitierungen bei Ausführungen und Self-Hosting für maximale Datenkontrolle. Kombiniert mit KI-Agenten und intelligenten Chatbots entstehen leistungsstarke Automatisierungslösungen.',
+        'Vorteile: 80% Zeitersparnis bei wiederkehrenden Aufgaben, 50% Kostenreduktion durch automatisierte Prozesse, ROI innerhalb von 3-6 Monaten. Kontaktieren Sie uns für eine kostenlose Automatisierungs-Analyse.'
+      ],
       automations: [
         { title: 'E-Mail-Marketing automatisieren', description: 'Automatischer Versand, Sortierung und Beantwortung von E-Mails. Willkommens-Sequenzen, Follow-ups und personalisierte Kampagnen auf Autopilot.', examples: ['Willkommens-E-Mails', 'Lead-Nurturing', 'Warenkorbabbrecher', 'Newsletter-Segmentierung'] },
         { title: 'Lead-Management & CRM-Integration', description: 'Leads automatisch erfassen, qualifizieren und an den Vertrieb übergeben. Integration mit Ihrem CRM und automatisches Scoring.', examples: ['Formulare → CRM', 'Lead-Scoring', 'Automatische Zuweisung', 'Nachfass-Reminder'] },
@@ -469,6 +483,13 @@ export const translations = {
         { q: 'Kann ich die Website selbst bearbeiten?', a: 'Ja! Wir setzen auf benutzerfreundliche CMS wie WordPress oder Webflow. Sie erhalten eine Schulung und können Texte, Bilder und einfache Änderungen selbst vornehmen.' },
         { q: 'Ist die Website DSGVO-konform?', a: 'Absolut. Wir achten auf DSGVO-konforme Cookie-Banner, Datenschutzerklärungen, SSL-Verschlüsselung und sichere Kontaktformulare. Bei KI-Features nutzen wir EU-konforme Lösungen.' },
         { q: 'Was passiert nach dem Launch?', a: 'Wir bieten Wartungspakete für Updates, Sicherheit und Support. Außerdem können wir kontinuierlich neue KI-Features hinzufügen und die Website basierend auf Analytics-Daten optimieren.' }
+      ],
+      seoTitle: 'Website mit KI-Chatbot entwickeln lassen – Webdesign Agentur',
+      seoContent: [
+        'ExtruCon GmbH aus Fürstenfeldbruck entwickelt moderne Websites mit integrierten KI-Features. Von GPT-4 Chatbots über automatische Content-Erstellung bis zu intelligenter SEO-Optimierung – wir bringen künstliche Intelligenz auf Ihre Website.',
+        'Unsere KI-Websites steigern Conversions: Chatbots beantworten Fragen 24/7, personalisierte Inhalte sprechen Besucher individuell an, und SEO-optimierte Texte werden automatisch generiert. Ideal für Unternehmen in München, Fürstenfeldbruck und Bayern.',
+        'Als Webdesign-Agentur mit KI-Expertise bieten wir Landing Pages ab 1.500€, Unternehmenswebsites ab 3.500€ und E-Commerce-Lösungen ab 5.000€. Technologien: React, Next.js, WordPress, Webflow mit OpenAI GPT und Claude AI Integration.',
+        'Vorteile: 24/7 Kundenservice durch Chatbots, automatische Content-Erstellung, DSGVO-konforme Lösungen. Kontaktieren Sie uns für eine kostenlose Webdesign-Beratung in Fürstenfeldbruck.'
       ],
     },
     faqPage: {
@@ -1551,6 +1572,13 @@ export const translations = {
         { q: 'What ongoing costs are there?', a: 'In addition to one-time development, monthly costs include hosting, API usage, and optional maintenance. A typical agent costs €50-200 monthly depending on usage volume and complexity.' },
         { q: 'Can I expand the agent later?', a: 'Absolutely! AI agents are modular. You can add new features, integrations, or language capabilities at any time. We support you in further development.' }
       ],
+      seoTitle: 'AI Agents and Chatbots Development for Businesses',
+      seoContent: [
+        'ExtruCon GmbH from Fürstenfeldbruck develops intelligent AI agents and chatbots for businesses. With GPT-4, Claude AI, and LangChain, we automate customer service, lead generation, and business processes – GDPR-compliant and customized.',
+        'Our AI chatbots answer customer inquiries 24/7 in multiple languages, automatically qualify leads, and integrate seamlessly with CRM systems like HubSpot or Salesforce. Ideal for companies in Munich, Bavaria, and throughout Germany.',
+        'As an artificial intelligence agency, we combine chatbot development with n8n workflow automation. From appointment booking to email automation to document processing – we develop AI solutions that save time.',
+        'Benefits: 80% less manual work, 24/7 availability, scalable without additional costs. Free initial consultation for your AI project – contact us in Fürstenfeldbruck near Munich.'
+      ],
     },
     automationPage: {
       badge: 'Workflow Automation',
@@ -1582,6 +1610,13 @@ export const translations = {
       visualWorkflowsDesc: 'Clear, understandable, maintainable',
       workflowSteps: ['Trigger', 'Condition', 'Action 1', 'Action 2'],
       ctaSubtitle: 'Let us analyze which processes we can automate for you. Free initial consultation.',
+      seoTitle: 'Workflow Automation with n8n and Make for Businesses',
+      seoContent: [
+        'ExtruCon GmbH from Fürstenfeldbruck is your agency for professional workflow automation. With n8n, Make, and Zapier, we connect your tools and automate recurring tasks – from email workflows to complete process automation.',
+        'Our AI-powered automation saves time and costs: automatically transfer leads to CRM, send invoices, plan social media, send appointment reminders. We develop customized workflows for businesses in Munich, Bavaria, and throughout Germany.',
+        'As n8n experts, we offer over 500 integrations, no execution limits, and self-hosting for maximum data control. Combined with AI agents and intelligent chatbots, powerful automation solutions emerge.',
+        'Benefits: 80% time savings on recurring tasks, 50% cost reduction through automated processes, ROI within 3-6 months. Contact us for a free automation analysis.'
+      ],
       automations: [
         { title: 'Automate Email Marketing', description: 'Automatic sending, sorting, and answering of emails. Welcome sequences, follow-ups, and personalized campaigns on autopilot.', examples: ['Welcome Emails', 'Lead Nurturing', 'Cart Abandonment', 'Newsletter Segmentation'] },
         { title: 'Lead Management & CRM Integration', description: 'Automatically capture, qualify, and hand over leads to sales. Integration with your CRM and automatic scoring.', examples: ['Forms → CRM', 'Lead Scoring', 'Automatic Assignment', 'Follow-up Reminders'] },
@@ -1681,6 +1716,13 @@ export const translations = {
         { q: 'Can I edit the website myself?', a: 'Yes! We use user-friendly CMS like WordPress or Webflow. You receive training and can make text, image, and simple changes yourself.' },
         { q: 'Is the website GDPR-compliant?', a: 'Absolutely. We ensure GDPR-compliant cookie banners, privacy policies, SSL encryption, and secure contact forms. For AI features, we use EU-compliant solutions.' },
         { q: 'What happens after launch?', a: 'We offer maintenance packages for updates, security, and support. Additionally, we can continuously add new AI features and optimize the website based on analytics data.' }
+      ],
+      seoTitle: 'Website Development with AI Chatbot – Web Design Agency',
+      seoContent: [
+        'ExtruCon GmbH from Fürstenfeldbruck develops modern websites with integrated AI features. From GPT-4 chatbots to automatic content creation to intelligent SEO optimization – we bring artificial intelligence to your website.',
+        'Our AI websites increase conversions: Chatbots answer questions 24/7, personalized content addresses visitors individually, and SEO-optimized texts are generated automatically. Ideal for companies in Munich, Fürstenfeldbruck, and Bavaria.',
+        'As a web design agency with AI expertise, we offer landing pages from €1,500, business websites from €3,500, and e-commerce solutions from €5,000. Technologies: React, Next.js, WordPress, Webflow with OpenAI GPT and Claude AI integration.',
+        'Benefits: 24/7 customer service through chatbots, automatic content creation, GDPR-compliant solutions. Contact us for a free web design consultation in Fürstenfeldbruck.'
       ],
     },
     faqPage: {
@@ -2763,6 +2805,13 @@ export const translations = {
         { q: 'Koji su tekući troškovi?', a: 'Uz jednokratni razvoj, mjesečni troškovi uključuju hosting, korištenje API-ja i opcionalno održavanje. Tipičan agent košta 50-200€ mjesečno ovisno o volumenu korištenja i složenosti.' },
         { q: 'Mogu li kasnije proširiti agenta?', a: 'Apsolutno! AI agenti su modularni. Možete dodati nove funkcije, integracije ili jezične sposobnosti u bilo kojem trenutku. Podržavamo vas u daljnjem razvoju.' }
       ],
+      seoTitle: 'Razvoj AI agenata i chatbotova za tvrtke',
+      seoContent: [
+        'ExtruCon GmbH iz Fürstenfeldbrucka razvija inteligentne AI agente i chatbotove za tvrtke. S GPT-4, Claude AI i LangChain automatiziramo korisničku službu, generiranje leadova i poslovne procese – GDPR-sukladno i prilagođeno.',
+        'Naši AI chatbotovi odgovaraju na upite kupaca 24/7 na više jezika, automatski kvalificiraju leadove i besprijekorno se integriraju s CRM sustavima poput HubSpota ili Salesforcea. Idealno za tvrtke u Münchenu, Bavarskoj i diljem Njemačke.',
+        'Kao agencija za umjetnu inteligenciju kombiniramo razvoj chatbotova s n8n automatizacijom tijeka rada. Od zakazivanja termina preko automatizacije e-pošte do obrade dokumenata – razvijamo AI rješenja koja štede vrijeme.',
+        'Prednosti: 80% manje ručnog rada, dostupnost 24/7, skalabilno bez dodatnih troškova. Besplatna početna konzultacija za vaš AI projekt – kontaktirajte nas u Fürstenfeldbrucku kod Münchena.'
+      ],
     },
     automationPage: {
       badge: 'Automatizacija Tijekova Rada',
@@ -2794,6 +2843,13 @@ export const translations = {
       workflowSteps: ['Okidač', 'Uvjet', 'Akcija 1', 'Akcija 2'],
       ctaTitle: 'Zatražite Automatizaciju – Besplatna Konzultacija',
       ctaSubtitle: 'Dopustite nam analizirati koje procese možemo automatizirati za vas. Besplatna početna konzultacija.',
+      seoTitle: 'Automatizacija radnih tokova s n8n i Make za tvrtke',
+      seoContent: [
+        'ExtruCon GmbH iz Fürstenfeldbrucka vaša je agencija za profesionalnu automatizaciju radnih tokova. S n8n, Make i Zapier povezujemo vaše alate i automatiziramo ponavljajuće zadatke – od email radnih tokova do potpune automatizacije procesa.',
+        'Naša automatizacija pogonjana umjetnom inteligencijom štedi vrijeme i troškove: automatski prenesite potencijalne kupce u CRM, šaljite račune, planirajte društvene mreže, šaljite podsjetnike za termine. Razvijamo prilagođene radne tokove za tvrtke u Münchenu, Bavarskoj i diljem Njemačke.',
+        'Kao n8n stručnjaci nudimo preko 500 integracija, bez ograničenja izvršavanja i self-hosting za maksimalnu kontrolu podataka. U kombinaciji s AI agentima i inteligentnim chatbotovima nastaju moćna rješenja za automatizaciju.',
+        'Prednosti: 80% uštede vremena na ponavljajućim zadacima, 50% smanjenje troškova automatiziranim procesima, ROI unutar 3-6 mjeseci. Kontaktirajte nas za besplatnu analizu automatizacije.'
+      ],
       automations: [
         { title: 'Automatizacija Email Marketinga', description: 'Automatsko slanje, sortiranje i odgovaranje na e-mailove. Sekvence dobrodošlice, praćenja i personalizirane kampanje na autopilotu.', examples: ['E-mailovi Dobrodošlice', 'Njegovanje Leadova', 'Napuštena Košarica', 'Segmentacija Newslettera'] },
         { title: 'Upravljanje Leadovima i CRM Integracija', description: 'Automatski hvatajte, kvalificirajte i predajte leadove prodaji. Integracija s vašim CRM-om i automatsko ocjenjivanje.', examples: ['Forme → CRM', 'Ocjenjivanje Leadova', 'Automatska Dodjela', 'Podsjetnici za Praćenje'] },
@@ -2893,6 +2949,13 @@ export const translations = {
         { q: 'Mogu li sam uređivati web stranicu?', a: 'Da! Koristimo korisnički prijateljske CMS poput WordPressa ili Webflowa. Dobivate obuku i možete sami unositi promjene teksta, slika i jednostavne izmjene.' },
         { q: 'Je li web stranica GDPR-usklađena?', a: 'Apsolutno. Osiguravamo GDPR-usklađene cookie bannere, izjave o privatnosti, SSL enkripciju i sigurne kontakt forme. Za AI značajke koristimo EU-usklađena rješenja.' },
         { q: 'Što se događa nakon lansiranja?', a: 'Nudimo pakete održavanja za ažuriranja, sigurnost i podršku. Dodatno možemo kontinuirano dodavati nove AI značajke i optimizirati web stranicu na temelju analitičkih podataka.' }
+      ],
+      seoTitle: 'Izrada web stranica s AI chatbotom – Agencija za web dizajn',
+      seoContent: [
+        'ExtruCon GmbH iz Fürstenfeldbrucka razvija moderne web stranice s integriranim AI značajkama. Od GPT-4 chatbotova preko automatskog stvaranja sadržaja do inteligentne SEO optimizacije – donosimo umjetnu inteligenciju na vašu web stranicu.',
+        'Naše AI web stranice povećavaju konverzije: Chatbotovi odgovaraju na pitanja 24/7, personalizirani sadržaj se obraća posjetiteljima individualno, a SEO-optimizirani tekstovi se generiraju automatski. Idealno za tvrtke u Münchenu, Fürstenfeldbrucku i Bavarskoj.',
+        'Kao agencija za web dizajn s AI ekspertizom nudimo landing stranice od 1.500€, poslovne web stranice od 3.500€ i e-commerce rješenja od 5.000€. Tehnologije: React, Next.js, WordPress, Webflow s OpenAI GPT i Claude AI integracijom.',
+        'Prednosti: 24/7 korisnička služba putem chatbotova, automatsko stvaranje sadržaja, GDPR-sukladna rješenja. Kontaktirajte nas za besplatnu konzultaciju o web dizajnu u Fürstenfeldbrucku.'
       ],
     },
     faqPage: {
@@ -4228,6 +4291,13 @@ export const translations = {
         { q: 'Hangi devam eden maliyetler oluşur?', a: 'Tek seferlik geliştirmenin yanı sıra hosting, API kullanımı ve opsiyonel bakım için aylık maliyetler oluşur. Tipik bir ajan, kullanım hacmine ve karmaşıklığa bağlı olarak aylık 50-200€ arası maliyetlidir.' },
         { q: 'Ajanı daha sonra genişletebilir miyim?', a: 'Kesinlikle! AI ajanları modüler olarak oluşturulmuştur. İstediğiniz zaman yeni özellikler, entegrasyonlar veya dil yetenekleri ekleyebilirsiniz. Gelişimde size eşlik ediyoruz.' }
       ],
+      seoTitle: 'İşletmeler için AI Ajanları ve Chatbot Geliştirme',
+      seoContent: [
+        'Fürstenfeldbruck merkezli ExtruCon GmbH, işletmeler için akıllı AI ajanları ve chatbotlar geliştirmektedir. GPT-4, Claude AI ve LangChain ile müşteri hizmetlerini, potansiyel müşteri oluşturmayı ve iş süreçlerini otomatikleştiriyoruz – GDPR uyumlu ve özelleştirilmiş.',
+        'AI chatbotlarımız müşteri sorgularını 7/24 birden fazla dilde yanıtlar, potansiyel müşterileri otomatik olarak nitelendirir ve HubSpot veya Salesforce gibi CRM sistemleriyle sorunsuz entegre olur. Münih, Bavyera ve Almanya genelindeki şirketler için ideal.',
+        'Yapay zeka ajansı olarak chatbot geliştirmeyi n8n iş akışı otomasyonu ile birleştiriyoruz. Randevu almadan e-posta otomasyonuna, belge işlemeye kadar – zaman kazandıran AI çözümleri geliştiriyoruz.',
+        'Avantajlar: %80 daha az manuel iş, 7/24 kullanılabilirlik, ek maliyet olmadan ölçeklenebilir. AI projeniz için ücretsiz ilk danışmanlık – Münih yakınındaki Fürstenfeldbruck\'ta bizimle iletişime geçin.'
+      ],
     },
     automationPage: {
       heroTitle: 'n8n ile Surecleri Otomatiklestirin – Is Akisi Otomasyon Ajansi Munih',
@@ -4240,6 +4310,13 @@ export const translations = {
       ctaSubtitle: 'Otomasyonun işletmenizi nasıl dönüştürebileceğini keşfedin.',
       ctaButton: 'Ücretsiz Danışmanlık',
       ctaButtonAlt: 'Projeye Başla',
+      seoTitle: 'İşletmeler için n8n ve Make ile İş Akışı Otomasyonu',
+      seoContent: [
+        'Fürstenfeldbruck merkezli ExtruCon GmbH, profesyonel iş akışı otomasyonu için ajansınızdır. n8n, Make ve Zapier ile araçlarınızı bağlıyor ve e-posta iş akışlarından tam süreç otomasyonuna kadar tekrarlayan görevleri otomatikleştiriyoruz.',
+        'AI destekli otomasyonumuz zaman ve maliyet tasarrufu sağlar: potansiyel müşterileri otomatik olarak CRM\'e aktarın, fatura gönderin, sosyal medya planlayın, randevu hatırlatmaları gönderin. Münih, Bavyera ve Almanya genelindeki işletmeler için özelleştirilmiş iş akışları geliştiriyoruz.',
+        'n8n uzmanları olarak 500\'den fazla entegrasyon, yürütme limiti olmadan ve maksimum veri kontrolü için self-hosting sunuyoruz. AI ajanları ve akıllı chatbotlarla birleştiğinde güçlü otomasyon çözümleri ortaya çıkıyor.',
+        'Avantajlar: Tekrarlayan görevlerde %80 zaman tasarrufu, otomatik süreçlerle %50 maliyet azaltma, 3-6 ay içinde yatırım getirisi. Ücretsiz otomasyon analizi için bizimle iletişime geçin.'
+      ],
     },
     websitesPage: {
       heroTitle: 'AI Web Siteleri',
@@ -4312,6 +4389,13 @@ export const translations = {
         { q: 'Web sitesini kendim düzenleyebilir miyim?', a: 'Evet! WordPress veya Webflow gibi kullanıcı dostu CMS\'ler kullanıyoruz. Eğitim alırsınız ve metinleri, görselleri ve basit değişiklikleri kendiniz yapabilirsiniz.' },
         { q: 'Web sitesi GDPR/KVKK uyumlu mu?', a: 'Kesinlikle. GDPR/KVKK uyumlu çerez bannerları, gizlilik bildirimleri, SSL şifrelemesi ve güvenli iletişim formlarına dikkat ediyoruz. AI özelliklerinde AB/TR uyumlu çözümler kullanıyoruz.' },
         { q: 'Lansmandan sonra ne olur?', a: 'Güncellemeler, güvenlik ve destek için bakım paketleri sunuyoruz. Ayrıca sürekli olarak yeni AI özellikleri ekleyebilir ve analytics verilerine göre web sitesini optimize edebiliriz.' }
+      ],
+      seoTitle: 'AI Chatbot ile Web Sitesi Geliştirme – Web Tasarım Ajansı',
+      seoContent: [
+        'Fürstenfeldbruck merkezli ExtruCon GmbH, entegre AI özellikleriyle modern web siteleri geliştirmektedir. GPT-4 chatbotlarından otomatik içerik oluşturmaya, akıllı SEO optimizasyonuna kadar – yapay zekayı web sitenize getiriyoruz.',
+        'AI web sitelerimiz dönüşümleri artırır: Chatbotlar soruları 7/24 yanıtlar, kişiselleştirilmiş içerik ziyaretçilere bireysel olarak hitap eder ve SEO-optimize edilmiş metinler otomatik olarak oluşturulur. Münih, Fürstenfeldbruck ve Bavyera\'daki şirketler için ideal.',
+        'AI uzmanlığına sahip web tasarım ajansı olarak 1.500€\'dan landing page, 3.500€\'dan kurumsal web sitesi ve 5.000€\'dan e-ticaret çözümleri sunuyoruz. Teknolojiler: OpenAI GPT ve Claude AI entegrasyonu ile React, Next.js, WordPress, Webflow.',
+        'Avantajlar: Chatbotlar aracılığıyla 7/24 müşteri hizmeti, otomatik içerik oluşturma, GDPR/KVKK uyumlu çözümler. Fürstenfeldbruck\'ta ücretsiz web tasarım danışmanlığı için bizimle iletişime geçin.'
       ],
     },
     socialMediaPage: {

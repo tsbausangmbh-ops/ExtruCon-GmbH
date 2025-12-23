@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks, RelatedServices } from "@/components/InternalLinks";
+import { LinkedParagraph } from "@/components/KeywordLinker";
 import { motion } from "framer-motion";
 import { Globe, Sparkles, ArrowRight, CheckCircle, Zap, Shield, TrendingUp, MessageSquare, Bot, Search, FileText, Image, Code, Palette, Smartphone, BarChart3, RefreshCw, ChevronDown, HelpCircle, Clock, Users } from "lucide-react";
 import { useState } from "react";
@@ -584,6 +585,24 @@ export default function WebseitenKI() {
             </a>
           </div>
         </section>
+
+        {/* SEO Content Section */}
+        {t.webKIPage.seoContent && (
+          <section className="py-16 bg-white/[0.02]">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-2xl font-bold font-display text-white mb-8">
+                  {t.webKIPage.seoTitle}
+                </h2>
+                <div className="space-y-4 text-gray-400 leading-relaxed">
+                  {t.webKIPage.seoContent.map((paragraph, i) => (
+                    <LinkedParagraph key={i} currentPage="/webseiten-ki" maxLinks={2}>{paragraph}</LinkedParagraph>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
 
         <RelatedServices currentPage="webseiten-ki" />
         <ExploreMoreSection />

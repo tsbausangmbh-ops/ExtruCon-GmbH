@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks, RelatedServices } from "@/components/InternalLinks";
+import { LinkedParagraph } from "@/components/KeywordLinker";
 import { motion } from "framer-motion";
 import { Bot, Zap, MessageSquare, BarChart3, Clock, Shield, Sparkles, ArrowRight, CheckCircle, Brain, Workflow, Users, Mail, Calendar, FileText, ShoppingCart, Headphones, TrendingUp, Settings, Database, Globe, Cpu, Lock, RefreshCw, HelpCircle, ChevronDown } from "lucide-react";
 import { useState, useMemo } from "react";
@@ -869,6 +870,24 @@ export default function KIAgenten() {
             </div>
           </div>
         </section>
+
+        {/* SEO Content Section */}
+        {t.kiAgentsPage.seoContent && (
+          <section className="py-16 bg-white/[0.02]">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-2xl font-bold font-display text-white mb-8">
+                  {t.kiAgentsPage.seoTitle}
+                </h2>
+                <div className="space-y-4 text-gray-400 leading-relaxed">
+                  {t.kiAgentsPage.seoContent.map((paragraph, i) => (
+                    <LinkedParagraph key={i} currentPage="/ki-agenten" maxLinks={2}>{paragraph}</LinkedParagraph>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
 
         <RelatedServices currentPage="ki-agenten" />
         <ExploreMoreSection />
