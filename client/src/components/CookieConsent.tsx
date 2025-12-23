@@ -56,6 +56,10 @@ export function CookieConsent() {
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 100, opacity: 0 }}
         className="fixed bottom-0 left-0 right-0 z-[100] p-4 md:p-6"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cookie-title"
+        aria-describedby="cookie-description"
       >
         <div className="container mx-auto max-w-4xl">
           <div className="bg-card/95 backdrop-blur-md border border-white/10 rounded-2xl shadow-2xl p-6">

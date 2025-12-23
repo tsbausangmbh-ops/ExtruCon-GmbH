@@ -69,20 +69,24 @@ export function ChatWidget() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             className="fixed bottom-[40%] right-4 z-50 w-[350px] max-w-[calc(100vw-2rem)] bg-background/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="chat-title"
           >
             <div className="bg-gradient-to-r from-primary to-secondary p-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center" aria-hidden="true">
                   <Bot className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-sm">ExtruCon AI</h3>
+                  <h3 id="chat-title" className="text-white font-bold text-sm">ExtruCon AI</h3>
                   <p className="text-white/70 text-xs">{t.hero?.available || "24/7 verfügbar"}</p>
                 </div>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-white/80 hover:text-white transition-colors"
+                className="text-white/80 hover:text-white transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+                aria-label="Chat schließen"
                 data-testid="button-close-chat"
               >
                 <X className="w-5 h-5" />

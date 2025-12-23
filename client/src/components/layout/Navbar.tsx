@@ -94,16 +94,19 @@ export function Navbar() {
         <div className="flex items-center gap-2 md:hidden">
           <LanguageSwitcher />
           <button
-            className="text-white"
+            className="text-white min-w-[44px] min-h-[44px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-primary rounded-lg"
             onClick={() => setIsOpen(!isOpen)}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
+            aria-label={isOpen ? "Menü schließen" : "Menü öffnen"}
           >
-            {isOpen ? <X /> : <Menu />}
+            {isOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
           </button>
         </div>
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-background border-b border-white/10 p-4 absolute w-full">
+        <div id="mobile-menu" className="md:hidden bg-background border-b border-white/10 p-4 absolute w-full" role="menu" aria-label="Mobile Navigation">
           <div className="flex flex-col gap-2">
             <a
               href="/webseiten-ki"
