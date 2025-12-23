@@ -649,12 +649,17 @@ Allow: /privacy
 Allow: /terms
 
 # ============================================================
-# ASSETS - ERLAUBT
+# ASSETS & RESSOURCEN - ERLAUBT
 # ============================================================
 Allow: /favicon.ico
 Allow: /logo.png
 Allow: /opengraph.jpg
 Allow: /assets/
+Allow: /manifest.json
+Allow: /humans.txt
+Allow: /ads.txt
+Allow: /openapi.yaml
+Allow: /.well-known/
 
 # ============================================================
 # BLOCKIERTE PFADE - NICHT INDEXIEREN

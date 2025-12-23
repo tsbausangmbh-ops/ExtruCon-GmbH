@@ -1,0 +1,122 @@
+openapi: 3.1.0
+info:
+  title: ExtruCon GmbH API
+  description: |
+    API für die ExtruCon GmbH Website - KI-Agentur aus Fürstenfeldbruck bei München.
+    
+    ## Über ExtruCon
+    ExtruCon entwickelt KI-Agenten, automatisiert Geschäftsprozesse und erstellt moderne Websites mit KI-Features.
+    
+    ## Kontakt
+    - Email: info@extrucon.de
+    - Telefon: +49 89 444438879
+    - Adresse: Hasenheide 8, 82256 Fürstenfeldbruck
+  version: 1.0.0
+  contact:
+    name: ExtruCon GmbH
+    url: https://extrucon.de
+    email: info@extrucon.de
+  license:
+    name: Proprietär
+    url: https://extrucon.de/agb
+  termsOfService: https://extrucon.de/agb
+
+servers:
+  - url: https://extrucon.de/api
+    description: Production Server
+
+paths:
+  /chat:
+    post:
+      summary: KI-Chatbot Nachricht senden
+      description: Senden Sie eine Nachricht an den ExtruCon KI-Assistenten
+      operationId: sendChatMessage
+      tags:
+        - Chatbot
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - messages
+              properties:
+                messages:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      role:
+                        type: string
+                        enum: [user, assistant]
+                      content:
+                        type: string
+                language:
+                  type: string
+                  enum: [de, en, hr, tr]
+                  default: de
+      responses:
+        '200':
+          description: Erfolgreiche Antwort
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '400':
+          description: Ungültige Anfrage
+        '500':
+          description: Serverfehler
+
+  /contact:
+    post:
+      summary: Kontaktformular absenden
+      description: Senden Sie eine Kontaktanfrage an ExtruCon
+      operationId: submitContactForm
+      tags:
+        - Kontakt
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+                - email
+                - message
+              properties:
+                name:
+                  type: string
+                  description: Ihr Name
+                email:
+                  type: string
+                  format: email
+                  description: Ihre E-Mail-Adresse
+                phone:
+                  type: string
+                  description: Ihre Telefonnummer (optional)
+                company:
+                  type: string
+                  description: Ihr Unternehmen (optional)
+                message:
+                  type: string
+                  description: Ihre Nachricht
+      responses:
+        '200':
+          description: Nachricht erfolgreich gesendet
+        '400':
+          description: Ungültige Anfrage
+
+tags:
+  - name: Chatbot
+    description: KI-Chatbot für Kundenservice und Beratung
+  - name: Kontakt
+    description: Kontaktformular und Anfragen
+
+externalDocs:
+  description: ExtruCon Website
+  url: https://extrucon.de
