@@ -37,7 +37,9 @@ export function Footer() {
               <li><a href="/leistungen/marketing" className="hover:text-primary transition-colors">{t.nav.marketing}</a></li>
               <li><a href="/leistungen/content" className="hover:text-primary transition-colors">{t.nav.contentCreation}</a></li>
               <li><a href="/leistungen/seo" className="hover:text-primary transition-colors">{t.nav.seo}</a></li>
-              <li><a href="/leistungen/brand" className="hover:text-primary transition-colors">Branding</a></li>
+              <li><a href="/leistungen/markenaufbau" className="hover:text-primary transition-colors">Branding</a></li>
+              <li><a href="/leistungen/web" className="hover:text-primary transition-colors">Webentwicklung</a></li>
+              <li><a href="/leistungen/ki-automatisierung" className="hover:text-primary transition-colors">KI-Automatisierung</a></li>
             </ul>
           </div>
 
@@ -48,9 +50,13 @@ export function Footer() {
               <li><a href="/muenchen/schwabing" className="hover:text-primary transition-colors">Schwabing</a></li>
               <li><a href="/muenchen/bogenhausen" className="hover:text-primary transition-colors">Bogenhausen</a></li>
               <li><a href="/muenchen/nymphenburg" className="hover:text-primary transition-colors">Nymphenburg</a></li>
+              <li><a href="/muenchen/gruenwald" className="hover:text-primary transition-colors">Grünwald</a></li>
+              <li><a href="/muenchen/harlaching" className="hover:text-primary transition-colors">Harlaching</a></li>
               <li><a href="/starnberg" className="hover:text-primary transition-colors">Starnberg</a></li>
               <li><a href="/dachau" className="hover:text-primary transition-colors">Dachau</a></li>
               <li><a href="/germering" className="hover:text-primary transition-colors">Germering</a></li>
+              <li><a href="/puchheim" className="hover:text-primary transition-colors">Puchheim</a></li>
+              <li><a href="/olching" className="hover:text-primary transition-colors">Olching</a></li>
             </ul>
           </div>
 

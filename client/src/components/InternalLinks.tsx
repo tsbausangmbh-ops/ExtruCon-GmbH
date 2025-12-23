@@ -20,6 +20,9 @@ export function ExploreMoreSection() {
     { href: "/leistungen/marketing", label: t.nav.marketing, icon: TrendingUp, colorClass: "text-orange-400" },
     { href: "/leistungen/content", label: t.nav.contentCreation, icon: FileText, colorClass: "text-pink-400" },
     { href: "/leistungen/seo", label: t.nav.seo, icon: Search, colorClass: "text-green-400" },
+    { href: "/leistungen/markenaufbau", label: "Branding", icon: Award, colorClass: "text-indigo-400" },
+    { href: "/leistungen/web", label: "Webentwicklung", icon: Globe, colorClass: "text-teal-400" },
+    { href: "/leistungen/ki-automatisierung", label: "KI-Automatisierung", icon: Bot, colorClass: "text-fuchsia-400" },
     { href: "/referenzen", label: t.nav.referenzen, icon: Award, colorClass: "text-amber-400" },
     { href: "/ratgeber", label: t.nav.ratgeber, icon: BookOpen, colorClass: "text-blue-400" },
     { href: "/faq", label: t.nav.faq, icon: HelpCircle, colorClass: "text-yellow-400" },
@@ -27,6 +30,7 @@ export function ExploreMoreSection() {
     { href: "/ki-bot", label: "KI-Chatbot", icon: MessageSquare, colorClass: "text-violet-400" },
     { href: "/termin", label: "Termin buchen", icon: Calendar, colorClass: "text-rose-400" },
     { href: "/muenchen", label: "München", icon: MapPin, colorClass: "text-sky-400" },
+    { href: "/kontakt", label: t.nav.contact, icon: Users, colorClass: "text-lime-400" },
   ];
 
   return (
