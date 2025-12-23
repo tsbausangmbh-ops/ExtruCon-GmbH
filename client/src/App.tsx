@@ -44,6 +44,7 @@ import { CookieConsent } from "@/components/CookieConsent";
 import ChristmasPopup from "@/components/ChristmasPopup";
 import NewYearPopup from "@/components/NewYearPopup";
 import { BackButton } from "@/components/BackButton";
+import { GlobalBackground } from "@/components/GlobalBackground";
 
 export function AppRouter() {
   return (
@@ -91,6 +92,7 @@ export function AppRouter() {
 export function AppContent() {
   return (
     <>
+      <GlobalBackground />
       <Toaster />
       <AppRouter />
       <BackButton />
