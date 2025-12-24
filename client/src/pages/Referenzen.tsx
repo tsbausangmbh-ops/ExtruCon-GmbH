@@ -69,10 +69,10 @@ export default function Referenzen() {
       link: "https://kshwmont.com"
     },
     {
-      title: "TS Bausan – Bausanierung München",
+      title: "TS Bausan – Bauunternehmen München",
       category: "Webentwicklung",
-      description: "Professionelle Website für Bausanierung und Renovierung. Umfassende Leistungsdarstellung und Kontaktmöglichkeiten für Privat- und Gewerbekunden.",
-      results: ["Bausanierung", "Renovierung", "Professioneller Service"],
+      description: "Professionelle Website für Bauunternehmen. Komplette Bauleistungen von Neubau bis Sanierung mit modernem Webauftritt.",
+      results: ["Bauunternehmen", "Neubau & Sanierung", "Professioneller Service"],
       color: "orange",
       link: "https://ts-bausan.de"
     },
