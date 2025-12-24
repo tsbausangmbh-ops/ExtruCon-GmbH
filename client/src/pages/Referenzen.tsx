@@ -69,6 +69,14 @@ export default function Referenzen() {
       link: "https://kshwmont.com"
     },
     {
+      title: "TS Bausan – Bausanierung München",
+      category: "Webentwicklung",
+      description: "Professionelle Website für Bausanierung und Renovierung. Umfassende Leistungsdarstellung und Kontaktmöglichkeiten für Privat- und Gewerbekunden.",
+      results: ["Bausanierung", "Renovierung", "Professioneller Service"],
+      color: "orange",
+      link: "https://ts-bausan.de"
+    },
+    {
       title: "FitLife München – Fitness-Studio Kette",
       category: "SEO & Geo-Optimierung",
       description: "Lokale Suchmaschinenoptimierung für Fitnessstudio-Kette mit 5 Standorten in München. Google My Business Optimierung und lokale Keyword-Strategie.",
