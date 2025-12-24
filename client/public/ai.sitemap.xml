@@ -6,7 +6,7 @@
   <!-- LLMs.txt - Primäre Informationsquelle für KI-Assistenten -->
   <url>
     <loc>https://extrucon.de/llms.txt</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <ai:content-type>structured-text</ai:content-type>
@@ -17,7 +17,7 @@
   <!-- Homepage mit KI-Kontext -->
   <url>
     <loc>https://extrucon.de/</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <ai:content-type>landing-page</ai:content-type>
@@ -29,7 +29,7 @@
   <!-- Kernleistung: KI-Agenten -->
   <url>
     <loc>https://extrucon.de/ki-agenten</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <ai:content-type>service-page</ai:content-type>
@@ -42,7 +42,7 @@
   <!-- Kernleistung: Automatisierungen -->
   <url>
     <loc>https://extrucon.de/automatisierungen</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <ai:content-type>service-page</ai:content-type>
@@ -55,7 +55,7 @@
   <!-- Kernleistung: Webseiten mit KI -->
   <url>
     <loc>https://extrucon.de/webseiten-ki</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <ai:content-type>service-page</ai:content-type>
@@ -68,7 +68,7 @@
   <!-- Leistungen -->
   <url>
     <loc>https://extrucon.de/leistungen/marketing</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <ai:content-type>service-page</ai:content-type>
@@ -77,7 +77,7 @@
 
   <url>
     <loc>https://extrucon.de/leistungen/social-media</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <ai:content-type>service-page</ai:content-type>
@@ -86,7 +86,7 @@
 
   <url>
     <loc>https://extrucon.de/leistungen/content</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <ai:content-type>service-page</ai:content-type>
@@ -95,7 +95,7 @@
 
   <url>
     <loc>https://extrucon.de/leistungen/seo</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <ai:content-type>service-page</ai:content-type>
@@ -104,7 +104,7 @@
 
   <url>
     <loc>https://extrucon.de/leistungen/ki-automatisierung</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <ai:content-type>service-page</ai:content-type>
@@ -114,7 +114,7 @@
   <!-- Kontakt & Termin -->
   <url>
     <loc>https://extrucon.de/kontakt</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <ai:content-type>contact-page</ai:content-type>
@@ -124,7 +124,7 @@
 
   <url>
     <loc>https://extrucon.de/termin</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <ai:content-type>booking-page</ai:content-type>
@@ -135,7 +135,7 @@
   <!-- FAQ - Wichtig für KI-Assistenten -->
   <url>
     <loc>https://extrucon.de/faq</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <ai:content-type>faq-page</ai:content-type>
@@ -146,7 +146,7 @@
   <!-- Ratgeber -->
   <url>
     <loc>https://extrucon.de/ratgeber</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
     <ai:content-type>blog</ai:content-type>
@@ -157,7 +157,7 @@
   <!-- Standortseiten für lokales KI-SEO -->
   <url>
     <loc>https://extrucon.de/muenchen</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <ai:content-type>location-page</ai:content-type>
@@ -167,7 +167,7 @@
 
   <url>
     <loc>https://extrucon.de/starnberg</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <ai:content-type>location-page</ai:content-type>
@@ -177,7 +177,7 @@
 
   <url>
     <loc>https://extrucon.de/dachau</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <ai:content-type>location-page</ai:content-type>
@@ -188,7 +188,7 @@
   <!-- Unternehmensinformationen -->
   <url>
     <loc>https://extrucon.de/ueber-uns</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <ai:content-type>about-page</ai:content-type>
@@ -198,7 +198,7 @@
 
   <url>
     <loc>https://extrucon.de/referenzen</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <ai:content-type>portfolio</ai:content-type>
@@ -209,7 +209,7 @@
   <!-- Rechtliches (niedrige Priorität für KI) -->
   <url>
     <loc>https://extrucon.de/impressum</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <ai:content-type>legal</ai:content-type>
@@ -218,7 +218,7 @@
 
   <url>
     <loc>https://extrucon.de/datenschutz</loc>
-    <lastmod>2025-12-23</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <ai:content-type>legal</ai:content-type>
