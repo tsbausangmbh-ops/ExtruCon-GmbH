@@ -15,6 +15,11 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
+  // Health check endpoint
+  app.get("/health", (_req, res) => {
+    res.status(200).send("ok");
+  });
+
   // Serve sitemap.xml explicitly before catch-all routes
   app.get("/sitemap.xml", (_req, res) => {
     res.set("Content-Type", "application/xml");
