@@ -44,11 +44,9 @@ export default function NotFound() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link href="/">
-                <a className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors" data-testid="link-home">
-                  <Home className="w-5 h-5" />
-                  Zur Startseite
-                </a>
+              <Link href="/" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors" data-testid="link-home">
+                <Home className="w-5 h-5" />
+                Zur Startseite
               </Link>
               <button 
                 onClick={() => window.history.back()}
@@ -67,14 +65,14 @@ export default function NotFound() {
               </h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {popularLinks.map((link) => (
-                  <Link key={link.href} href={link.href}>
-                    <a 
-                      className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-lg hover:bg-white/10 transition-colors text-gray-300 hover:text-white"
-                      data-testid={`link-${link.href.slice(1)}`}
-                    >
-                      <span>{link.icon}</span>
-                      <span className="text-sm">{link.label}</span>
-                    </a>
+                  <Link 
+                    key={link.href} 
+                    href={link.href}
+                    className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-lg hover:bg-white/10 transition-colors text-gray-300 hover:text-white"
+                    data-testid={`link-${link.href.slice(1)}`}
+                  >
+                    <span>{link.icon}</span>
+                    <span className="text-sm">{link.label}</span>
                   </Link>
                 ))}
               </div>
@@ -82,11 +80,9 @@ export default function NotFound() {
 
             <div className="text-gray-400">
               <p className="mb-2">Brauchen Sie Hilfe?</p>
-              <Link href="/kontakt">
-                <a className="inline-flex items-center gap-2 text-primary hover:underline" data-testid="link-contact-help">
-                  <MessageCircle className="w-4 h-4" />
-                  Kontaktieren Sie uns
-                </a>
+              <Link href="/kontakt" className="inline-flex items-center gap-2 text-primary hover:underline" data-testid="link-contact-help">
+                <MessageCircle className="w-4 h-4" />
+                Kontaktieren Sie uns
               </Link>
             </div>
           </motion.div>
