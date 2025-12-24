@@ -7,6 +7,10 @@ import prerender from "prerender-node";
 const app = express();
 const httpServer = createServer(app);
 
+// Server timeout settings for better connection handling
+httpServer.keepAliveTimeout = 120000;
+httpServer.headersTimeout = 120000;
+
 declare module "http" {
   interface IncomingMessage {
     rawBody: unknown;
