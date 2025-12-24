@@ -38,6 +38,68 @@ app.use((req, res, next) => {
   next();
 });
 
+// 301 Redirects for SEO (old URLs to new URLs)
+const redirects: Record<string, string> = {
+  '/home': '/',
+  '/index': '/',
+  '/index.html': '/',
+  '/startseite': '/',
+  '/leistungen': '/ki-agenten',
+  '/services': '/ki-agenten',
+  '/ai-agents': '/ki-agenten',
+  '/automation': '/automatisierungen',
+  '/automatisierung': '/automatisierungen',
+  '/websites': '/webseiten-ki',
+  '/webseiten': '/webseiten-ki',
+  '/web': '/leistungen/web',
+  '/about': '/ueber-uns',
+  '/about-us': '/ueber-uns',
+  '/uber-uns': '/ueber-uns',
+  '/contact': '/kontakt',
+  '/kontaktformular': '/kontakt',
+  '/appointment': '/termin',
+  '/booking': '/termin',
+  '/terminbuchung': '/termin',
+  '/chat': '/ki-bot',
+  '/chatbot': '/ki-bot',
+  '/bot': '/ki-bot',
+  '/portfolio': '/referenzen',
+  '/projects': '/referenzen',
+  '/projekte': '/referenzen',
+  '/cases': '/referenzen',
+  '/blog': '/ratgeber',
+  '/news': '/ratgeber',
+  '/articles': '/ratgeber',
+  '/help': '/faq',
+  '/hilfe': '/faq',
+  '/questions': '/faq',
+  '/imprint': '/impressum',
+  '/legal': '/impressum',
+  '/privacy': '/datenschutz',
+  '/privacy-policy': '/datenschutz',
+  '/datenschutzerklaerung': '/datenschutz',
+  '/terms-of-service': '/agb',
+  '/tos': '/agb',
+  '/munich': '/muenchen',
+  '/münchen': '/muenchen',
+};
+
+app.use((req, res, next) => {
+  const path = req.path.toLowerCase();
+  
+  // Check for exact redirect match
+  if (redirects[path]) {
+    return res.redirect(301, redirects[path]);
+  }
+  
+  // Remove trailing slash (except for root)
+  if (path !== '/' && path.endsWith('/')) {
+    return res.redirect(301, path.slice(0, -1));
+  }
+  
+  next();
+});
+
 export function log(message: string, source = "express") {
   const formattedTime = new Date().toLocaleTimeString("en-US", {
     hour: "numeric",

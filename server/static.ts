@@ -28,8 +28,32 @@ export async function serveStatic(app: Express) {
     }
   }
 
+  const validRoutes = [
+    '/', '/ki-agenten', '/automatisierungen', '/webseiten-ki', '/ki-bot',
+    '/kontakt', '/termin', '/faq', '/referenzen', '/ratgeber', '/ueber-uns',
+    '/impressum', '/datenschutz', '/privacy', '/terms', '/agb', '/cookies',
+    '/leistungen/marketing', '/leistungen/social-media', '/leistungen/content',
+    '/leistungen/markenaufbau', '/leistungen/web', '/leistungen/ki-automatisierung',
+    '/leistungen/seo', '/muenchen', '/muenchen/bogenhausen', '/muenchen/schwabing',
+    '/muenchen/nymphenburg', '/muenchen/gruenwald', '/muenchen/harlaching',
+    '/starnberg', '/dachau', '/germering', '/puchheim', '/olching'
+  ];
+
   app.use("*", (req, res) => {
     const url = req.originalUrl;
+    const path = url.split('?')[0];
+    
+    const isValidRoute = validRoutes.includes(path) || 
+                         path.startsWith('/assets/') ||
+                         path.endsWith('.js') ||
+                         path.endsWith('.css') ||
+                         path.endsWith('.png') ||
+                         path.endsWith('.jpg') ||
+                         path.endsWith('.ico') ||
+                         path.endsWith('.txt') ||
+                         path.endsWith('.xml');
+    
+    const statusCode = isValidRoute ? 200 : 404;
     
     if (render) {
       try {
@@ -38,13 +62,13 @@ export async function serveStatic(app: Express) {
           '<div id="root"></div>',
           `<div id="root">${appHtml}</div>`
         );
-        res.status(200).set({ "Content-Type": "text/html" }).send(finalHtml);
+        res.status(statusCode).set({ "Content-Type": "text/html" }).send(finalHtml);
       } catch (err) {
         console.error("SSR Error:", err);
-        res.sendFile(templatePath);
+        res.status(statusCode).sendFile(templatePath);
       }
     } else {
-      res.sendFile(templatePath);
+      res.status(statusCode).sendFile(templatePath);
     }
   });
 }
