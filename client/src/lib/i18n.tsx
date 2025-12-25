@@ -4740,7 +4740,20 @@ const countryToLanguage: Record<string, Language> = {
   'CY': 'tr',
 };
 
+function getCookie(name: string): string | null {
+  if (typeof document === 'undefined') return null;
+  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+  return match ? match[2] : null;
+}
+
 async function detectCountryLanguage(): Promise<Language> {
+  // First check for server-set geo cookie (set by Express middleware)
+  const geoCookie = getCookie('extrucon_geo_lang');
+  if (geoCookie && ['de', 'en', 'hr', 'tr'].includes(geoCookie)) {
+    return geoCookie as Language;
+  }
+
+  // Fallback to API-based detection
   try {
     const response = await fetch('https://ipapi.co/json/', { 
       signal: AbortSignal.timeout(3000) 
@@ -4757,8 +4770,21 @@ async function detectCountryLanguage(): Promise<Language> {
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>(() => {
     if (typeof window !== 'undefined') {
+      // Priority: 1. URL query param, 2. localStorage (explicit user choice), 3. geo cookie, 4. default
+      const urlParams = new URLSearchParams(window.location.search);
+      const langParam = urlParams.get('lang') as Language;
+      if (langParam && ['de', 'en', 'hr', 'tr'].includes(langParam)) {
+        return langParam;
+      }
+      
       const saved = localStorage.getItem('language') as Language;
       if (saved && ['de', 'en', 'hr', 'tr'].includes(saved)) return saved;
+      
+      // Check geo cookie from server
+      const geoCookie = getCookie('extrucon_geo_lang');
+      if (geoCookie && ['de', 'en', 'hr', 'tr'].includes(geoCookie)) {
+        return geoCookie as Language;
+      }
     }
     return 'de';
   });
@@ -4767,6 +4793,16 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
+    
+    // Check URL param first (highest priority)
+    const urlParams = new URLSearchParams(window.location.search);
+    const langParam = urlParams.get('lang') as Language;
+    if (langParam && ['de', 'en', 'hr', 'tr'].includes(langParam)) {
+      setLanguage(langParam);
+      localStorage.setItem('language', langParam);
+      setIsInitialized(true);
+      return;
+    }
     
     const saved = localStorage.getItem('language');
     const hasVisited = localStorage.getItem('geoDetected');

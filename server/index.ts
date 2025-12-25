@@ -4,8 +4,10 @@ import { serveStatic } from "./static";
 import { createServer } from "http";
 import prerender from "prerender-node";
 import compression from "compression";
+import cookieParser from "cookie-parser";
 
 const app = express();
+app.use(cookieParser());
 const httpServer = createServer(app);
 
 // Server timeout settings for better connection handling
@@ -52,6 +54,67 @@ app.use((req, res, next) => {
     const newHost = host.slice(4);
     return res.redirect(301, `https://${newHost}${req.url}`);
   }
+  next();
+});
+
+// Geo-IP based language detection middleware
+// Maps country codes to supported languages
+const countryToLanguage: Record<string, string> = {
+  'TR': 'tr', // Turkey -> Turkish
+  'HR': 'hr', // Croatia -> Croatian
+  'BA': 'hr', // Bosnia -> Croatian
+  'RS': 'hr', // Serbia -> Croatian (similar)
+  'ME': 'hr', // Montenegro -> Croatian
+  'SI': 'hr', // Slovenia -> Croatian
+  'AT': 'de', // Austria -> German
+  'CH': 'de', // Switzerland -> German
+  'DE': 'de', // Germany -> German
+  'US': 'en', // USA -> English
+  'GB': 'en', // UK -> English
+  'AU': 'en', // Australia -> English
+  'CA': 'en', // Canada -> English
+};
+
+app.use((req, res, next) => {
+  const cookieOptions = {
+    maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
+    httpOnly: false, // Frontend needs to read it
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'lax' as const
+  };
+
+  // If lang query param is provided, persist it in cookie
+  const langParam = req.query.lang as string | undefined;
+  if (langParam && ['de', 'en', 'hr', 'tr'].includes(langParam)) {
+    res.cookie('extrucon_geo_lang', langParam, cookieOptions);
+    log(`Lang param: ${langParam} -> cookie set`, 'geo');
+    return next();
+  }
+
+  // Skip if language cookie already exists
+  const existingLang = req.cookies?.extrucon_geo_lang;
+  if (existingLang && ['de', 'en', 'hr', 'tr'].includes(existingLang)) {
+    return next();
+  }
+
+  // Try to detect country from various headers
+  // Cloudflare: CF-IPCountry, Replit/Vercel may use X-Vercel-IP-Country
+  const country = (
+    req.headers['cf-ipcountry'] ||
+    req.headers['x-vercel-ip-country'] ||
+    req.headers['x-country-code'] ||
+    req.headers['x-real-country']
+  ) as string | undefined;
+
+  if (country) {
+    const detectedLang = countryToLanguage[country.toUpperCase()];
+    if (detectedLang) {
+      // Set a cookie that the frontend can read
+      res.cookie('extrucon_geo_lang', detectedLang, cookieOptions);
+      log(`Geo-IP: ${country} -> ${detectedLang}`, 'geo');
+    }
+  }
+
   next();
 });
 

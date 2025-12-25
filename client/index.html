@@ -122,7 +122,8 @@
         {"@type": "City", "name": "München"},
         {"@type": "City", "name": "Fürstenfeldbruck"},
         {"@type": "City", "name": "Zagreb"},
-        {"@type": "City", "name": "Istanbul"}
+        {"@type": "City", "name": "Istanbul"},
+        {"@type": "City", "name": "Antalya"}
       ],
       "openingHoursSpecification": [
         {
@@ -132,6 +133,55 @@
           "closes": "17:00"
         }
       ]
+    }
+    </script>
+
+    <!-- Structured Data: LocalBusiness - Antalya Office -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://extrucon.de/#localbusiness-antalya",
+      "name": "ExtruCon GmbH - Yapay Zeka Ajansı Antalya",
+      "alternateName": "ExtruCon Türkiye",
+      "image": "https://extrucon.de/logo.png",
+      "description": "Yapay zeka ajansı ve otomasyon uzmanları. Akıllı iş süreçleri, chatbot geliştirme ve dijital pazarlama hizmetleri sunuyoruz.",
+      "url": "https://extrucon.de",
+      "telephone": "+4989444438879",
+      "email": "info@extrucon.de",
+      "priceRange": "€€-€€€",
+      "currenciesAccepted": "EUR, TRY",
+      "paymentAccepted": "Bank Transfer, PayPal",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Antalya",
+        "addressRegion": "Antalya",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.8969,
+        "longitude": 30.7133
+      },
+      "areaServed": [
+        {"@type": "Country", "name": "Türkiye", "alternateName": "Turkey", "sameAs": "https://www.wikidata.org/wiki/Q43"},
+        {"@type": "City", "name": "Antalya"},
+        {"@type": "City", "name": "Istanbul"},
+        {"@type": "City", "name": "Ankara"},
+        {"@type": "City", "name": "Izmir"}
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "parentOrganization": {
+        "@type": "Organization",
+        "@id": "https://extrucon.de/#organization"
+      }
     }
     </script>
 

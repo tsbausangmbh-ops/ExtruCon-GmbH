@@ -111,6 +111,16 @@ Service pages with schemas:
 - LocalBusiness areaServed: Germany, Croatia, Turkey, Bayern, München, Fürstenfeldbruck
 - GeoLinks component for location-specific internal links
 
+### Multi-Language & Geo-IP Detection
+- **Languages**: German (de), English (en), Croatian (hr), Turkish (tr)
+- **Language precedence** (in order):
+  1. URL query param (`?lang=tr`) - highest priority
+  2. localStorage - explicit user choice (persisted when user changes language)
+  3. Server-set geo cookie (`extrucon_geo_lang`) - from geo-IP detection
+  4. Default: German (`de`)
+- **Server-side geo-IP**: Middleware in `server/index.ts` checks `CF-IPCountry` and `X-Vercel-IP-Country` headers, sets cookie for new visitors
+- **Antalya landing page**: `/antalya` route with Turkish content, LocalBusiness schema targeting Turkey (Antalya, Istanbul, Ankara, Izmir)
+
 ## Pre-Rendering for SEO
 
 ### Setup

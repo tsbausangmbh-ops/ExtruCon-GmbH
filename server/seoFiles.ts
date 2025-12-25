@@ -268,6 +268,17 @@ export const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
     <priority>0.7</priority>
   </url>
 
+  <!-- Türkei / Turkey Location -->
+  <url>
+    <loc>https://extrucon.de/antalya</loc>
+    <lastmod>2025-12-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/antalya"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/antalya?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/antalya"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Informationsseiten - Mittlere Priorität (0.7) -->
   <url>
     <loc>https://extrucon.de/ueber-uns</loc>
