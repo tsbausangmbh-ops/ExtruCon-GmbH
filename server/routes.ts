@@ -8,7 +8,9 @@ import { SITEMAP_XML, ROBOTS_TXT } from "./seoFiles";
 
 const openai = new OpenAI({
   baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
-  apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY
+  apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
+  timeout: 30000, // 30 second timeout
+  maxRetries: 2
 });
 
 export async function registerRoutes(
