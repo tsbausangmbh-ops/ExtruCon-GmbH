@@ -43,8 +43,69 @@ app.use(
 app.use(express.urlencoded({ extended: false }));
 
 // Prerender.io middleware for SEO (bot detection)
+// Extended crawler list for AI assistants and search engines
 if (process.env.PRERENDER_TOKEN) {
-  app.use(prerender.set('prerenderToken', process.env.PRERENDER_TOKEN));
+  app.use(prerender
+    .set('prerenderToken', process.env.PRERENDER_TOKEN)
+    .set('crawlerUserAgents', [
+      // Traditional search engines
+      'googlebot',
+      'bingbot',
+      'yandex',
+      'baiduspider',
+      'duckduckbot',
+      'slurp',
+      'msnbot',
+      'seznambot',
+      'yeti',
+      'naverbot',
+      'applebot',
+      // Social media crawlers
+      'facebookexternalhit',
+      'facebookcatalog',
+      'twitterbot',
+      'linkedinbot',
+      'pinterest',
+      'whatsapp',
+      'telegrambot',
+      'slackbot',
+      'discordbot',
+      // AI assistants and LLM crawlers
+      'gptbot',
+      'chatgpt-user',
+      'oai-searchbot',
+      'claudebot',
+      'claude-web',
+      'anthropic-ai',
+      'perplexitybot',
+      'duckassistbot',
+      'youbot',
+      'cohere-ai',
+      'google-extended',
+      'googleother',
+      'meta-externalagent',
+      'bytespider',
+      'amazonbot',
+      'ccbot',
+      'diffbot',
+      // SEO tools
+      'ahrefsbot',
+      'semrushbot',
+      'mj12bot',
+      'dotbot',
+      'rogerbot',
+      'screaming frog',
+      // Other important crawlers
+      'embedly',
+      'quora link preview',
+      'outbrain',
+      'vkshare',
+      'w3c_validator',
+      'redditbot',
+      'ia_archiver',
+      'archive.org_bot'
+    ])
+  );
 }
 
 // Redirect www to non-www
