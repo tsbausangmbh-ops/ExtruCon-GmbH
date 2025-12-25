@@ -2,8 +2,25 @@ import { createContext, useContext, useState, useEffect, ReactNode } from 'react
 
 export type Language = 'de' | 'en' | 'hr' | 'tr';
 
-export const translations = {
-  de: {
+// Deep merge function for translations - merges override into base, only copying keys that exist in base
+function deepMerge<T extends Record<string, any>>(base: T, override: Record<string, any>): T {
+  const result = { ...base } as T;
+  for (const key in base) {
+    if (Object.prototype.hasOwnProperty.call(override, key)) {
+      const overrideValue = override[key];
+      const baseValue = base[key];
+      if (overrideValue !== undefined && typeof overrideValue === 'object' && overrideValue !== null && !Array.isArray(overrideValue) && typeof baseValue === 'object' && baseValue !== null && !Array.isArray(baseValue)) {
+        (result as any)[key] = deepMerge(baseValue, overrideValue);
+      } else if (overrideValue !== undefined) {
+        (result as any)[key] = overrideValue;
+      }
+    }
+  }
+  return result;
+}
+
+// Base translation (German) - serves as canonical schema
+const baseTranslation = {
     nav: {
       services: 'Leistungen',
       ratgeber: 'Ratgeber',
@@ -1235,8 +1252,13 @@ export const translations = {
       weekdaysFull: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
       months: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember']
     },
-  },
-  en: {
+};
+
+// Type for the complete translation
+type Translation = typeof baseTranslation;
+
+// English translation override (any keys not in base are ignored during merge)
+const enOverride: Record<string, any> = {
     nav: {
       services: 'Services',
       ratgeber: 'Resources',
@@ -2468,8 +2490,10 @@ export const translations = {
       weekdaysFull: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
       months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     },
-  },
-  hr: {
+};
+
+// Croatian translation override (any keys not in base are ignored during merge)
+const hrOverride: Record<string, any> = {
     nav: {
       services: 'Usluge',
       ratgeber: 'Savjetnik',
@@ -3701,8 +3725,10 @@ export const translations = {
       weekdaysFull: ['Nedjelja', 'Ponedjeljak', 'Utorak', 'Srijeda', 'Četvrtak', 'Petak', 'Subota'],
       months: ['Siječanj', 'Veljača', 'Ožujak', 'Travanj', 'Svibanj', 'Lipanj', 'Srpanj', 'Kolovoz', 'Rujan', 'Listopad', 'Studeni', 'Prosinac']
     },
-  },
-  tr: {
+};
+
+// Turkish translation override (any keys not in base are ignored during merge)
+const trOverride: Record<string, any> = {
     nav: {
       services: 'Hizmetler',
       ratgeber: 'Rehber',
@@ -3779,35 +3805,6 @@ export const translations = {
       marketing: { title: 'Performans Pazarlama', desc: 'Ölçülebilir büyüme ve maksimum görünürlük için veri odaklı kampanyalar ve SEO stratejileri.' },
       seo: { title: 'SEO ve Coğrafi Optimizasyon', desc: 'Maksimum bölgesel görünürlük için yerel arama motoru optimizasyonu ve coğrafi hedefleme.' },
     },
-    contact: {
-      title: 'İnovasyon için',
-      titleHighlight: 'Hazır mısınız?',
-      subtitle: 'ExtruCon GmbH\'nin dijital varlığınızı nasıl dönüştürebileceğini konuşalım. Danışmanlık için bizimle iletişime geçin.',
-      email: 'E-posta',
-      phone: 'Telefon',
-      webpage: 'Web Sayfası',
-      formTitle: 'Mesaj Gönder',
-      name: 'Ad',
-      namePlaceholder: 'Adınız',
-      company: 'Şirket',
-      companyPlaceholder: 'Şirket (isteğe bağlı)',
-      emailLabel: 'E-posta',
-      emailPlaceholder: 'ornek@sirket.com',
-      phone2: 'Telefon',
-      phonePlaceholder: '+90 xxx xxx xx xx',
-      service: 'İlgilendiğiniz Hizmet',
-      servicePlaceholder: 'Hizmet seçin',
-      message: 'Mesaj',
-      messagePlaceholder: 'Projenizi açıklayın...',
-      submit: 'Gönder',
-      sending: 'Gönderiliyor...',
-      successTitle: 'Başarılı!',
-      successMessage: 'Mesajınız gönderildi. En kısa sürede size ulaşacağız.',
-      errorTitle: 'Hata',
-      errorMessage: 'Bir hata oluştu. Lütfen tekrar deneyin.',
-      required: 'Zorunlu alan',
-      invalidEmail: 'Geçerli bir e-posta adresi girin',
-    },
     about: {
       badge: 'ExtruCon GmbH Hakkında',
       title: 'İnovasyon',
@@ -3819,9 +3816,42 @@ export const translations = {
       german: 'Alman Kalitesi',
       support: '7/24 Destek',
     },
+    funnel: {
+      title: 'AI Çözümünüz',
+      titleHighlight: '3 Adımda',
+      step1: 'İlk Görüşme',
+      step1Desc: 'İhtiyaç analizi için ücretsiz danışmanlık',
+      step2: 'Konsept',
+      step2Desc: 'Bireysel strateji ve çözüm konsepti',
+      step3: 'Uygulama',
+      step3Desc: 'İmplementasyon ve sürekli optimizasyon',
+    },
+    problem: {
+      title: 'Sorun',
+      titleHighlight: 'AI olmadan',
+      problems: [
+        'Zaman alan manuel görevler',
+        'Kaçırılan müşteri talepleri',
+        'Tutarsız iletişim',
+        'Yüksek personel maliyetleri',
+      ],
+      solution: 'Çözüm',
+      solutionHighlight: 'ExtruCon ile',
+      solutions: [
+        'Otomasyon ile %80 zaman tasarrufu',
+        'Müşteriler için 7/24 erişilebilirlik',
+        'Tutarlı marka sesi',
+        'Ölçeklenebilir süreçler',
+      ],
+    },
     faq: {
       title: 'Sıkça Sorulan Sorular',
-      subtitle: 'Hizmetlerimiz hakkında merak ettikleriniz',
+      questions: [
+        { q: 'Ne kadar hızlı yanıt alırım?', a: 'İş günlerinde 24 saat içinde.' },
+        { q: 'Ücretsiz ilk görüşme?', a: 'Evet! Her zaman ücretsiz ve bağlayıcı değil.' },
+        { q: 'Küçük işletmeler için de?', a: 'Kesinlikle. Her bütçeye uygun çözümler.' },
+      ],
+      viewAll: 'Tüm SSS\'leri görüntüle',
     },
     faqPage: {
       badge: 'Yardım & Destek',
@@ -3999,10 +4029,6 @@ export const translations = {
         { id: 48, title: 'Cookie Banner ve GDPR: Yasal Güvenli Uygulama', excerpt: 'Onay yönetimi hakkında bilmeniz gereken her şey.', readTime: '9 dk.', date: '22 Tem 2025' }
       ]
     },
-    ratgeber: {
-      title: 'Rehber',
-      subtitle: 'AI ve otomasyon hakkında bilgiler',
-    },
     problemSection: {
       title: 'Bu zorlukları',
       titleHighlight: 'tanıyor musunuz?',
@@ -4165,22 +4191,33 @@ export const translations = {
       }
     },
     footer: {
+      slogan: 'AI, otomasyon ve dijital büyüme ajansınız.',
       services: 'Hizmetler',
       company: 'Şirket',
       legal: 'Yasal',
+      about: 'Hakkımızda',
+      contact: 'İletişim',
+      faq: 'SSS',
+      ratgeber: 'Rehber',
+      impressum: 'Künye',
       privacy: 'Gizlilik Politikası',
       terms: 'Kullanım Koşulları',
-      imprint: 'Yasal Bildirim',
       cookies: 'Çerez Ayarları',
-      copyright: '© 2025 ExtruCon GmbH. Tüm hakları saklıdır.',
-      location: 'Fürstenfeldbruck, Almanya',
+      allRights: 'Tüm hakları saklıdır.',
+      openingHours: 'Pzt–Cuma 08:00–17:00',
+      legalInfo: 'Yönetici: Künyeye bakınız',
+      addressLabel: 'Adres',
+      emailLabel: 'E-posta',
+      phoneLabel: 'Telefon',
+      contactLink: 'İletişime Geçin',
     },
     chatbot: {
       title: 'AI Asistanı',
       subtitle: 'Size nasıl yardımcı olabilirim?',
       placeholder: 'Mesajınızı yazın...',
       send: 'Gönder',
-      thinking: 'Düşünüyor...',
+      welcome: 'Merhaba! Ben ExtruCon AI Asistanıyım. Size nasıl yardımcı olabilirim?',
+      bubble: 'Sorularınız mı var? AI Bot yardımcı olur!',
     },
     chatbotPage: {
       badge: 'Canlı Demo: AI Asistanı',
@@ -4300,16 +4337,56 @@ export const translations = {
       ],
     },
     automationPage: {
-      heroTitle: 'n8n ile Surecleri Otomatiklestirin – Is Akisi Otomasyon Ajansi Munih',
-      heroSubtitle: 'İş süreçlerinizi otomatikleştirin',
-      heroDescription: 'Tekrarlayan görevleri otomatikleştirerek ekibinizin stratejik işlere odaklanmasını sağlayın.',
-      features: 'Özellikler',
-      benefits: 'Avantajlar',
-      pricing: 'Fiyatlandırma',
-      ctaTitle: 'Hemen Başlayın',
-      ctaSubtitle: 'Otomasyonun işletmenizi nasıl dönüştürebileceğini keşfedin.',
-      ctaButton: 'Ücretsiz Danışmanlık',
-      ctaButtonAlt: 'Projeye Başla',
+      badge: 'İş Akışı Otomasyonu',
+      title: 'n8n ile Süreçleri Otomatikleştirin – İş Akışı Otomasyon Ajansı Münih',
+      subtitle: 'Araçlarınızı bağlıyor ve tekrarlayan görevleri otomatikleştiriyoruz – böylece önemli işlere odaklanabilirsiniz.',
+      ctaPrimary: 'Ücretsiz Danışmanlık',
+      ctaSecondary: 'Olanakları Keşfedin',
+      automationsTitle: 'Her Alan İçin Otomasyon Çözümleri',
+      automationsSubtitle: 'E-posta iş akışlarından tam süreç otomasyonuna – mükemmel çözümü buluyoruz.',
+      examples: 'Örnekler:',
+      toolsTitle: 'Otomasyon Araçları ve Platformları',
+      toolsSubtitle: 'Maksimum güvenilirlik için kanıtlanmış otomasyon platformları kullanıyoruz.',
+      processTitle: 'İş Akışı Otomasyonu: Sürecimiz',
+      processSubtitle: 'Analizden canlı yayına – otomasyonunuz böyle oluşur.',
+      faqTitle: 'SSS: İş Akışı Otomasyonu Hakkında Sık Sorulan Sorular',
+      ctaTitle: 'Otomasyon Talep Et – Ücretsiz Danışmanlık',
+      n8nBadge: 'n8n ile Çalışır',
+      n8nTitle: 'n8n Otomasyonu: Güçlü Platform',
+      n8nDescription: 'n8n en güçlü açık kaynak otomasyon platformudur. Diğer araçların sınırlamaları olmadan tam olarak ihtiyaçlarınıza göre iş akışları oluşturuyoruz.',
+      n8nFeatures: [
+        '500\'den fazla entegrasyon mevcut',
+        'Yürütme limiti yok',
+        'Maksimum veri kontrolü için self-hosting',
+        'Karmaşık mantık ve dallanmalar mümkün',
+        'Her sistem için API bağlantıları',
+        'Zapier ve Make\'den daha uygun maliyetli'
+      ],
+      visualWorkflows: 'Görsel İş Akışları',
+      visualWorkflowsDesc: 'Açık, anlaşılır, bakımı kolay',
+      workflowSteps: ['Tetikleyici', 'Koşul', 'Eylem 1', 'Eylem 2'],
+      ctaSubtitle: 'Hangi süreçleri sizin için otomatikleştirebileceğimizi analiz edelim. Ücretsiz ilk danışmanlık.',
+      benefits: [
+        { title: '%80\'e kadar zaman tasarrufu', description: 'Manuel görevler otomatik olarak tamamlanır' },
+        { title: 'Daha az hata, daha fazla kalite', description: 'Dikkatsizlik hatası olmadan tutarlı süreçler' },
+        { title: 'Ek maliyet olmadan ölçeklenebilir', description: 'Daha fazla personel olmadan daha fazla hacim' },
+        { title: '7/24 gerçek zamanlı süreçler', description: 'Süreçler saniyeler içinde 7/24 çalışır' }
+      ],
+      tools: [
+        { name: 'n8n', description: 'Karmaşık otomasyonlar için ana aracımız' },
+        { name: 'Zapier', description: 'Basit iş akışları için hızlı entegrasyonlar' },
+        { name: 'Make (Integromat)', description: 'Görsel iş akışı oluşturma' },
+        { name: 'HubSpot', description: 'Pazarlama ve satış otomasyonu' },
+        { name: 'Airtable', description: 'Veritabanı otomasyonları' },
+        { name: 'Google Workspace', description: 'Sheets, Docs, Gmail entegrasyonu' }
+      ],
+      processSteps: [
+        { title: '1. Süreç Analizi', description: 'Mevcut süreçlerinizi anlıyor ve otomasyon potansiyelini belirliyoruz.' },
+        { title: '2. İş Akışı Konsepti', description: 'Birlikte optimum iş akışını tanımlıyor ve uygun araçları seçiyoruz.' },
+        { title: '3. Teknik Uygulama', description: 'n8n veya uygun araçla otomasyonunuzu oluşturuyoruz.' },
+        { title: '4. Kalite Güvencesi', description: 'Kapsamlı testler her şeyin sorunsuz çalışmasını sağlar.' },
+        { title: '5. Lansman ve İzleme', description: 'İş akışınız canlıya çıkar – izleme ve sürekli optimizasyon ile.' }
+      ],
       seoTitle: 'İşletmeler için n8n ve Make ile İş Akışı Otomasyonu',
       seoContent: [
         'Fürstenfeldbruck merkezli ExtruCon GmbH, profesyonel iş akışı otomasyonu için ajansınızdır. n8n, Make ve Zapier ile araçlarınızı bağlıyor ve e-posta iş akışlarından tam süreç otomasyonuna kadar tekrarlayan görevleri otomatikleştiriyoruz.',
@@ -4317,18 +4394,22 @@ export const translations = {
         'n8n uzmanları olarak 500\'den fazla entegrasyon, yürütme limiti olmadan ve maksimum veri kontrolü için self-hosting sunuyoruz. AI ajanları ve akıllı chatbotlarla birleştiğinde güçlü otomasyon çözümleri ortaya çıkıyor.',
         'Avantajlar: Tekrarlayan görevlerde %80 zaman tasarrufu, otomatik süreçlerle %50 maliyet azaltma, 3-6 ay içinde yatırım getirisi. Ücretsiz otomasyon analizi için bizimle iletişime geçin.'
       ],
-    },
-    websitesPage: {
-      heroTitle: 'AI Web Siteleri',
-      heroSubtitle: 'Akıllı web deneyimleri',
-      heroDescription: 'Entegre AI özellikleriyle dönüşüm oranlarınızı artıran modern web siteleri.',
-      features: 'Özellikler',
-      benefits: 'Avantajlar',
-      pricing: 'Fiyatlandırma',
-      ctaTitle: 'Hemen Başlayın',
-      ctaSubtitle: 'AI destekli web sitenizin nasıl görünebileceğini keşfedin.',
-      ctaButton: 'Ücretsiz Danışmanlık',
-      ctaButtonAlt: 'Projeye Başla',
+      automations: [
+        { title: 'E-posta Pazarlamayı Otomatikleştir', description: 'Otomatik gönderim, sıralama ve e-posta yanıtlama. Hoş geldin dizileri, takipler ve otopilotta kişiselleştirilmiş kampanyalar.', examples: ['Hoş geldin e-postaları', 'Potansiyel müşteri besleme', 'Sepet terk edenler', 'Bülten segmentasyonu'] },
+        { title: 'Potansiyel Müşteri Yönetimi ve CRM Entegrasyonu', description: 'Potansiyel müşterileri otomatik olarak yakala, değerlendir ve satışa aktar. CRM\'inizle entegrasyon ve otomatik puanlama.', examples: ['Formlar → CRM', 'Potansiyel müşteri puanlama', 'Otomatik atama', 'Takip hatırlatıcıları'] },
+        { title: 'Sosyal Medya Otomasyonu', description: 'Paylaşımları planlayın, yorumları yönetin ve etkileşimleri otomatik olarak analiz edin. Birden fazla platform için içerik planları.', examples: ['Otomatik yayınlama', 'Yorum bildirimleri', 'Analytics raporları', 'Çapraz platform'] },
+        { title: 'Fatura ve Muhasebe Otomasyonu', description: 'Faturaları otomatik olarak oluşturun, gönderin ve kaydedin. Muhasebe araçları ve banka hesaplarıyla entegrasyon.', examples: ['Fatura oluşturma', 'Ödeme hatırlatıcıları', 'Muhasebe senkronizasyonu', 'Gider takibi'] },
+        { title: 'Randevu ve Takvim Otomasyonu', description: 'Otomatik randevu planlama, onaylar ve hatırlatmalar. Takvimler ve ekip araçlarıyla senkronizasyon.', examples: ['Online rezervasyon', 'Otomatik onay', 'Hatırlatmalar', 'Takvim senkronizasyonu'] },
+        { title: 'Veri ve Raporlama Otomasyonu', description: 'Verileri otomatik olarak toplayın, analiz edin ve görselleştirin. Birden fazla kaynaktan otomatik raporlar.', examples: ['Veri toplama', 'Dashboard güncellemeleri', 'E-posta raporları', 'KPI takibi'] }
+      ],
+      faqs: [
+        { q: 'Bir otomasyon ne kadara mal olur?', a: 'Basit otomasyonlar 500€\'dan başlar. Birden fazla sistemle daha karmaşık iş akışları 1.500€\'dan başlar. Ücretsiz ilk danışmada somut bir maliyet tahmini oluşturuyoruz.' },
+        { q: 'Hangi araçlar entegre edilebilir?', a: 'n8n ile 500\'den fazla aracı entegre edebiliyoruz: CRM sistemleri, e-posta sağlayıcıları, mağazalar, muhasebe, Google Workspace, Microsoft 365, Slack, Notion ve daha fazlası. Özel API\'ler de mümkün.' },
+        { q: 'Uygulama ne kadar sürer?', a: 'Basit iş akışları 1-2 günde hazır. Birden fazla entegrasyonlu daha karmaşık otomasyonlar 1-2 hafta gerektirir. İlk danışmada size gerçekçi bir zaman çizelgesi veriyoruz.' },
+        { q: 'Otomasyonları kendim ayarlayabilir miyim?', a: 'Evet! Sizi n8n veya kullanılan araçla eğitiyoruz. Basit ayarlamaları kendiniz yapabilirsiniz. Daha karmaşık değişiklikler için yanınızdayız.' },
+        { q: 'Bir şeyler ters giderse ne olur?', a: 'Otomasyonlarımızda yerleşik hata işleme ve bildirimler var. Bir şey çalışmazsa hemen bilgilendirilirsiniz. Ayrıca bakım paketleri sunuyoruz.' },
+        { q: 'Verilerim güvende mi?', a: 'Evet! Şifreli bağlantılar ve GDPR uyumlu çözümler kullanıyoruz. İsterseniz n8n\'i maksimum veri kontrolü için kendi sunucularınızda da barındırabiliriz.' }
+      ],
     },
     webKIPage: {
       badge: 'AI Web Siteleri',
@@ -4397,101 +4478,6 @@ export const translations = {
         'AI uzmanlığına sahip web tasarım ajansı olarak 1.500€\'dan landing page, 3.500€\'dan kurumsal web sitesi ve 5.000€\'dan e-ticaret çözümleri sunuyoruz. Teknolojiler: OpenAI GPT ve Claude AI entegrasyonu ile React, Next.js, WordPress, Webflow.',
         'Avantajlar: Chatbotlar aracılığıyla 7/24 müşteri hizmeti, otomatik içerik oluşturma, GDPR/KVKK uyumlu çözümler. Fürstenfeldbruck\'ta ücretsiz web tasarım danışmanlığı için bizimle iletişime geçin.'
       ],
-    },
-    socialMediaPage: {
-      heroTitle: 'Sosyal Medya',
-      heroSubtitle: 'AI destekli sosyal medya yönetimi',
-      heroDescription: 'Marka bilinirliğinizi artırın ve hedef kitlenizle etkileşimi güçlendirin.',
-      features: 'Özellikler',
-      benefits: 'Avantajlar',
-      pricing: 'Fiyatlandırma',
-      ctaTitle: 'Hemen Başlayın',
-      ctaSubtitle: 'Sosyal medya stratejinizi bir üst seviyeye taşıyın.',
-      ctaButton: 'Ücretsiz Danışmanlık',
-      ctaButtonAlt: 'Projeye Başla',
-      seoTitle: 'Daha Fazla Erişim ve Etkileşim için AI Sosyal Medya Pazarlama',
-      seoContent: [
-        'ExtruCon GmbH, AI destekli içerikle sosyal medyanızı bir üst seviyeye taşıyor. Etkileyici metinler için GPT-4 ve görsel açıdan çekici grafikler için Midjourney kullanıyoruz - Instagram, TikTok, LinkedIn ve Facebook için mükemmel şekilde uyarlanmış.',
-        'AI içerik stratejimiz zaman kazandırır ve sonuç verir: otomatik içerik planlaması, AI tarafından oluşturulan gönderi metinleri, trend analizi ve makine öğrenimi yoluyla optimum paylaşım zamanları.',
-        'Sosyal medya hizmetlerimiz: Reels ve Stories ile Instagram pazarlama, viral erişim için TikTok stratejileri, B2B lead üretimi için LinkedIn, Facebook topluluk yönetimi ve YouTube Shorts. Tüm içerik GPT-4 ile yazılır ve Midjourney ile görsel olarak tasarlanır.',
-        'Influencer işbirlikleri, sosyal reklamlar veya topluluk yönetimi olsun - tam hizmet sosyal medya pazarlama sunuyoruz. Mevcut kanallarınızın ücretsiz analizi ile başlayın ve AI destekli sosyal medyanın potansiyelini keşfedin.'
-      ]
-    },
-    contentPage: {
-      heroTitle: 'İçerik Oluşturma',
-      heroSubtitle: 'AI destekli içerik üretimi',
-      heroDescription: 'Blog yazıları, sosyal medya içerikleri ve pazarlama materyalleri için AI destekli çözümler.',
-      features: 'Özellikler',
-      benefits: 'Avantajlar',
-      pricing: 'Fiyatlandırma',
-      ctaTitle: 'Hemen Başlayın',
-      ctaSubtitle: 'İçerik stratejinizi AI ile güçlendirin.',
-      ctaButton: 'Ücretsiz Danışmanlık',
-      ctaButtonAlt: 'Projeye Başla',
-      seoTitle: 'GPT-4 & Midjourney ile Profesyonel AI İçerik Üretimi',
-      seoContent: [
-        'ExtruCon GmbH, son teknoloji AI ile içerik oluşturmayı devrimleştiriyor. AI destekli içerik üretimimiz metin için GPT-4 ve Claude AI, görsel içerik için Midjourney ve DALL-E kullanır - Fürstenfeldbruck, Münih ve tüm Bavyera\'daki işletmeler için ideal.',
-        'AI içerik ajansı olarak blog yazıları, web sitesi metinleri, sosyal medya gönderileri, ürün açıklamaları, bültenler ve reklam metinleri oluşturuyoruz. Her içerik editörlerimiz tarafından gözden geçirilir, SEO optimize edilir ve markanıza uyarlanır.',
-        'AI içerik araçlarımız şunları içerir: Uzun formatlı içerik ve karmaşık metinler için GPT-4, nüanslı iletişim için Claude AI, sosyal medya grafikleri ve blog görselleri için Midjourney, ürün görselleştirmeleri için DALL-E ve profesyonel seslendirmeler için ElevenLabs.',
-        'AI içerik üretimimizin avantajları: 1-3 iş günü içinde teslimat, tüm kanallarda tutarlı kalite, büyük içerik hacimleri için ölçeklenebilir, daha iyi sıralamalar için SEO optimize edilmiş ve geleneksel içerik ajanslarından %30-50 daha uygun fiyatlı.'
-      ]
-    },
-    marketingPage: {
-      heroTitle: 'Performans Pazarlama',
-      heroSubtitle: 'Veri odaklı pazarlama stratejileri',
-      heroDescription: 'AI optimizasyonlu kampanyalarla ROI\'nizi maksimize edin.',
-      features: 'Özellikler',
-      benefits: 'Avantajlar',
-      pricing: 'Fiyatlandırma',
-      ctaTitle: 'Hemen Başlayın',
-      ctaSubtitle: 'Pazarlama performansınızı artırın.',
-      ctaButton: 'Ücretsiz Danışmanlık',
-      ctaButtonAlt: 'Projeye Başla',
-      seoTitle: 'Maksimum ROI için AI Destekli Performans Pazarlama',
-      seoContent: [
-        'ExtruCon GmbH, ölçülebilir başarı ile veri odaklı kampanyalar için Fürstenfeldbruck\'taki AI pazarlama ajansınızdır. Akıllı reklam metinleri, AI destekli hedef kitle analizi ve otomatik teklif optimizasyonu için GPT-4 kullanıyoruz.',
-        'AI performans pazarlama stratejimiz Google Ads, Meta Ads (Facebook ve Instagram), LinkedIn Ads, TikTok Ads ve YouTube Ads\'i kapsar. Kampanyalarınızı makine öğrenimi ve tahmine dayalı analitikle sürekli optimize ediyoruz.',
-        'Pazarlamada AI\'yı nasıl kullanıyoruz: GPT-4 saniyeler içinde yüksek performanslı reklam metinleri üretir, AI algoritmaları en iyi hedef kitleleri belirler, otomatik A/B testleri kreatif resimleri optimize eder ve tahmine dayalı analitik kampanya başarısını öngörür.',
-        'Lead üretimi, e-ticaret kampanyaları veya marka bilinirliği olsun - iş hedefleriniz için özelleştirilmiş stratejiler geliştiriyoruz. Şeffaf raporlama, net tanımlanmış KPI\'lar ve düzenli optimizasyon standardımızdır.'
-      ]
-    },
-    brandPage: {
-      heroTitle: 'Marka Kimliği',
-      heroSubtitle: 'Güçlü bir marka oluşturun',
-      heroDescription: 'Profesyonel marka kimliği tasarımı ve strateji geliştirme hizmetleri.',
-      features: 'Özellikler',
-      benefits: 'Avantajlar',
-      pricing: 'Fiyatlandırma',
-      ctaTitle: 'Hemen Başlayın',
-      ctaSubtitle: 'Markanızı bir sonraki seviyeye taşıyın.',
-      ctaButton: 'Ücretsiz Danışmanlık',
-      ctaButtonAlt: 'Projeye Başla',
-      seoTitle: 'Midjourney & DALL-E ile AI Destekli Marka Geliştirme',
-      seoContent: [
-        'Fürstenfeldbruck merkezli ExtruCon GmbH, son teknoloji AI ile klasik marka uzmanlığını birleştirmektedir. AI destekli marka geliştirmemiz, rekor sürede yüzlerce logo varyantı ve kurumsal tasarım konsepti oluşturmak için Midjourney ve DALL-E kullanır.',
-        'Münih ve Bavyera\'da marka oluşturma için AI ajansınızız. Ekibimiz, isimlendirme ve metin için GPT-4\'ün yaratıcı gücünü, logo tasarımı, renk paletleri ve görsel kimlikler için Midjourney\'in görsel gücüyle birleştirir.',
-        'Startup markalamasından köklü şirketler için yeniden markalaşma stratejilerine kadar - Fürstenfeldbruck, Münih, Starnberg ve Almanya genelinde işletmeleri destekliyoruz. AI marka geliştirmemiz logo tasarımı, kurumsal tasarım, marka yönergeleri ve dijital marka yönetimini kapsar.',
-        'AI marka geliştirmenin avantajları: %40-50 daha kısa geliştirme süresi, yüzlerce konsept varyantıyla daha fazla yaratıcılık, tüm kanallarda tutarlı görsel kimlik ve geleneksel ajanslardan önemli ölçüde düşük fiyatlar.'
-      ]
-    },
-    webPage: {
-      heroTitle: 'Web Geliştirme',
-      heroSubtitle: 'Modern web çözümleri',
-      heroDescription: 'Hızlı, güvenli ve ölçeklenebilir web uygulamaları geliştiriyoruz.',
-      features: 'Özellikler',
-      benefits: 'Avantajlar',
-      pricing: 'Fiyatlandırma',
-      ctaTitle: 'Hemen Başlayın',
-      ctaSubtitle: 'Web projenizi hayata geçirin.',
-      ctaButton: 'Ücretsiz Danışmanlık',
-      ctaButtonAlt: 'Projeye Başla',
-      seoTitle: 'GPT-4 Chatbot Entegrasyonlu Modern AI Web Geliştirme',
-      seoContent: [
-        'ExtruCon GmbH, Fürstenfeldbruck, Münih ve Almanya genelindeki işletmeler için GPT-4 chatbot entegrasyonlu akıllı web siteleri geliştiriyor. Web sitelerimiz sadece güzel değil, aynı zamanda akıllı - daha iyi kullanıcı deneyimi ve daha fazla dönüşüm için AI destekli özelliklerle.',
-        'AI web geliştirme ajansı olarak en son teknolojileri kullanıyoruz: Hızlı, duyarlı web siteleri için React, Next.js, TypeScript ve Tailwind CSS. Müşteri sorularını 7/24 yanıtlayan akıllı chatbotlar için GPT-4. Web sitenizde doğrudan karmaşık etkileşimler için Claude AI.',
-        'AI web özelliklerimiz: Müşteri hizmetleri ve lead üretimi için akıllı chatbotlar, kişiselleştirilmiş ürün önerileri, otomatik SSS yanıtlama, AI destekli arama fonksiyonları ve kullanıcı davranışına dayalı dinamik içerik uyarlaması. Tümü GDPR uyumlu.',
-        'Kurumsal web sitesi, e-ticaret mağazası veya web uygulaması olsun - AI entegrasyonlu özelleştirilmiş çözümler sunuyoruz. En iyi Google sıralamaları için SEO optimize edilmiş, erişilebilir ve mobil optimize. Ücretsiz teklif isteyin.'
-      ]
     },
     aboutPage: {
       badge: 'ExtruCon Hakkında',
@@ -4721,10 +4707,17 @@ export const translations = {
       weekdaysFull: ['Pazar', 'Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi'],
       months: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık']
     },
-  },
 };
 
-type Translations = typeof translations.de;
+// Create merged translations (German is base, others are overrides)
+export const translations: Record<Language, Translation> = {
+  de: baseTranslation,
+  en: deepMerge(baseTranslation, enOverride),
+  hr: deepMerge(baseTranslation, hrOverride),
+  tr: deepMerge(baseTranslation, trOverride),
+};
+
+type Translations = Translation;
 
 interface LanguageContextType {
   language: Language;
