@@ -3,7 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import OpenAI from "openai";
 import { listEvents, createEvent, getAvailableSlots, isBusinessHour, getAlternativeSlots } from "./lib/googleCalendar";
-import { sendContactEmail } from "./lib/email";
+import { sendContactEmail, sendBookingConfirmation } from "./lib/email";
 import { SITEMAP_XML, ROBOTS_TXT } from "./seoFiles";
 
 const openai = new OpenAI({
@@ -229,7 +229,7 @@ Am Ende freundlich anbieten: „Wenn Sie möchten, fasse ich Ihnen alles kurz zu
   // Calendar API - Book an appointment
   app.post("/api/calendar/book", async (req, res) => {
     try {
-      const { date, time, name, email, phone, message } = req.body;
+      const { date, time, name, email, phone, message, language = 'de' } = req.body;
       
       if (!date || !time || !name || !email) {
         return res.status(400).json({ error: "Datum, Uhrzeit, Name und E-Mail sind erforderlich." });
@@ -315,6 +315,10 @@ ${message ? `Nachricht: ${message}` : ''}
         slotEndBerlin,
         email
       );
+
+      // Send confirmation email to the customer (async, don't block response)
+      sendBookingConfirmation({ name, email, date, time, phone, message, language })
+        .catch(err => console.error('Failed to send booking confirmation:', err));
 
       res.json({ 
         success: true, 
