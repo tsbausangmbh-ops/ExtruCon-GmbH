@@ -43,67 +43,71 @@ app.use(
 app.use(express.urlencoded({ extended: false }));
 
 // Prerender.io middleware for SEO (bot detection)
-// Extended crawler list for AI assistants and search engines
+// Extended crawler list - specific bot names only (no generic terms like 'bot')
 if (process.env.PRERENDER_TOKEN) {
   app.use(prerender
     .set('prerenderToken', process.env.PRERENDER_TOKEN)
     .set('crawlerUserAgents', [
-      // Traditional search engines
-      'googlebot',
-      'bingbot',
-      'yandex',
-      'baiduspider',
-      'duckduckbot',
-      'slurp',
+      // Traditional search engines (specific bot names)
+      'Googlebot',
+      'Googlebot-Image',
+      'Googlebot-News',
+      'Googlebot-Video',
+      'Bingbot',
+      'YandexBot',
+      'Baiduspider',
+      'DuckDuckBot',
+      'Slurp',
       'msnbot',
-      'seznambot',
-      'yeti',
-      'naverbot',
-      'applebot',
-      // Social media crawlers
+      'SeznamBot',
+      'Yeti',
+      'NaverBot',
+      'Applebot',
+      // Social media crawlers (exact names)
       'facebookexternalhit',
-      'facebookcatalog',
-      'twitterbot',
-      'linkedinbot',
-      'pinterest',
-      'whatsapp',
-      'telegrambot',
-      'slackbot',
-      'discordbot',
-      // AI assistants and LLM crawlers
-      'gptbot',
-      'chatgpt-user',
-      'oai-searchbot',
-      'claudebot',
-      'claude-web',
+      'Facebookbot',
+      'Twitterbot',
+      'LinkedInBot',
+      'Pinterestbot',
+      'TelegramBot',
+      'Slackbot',
+      'Discordbot',
+      'WhatsApp',
+      // AI assistants and LLM crawlers (exact names)
+      'GPTBot',
+      'ChatGPT-User',
+      'OAI-SearchBot',
+      'ClaudeBot',
+      'Claude-Web',
       'anthropic-ai',
-      'perplexitybot',
-      'duckassistbot',
-      'youbot',
+      'PerplexityBot',
+      'DuckAssistBot',
+      'YouBot',
       'cohere-ai',
-      'google-extended',
-      'googleother',
-      'meta-externalagent',
-      'bytespider',
-      'amazonbot',
-      'ccbot',
-      'diffbot',
-      // SEO tools
-      'ahrefsbot',
-      'semrushbot',
-      'mj12bot',
-      'dotbot',
+      'Google-Extended',
+      'GoogleOther',
+      'Meta-ExternalAgent',
+      'Bytespider',
+      'Amazonbot',
+      'CCBot',
+      'Diffbot',
+      // SEO tools (exact names)
+      'AhrefsBot',
+      'SemrushBot',
+      'MJ12bot',
+      'DotBot',
       'rogerbot',
-      'screaming frog',
-      // Other important crawlers
-      'embedly',
-      'quora link preview',
-      'outbrain',
-      'vkshare',
-      'w3c_validator',
-      'redditbot',
+      'Screaming Frog SEO Spider',
+      // Archive crawlers
       'ia_archiver',
-      'archive.org_bot'
+      'archive.org_bot',
+      // Other specific crawlers
+      'Embedly',
+      'Quora-Bot',
+      'outbrain',
+      'vkShare',
+      'W3C_Validator',
+      'redditbot'
     ])
   );
 }
