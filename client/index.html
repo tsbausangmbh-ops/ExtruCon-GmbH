@@ -35,7 +35,14 @@
     <meta property="og:url" content="https://extrucon.de" />
     <meta property="og:image" content="https://extrucon.de/logo.png" />
     <meta property="og:locale" content="de_DE" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="hr_HR" />
+    <meta property="og:locale:alternate" content="tr_TR" />
     <meta property="og:site_name" content="ExtruCon GmbH" />
+    
+    <!-- Bing specific -->
+    <meta name="msvalidate.01" content="" />
+    <meta name="bingbot" content="index, follow" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -377,6 +384,25 @@
           "name": "Startseite",
           "item": "https://extrucon.de/"
         }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: SiteNavigationElement -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Hauptnavigation",
+      "itemListElement": [
+        {"@type": "SiteNavigationElement", "position": 1, "name": "KI-Agenten", "url": "https://extrucon.de/ki-agenten"},
+        {"@type": "SiteNavigationElement", "position": 2, "name": "Automatisierungen", "url": "https://extrucon.de/automatisierungen"},
+        {"@type": "SiteNavigationElement", "position": 3, "name": "Webseiten mit KI", "url": "https://extrucon.de/webseiten-ki"},
+        {"@type": "SiteNavigationElement", "position": 4, "name": "Leistungen", "url": "https://extrucon.de/leistungen/marketing"},
+        {"@type": "SiteNavigationElement", "position": 5, "name": "Referenzen", "url": "https://extrucon.de/referenzen"},
+        {"@type": "SiteNavigationElement", "position": 6, "name": "FAQ", "url": "https://extrucon.de/faq"},
+        {"@type": "SiteNavigationElement", "position": 7, "name": "Kontakt", "url": "https://extrucon.de/kontakt"},
+        {"@type": "SiteNavigationElement", "position": 8, "name": "Termin buchen", "url": "https://extrucon.de/termin"}
       ]
     }
     </script>

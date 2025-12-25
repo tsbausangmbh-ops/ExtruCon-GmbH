@@ -385,6 +385,15 @@ export const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
 
 export const ROBOTS_TXT = `# ExtruCon GmbH - Robots.txt
 # SEO & AI optimiert für Deutschland (DE), Kroatien (HR), Türkei (TR)
+# Last updated: 2025-12-25
+
+# Sitemaps
+Sitemap: https://extrucon.de/sitemap.xml
+Sitemap: https://extrucon.de/ai.sitemap.xml
+Sitemap: https://extrucon.de/ki.sitemap.xml
+
+# Host
+Host: https://extrucon.de
 
 User-agent: Googlebot
 Allow: /
@@ -553,6 +562,8 @@ Allow: /dachau
 Allow: /germering
 Allow: /puchheim
 Allow: /olching
+Allow: /antalya
+Allow: /zagreb
 
 Disallow: /api/
 Disallow: /_*
@@ -564,12 +575,8 @@ Disallow: /*?sort=
 Disallow: /*.json$
 Disallow: /node_modules/
 
-Sitemap: https://extrucon.de/sitemap.xml
-
 Allow: /favicon.ico
 Allow: /logo.png
 
 User-agent: *
-Crawl-delay: 2
-
-Host: https://extrucon.de`;
+Crawl-delay: 2`;
