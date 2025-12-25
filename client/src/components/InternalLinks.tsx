@@ -272,7 +272,7 @@ export function RelatedServices({ currentPage }: RelatedServicesProps) {
     'ratgeber': {
       href: '/ratgeber',
       title: t.nav.ratgeber,
-      description: t.services.ratgeber?.desc || 'Wissen und Tipps',
+      description: 'Wissen und Tipps rund um KI-Technologien',
       icon: HelpCircle,
       colorClass: 'text-blue-400',
       bgClass: 'from-blue-500/20 to-blue-500/5'
