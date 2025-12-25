@@ -37,7 +37,7 @@ export async function serveStatic(app: Express) {
     '/leistungen/seo', '/muenchen', '/muenchen/bogenhausen', '/muenchen/schwabing',
     '/muenchen/nymphenburg', '/muenchen/gruenwald', '/muenchen/harlaching',
     '/starnberg', '/dachau', '/germering', '/puchheim', '/olching',
-    '/antalya'
+    '/antalya', '/zagreb'
   ];
 
   app.use("*", (req, res) => {

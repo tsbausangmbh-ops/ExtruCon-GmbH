@@ -29,6 +29,7 @@ import Cookies from "@/pages/Cookies";
 import Termin from "@/pages/Termin";
 import Muenchen from "@/pages/Muenchen";
 import Antalya from "@/pages/Antalya";
+import Zagreb from "@/pages/Zagreb";
 import Bogenhausen from "@/pages/districts/Bogenhausen";
 import Schwabing from "@/pages/districts/Schwabing";
 import Nymphenburg from "@/pages/districts/Nymphenburg";
@@ -86,6 +87,7 @@ export function AppRouter() {
       <Route path="/puchheim" component={Puchheim} />
       <Route path="/olching" component={Olching} />
       <Route path="/antalya" component={Antalya} />
+      <Route path="/zagreb" component={Zagreb} />
       <Route component={NotFound} />
     </Switch>
   );

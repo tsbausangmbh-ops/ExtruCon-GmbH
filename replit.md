@@ -120,6 +120,7 @@ Service pages with schemas:
   4. Default: German (`de`)
 - **Server-side geo-IP**: Middleware in `server/index.ts` checks `CF-IPCountry` and `X-Vercel-IP-Country` headers, sets cookie for new visitors
 - **Antalya landing page**: `/antalya` route with Turkish content, LocalBusiness schema targeting Turkey (Antalya, Istanbul, Ankara, Izmir)
+- **Zagreb landing page**: `/zagreb` route with Croatian content, LocalBusiness schema targeting Croatia (Zagreb, Split, Rijeka, Osijek)
 
 ## Pre-Rendering for SEO
 

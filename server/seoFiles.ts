@@ -268,14 +268,26 @@ export const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
     <priority>0.7</priority>
   </url>
 
+  <!-- Hrvatska / Croatia Location -->
+  <url>
+    <loc>https://extrucon.de/zagreb</loc>
+    <lastmod>2025-12-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/zagreb"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/zagreb"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Türkei / Turkey Location -->
   <url>
     <loc>https://extrucon.de/antalya</loc>
     <lastmod>2025-12-25</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/antalya"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/antalya?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/?lang=de"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/antalya"/>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
