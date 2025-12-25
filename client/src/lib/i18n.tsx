@@ -4768,60 +4768,65 @@ async function detectCountryLanguage(): Promise<Language> {
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>(() => {
-    if (typeof window !== 'undefined') {
-      // Priority: 1. URL query param, 2. localStorage (explicit user choice), 3. geo cookie, 4. default
-      const urlParams = new URLSearchParams(window.location.search);
-      const langParam = urlParams.get('lang') as Language;
-      if (langParam && ['de', 'en', 'hr', 'tr'].includes(langParam)) {
-        return langParam;
-      }
-      
-      const saved = localStorage.getItem('language') as Language;
-      if (saved && ['de', 'en', 'hr', 'tr'].includes(saved)) return saved;
-      
-      // Check geo cookie from server
+  // Determine initial language with correct priority
+  const getInitialLanguage = (): Language => {
+    if (typeof window === 'undefined') return 'de';
+    
+    // Priority 1: URL query param (highest - allows sharing links in specific language)
+    const urlParams = new URLSearchParams(window.location.search);
+    const langParam = urlParams.get('lang') as Language;
+    if (langParam && ['de', 'en', 'hr', 'tr'].includes(langParam)) {
+      return langParam;
+    }
+    
+    // Priority 2: localStorage (explicit user choice via language switcher)
+    const savedLang = localStorage.getItem('language') as Language;
+    if (savedLang && ['de', 'en', 'hr', 'tr'].includes(savedLang)) {
+      return savedLang;
+    }
+    
+    // Priority 3: geo cookie (server-detected country) - only for first-time visitors
+    const hasVisited = localStorage.getItem('geoDetected');
+    if (!hasVisited) {
       const geoCookie = getCookie('extrucon_geo_lang');
       if (geoCookie && ['de', 'en', 'hr', 'tr'].includes(geoCookie)) {
         return geoCookie as Language;
       }
     }
+    
+    // Priority 4: Default to German
     return 'de';
-  });
+  };
 
+  const [language, setLanguage] = useState<Language>(getInitialLanguage);
   const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
     
-    // Check URL param first (highest priority)
-    const urlParams = new URLSearchParams(window.location.search);
-    const langParam = urlParams.get('lang') as Language;
-    if (langParam && ['de', 'en', 'hr', 'tr'].includes(langParam)) {
-      setLanguage(langParam);
-      localStorage.setItem('language', langParam);
-      setIsInitialized(true);
-      return;
+    const currentLang = getInitialLanguage();
+    
+    // Persist language choice and mark as visited
+    if (!localStorage.getItem('language')) {
+      localStorage.setItem('language', currentLang);
+    }
+    if (!localStorage.getItem('geoDetected')) {
+      localStorage.setItem('geoDetected', 'true');
     }
     
-    const saved = localStorage.getItem('language');
-    const hasVisited = localStorage.getItem('geoDetected');
-    
-    if (!saved && !hasVisited) {
-      detectCountryLanguage().then((detectedLang) => {
-        setLanguage(detectedLang);
-        localStorage.setItem('language', detectedLang);
-        localStorage.setItem('geoDetected', 'true');
-        setIsInitialized(true);
-      });
-    } else {
-      setIsInitialized(true);
+    // Update state if different (e.g., from URL param)
+    if (currentLang !== language) {
+      setLanguage(currentLang);
     }
+    
+    setIsInitialized(true);
   }, []);
 
   const handleSetLanguage = (lang: Language) => {
     setLanguage(lang);
     localStorage.setItem('language', lang);
+    // Clear geo detected so user's explicit choice is remembered
+    localStorage.setItem('geoDetected', 'true');
   };
 
   const t = translations[language];
