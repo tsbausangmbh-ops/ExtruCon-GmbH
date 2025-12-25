@@ -3,13 +3,26 @@ import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
 import prerender from "prerender-node";
+import compression from "compression";
 
 const app = express();
 const httpServer = createServer(app);
 
 // Server timeout settings for better connection handling
-httpServer.keepAliveTimeout = 120000;
-httpServer.headersTimeout = 120000;
+// Optimized for Replit's proxy (avoids 504 errors)
+httpServer.keepAliveTimeout = 65000; // Slightly higher than 60s default
+httpServer.headersTimeout = 66000; // Must be higher than keepAliveTimeout
+httpServer.timeout = 120000; // Overall request timeout
+
+// Enable gzip compression for faster responses
+app.use(compression({
+  level: 6,
+  threshold: 1024,
+  filter: (req, res) => {
+    if (req.headers['x-no-compression']) return false;
+    return compression.filter(req, res);
+  }
+}));
 
 declare module "http" {
   interface IncomingMessage {
