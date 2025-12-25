@@ -185,7 +185,7 @@
     }
     </script>
 
-    <!-- Structured Data: Website -->
+    <!-- Structured Data: Website with Sitelinks SearchBox -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -193,9 +193,18 @@
       "@id": "https://extrucon.de/#website",
       "url": "https://extrucon.de",
       "name": "ExtruCon GmbH",
+      "alternateName": ["ExtruCon", "ExtruCon KI-Agentur"],
       "description": "KI-Agentur für Automatisierung und digitales Marketing",
       "publisher": {"@type": "Organization", "@id": "https://extrucon.de/#organization"},
-      "inLanguage": "de-DE"
+      "inLanguage": ["de-DE", "en", "hr", "tr"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://extrucon.de/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     }
     </script>
 

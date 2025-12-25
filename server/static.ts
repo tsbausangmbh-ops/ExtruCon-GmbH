@@ -36,7 +36,8 @@ export async function serveStatic(app: Express) {
     '/leistungen/markenaufbau', '/leistungen/web', '/leistungen/ki-automatisierung',
     '/leistungen/seo', '/muenchen', '/muenchen/bogenhausen', '/muenchen/schwabing',
     '/muenchen/nymphenburg', '/muenchen/gruenwald', '/muenchen/harlaching',
-    '/starnberg', '/dachau', '/germering', '/puchheim', '/olching'
+    '/starnberg', '/dachau', '/germering', '/puchheim', '/olching',
+    '/antalya'
   ];
 
   app.use("*", (req, res) => {
