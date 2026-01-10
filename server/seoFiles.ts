@@ -95,25 +95,25 @@ export const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
   </url>
 
   <url>
-    <loc>https://extrucon.de/leistungen/markenentwicklung</loc>
-    <lastmod>2025-12-22</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/leistungen/markenentwicklung"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/leistungen/markenentwicklung?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/leistungen/markenentwicklung?lang=hr"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/leistungen/markenentwicklung?lang=tr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/leistungen/markenentwicklung"/>
+    <loc>https://extrucon.de/leistungen/markenaufbau</loc>
+    <lastmod>2025-12-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/leistungen/markenaufbau"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/leistungen/markenaufbau?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/leistungen/markenaufbau?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/leistungen/markenaufbau?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/leistungen/markenaufbau"/>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://extrucon.de/leistungen/webentwicklung</loc>
-    <lastmod>2025-12-22</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/leistungen/webentwicklung"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/leistungen/webentwicklung?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/leistungen/webentwicklung?lang=hr"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/leistungen/webentwicklung?lang=tr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/leistungen/webentwicklung"/>
+    <loc>https://extrucon.de/leistungen/web</loc>
+    <lastmod>2025-12-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/leistungen/web"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/leistungen/web?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/leistungen/web?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/leistungen/web?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/leistungen/web"/>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -131,13 +131,13 @@ export const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
   </url>
 
   <url>
-    <loc>https://extrucon.de/leistungen/ki</loc>
-    <lastmod>2025-12-22</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/leistungen/ki"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/leistungen/ki?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/leistungen/ki?lang=hr"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/leistungen/ki?lang=tr"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/leistungen/ki"/>
+    <loc>https://extrucon.de/leistungen/ki-automatisierung</loc>
+    <lastmod>2025-12-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://extrucon.de/leistungen/ki-automatisierung"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://extrucon.de/leistungen/ki-automatisierung?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://extrucon.de/leistungen/ki-automatisierung?lang=hr"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://extrucon.de/leistungen/ki-automatisierung?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://extrucon.de/leistungen/ki-automatisierung"/>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
