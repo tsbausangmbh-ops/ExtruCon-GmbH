@@ -227,6 +227,24 @@ const redirects: Record<string, string> = {
   '/tos': '/agb',
   '/munich': '/muenchen',
   '/münchen': '/muenchen',
+  // Old sitemap URLs -> correct routes
+  '/leistungen/markenentwicklung': '/leistungen/markenaufbau',
+  '/leistungen/webentwicklung': '/leistungen/web',
+  '/leistungen/ki': '/leistungen/ki-automatisierung',
+  '/leistungen/brand': '/leistungen/markenaufbau',
+  '/leistungen/branding': '/leistungen/markenaufbau',
+  '/leistungen/website': '/leistungen/web',
+  '/leistungen/websites': '/leistungen/web',
+  '/leistungen/ai': '/leistungen/ki-automatisierung',
+  '/leistungen/automation': '/leistungen/ki-automatisierung',
+  // English service variations
+  '/services/marketing': '/leistungen/marketing',
+  '/services/seo': '/leistungen/seo',
+  '/services/social-media': '/leistungen/social-media',
+  '/services/content': '/leistungen/content',
+  '/services/web': '/leistungen/web',
+  '/services/brand': '/leistungen/markenaufbau',
+  '/services/ai': '/leistungen/ki-automatisierung',
 };
 
 app.use((req, res, next) => {
