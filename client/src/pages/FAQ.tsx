@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import { HelpCircle, ChevronDown, Bot, Share2, Globe, TrendingUp, CreditCard, Users, Search } from "lucide-react";
+import heroImg from "@/assets/images/hero-faq-abstract.png";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/lib/i18n";
@@ -69,8 +70,12 @@ export default function FAQ() {
           { label: t.faqPage.badge }
         ]} />
         {/* Hero Section */}
-        <section className="py-12 bg-gradient-to-b from-primary/5 to-background">
-          <div className="container mx-auto px-4">
+        <section className="relative py-12 overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <img src={heroImg} alt="FAQ Visualisierung" className="w-full h-full object-cover opacity-30" loading="lazy" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

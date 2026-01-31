@@ -4,6 +4,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { useState, useRef, useEffect } from "react";
 import { Send, Bot, User, Loader2, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import heroImg from "@/assets/images/hero-chatbot-abstract.png";
 import { useLanguage } from "@/lib/i18n";
 import { RelatedServices, ExploreMoreSection } from "@/components/InternalLinks";
 
@@ -73,8 +74,12 @@ export default function Chatbot() {
       <Navbar />
       
       <main className="flex-1 pt-24 flex flex-col">
-        <section className="py-8 bg-gradient-to-b from-primary/5 to-background">
-          <div className="container mx-auto px-4 text-center">
+        <section className="relative py-8 overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <img src={heroImg} alt="Chatbot Visualisierung" className="w-full h-full object-cover opacity-30" loading="lazy" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+          </div>
+          <div className="container mx-auto px-4 text-center relative z-10">
             <div className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-4">
               <Sparkles className="w-4 h-4" />
               {t.chatbotPage.badge}

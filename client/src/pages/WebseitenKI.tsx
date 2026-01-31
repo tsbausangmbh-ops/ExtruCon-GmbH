@@ -4,6 +4,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks, RelatedServices } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
+import heroImg from "@/assets/images/hero-webseiten-ki-abstract.png";
 import { Globe, Sparkles, ArrowRight, CheckCircle, Zap, Shield, TrendingUp, MessageSquare, Bot, Search, FileText, Image, Code, Palette, Smartphone, BarChart3, RefreshCw, ChevronDown, HelpCircle, Clock, Users } from "lucide-react";
 import { useState } from "react";
 import { useLanguage, Language } from "@/lib/i18n";
@@ -205,8 +206,12 @@ export default function WebseitenKI() {
           { label: t.nav.websitesKI }
         ]} />
         {/* Hero */}
-        <section className="py-10 bg-gradient-to-b from-secondary/10 to-background">
-          <div className="container mx-auto px-4">
+        <section className="relative py-10 overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <img src={heroImg} alt="Webseiten mit KI Visualisierung" className="w-full h-full object-cover opacity-30" loading="lazy" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

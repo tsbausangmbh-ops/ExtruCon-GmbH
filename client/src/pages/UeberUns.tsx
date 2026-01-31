@@ -4,6 +4,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedServices, ExploreMoreSection } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
+import heroImg from "@/assets/images/hero-about-abstract.png";
 import { Users, Target, Lightbulb, Rocket, Heart, Award, MapPin, Mail, Phone, Clock, CheckCircle, ArrowRight, Zap, Shield, TrendingUp, Sparkles } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 
@@ -26,8 +27,12 @@ export default function UeberUns() {
           { label: about.badge }
         ]} />
         {/* Hero */}
-        <section className="py-10 bg-gradient-to-b from-primary/5 to-background">
-          <div className="container mx-auto px-4">
+        <section className="relative py-10 overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <img src={heroImg} alt="Über uns Visualisierung" className="w-full h-full object-cover opacity-30" loading="lazy" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
