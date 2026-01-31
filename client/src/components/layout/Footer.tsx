@@ -1,5 +1,5 @@
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
-import logoImg from "@assets/Logo_1765563135323.png";
+import logoImg from "@assets/optimized/logo-small.webp";
 import { useLanguage } from "@/lib/i18n";
 
 export function Footer() {
@@ -17,7 +17,7 @@ export function Footer() {
         <div className="grid md:grid-cols-5 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
             <a href="https://extrucon.de" className="flex items-center gap-3 mb-4 hover:opacity-80 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded" itemProp="url" aria-label="ExtruCon GmbH Startseite">
-              <img src={logoImg} alt="ExtruCon GmbH Logo" className="h-10 w-10 object-contain" loading="lazy" />
+              <img src={logoImg} alt="ExtruCon GmbH Logo" className="h-10 w-10 object-contain" width="40" height="40" loading="lazy" />
               <span className="text-xl font-bold font-display tracking-wider text-white" itemProp="name">
                 ExtruCon GmbH
               </span>

@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Bot, Share2, Globe, TrendingUp, Palette, FileText, Search, Award, HelpCircle } from "lucide-react";
 import { useState } from "react";
-import logoImage from "@assets/Logo_mittel_Header_1765567902974.png";
+import logoImage from "@assets/optimized/logo-header.webp";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/lib/i18n";
 
@@ -29,7 +29,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 h-24 flex items-center justify-between py-1">
         <Link href="/" className="flex items-center" aria-label="ExtruCon GmbH - Startseite">
-          <img src={logoImage} alt="ExtruCon GmbH Logo" className="h-[5.5rem]" />
+          <img src={logoImage} alt="ExtruCon GmbH Logo" className="h-[5.5rem]" width="268" height="88" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8" role="menubar">
