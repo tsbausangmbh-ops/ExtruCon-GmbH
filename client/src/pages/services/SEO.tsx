@@ -2,7 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Search, Check, ArrowRight, MapPin, Globe, BarChart3 } from "lucide-react";
 import { motion } from "framer-motion";
-import seoImg from "@/assets/images/hero-seo-people.jpg";
+import seoImg from "@/assets/images/hero-seo-abstract.png";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
