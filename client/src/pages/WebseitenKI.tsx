@@ -3,7 +3,6 @@ import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks, RelatedServices } from "@/components/InternalLinks";
-import { LinkedParagraph } from "@/components/KeywordLinker";
 import { motion } from "framer-motion";
 import { Globe, Sparkles, ArrowRight, CheckCircle, Zap, Shield, TrendingUp, MessageSquare, Bot, Search, FileText, Image, Code, Palette, Smartphone, BarChart3, RefreshCw, ChevronDown, HelpCircle, Clock, Users } from "lucide-react";
 import { useState } from "react";
@@ -113,21 +112,28 @@ const webseitenSchema = [
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": "https://extrucon.de/webseiten-ki#service",
-    "name": "Webseiten mit GPT-4 Chatbot & KI-Features",
-    "alternateName": ["AI Website Development", "GPT-4 Website Integration", "KI-Website mit Chatbot"],
-    "description": "Moderne Websites mit GPT-4 Chatbots, Claude AI Integration und automatischer Content-Erstellung. React, Next.js mit KI-Features für intelligente Kundeninteraktion.",
+    "name": "Webseiten mit KI-Features",
+    "description": "Moderne Websites mit integrierten KI-Features: Chatbots, automatische Content-Erstellung, intelligente SEO. Professionelle Webentwicklung mit React und TypeScript.",
     "provider": {
       "@type": "LocalBusiness",
       "name": "ExtruCon GmbH",
-      "@id": "https://extrucon.de/#organization"
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hasenheide 8",
+        "addressLocality": "Fürstenfeldbruck",
+        "postalCode": "82256",
+        "addressRegion": "Bayern",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.1789,
+        "longitude": 11.2546
+      },
+      "telephone": "+49-89-444438879"
     },
-    "areaServed": [
-      { "@type": "City", "name": "Fürstenfeldbruck" },
-      { "@type": "City", "name": "München" },
-      { "@type": "State", "name": "Bayern" },
-      { "@type": "Country", "name": "Deutschland" }
-    ],
-    "serviceType": ["KI-Website", "GPT-4 Chatbot Integration", "AI Web Development"],
+    "areaServed": ["Bayern", "Deutschland", "Österreich", "Schweiz"],
+    "serviceType": "Webentwicklung mit KI",
     "offers": {
       "@type": "AggregateOffer",
       "priceCurrency": "EUR",
@@ -151,26 +157,26 @@ const webseitenSchema = [
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Welche KI-Modelle integrieren Sie in Websites?",
+        "name": "Was kostet eine Website mit KI-Features?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Wir integrieren GPT-4 und Claude AI für Chatbots, Midjourney und DALL-E für Bildgenerierung, sowie OpenAI Embeddings für intelligente Suchfunktionen auf Ihrer Website."
+          "text": "Unsere Websites starten ab 2.500€ für eine Landing Page und reichen bis zu 15.000€+ für komplexe Web-Applikationen mit umfassenden KI-Integrationen."
         }
       },
       {
         "@type": "Question",
-        "name": "Was kostet eine Website mit GPT-4 Chatbot?",
+        "name": "Welche KI-Features können integriert werden?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Eine Website mit GPT-4 Chatbot startet ab 4.000€. Komplexe Web-Applikationen mit umfassenden KI-Integrationen kosten 10.000€ - 15.000€+."
+          "text": "Wir integrieren KI-Chatbots für Kundenservice, automatische Content-Generierung, intelligente SEO-Optimierung, personalisierte Empfehlungen und Bild-Analyse."
         }
       },
       {
         "@type": "Question",
-        "name": "Ist ein KI-Chatbot DSGVO-konform?",
+        "name": "Wie lange dauert die Entwicklung?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ja, unsere KI-Chatbots sind DSGVO-konform. Wir nutzen europäische Server, anonymisieren Daten und informieren Nutzer transparent über die KI-Verarbeitung."
+          "text": "Eine Landing Page ist in 2-3 Wochen fertig. Komplexere Projekte dauern 4-8 Wochen, abhängig von den gewünschten Features und Integrationen."
         }
       }
     ]
@@ -184,9 +190,9 @@ export default function WebseitenKI() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead 
-        title="Webseiten mit GPT-4 Chatbot | KI-Website Entwicklung | ExtruCon"
-        description="Moderne Websites mit GPT-4 Chatbot, Claude AI Integration & automatischer Content-Erstellung. React, Next.js mit KI-Features. Webentwicklung Fürstenfeldbruck."
-        keywords="Website mit GPT-4 Chatbot, KI Website, Claude AI Website, Webseiten mit KI, AI Chatbot Integration, KI Content Website, React KI Website, Next.js AI, Webentwicklung München KI"
+        title="Webseiten mit KI-Features | ExtruCon Fürstenfeldbruck – Chatbots & SEO"
+        description="Moderne Websites mit integrierten KI-Features: Chatbots, automatische Content-Erstellung, intelligente SEO. Webentwicklung aus Fürstenfeldbruck – deutschlandweit."
+        keywords="Webseiten mit KI, Website Chatbot, KI Content, SEO Automatisierung, Webentwicklung München, React Website, KI Website Agentur"
         canonical="https://extrucon.de/webseiten-ki"
         geoRegion="DE-BY"
         geoPlacename="Fürstenfeldbruck"
@@ -585,24 +591,6 @@ export default function WebseitenKI() {
             </a>
           </div>
         </section>
-
-        {/* SEO Content Section */}
-        {t.webKIPage.seoContent && (
-          <section className="py-16 bg-white/[0.02]">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-2xl font-bold font-display text-white mb-8">
-                  {t.webKIPage.seoTitle}
-                </h2>
-                <div className="space-y-4 text-gray-400 leading-relaxed">
-                  {t.webKIPage.seoContent.map((paragraph, i) => (
-                    <LinkedParagraph key={i} currentPage="/webseiten-ki" maxLinks={2}>{paragraph}</LinkedParagraph>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
 
         <RelatedServices currentPage="webseiten-ki" />
         <ExploreMoreSection />

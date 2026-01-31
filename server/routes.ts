@@ -3,25 +3,18 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import OpenAI from "openai";
 import { listEvents, createEvent, getAvailableSlots, isBusinessHour, getAlternativeSlots } from "./lib/googleCalendar";
-import { sendContactEmail, sendBookingConfirmation } from "./lib/email";
+import { sendContactEmail } from "./lib/email";
 import { SITEMAP_XML, ROBOTS_TXT } from "./seoFiles";
 
 const openai = new OpenAI({
   baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
-  apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
-  timeout: 30000, // 30 second timeout
-  maxRetries: 2
+  apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY
 });
 
 export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  // Health check endpoint
-  app.get("/health", (_req, res) => {
-    res.status(200).send("ok");
-  });
-
   // Serve sitemap.xml explicitly before catch-all routes
   app.get("/sitemap.xml", (_req, res) => {
     res.set("Content-Type", "application/xml");
@@ -229,7 +222,7 @@ Am Ende freundlich anbieten: „Wenn Sie möchten, fasse ich Ihnen alles kurz zu
   // Calendar API - Book an appointment
   app.post("/api/calendar/book", async (req, res) => {
     try {
-      const { date, time, name, email, phone, message, language = 'de' } = req.body;
+      const { date, time, name, email, phone, message } = req.body;
       
       if (!date || !time || !name || !email) {
         return res.status(400).json({ error: "Datum, Uhrzeit, Name und E-Mail sind erforderlich." });
@@ -315,10 +308,6 @@ ${message ? `Nachricht: ${message}` : ''}
         slotEndBerlin,
         email
       );
-
-      // Send confirmation email to the customer (async, don't block response)
-      sendBookingConfirmation({ name, email, date, time, phone, message, language })
-        .catch(err => console.error('Failed to send booking confirmation:', err));
 
       res.json({ 
         success: true, 

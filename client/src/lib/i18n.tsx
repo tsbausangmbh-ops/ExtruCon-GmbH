@@ -2,25 +2,8 @@ import { createContext, useContext, useState, useEffect, ReactNode } from 'react
 
 export type Language = 'de' | 'en' | 'hr' | 'tr';
 
-// Deep merge function for translations - merges override into base, only copying keys that exist in base
-function deepMerge<T extends Record<string, any>>(base: T, override: Record<string, any>): T {
-  const result = { ...base } as T;
-  for (const key in base) {
-    if (Object.prototype.hasOwnProperty.call(override, key)) {
-      const overrideValue = override[key];
-      const baseValue = base[key];
-      if (overrideValue !== undefined && typeof overrideValue === 'object' && overrideValue !== null && !Array.isArray(overrideValue) && typeof baseValue === 'object' && baseValue !== null && !Array.isArray(baseValue)) {
-        (result as any)[key] = deepMerge(baseValue, overrideValue);
-      } else if (overrideValue !== undefined) {
-        (result as any)[key] = overrideValue;
-      }
-    }
-  }
-  return result;
-}
-
-// Base translation (German) - serves as canonical schema
-const baseTranslation = {
+export const translations = {
+  de: {
     nav: {
       services: 'Leistungen',
       ratgeber: 'Ratgeber',
@@ -356,13 +339,6 @@ const baseTranslation = {
         { q: 'Welche laufenden Kosten entstehen?', a: 'Neben der einmaligen Entwicklung fallen monatliche Kosten für Hosting, API-Nutzung und optional Wartung an. Ein typischer Agent kostet 50-200€ monatlich je nach Nutzungsvolumen und Komplexität.' },
         { q: 'Kann ich den Agenten später erweitern?', a: 'Absolut! KI-Agenten sind modular aufgebaut. Sie können jederzeit neue Funktionen, Integrationen oder Sprachfähigkeiten hinzufügen. Wir begleiten Sie bei der Weiterentwicklung.' }
       ],
-      seoTitle: 'KI-Agenten und Chatbots für Unternehmen entwickeln lassen',
-      seoContent: [
-        'ExtruCon GmbH aus Fürstenfeldbruck entwickelt intelligente KI-Agenten und Chatbots für Unternehmen. Mit GPT-4, Claude AI und LangChain automatisieren wir Kundenservice, Lead-Generierung und Geschäftsprozesse – DSGVO-konform und maßgeschneidert.',
-        'Unsere KI-Chatbots beantworten Kundenanfragen 24/7 in mehreren Sprachen, qualifizieren Leads automatisch und integrieren sich nahtlos in CRM-Systeme wie HubSpot oder Salesforce. Ideal für Unternehmen in München, Bayern und deutschlandweit.',
-        'Als Agentur für künstliche Intelligenz kombinieren wir Chatbot-Entwicklung mit n8n-Workflow-Automatisierung. Von der Terminbuchung über E-Mail-Automatisierung bis zur Dokumentenverarbeitung – wir entwickeln KI-Lösungen, die Zeit sparen.',
-        'Vorteile: 80% weniger manuelle Arbeit, 24/7 Verfügbarkeit, skalierbar ohne Mehrkosten. Kostenlose Erstberatung für Ihr KI-Projekt – kontaktieren Sie uns in Fürstenfeldbruck bei München.'
-      ],
     },
     automationPage: {
       badge: 'Workflow-Automatisierung',
@@ -394,13 +370,6 @@ const baseTranslation = {
       visualWorkflowsDesc: 'Klar, verständlich, wartbar',
       workflowSteps: ['Trigger', 'Bedingung', 'Aktion 1', 'Aktion 2'],
       ctaSubtitle: 'Lassen Sie uns analysieren, welche Prozesse wir für Sie automatisieren können. Kostenlose Erstberatung.',
-      seoTitle: 'Workflow-Automatisierung mit n8n und Make für Unternehmen',
-      seoContent: [
-        'ExtruCon GmbH aus Fürstenfeldbruck ist Ihre Agentur für professionelle Workflow-Automatisierung. Mit n8n, Make und Zapier verbinden wir Ihre Tools und automatisieren wiederkehrende Aufgaben – von E-Mail-Workflows bis zur kompletten Prozessautomatisierung.',
-        'Unsere KI-gestützte Automatisierung spart Zeit und Kosten: Leads automatisch ins CRM übertragen, Rechnungen versenden, Social Media planen, Termin-Erinnerungen senden. Wir entwickeln maßgeschneiderte Workflows für Unternehmen in München, Bayern und deutschlandweit.',
-        'Als n8n-Experten bieten wir über 500 Integrationen, keine Limitierungen bei Ausführungen und Self-Hosting für maximale Datenkontrolle. Kombiniert mit KI-Agenten und intelligenten Chatbots entstehen leistungsstarke Automatisierungslösungen.',
-        'Vorteile: 80% Zeitersparnis bei wiederkehrenden Aufgaben, 50% Kostenreduktion durch automatisierte Prozesse, ROI innerhalb von 3-6 Monaten. Kontaktieren Sie uns für eine kostenlose Automatisierungs-Analyse.'
-      ],
       automations: [
         { title: 'E-Mail-Marketing automatisieren', description: 'Automatischer Versand, Sortierung und Beantwortung von E-Mails. Willkommens-Sequenzen, Follow-ups und personalisierte Kampagnen auf Autopilot.', examples: ['Willkommens-E-Mails', 'Lead-Nurturing', 'Warenkorbabbrecher', 'Newsletter-Segmentierung'] },
         { title: 'Lead-Management & CRM-Integration', description: 'Leads automatisch erfassen, qualifizieren und an den Vertrieb übergeben. Integration mit Ihrem CRM und automatisches Scoring.', examples: ['Formulare → CRM', 'Lead-Scoring', 'Automatische Zuweisung', 'Nachfass-Reminder'] },
@@ -500,13 +469,6 @@ const baseTranslation = {
         { q: 'Kann ich die Website selbst bearbeiten?', a: 'Ja! Wir setzen auf benutzerfreundliche CMS wie WordPress oder Webflow. Sie erhalten eine Schulung und können Texte, Bilder und einfache Änderungen selbst vornehmen.' },
         { q: 'Ist die Website DSGVO-konform?', a: 'Absolut. Wir achten auf DSGVO-konforme Cookie-Banner, Datenschutzerklärungen, SSL-Verschlüsselung und sichere Kontaktformulare. Bei KI-Features nutzen wir EU-konforme Lösungen.' },
         { q: 'Was passiert nach dem Launch?', a: 'Wir bieten Wartungspakete für Updates, Sicherheit und Support. Außerdem können wir kontinuierlich neue KI-Features hinzufügen und die Website basierend auf Analytics-Daten optimieren.' }
-      ],
-      seoTitle: 'Website mit KI-Chatbot entwickeln lassen – Webdesign Agentur',
-      seoContent: [
-        'ExtruCon GmbH aus Fürstenfeldbruck entwickelt moderne Websites mit integrierten KI-Features. Von GPT-4 Chatbots über automatische Content-Erstellung bis zu intelligenter SEO-Optimierung – wir bringen künstliche Intelligenz auf Ihre Website.',
-        'Unsere KI-Websites steigern Conversions: Chatbots beantworten Fragen 24/7, personalisierte Inhalte sprechen Besucher individuell an, und SEO-optimierte Texte werden automatisch generiert. Ideal für Unternehmen in München, Fürstenfeldbruck und Bayern.',
-        'Als Webdesign-Agentur mit KI-Expertise bieten wir Landing Pages ab 1.500€, Unternehmenswebsites ab 3.500€ und E-Commerce-Lösungen ab 5.000€. Technologien: React, Next.js, WordPress, Webflow mit OpenAI GPT und Claude AI Integration.',
-        'Vorteile: 24/7 Kundenservice durch Chatbots, automatische Content-Erstellung, DSGVO-konforme Lösungen. Kontaktieren Sie uns für eine kostenlose Webdesign-Beratung in Fürstenfeldbruck.'
       ],
     },
     faqPage: {
@@ -837,14 +799,7 @@ const baseTranslation = {
       ],
       ctaTitle: 'Bereit für Ihre starke Marke?',
       ctaSubtitle: 'Lassen Sie uns gemeinsam eine Marke entwickeln, die Ihre Werte verkörpert und Ihre Zielgruppe begeistert.',
-      ctaButtonAlt: 'Jetzt Projekt starten',
-      seoTitle: 'KI-gestützte Markenentwicklung mit Midjourney & DALL-E',
-      seoContent: [
-        'ExtruCon GmbH aus Fürstenfeldbruck verbindet modernste KI-Technologie mit klassischem Branding-Know-how. Unsere KI-gestützte Markenentwicklung nutzt Midjourney und DALL-E, um in Rekordzeit Hunderte von Logo-Varianten und Corporate-Design-Konzepten zu generieren.',
-        'Wir sind Ihre KI-Agentur für Markenaufbau in München und Bayern. Unser Team kombiniert die kreative Leistungsfähigkeit von GPT-4 für Naming und Texte mit der visuellen Kraft von Midjourney für Logo-Design, Farbpaletten und visuelle Identitäten.',
-        'Von Startup-Branding bis zur Rebranding-Strategie für etablierte Unternehmen – wir unterstützen Unternehmen in Fürstenfeldbruck, München, Starnberg und deutschlandweit. Unsere KI-Markenentwicklung umfasst Logo-Design, Corporate Design, Brand Guidelines und digitale Markenführung.',
-        'Vorteile der KI-Markenentwicklung: 40-50% kürzere Entwicklungszeit, mehr Kreativität durch Hunderte von Konzeptvarianten, konsistente visuelle Identität über alle Kanäle hinweg, und deutlich günstigere Preise als bei traditionellen Agenturen.'
-      ]
+      ctaButtonAlt: 'Jetzt Projekt starten'
     },
     contentPage: {
       badge: 'Leistung',
@@ -870,14 +825,7 @@ const baseTranslation = {
       ],
       ctaTitle: 'Bereit für Content, der wirkt?',
       ctaSubtitle: 'Lassen Sie uns Inhalte erstellen, die Ihre Zielgruppe begeistern und zum Handeln bewegen.',
-      ctaButtonAlt: 'Jetzt Projekt starten',
-      seoTitle: 'Professionelle KI-Content-Erstellung mit GPT-4 & Midjourney',
-      seoContent: [
-        'ExtruCon GmbH revolutioniert die Content-Erstellung mit modernster KI-Technologie. Unsere KI-gestützte Content-Produktion nutzt GPT-4 und Claude AI für Texte sowie Midjourney und DALL-E für visuelle Inhalte – perfekt für Unternehmen in Fürstenfeldbruck, München und ganz Bayern.',
-        'Als KI-Content-Agentur erstellen wir Blogbeiträge, Website-Texte, Social-Media-Posts, Produktbeschreibungen, Newsletter und Werbetexte. Jeder Inhalt wird von unseren Redakteuren geprüft, SEO-optimiert und auf Ihre Marke abgestimmt.',
-        'Unsere KI-Content-Tools umfassen: GPT-4 für lange Formate und komplexe Texte, Claude AI für nuancierte Kommunikation, Midjourney für Social-Media-Grafiken und Blogbilder, DALL-E für Produktvisualisierungen, und ElevenLabs für professionelle Voiceover.',
-        'Vorteile unserer KI-Content-Produktion: Lieferung innerhalb von 1-3 Werktagen, konsistente Qualität über alle Kanäle, skalierbar für große Content-Mengen, SEO-optimiert für bessere Rankings, und 30-50% günstiger als traditionelle Content-Agenturen.'
-      ]
+      ctaButtonAlt: 'Jetzt Projekt starten'
     },
     kiServicePage: {
       badge: 'KI Agentur Deutschlandweit',
@@ -939,14 +887,7 @@ const baseTranslation = {
       ],
       ctaTitle: 'Bereit für messbares Wachstum?',
       ctaSubtitle: 'Lassen Sie uns datengetriebene Kampagnen starten, die echte Ergebnisse liefern.',
-      ctaButtonAlt: 'Jetzt Projekt starten',
-      seoTitle: 'KI-gestütztes Performance Marketing für maximalen ROI',
-      seoContent: [
-        'ExtruCon GmbH ist Ihre KI-Marketing-Agentur in Fürstenfeldbruck für datengetriebene Kampagnen mit messbarem Erfolg. Wir nutzen GPT-4 für intelligente Anzeigentexte, KI-gestützte Zielgruppenanalyse und automatische Bid-Optimierung.',
-        'Unsere KI-Performance-Marketing-Strategie umfasst Google Ads, Meta Ads (Facebook & Instagram), LinkedIn Ads, TikTok Ads und YouTube Ads. Wir optimieren Ihre Kampagnen kontinuierlich mit maschinellem Lernen und Predictive Analytics.',
-        'Wie wir KI im Marketing einsetzen: GPT-4 generiert performante Anzeigentexte in Sekunden, KI-Algorithmen identifizieren die besten Zielgruppen, automatische A/B-Tests optimieren Creatives, und Predictive Analytics prognostiziert Kampagnenerfolge.',
-        'Ob Lead-Generierung, E-Commerce-Kampagnen oder Brand-Awareness – wir entwickeln maßgeschneiderte Strategien für Ihr Geschäftsziel. Transparentes Reporting, klar definierte KPIs und regelmäßige Optimierung gehören zu unserem Standard.'
-      ]
+      ctaButtonAlt: 'Jetzt Projekt starten'
     },
     seoPage: {
       badge: 'Leistung',
@@ -1095,14 +1036,7 @@ const baseTranslation = {
       ],
       ctaTitle: 'Bereit für Social Media Erfolg?',
       ctaSubtitle: 'Lassen Sie uns Ihre Social Media Präsenz auf das nächste Level bringen. Kostenlose Erstanalyse!',
-      ctaButtonAlt: 'Jetzt Social Media Beratung starten',
-      seoTitle: 'KI-Social Media Marketing für mehr Reichweite & Engagement',
-      seoContent: [
-        'ExtruCon GmbH bringt Ihr Social Media auf das nächste Level mit KI-gestütztem Content. Wir nutzen GPT-4 für fesselnde Texte und Midjourney für visuell ansprechende Grafiken – perfekt abgestimmt auf Instagram, TikTok, LinkedIn und Facebook.',
-        'Unsere KI-Content-Strategie spart Zeit und liefert Ergebnisse: automatisierte Content-Planung, KI-generierte Posting-Texte, Trendanalyse und optimale Posting-Zeiten durch maschinelles Lernen.',
-        'Unsere Social Media Services: Instagram Marketing mit Reels und Stories, TikTok-Strategien für virale Reichweite, LinkedIn für B2B-Leadgenerierung, Facebook Community Management und YouTube Shorts. Alle Inhalte werden mit GPT-4 getextet und mit Midjourney visuell gestaltet.',
-        'Ob Influencer-Kooperationen, Social Ads oder Community Management – wir bieten Full-Service Social Media Marketing. Starten Sie mit einer kostenlosen Analyse Ihrer aktuellen Kanäle und entdecken Sie das Potenzial von KI-gestütztem Social Media.'
-      ]
+      ctaButtonAlt: 'Jetzt Social Media Beratung starten'
     },
     webPage: {
       heroImageAlt: 'Web Entwicklung Agentur',
@@ -1130,14 +1064,7 @@ const baseTranslation = {
       ],
       ctaTitle: 'Bereit für Ihre neue Website?',
       ctaSubtitle: 'Lassen Sie uns eine digitale Präsenz schaffen, die Ihre Kunden begeistert.',
-      ctaButtonAlt: 'Jetzt Projekt starten',
-      seoTitle: 'Moderne KI-Webentwicklung mit GPT-4 Chatbot-Integration',
-      seoContent: [
-        'ExtruCon GmbH entwickelt intelligente Websites mit GPT-4 Chatbot-Integration für Unternehmen in Fürstenfeldbruck, München und deutschlandweit. Unsere Websites sind nicht nur schön, sondern auch intelligent – mit KI-gestützten Funktionen für bessere Benutzererfahrung und mehr Conversions.',
-        'Als KI-Webentwicklungs-Agentur nutzen wir modernste Technologien: React, Next.js, TypeScript und Tailwind CSS für schnelle, responsive Websites. GPT-4 für intelligente Chatbots, die Kundenanfragen 24/7 beantworten. Claude AI für komplexe Interaktionen direkt auf Ihrer Website.',
-        'Unsere KI-Web-Features: Intelligente Chatbots für Kundenservice und Leadgenerierung, personalisierte Produktempfehlungen, automatische FAQ-Beantwortung, KI-gestützte Suchfunktionen und dynamische Inhaltsanpassung basierend auf Nutzerverhalten. Alles DSGVO-konform.',
-        'Ob Unternehmenswebsite, E-Commerce-Shop oder Web-App – wir liefern maßgeschneiderte Lösungen mit KI-Integration. SEO-optimiert für beste Google-Rankings, barrierefrei und mobil-optimiert. Fordern Sie ein unverbindliches Angebot an.'
-      ]
+      ctaButtonAlt: 'Jetzt Projekt starten'
     },
     legalPages: {
       impressumTitle: 'Impressum',
@@ -1252,13 +1179,8 @@ const baseTranslation = {
       weekdaysFull: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
       months: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember']
     },
-};
-
-// Type for the complete translation
-type Translation = typeof baseTranslation;
-
-// English translation override (any keys not in base are ignored during merge)
-const enOverride: Record<string, any> = {
+  },
+  en: {
     nav: {
       services: 'Services',
       ratgeber: 'Resources',
@@ -1594,13 +1516,6 @@ const enOverride: Record<string, any> = {
         { q: 'What ongoing costs are there?', a: 'In addition to one-time development, monthly costs include hosting, API usage, and optional maintenance. A typical agent costs €50-200 monthly depending on usage volume and complexity.' },
         { q: 'Can I expand the agent later?', a: 'Absolutely! AI agents are modular. You can add new features, integrations, or language capabilities at any time. We support you in further development.' }
       ],
-      seoTitle: 'AI Agents and Chatbots Development for Businesses',
-      seoContent: [
-        'ExtruCon GmbH from Fürstenfeldbruck develops intelligent AI agents and chatbots for businesses. With GPT-4, Claude AI, and LangChain, we automate customer service, lead generation, and business processes – GDPR-compliant and customized.',
-        'Our AI chatbots answer customer inquiries 24/7 in multiple languages, automatically qualify leads, and integrate seamlessly with CRM systems like HubSpot or Salesforce. Ideal for companies in Munich, Bavaria, and throughout Germany.',
-        'As an artificial intelligence agency, we combine chatbot development with n8n workflow automation. From appointment booking to email automation to document processing – we develop AI solutions that save time.',
-        'Benefits: 80% less manual work, 24/7 availability, scalable without additional costs. Free initial consultation for your AI project – contact us in Fürstenfeldbruck near Munich.'
-      ],
     },
     automationPage: {
       badge: 'Workflow Automation',
@@ -1632,13 +1547,6 @@ const enOverride: Record<string, any> = {
       visualWorkflowsDesc: 'Clear, understandable, maintainable',
       workflowSteps: ['Trigger', 'Condition', 'Action 1', 'Action 2'],
       ctaSubtitle: 'Let us analyze which processes we can automate for you. Free initial consultation.',
-      seoTitle: 'Workflow Automation with n8n and Make for Businesses',
-      seoContent: [
-        'ExtruCon GmbH from Fürstenfeldbruck is your agency for professional workflow automation. With n8n, Make, and Zapier, we connect your tools and automate recurring tasks – from email workflows to complete process automation.',
-        'Our AI-powered automation saves time and costs: automatically transfer leads to CRM, send invoices, plan social media, send appointment reminders. We develop customized workflows for businesses in Munich, Bavaria, and throughout Germany.',
-        'As n8n experts, we offer over 500 integrations, no execution limits, and self-hosting for maximum data control. Combined with AI agents and intelligent chatbots, powerful automation solutions emerge.',
-        'Benefits: 80% time savings on recurring tasks, 50% cost reduction through automated processes, ROI within 3-6 months. Contact us for a free automation analysis.'
-      ],
       automations: [
         { title: 'Automate Email Marketing', description: 'Automatic sending, sorting, and answering of emails. Welcome sequences, follow-ups, and personalized campaigns on autopilot.', examples: ['Welcome Emails', 'Lead Nurturing', 'Cart Abandonment', 'Newsletter Segmentation'] },
         { title: 'Lead Management & CRM Integration', description: 'Automatically capture, qualify, and hand over leads to sales. Integration with your CRM and automatic scoring.', examples: ['Forms → CRM', 'Lead Scoring', 'Automatic Assignment', 'Follow-up Reminders'] },
@@ -1738,13 +1646,6 @@ const enOverride: Record<string, any> = {
         { q: 'Can I edit the website myself?', a: 'Yes! We use user-friendly CMS like WordPress or Webflow. You receive training and can make text, image, and simple changes yourself.' },
         { q: 'Is the website GDPR-compliant?', a: 'Absolutely. We ensure GDPR-compliant cookie banners, privacy policies, SSL encryption, and secure contact forms. For AI features, we use EU-compliant solutions.' },
         { q: 'What happens after launch?', a: 'We offer maintenance packages for updates, security, and support. Additionally, we can continuously add new AI features and optimize the website based on analytics data.' }
-      ],
-      seoTitle: 'Website Development with AI Chatbot – Web Design Agency',
-      seoContent: [
-        'ExtruCon GmbH from Fürstenfeldbruck develops modern websites with integrated AI features. From GPT-4 chatbots to automatic content creation to intelligent SEO optimization – we bring artificial intelligence to your website.',
-        'Our AI websites increase conversions: Chatbots answer questions 24/7, personalized content addresses visitors individually, and SEO-optimized texts are generated automatically. Ideal for companies in Munich, Fürstenfeldbruck, and Bavaria.',
-        'As a web design agency with AI expertise, we offer landing pages from €1,500, business websites from €3,500, and e-commerce solutions from €5,000. Technologies: React, Next.js, WordPress, Webflow with OpenAI GPT and Claude AI integration.',
-        'Benefits: 24/7 customer service through chatbots, automatic content creation, GDPR-compliant solutions. Contact us for a free web design consultation in Fürstenfeldbruck.'
       ],
     },
     faqPage: {
@@ -2075,14 +1976,7 @@ const enOverride: Record<string, any> = {
       ],
       ctaTitle: 'Ready for Your Strong Brand?',
       ctaSubtitle: 'Let\'s develop a brand together that embodies your values and inspires your target audience.',
-      ctaButtonAlt: 'Start Project Now',
-      seoTitle: 'AI-Powered Brand Development with Midjourney & DALL-E',
-      seoContent: [
-        'ExtruCon GmbH from Fürstenfeldbruck combines cutting-edge AI technology with classic branding expertise. Our AI-powered brand development uses Midjourney and DALL-E to generate hundreds of logo variants and corporate design concepts in record time.',
-        'We are your AI agency for brand building in Munich and Bavaria. Our team combines the creative power of GPT-4 for naming and copy with the visual strength of Midjourney for logo design, color palettes, and visual identities.',
-        'From startup branding to rebranding strategies for established companies – we support businesses in Fürstenfeldbruck, Munich, Starnberg, and throughout Germany. Our AI brand development includes logo design, corporate design, brand guidelines, and digital brand management.',
-        'Benefits of AI brand development: 40-50% shorter development time, more creativity through hundreds of concept variants, consistent visual identity across all channels, and significantly lower prices than traditional agencies.'
-      ]
+      ctaButtonAlt: 'Start Project Now'
     },
     contentPage: {
       badge: 'Service',
@@ -2108,14 +2002,7 @@ const enOverride: Record<string, any> = {
       ],
       ctaTitle: 'Ready for Content That Works?',
       ctaSubtitle: 'Let us create content that excites your target audience and moves them to action.',
-      ctaButtonAlt: 'Start Project Now',
-      seoTitle: 'Professional AI Content Creation with GPT-4 & Midjourney',
-      seoContent: [
-        'ExtruCon GmbH revolutionizes content creation with cutting-edge AI technology. Our AI-powered content production uses GPT-4 and Claude AI for text, plus Midjourney and DALL-E for visual content – perfect for businesses in Fürstenfeldbruck, Munich, and all of Bavaria.',
-        'As an AI content agency, we create blog posts, website copy, social media posts, product descriptions, newsletters, and advertising copy. Every piece is reviewed by our editors, SEO-optimized, and tailored to your brand.',
-        'Our AI content tools include: GPT-4 for long-form content and complex texts, Claude AI for nuanced communication, Midjourney for social media graphics and blog images, DALL-E for product visualizations, and ElevenLabs for professional voiceovers.',
-        'Benefits of our AI content production: Delivery within 1-3 business days, consistent quality across all channels, scalable for large content volumes, SEO-optimized for better rankings, and 30-50% more affordable than traditional content agencies.'
-      ]
+      ctaButtonAlt: 'Start Project Now'
     },
     kiServicePage: {
       badge: 'AI Agency Nationwide',
@@ -2177,14 +2064,7 @@ const enOverride: Record<string, any> = {
       ],
       ctaTitle: 'Ready for Measurable Growth?',
       ctaSubtitle: 'Let us start data-driven campaigns that deliver real results.',
-      ctaButtonAlt: 'Start Project Now',
-      seoTitle: 'AI-Powered Performance Marketing for Maximum ROI',
-      seoContent: [
-        'ExtruCon GmbH is your AI marketing agency in Fürstenfeldbruck for data-driven campaigns with measurable success. We use GPT-4 for intelligent ad copy, AI-powered audience analysis, and automatic bid optimization.',
-        'Our AI performance marketing strategy covers Google Ads, Meta Ads (Facebook & Instagram), LinkedIn Ads, TikTok Ads, and YouTube Ads. We continuously optimize your campaigns with machine learning and predictive analytics.',
-        'How we use AI in marketing: GPT-4 generates high-performing ad copy in seconds, AI algorithms identify the best audiences, automatic A/B tests optimize creatives, and predictive analytics forecasts campaign success.',
-        'Whether lead generation, e-commerce campaigns, or brand awareness – we develop tailored strategies for your business goals. Transparent reporting, clearly defined KPIs, and regular optimization are our standard.'
-      ]
+      ctaButtonAlt: 'Start Project Now'
     },
     seoPage: {
       badge: 'Service',
@@ -2333,14 +2213,7 @@ const enOverride: Record<string, any> = {
       ],
       ctaTitle: 'Ready for Social Media Success?',
       ctaSubtitle: 'Let us take your social media presence to the next level. Free initial analysis!',
-      ctaButtonAlt: 'Start Social Media Consultation Now',
-      seoTitle: 'AI Social Media Marketing for More Reach & Engagement',
-      seoContent: [
-        'ExtruCon GmbH takes your social media to the next level with AI-powered content. We use GPT-4 for captivating copy and Midjourney for visually appealing graphics – perfectly tailored for Instagram, TikTok, LinkedIn, and Facebook.',
-        'Our AI content strategy saves time and delivers results: automated content planning, AI-generated post copy, trend analysis, and optimal posting times through machine learning.',
-        'Our social media services: Instagram marketing with Reels and Stories, TikTok strategies for viral reach, LinkedIn for B2B lead generation, Facebook community management, and YouTube Shorts. All content is written with GPT-4 and visually designed with Midjourney.',
-        'Whether influencer collaborations, social ads, or community management – we offer full-service social media marketing. Start with a free analysis of your current channels and discover the potential of AI-powered social media.'
-      ]
+      ctaButtonAlt: 'Start Social Media Consultation Now'
     },
     webPage: {
       heroImageAlt: 'Web Development Agency',
@@ -2368,14 +2241,7 @@ const enOverride: Record<string, any> = {
       ],
       ctaTitle: 'Ready for Your New Website?',
       ctaSubtitle: 'Let us create a digital presence that delights your customers.',
-      ctaButtonAlt: 'Start Project Now',
-      seoTitle: 'Modern AI Web Development with GPT-4 Chatbot Integration',
-      seoContent: [
-        'ExtruCon GmbH develops intelligent websites with GPT-4 chatbot integration for businesses in Fürstenfeldbruck, Munich, and throughout Germany. Our websites are not only beautiful but also intelligent – with AI-powered features for better user experience and more conversions.',
-        'As an AI web development agency, we use cutting-edge technologies: React, Next.js, TypeScript, and Tailwind CSS for fast, responsive websites. GPT-4 for intelligent chatbots that answer customer inquiries 24/7. Claude AI for complex interactions directly on your website.',
-        'Our AI web features: Intelligent chatbots for customer service and lead generation, personalized product recommendations, automatic FAQ answering, AI-powered search functions, and dynamic content adaptation based on user behavior. All GDPR-compliant.',
-        'Whether corporate website, e-commerce shop, or web app – we deliver tailored solutions with AI integration. SEO-optimized for best Google rankings, accessible, and mobile-optimized. Request a free quote.'
-      ]
+      ctaButtonAlt: 'Start Project Now'
     },
     legalPages: {
       impressumTitle: 'Legal Notice',
@@ -2490,10 +2356,8 @@ const enOverride: Record<string, any> = {
       weekdaysFull: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
       months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     },
-};
-
-// Croatian translation override (any keys not in base are ignored during merge)
-const hrOverride: Record<string, any> = {
+  },
+  hr: {
     nav: {
       services: 'Usluge',
       ratgeber: 'Savjetnik',
@@ -2829,13 +2693,6 @@ const hrOverride: Record<string, any> = {
         { q: 'Koji su tekući troškovi?', a: 'Uz jednokratni razvoj, mjesečni troškovi uključuju hosting, korištenje API-ja i opcionalno održavanje. Tipičan agent košta 50-200€ mjesečno ovisno o volumenu korištenja i složenosti.' },
         { q: 'Mogu li kasnije proširiti agenta?', a: 'Apsolutno! AI agenti su modularni. Možete dodati nove funkcije, integracije ili jezične sposobnosti u bilo kojem trenutku. Podržavamo vas u daljnjem razvoju.' }
       ],
-      seoTitle: 'Razvoj AI agenata i chatbotova za tvrtke',
-      seoContent: [
-        'ExtruCon GmbH iz Fürstenfeldbrucka razvija inteligentne AI agente i chatbotove za tvrtke. S GPT-4, Claude AI i LangChain automatiziramo korisničku službu, generiranje leadova i poslovne procese – GDPR-sukladno i prilagođeno.',
-        'Naši AI chatbotovi odgovaraju na upite kupaca 24/7 na više jezika, automatski kvalificiraju leadove i besprijekorno se integriraju s CRM sustavima poput HubSpota ili Salesforcea. Idealno za tvrtke u Münchenu, Bavarskoj i diljem Njemačke.',
-        'Kao agencija za umjetnu inteligenciju kombiniramo razvoj chatbotova s n8n automatizacijom tijeka rada. Od zakazivanja termina preko automatizacije e-pošte do obrade dokumenata – razvijamo AI rješenja koja štede vrijeme.',
-        'Prednosti: 80% manje ručnog rada, dostupnost 24/7, skalabilno bez dodatnih troškova. Besplatna početna konzultacija za vaš AI projekt – kontaktirajte nas u Fürstenfeldbrucku kod Münchena.'
-      ],
     },
     automationPage: {
       badge: 'Automatizacija Tijekova Rada',
@@ -2867,13 +2724,6 @@ const hrOverride: Record<string, any> = {
       workflowSteps: ['Okidač', 'Uvjet', 'Akcija 1', 'Akcija 2'],
       ctaTitle: 'Zatražite Automatizaciju – Besplatna Konzultacija',
       ctaSubtitle: 'Dopustite nam analizirati koje procese možemo automatizirati za vas. Besplatna početna konzultacija.',
-      seoTitle: 'Automatizacija radnih tokova s n8n i Make za tvrtke',
-      seoContent: [
-        'ExtruCon GmbH iz Fürstenfeldbrucka vaša je agencija za profesionalnu automatizaciju radnih tokova. S n8n, Make i Zapier povezujemo vaše alate i automatiziramo ponavljajuće zadatke – od email radnih tokova do potpune automatizacije procesa.',
-        'Naša automatizacija pogonjana umjetnom inteligencijom štedi vrijeme i troškove: automatski prenesite potencijalne kupce u CRM, šaljite račune, planirajte društvene mreže, šaljite podsjetnike za termine. Razvijamo prilagođene radne tokove za tvrtke u Münchenu, Bavarskoj i diljem Njemačke.',
-        'Kao n8n stručnjaci nudimo preko 500 integracija, bez ograničenja izvršavanja i self-hosting za maksimalnu kontrolu podataka. U kombinaciji s AI agentima i inteligentnim chatbotovima nastaju moćna rješenja za automatizaciju.',
-        'Prednosti: 80% uštede vremena na ponavljajućim zadacima, 50% smanjenje troškova automatiziranim procesima, ROI unutar 3-6 mjeseci. Kontaktirajte nas za besplatnu analizu automatizacije.'
-      ],
       automations: [
         { title: 'Automatizacija Email Marketinga', description: 'Automatsko slanje, sortiranje i odgovaranje na e-mailove. Sekvence dobrodošlice, praćenja i personalizirane kampanje na autopilotu.', examples: ['E-mailovi Dobrodošlice', 'Njegovanje Leadova', 'Napuštena Košarica', 'Segmentacija Newslettera'] },
         { title: 'Upravljanje Leadovima i CRM Integracija', description: 'Automatski hvatajte, kvalificirajte i predajte leadove prodaji. Integracija s vašim CRM-om i automatsko ocjenjivanje.', examples: ['Forme → CRM', 'Ocjenjivanje Leadova', 'Automatska Dodjela', 'Podsjetnici za Praćenje'] },
@@ -2973,13 +2823,6 @@ const hrOverride: Record<string, any> = {
         { q: 'Mogu li sam uređivati web stranicu?', a: 'Da! Koristimo korisnički prijateljske CMS poput WordPressa ili Webflowa. Dobivate obuku i možete sami unositi promjene teksta, slika i jednostavne izmjene.' },
         { q: 'Je li web stranica GDPR-usklađena?', a: 'Apsolutno. Osiguravamo GDPR-usklađene cookie bannere, izjave o privatnosti, SSL enkripciju i sigurne kontakt forme. Za AI značajke koristimo EU-usklađena rješenja.' },
         { q: 'Što se događa nakon lansiranja?', a: 'Nudimo pakete održavanja za ažuriranja, sigurnost i podršku. Dodatno možemo kontinuirano dodavati nove AI značajke i optimizirati web stranicu na temelju analitičkih podataka.' }
-      ],
-      seoTitle: 'Izrada web stranica s AI chatbotom – Agencija za web dizajn',
-      seoContent: [
-        'ExtruCon GmbH iz Fürstenfeldbrucka razvija moderne web stranice s integriranim AI značajkama. Od GPT-4 chatbotova preko automatskog stvaranja sadržaja do inteligentne SEO optimizacije – donosimo umjetnu inteligenciju na vašu web stranicu.',
-        'Naše AI web stranice povećavaju konverzije: Chatbotovi odgovaraju na pitanja 24/7, personalizirani sadržaj se obraća posjetiteljima individualno, a SEO-optimizirani tekstovi se generiraju automatski. Idealno za tvrtke u Münchenu, Fürstenfeldbrucku i Bavarskoj.',
-        'Kao agencija za web dizajn s AI ekspertizom nudimo landing stranice od 1.500€, poslovne web stranice od 3.500€ i e-commerce rješenja od 5.000€. Tehnologije: React, Next.js, WordPress, Webflow s OpenAI GPT i Claude AI integracijom.',
-        'Prednosti: 24/7 korisnička služba putem chatbotova, automatsko stvaranje sadržaja, GDPR-sukladna rješenja. Kontaktirajte nas za besplatnu konzultaciju o web dizajnu u Fürstenfeldbrucku.'
       ],
     },
     faqPage: {
@@ -3310,14 +3153,7 @@ const hrOverride: Record<string, any> = {
       ],
       ctaTitle: 'Spremni za vaš snažan brend?',
       ctaSubtitle: 'Razvijmo zajedno brend koji utjelovljuje vaše vrijednosti i oduševljava vašu ciljanu publiku.',
-      ctaButtonAlt: 'Započnite projekt sada',
-      seoTitle: 'AI razvoj brenda s Midjourney i DALL-E',
-      seoContent: [
-        'ExtruCon GmbH iz Fürstenfeldbrucka kombinira najmoderniju AI tehnologiju s klasičnom branding stručnošću. Naš AI razvoj brendova koristi Midjourney i DALL-E za generiranje stotina varijanti logotipa i korporativnog dizajna u rekordnom vremenu.',
-        'Mi smo vaša AI agencija za izgradnju brendova u Münchenu i Bavarskoj. Naš tim kombinira kreativnu snagu GPT-4 za imenovanje i tekstove s vizualnom snagom Midjourneya za dizajn logotipa, palete boja i vizualne identitete.',
-        'Od startup brandinga do rebrandinga za etablirane tvrtke – podržavamo tvrtke u Fürstenfeldbrucku, Münchenu, Starnbergu i diljem Njemačke. Naš AI razvoj brenda uključuje dizajn logotipa, korporativni dizajn, brand smjernice i digitalno upravljanje brendom.',
-        'Prednosti AI razvoja brenda: 40-50% kraće vrijeme razvoja, više kreativnosti kroz stotine varijanti koncepata, konzistentan vizualni identitet na svim kanalima i značajno niže cijene od tradicionalnih agencija.'
-      ]
+      ctaButtonAlt: 'Započnite projekt sada'
     },
     contentPage: {
       badge: 'Usluga',
@@ -3343,14 +3179,7 @@ const hrOverride: Record<string, any> = {
       ],
       ctaTitle: 'Spremni za sadržaj koji djeluje?',
       ctaSubtitle: 'Dopustite nam da kreiramo sadržaj koji oduševljava vašu ciljanu publiku i potiče ih na akciju.',
-      ctaButtonAlt: 'Započnite projekt sada',
-      seoTitle: 'Profesionalna AI kreacija sadržaja s GPT-4 i Midjourney',
-      seoContent: [
-        'ExtruCon GmbH revolucionira kreaciju sadržaja s najmodernijom AI tehnologijom. Naša AI produkcija sadržaja koristi GPT-4 i Claude AI za tekstove, te Midjourney i DALL-E za vizualni sadržaj – savršeno za tvrtke u Fürstenfeldbrucku, Münchenu i cijeloj Bavarskoj.',
-        'Kao AI agencija za sadržaj, izrađujemo blog postove, web tekstove, objave na društvenim mrežama, opise proizvoda, newslettere i reklamne tekstove. Svaki sadržaj pregledaju naši urednici, SEO je optimiziran i prilagođen vašem brendu.',
-        'Naši AI alati za sadržaj uključuju: GPT-4 za dugačke formate i kompleksne tekstove, Claude AI za nijansiranu komunikaciju, Midjourney za grafike društvenih mreža i slike za blog, DALL-E za vizualizacije proizvoda i ElevenLabs za profesionalne voiceovere.',
-        'Prednosti naše AI produkcije sadržaja: Isporuka u roku od 1-3 radna dana, konzistentna kvaliteta na svim kanalima, skalabilno za velike količine sadržaja, SEO optimizirano za bolje rangiranje i 30-50% povoljnije od tradicionalnih agencija za sadržaj.'
-      ]
+      ctaButtonAlt: 'Započnite projekt sada'
     },
     kiServicePage: {
       badge: 'AI Agencija diljem Njemačke',
@@ -3412,14 +3241,7 @@ const hrOverride: Record<string, any> = {
       ],
       ctaTitle: 'Spremni za mjerljiv rast?',
       ctaSubtitle: 'Pokrenimo kampanje temeljene na podacima koje donose stvarne rezultate.',
-      ctaButtonAlt: 'Započnite projekt sada',
-      seoTitle: 'AI Performance Marketing za maksimalni ROI',
-      seoContent: [
-        'ExtruCon GmbH je vaša AI marketing agencija u Fürstenfeldbrucku za kampanje temeljene na podacima s mjerljivim uspjehom. Koristimo GPT-4 za inteligentne reklamne tekstove, AI analizu ciljane publike i automatsku optimizaciju ponuda.',
-        'Naša AI strategija performance marketinga pokriva Google Ads, Meta Ads (Facebook i Instagram), LinkedIn Ads, TikTok Ads i YouTube Ads. Kontinuirano optimiziramo vaše kampanje strojnim učenjem i prediktivnom analitikom.',
-        'Kako koristimo AI u marketingu: GPT-4 generira učinkovite reklamne tekstove u sekundama, AI algoritmi identificiraju najbolje publike, automatski A/B testovi optimiziraju kreative, a prediktivna analitika prognozira uspjeh kampanja.',
-        'Bilo da se radi o generiranju potencijalnih klijenata, e-commerce kampanjama ili brand awarenessu – razvijamo prilagođene strategije za vaše poslovne ciljeve. Transparentno izvještavanje, jasno definirani KPI-jevi i redovna optimizacija su naš standard.'
-      ]
+      ctaButtonAlt: 'Započnite projekt sada'
     },
     seoPage: {
       badge: 'Usluga',
@@ -3568,14 +3390,7 @@ const hrOverride: Record<string, any> = {
       ],
       ctaTitle: 'Spremni za uspjeh na društvenim mrežama?',
       ctaSubtitle: 'Dopustite nam da podignemo vašu prisutnost na društvenim mrežama na višu razinu. Besplatna prva analiza!',
-      ctaButtonAlt: 'Započnite konzultacije za društvene mreže sada',
-      seoTitle: 'AI Marketing na društvenim mrežama za veći doseg i angažman',
-      seoContent: [
-        'ExtruCon GmbH podiže vaše društvene mreže na višu razinu s AI sadržajem. Koristimo GPT-4 za privlačne tekstove i Midjourney za vizualno atraktivne grafike – savršeno prilagođeno za Instagram, TikTok, LinkedIn i Facebook.',
-        'Naša AI strategija sadržaja štedi vrijeme i donosi rezultate: automatsko planiranje sadržaja, AI generirani tekstovi objava, analiza trendova i optimalna vremena objave putem strojnog učenja.',
-        'Naše usluge na društvenim mrežama: Instagram marketing s Reelsima i Storiesima, TikTok strategije za viralni doseg, LinkedIn za B2B generiranje potencijalnih klijenata, Facebook upravljanje zajednicom i YouTube Shorts. Sav sadržaj piše GPT-4 i vizualno dizajnira Midjourney.',
-        'Bilo da se radi o suradnjama s influencerima, društvenim oglasima ili upravljanju zajednicom – nudimo full-service marketing na društvenim mrežama. Započnite s besplatnom analizom vaših trenutnih kanala i otkrijte potencijal AI marketinga na društvenim mrežama.'
-      ]
+      ctaButtonAlt: 'Započnite konzultacije za društvene mreže sada'
     },
     webPage: {
       heroImageAlt: 'Agencija za web razvoj',
@@ -3603,14 +3418,7 @@ const hrOverride: Record<string, any> = {
       ],
       ctaTitle: 'Spremni za svoju novu web stranicu?',
       ctaSubtitle: 'Dopustite nam da stvorimo digitalnu prisutnost koja oduševljava vaše kupce.',
-      ctaButtonAlt: 'Započnite projekt sada',
-      seoTitle: 'Moderni AI web razvoj s integracijom GPT-4 chatbota',
-      seoContent: [
-        'ExtruCon GmbH razvija inteligentne web stranice s integracijom GPT-4 chatbota za tvrtke u Fürstenfeldbrucku, Münchenu i diljem Njemačke. Naše web stranice nisu samo lijepe, već i inteligentne – s AI funkcijama za bolje korisničko iskustvo i više konverzija.',
-        'Kao AI agencija za web razvoj, koristimo najmodernije tehnologije: React, Next.js, TypeScript i Tailwind CSS za brze, responzivne web stranice. GPT-4 za inteligentne chatbotove koji odgovaraju na upite kupaca 24/7. Claude AI za složene interakcije izravno na vašoj web stranici.',
-        'Naše AI web značajke: Inteligentni chatbotovi za korisničku službu i generiranje potencijalnih klijenata, personalizirane preporuke proizvoda, automatsko odgovaranje na FAQ, AI pretraživanje i dinamička prilagodba sadržaja na temelju ponašanja korisnika. Sve u skladu s GDPR-om.',
-        'Bilo da se radi o korporativnoj web stranici, e-commerce trgovini ili web aplikaciji – isporučujemo prilagođena rješenja s AI integracijom. SEO optimizirano za najbolje Google rangiranje, pristupačno i optimizirano za mobilne uređaje. Zatražite besplatnu ponudu.'
-      ]
+      ctaButtonAlt: 'Započnite projekt sada'
     },
     legalPages: {
       impressumTitle: 'Pravna obavijest',
@@ -3725,10 +3533,8 @@ const hrOverride: Record<string, any> = {
       weekdaysFull: ['Nedjelja', 'Ponedjeljak', 'Utorak', 'Srijeda', 'Četvrtak', 'Petak', 'Subota'],
       months: ['Siječanj', 'Veljača', 'Ožujak', 'Travanj', 'Svibanj', 'Lipanj', 'Srpanj', 'Kolovoz', 'Rujan', 'Listopad', 'Studeni', 'Prosinac']
     },
-};
-
-// Turkish translation override (any keys not in base are ignored during merge)
-const trOverride: Record<string, any> = {
+  },
+  tr: {
     nav: {
       services: 'Hizmetler',
       ratgeber: 'Rehber',
@@ -3805,6 +3611,35 @@ const trOverride: Record<string, any> = {
       marketing: { title: 'Performans Pazarlama', desc: 'Ölçülebilir büyüme ve maksimum görünürlük için veri odaklı kampanyalar ve SEO stratejileri.' },
       seo: { title: 'SEO ve Coğrafi Optimizasyon', desc: 'Maksimum bölgesel görünürlük için yerel arama motoru optimizasyonu ve coğrafi hedefleme.' },
     },
+    contact: {
+      title: 'İnovasyon için',
+      titleHighlight: 'Hazır mısınız?',
+      subtitle: 'ExtruCon GmbH\'nin dijital varlığınızı nasıl dönüştürebileceğini konuşalım. Danışmanlık için bizimle iletişime geçin.',
+      email: 'E-posta',
+      phone: 'Telefon',
+      webpage: 'Web Sayfası',
+      formTitle: 'Mesaj Gönder',
+      name: 'Ad',
+      namePlaceholder: 'Adınız',
+      company: 'Şirket',
+      companyPlaceholder: 'Şirket (isteğe bağlı)',
+      emailLabel: 'E-posta',
+      emailPlaceholder: 'ornek@sirket.com',
+      phone2: 'Telefon',
+      phonePlaceholder: '+90 xxx xxx xx xx',
+      service: 'İlgilendiğiniz Hizmet',
+      servicePlaceholder: 'Hizmet seçin',
+      message: 'Mesaj',
+      messagePlaceholder: 'Projenizi açıklayın...',
+      submit: 'Gönder',
+      sending: 'Gönderiliyor...',
+      successTitle: 'Başarılı!',
+      successMessage: 'Mesajınız gönderildi. En kısa sürede size ulaşacağız.',
+      errorTitle: 'Hata',
+      errorMessage: 'Bir hata oluştu. Lütfen tekrar deneyin.',
+      required: 'Zorunlu alan',
+      invalidEmail: 'Geçerli bir e-posta adresi girin',
+    },
     about: {
       badge: 'ExtruCon GmbH Hakkında',
       title: 'İnovasyon',
@@ -3816,42 +3651,9 @@ const trOverride: Record<string, any> = {
       german: 'Alman Kalitesi',
       support: '7/24 Destek',
     },
-    funnel: {
-      title: 'AI Çözümünüz',
-      titleHighlight: '3 Adımda',
-      step1: 'İlk Görüşme',
-      step1Desc: 'İhtiyaç analizi için ücretsiz danışmanlık',
-      step2: 'Konsept',
-      step2Desc: 'Bireysel strateji ve çözüm konsepti',
-      step3: 'Uygulama',
-      step3Desc: 'İmplementasyon ve sürekli optimizasyon',
-    },
-    problem: {
-      title: 'Sorun',
-      titleHighlight: 'AI olmadan',
-      problems: [
-        'Zaman alan manuel görevler',
-        'Kaçırılan müşteri talepleri',
-        'Tutarsız iletişim',
-        'Yüksek personel maliyetleri',
-      ],
-      solution: 'Çözüm',
-      solutionHighlight: 'ExtruCon ile',
-      solutions: [
-        'Otomasyon ile %80 zaman tasarrufu',
-        'Müşteriler için 7/24 erişilebilirlik',
-        'Tutarlı marka sesi',
-        'Ölçeklenebilir süreçler',
-      ],
-    },
     faq: {
       title: 'Sıkça Sorulan Sorular',
-      questions: [
-        { q: 'Ne kadar hızlı yanıt alırım?', a: 'İş günlerinde 24 saat içinde.' },
-        { q: 'Ücretsiz ilk görüşme?', a: 'Evet! Her zaman ücretsiz ve bağlayıcı değil.' },
-        { q: 'Küçük işletmeler için de?', a: 'Kesinlikle. Her bütçeye uygun çözümler.' },
-      ],
-      viewAll: 'Tüm SSS\'leri görüntüle',
+      subtitle: 'Hizmetlerimiz hakkında merak ettikleriniz',
     },
     faqPage: {
       badge: 'Yardım & Destek',
@@ -4029,6 +3831,10 @@ const trOverride: Record<string, any> = {
         { id: 48, title: 'Cookie Banner ve GDPR: Yasal Güvenli Uygulama', excerpt: 'Onay yönetimi hakkında bilmeniz gereken her şey.', readTime: '9 dk.', date: '22 Tem 2025' }
       ]
     },
+    ratgeber: {
+      title: 'Rehber',
+      subtitle: 'AI ve otomasyon hakkında bilgiler',
+    },
     problemSection: {
       title: 'Bu zorlukları',
       titleHighlight: 'tanıyor musunuz?',
@@ -4191,33 +3997,22 @@ const trOverride: Record<string, any> = {
       }
     },
     footer: {
-      slogan: 'AI, otomasyon ve dijital büyüme ajansınız.',
       services: 'Hizmetler',
       company: 'Şirket',
       legal: 'Yasal',
-      about: 'Hakkımızda',
-      contact: 'İletişim',
-      faq: 'SSS',
-      ratgeber: 'Rehber',
-      impressum: 'Künye',
       privacy: 'Gizlilik Politikası',
       terms: 'Kullanım Koşulları',
+      imprint: 'Yasal Bildirim',
       cookies: 'Çerez Ayarları',
-      allRights: 'Tüm hakları saklıdır.',
-      openingHours: 'Pzt–Cuma 08:00–17:00',
-      legalInfo: 'Yönetici: Künyeye bakınız',
-      addressLabel: 'Adres',
-      emailLabel: 'E-posta',
-      phoneLabel: 'Telefon',
-      contactLink: 'İletişime Geçin',
+      copyright: '© 2025 ExtruCon GmbH. Tüm hakları saklıdır.',
+      location: 'Fürstenfeldbruck, Almanya',
     },
     chatbot: {
       title: 'AI Asistanı',
       subtitle: 'Size nasıl yardımcı olabilirim?',
       placeholder: 'Mesajınızı yazın...',
       send: 'Gönder',
-      welcome: 'Merhaba! Ben ExtruCon AI Asistanıyım. Size nasıl yardımcı olabilirim?',
-      bubble: 'Sorularınız mı var? AI Bot yardımcı olur!',
+      thinking: 'Düşünüyor...',
     },
     chatbotPage: {
       badge: 'Canlı Demo: AI Asistanı',
@@ -4328,88 +4123,30 @@ const trOverride: Record<string, any> = {
         { q: 'Hangi devam eden maliyetler oluşur?', a: 'Tek seferlik geliştirmenin yanı sıra hosting, API kullanımı ve opsiyonel bakım için aylık maliyetler oluşur. Tipik bir ajan, kullanım hacmine ve karmaşıklığa bağlı olarak aylık 50-200€ arası maliyetlidir.' },
         { q: 'Ajanı daha sonra genişletebilir miyim?', a: 'Kesinlikle! AI ajanları modüler olarak oluşturulmuştur. İstediğiniz zaman yeni özellikler, entegrasyonlar veya dil yetenekleri ekleyebilirsiniz. Gelişimde size eşlik ediyoruz.' }
       ],
-      seoTitle: 'İşletmeler için AI Ajanları ve Chatbot Geliştirme',
-      seoContent: [
-        'Fürstenfeldbruck merkezli ExtruCon GmbH, işletmeler için akıllı AI ajanları ve chatbotlar geliştirmektedir. GPT-4, Claude AI ve LangChain ile müşteri hizmetlerini, potansiyel müşteri oluşturmayı ve iş süreçlerini otomatikleştiriyoruz – GDPR uyumlu ve özelleştirilmiş.',
-        'AI chatbotlarımız müşteri sorgularını 7/24 birden fazla dilde yanıtlar, potansiyel müşterileri otomatik olarak nitelendirir ve HubSpot veya Salesforce gibi CRM sistemleriyle sorunsuz entegre olur. Münih, Bavyera ve Almanya genelindeki şirketler için ideal.',
-        'Yapay zeka ajansı olarak chatbot geliştirmeyi n8n iş akışı otomasyonu ile birleştiriyoruz. Randevu almadan e-posta otomasyonuna, belge işlemeye kadar – zaman kazandıran AI çözümleri geliştiriyoruz.',
-        'Avantajlar: %80 daha az manuel iş, 7/24 kullanılabilirlik, ek maliyet olmadan ölçeklenebilir. AI projeniz için ücretsiz ilk danışmanlık – Münih yakınındaki Fürstenfeldbruck\'ta bizimle iletişime geçin.'
-      ],
     },
     automationPage: {
-      badge: 'İş Akışı Otomasyonu',
-      title: 'n8n ile Süreçleri Otomatikleştirin – İş Akışı Otomasyon Ajansı Münih',
-      subtitle: 'Araçlarınızı bağlıyor ve tekrarlayan görevleri otomatikleştiriyoruz – böylece önemli işlere odaklanabilirsiniz.',
-      ctaPrimary: 'Ücretsiz Danışmanlık',
-      ctaSecondary: 'Olanakları Keşfedin',
-      automationsTitle: 'Her Alan İçin Otomasyon Çözümleri',
-      automationsSubtitle: 'E-posta iş akışlarından tam süreç otomasyonuna – mükemmel çözümü buluyoruz.',
-      examples: 'Örnekler:',
-      toolsTitle: 'Otomasyon Araçları ve Platformları',
-      toolsSubtitle: 'Maksimum güvenilirlik için kanıtlanmış otomasyon platformları kullanıyoruz.',
-      processTitle: 'İş Akışı Otomasyonu: Sürecimiz',
-      processSubtitle: 'Analizden canlı yayına – otomasyonunuz böyle oluşur.',
-      faqTitle: 'SSS: İş Akışı Otomasyonu Hakkında Sık Sorulan Sorular',
-      ctaTitle: 'Otomasyon Talep Et – Ücretsiz Danışmanlık',
-      n8nBadge: 'n8n ile Çalışır',
-      n8nTitle: 'n8n Otomasyonu: Güçlü Platform',
-      n8nDescription: 'n8n en güçlü açık kaynak otomasyon platformudur. Diğer araçların sınırlamaları olmadan tam olarak ihtiyaçlarınıza göre iş akışları oluşturuyoruz.',
-      n8nFeatures: [
-        '500\'den fazla entegrasyon mevcut',
-        'Yürütme limiti yok',
-        'Maksimum veri kontrolü için self-hosting',
-        'Karmaşık mantık ve dallanmalar mümkün',
-        'Her sistem için API bağlantıları',
-        'Zapier ve Make\'den daha uygun maliyetli'
-      ],
-      visualWorkflows: 'Görsel İş Akışları',
-      visualWorkflowsDesc: 'Açık, anlaşılır, bakımı kolay',
-      workflowSteps: ['Tetikleyici', 'Koşul', 'Eylem 1', 'Eylem 2'],
-      ctaSubtitle: 'Hangi süreçleri sizin için otomatikleştirebileceğimizi analiz edelim. Ücretsiz ilk danışmanlık.',
-      benefits: [
-        { title: '%80\'e kadar zaman tasarrufu', description: 'Manuel görevler otomatik olarak tamamlanır' },
-        { title: 'Daha az hata, daha fazla kalite', description: 'Dikkatsizlik hatası olmadan tutarlı süreçler' },
-        { title: 'Ek maliyet olmadan ölçeklenebilir', description: 'Daha fazla personel olmadan daha fazla hacim' },
-        { title: '7/24 gerçek zamanlı süreçler', description: 'Süreçler saniyeler içinde 7/24 çalışır' }
-      ],
-      tools: [
-        { name: 'n8n', description: 'Karmaşık otomasyonlar için ana aracımız' },
-        { name: 'Zapier', description: 'Basit iş akışları için hızlı entegrasyonlar' },
-        { name: 'Make (Integromat)', description: 'Görsel iş akışı oluşturma' },
-        { name: 'HubSpot', description: 'Pazarlama ve satış otomasyonu' },
-        { name: 'Airtable', description: 'Veritabanı otomasyonları' },
-        { name: 'Google Workspace', description: 'Sheets, Docs, Gmail entegrasyonu' }
-      ],
-      processSteps: [
-        { title: '1. Süreç Analizi', description: 'Mevcut süreçlerinizi anlıyor ve otomasyon potansiyelini belirliyoruz.' },
-        { title: '2. İş Akışı Konsepti', description: 'Birlikte optimum iş akışını tanımlıyor ve uygun araçları seçiyoruz.' },
-        { title: '3. Teknik Uygulama', description: 'n8n veya uygun araçla otomasyonunuzu oluşturuyoruz.' },
-        { title: '4. Kalite Güvencesi', description: 'Kapsamlı testler her şeyin sorunsuz çalışmasını sağlar.' },
-        { title: '5. Lansman ve İzleme', description: 'İş akışınız canlıya çıkar – izleme ve sürekli optimizasyon ile.' }
-      ],
-      seoTitle: 'İşletmeler için n8n ve Make ile İş Akışı Otomasyonu',
-      seoContent: [
-        'Fürstenfeldbruck merkezli ExtruCon GmbH, profesyonel iş akışı otomasyonu için ajansınızdır. n8n, Make ve Zapier ile araçlarınızı bağlıyor ve e-posta iş akışlarından tam süreç otomasyonuna kadar tekrarlayan görevleri otomatikleştiriyoruz.',
-        'AI destekli otomasyonumuz zaman ve maliyet tasarrufu sağlar: potansiyel müşterileri otomatik olarak CRM\'e aktarın, fatura gönderin, sosyal medya planlayın, randevu hatırlatmaları gönderin. Münih, Bavyera ve Almanya genelindeki işletmeler için özelleştirilmiş iş akışları geliştiriyoruz.',
-        'n8n uzmanları olarak 500\'den fazla entegrasyon, yürütme limiti olmadan ve maksimum veri kontrolü için self-hosting sunuyoruz. AI ajanları ve akıllı chatbotlarla birleştiğinde güçlü otomasyon çözümleri ortaya çıkıyor.',
-        'Avantajlar: Tekrarlayan görevlerde %80 zaman tasarrufu, otomatik süreçlerle %50 maliyet azaltma, 3-6 ay içinde yatırım getirisi. Ücretsiz otomasyon analizi için bizimle iletişime geçin.'
-      ],
-      automations: [
-        { title: 'E-posta Pazarlamayı Otomatikleştir', description: 'Otomatik gönderim, sıralama ve e-posta yanıtlama. Hoş geldin dizileri, takipler ve otopilotta kişiselleştirilmiş kampanyalar.', examples: ['Hoş geldin e-postaları', 'Potansiyel müşteri besleme', 'Sepet terk edenler', 'Bülten segmentasyonu'] },
-        { title: 'Potansiyel Müşteri Yönetimi ve CRM Entegrasyonu', description: 'Potansiyel müşterileri otomatik olarak yakala, değerlendir ve satışa aktar. CRM\'inizle entegrasyon ve otomatik puanlama.', examples: ['Formlar → CRM', 'Potansiyel müşteri puanlama', 'Otomatik atama', 'Takip hatırlatıcıları'] },
-        { title: 'Sosyal Medya Otomasyonu', description: 'Paylaşımları planlayın, yorumları yönetin ve etkileşimleri otomatik olarak analiz edin. Birden fazla platform için içerik planları.', examples: ['Otomatik yayınlama', 'Yorum bildirimleri', 'Analytics raporları', 'Çapraz platform'] },
-        { title: 'Fatura ve Muhasebe Otomasyonu', description: 'Faturaları otomatik olarak oluşturun, gönderin ve kaydedin. Muhasebe araçları ve banka hesaplarıyla entegrasyon.', examples: ['Fatura oluşturma', 'Ödeme hatırlatıcıları', 'Muhasebe senkronizasyonu', 'Gider takibi'] },
-        { title: 'Randevu ve Takvim Otomasyonu', description: 'Otomatik randevu planlama, onaylar ve hatırlatmalar. Takvimler ve ekip araçlarıyla senkronizasyon.', examples: ['Online rezervasyon', 'Otomatik onay', 'Hatırlatmalar', 'Takvim senkronizasyonu'] },
-        { title: 'Veri ve Raporlama Otomasyonu', description: 'Verileri otomatik olarak toplayın, analiz edin ve görselleştirin. Birden fazla kaynaktan otomatik raporlar.', examples: ['Veri toplama', 'Dashboard güncellemeleri', 'E-posta raporları', 'KPI takibi'] }
-      ],
-      faqs: [
-        { q: 'Bir otomasyon ne kadara mal olur?', a: 'Basit otomasyonlar 500€\'dan başlar. Birden fazla sistemle daha karmaşık iş akışları 1.500€\'dan başlar. Ücretsiz ilk danışmada somut bir maliyet tahmini oluşturuyoruz.' },
-        { q: 'Hangi araçlar entegre edilebilir?', a: 'n8n ile 500\'den fazla aracı entegre edebiliyoruz: CRM sistemleri, e-posta sağlayıcıları, mağazalar, muhasebe, Google Workspace, Microsoft 365, Slack, Notion ve daha fazlası. Özel API\'ler de mümkün.' },
-        { q: 'Uygulama ne kadar sürer?', a: 'Basit iş akışları 1-2 günde hazır. Birden fazla entegrasyonlu daha karmaşık otomasyonlar 1-2 hafta gerektirir. İlk danışmada size gerçekçi bir zaman çizelgesi veriyoruz.' },
-        { q: 'Otomasyonları kendim ayarlayabilir miyim?', a: 'Evet! Sizi n8n veya kullanılan araçla eğitiyoruz. Basit ayarlamaları kendiniz yapabilirsiniz. Daha karmaşık değişiklikler için yanınızdayız.' },
-        { q: 'Bir şeyler ters giderse ne olur?', a: 'Otomasyonlarımızda yerleşik hata işleme ve bildirimler var. Bir şey çalışmazsa hemen bilgilendirilirsiniz. Ayrıca bakım paketleri sunuyoruz.' },
-        { q: 'Verilerim güvende mi?', a: 'Evet! Şifreli bağlantılar ve GDPR uyumlu çözümler kullanıyoruz. İsterseniz n8n\'i maksimum veri kontrolü için kendi sunucularınızda da barındırabiliriz.' }
-      ],
+      heroTitle: 'n8n ile Surecleri Otomatiklestirin – Is Akisi Otomasyon Ajansi Munih',
+      heroSubtitle: 'İş süreçlerinizi otomatikleştirin',
+      heroDescription: 'Tekrarlayan görevleri otomatikleştirerek ekibinizin stratejik işlere odaklanmasını sağlayın.',
+      features: 'Özellikler',
+      benefits: 'Avantajlar',
+      pricing: 'Fiyatlandırma',
+      ctaTitle: 'Hemen Başlayın',
+      ctaSubtitle: 'Otomasyonun işletmenizi nasıl dönüştürebileceğini keşfedin.',
+      ctaButton: 'Ücretsiz Danışmanlık',
+      ctaButtonAlt: 'Projeye Başla',
+    },
+    websitesPage: {
+      heroTitle: 'AI Web Siteleri',
+      heroSubtitle: 'Akıllı web deneyimleri',
+      heroDescription: 'Entegre AI özellikleriyle dönüşüm oranlarınızı artıran modern web siteleri.',
+      features: 'Özellikler',
+      benefits: 'Avantajlar',
+      pricing: 'Fiyatlandırma',
+      ctaTitle: 'Hemen Başlayın',
+      ctaSubtitle: 'AI destekli web sitenizin nasıl görünebileceğini keşfedin.',
+      ctaButton: 'Ücretsiz Danışmanlık',
+      ctaButtonAlt: 'Projeye Başla',
     },
     webKIPage: {
       badge: 'AI Web Siteleri',
@@ -4471,13 +4208,66 @@ const trOverride: Record<string, any> = {
         { q: 'Web sitesi GDPR/KVKK uyumlu mu?', a: 'Kesinlikle. GDPR/KVKK uyumlu çerez bannerları, gizlilik bildirimleri, SSL şifrelemesi ve güvenli iletişim formlarına dikkat ediyoruz. AI özelliklerinde AB/TR uyumlu çözümler kullanıyoruz.' },
         { q: 'Lansmandan sonra ne olur?', a: 'Güncellemeler, güvenlik ve destek için bakım paketleri sunuyoruz. Ayrıca sürekli olarak yeni AI özellikleri ekleyebilir ve analytics verilerine göre web sitesini optimize edebiliriz.' }
       ],
-      seoTitle: 'AI Chatbot ile Web Sitesi Geliştirme – Web Tasarım Ajansı',
-      seoContent: [
-        'Fürstenfeldbruck merkezli ExtruCon GmbH, entegre AI özellikleriyle modern web siteleri geliştirmektedir. GPT-4 chatbotlarından otomatik içerik oluşturmaya, akıllı SEO optimizasyonuna kadar – yapay zekayı web sitenize getiriyoruz.',
-        'AI web sitelerimiz dönüşümleri artırır: Chatbotlar soruları 7/24 yanıtlar, kişiselleştirilmiş içerik ziyaretçilere bireysel olarak hitap eder ve SEO-optimize edilmiş metinler otomatik olarak oluşturulur. Münih, Fürstenfeldbruck ve Bavyera\'daki şirketler için ideal.',
-        'AI uzmanlığına sahip web tasarım ajansı olarak 1.500€\'dan landing page, 3.500€\'dan kurumsal web sitesi ve 5.000€\'dan e-ticaret çözümleri sunuyoruz. Teknolojiler: OpenAI GPT ve Claude AI entegrasyonu ile React, Next.js, WordPress, Webflow.',
-        'Avantajlar: Chatbotlar aracılığıyla 7/24 müşteri hizmeti, otomatik içerik oluşturma, GDPR/KVKK uyumlu çözümler. Fürstenfeldbruck\'ta ücretsiz web tasarım danışmanlığı için bizimle iletişime geçin.'
-      ],
+    },
+    socialMediaPage: {
+      heroTitle: 'Sosyal Medya',
+      heroSubtitle: 'AI destekli sosyal medya yönetimi',
+      heroDescription: 'Marka bilinirliğinizi artırın ve hedef kitlenizle etkileşimi güçlendirin.',
+      features: 'Özellikler',
+      benefits: 'Avantajlar',
+      pricing: 'Fiyatlandırma',
+      ctaTitle: 'Hemen Başlayın',
+      ctaSubtitle: 'Sosyal medya stratejinizi bir üst seviyeye taşıyın.',
+      ctaButton: 'Ücretsiz Danışmanlık',
+      ctaButtonAlt: 'Projeye Başla',
+    },
+    contentPage: {
+      heroTitle: 'İçerik Oluşturma',
+      heroSubtitle: 'AI destekli içerik üretimi',
+      heroDescription: 'Blog yazıları, sosyal medya içerikleri ve pazarlama materyalleri için AI destekli çözümler.',
+      features: 'Özellikler',
+      benefits: 'Avantajlar',
+      pricing: 'Fiyatlandırma',
+      ctaTitle: 'Hemen Başlayın',
+      ctaSubtitle: 'İçerik stratejinizi AI ile güçlendirin.',
+      ctaButton: 'Ücretsiz Danışmanlık',
+      ctaButtonAlt: 'Projeye Başla',
+    },
+    marketingPage: {
+      heroTitle: 'Performans Pazarlama',
+      heroSubtitle: 'Veri odaklı pazarlama stratejileri',
+      heroDescription: 'AI optimizasyonlu kampanyalarla ROI\'nizi maksimize edin.',
+      features: 'Özellikler',
+      benefits: 'Avantajlar',
+      pricing: 'Fiyatlandırma',
+      ctaTitle: 'Hemen Başlayın',
+      ctaSubtitle: 'Pazarlama performansınızı artırın.',
+      ctaButton: 'Ücretsiz Danışmanlık',
+      ctaButtonAlt: 'Projeye Başla',
+    },
+    brandPage: {
+      heroTitle: 'Marka Kimliği',
+      heroSubtitle: 'Güçlü bir marka oluşturun',
+      heroDescription: 'Profesyonel marka kimliği tasarımı ve strateji geliştirme hizmetleri.',
+      features: 'Özellikler',
+      benefits: 'Avantajlar',
+      pricing: 'Fiyatlandırma',
+      ctaTitle: 'Hemen Başlayın',
+      ctaSubtitle: 'Markanızı bir sonraki seviyeye taşıyın.',
+      ctaButton: 'Ücretsiz Danışmanlık',
+      ctaButtonAlt: 'Projeye Başla',
+    },
+    webPage: {
+      heroTitle: 'Web Geliştirme',
+      heroSubtitle: 'Modern web çözümleri',
+      heroDescription: 'Hızlı, güvenli ve ölçeklenebilir web uygulamaları geliştiriyoruz.',
+      features: 'Özellikler',
+      benefits: 'Avantajlar',
+      pricing: 'Fiyatlandırma',
+      ctaTitle: 'Hemen Başlayın',
+      ctaSubtitle: 'Web projenizi hayata geçirin.',
+      ctaButton: 'Ücretsiz Danışmanlık',
+      ctaButtonAlt: 'Projeye Başla',
     },
     aboutPage: {
       badge: 'ExtruCon Hakkında',
@@ -4707,17 +4497,10 @@ const trOverride: Record<string, any> = {
       weekdaysFull: ['Pazar', 'Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi'],
       months: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık']
     },
+  },
 };
 
-// Create merged translations (German is base, others are overrides)
-export const translations: Record<Language, Translation> = {
-  de: baseTranslation,
-  en: deepMerge(baseTranslation, enOverride),
-  hr: deepMerge(baseTranslation, hrOverride),
-  tr: deepMerge(baseTranslation, trOverride),
-};
-
-type Translations = Translation;
+type Translations = typeof translations.de;
 
 interface LanguageContextType {
   language: Language;
@@ -4740,20 +4523,7 @@ const countryToLanguage: Record<string, Language> = {
   'CY': 'tr',
 };
 
-function getCookie(name: string): string | null {
-  if (typeof document === 'undefined') return null;
-  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-  return match ? match[2] : null;
-}
-
 async function detectCountryLanguage(): Promise<Language> {
-  // First check for server-set geo cookie (set by Express middleware)
-  const geoCookie = getCookie('extrucon_geo_lang');
-  if (geoCookie && ['de', 'en', 'hr', 'tr'].includes(geoCookie)) {
-    return geoCookie as Language;
-  }
-
-  // Fallback to API-based detection
   try {
     const response = await fetch('https://ipapi.co/json/', { 
       signal: AbortSignal.timeout(3000) 
@@ -4768,65 +4538,37 @@ async function detectCountryLanguage(): Promise<Language> {
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  // Determine initial language with correct priority
-  const getInitialLanguage = (): Language => {
-    if (typeof window === 'undefined') return 'de';
-    
-    // Priority 1: URL query param (highest - allows sharing links in specific language)
-    const urlParams = new URLSearchParams(window.location.search);
-    const langParam = urlParams.get('lang') as Language;
-    if (langParam && ['de', 'en', 'hr', 'tr'].includes(langParam)) {
-      return langParam;
+  const [language, setLanguage] = useState<Language>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('language') as Language;
+      if (saved && ['de', 'en', 'hr', 'tr'].includes(saved)) return saved;
     }
-    
-    // Priority 2: localStorage (explicit user choice via language switcher)
-    const savedLang = localStorage.getItem('language') as Language;
-    if (savedLang && ['de', 'en', 'hr', 'tr'].includes(savedLang)) {
-      return savedLang;
-    }
-    
-    // Priority 3: geo cookie (server-detected country) - only for first-time visitors
-    const hasVisited = localStorage.getItem('geoDetected');
-    if (!hasVisited) {
-      const geoCookie = getCookie('extrucon_geo_lang');
-      if (geoCookie && ['de', 'en', 'hr', 'tr'].includes(geoCookie)) {
-        return geoCookie as Language;
-      }
-    }
-    
-    // Priority 4: Default to German
     return 'de';
-  };
+  });
 
-  const [language, setLanguage] = useState<Language>(getInitialLanguage);
   const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
     
-    const currentLang = getInitialLanguage();
+    const saved = localStorage.getItem('language');
+    const hasVisited = localStorage.getItem('geoDetected');
     
-    // Persist language choice and mark as visited
-    if (!localStorage.getItem('language')) {
-      localStorage.setItem('language', currentLang);
+    if (!saved && !hasVisited) {
+      detectCountryLanguage().then((detectedLang) => {
+        setLanguage(detectedLang);
+        localStorage.setItem('language', detectedLang);
+        localStorage.setItem('geoDetected', 'true');
+        setIsInitialized(true);
+      });
+    } else {
+      setIsInitialized(true);
     }
-    if (!localStorage.getItem('geoDetected')) {
-      localStorage.setItem('geoDetected', 'true');
-    }
-    
-    // Update state if different (e.g., from URL param)
-    if (currentLang !== language) {
-      setLanguage(currentLang);
-    }
-    
-    setIsInitialized(true);
   }, []);
 
   const handleSetLanguage = (lang: Language) => {
     setLanguage(lang);
     localStorage.setItem('language', lang);
-    // Clear geo detected so user's explicit choice is remembered
-    localStorage.setItem('geoDetected', 'true');
   };
 
   const t = translations[language];

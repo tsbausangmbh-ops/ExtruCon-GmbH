@@ -4,7 +4,7 @@ hidden = [".config", ".git", "generated-icon.png", "node_modules", "dist"]
 
 [nix]
 channel = "stable-24_05"
-packages = ["imagemagick", "optipng", "jpegoptim", "chromium", "glib", "nss", "nspr", "atk", "cups", "dbus", "expat", "libdrm", "xorg.libxcb", "xorg.libX11", "xorg.libXcomposite", "xorg.libXdamage", "xorg.libXext", "xorg.libXfixes", "xorg.libXrandr", "cairo", "pango", "mesa", "alsa-lib"]
+packages = ["imagemagick", "optipng", "jpegoptim"]
 
 [deployment]
 deploymentTarget = "autoscale"
@@ -14,14 +14,6 @@ run = ["npm", "run", "start"]
 [[ports]]
 localPort = 5000
 externalPort = 80
-
-[[ports]]
-localPort = 30107
-externalPort = 3002
-
-[[ports]]
-localPort = 32483
-externalPort = 3000
 
 [env]
 PORT = "5000"

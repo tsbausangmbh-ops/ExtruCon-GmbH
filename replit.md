@@ -82,63 +82,14 @@ shared/           # Shared types and schemas
 - **GeoLinks Component**: Adds geo-targeted links for local SEO (Fürstenfeldbruck, München, Bayern)
 
 ### Pages with RelatedServices
-All pages now use the unified `RelatedServices` component from `InternalLinks.tsx` with the `currentPage` prop:
-- Main services: ki-agenten, automatisierungen, webseiten-ki
-- Landing pages: marketing, social-media, content, brand, web, ki-automatisierung, seo
-- Other pages: faq, chatbot, contact, referenzen, ratgeber, ueber-uns
+Main service pages use the new `RelatedServices` component from `InternalLinks.tsx`:
+- KIAgenten.tsx → Links to Automatisierungen, WebseitenKI, Chatbot
+- Automatisierungen.tsx → Links to KI-Agenten, WebseitenKI, Contact
+- WebseitenKI.tsx → Links to KI-Agenten, Automatisierungen, Referenzen
+- FAQ.tsx, Chatbot.tsx, Contact.tsx, Referenzen.tsx → Contextual service links
+
+Sub-service pages use the legacy `RelatedServices` from `client/src/components/RelatedServices.tsx`:
+- services/Marketing.tsx, services/SocialMedia.tsx, services/Content.tsx, etc.
 
 ### i18n for Related Services
 All `relatedServices` translations are in `client/src/lib/i18n.tsx` for DE, EN, HR, TR languages
-
-## Structured Data & Schema Markup
-
-### Global Schemas (index.html)
-- **Organization**: Complete company information with contact details, address, social links
-- **LocalBusiness**: Local business info with geo-coordinates, opening hours, area served
-- **WebSite**: Site identification with publisher reference
-- **WebPage with Speakable**: Voice search optimization for Google Assistant/Alexa using XPath selectors
-
-### Service Page Schemas
-All 7 service pages (`/leistungen/*`) include:
-- **Service Schema**: Service type, provider, area served, description
-- **FAQPage Schema**: 3 relevant FAQs per service for rich snippets
-
-Service pages with schemas:
-- Marketing, SocialMedia, Content, Brand, Web, SEO, KI
-
-### Geo-Targeting
-- Geo meta tags: DE-BY region, Fürstenfeldbruck placename, coordinates
-- LocalBusiness areaServed: Germany, Croatia, Turkey, Bayern, München, Fürstenfeldbruck
-- GeoLinks component for location-specific internal links
-
-### Multi-Language & Geo-IP Detection
-- **Languages**: German (de), English (en), Croatian (hr), Turkish (tr)
-- **Language precedence** (in order):
-  1. URL query param (`?lang=tr`) - highest priority
-  2. localStorage - explicit user choice (persisted when user changes language)
-  3. Server-set geo cookie (`extrucon_geo_lang`) - from geo-IP detection
-  4. Default: German (`de`)
-- **Server-side geo-IP**: Middleware in `server/index.ts` checks `CF-IPCountry` and `X-Vercel-IP-Country` headers, sets cookie for new visitors
-- **Antalya landing page**: `/antalya` route with Turkish content, LocalBusiness schema targeting Turkey (Antalya, Istanbul, Ankara, Izmir)
-- **Zagreb landing page**: `/zagreb` route with Croatian content, LocalBusiness schema targeting Croatia (Zagreb, Split, Rijeka, Osijek)
-
-## Pre-Rendering for SEO
-
-### Setup
-A custom Puppeteer-based pre-rendering script is available at `script/prerender.ts` to generate static HTML for all routes, enabling better SEO for search engines and AI assistants.
-
-### Usage
-```bash
-# First build the app
-npm run build
-
-# Then run pre-rendering
-npx tsx script/prerender.ts
-```
-
-### Rendered Routes
-The script pre-renders all main routes including:
-- Homepage and main service pages
-- All /leistungen/* sub-pages
-- Location pages (/muenchen/*, /starnberg, etc.)
-- Legal pages (impressum, datenschutz, etc.)

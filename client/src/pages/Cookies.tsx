@@ -36,12 +36,10 @@ export default function Cookies() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Cookie-Richtlinie | DSGVO-konform | ExtruCon GmbH"
-        description="Cookie-Richtlinie der ExtruCon GmbH. DSGVO-konforme Cookie-Einstellungen verwalten. Transparente Datenverarbeitung bei Ihrer KI-Agentur Fürstenfeldbruck."
-        keywords="Cookie-Richtlinie, Cookies ExtruCon, DSGVO Cookies, Cookie-Einstellungen, KI-Agentur Datenschutz"
+        title="Cookie-Richtlinie | ExtruCon GmbH Fürstenfeldbruck"
+        description="Cookie-Richtlinie der ExtruCon GmbH. Hier können Sie Ihre Cookie-Einstellungen für extrucon.de verwalten. DSGVO-konform, transparent und sicher. Ihre KI-Agentur bei München."
+        keywords="Cookies, Cookie-Richtlinie, Datenschutz, ExtruCon, Cookie-Einstellungen"
         canonical="https://extrucon.de/cookies"
-        geoRegion="DE-BY"
-        geoPlacename="Fürstenfeldbruck"
       />
       <Navbar />
       <main className="container mx-auto px-4 py-16">

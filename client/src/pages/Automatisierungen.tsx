@@ -3,7 +3,6 @@ import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks, RelatedServices } from "@/components/InternalLinks";
-import { LinkedParagraph } from "@/components/KeywordLinker";
 import { motion } from "framer-motion";
 import { Workflow, Zap, ArrowRight, CheckCircle, Clock, TrendingUp, Shield, RefreshCw, Mail, FileText, Users, ShoppingCart, Calendar, Database, Settings, Cpu, Link2, GitBranch, Layers, Play, ChevronDown, HelpCircle } from "lucide-react";
 import { useState } from "react";
@@ -136,21 +135,28 @@ const automationSchema = [
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": "https://extrucon.de/automatisierungen#service",
-    "name": "KI-Workflow-Automatisierung mit n8n & GPT-4",
-    "alternateName": ["AI Automation", "GPT-4 Workflow Automation", "KI-gestützte Prozessautomatisierung"],
-    "description": "Professionelle KI-gestützte Geschäftsprozess-Automatisierung mit n8n, Make und GPT-4. E-Mail, CRM, Rechnungen automatisieren. Bis zu 80% Zeitersparnis durch intelligente Workflows.",
+    "name": "Workflow-Automatisierung mit n8n",
+    "description": "Professionelle Geschäftsprozess-Automatisierung mit n8n. E-Mail, CRM, Rechnungen und mehr automatisieren. Bis zu 80% Zeitersparnis.",
     "provider": {
       "@type": "LocalBusiness",
       "name": "ExtruCon GmbH",
-      "@id": "https://extrucon.de/#organization"
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hasenheide 8",
+        "addressLocality": "Fürstenfeldbruck",
+        "postalCode": "82256",
+        "addressRegion": "Bayern",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.1789,
+        "longitude": 11.2546
+      },
+      "telephone": "+49-89-444438879"
     },
-    "areaServed": [
-      { "@type": "City", "name": "Fürstenfeldbruck" },
-      { "@type": "City", "name": "München" },
-      { "@type": "State", "name": "Bayern" },
-      { "@type": "Country", "name": "Deutschland" }
-    ],
-    "serviceType": ["KI-Automatisierung", "Workflow Automation", "GPT-4 Integration", "n8n Workflows"],
+    "areaServed": ["Bayern", "Deutschland", "Österreich", "Schweiz"],
+    "serviceType": "Workflow-Automatisierung",
     "offers": {
       "@type": "Offer",
       "availability": "https://schema.org/InStock",
@@ -175,26 +181,26 @@ const automationSchema = [
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Wie nutzt ExtruCon KI für Workflow-Automatisierung?",
+        "name": "Was ist n8n und warum nutzt ExtruCon es?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Wir integrieren GPT-4 und Claude AI in n8n-Workflows für intelligente E-Mail-Klassifizierung, automatische Dokumentenverarbeitung und KI-gestützte Entscheidungsfindung in Geschäftsprozessen."
+          "text": "n8n ist eine leistungsstarke Open-Source Workflow-Automatisierungsplattform. Wir nutzen n8n, weil es flexibel, skalierbar und kosteneffizient ist – ideal für maßgeschneiderte Automatisierungslösungen."
         }
       },
       {
         "@type": "Question",
-        "name": "Was ist n8n und warum nutzt ExtruCon es mit KI?",
+        "name": "Welche Prozesse können automatisiert werden?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "n8n ist eine leistungsstarke Open-Source Workflow-Plattform. Kombiniert mit GPT-4 und KI-Nodes ermöglicht sie intelligente Automatisierungen, die über einfache Wenn-Dann-Regeln hinausgehen."
+          "text": "Nahezu alle wiederkehrenden Geschäftsprozesse: E-Mail-Workflows, CRM-Synchronisation, Rechnungsstellung, Bestandsmanagement, Kundenkommunikation und viele mehr."
         }
       },
       {
         "@type": "Question",
-        "name": "Welche KI-gestützten Prozesse können automatisiert werden?",
+        "name": "Wie viel Zeit kann ich mit Automatisierung sparen?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "KI-gestützte E-Mail-Triage, intelligente Lead-Qualifizierung mit GPT-4, automatische Dokumentenextraktion, KI-Chatbot-Integrationen, und Sentiment-Analyse für Kundenfeedback."
+          "text": "Unsere Kunden berichten von Zeiteinsparungen von bis zu 80% bei wiederkehrenden Aufgaben. Die genaue Ersparnis hängt von Ihren spezifischen Prozessen ab."
         }
       }
     ]
@@ -208,9 +214,9 @@ export default function Automatisierungen() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead 
-        title="KI-Workflow-Automatisierung mit n8n & GPT-4 | ExtruCon – 80% Zeit sparen"
-        description="KI-gestützte Workflow-Automatisierung mit n8n, Make & GPT-4. E-Mail, CRM, Rechnungen automatisieren. Bis zu 80% Zeitersparnis. KI-Agentur Fürstenfeldbruck."
-        keywords="KI Automatisierung, n8n GPT-4, Workflow Automatisierung KI, AI Prozessautomatisierung, Business Automation KI, Zapier Alternative, Make Alternative, n8n Agentur München, Claude AI Integration, GPT-4 Workflow"
+        title="Workflow-Automatisierung mit n8n | ExtruCon Fürstenfeldbruck – 80% Zeit sparen"
+        description="Automatisieren Sie Ihre Geschäftsprozesse mit n8n: E-Mail, CRM, Rechnungen & mehr. Bis zu 80% Zeitersparnis. KI-Agentur aus Fürstenfeldbruck – deutschlandweit."
+        keywords="n8n Automatisierung, Workflow Automatisierung, Prozessautomatisierung, Business Automation, Zapier Alternative, Make Alternative, Automatisierung München, n8n Agentur"
         canonical="https://extrucon.de/automatisierungen"
         geoRegion="DE-BY"
         geoPlacename="Fürstenfeldbruck"
@@ -637,24 +643,6 @@ export default function Automatisierungen() {
             </a>
           </div>
         </section>
-
-        {/* SEO Content Section */}
-        {t.automationPage.seoContent && (
-          <section className="py-16 bg-white/[0.02]">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-2xl font-bold font-display text-white mb-8">
-                  {t.automationPage.seoTitle}
-                </h2>
-                <div className="space-y-4 text-gray-400 leading-relaxed">
-                  {t.automationPage.seoContent.map((paragraph, i) => (
-                    <LinkedParagraph key={i} currentPage="/automatisierungen" maxLinks={2}>{paragraph}</LinkedParagraph>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
 
         <RelatedServices currentPage="automatisierungen" />
         <ExploreMoreSection />

@@ -1,4 +1,5 @@
-import heroBg from "@assets/generated_images/optimized/hero-bg.webp";
+import { motion } from "framer-motion";
+import heroBg from "@assets/generated_images/futuristic_digital_landscape_with_connecting_nodes.png";
 import { ArrowRight, MapPin, Bot, Zap, Clock } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 
@@ -12,16 +13,17 @@ export function Hero() {
           src={heroBg} 
           alt="KI-Agentur Fürstenfeldbruck - Digitale Automatisierung und Marketing" 
           className="w-full h-full object-cover opacity-60"
-          fetchPriority="high"
-          loading="eager"
-          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
       </div>
 
       <div className="container mx-auto px-4 z-40 relative">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="animate-fade-in-up">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <div className="flex items-center justify-center gap-2 mb-4">
               <span className="inline-flex items-center gap-1.5 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium backdrop-blur-sm" itemProp="areaServed">
                 <MapPin className="w-3.5 h-3.5" />
@@ -64,7 +66,7 @@ export function Hero() {
                 {t.hero.ctaBot} <Bot className="ml-2 w-4 h-4" />
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 

@@ -2,59 +2,36 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ExploreMoreSection, LocationLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Bot, Zap, Building2, MapPin, Phone, ArrowRight, CheckCircle, Workflow, Users, Clock, Shield, TrendingUp, Globe, Star, Briefcase } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Bogenhausen() {
-  const schemaData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "KI-Agentur Bogenhausen | ExtruCon GmbH",
-      "description": "Premium KI-Agentur für München-Bogenhausen. KI-Agenten mit GPT-4, Automatisierung und intelligente Websites für Unternehmen im Premiumviertel.",
-      "url": "https://extrucon.de/muenchen/bogenhausen",
-      "mainEntity": {
-        "@type": "LocalBusiness",
-        "@id": "https://extrucon.de/#localbusiness"
-      },
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de" },
-          { "@type": "ListItem", "position": 2, "name": "München", "item": "https://extrucon.de/muenchen" },
-          { "@type": "ListItem", "position": 3, "name": "Bogenhausen", "item": "https://extrucon.de/muenchen/bogenhausen" }
-        ]
-      },
-      "areaServed": [
-        { "@type": "Place", "name": "München-Bogenhausen" },
-        { "@type": "Place", "name": "Herzogpark" },
-        { "@type": "Place", "name": "Oberföhring" },
-        { "@type": "Place", "name": "Daglfing" },
-        { "@type": "Place", "name": "Prinzregentenplatz" }
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "KI-Agentur Bogenhausen | ExtruCon GmbH",
+    "description": "KI-Agentur für München-Bogenhausen. KI-Agenten, Automatisierung und intelligente Websites für Unternehmen im Premiumviertel Bogenhausen.",
+    "url": "https://extrucon.de/muenchen/bogenhausen",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "@id": "https://extrucon.de/#localbusiness"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de" },
+        { "@type": "ListItem", "position": 2, "name": "München", "item": "https://extrucon.de/muenchen" },
+        { "@type": "ListItem", "position": 3, "name": "Bogenhausen", "item": "https://extrucon.de/muenchen/bogenhausen" }
       ]
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "@id": "https://extrucon.de/muenchen/bogenhausen#service",
-      "name": "Premium KI-Lösungen Bogenhausen",
-      "description": "Exklusive KI-Agenten und Automatisierung für Premiumunternehmen in München-Bogenhausen. GPT-4, Claude AI für Vermögensverwalter, Anwälte, Privatärzte.",
-      "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
-      "areaServed": { "@type": "Place", "name": "München-Bogenhausen" },
-      "serviceType": ["Premium KI-Agenten", "Diskrete Automatisierung", "VIP Kundenservice"]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "Bietet ExtruCon Vor-Ort-Service in Bogenhausen?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir bieten diskrete Vor-Ort-Beratung in Bogenhausen, Herzogpark und Oberföhring. Von Fürstenfeldbruck sind wir in 25 Minuten bei Ihnen." } },
-        { "@type": "Question", "name": "Welche KI-Lösungen eignen sich für Vermögensverwalter?", "acceptedAnswer": { "@type": "Answer", "text": "Für Family Offices und Vermögensverwalter entwickeln wir KI-gestützte Kundenbetreuung, automatisierte Reports und intelligente Terminbuchung – DSGVO-konform und diskret." } },
-        { "@type": "Question", "name": "Können KI-Agenten für Anwaltskanzleien eingesetzt werden?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir entwickeln KI-Agenten für automatisierte Mandantenanfragen, intelligentes Dokumentenmanagement und 24/7 Erreichbarkeit – ideal für Kanzleien am Prinzregentenplatz." } }
-      ]
-    }
-  ];
+    "areaServed": [
+      { "@type": "Place", "name": "München-Bogenhausen" },
+      { "@type": "Place", "name": "Herzogpark" },
+      { "@type": "Place", "name": "Oberföhring" },
+      { "@type": "Place", "name": "Daglfing" }
+    ]
+  };
 
   const services = [
     { icon: Bot, title: "Premium KI-Agenten", description: "Maßgeschneiderte KI-Assistenten für exklusive Dienstleister und Premiummarken in Bogenhausen.", link: "/ki-agenten" },
@@ -73,12 +50,9 @@ export default function Bogenhausen() {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="KI-Agentur Bogenhausen | GPT-4 & Claude AI für Premium-Unternehmen | ExtruCon"
-        description="Premium KI-Agentur für München-Bogenhausen: Exklusive KI-Agenten mit GPT-4 & Automatisierung für Vermögensverwalter, Anwälte, Privatärzte. ✓ Diskret ✓ Vor-Ort-Service ✓ DSGVO"
-        keywords="KI Agentur Bogenhausen, KI München Bogenhausen, GPT-4 Vermögensverwaltung, KI Anwaltskanzlei, Premium KI-Agenten, Herzogpark KI, Oberföhring Automatisierung"
+        title="KI-Agentur Bogenhausen | ExtruCon – Premium KI-Lösungen München"
+        description="KI-Agentur für München-Bogenhausen: Exklusive KI-Agenten & Automatisierung für Premiumunternehmen. Vermögensverwalter, Anwälte, Privatärzte. ✓ Diskret ✓ Vor Ort"
         canonical="https://extrucon.de/muenchen/bogenhausen"
-        geoRegion="DE-BY"
-        geoPlacename="München-Bogenhausen"
         schema={schemaData}
       />
       <Navbar />
@@ -162,9 +136,6 @@ export default function Bogenhausen() {
             </div>
           </div>
         </section>
-
-        <LocationLinks />
-        <ExploreMoreSection />
       </main>
       <Footer />
     </div>

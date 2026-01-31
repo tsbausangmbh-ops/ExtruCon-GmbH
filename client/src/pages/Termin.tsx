@@ -15,21 +15,27 @@ const terminSchema = [
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": "https://extrucon.de/termin#service",
-    "name": "Kostenlose GPT-4 & KI-Beratung",
-    "alternateName": ["Free AI Consultation", "Kostenlose KI-Erstberatung"],
-    "description": "Kostenlose 30-minütige Beratung zu GPT-4 Chatbots, Claude AI Agenten, n8n Automatisierung oder KI-Webentwicklung mit ExtruCon GmbH.",
+    "name": "Kostenlose KI-Beratung",
+    "description": "Buchen Sie eine kostenlose 30-minütige Beratung zu KI-Agenten, Automatisierung oder Webentwicklung mit ExtruCon GmbH in Fürstenfeldbruck.",
     "provider": {
       "@type": "LocalBusiness",
       "name": "ExtruCon GmbH",
-      "@id": "https://extrucon.de/#organization"
+      "telephone": "+49-89-444438879",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hasenheide 8",
+        "addressLocality": "Fürstenfeldbruck",
+        "postalCode": "82256",
+        "addressRegion": "Bayern",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.1789,
+        "longitude": 11.2546
+      }
     },
-    "areaServed": [
-      { "@type": "City", "name": "Fürstenfeldbruck" },
-      { "@type": "City", "name": "München" },
-      { "@type": "State", "name": "Bayern" },
-      { "@type": "Country", "name": "Deutschland" }
-    ],
-    "serviceType": ["KI-Beratung", "GPT-4 Consultation", "Automatisierung Erstgespräch"],
+    "areaServed": ["Bayern", "Deutschland"],
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -422,9 +428,9 @@ export default function Termin() {
   return (
     <div className="min-h-screen bg-slate-900">
       <SEOHead 
-        title="Kostenlose GPT-4 & KI-Beratung buchen | ExtruCon Termin"
-        description="Kostenlose 30-Min KI-Beratung: GPT-4 Chatbots, Claude AI, n8n Automatisierung. Online-Terminbuchung bei ExtruCon Fürstenfeldbruck/München."
-        keywords="KI Beratung kostenlos buchen, GPT-4 Beratung Termin, Automatisierung Erstgespräch, ExtruCon Termin, München KI Agentur"
+        title="Kostenlose KI-Beratung buchen | ExtruCon Fürstenfeldbruck"
+        description="Buchen Sie jetzt Ihre kostenlose 30-minütige KI-Beratung. Online-Terminbuchung für KI-Agenten, Automatisierung und Webentwicklung."
+        keywords="KI Beratung buchen, Termin KI Agentur, Beratungsgespräch Automatisierung, ExtruCon Termin"
         canonical="https://extrucon.de/termin"
         geoRegion="DE-BY"
         geoPlacename="Fürstenfeldbruck"

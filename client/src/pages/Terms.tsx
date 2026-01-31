@@ -9,12 +9,10 @@ export default function Terms() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="AGB | Allgemeine Geschäftsbedingungen KI-Agentur | ExtruCon GmbH"
-        description="AGB der ExtruCon GmbH für KI-Agenten, GPT-4 Chatbots, n8n Automatisierung, Marketing & Webentwicklung. B2B & B2C. Rechtssicher & transparent."
-        keywords="AGB ExtruCon, Geschäftsbedingungen KI-Agentur, AGB GPT-4 Chatbot, KI Vertrag, Automatisierung AGB"
+        title="AGB | Allgemeine Geschäftsbedingungen | ExtruCon GmbH"
+        description="Allgemeine Geschäftsbedingungen der ExtruCon GmbH für KI, Marketing, Social Media und Webentwicklung."
+        keywords="AGB, Geschäftsbedingungen, ExtruCon"
         canonical="https://extrucon.de/agb"
-        geoRegion="DE-BY"
-        geoPlacename="Fürstenfeldbruck"
       />
       <Navbar />
       <main className="pt-24">

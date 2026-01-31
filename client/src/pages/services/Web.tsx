@@ -3,12 +3,11 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Globe, Check, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import webImg from "@assets/generated_images/optimized/holographic_creative_interface.webp";
+import webImg from "@assets/generated_images/holographic_creative_interface.png";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedServices, ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
-import { LinkedParagraph } from "@/components/KeywordLinker";
 
 export default function Web() {
   const { t } = useLanguage();
@@ -18,39 +17,10 @@ export default function Web() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="KI-Webentwicklung | Websites mit GPT-4 Chatbot | ExtruCon"
-        description="Moderne KI-Webentwicklung mit GPT-4 Chatbot-Integration. React, Next.js, WordPress mit KI-Features. Intelligente Websites für Ihr Unternehmen."
-        keywords="KI Webentwicklung, Website mit Chatbot, GPT-4 Website, KI Webdesign München, React KI Integration, Chatbot Website, AI Website Fürstenfeldbruck"
+        title="Webentwicklung Fürstenfeldbruck | Professionelle Websites | ExtruCon"
+        description="Moderne Webentwicklung mit KI-Integration. React, Next.js, WordPress & Shopify. Webdesign Agentur Fürstenfeldbruck bei München."
+        keywords="Webentwicklung Fürstenfeldbruck, Webdesign München, Website erstellen, React Entwicklung"
         canonical="https://extrucon.de/leistungen/webentwicklung"
-        geoRegion="DE-BY"
-        geoPlacename="Fürstenfeldbruck"
-        schema={[
-          {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "@id": "https://extrucon.de/leistungen/webentwicklung#service",
-            "name": "KI-Webentwicklung",
-            "alternateName": ["AI Web Development", "Website mit Chatbot", "KI-integrierte Website"],
-            "description": "Moderne Webentwicklung mit KI-Integration. React, Next.js, WordPress mit GPT-4 Chatbots, intelligente Suchfunktionen und personalisierte Inhalte.",
-            "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
-            "areaServed": [
-              { "@type": "City", "name": "Fürstenfeldbruck" },
-              { "@type": "City", "name": "München" },
-              { "@type": "State", "name": "Bayern" },
-              { "@type": "Country", "name": "Deutschland" }
-            ],
-            "serviceType": ["AI Web Development", "KI Website", "Chatbot Integration"]
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              { "@type": "Question", "name": "Kann ich einen KI-Chatbot auf meiner Website haben?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir integrieren GPT-4 oder Claude AI Chatbots, die Kundenanfragen automatisch beantworten und Leads qualifizieren." } },
-              { "@type": "Question", "name": "Welche KI-Features bieten Sie für Websites?", "acceptedAnswer": { "@type": "Answer", "text": "Chatbots, intelligente Suche, personalisierte Inhalte, automatische FAQ-Generierung und KI-gestützte Produktempfehlungen." } },
-              { "@type": "Question", "name": "Was kostet eine Website mit KI-Integration?", "acceptedAnswer": { "@type": "Answer", "text": "Eine Website mit KI-Chatbot beginnt ab 4.000€. Komplexe KI-Web-Applikationen kosten 10.000€+." } }
-            ]
-          }
-        ]}
       />
       <Navbar />
       <main className="pt-24">
@@ -61,7 +31,7 @@ export default function Web() {
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img src={webImg} alt="Webentwicklung Agentur Fürstenfeldbruck München - KI-gestützte Websites und Webanwendungen mit React und modernen Technologien" className="w-full h-full object-cover opacity-20" loading="lazy" width={1920} height={1080} decoding="async" />
+            <img src={webImg} alt={t.webPage.heroImageAlt} className="w-full h-full object-cover opacity-20" loading="lazy" />
             <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
@@ -147,24 +117,6 @@ export default function Web() {
             </div>
           </div>
         </section>
-
-        {/* SEO Content Section */}
-        {t.webPage.seoContent && (
-          <section className="py-16">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-bold font-display text-white mb-8">{t.webPage.seoTitle}</h2>
-                <div className="prose prose-invert max-w-none text-gray-300 space-y-6">
-                  {t.webPage.seoContent.map((paragraph, i) => (
-                    <LinkedParagraph key={i} maxLinks={2} currentPage="/leistungen/web" excludeKeywords={["Webentwicklung", "web development", "web geliştirme", "web razvoj"]}>
-                      {paragraph}
-                    </LinkedParagraph>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
 
         {/* CTA */}
         <section className="py-16 bg-gradient-to-r from-blue-900/20 to-cyan-900/20">

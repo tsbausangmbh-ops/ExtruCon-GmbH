@@ -2,7 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Award, ArrowRight, MapPin, ExternalLink, Star, Users, Zap } from "lucide-react";
 import { motion } from "framer-motion";
-import heroImg from "@assets/generated_images/optimized/portfolio_showcase_tech_visual.webp";
+import heroImg from "@assets/generated_images/portfolio_showcase_tech_visual.png";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -59,22 +59,6 @@ export default function Referenzen() {
       results: ["Full-Service Sanierung", "Alle Gewerke", "KFW-Förderberatung"],
       color: "pink",
       link: "https://komplettsanierungen-haus-wohnung.de"
-    },
-    {
-      title: "KSHW Mont – KI-Agentur München",
-      category: "Webentwicklung + KI",
-      description: "Moderne KI-Agentur Website mit integrierten KI-Bots und professionellem Webdesign. Automatisierte Kundenberatung und Lead-Generierung.",
-      results: ["KI-Chatbot integriert", "Modernes Webdesign", "Automatisierte Beratung"],
-      color: "cyan",
-      link: "https://kshwmont.com"
-    },
-    {
-      title: "TS Bausan – Bauunternehmen München",
-      category: "Webentwicklung",
-      description: "Professionelle Website für Bauunternehmen. Komplette Bauleistungen von Neubau bis Sanierung mit modernem Webauftritt.",
-      results: ["Bauunternehmen", "Neubau & Sanierung", "Professioneller Service"],
-      color: "orange",
-      link: "https://ts-bausan.de"
     },
     {
       title: "FitLife München – Fitness-Studio Kette",
@@ -160,12 +144,10 @@ export default function Referenzen() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="Referenzen | GPT-4 Chatbots & KI-Projekte | ExtruCon Portfolio"
-        description="100+ erfolgreiche KI-Projekte: GPT-4 Chatbots, n8n Automatisierungen, KI-Websites. Referenzen von Ihrer KI-Agentur Fürstenfeldbruck bei München."
-        keywords="KI Referenzen, GPT-4 Projekte, Chatbot Portfolio, n8n Automatisierung Beispiele, KI-Website Referenzen, ExtruCon Portfolio"
+        title="Referenzen & Erfolgsgeschichten | ExtruCon KI-Agentur"
+        description="Unsere erfolgreichen Projekte: KI-Agenten, Websites, Automatisierungen und mehr. Überzeugen Sie sich von unserer Arbeit. Agentur Fürstenfeldbruck."
+        keywords="Referenzen, Portfolio, Erfolgsgeschichten, KI Projekte, Webdesign Projekte, Fürstenfeldbruck"
         canonical="https://extrucon.de/referenzen"
-        geoRegion="DE-BY"
-        geoPlacename="Fürstenfeldbruck"
       />
       <Navbar />
       <main className="pt-24">
@@ -175,7 +157,7 @@ export default function Referenzen() {
         
         <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-4 pb-4">
           <div className="absolute inset-0 z-0">
-            <img src={heroImg} alt="ExtruCon Referenzen und Kundenprojekte - KI-Agenten Automatisierung und Webentwicklung Erfolgsgeschichten aus Fürstenfeldbruck München" className="w-full h-full object-cover opacity-60" loading="lazy" width={1920} height={1080} decoding="async" />
+            <img src={heroImg} alt="Referenzen & Erfolgsgeschichten" className="w-full h-full object-cover opacity-60" loading="lazy" />
             <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
           </div>
           <div className="container mx-auto px-4 z-40 relative">

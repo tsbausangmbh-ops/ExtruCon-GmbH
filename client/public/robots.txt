@@ -1,6 +1,6 @@
 # ExtruCon GmbH - Robots.txt
 # SEO & AI optimiert für Deutschland (DE), Kroatien (HR), Türkei (TR)
-# Letzte Aktualisierung: 23. Dezember 2025
+# Letzte Aktualisierung: 19. Dezember 2025
 # Optimiert für: KI-Agenten, Geo (München, FFB, Starnberg, Dachau), LLMs
 
 # ===========================================
@@ -236,11 +236,9 @@ Disallow: /node_modules/
 # ===========================================
 
 Sitemap: https://extrucon.de/sitemap.xml
-Sitemap: https://extrucon.de/ai.sitemap.xml
 
 # LLMs.txt für KI-Suchmaschinen (ChatGPT, Perplexity, etc.)
 Allow: /llms.txt
-Allow: /ai.sitemap.xml
 
 # Favicon & Logo für Suchmaschinen
 Allow: /favicon.ico

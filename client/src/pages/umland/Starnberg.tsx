@@ -2,60 +2,36 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ExploreMoreSection, LocationLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Bot, MapPin, Phone, ArrowRight, Workflow, Globe, Anchor, Building2, Heart, Briefcase } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Starnberg() {
-  const schemaData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "KI-Agentur Starnberg | ExtruCon GmbH",
-      "description": "KI-Agentur für Starnberg und das Fünfseenland. KI-Agenten mit GPT-4, Automatisierung und Websites für Tourismus, Immobilien und lokale Unternehmen.",
-      "url": "https://extrucon.de/starnberg",
-      "mainEntity": {
-        "@type": "LocalBusiness",
-        "@id": "https://extrucon.de/#localbusiness"
-      },
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de" },
-          { "@type": "ListItem", "position": 2, "name": "München", "item": "https://extrucon.de/muenchen" },
-          { "@type": "ListItem", "position": 3, "name": "Starnberg", "item": "https://extrucon.de/starnberg" }
-        ]
-      },
-      "areaServed": [
-        { "@type": "City", "name": "Starnberg" },
-        { "@type": "Place", "name": "Fünfseenland" },
-        { "@type": "City", "name": "Tutzing" },
-        { "@type": "City", "name": "Berg" },
-        { "@type": "City", "name": "Feldafing" },
-        { "@type": "City", "name": "Pöcking" }
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "KI-Agentur Starnberg | ExtruCon GmbH",
+    "description": "KI-Agentur für Starnberg und das Fünfseenland. KI-Agenten, Automatisierung und Websites für Unternehmen am Starnberger See.",
+    "url": "https://extrucon.de/starnberg",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "@id": "https://extrucon.de/#localbusiness"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de" },
+        { "@type": "ListItem", "position": 2, "name": "München", "item": "https://extrucon.de/muenchen" },
+        { "@type": "ListItem", "position": 3, "name": "Starnberg", "item": "https://extrucon.de/starnberg" }
       ]
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "@id": "https://extrucon.de/starnberg#service",
-      "name": "KI-Lösungen Starnberg & Fünfseenland",
-      "description": "KI-Agenten und Automatisierung für Hotels, Restaurants, Immobilienmakler und lokale Unternehmen am Starnberger See. GPT-4 powered.",
-      "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
-      "areaServed": { "@type": "Place", "name": "Fünfseenland" },
-      "serviceType": ["Tourismus KI", "Hotel Automatisierung", "Immobilien KI", "Lokale Unternehmen"]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "Bietet ExtruCon Vor-Ort-Service in Starnberg?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, von unserem Standort in Fürstenfeldbruck sind wir in nur 20 Minuten in Starnberg. Wir bieten persönliche Beratung im gesamten Fünfseenland." } },
-        { "@type": "Question", "name": "Welche KI-Lösungen eignen sich für Hotels am Starnberger See?", "acceptedAnswer": { "@type": "Answer", "text": "Für Hotels entwickeln wir KI-gestützte Buchungssysteme, automatische Gästekommunikation und intelligente Bewertungsmanagement-Tools." } },
-        { "@type": "Question", "name": "Können KI-Agenten für Immobilienmakler im Fünfseenland eingesetzt werden?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir entwickeln KI-Agenten für automatisierte Lead-Qualifizierung, intelligente Exposé-Erstellung und 24/7 Kundenanfragen für Luxusimmobilien." } }
-      ]
-    }
-  ];
+    "areaServed": [
+      { "@type": "City", "name": "Starnberg" },
+      { "@type": "Place", "name": "Fünfseenland" },
+      { "@type": "City", "name": "Tutzing" },
+      { "@type": "City", "name": "Berg" }
+    ]
+  };
 
   const services = [
     { icon: Bot, title: "Premium KI-Agenten", description: "Intelligente Assistenten für gehobene Dienstleister und Tourismus am Starnberger See.", link: "/ki-agenten" },
@@ -74,12 +50,9 @@ export default function Starnberg() {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="KI-Agentur Starnberg | GPT-4 für Tourismus & Immobilien | ExtruCon"
-        description="KI-Agentur für Starnberg & Fünfseenland: KI-Agenten mit GPT-4 für Hotels, Immobilienmakler, lokale Unternehmen. ✓ Vor-Ort-Service ✓ 20 Min. ab FFB ✓ DSGVO"
-        keywords="KI Agentur Starnberg, KI Fünfseenland, GPT-4 Hotel, KI Immobilien Starnberg, Automatisierung Tourismus, Starnberger See KI, Tutzing KI"
+        title="KI-Agentur Starnberg | ExtruCon – KI-Lösungen am Starnberger See"
+        description="KI-Agentur für Starnberg & Fünfseenland: KI-Agenten, Automatisierung und Websites. Tourismus, Immobilien, lokale Unternehmen. ✓ Vor-Ort-Service ✓ 20 Min. ab FFB"
         canonical="https://extrucon.de/starnberg"
-        geoRegion="DE-BY"
-        geoPlacename="Starnberg"
         schema={schemaData}
       />
       <Navbar />
@@ -162,9 +135,6 @@ export default function Starnberg() {
             </div>
           </div>
         </section>
-
-        <LocationLinks />
-        <ExploreMoreSection />
       </main>
       <Footer />
     </div>

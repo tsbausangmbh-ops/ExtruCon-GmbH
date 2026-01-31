@@ -112,13 +112,10 @@ export default function Ratgeber() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="KI Ratgeber | GPT-4, Claude AI, n8n Tipps | ExtruCon"
-        description="Expertenwissen zu GPT-4, Claude AI, Midjourney, n8n Automatisierung & KI-Marketing. Praxistipps von Ihrer KI-Agentur Fürstenfeldbruck."
-        keywords="KI Ratgeber, GPT-4 Tipps, Claude AI Guide, n8n Tutorial, Midjourney Anleitung, KI Marketing, Automatisierung Wissen, ChatGPT Business"
+        title="KI Ratgeber | Tipps zu KI, Marketing & Automatisierung | ExtruCon"
+        description="Expertenwissen zu KI, Automatisierung, Social Media und Webentwicklung. Praxistipps von Ihrer KI-Agentur aus Fürstenfeldbruck."
+        keywords="KI Ratgeber, Automatisierung Tipps, Marketing Guide, KI Wissen"
         canonical="https://extrucon.de/ratgeber"
-        geoRegion="DE-BY"
-        geoPlacename="Fürstenfeldbruck"
-        ogType="website"
       />
       <Navbar />
       <main className="pt-24">

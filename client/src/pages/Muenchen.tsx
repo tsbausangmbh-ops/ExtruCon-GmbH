@@ -8,7 +8,7 @@ import { Bot, Zap, Building2, MapPin, Phone, Mail, ArrowRight, CheckCircle, Brai
 import { Link } from "wouter";
 
 export default function Muenchen() {
-  const localBusinessSchema = {
+  const schemaData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://extrucon.de/muenchen#localbusiness",
@@ -54,39 +54,6 @@ export default function Muenchen() {
       "https://www.instagram.com/extrucon"
     ]
   };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Was kostet eine KI-Beratung in München?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Die Erstberatung bei ExtruCon ist kostenlos. Wir analysieren Ihre Anforderungen und erstellen ein individuelles Angebot für Ihr Münchner Unternehmen."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Bietet ExtruCon Vor-Ort-Service in München?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, wir bieten persönliche Beratung vor Ort in München und Umgebung. Von Fürstenfeldbruck aus sind wir in 30 Minuten bei Ihnen."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Welche KI-Modelle setzt ExtruCon für Münchner Unternehmen ein?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Wir nutzen GPT-4, Claude AI und Gemini für intelligente KI-Agenten. Für Bilder Midjourney und DALL-E. Workflow-Automatisierung mit n8n, Make und Zapier – alles DSGVO-konform."
-        }
-      }
-    ]
-  };
-
-  const schemaData = [localBusinessSchema, faqSchema];
 
   const services = [
     {
@@ -149,11 +116,8 @@ export default function Muenchen() {
       <SEOHead
         title="KI-Agentur München | ExtruCon GmbH – KI-Agenten & Automatisierung"
         description="Ihre KI-Agentur für München: KI-Agenten, Workflow-Automatisierung & Webseiten mit KI. Persönliche Beratung vor Ort. ✓ DSGVO-konform ✓ 24/7 Support"
-        keywords="KI Agentur München, KI-Agenten München, Chatbot München, Automatisierung München, KI Beratung München, n8n München, AI München, Künstliche Intelligenz München, Digitalagentur München"
         canonical="https://extrucon.de/muenchen"
         schema={schemaData}
-        geoRegion="DE-BY"
-        geoPlacename="München, Bayern"
       />
       <Navbar />
       

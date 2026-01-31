@@ -2,7 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Search, Check, ArrowRight, MapPin, Globe, BarChart3 } from "lucide-react";
 import { motion } from "framer-motion";
-import seoImg from "@assets/generated_images/optimized/abstract_seo_geo-optimization_visual.webp";
+import seoImg from "@assets/generated_images/abstract_seo_geo-optimization_visual.png";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -21,39 +21,10 @@ export default function SEO() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="KI-SEO & Geo-Optimierung | AI-gestützte Suchmaschinenoptimierung | ExtruCon"
-        description="KI-gestützte SEO & Geo-Optimierung für lokale Unternehmen. GPT-4 Content-Optimierung, Google My Business, strukturierte Daten. Agentur Fürstenfeldbruck."
-        keywords="KI SEO, AI SEO, Geo-Optimierung, lokale SEO, Google My Business, Suchmaschinenoptimierung Fürstenfeldbruck, Local SEO München, GPT-4 SEO, KI Content Optimierung"
+        title="SEO & Geo-Optimierung | Lokale Suchmaschinenoptimierung | ExtruCon"
+        description="Professionelle SEO & Geo-Optimierung für lokale Unternehmen. Google My Business, lokale Keywords, strukturierte Daten. Agentur Fürstenfeldbruck bei München."
+        keywords="SEO Agentur, Geo-Optimierung, lokale SEO, Google My Business, Suchmaschinenoptimierung Fürstenfeldbruck, Local SEO München"
         canonical="https://extrucon.de/leistungen/seo"
-        geoRegion="DE-BY"
-        geoPlacename="Fürstenfeldbruck"
-        schema={[
-          {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "@id": "https://extrucon.de/leistungen/seo#service",
-            "name": "KI-SEO & Geo-Optimierung",
-            "alternateName": ["AI SEO", "KI-gestützte Suchmaschinenoptimierung"],
-            "description": "KI-gestützte Suchmaschinenoptimierung mit Fokus auf lokale SEO, Google My Business und Geo-Targeting. GPT-4 für Content-Optimierung und Keyword-Recherche.",
-            "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
-            "areaServed": [
-              { "@type": "City", "name": "Fürstenfeldbruck" },
-              { "@type": "City", "name": "München" },
-              { "@type": "State", "name": "Bayern" },
-              { "@type": "Country", "name": "Deutschland" }
-            ],
-            "serviceType": ["SEO", "AI SEO", "Local SEO"]
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              { "@type": "Question", "name": "Wie nutzt ExtruCon KI für SEO?", "acceptedAnswer": { "@type": "Answer", "text": "Wir nutzen GPT-4 für intelligente Keyword-Recherche, Content-Optimierung und automatische Meta-Tag-Generierung. KI beschleunigt den SEO-Prozess deutlich." } },
-              { "@type": "Question", "name": "Was ist KI-gestützte lokale SEO?", "acceptedAnswer": { "@type": "Answer", "text": "KI-SEO optimiert Ihre Website automatisch für standortbezogene Suchanfragen wie 'KI Agentur Fürstenfeldbruck' oder 'Chatbot München' mit intelligenter Keyword-Analyse." } },
-              { "@type": "Question", "name": "Wie lange dauert KI-SEO bis ich Ergebnisse sehe?", "acceptedAnswer": { "@type": "Answer", "text": "Mit KI-gestützter Optimierung sind erste Verbesserungen oft schon nach 1-2 Monaten sichtbar. Für Top-Rankings braucht es 4-8 Monate." } }
-            ]
-          }
-        ]}
       />
       <Navbar />
       <main className="pt-24">
@@ -64,7 +35,7 @@ export default function SEO() {
         
         <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-4 pb-4">
           <div className="absolute inset-0 z-0">
-            <img src={seoImg} alt="SEO Agentur Fürstenfeldbruck München Bayern - Lokale Suchmaschinenoptimierung und Google Rankings für KMU und Mittelstand" className="w-full h-full object-cover opacity-60" loading="lazy" width={1920} height={1080} decoding="async" />
+            <img src={seoImg} alt="SEO & Geo-Optimierung" className="w-full h-full object-cover opacity-60" loading="lazy" />
             <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
           </div>
           <div className="container mx-auto px-4 z-40 relative">

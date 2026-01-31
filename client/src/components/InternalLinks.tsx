@@ -1,4 +1,4 @@
-import { Bot, Workflow, Globe, TrendingUp, Share2, FileText, BookOpen, HelpCircle, Users, ArrowRight, MapPin, Calendar, MessageSquare, Award, Search } from "lucide-react";
+import { Bot, Workflow, Globe, TrendingUp, Share2, FileText, BookOpen, HelpCircle, Users, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 import { motion } from "framer-motion";
 
@@ -19,18 +19,9 @@ export function ExploreMoreSection() {
     { href: "/leistungen/social-media", label: t.nav.socialMedia, icon: Share2, colorClass: "text-purple-400" },
     { href: "/leistungen/marketing", label: t.nav.marketing, icon: TrendingUp, colorClass: "text-orange-400" },
     { href: "/leistungen/content", label: t.nav.contentCreation, icon: FileText, colorClass: "text-pink-400" },
-    { href: "/leistungen/seo", label: t.nav.seo, icon: Search, colorClass: "text-green-400" },
-    { href: "/leistungen/markenaufbau", label: "Branding", icon: Award, colorClass: "text-indigo-400" },
-    { href: "/leistungen/web", label: "Webentwicklung", icon: Globe, colorClass: "text-teal-400" },
-    { href: "/leistungen/ki-automatisierung", label: "KI-Automatisierung", icon: Bot, colorClass: "text-fuchsia-400" },
-    { href: "/referenzen", label: t.nav.referenzen, icon: Award, colorClass: "text-amber-400" },
     { href: "/ratgeber", label: t.nav.ratgeber, icon: BookOpen, colorClass: "text-blue-400" },
     { href: "/faq", label: t.nav.faq, icon: HelpCircle, colorClass: "text-yellow-400" },
     { href: "/ueber-uns", label: t.nav.about, icon: Users, colorClass: "text-primary" },
-    { href: "/ki-bot", label: "KI-Chatbot", icon: MessageSquare, colorClass: "text-violet-400" },
-    { href: "/termin", label: "Termin buchen", icon: Calendar, colorClass: "text-rose-400" },
-    { href: "/muenchen", label: "München", icon: MapPin, colorClass: "text-sky-400" },
-    { href: "/kontakt", label: t.nav.contact, icon: Users, colorClass: "text-lime-400" },
   ];
 
   return (
@@ -99,75 +90,6 @@ export function ContextualCTA() {
       >
         Kostenlose Beratung anfragen <ArrowRight className="w-4 h-4" />
       </a>
-    </div>
-  );
-}
-
-export function LocationLinks() {
-  const locations = [
-    { name: "München", href: "/muenchen" },
-    { name: "Schwabing", href: "/muenchen/schwabing" },
-    { name: "Bogenhausen", href: "/muenchen/bogenhausen" },
-    { name: "Nymphenburg", href: "/muenchen/nymphenburg" },
-    { name: "Grünwald", href: "/muenchen/gruenwald" },
-    { name: "Harlaching", href: "/muenchen/harlaching" },
-    { name: "Starnberg", href: "/starnberg" },
-    { name: "Dachau", href: "/dachau" },
-    { name: "Germering", href: "/germering" },
-    { name: "Puchheim", href: "/puchheim" },
-    { name: "Olching", href: "/olching" },
-  ];
-
-  return (
-    <section className="py-8 border-t border-white/10">
-      <div className="container mx-auto px-4">
-        <h3 className="text-lg font-bold text-white mb-4 text-center flex items-center justify-center gap-2">
-          <MapPin className="w-5 h-5 text-primary" />
-          Unsere Standorte in Bayern
-        </h3>
-        <div className="flex flex-wrap justify-center gap-2">
-          {locations.map((loc) => (
-            <a
-              key={loc.href}
-              href={loc.href}
-              className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300 hover:text-white hover:bg-primary/20 hover:border-primary/30 transition-colors"
-            >
-              {loc.name}
-            </a>
-          ))}
-        </div>
-        <p className="text-center text-gray-500 text-sm mt-4">
-          KI-Agentur für <a href="/muenchen" className="text-primary hover:underline">München</a> und Umgebung · 
-          <a href="/kontakt" className="text-primary hover:underline ml-1">Kostenlose Beratung</a>
-        </p>
-      </div>
-    </section>
-  );
-}
-
-export function ServiceQuickLinks() {
-  const services = [
-    { name: "KI-Agenten", href: "/ki-agenten" },
-    { name: "Automatisierungen", href: "/automatisierungen" },
-    { name: "Webseiten mit KI", href: "/webseiten-ki" },
-    { name: "Social Media", href: "/leistungen/social-media" },
-    { name: "Marketing", href: "/leistungen/marketing" },
-    { name: "Content", href: "/leistungen/content" },
-    { name: "SEO", href: "/leistungen/seo" },
-    { name: "Branding", href: "/leistungen/markenaufbau" },
-  ];
-
-  return (
-    <div className="flex flex-wrap justify-center gap-2 py-4">
-      {services.map((svc) => (
-        <a
-          key={svc.href}
-          href={svc.href}
-          className="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-sm text-primary hover:bg-primary/20 transition-colors"
-        >
-          {svc.name}
-        </a>
-      ))}
     </div>
   );
 }
@@ -272,7 +194,7 @@ export function RelatedServices({ currentPage }: RelatedServicesProps) {
     'ratgeber': {
       href: '/ratgeber',
       title: t.nav.ratgeber,
-      description: 'Wissen und Tipps rund um KI-Technologien',
+      description: t.services.ratgeber?.desc || 'Wissen und Tipps',
       icon: HelpCircle,
       colorClass: 'text-blue-400',
       bgClass: 'from-blue-500/20 to-blue-500/5'

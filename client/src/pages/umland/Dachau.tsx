@@ -2,55 +2,35 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ExploreMoreSection, LocationLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Bot, MapPin, Phone, ArrowRight, Workflow, Globe, Factory, Building2, ShoppingBag, Truck } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Dachau() {
-  const schemaData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "KI-Agentur Dachau | ExtruCon GmbH",
-      "description": "KI-Agentur für Dachau und Umgebung. KI-Agenten mit GPT-4, Automatisierung und Websites für Mittelstand und Handwerk im Landkreis Dachau.",
-      "url": "https://extrucon.de/dachau",
-      "mainEntity": { "@type": "LocalBusiness", "@id": "https://extrucon.de/#localbusiness" },
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de" },
-          { "@type": "ListItem", "position": 2, "name": "München", "item": "https://extrucon.de/muenchen" },
-          { "@type": "ListItem", "position": 3, "name": "Dachau", "item": "https://extrucon.de/dachau" }
-        ]
-      },
-      "areaServed": [
-        { "@type": "City", "name": "Dachau" },
-        { "@type": "City", "name": "Karlsfeld" },
-        { "@type": "City", "name": "Bergkirchen" },
-        { "@type": "City", "name": "Hebertshausen" }
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "KI-Agentur Dachau | ExtruCon GmbH",
+    "description": "KI-Agentur für Dachau und Umgebung. KI-Agenten, Automatisierung und Websites für Unternehmen im Landkreis Dachau.",
+    "url": "https://extrucon.de/dachau",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "@id": "https://extrucon.de/#localbusiness"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de" },
+        { "@type": "ListItem", "position": 2, "name": "München", "item": "https://extrucon.de/muenchen" },
+        { "@type": "ListItem", "position": 3, "name": "Dachau", "item": "https://extrucon.de/dachau" }
       ]
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "@id": "https://extrucon.de/dachau#service",
-      "name": "KI-Lösungen Dachau",
-      "description": "KI-Agenten und Automatisierung für Mittelstand, Produktion und Logistik im Landkreis Dachau. GPT-4 powered, DSGVO-konform.",
-      "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
-      "areaServed": { "@type": "Place", "name": "Landkreis Dachau" },
-      "serviceType": ["KMU KI-Agenten", "Produktions-Automatisierung", "Logistik KI"]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "Bietet ExtruCon Vor-Ort-Service in Dachau?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, von Fürstenfeldbruck sind wir in nur 15 Minuten in Dachau. Wir bieten persönliche Beratung für Unternehmen im gesamten Landkreis." } },
-        { "@type": "Question", "name": "Welche KI-Lösungen eignen sich für produzierende Unternehmen?", "acceptedAnswer": { "@type": "Answer", "text": "Für Fertigungsbetriebe entwickeln wir KI-gestützte Prozessoptimierung, automatisierte Qualitätskontrolle und intelligente Disposition." } },
-        { "@type": "Question", "name": "Sind KI-Agenten auch für kleine Handwerksbetriebe geeignet?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir bieten maßgeschneiderte KI-Lösungen ab 490€ für Handwerksbetriebe – für automatische Anfragen, Terminbuchung und Kundenkommunikation." } }
-      ]
-    }
-  ];
+    "areaServed": [
+      { "@type": "City", "name": "Dachau" },
+      { "@type": "City", "name": "Karlsfeld" },
+      { "@type": "City", "name": "Bergkirchen" }
+    ]
+  };
 
   const services = [
     { icon: Bot, title: "KI-Agenten für KMU", description: "Smarte Assistenten für mittelständische Unternehmen und Handwerksbetriebe.", link: "/ki-agenten" },
@@ -69,12 +49,9 @@ export default function Dachau() {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="KI-Agentur Dachau | GPT-4 für Mittelstand & Produktion | ExtruCon"
-        description="KI-Agentur für Dachau: KI-Agenten mit GPT-4 & Automatisierung für KMU, Produktion, Logistik. ✓ Vor-Ort-Service ✓ 15 Min. ab FFB ✓ DSGVO ✓ Festpreis"
-        keywords="KI Agentur Dachau, KI Mittelstand, GPT-4 Produktion, Automatisierung Logistik, KI Handwerk Dachau, Karlsfeld KI, Bergkirchen Automatisierung"
+        title="KI-Agentur Dachau | ExtruCon – KI für Mittelstand & Handwerk"
+        description="KI-Agentur für Dachau: KI-Agenten, Automatisierung und Websites für KMU. Produktion, Logistik, Einzelhandel. ✓ Persönlich ✓ 15 Min. ab FFB ✓ Festpreis"
         canonical="https://extrucon.de/dachau"
-        geoRegion="DE-BY"
-        geoPlacename="Dachau"
         schema={schemaData}
       />
       <Navbar />
@@ -156,9 +133,6 @@ export default function Dachau() {
             </div>
           </div>
         </section>
-
-        <LocationLinks />
-        <ExploreMoreSection />
       </main>
       <Footer />
     </div>

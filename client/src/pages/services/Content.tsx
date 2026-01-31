@@ -3,12 +3,11 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { PenTool, Check, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import contentImg from "@assets/generated_images/optimized/abstract_content_creation_visualization.webp";
+import contentImg from "@assets/generated_images/abstract_content_creation_visualization.png";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedServices, ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
-import { LinkedParagraph } from "@/components/KeywordLinker";
 
 export default function Content() {
   const { t } = useLanguage();
@@ -16,39 +15,10 @@ export default function Content() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="KI-Content-Erstellung | GPT-4 & Midjourney Content | ExtruCon"
-        description="KI-gestützte Content-Erstellung mit GPT-4 & Midjourney. Texte, Grafiken, Videos & Social Media Content. Schnell, qualitativ, skalierbar. Fürstenfeldbruck."
-        keywords="KI Content, GPT-4 Texte, Midjourney Grafiken, AI Content Creation, KI Texterstellung, Social Media Content KI, KI Bilder, DALL-E, Claude AI Content"
+        title="Content-Erstellung | KI-gestützte Inhalte | ExtruCon"
+        description="Professionelle Content-Erstellung mit KI-Unterstützung. Texte, Grafiken, Videos & Social Media Content. Fürstenfeldbruck."
+        keywords="Content Erstellung, KI Content, Social Media Content, Texterstellung"
         canonical="https://extrucon.de/leistungen/content"
-        geoRegion="DE-BY"
-        geoPlacename="Fürstenfeldbruck"
-        schema={[
-          {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "@id": "https://extrucon.de/leistungen/content#service",
-            "name": "KI-Content-Erstellung",
-            "alternateName": ["AI Content Creation", "GPT-4 Content", "KI Texterstellung"],
-            "description": "KI-gestützte Content-Erstellung mit GPT-4, Claude AI und Midjourney. Texte, Grafiken, Videos und Social Media Content – schnell, qualitativ und skalierbar.",
-            "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
-            "areaServed": [
-              { "@type": "City", "name": "Fürstenfeldbruck" },
-              { "@type": "City", "name": "München" },
-              { "@type": "State", "name": "Bayern" },
-              { "@type": "Country", "name": "Deutschland" }
-            ],
-            "serviceType": ["AI Content Creation", "KI Texterstellung", "GPT-4 Content"]
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              { "@type": "Question", "name": "Welche KI-Tools nutzen Sie für Content?", "acceptedAnswer": { "@type": "Answer", "text": "Wir nutzen GPT-4 und Claude AI für Texte, Midjourney und DALL-E für Grafiken, sowie ElevenLabs für Voiceover – immer mit menschlicher Qualitätskontrolle." } },
-              { "@type": "Question", "name": "Ist KI-Content SEO-optimiert?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir optimieren alle KI-generierten Inhalte für Suchmaschinen mit strukturierten Daten, Keywords und Meta-Beschreibungen." } },
-              { "@type": "Question", "name": "Wie schnell ist KI-Content verfügbar?", "acceptedAnswer": { "@type": "Answer", "text": "Mit KI-Unterstützung liefern wir Content innerhalb von 1-3 Werktagen. Bei großen Mengen oder Rush-Aufträgen noch schneller." } }
-            ]
-          }
-        ]}
       />
       <Navbar />
       <main className="pt-24">
@@ -59,7 +29,7 @@ export default function Content() {
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img src={contentImg} alt="KI Content Creation Agentur Bayern - Automatisierte Texterstellung und visuelle Inhalte für Websites und Social Media Marketing" className="w-full h-full object-cover opacity-20" loading="lazy" width={1920} height={1080} decoding="async" />
+            <img src={contentImg} alt="Content Creation" className="w-full h-full object-cover opacity-20" loading="lazy" />
             <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
@@ -124,24 +94,6 @@ export default function Content() {
             </div>
           </div>
         </section>
-
-        {/* SEO Content Section */}
-        {t.contentPage.seoContent && (
-          <section className="py-16 bg-card/10">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-bold font-display text-white mb-8">{t.contentPage.seoTitle}</h2>
-                <div className="prose prose-invert max-w-none text-gray-300 space-y-6">
-                  {t.contentPage.seoContent.map((paragraph, i) => (
-                    <LinkedParagraph key={i} maxLinks={2} currentPage="/leistungen/content" excludeKeywords={["Content-Erstellung", "content creation", "content production", "içerik üretimi", "kreacija sadržaja"]}>
-                      {paragraph}
-                    </LinkedParagraph>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
 
         {/* CTA */}
         <section className="py-16 bg-gradient-to-r from-pink-900/20 to-purple-900/20">

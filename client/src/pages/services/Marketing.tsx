@@ -3,12 +3,11 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { TrendingUp, Check, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import marketingImg from "@assets/generated_images/optimized/abstract_performance_marketing_growth.webp";
+import marketingImg from "@assets/generated_images/abstract_performance_marketing_growth.png";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedServices, ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
-import { LinkedParagraph } from "@/components/KeywordLinker";
 
 export default function Marketing() {
   const { t } = useLanguage();
@@ -18,39 +17,10 @@ export default function Marketing() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="KI-gestütztes Performance Marketing | Google Ads & Meta Ads | ExtruCon"
-        description="KI-gestütztes Performance Marketing mit GPT-4 Optimierung. Google Ads, Meta Ads, SEO & Conversion-Tracking. Datengetriebene Kampagnen für maximalen ROI."
-        keywords="KI Marketing, Performance Marketing KI, Google Ads Agentur, Meta Ads, KI-gestützte Werbung, Marketing Automatisierung, AI Marketing München, GPT-4 Marketing"
+        title="Performance Marketing | Google Ads & Meta Ads | ExtruCon"
+        description="Datengetriebenes Performance Marketing. Google Ads, Meta Ads, SEO & Conversion-Optimierung. Agentur Fürstenfeldbruck."
+        keywords="Performance Marketing, Google Ads Agentur, Meta Ads, SEO Fürstenfeldbruck"
         canonical="https://extrucon.de/leistungen/marketing"
-        geoRegion="DE-BY"
-        geoPlacename="Fürstenfeldbruck"
-        schema={[
-          {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "@id": "https://extrucon.de/leistungen/marketing#service",
-            "name": "KI-gestütztes Performance Marketing",
-            "alternateName": ["AI Marketing", "KI Marketing Agentur"],
-            "description": "Datengetriebenes Performance Marketing mit KI-Optimierung. Google Ads, Meta Ads, SEO und Conversion-Optimierung für maximalen ROI. KI-gestützte Kampagnenanalyse.",
-            "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
-            "areaServed": [
-              { "@type": "City", "name": "Fürstenfeldbruck" },
-              { "@type": "City", "name": "München" },
-              { "@type": "State", "name": "Bayern" },
-              { "@type": "Country", "name": "Deutschland" }
-            ],
-            "serviceType": ["Digital Marketing", "AI Marketing", "Performance Marketing"]
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              { "@type": "Question", "name": "Was kostet KI-gestütztes Performance Marketing?", "acceptedAnswer": { "@type": "Answer", "text": "Die Kosten variieren je nach Kampagnenumfang. Wir bieten transparente Preismodelle ab 500€/Monat für kleinere Kampagnen mit KI-Optimierung." } },
-              { "@type": "Question", "name": "Wie nutzt ExtruCon KI im Marketing?", "acceptedAnswer": { "@type": "Answer", "text": "Wir nutzen GPT-4 für Anzeigentexte, KI-gestützte Zielgruppenanalyse, automatische Bid-Optimierung und Predictive Analytics für bessere Kampagnenergebnisse." } },
-              { "@type": "Question", "name": "Welche Plattformen nutzen Sie?", "acceptedAnswer": { "@type": "Answer", "text": "Wir arbeiten mit Google Ads, Meta Ads (Facebook/Instagram), LinkedIn Ads, TikTok Ads und YouTube Ads – alle mit KI-gestützter Optimierung." } }
-            ]
-          }
-        ]}
       />
       <Navbar />
       <main className="pt-24">
@@ -61,7 +31,7 @@ export default function Marketing() {
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img src={marketingImg} alt="Performance Marketing Agentur Fürstenfeldbruck München - KI-gestützte Werbekampagnen und Conversion-Optimierung für B2B Unternehmen" className="w-full h-full object-cover opacity-20" loading="lazy" width={1920} height={1080} decoding="async" />
+            <img src={marketingImg} alt="Performance Marketing" className="w-full h-full object-cover opacity-20" loading="lazy" />
             <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
@@ -147,24 +117,6 @@ export default function Marketing() {
             </div>
           </div>
         </section>
-
-        {/* SEO Content Section */}
-        {t.marketingPage.seoContent && (
-          <section className="py-16">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-bold font-display text-white mb-8">{t.marketingPage.seoTitle}</h2>
-                <div className="prose prose-invert max-w-none text-gray-300 space-y-6">
-                  {t.marketingPage.seoContent.map((paragraph, i) => (
-                    <LinkedParagraph key={i} maxLinks={2} currentPage="/leistungen/marketing" excludeKeywords={["Performance Marketing", "performance marketing", "performans pazarlama"]}>
-                      {paragraph}
-                    </LinkedParagraph>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
 
         {/* CTA */}
         <section className="py-16 bg-gradient-to-r from-orange-900/20 to-red-900/20">

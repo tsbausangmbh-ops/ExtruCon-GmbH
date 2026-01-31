@@ -3,12 +3,11 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Fingerprint, Check, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import brandImg from "@assets/generated_images/optimized/abstract_digital_brand_identity_construction.webp";
+import brandImg from "@assets/generated_images/abstract_digital_brand_identity_construction.png";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedServices, ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
-import { LinkedParagraph } from "@/components/KeywordLinker";
 
 export default function Brand() {
   const { t } = useLanguage();
@@ -16,39 +15,10 @@ export default function Brand() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="KI-Markenentwicklung | Midjourney Logo & Corporate Design | ExtruCon"
-        description="KI-gestützte Markenentwicklung mit Midjourney und DALL-E. Logo-Design, Corporate Design & visuelle Identität. Schneller, kreativer, einzigartig."
-        keywords="KI Logo Design, Midjourney Branding, AI Corporate Design, KI Markenentwicklung, Branding Agentur München, DALL-E Logo, AI Brand Design"
+        title="Markenentwicklung & Corporate Design | ExtruCon GmbH"
+        description="Professionelle Markenentwicklung und Corporate Design. Logo, Branding & visuelle Identität. Agentur Fürstenfeldbruck."
+        keywords="Markenentwicklung, Corporate Design, Logo Design, Branding Agentur"
         canonical="https://extrucon.de/leistungen/markenentwicklung"
-        geoRegion="DE-BY"
-        geoPlacename="Fürstenfeldbruck"
-        schema={[
-          {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "@id": "https://extrucon.de/leistungen/markenentwicklung#service",
-            "name": "KI-Markenentwicklung & Corporate Design",
-            "alternateName": ["AI Branding", "Midjourney Logo Design", "KI Corporate Design"],
-            "description": "KI-gestützte Markenentwicklung mit Midjourney und DALL-E. Logo-Design, Corporate Design und visuelle Identität – schneller und kreativer.",
-            "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
-            "areaServed": [
-              { "@type": "City", "name": "Fürstenfeldbruck" },
-              { "@type": "City", "name": "München" },
-              { "@type": "State", "name": "Bayern" },
-              { "@type": "Country", "name": "Deutschland" }
-            ],
-            "serviceType": ["AI Branding", "KI Logo Design", "Corporate Design"]
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              { "@type": "Question", "name": "Nutzen Sie KI für Logo-Design?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir nutzen Midjourney und DALL-E für schnelle Konzeptentwicklung und Inspiration. Die finale Ausarbeitung erfolgt durch unsere Designer." } },
-              { "@type": "Question", "name": "Wie beschleunigt KI die Markenentwicklung?", "acceptedAnswer": { "@type": "Answer", "text": "Mit KI generieren wir in Stunden Hunderte von Konzepten und Varianten. Das verkürzt die Entwicklungszeit um 40-50%." } },
-              { "@type": "Question", "name": "Ist KI-generiertes Design einzigartig?", "acceptedAnswer": { "@type": "Answer", "text": "Absolut. Wir nutzen KI als kreatives Werkzeug und verfeinern alle Designs manuell zu 100% einzigartigen, rechtlich geschützten Markenidentitäten." } }
-            ]
-          }
-        ]}
       />
       <Navbar />
       <main className="pt-24">
@@ -59,7 +29,7 @@ export default function Brand() {
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img src={brandImg} alt="Markenaufbau und Brand Identity Agentur München Fürstenfeldbruck - Corporate Design und Markenentwicklung mit KI-Unterstützung" className="w-full h-full object-cover opacity-20" loading="lazy" width={1920} height={1080} decoding="async" />
+            <img src={brandImg} alt={t.brandPage.title} className="w-full h-full object-cover opacity-20" loading="lazy" />
             <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
@@ -124,24 +94,6 @@ export default function Brand() {
             </div>
           </div>
         </section>
-
-        {/* SEO Content Section */}
-        {t.brandPage.seoContent && (
-          <section className="py-16 bg-card/10">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-bold font-display text-white mb-8">{t.brandPage.seoTitle}</h2>
-                <div className="prose prose-invert max-w-none text-gray-300 space-y-6">
-                  {t.brandPage.seoContent.map((paragraph, i) => (
-                    <LinkedParagraph key={i} maxLinks={2} currentPage="/leistungen/brand" excludeKeywords={["Logo-Design", "Corporate Design", "Markenentwicklung", "brand development", "branding"]}>
-                      {paragraph}
-                    </LinkedParagraph>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
 
         {/* CTA */}
         <section className="py-16 bg-gradient-to-r from-amber-900/20 to-orange-900/20">

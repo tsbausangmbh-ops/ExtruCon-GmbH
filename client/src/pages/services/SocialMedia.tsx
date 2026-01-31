@@ -3,12 +3,11 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Share2, Check, ArrowRight, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
-import socialImg from "@assets/generated_images/optimized/digital_social_connection_abstract_art.webp";
+import socialImg from "@assets/generated_images/digital_social_connection_abstract_art.png";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedServices, ExploreMoreSection, GeoLinks } from "@/components/InternalLinks";
-import { LinkedParagraph } from "@/components/KeywordLinker";
 
 export default function SocialMedia() {
   const { t } = useLanguage();
@@ -18,39 +17,10 @@ export default function SocialMedia() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
-        title="KI-Social Media Marketing | GPT-4 & Midjourney Content | ExtruCon"
-        description="KI-gestütztes Social Media Marketing. GPT-4 Texte, Midjourney Grafiken, automatisierte Content-Planung. Instagram, TikTok, LinkedIn. Fürstenfeldbruck."
-        keywords="KI Social Media, Social Media KI, GPT-4 Social Media, Midjourney Content, Instagram Agentur, TikTok Marketing KI, AI Social Media München"
+        title="Social Media Marketing Fürstenfeldbruck | ExtruCon GmbH"
+        description="Professionelles Social Media Marketing. Instagram, TikTok, LinkedIn & Facebook Betreuung. Agentur aus Fürstenfeldbruck."
+        keywords="Social Media Marketing, Instagram Agentur, TikTok Marketing, Fürstenfeldbruck"
         canonical="https://extrucon.de/leistungen/social-media"
-        geoRegion="DE-BY"
-        geoPlacename="Fürstenfeldbruck"
-        schema={[
-          {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "@id": "https://extrucon.de/leistungen/social-media#service",
-            "name": "KI-Social Media Marketing",
-            "alternateName": ["AI Social Media", "GPT-4 Social Media Content"],
-            "description": "KI-gestütztes Social Media Marketing mit GPT-4 und Midjourney. Automatisierte Content-Erstellung und intelligente Posting-Planung für maximale Reichweite.",
-            "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
-            "areaServed": [
-              { "@type": "City", "name": "Fürstenfeldbruck" },
-              { "@type": "City", "name": "München" },
-              { "@type": "State", "name": "Bayern" },
-              { "@type": "Country", "name": "Deutschland" }
-            ],
-            "serviceType": ["AI Social Media", "KI Content Creation", "Social Media Automation"]
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              { "@type": "Question", "name": "Nutzen Sie KI für Social Media Content?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir nutzen GPT-4 für Captions und Texte, Midjourney für Grafiken und KI-Tools für optimale Posting-Zeiten und Hashtag-Analyse." } },
-              { "@type": "Question", "name": "Welche Plattformen betreuen Sie mit KI?", "acceptedAnswer": { "@type": "Answer", "text": "Wir betreuen Instagram, TikTok, LinkedIn, Facebook, YouTube und Pinterest mit KI-gestützter Content-Erstellung und Analyse." } },
-              { "@type": "Question", "name": "Wie schnell entsteht KI-Content für Social Media?", "acceptedAnswer": { "@type": "Answer", "text": "Mit KI-Unterstützung erstellen wir wöchentliche Content-Pakete in 1-2 Tagen statt einer Woche. Qualitätskontrolle durch unsere Experten inklusive." } }
-            ]
-          }
-        ]}
       />
       <Navbar />
       <main className="pt-24">
@@ -61,7 +31,7 @@ export default function SocialMedia() {
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img src={socialImg} alt="Social Media Marketing Agentur Bayern München - KI-automatisierte Content-Planung und Community Management für Instagram LinkedIn Facebook" className="w-full h-full object-cover opacity-20" loading="lazy" width={1920} height={1080} decoding="async" />
+            <img src={socialImg} alt={t.socialMediaPage.heroImageAlt} className="w-full h-full object-cover opacity-20" loading="lazy" />
             <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
@@ -177,24 +147,6 @@ export default function SocialMedia() {
             </div>
           </div>
         </section>
-
-        {/* SEO Content Section */}
-        {t.socialMediaPage.seoContent && (
-          <section className="py-10 bg-card/10">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-bold font-display text-white mb-8">{t.socialMediaPage.seoTitle}</h2>
-                <div className="prose prose-invert max-w-none text-gray-300 space-y-6">
-                  {t.socialMediaPage.seoContent.map((paragraph, i) => (
-                    <LinkedParagraph key={i} maxLinks={2} currentPage="/leistungen/social-media" excludeKeywords={["Social Media Marketing", "social media marketing", "sosyal medya pazarlama", "marketing na društvenim mrežama"]}>
-                      {paragraph}
-                    </LinkedParagraph>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
 
         {/* CTA */}
         <section className="py-10 bg-gradient-to-r from-purple-900/20 to-pink-900/20">

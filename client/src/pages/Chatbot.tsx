@@ -66,36 +66,9 @@ export default function Chatbot() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans flex flex-col">
       <SEOHead 
-        title="KI-Assistent & Chatbot | GPT-4 Demo | ExtruCon GmbH"
-        description="Testen Sie unseren KI-Assistenten powered by GPT-4. Fragen Sie über KI-Agenten, Automatisierung und Marketing. Kostenlose Demo unserer Chatbot-Technologie."
-        keywords="KI Chatbot, GPT-4 Chatbot, AI Assistent, ExtruCon Bot, KI Beratung, Automatisierung Beratung, Chatbot Demo, Künstliche Intelligenz Chat"
-        canonical="https://extrucon.de/ki-bot"
-        schema={[
-          {
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "@id": "https://extrucon.de/ki-bot#chatbot",
-            "name": "ExtruCon KI-Assistent",
-            "alternateName": ["ExtruCon AI Chatbot", "ExtruCon GPT Bot"],
-            "applicationCategory": "BusinessApplication",
-            "applicationSubCategory": "AI Chatbot",
-            "operatingSystem": "Web-basiert",
-            "description": "Intelligenter KI-Assistent powered by GPT-4. Beantwortet Fragen zu KI-Agenten, Automatisierung und Marketing. Kostenlose Demo der ExtruCon Chatbot-Technologie.",
-            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "description": "Kostenlose Demo" },
-            "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
-            "featureList": ["GPT-4 powered", "Mehrsprachig (DE, EN, HR, TR)", "24/7 verfügbar", "Sofortige Antworten"],
-            "screenshot": "https://extrucon.de/logo.png"
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "ExtruCon Chat Demo",
-            "url": "https://extrucon.de/ki-bot",
-            "browserRequirements": "Requires JavaScript",
-            "applicationCategory": "BusinessApplication",
-            "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" }
-          }
-        ]}
+        title="KI-Assistent | ExtruCon GmbH – Fragen Sie unseren Bot"
+        description="Sprechen Sie mit unserem KI-Assistenten über KI-Agenten, Automatisierung und digitales Marketing. Kostenlos und unverbindlich."
+        keywords="KI Chatbot, ExtruCon Bot, KI Beratung, Automatisierung Beratung"
       />
       <Navbar />
       

@@ -2,55 +2,35 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ExploreMoreSection, LocationLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Bot, MapPin, Phone, ArrowRight, Workflow, Globe, Wrench, Users, Heart, Building2 } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Puchheim() {
-  const schemaData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "KI-Agentur Puchheim | ExtruCon GmbH",
-      "description": "KI-Agentur Puchheim: GPT-4 KI-Agenten und Automatisierung für lokale Unternehmen, Handwerk und Dienstleister.",
-      "url": "https://extrucon.de/puchheim",
-      "mainEntity": { "@type": "LocalBusiness", "@id": "https://extrucon.de/#localbusiness" },
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de" },
-          { "@type": "ListItem", "position": 2, "name": "München", "item": "https://extrucon.de/muenchen" },
-          { "@type": "ListItem", "position": 3, "name": "Puchheim", "item": "https://extrucon.de/puchheim" }
-        ]
-      },
-      "areaServed": [
-        { "@type": "City", "name": "Puchheim" },
-        { "@type": "City", "name": "Eichenau" },
-        { "@type": "City", "name": "Gröbenzell" }
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "KI-Agentur Puchheim | ExtruCon GmbH",
+    "description": "KI-Agentur für Puchheim. KI-Agenten, Automatisierung und Websites für lokale Unternehmen und Dienstleister.",
+    "url": "https://extrucon.de/puchheim",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "@id": "https://extrucon.de/#localbusiness"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de" },
+        { "@type": "ListItem", "position": 2, "name": "München", "item": "https://extrucon.de/muenchen" },
+        { "@type": "ListItem", "position": 3, "name": "Puchheim", "item": "https://extrucon.de/puchheim" }
       ]
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "@id": "https://extrucon.de/puchheim#service",
-      "name": "KI-Lösungen Puchheim",
-      "alternateName": ["GPT-4 Puchheim", "Lokale KI-Agenten"],
-      "description": "Bezahlbare KI-Agenten mit GPT-4 für lokale Unternehmen, Handwerksbetriebe und Dienstleister in Puchheim. Ab 490€.",
-      "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
-      "areaServed": { "@type": "City", "name": "Puchheim" },
-      "serviceType": ["Lokale KI", "GPT-4 Chatbot", "Büro-Automatisierung"]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "Was kostet ein GPT-4 Chatbot für kleine Unternehmen?", "acceptedAnswer": { "@type": "Answer", "text": "Unsere GPT-4 KI-Agenten für lokale Unternehmen in Puchheim starten ab 490€ einmalig. Ideal für Handwerker, Dienstleister und kleine Betriebe." } },
-        { "@type": "Question", "name": "Wie schnell ist ExtruCon in Puchheim vor Ort?", "acceptedAnswer": { "@type": "Answer", "text": "Von unserem Standort in Fürstenfeldbruck sind wir in nur 5 Minuten in Puchheim. Wir bieten persönliche Beratung auch in Eichenau und Gröbenzell." } },
-        { "@type": "Question", "name": "Welche Prozesse kann ein KI-Agent automatisieren?", "acceptedAnswer": { "@type": "Answer", "text": "GPT-4 KI-Agenten automatisieren Kundenanfragen, Terminbuchung, Angebotserstellung und Kundenkommunikation – 24/7 verfügbar, DSGVO-konform." } }
-      ]
-    }
-  ];
+    "areaServed": [
+      { "@type": "City", "name": "Puchheim" },
+      { "@type": "City", "name": "Eichenau" },
+      { "@type": "City", "name": "Gröbenzell" }
+    ]
+  };
 
   const services = [
     { icon: Bot, title: "Lokale KI-Agenten", description: "Smarte Assistenten für kleine und mittlere Unternehmen in Puchheim.", link: "/ki-agenten" },
@@ -69,12 +49,9 @@ export default function Puchheim() {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="KI-Agentur Puchheim | GPT-4 für lokale Unternehmen | ExtruCon"
-        description="KI-Agentur Puchheim: KI-Agenten mit GPT-4 & Automatisierung für lokale Unternehmen. ✓ 5 Min. ab FFB ✓ Persönlicher Service ✓ Ab 490€ ✓ DSGVO"
-        keywords="KI Agentur Puchheim, GPT-4 lokale Unternehmen, KI Eichenau, Chatbot Puchheim, Automatisierung Gröbenzell, Handwerk KI Puchheim"
+        title="KI-Agentur Puchheim | ExtruCon – KI für lokale Unternehmen"
+        description="KI-Agentur für Puchheim: KI-Agenten und Automatisierung für lokale Unternehmen. ✓ Direkte Nachbarschaft zu FFB ✓ Persönlicher Service ✓ Faire Preise"
         canonical="https://extrucon.de/puchheim"
-        geoRegion="DE-BY"
-        geoPlacename="Puchheim"
         schema={schemaData}
       />
       <Navbar />
@@ -156,9 +133,6 @@ export default function Puchheim() {
             </div>
           </div>
         </section>
-
-        <LocationLinks />
-        <ExploreMoreSection />
       </main>
       <Footer />
     </div>

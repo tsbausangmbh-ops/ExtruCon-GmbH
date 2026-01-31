@@ -2,55 +2,35 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ExploreMoreSection, LocationLinks } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
 import { Bot, MapPin, Phone, ArrowRight, Workflow, Globe, Heart, Home, Stethoscope, Users } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Harlaching() {
-  const schemaData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "KI-Agentur Harlaching | ExtruCon GmbH",
-      "description": "Healthcare KI-Agentur für München-Harlaching: GPT-4 KI-Agenten für Kliniken, Praxen, Seniorenbetreuung. DSGVO-konform.",
-      "url": "https://extrucon.de/muenchen/harlaching",
-      "mainEntity": { "@type": "LocalBusiness", "@id": "https://extrucon.de/#localbusiness" },
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de" },
-          { "@type": "ListItem", "position": 2, "name": "München", "item": "https://extrucon.de/muenchen" },
-          { "@type": "ListItem", "position": 3, "name": "Harlaching", "item": "https://extrucon.de/muenchen/harlaching" }
-        ]
-      },
-      "areaServed": [
-        { "@type": "Place", "name": "Harlaching" },
-        { "@type": "Place", "name": "Menterschwaige" },
-        { "@type": "Place", "name": "Geiselgasteig" }
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "KI-Agentur Harlaching | ExtruCon GmbH",
+    "description": "KI-Agentur für München-Harlaching. KI-Lösungen für Gesundheitswesen, Seniorenbetreuung und gehobenes Wohnen.",
+    "url": "https://extrucon.de/muenchen/harlaching",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "@id": "https://extrucon.de/#localbusiness"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de" },
+        { "@type": "ListItem", "position": 2, "name": "München", "item": "https://extrucon.de/muenchen" },
+        { "@type": "ListItem", "position": 3, "name": "Harlaching", "item": "https://extrucon.de/muenchen/harlaching" }
       ]
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "@id": "https://extrucon.de/muenchen/harlaching#service",
-      "name": "Healthcare KI-Lösungen Harlaching",
-      "alternateName": ["Medical AI Munich", "GPT-4 Healthcare"],
-      "description": "Spezialisierte KI-Agenten mit GPT-4 für Kliniken, Arztpraxen und Senioreneinrichtungen in München-Harlaching. DSGVO-konform.",
-      "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
-      "areaServed": { "@type": "Place", "name": "München-Harlaching" },
-      "serviceType": ["Healthcare KI", "GPT-4 Patientenkommunikation", "Praxis-Automatisierung"]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "Ist GPT-4 für Patientenkommunikation DSGVO-konform?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, unsere GPT-4 Chatbots für Kliniken und Praxen sind vollständig DSGVO-konform. Patientendaten werden anonymisiert und auf europäischen Servern verarbeitet." } },
-        { "@type": "Question", "name": "Welche KI-Lösungen eignen sich für das Klinikum Harlaching?", "acceptedAnswer": { "@type": "Answer", "text": "Wir entwickeln GPT-4 basierte Patientenassistenten, automatische Terminbuchung und intelligente FAQ-Systeme für Kliniken und Gesundheitseinrichtungen." } },
-        { "@type": "Question", "name": "Bietet ExtruCon KI für Seniorenresidenzen?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, wir entwickeln barrierefreie KI-Kommunikationssysteme mit Sprachsteuerung für Seniorenresidenzen und Pflegeeinrichtungen in Harlaching." } }
-      ]
-    }
-  ];
+    "areaServed": [
+      { "@type": "Place", "name": "Harlaching" },
+      { "@type": "Place", "name": "Menterschwaige" },
+      { "@type": "Place", "name": "Geiselgasteig" }
+    ]
+  };
 
   const services = [
     { icon: Bot, title: "Healthcare KI-Agenten", description: "Spezialisierte KI-Assistenten für Kliniken, Praxen und Gesundheitseinrichtungen.", link: "/ki-agenten" },
@@ -69,12 +49,9 @@ export default function Harlaching() {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="KI-Agentur Harlaching | GPT-4 für Kliniken & Praxen | ExtruCon"
-        description="Healthcare KI-Agentur München-Harlaching: KI-Agenten mit GPT-4 für Kliniken, Praxen, Seniorenbetreuung. ✓ DSGVO-konform ✓ Patientenkommunikation ✓ Terminbuchung"
-        keywords="KI Agentur Harlaching, GPT-4 Healthcare, KI Klinik München, Chatbot Arztpraxis, Terminbuchung KI, Seniorenbetreuung KI, Menterschwaige KI"
+        title="KI-Agentur Harlaching | ExtruCon – KI für Gesundheit & Wohnen"
+        description="KI-Agentur München-Harlaching: KI-Agenten für Kliniken, Praxen und Seniorenbetreuung. ✓ DSGVO-konform ✓ Healthcare-Expertise ✓ Vor-Ort-Service"
         canonical="https://extrucon.de/muenchen/harlaching"
-        geoRegion="DE-BY"
-        geoPlacename="München-Harlaching"
         schema={schemaData}
       />
       <Navbar />
@@ -158,9 +135,6 @@ export default function Harlaching() {
             </div>
           </div>
         </section>
-
-        <LocationLinks />
-        <ExploreMoreSection />
       </main>
       <Footer />
     </div>
