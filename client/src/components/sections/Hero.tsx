@@ -12,6 +12,9 @@ export function Hero() {
           src={heroBg} 
           alt="KI-Agentur Fürstenfeldbruck - Digitale Automatisierung und Marketing" 
           className="w-full h-full object-cover opacity-60"
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
       </div>

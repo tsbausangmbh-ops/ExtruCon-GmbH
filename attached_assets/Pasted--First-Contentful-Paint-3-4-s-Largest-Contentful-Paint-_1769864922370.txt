@@ -1,0 +1,116 @@
+
+First Contentful Paint
+3,4 s
+Largest Contentful Paint
+4,3 s
+Total Blocking Time
+0 ms
+Cumulative Layout Shift
+0.007
+Speed Index
+4,9 s
+Captured at 31. Jan. 2026, 14:07 MEZ
+Emulation eines Moto G Power with Lighthouse 13.0.1
+Besuch einer einzigen Seite
+Erster Seitenaufbau
+Langsame 4G-Drosselung
+Using HeadlessChromium 137.0.7151.119 with lr
+Strukturkarte anzeigen
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Screenshot
+Prüfungen anzeigen, die für folgende Messwerte relevant sind:
+
+All
+
+FCP
+
+LCP
+
+TBT
+
+CLS
+Statistiken
+Anfragen zum Blockieren des Renderings Geschätzte Einsparung von 200 ms
+Anfragen blockieren das erste Rendering der Seite, was den LCP verzögern kann. Durch das Verschieben oder Einfügen können diese Netzwerkanfragen aus dem kritischen Pfad entfernt werden.LCPFCPNicht bewertet
+URL
+Übertragungsgröße
+Dauer
+extrucon.de Eigene
+23,2 KiB	390 ms
+/assets/index-_dW7ETPG.css(extrucon.de)
+23,2 KiB
+390 ms
+Erzwungener dynamischer Umbruch
+Ein erzwungener dynamischer Umbruch tritt auf, wenn JavaScript geometrische Eigenschaften (z. B. offsetWidth) abfragt, nachdem Stile durch eine Änderung des DOM-Status ungültig geworden sind. Dies kann zu einer schlechten Leistung führen. Weitere Informationen zu erzwungenen dynamischen Umbrüchen und möglichen Abhilfemaßnahmen.Nicht bewertet
+Top-Funktionsaufruf
+Gesamtzeit für dynamischen Umbruch
+/assets/index-BYeO5eRA.js:281:29137(extrucon.de)
+1 ms
+Quelle
+Gesamtzeit für dynamischen Umbruch
+[nicht zugeordnet]
+31 ms
+/assets/index-BYeO5eRA.js:280:59179(extrucon.de)
+0 ms
+/assets/index-BYeO5eRA.js:280:76961(extrucon.de)
+1 ms
+LCP-Anfrageerkennung
+Optimiere den LCP, indem du das LCP-Bild im HTML-Code direkt sichtbar machst und Lazy Loading vermeidestLCPNicht bewertet
+Lazy Loading nicht angewendet
+„fetchpriority=high“ sollte angewendet werden
+Anfrage ist im ursprünglichen Dokument sichtbar
+KI-Agentur Fürstenfeldbruck - Digitale Automatisierung und Marketing
+<img alt="KI-Agentur Fürstenfeldbruck - Digitale Automatisierung und Marketing" class="w-full h-full object-cover opacity-60" src="/assets/hero-bg-BZYdRhe6.webp">
+Netzwerkabhängigkeitsbaum
+Vermeide die Verkettung kritischer Anfragen, indem du die Ketten verkürzt, die Downloadgröße von Ressourcen reduzierst oder das Herunterladen unnötiger Ressourcen zurückstellst, um den Seitenaufbau zu beschleunigen.LCPNicht bewertet
+Maximale Latenz für kritischen Pfad: 1.572 ms
+Anfangsnavigation
+https://extrucon.de - 223 ms, 5,39 KiB
+/assets/index-BYeO5eRA.js(extrucon.de) - 456 ms, 258,89 KiB
+/assets/HomeFAQ-KtvjJJaV.js(extrucon.de) - 1.291 ms, 1,72 KiB
+/assets/About-DHNEPDm9.js(extrucon.de) - 1.397 ms, 1,55 KiB
+/assets/Contact-DWYrNC0X.js(extrucon.de) - 1.490 ms, 2,07 KiB
+/assets/input-BUDA2eA9.js(extrucon.de) - 1.489 ms, 0,89 KiB
+/assets/textarea-DwD9b_tX.js(extrucon.de) - 1.479 ms, 0,79 KiB
+/assets/label-DM0v46QW.js(extrucon.de) - 1.462 ms, 1,21 KiB
+/assets/calendar-D00cRHcD.js(extrucon.de) - 1.462 ms, 0,76 KiB
+/assets/InternalL….js(extrucon.de) - 1.572 ms, 3,70 KiB
+/assets/Statistics-gFTyLxVZ.js(extrucon.de) - 646 ms, 2,57 KiB
+/assets/circle-ch….js(extrucon.de) - 627 ms, 0,71 KiB
+/assets/ChatWidge….js(extrucon.de) - 640 ms, 2,26 KiB
+/assets/index-cefFI2KS.js(extrucon.de) - 634 ms, 1,99 KiB
+/assets/loader-ci….js(extrucon.de) - 672 ms, 0,65 KiB
+/assets/send-Caa8_TsH.js(extrucon.de) - 596 ms, 0,80 KiB
+/assets/Funnel-D-h6nxve.js(extrucon.de) - 742 ms, 1,80 KiB
+/assets/card-B_d1Zk4m.js(extrucon.de) - 729 ms, 1,31 KiB
+/assets/target-Ih-uj3fG.js(extrucon.de) - 735 ms, 0,74 KiB
+/assets/CookieConsent-DPY-XIPl.js(extrucon.de) - 729 ms, 1,66 KiB
+/assets/cookie-ChcQdrxN.js(extrucon.de) - 726 ms, 0,86 KiB
+/assets/settings-IaTFZekQ.js(extrucon.de) - 730 ms, 0,99 KiB
+/assets/ChristmasPopup-DNqakYkU.js(extrucon.de) - 784 ms, 1,53 KiB
+/assets/Services-DRwPvL0D.js(extrucon.de) - 801 ms, 2,17 KiB
+/assets/digital_social_connection_abstract_art-CqTNwrmJ.js(extrucon.de) - 800 ms, 0,42 KiB
+/assets/holograph….js(extrucon.de) - 862 ms, 0,42 KiB
+/assets/abstract_digital_brand_identity_construction-DiCBzbjU.js(extrucon.de) - 800 ms, 1,18 KiB
+/assets/abstract_content_creation_visualization-DbxLUazq.js(extrucon.de) - 802 ms, 1,05 KiB
+/assets/abstract_….js(extrucon.de) - 800 ms, 0,43 KiB
+/assets/abstract_….js(extrucon.de) - 902 ms, 0,42 KiB
+/assets/circle-qu….js(extrucon.de) - 804 ms, 0,76 KiB
+/assets/NewYearPopup-CPLZmLXM.js(extrucon.de) - 842 ms, 1,56 KiB
+/assets/Process-DoCMZTzK.js(extrucon.de) - 977 ms, 3,16 KiB
+/assets/message-s….js(extrucon.de) - 968 ms, 0,74 KiB
+/assets/lightbulb-BfDz3O_C.js(extrucon.de) - 1.029 ms, 0,79 KiB
+/assets/rocket-C7aMp0ot.js(extrucon.de) - 1.045 ms, 0,96 KiB
+/assets/headphone….js(extrucon.de) - 968 ms, 0,75 KiB
+/assets/Reference….js(extrucon.de) - 1.108 ms, 1,73 KiB
+/assets/external-link-BMounGRD.js(extrucon.de) - 1.107 ms, 0,76 KiB
+/assets/TrustSign….js(extrucon.de) - 1.173 ms, 2,78 KiB
+/assets/shield-DJ0lrjAL.js(extrucon.de) - 1.174 ms, 0,78 KiB
+/assets/lock-Dacxy8ap.js(extrucon.de) - 1.216 ms, 0,71 KiB
+/assets/index-_dW7ETPG.css(extrucon.de) - 365 ms, 23,19 KiB
