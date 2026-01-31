@@ -4,7 +4,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedServices, ExploreMoreSection } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
-import heroImg from "@/assets/images/hero-about-abstract.png";
+import heroImg from "@/assets/images/hero-about-abstract.webp";
 import { Users, Target, Lightbulb, Rocket, Heart, Award, MapPin, Mail, Phone, Clock, CheckCircle, ArrowRight, Zap, Shield, TrendingUp, Sparkles } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 

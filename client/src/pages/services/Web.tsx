@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Globe, Check, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import webImg from "@/assets/images/hero-web-abstract.png";
+import webImg from "@/assets/images/hero-web-abstract.webp";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";

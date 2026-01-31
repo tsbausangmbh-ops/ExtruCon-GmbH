@@ -2,7 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import { BookOpen, Clock, ArrowRight, Search, Bot, Share2, Globe, TrendingUp, Sparkles, Mail, Lightbulb } from "lucide-react";
-import heroImg from "@/assets/images/hero-ratgeber-abstract.png";
+import heroImg from "@/assets/images/hero-ratgeber-abstract.webp";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/lib/i18n";

@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Calendar, ArrowRight, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
-import heroImg from "@/assets/images/hero-contact-abstract.png";
+import heroImg from "@/assets/images/hero-contact-abstract.webp";
 import { useState } from "react";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";

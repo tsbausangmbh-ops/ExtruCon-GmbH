@@ -4,7 +4,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { useState, useRef, useEffect } from "react";
 import { Send, Bot, User, Loader2, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import heroImg from "@/assets/images/hero-chatbot-abstract.png";
+import heroImg from "@/assets/images/hero-chatbot-abstract.webp";
 import { useLanguage } from "@/lib/i18n";
 import { RelatedServices, ExploreMoreSection } from "@/components/InternalLinks";
 

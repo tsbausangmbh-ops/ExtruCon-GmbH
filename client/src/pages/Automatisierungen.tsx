@@ -4,7 +4,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks, RelatedServices } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
-import heroImg from "@/assets/images/hero-automatisierung-abstract.png";
+import heroImg from "@/assets/images/hero-automatisierung-abstract.webp";
 import { Workflow, Zap, ArrowRight, CheckCircle, Clock, TrendingUp, Shield, RefreshCw, Mail, FileText, Users, ShoppingCart, Calendar, Database, Settings, Cpu, Link2, GitBranch, Layers, Play, ChevronDown, HelpCircle } from "lucide-react";
 import { useState } from "react";
 import { useLanguage, Language } from "@/lib/i18n";

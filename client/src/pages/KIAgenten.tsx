@@ -4,7 +4,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ExploreMoreSection, GeoLinks, RelatedServices } from "@/components/InternalLinks";
 import { motion } from "framer-motion";
-import heroImg from "@/assets/images/hero-ki-agenten-abstract.png";
+import heroImg from "@/assets/images/hero-ki-agenten-abstract.webp";
 import { Bot, Zap, MessageSquare, BarChart3, Clock, Shield, Sparkles, ArrowRight, CheckCircle, Brain, Workflow, Users, Mail, Calendar, FileText, ShoppingCart, Headphones, TrendingUp, Settings, Database, Globe, Cpu, Lock, RefreshCw, HelpCircle, ChevronDown } from "lucide-react";
 import { useState, useMemo } from "react";
 import { useLanguage, Language } from "@/lib/i18n";

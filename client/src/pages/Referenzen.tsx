@@ -2,7 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Award, ArrowRight, MapPin, ExternalLink, Star, Users, Zap } from "lucide-react";
 import { motion } from "framer-motion";
-import heroImg from "@/assets/images/hero-referenzen-abstract.png";
+import heroImg from "@/assets/images/hero-referenzen-abstract.webp";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";

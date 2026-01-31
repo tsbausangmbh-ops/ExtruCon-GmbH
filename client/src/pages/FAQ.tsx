@@ -2,7 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import { HelpCircle, ChevronDown, Bot, Share2, Globe, TrendingUp, CreditCard, Users, Search } from "lucide-react";
-import heroImg from "@/assets/images/hero-faq-abstract.png";
+import heroImg from "@/assets/images/hero-faq-abstract.webp";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/lib/i18n";
