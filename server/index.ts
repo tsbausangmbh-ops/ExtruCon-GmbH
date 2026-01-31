@@ -48,12 +48,21 @@ if (process.env.PRERENDER_TOKEN) {
   app.use(prerender
     .set('prerenderToken', process.env.PRERENDER_TOKEN)
     .set('crawlerUserAgents', [
-      // Traditional search engines (specific bot names)
+      // Google Bots (2026 comprehensive list)
       'Googlebot',
       'Googlebot-Image',
       'Googlebot-News',
       'Googlebot-Video',
+      'Storebot-Google',
+      'Google-InspectionTool',
+      'AdsBot-Google',
+      'AdsBot-Google-Mobile',
+      'Mediapartners-Google',
+      'APIs-Google',
+      'FeedFetcher-Google',
+      // Bing/Microsoft Bots
       'Bingbot',
+      'BingPreview',
       'YandexBot',
       'Baiduspider',
       'DuckDuckBot',
