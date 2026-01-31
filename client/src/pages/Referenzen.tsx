@@ -175,7 +175,7 @@ export default function Referenzen() {
         
         <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-4 pb-4">
           <div className="absolute inset-0 z-0">
-            <img src={heroImg} alt="ExtruCon Referenzen und Kundenprojekte - KI-Agenten Automatisierung und Webentwicklung Erfolgsgeschichten aus Fürstenfeldbruck München" className="w-full h-full object-cover opacity-60" loading="eager" fetchPriority="high" width={1920} height={1080} decoding="async" />
+            <img src={heroImg} alt="ExtruCon Referenzen und Kundenprojekte - KI-Agenten Automatisierung und Webentwicklung Erfolgsgeschichten aus Fürstenfeldbruck München" className="w-full h-full object-cover opacity-60" loading="lazy" width={1920} height={1080} decoding="async" />
             <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
           </div>
           <div className="container mx-auto px-4 z-40 relative">

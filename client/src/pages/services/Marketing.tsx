@@ -61,7 +61,7 @@ export default function Marketing() {
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img src={marketingImg} alt="Performance Marketing Agentur Fürstenfeldbruck München - KI-gestützte Werbekampagnen und Conversion-Optimierung für B2B Unternehmen" className="w-full h-full object-cover opacity-20" loading="eager" fetchPriority="high" width={1920} height={1080} decoding="async" />
+            <img src={marketingImg} alt="Performance Marketing Agentur Fürstenfeldbruck München - KI-gestützte Werbekampagnen und Conversion-Optimierung für B2B Unternehmen" className="w-full h-full object-cover opacity-20" loading="lazy" width={1920} height={1080} decoding="async" />
             <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
