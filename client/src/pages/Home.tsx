@@ -1,20 +1,22 @@
+import { lazy, Suspense } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
-import { Services } from "@/components/sections/Services";
-import { Funnel } from "@/components/sections/Funnel";
 import { Problem } from "@/components/sections/Problem";
-import { About } from "@/components/sections/About";
-import { Contact } from "@/components/sections/Contact";
-import { References } from "@/components/sections/References";
-import { HomeFAQ } from "@/components/sections/HomeFAQ";
-import { Statistics } from "@/components/sections/Statistics";
-import { Process } from "@/components/sections/Process";
-import { TrustSignals } from "@/components/sections/TrustSignals";
 import { SEOHead } from "@/components/SEOHead";
-import { ExploreMoreSection, LocationLinks } from "@/components/InternalLinks";
 
-// Homepage uses schemas from index.html - no duplicates needed
+// Lazy load below-the-fold sections to reduce initial DOM size
+const Services = lazy(() => import("@/components/sections/Services").then(m => ({ default: m.Services })));
+const Funnel = lazy(() => import("@/components/sections/Funnel").then(m => ({ default: m.Funnel })));
+const About = lazy(() => import("@/components/sections/About").then(m => ({ default: m.About })));
+const Contact = lazy(() => import("@/components/sections/Contact").then(m => ({ default: m.Contact })));
+const References = lazy(() => import("@/components/sections/References").then(m => ({ default: m.References })));
+const HomeFAQ = lazy(() => import("@/components/sections/HomeFAQ").then(m => ({ default: m.HomeFAQ })));
+const Statistics = lazy(() => import("@/components/sections/Statistics").then(m => ({ default: m.Statistics })));
+const Process = lazy(() => import("@/components/sections/Process").then(m => ({ default: m.Process })));
+const TrustSignals = lazy(() => import("@/components/sections/TrustSignals").then(m => ({ default: m.TrustSignals })));
+const ExploreMoreSection = lazy(() => import("@/components/InternalLinks").then(m => ({ default: m.ExploreMoreSection })));
+const LocationLinks = lazy(() => import("@/components/InternalLinks").then(m => ({ default: m.LocationLinks })));
 
 export default function Home() {
   return (
@@ -31,30 +33,20 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        {/* Funnel Logic: 1. Problem Awareness */}
         <Problem />
-        {/* Statistics Section */}
-        <Statistics />
-        {/* Funnel Logic: 2. The System/Solution */}
-        <Funnel />
-        {/* Funnel Logic: 3. The Execution Tools (Services) */}
-        <Services />
-        {/* Process Section */}
-        <Process />
-        {/* References Section */}
-        <References />
-        {/* Trust Signals */}
-        <TrustSignals />
-        {/* FAQ Section */}
-        <HomeFAQ />
-        {/* About Section */}
-        <About />
-        {/* Funnel Logic: 4. Action */}
-        <Contact />
-        {/* Location Links for Local SEO */}
-        <LocationLinks />
-        {/* Explore More Links for SEO */}
-        <ExploreMoreSection />
+        <Suspense fallback={null}>
+          <Statistics />
+          <Funnel />
+          <Services />
+          <Process />
+          <References />
+          <TrustSignals />
+          <HomeFAQ />
+          <About />
+          <Contact />
+          <LocationLinks />
+          <ExploreMoreSection />
+        </Suspense>
       </main>
       <Footer />
     </div>
