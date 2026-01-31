@@ -1,4 +1,4 @@
-import aiImg from "@assets/generated_images/glowing_neural_network_brain.png";
+import aiImg from "@assets/generated_images/optimized/glowing_neural_network_brain.webp";
 
 export function GlobalBackground() {
   return (

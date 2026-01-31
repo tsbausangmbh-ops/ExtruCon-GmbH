@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Bot, Check, ArrowRight, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
-import aiImg from "@assets/generated_images/glowing_neural_network_brain.png";
+import aiImg from "@assets/generated_images/optimized/glowing_neural_network_brain.webp";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";

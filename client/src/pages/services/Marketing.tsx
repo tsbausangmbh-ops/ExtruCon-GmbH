@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { TrendingUp, Check, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import marketingImg from "@assets/generated_images/abstract_performance_marketing_growth.png";
+import marketingImg from "@assets/generated_images/optimized/abstract_performance_marketing_growth.webp";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
-import fireworksBackground from "@assets/generated_images/new_year_fireworks_celebration.png";
+import fireworksBackground from "@assets/generated_images/optimized/new_year_fireworks_celebration.webp";
 
 function isNewYearDay(): boolean {
   const now = new Date();

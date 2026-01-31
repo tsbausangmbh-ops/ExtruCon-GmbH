@@ -1,4 +1,4 @@
-import heroBg from "@assets/generated_images/futuristic_digital_landscape_with_connecting_nodes.png";
+import heroBg from "@assets/generated_images/optimized/hero-bg.webp";
 import { ArrowRight, MapPin, Bot, Zap, Clock } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 

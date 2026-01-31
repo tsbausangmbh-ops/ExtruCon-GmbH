@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Share2, Check, ArrowRight, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
-import socialImg from "@assets/generated_images/digital_social_connection_abstract_art.png";
+import socialImg from "@assets/generated_images/optimized/digital_social_connection_abstract_art.webp";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";

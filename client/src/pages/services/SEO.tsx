@@ -2,7 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Search, Check, ArrowRight, MapPin, Globe, BarChart3 } from "lucide-react";
 import { motion } from "framer-motion";
-import seoImg from "@assets/generated_images/abstract_seo_geo-optimization_visual.png";
+import seoImg from "@assets/generated_images/optimized/abstract_seo_geo-optimization_visual.webp";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";

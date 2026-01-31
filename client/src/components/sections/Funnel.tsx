@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import funnelImg from "@assets/generated_images/futuristic_digital_marketing_funnel.png";
+import funnelImg from "@assets/generated_images/optimized/futuristic_digital_marketing_funnel.webp";
 import { MapPin, Search, Users, TrendingUp, Target, Zap, CheckCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/lib/i18n";
