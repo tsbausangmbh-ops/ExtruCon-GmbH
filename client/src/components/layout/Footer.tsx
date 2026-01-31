@@ -1,5 +1,5 @@
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
-import logoImg from "@assets/optimized/logo-small.webp";
+import logoImg from "@assets/optimized/logo-footer.webp";
 import { useLanguage } from "@/lib/i18n";
 
 export function Footer() {
