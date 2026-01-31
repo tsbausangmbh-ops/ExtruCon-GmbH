@@ -104,4 +104,18 @@
   .neon-glow {
     box-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
   }
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
