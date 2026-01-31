@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Award, ArrowRight, MapPin, ExternalLink, Star, Users, Zap } from "lucide-react";
 import { motion } from "framer-motion";
+import heroImg from "@/assets/images/hero-referenzen-abstract.webp";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -155,8 +156,9 @@ export default function Referenzen() {
         ]} />
         
         <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-4 pb-4">
-          <div className="absolute inset-0 z-0 bg-gradient-to-br from-amber-600/40 via-background to-cyan-600/40">
-            <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
+          <div className="absolute inset-0 z-0">
+            <img src={heroImg} alt="" className="w-full h-full object-cover opacity-50" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background" />
           </div>
           <div className="container mx-auto px-4 z-40 relative">
             <div className="max-w-4xl mx-auto text-center">
