@@ -74,7 +74,7 @@ export default function Chatbot() {
       
       <main className="flex-1 pt-24 flex flex-col">
         <section className="relative py-8 overflow-hidden">
-          <div className="absolute inset-0 z-0 bg-gradient-to-br from-cyan-900/20 via-background to-violet-900/20">
+          <div className="absolute inset-0 z-0 bg-gradient-to-br from-cyan-600/40 via-background to-violet-600/40">
             <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
           </div>
           <div className="container mx-auto px-4 text-center relative z-10">

@@ -230,7 +230,7 @@ export default function Automatisierungen() {
         ]} />
         {/* Hero */}
         <section className="relative py-10 overflow-hidden">
-          <div className="absolute inset-0 z-0 bg-gradient-to-br from-purple-900/20 via-background to-cyan-900/20">
+          <div className="absolute inset-0 z-0 bg-gradient-to-br from-purple-600/40 via-background to-cyan-600/40">
             <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
