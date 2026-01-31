@@ -6,7 +6,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Calendar, ArrowRight, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
-import heroImg from "@/assets/images/hero-contact-abstract.webp";
 import { useState } from "react";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
@@ -67,8 +66,7 @@ export default function Contact() {
       <main className="pt-24">
         {/* Hero Section */}
         <section className="relative py-16 overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <img src={heroImg} alt="Kontakt Visualisierung" className="w-full h-full object-cover opacity-30" loading="lazy" />
+          <div className="absolute inset-0 z-0 bg-gradient-to-br from-blue-900/20 via-background to-cyan-900/20">
             <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
           </div>
           <div className="container mx-auto px-4 relative z-10">

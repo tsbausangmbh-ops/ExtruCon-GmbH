@@ -3,7 +3,6 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Fingerprint, Check, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import brandImg from "@/assets/images/hero-brand-abstract.webp";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -28,8 +27,7 @@ export default function Brand() {
         ]} />
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <img src={brandImg} alt={t.brandPage.title} className="w-full h-full object-cover opacity-20" loading="lazy" />
+          <div className="absolute inset-0 z-0 bg-gradient-to-br from-indigo-900/20 via-background to-purple-900/20">
             <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
           </div>
           <div className="container mx-auto px-4 relative z-10">

@@ -3,7 +3,6 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Share2, Check, ArrowRight, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
-import socialImg from "@/assets/images/hero-social-abstract.webp";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -30,8 +29,7 @@ export default function SocialMedia() {
         ]} />
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <img src={socialImg} alt={t.socialMediaPage.heroImageAlt} className="w-full h-full object-cover opacity-20" loading="lazy" />
+          <div className="absolute inset-0 z-0 bg-gradient-to-br from-pink-900/20 via-background to-blue-900/20">
             <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
