@@ -42,7 +42,11 @@ const STATIC_PAGES: Record<string, string> = {
   '/automatisierungen': 'automatisierungen.html',
   '/webseiten-ki': 'webseiten-ki.html',
   '/muenchen': 'muenchen.html',
-  '/kontakt': 'kontakt.html'
+  '/faq': 'faq.html',
+  '/referenzen': 'referenzen.html',
+  '/ki-bot': 'ki-bot.html',
+  '/impressum': 'impressum.html',
+  '/datenschutz': 'datenschutz.html'
 };
 
 const openai = new OpenAI({
