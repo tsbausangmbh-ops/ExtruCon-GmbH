@@ -69,25 +69,30 @@ export async function registerRoutes(
   // Crawler detection middleware - serve static HTML for SEO
   app.use((req: Request, res: Response, next: NextFunction) => {
     const userAgent = req.headers['user-agent'] || '';
-    const path = req.path;
+    const reqPath = req.path;
     
     // Only intercept GET requests for known static pages
-    if (req.method !== 'GET' || !STATIC_PAGES[path]) {
+    if (req.method !== 'GET' || !STATIC_PAGES[reqPath]) {
       return next();
     }
     
     // Check if request is from a crawler
     if (isCrawler(userAgent)) {
-      const staticFile = STATIC_PAGES[path];
-      const staticPath = process.env.NODE_ENV === 'production'
-        ? `${__dirname}/public/static/${staticFile}`
-        : `${import.meta.dirname}/../client/public/static/${staticFile}`;
+      const staticFile = STATIC_PAGES[reqPath];
+      const staticPath = path.resolve(
+        process.cwd(),
+        process.env.NODE_ENV === 'production'
+          ? `dist/public/static/${staticFile}`
+          : `client/public/static/${staticFile}`
+      );
       
       // Check if static file exists
       if (fs.existsSync(staticPath)) {
-        console.log(`[SSR] Serving static HTML for crawler: ${path}`);
+        console.log(`[SSR] Serving static HTML for crawler: ${reqPath} from ${staticPath}`);
         res.set('Content-Type', 'text/html');
         return res.sendFile(staticPath);
+      } else {
+        console.log(`[SSR] Static file not found: ${staticPath}`);
       }
     }
     
