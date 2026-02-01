@@ -1,10 +1,49 @@
-import type { Express } from "express";
+import type { Express, Request, Response, NextFunction } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import OpenAI from "openai";
 import { listEvents, createEvent, getAvailableSlots, isBusinessHour, getAlternativeSlots } from "./lib/googleCalendar";
 import { sendContactEmail } from "./lib/email";
 import { SITEMAP_XML, ROBOTS_TXT } from "./seoFiles";
+import fs from "fs";
+import path from "path";
+
+const CRAWLER_USER_AGENTS = [
+  'googlebot',
+  'bingbot',
+  'slurp',
+  'duckduckbot',
+  'baiduspider',
+  'yandexbot',
+  'sogou',
+  'exabot',
+  'facebot',
+  'facebookexternalhit',
+  'ia_archiver',
+  'linkedinbot',
+  'twitterbot',
+  'pinterestbot',
+  'applebot',
+  'semrushbot',
+  'ahrefsbot',
+  'mj12bot',
+  'dotbot',
+  'petalbot'
+];
+
+function isCrawler(userAgent: string): boolean {
+  const ua = userAgent.toLowerCase();
+  return CRAWLER_USER_AGENTS.some(crawler => ua.includes(crawler));
+}
+
+const STATIC_PAGES: Record<string, string> = {
+  '/': 'index.html',
+  '/ki-agenten': 'ki-agenten.html',
+  '/automatisierungen': 'automatisierungen.html',
+  '/webseiten-ki': 'webseiten-ki.html',
+  '/muenchen': 'muenchen.html',
+  '/kontakt': 'kontakt.html'
+};
 
 const openai = new OpenAI({
   baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
@@ -26,6 +65,35 @@ export async function registerRoutes(
     res.set("Content-Type", "text/plain");
     res.send(ROBOTS_TXT);
   });
+
+  // Crawler detection middleware - serve static HTML for SEO
+  app.use((req: Request, res: Response, next: NextFunction) => {
+    const userAgent = req.headers['user-agent'] || '';
+    const path = req.path;
+    
+    // Only intercept GET requests for known static pages
+    if (req.method !== 'GET' || !STATIC_PAGES[path]) {
+      return next();
+    }
+    
+    // Check if request is from a crawler
+    if (isCrawler(userAgent)) {
+      const staticFile = STATIC_PAGES[path];
+      const staticPath = process.env.NODE_ENV === 'production'
+        ? `${__dirname}/public/static/${staticFile}`
+        : `${import.meta.dirname}/../client/public/static/${staticFile}`;
+      
+      // Check if static file exists
+      if (fs.existsSync(staticPath)) {
+        console.log(`[SSR] Serving static HTML for crawler: ${path}`);
+        res.set('Content-Type', 'text/html');
+        return res.sendFile(staticPath);
+      }
+    }
+    
+    next();
+  });
+
   // Chat API endpoint for KI-Bot
   app.post("/api/chat", async (req, res) => {
     try {
