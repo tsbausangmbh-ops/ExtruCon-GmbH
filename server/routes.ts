@@ -46,7 +46,15 @@ const STATIC_PAGES: Record<string, string> = {
   '/referenzen': 'referenzen.html',
   '/ki-bot': 'ki-bot.html',
   '/impressum': 'impressum.html',
-  '/datenschutz': 'datenschutz.html'
+  '/datenschutz': 'datenschutz.html',
+  '/ratgeber': 'ratgeber.html',
+  '/leistungen/markenaufbau': 'leistungen/markenaufbau.html',
+  '/leistungen/content': 'leistungen/content.html',
+  '/leistungen/social-media': 'leistungen/social-media.html',
+  '/leistungen/ki-automatisierung': 'leistungen/ki-automatisierung.html',
+  '/leistungen/web': 'leistungen/web.html',
+  '/leistungen/marketing': 'leistungen/marketing.html',
+  '/leistungen/seo': 'leistungen/seo.html'
 };
 
 const openai = new OpenAI({
