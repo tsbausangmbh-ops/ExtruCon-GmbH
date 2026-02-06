@@ -122,6 +122,10 @@ export const translations = {
       emailLabel: 'E-Mail',
       phoneLabel: 'Telefon',
       contactLink: 'Kontakt aufnehmen',
+      contractNoticeTitle: 'Hinweis zum Vertragsabschluss',
+      contractNotice1: 'Die auf dieser Website dargestellten Inhalte, Leistungen und Informationen stellen kein verbindliches Angebot im rechtlichen Sinne dar. Ein Vertragsabschluss über diese Website findet nicht statt.',
+      contractNotice2: 'Anfragen über kontaktformulare, E-Mail oder Telefon dienen ausschließlich der unverbindlichen Kontaktaufnahme und der Vorbereitung einer individuellen Angebotserstellung. Ein Vertrag kommt erst nach persönlicher Abstimmung, Besichtigung vor Ort und ausdrücklicher Annahme eines schriftlichen Angebots zustande.',
+      contractNotice3: 'Es erfolgt keine kostenpflichtige Bestellung, keine Buchung und keine Online-Zahlung über diese Website.',
     },
     about: {
       badge: 'Über ExtruCon GmbH',
@@ -1299,6 +1303,10 @@ export const translations = {
       emailLabel: 'Email',
       phoneLabel: 'Phone',
       contactLink: 'Get in touch',
+      contractNoticeTitle: 'Notice on Contract Conclusion',
+      contractNotice1: 'The content, services and information presented on this website do not constitute a binding offer in a legal sense. No contract is concluded via this website.',
+      contractNotice2: 'Inquiries via contact forms, email or telephone serve exclusively for non-binding contact and the preparation of an individual offer. A contract is only concluded after personal consultation, on-site inspection and express acceptance of a written offer.',
+      contractNotice3: 'No chargeable orders, bookings or online payments are made via this website.',
     },
     about: {
       badge: 'About ExtruCon GmbH',
@@ -2476,6 +2484,10 @@ export const translations = {
       emailLabel: 'E-pošta',
       phoneLabel: 'Telefon',
       contactLink: 'Kontaktirajte nas',
+      contractNoticeTitle: 'Napomena o sklapanju ugovora',
+      contractNotice1: 'Sadržaji, usluge i informacije prikazane na ovoj web stranici ne predstavljaju obvezujuću ponudu u pravnom smislu. Sklapanje ugovora putem ove web stranice nije moguće.',
+      contractNotice2: 'Upiti putem kontakt obrazaca, e-pošte ili telefona služe isključivo za nezavezujući kontakt i pripremu individualne ponude. Ugovor se sklapa tek nakon osobnog dogovora, pregleda na licu mjesta i izričitog prihvaćanja pisane ponude.',
+      contractNotice3: 'Putem ove web stranice ne vrše se naplatne narudžbe, rezervacije niti online plaćanja.',
     },
     about: {
       badge: 'O ExtruCon GmbH',
@@ -4006,6 +4018,10 @@ export const translations = {
       cookies: 'Çerez Ayarları',
       copyright: '© 2025 ExtruCon GmbH. Tüm hakları saklıdır.',
       location: 'Fürstenfeldbruck, Almanya',
+      contractNoticeTitle: 'Sözleşme Bildirimi',
+      contractNotice1: 'Bu web sitesinde sunulan içerikler, hizmetler ve bilgiler yasal anlamda bağlayıcı bir teklif teşkil etmez. Bu web sitesi üzerinden sözleşme yapılmaz.',
+      contractNotice2: 'İletişim formları, e-posta veya telefon aracılığıyla yapılan sorular yalnızca bağlayıcı olmayan iletişim ve bireysel teklif hazırlığı amacıyla yapılmaktadır. Bir sözleşme ancak kişisel görüşme, yerinde inceleme ve yazılı teklifin açıkça kabul edilmesinden sonra akdedilir.',
+      contractNotice3: 'Bu web sitesi üzerinden ücretli sipariş, rezervasyon veya çevrimiçi ödeme yapılmaz.',
     },
     chatbot: {
       title: 'AI Asistanı',
