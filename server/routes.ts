@@ -54,7 +54,8 @@ const STATIC_PAGES: Record<string, string> = {
   '/leistungen/ki-automatisierung': 'leistungen/ki-automatisierung.html',
   '/leistungen/web': 'leistungen/web.html',
   '/leistungen/marketing': 'leistungen/marketing.html',
-  '/leistungen/seo': 'leistungen/seo.html'
+  '/leistungen/seo': 'leistungen/seo.html',
+  '/barrierefreiheit': 'barrierefreiheit.html'
 };
 
 const openai = new OpenAI({
