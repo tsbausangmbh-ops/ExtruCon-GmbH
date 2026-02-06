@@ -1,14 +1,14 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Bot, Share2, Globe, PenTool, Fingerprint, TrendingUp, Search, Award, HelpCircle } from "lucide-react";
-import aiImg from "@assets/generated_images/glowing_neural_network_brain.png";
-import socialImg from "@assets/generated_images/digital_social_connection_abstract_art.png";
-import webImg from "@assets/generated_images/holographic_creative_interface.png";
-import brandImg from "@assets/generated_images/abstract_digital_brand_identity_construction.png";
-import contentImg from "@assets/generated_images/abstract_content_creation_visualization.png";
-import marketingImg from "@assets/generated_images/abstract_performance_marketing_growth.png";
-import seoImg from "@assets/generated_images/abstract_seo_geo-optimization_visual.png";
-import referenzenImg from "@assets/generated_images/portfolio_references_showcase_visual.png";
-import faqImg from "@assets/generated_images/faq_knowledge_help_visual.png";
+import aiImg from "@assets/generated_images/glowing_neural_network_brain.webp";
+import socialImg from "@assets/generated_images/digital_social_connection_abstract_art.webp";
+import webImg from "@assets/generated_images/holographic_creative_interface.webp";
+import brandImg from "@assets/generated_images/abstract_digital_brand_identity_construction.webp";
+import contentImg from "@assets/generated_images/abstract_content_creation_visualization.webp";
+import marketingImg from "@assets/generated_images/abstract_performance_marketing_growth.webp";
+import seoImg from "@assets/generated_images/abstract_seo_geo-optimization_visual.webp";
+import referenzenImg from "@assets/generated_images/portfolio_references_showcase_visual.webp";
+import faqImg from "@assets/generated_images/faq_knowledge_help_visual.webp";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/lib/i18n";
 
@@ -117,6 +117,10 @@ export function Services() {
                         src={service.image} 
                         alt={service.title}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        loading="lazy"
+                        decoding="async"
+                        width={400}
+                        height={192}
                       />
                     ) : (
                       <div className="w-full h-full bg-gradient-to-br from-purple-900 to-pink-900 flex items-center justify-center">

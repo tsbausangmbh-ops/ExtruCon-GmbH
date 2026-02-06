@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
-import christmasBackground from "@assets/generated_images/festive_christmas_background_lights.png";
+import christmasBackground from "@assets/generated_images/festive_christmas_background_lights.webp";
 
 function isChristmasSeason(): boolean {
   const now = new Date();
@@ -67,6 +67,10 @@ export default function ChristmasPopup() {
           src={christmasBackground} 
           alt="Weihnachtsgrüße" 
           className="w-full h-auto"
+          loading="lazy"
+          decoding="async"
+          width={600}
+          height={400}
         />
         
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-900/70 to-transparent" />

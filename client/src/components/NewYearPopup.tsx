@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
-import fireworksBackground from "@assets/generated_images/new_year_fireworks_celebration.png";
+import fireworksBackground from "@assets/generated_images/new_year_fireworks_celebration.webp";
 
 function isNewYearDay(): boolean {
   const now = new Date();
@@ -76,6 +76,10 @@ export default function NewYearPopup() {
           src={fireworksBackground} 
           alt="Neujahrsgrüße" 
           className="w-full h-auto"
+          loading="lazy"
+          decoding="async"
+          width={600}
+          height={400}
         />
         
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-900/70 to-transparent" />
