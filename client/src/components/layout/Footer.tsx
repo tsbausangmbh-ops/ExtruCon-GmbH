@@ -78,16 +78,6 @@ export function Footer() {
           </p>
         </div>
 
-        <div className="border-t border-white/10 pt-6 mb-6">
-          <h4 className="text-xs font-semibold text-gray-400 mb-2">{t.footer.contractNoticeTitle}</h4>
-          <p className="text-xs text-gray-500 mb-1">{t.footer.contractNotice1}</p>
-          <p className="text-xs text-gray-500 mb-1">{t.footer.contractNotice2}</p>
-          <p className="text-xs text-gray-500 mb-2">{t.footer.contractNotice3}</p>
-          <div className="flex gap-3 text-xs">
-            <a href="/impressum" className="text-gray-400 hover:text-white transition-colors">{t.footer.impressum}</a>
-            <a href="/agb" className="text-gray-400 hover:text-white transition-colors">{t.footer.terms}</a>
-          </div>
-        </div>
         
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
           <p>&copy; {new Date().getFullYear()} ExtruCon GmbH. {t.footer.allRights}</p>

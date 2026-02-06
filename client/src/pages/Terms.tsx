@@ -379,6 +379,15 @@ export default function Terms() {
 
         </div>
         </div>
+
+        <section className="container mx-auto px-4 py-6">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-[10px] text-gray-600 leading-relaxed">
+              <span className="font-medium text-gray-500">{t.footer.contractNoticeTitle}:</span> {t.footer.contractNotice1} {t.footer.contractNotice2} {t.footer.contractNotice3}
+              {' '}<a href="/impressum" className="underline hover:text-gray-400">{t.footer.impressum}</a> · <a href="/agb" className="underline hover:text-gray-400">{t.footer.terms}</a>
+            </p>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
