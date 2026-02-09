@@ -1,7 +1,11 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { motion } from "framer-motion";
+import { Accessibility } from "lucide-react";
+import heroImg from "@/assets/images/hero-web-abstract.webp";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export default function Barrierefreiheit() {
   const { t, language } = useLanguage();
@@ -11,14 +15,39 @@ export default function Barrierefreiheit() {
       <SEOHead
         title="Barrierefreiheit | ExtruCon GmbH"
         description="Erklärung zur Barrierefreiheit der ExtruCon GmbH. Informationen zur digitalen Zugänglichkeit unserer Website gemäß BFSG und WCAG 2.1."
-        keywords="Barrierefreiheit, Accessibility, WCAG, BFSG, barrierefrei"
+        keywords="Barrierefreiheit, Accessibility, WCAG, BFSG, barrierefrei, barrierefreie Website erstellen BFSG 2025, digitale Barrierefreiheit Unternehmen Pflicht"
         canonical="https://extrucon.de/barrierefreiheit"
       />
       <Navbar />
       <main className="pt-24">
+        <Breadcrumbs items={[
+          { label: "Barrierefreiheit" }
+        ]} />
+        <section className="relative py-12 overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <img src={heroImg} alt="Barrierefreie Website gemäß BFSG und WCAG 2.1 - digitale Zugänglichkeit für alle Nutzer inklusive Webdesign ExtruCon" className="w-full h-full object-cover opacity-40" fetchPriority="high" decoding="async" width={1920} height={1080} />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="max-w-3xl mx-auto text-center"
+            >
+              <div className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-4">
+                <Accessibility className="w-4 h-4" />
+                Barrierefreiheit
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold font-display text-white mb-4">Erklärung zur Barrierefreiheit</h1>
+              <p className="text-lg text-gray-400">
+                Digitale Zugänglichkeit für alle Nutzer – gemäß BFSG und WCAG 2.1 Level AA.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
         <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">Erklärung zur Barrierefreiheit</h1>
           {language !== 'de' && (
             <p className="text-amber-400/80 text-sm mb-8 p-3 rounded-lg bg-amber-400/10 border border-amber-400/20">
               {t.legalPages?.legalNotice}
