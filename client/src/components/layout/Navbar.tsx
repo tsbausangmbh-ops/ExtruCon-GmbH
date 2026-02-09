@@ -25,7 +25,7 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-4 h-24 flex items-center justify-between py-1">
         <Link href="/" className="flex flex-col items-start leading-tight">
-          <span className="text-2xl font-bold font-display tracking-wider text-white">ExtruCon GmbH</span>
+          <span className="text-2xl font-bold font-display tracking-wider text-white">Extru<span className="text-red-500">Con</span> GmbH</span>
           <span className="text-xs text-gray-400 tracking-wide">KI und SEO Optimierungen</span>
         </Link>
 
