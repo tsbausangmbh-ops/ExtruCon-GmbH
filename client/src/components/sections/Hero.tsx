@@ -11,7 +11,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <img 
           src={heroBg} 
-          alt="KI-Agentur Fürstenfeldbruck - Digitale Automatisierung und Marketing" 
+          alt="ExtruCon KI-Agentur Fürstenfeldbruck bei München - intelligente Automatisierung KI-Agenten Chatbots und digitales Marketing für Unternehmen in Bayern" 
           className="w-full h-full object-cover opacity-60"
           fetchPriority="high"
           decoding="async"

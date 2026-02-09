@@ -21,6 +21,7 @@ export function Services() {
       description: t.servicesPage.brand.desc,
       icon: Fingerprint,
       image: brandImg,
+      altText: "Markenaufbau und Corporate Identity Design - Brand Strategy Agentur Fürstenfeldbruck München",
       color: "text-amber-400",
       href: "/leistungen/markenaufbau"
     },
@@ -29,6 +30,7 @@ export function Services() {
       description: t.servicesPage.content.desc,
       icon: PenTool,
       image: contentImg,
+      altText: "KI-gestützte Content-Erstellung - SEO-Texte Blogartikel und Produktbeschreibungen professionell erstellen lassen",
       color: "text-pink-400",
       href: "/leistungen/content"
     },
@@ -37,6 +39,7 @@ export function Services() {
       description: t.servicesPage.social.desc,
       icon: Share2,
       image: socialImg,
+      altText: "Social Media Marketing und Management - Instagram Facebook LinkedIn Betreuung für Unternehmen München",
       color: "text-purple-400",
       href: "/leistungen/social-media"
     },
@@ -45,6 +48,7 @@ export function Services() {
       description: t.servicesPage.ki.desc,
       icon: Bot,
       image: aiImg,
+      altText: "KI-Automatisierung und intelligente Chatbot Entwicklung - Prozessoptimierung mit künstlicher Intelligenz Bayern",
       color: "text-cyan-400",
       href: "/leistungen/ki-automatisierung"
     },
@@ -53,6 +57,7 @@ export function Services() {
       description: t.servicesPage.web.desc,
       icon: Globe,
       image: webImg,
+      altText: "Professionelle Webentwicklung mit KI-Features - responsive Webdesign und moderne Webseiten erstellen lassen",
       color: "text-blue-400",
       href: "/leistungen/web"
     },
@@ -61,6 +66,7 @@ export function Services() {
       description: t.servicesPage.marketing.desc,
       icon: TrendingUp,
       image: marketingImg,
+      altText: "Performance Marketing und Online-Werbung - Google Ads Social Media Kampagnen für mehr Kunden gewinnen",
       color: "text-orange-400",
       href: "/leistungen/marketing"
     },
@@ -69,6 +75,7 @@ export function Services() {
       description: t.servicesPage.seo.desc,
       icon: Search,
       image: seoImg,
+      altText: "SEO Optimierung und lokale Suchmaschinenoptimierung - Google Rankings verbessern für Unternehmen München Bayern",
       color: "text-green-400",
       href: "/leistungen/seo"
     },
@@ -77,6 +84,7 @@ export function Services() {
       description: "Überzeugen Sie sich von unseren erfolgreichen Projekten und zufriedenen Kunden",
       icon: Award,
       image: referenzenImg,
+      altText: "Erfolgreiche Kundenprojekte und Referenzen - KI-Agenten Automatisierung und Webseiten Fallstudien",
       color: "text-yellow-400",
       href: "/referenzen"
     },
@@ -85,6 +93,7 @@ export function Services() {
       description: "Antworten auf häufig gestellte Fragen zu unseren Leistungen und Prozessen",
       icon: HelpCircle,
       image: faqImg,
+      altText: "Häufige Fragen zu KI-Agenten Chatbots und Automatisierung - Kosten Dauer und DSGVO erklärt",
       color: "text-violet-400",
       href: "/faq"
     }
@@ -115,7 +124,7 @@ export function Services() {
                     {service.image ? (
                       <img 
                         src={service.image} 
-                        alt={service.title}
+                        alt={service.altText}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         loading="lazy"
                         decoding="async"

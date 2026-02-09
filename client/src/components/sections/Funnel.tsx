@@ -35,7 +35,7 @@ export function Funnel() {
             <div className="relative z-10 rounded-2xl overflow-hidden border border-white/10 shadow-2xl glass-card">
               <img 
                 src={funnelImg} 
-                alt="Digital Marketing Funnel - SEO und Geo-Targeting System" 
+                alt="Digitaler Marketing Funnel mit SEO und Geo-Targeting - automatisierte Kundengewinnung und Lead-Generierung Strategie für lokale Unternehmen" 
                 className="w-full h-auto object-cover"
                 loading="lazy"
                 decoding="async"

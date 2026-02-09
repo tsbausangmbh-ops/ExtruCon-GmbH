@@ -11,7 +11,7 @@ export function Footer() {
         <div className="mb-8">
           <div className="mb-8">
             <a href="https://extrucon.de" className="flex items-center gap-3 mb-4 hover:opacity-80 transition-opacity" itemProp="url">
-              <img src={logoImg} alt="ExtruCon GmbH Logo" className="h-14 object-contain rounded-md" loading="lazy" itemProp="logo" />
+              <img src={logoImg} alt="ExtruCon GmbH Logo - KI-Agentur für Automatisierung Chatbots und Webentwicklung Fürstenfeldbruck München" className="h-14 object-contain rounded-md" loading="lazy" itemProp="logo" />
             </a>
             <p className="text-gray-400 max-w-sm mb-4" itemProp="description">
               {t.footer.slogan}

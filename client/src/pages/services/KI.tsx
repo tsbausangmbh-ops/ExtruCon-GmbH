@@ -53,7 +53,7 @@ export default function KI() {
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img src={heroImg} alt="" className="w-full h-full object-cover opacity-40" fetchPriority="high" decoding="async" width={800} height={437} />
+            <img src={heroImg} alt="KI-Automatisierung und künstliche Intelligenz Integration - intelligente Prozessoptimierung Chatbot Entwicklung für Unternehmen Bayern" className="w-full h-full object-cover opacity-40" fetchPriority="high" decoding="async" width={800} height={437} />
             <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
