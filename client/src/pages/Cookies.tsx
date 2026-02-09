@@ -63,21 +63,21 @@ export default function Cookies() {
           </section>
 
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">{t.cookiePage.whatAreCookies}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">{t.cookiePage.whatAreCookies}</h2>
             <p className="text-gray-400 leading-relaxed">
               {t.cookiePage.whatAreCookiesDesc}
             </p>
           </section>
 
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-6">{t.cookiePage.typesTitle}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-6">{t.cookiePage.typesTitle}</h2>
             <div className="space-y-4">
               <div className="flex items-start gap-4 p-4 rounded-lg bg-white/5 border border-white/10">
                 <div className="p-2 rounded-lg bg-green-500/20">
                   <Shield className="w-5 h-5 text-green-400" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-white mb-1">{t.cookieConsent.necessary}</h3>
+                  <h3 className="font-bold text-white mb-1">{t.cookieConsent.necessary}</h3>
                   <p className="text-gray-400 text-sm">{t.cookieConsent.necessaryDesc}</p>
                 </div>
               </div>
@@ -87,7 +87,7 @@ export default function Cookies() {
                   <BarChart3 className="w-5 h-5 text-blue-400" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-white mb-1">{t.cookieConsent.analytics}</h3>
+                  <h3 className="font-bold text-white mb-1">{t.cookieConsent.analytics}</h3>
                   <p className="text-gray-400 text-sm">{t.cookieConsent.analyticsDesc}</p>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default function Cookies() {
                   <Megaphone className="w-5 h-5 text-purple-400" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-white mb-1">{t.cookieConsent.marketing}</h3>
+                  <h3 className="font-bold text-white mb-1">{t.cookieConsent.marketing}</h3>
                   <p className="text-gray-400 text-sm">{t.cookieConsent.marketingDesc}</p>
                 </div>
               </div>
@@ -110,7 +110,7 @@ export default function Cookies() {
                 <Scale className="w-5 h-5 text-amber-400" />
               </div>
               <div className="flex-1">
-                <h2 className="text-xl font-bold text-white mb-2">{t.cookiePage.legalBasis}</h2>
+                <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-2">{t.cookiePage.legalBasis}</h2>
                 <p className="text-gray-400 leading-relaxed mb-3">{t.cookiePage.legalBasisDesc}</p>
                 <pre className="text-gray-300 text-sm whitespace-pre-wrap bg-white/5 p-4 rounded-lg border border-white/10">{t.cookiePage.legalBasisList}</pre>
                 <p className="text-primary text-sm mt-3 font-medium">{t.cookiePage.supervisoryAuthority}</p>
@@ -124,7 +124,7 @@ export default function Cookies() {
                 <UserCheck className="w-5 h-5 text-cyan-400" />
               </div>
               <div className="flex-1">
-                <h2 className="text-xl font-bold text-white mb-2">{t.cookiePage.yourRights}</h2>
+                <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-2">{t.cookiePage.yourRights}</h2>
                 <p className="text-gray-400 leading-relaxed mb-3">{t.cookiePage.yourRightsDesc}</p>
                 <pre className="text-gray-300 text-sm whitespace-pre-wrap bg-white/5 p-4 rounded-lg border border-white/10">{t.cookiePage.yourRightsList}</pre>
               </div>
@@ -132,7 +132,7 @@ export default function Cookies() {
           </section>
 
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">{t.cookiePage.currentSettings}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">{t.cookiePage.currentSettings}</h2>
             {preferences ? (
               <div className="space-y-3 mb-6">
                 <div className="flex items-center justify-between p-3 rounded-lg bg-white/5">
@@ -163,7 +163,7 @@ export default function Cookies() {
           </section>
 
           <section className="mb-8 p-6 rounded-xl bg-primary/10 border border-primary/20">
-            <h2 className="text-xl font-bold text-white mb-2">{t.cookiePage.changeSettings}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-2">{t.cookiePage.changeSettings}</h2>
             <p className="text-gray-400 mb-4">{t.cookiePage.changeSettingsDesc}</p>
             <Button
               onClick={openCookieSettings}

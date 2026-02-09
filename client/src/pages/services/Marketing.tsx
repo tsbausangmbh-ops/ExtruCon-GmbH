@@ -44,7 +44,7 @@ export default function Marketing() {
                 <TrendingUp className="w-12 h-12 text-orange-400" />
                 <span className="text-orange-400 font-semibold">{t.marketingPage.badge}</span>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold font-display text-white mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-display text-white mb-4">
                 {t.marketingPage.title}
               </h1>
               <p className="text-xl text-gray-400 mb-8">
@@ -60,7 +60,7 @@ export default function Marketing() {
         {/* Leistungsumfang */}
         <section className="py-16 bg-card/20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold font-display text-white mb-12 text-center">{t.marketingPage.servicesTitle}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4 text-center">{t.marketingPage.servicesTitle}</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {t.marketingPage.services.map((item, i) => (
                 <motion.div
@@ -72,7 +72,7 @@ export default function Marketing() {
                   className="p-6 rounded-xl bg-card/30 border border-white/5"
                 >
                   <Check className="w-8 h-8 text-orange-400 mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                  <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
                   <p className="text-gray-400">{item.desc}</p>
                 </motion.div>
               ))}
@@ -83,7 +83,7 @@ export default function Marketing() {
         {/* Plattformen */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold font-display text-white mb-12 text-center">{t.marketingPage.channelsTitle}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4 text-center">{t.marketingPage.channelsTitle}</h2>
             <div className="flex flex-wrap justify-center gap-6">
               {channels.map((channel, i) => (
                 <motion.div
@@ -105,7 +105,7 @@ export default function Marketing() {
         <section className="py-16 bg-card/20">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold font-display text-white mb-8">{t.marketingPage.benefitsTitle}</h2>
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">{t.marketingPage.benefitsTitle}</h2>
               <div className="space-y-4 text-left">
                 {t.marketingPage.benefits.map((item, i) => (
                   <div key={i} className="flex items-center gap-3 p-4 rounded-lg bg-card/30">
@@ -121,7 +121,7 @@ export default function Marketing() {
         {/* CTA */}
         <section className="py-16 bg-gradient-to-r from-orange-900/20 to-red-900/20">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold font-display text-white mb-4">{t.marketingPage.ctaTitle}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">{t.marketingPage.ctaTitle}</h2>
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
               {t.marketingPage.ctaSubtitle}
             </p>

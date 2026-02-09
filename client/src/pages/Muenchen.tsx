@@ -148,7 +148,7 @@ export default function Muenchen() {
                 <span>Ihre KI-Agentur für München & Umgebung</span>
               </div>
               
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-display mb-4 leading-tight">
                 <span className="text-white">KI-Agentur</span>{" "}
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">München</span>
               </h1>
@@ -194,7 +194,7 @@ export default function Muenchen() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 Unsere KI-Services für München
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
@@ -216,7 +216,7 @@ export default function Muenchen() {
                       <div className="w-14 h-14 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <service.icon className="w-7 h-7 text-cyan-400" />
                       </div>
-                      <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                      <h3 className="text-lg font-bold text-white mb-2">{service.title}</h3>
                       <p className="text-gray-400 mb-4">{service.description}</p>
                       <span className="text-cyan-400 flex items-center gap-2 group-hover:gap-3 transition-all">
                         Mehr erfahren <ArrowRight className="w-4 h-4" />
@@ -238,7 +238,7 @@ export default function Muenchen() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 Warum ExtruCon für München?
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
@@ -260,7 +260,7 @@ export default function Muenchen() {
                     <benefit.icon className="w-6 h-6 text-cyan-400" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">{benefit.title}</h3>
+                    <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3>
                     <p className="text-gray-400 text-sm">{benefit.description}</p>
                   </div>
                 </motion.div>
@@ -278,7 +278,7 @@ export default function Muenchen() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 Branchenlösungen für Münchner Unternehmen
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
@@ -304,7 +304,7 @@ export default function Muenchen() {
                   className="p-6 bg-gray-800/30 border border-gray-700/30 rounded-xl hover:border-cyan-500/30 transition-all"
                 >
                   <div className="text-4xl mb-4">{industry.icon}</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{industry.title}</h3>
+                  <h3 className="text-lg font-bold text-white mb-2">{industry.title}</h3>
                   <p className="text-sm text-gray-400">{industry.desc}</p>
                 </motion.div>
               ))}
@@ -321,7 +321,7 @@ export default function Muenchen() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 Das sagen Münchner Kunden
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
@@ -368,7 +368,7 @@ export default function Muenchen() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold text-white mb-6">
+                <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                   KI-Lösungen für ganz München
                 </h2>
                 <p className="text-gray-400 mb-6">
@@ -398,7 +398,7 @@ export default function Muenchen() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold text-white mb-6">
+                <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                   Auch im Münchner Umland
                 </h2>
                 <p className="text-gray-400 mb-6">
@@ -436,7 +436,7 @@ export default function Muenchen() {
               className="text-center max-w-3xl mx-auto"
             >
               <Building2 className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 Bereit für KI in Ihrem Münchner Unternehmen?
               </h2>
               <p className="text-gray-300 mb-8">

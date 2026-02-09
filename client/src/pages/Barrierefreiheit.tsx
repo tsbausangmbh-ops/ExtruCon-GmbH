@@ -38,7 +38,7 @@ export default function Barrierefreiheit() {
                 <Accessibility className="w-4 h-4" />
                 Barrierefreiheit
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold font-display text-white mb-4">
+              <h1 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
                 Erklärung zur Barrierefreiheit
               </h1>
               <p className="text-lg text-gray-400">
@@ -57,7 +57,7 @@ export default function Barrierefreiheit() {
           )}
 
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">Stand der Barrierefreiheit</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Stand der Barrierefreiheit</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Die ExtruCon GmbH ist bemüht, ihre Website im Einklang mit dem Barrierefreiheitsstärkungsgesetz (BFSG) und den Web Content Accessibility Guidelines (WCAG) 2.1 Level AA barrierefrei zugänglich zu machen.
             </p>
@@ -67,7 +67,7 @@ export default function Barrierefreiheit() {
           </section>
 
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">Maßnahmen zur Barrierefreiheit</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Maßnahmen zur Barrierefreiheit</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Wir setzen folgende Maßnahmen um, um die Barrierefreiheit unserer Website zu gewährleisten:
             </p>
@@ -84,7 +84,7 @@ export default function Barrierefreiheit() {
           </section>
 
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">Bekannte Einschränkungen</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Bekannte Einschränkungen</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Trotz unserer Bemühungen können folgende Bereiche derzeit noch Einschränkungen aufweisen:
             </p>
@@ -96,7 +96,7 @@ export default function Barrierefreiheit() {
           </section>
 
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">Technische Spezifikationen</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Technische Spezifikationen</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Die Barrierefreiheit dieser Website basiert auf folgenden Technologien:
             </p>
@@ -112,7 +112,7 @@ export default function Barrierefreiheit() {
           </section>
 
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">Feedback und Kontakt</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Feedback und Kontakt</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Wir begrüßen Ihr Feedback zur Barrierefreiheit unserer Website. Sollten Sie auf Barrieren stoßen oder Verbesserungsvorschläge haben, kontaktieren Sie uns bitte:
             </p>
@@ -127,7 +127,7 @@ export default function Barrierefreiheit() {
           </section>
 
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">Durchsetzungsverfahren</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Durchsetzungsverfahren</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Sollten Sie nach Ihrer Kontaktaufnahme keine zufriedenstellende Antwort erhalten, können Sie sich an die zuständige Durchsetzungsstelle wenden. In Bayern ist dies:
             </p>
@@ -142,7 +142,7 @@ export default function Barrierefreiheit() {
           </section>
 
           <section className="p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">Rechtliche Grundlagen</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Rechtliche Grundlagen</h2>
             <ul className="text-gray-400 space-y-2 list-disc list-inside leading-relaxed">
               <li>Barrierefreiheitsstärkungsgesetz (BFSG) – in Kraft seit 28. Juni 2025</li>
               <li>EU-Richtlinie 2019/882 (European Accessibility Act)</li>

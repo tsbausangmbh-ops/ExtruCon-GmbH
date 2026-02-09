@@ -27,7 +27,7 @@ export default function Impressum() {
 
           {/* Angaben gemäß § 5 TMG */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">Angaben gemäß § 5 TMG</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Angaben gemäß § 5 TMG</h2>
             <p className="text-gray-400 leading-relaxed">
               ExtruCon GmbH<br />
               Hasenheide 8<br />
@@ -37,7 +37,7 @@ export default function Impressum() {
 
           {/* Vertreten durch */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">Vertreten durch</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Vertreten durch</h2>
             <p className="text-gray-400 leading-relaxed">
               Geschäftsführer: Maral Ibrahim Agha
             </p>
@@ -45,7 +45,7 @@ export default function Impressum() {
 
           {/* Kontakt */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">Kontakt</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Kontakt</h2>
             <p className="text-gray-400 leading-relaxed">
               E-Mail: <a href="mailto:info@extrucon.de" className="text-cyan-400 hover:text-cyan-300 transition-colors">info@extrucon.de</a><br />
               Telefon: <a href="tel:+4989444438879" className="text-cyan-400 hover:text-cyan-300 transition-colors">089 444438879</a><br />
@@ -55,7 +55,7 @@ export default function Impressum() {
 
           {/* Registereintrag */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">Registereintrag</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Registereintrag</h2>
             <p className="text-gray-400 leading-relaxed">
               Eintragung im Handelsregister<br />
               Registergericht: Amtsgericht München<br />
@@ -65,7 +65,7 @@ export default function Impressum() {
 
           {/* Umsatzsteuer-ID */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">Umsatzsteuer-ID</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Umsatzsteuer-ID</h2>
             <p className="text-gray-400 leading-relaxed">
               Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
               DE [Nummer eintragen]
@@ -74,7 +74,7 @@ export default function Impressum() {
 
           {/* Verantwortlich für den Inhalt */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
             <p className="text-gray-400 leading-relaxed">
               Maral Ibrahim Agha<br />
               Hasenheide 8<br />
@@ -84,7 +84,7 @@ export default function Impressum() {
 
           {/* EU-Streitschlichtung */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">EU-Streitschlichtung</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">EU-Streitschlichtung</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 transition-colors">https://ec.europa.eu/consumers/odr</a>
             </p>
@@ -95,7 +95,7 @@ export default function Impressum() {
 
           {/* Verbraucherstreitbeilegung */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
             <p className="text-gray-400 leading-relaxed">
               Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
             </p>
@@ -103,7 +103,7 @@ export default function Impressum() {
 
           {/* Haftung für Inhalte */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">Haftung für Inhalte</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Haftung für Inhalte</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
             </p>
@@ -114,7 +114,7 @@ export default function Impressum() {
 
           {/* Haftung für Links */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">Haftung für Links</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Haftung für Links</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
             </p>
@@ -125,7 +125,7 @@ export default function Impressum() {
 
           {/* Urheberrecht */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">Urheberrecht</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Urheberrecht</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
             </p>
@@ -136,7 +136,7 @@ export default function Impressum() {
 
           {/* KI-Hinweis gemäß EU AI Act */}
           <section className="p-6 rounded-xl bg-cyan-500/10 border border-cyan-500/20">
-            <h2 className="text-xl font-bold text-white mb-4">KI-Hinweis gemäß EU AI Act (Art. 50)</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">KI-Hinweis gemäß EU AI Act (Art. 50)</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               <strong className="text-cyan-400">Transparenzhinweis:</strong> ExtruCon GmbH setzt zur Unterstützung der Geschäftsprozesse KI-basierte Systeme ein. Diese werden u.a. bei der Angebotserstellung, Kommunikation und Dokumentenverarbeitung genutzt. Alle endgültigen Entscheidungen werden von qualifizierten Mitarbeitern getroffen und verantwortet.
             </p>

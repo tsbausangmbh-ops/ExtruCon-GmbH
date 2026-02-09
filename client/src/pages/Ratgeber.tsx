@@ -139,7 +139,7 @@ export default function Ratgeber() {
                 <BookOpen className="w-4 h-4" />
                 {t.ratgeberPage.badge}
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold font-display text-white mb-4">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-display text-white mb-4">
                 {t.ratgeberPage.title}
               </h1>
               <p className="text-lg text-gray-400 mb-6">
@@ -193,7 +193,7 @@ export default function Ratgeber() {
             <div className="container mx-auto px-4">
               <div className="flex items-center gap-2 mb-6">
                 <Lightbulb className="w-5 h-5 text-yellow-400" />
-                <h2 className="text-xl font-bold text-white">{t.ratgeberPage.featuredTitle}</h2>
+                <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">{t.ratgeberPage.featuredTitle}</h2>
               </div>
               <div className="grid md:grid-cols-3 gap-4">
                 {featuredArticles.map((article, i) => {
@@ -238,7 +238,7 @@ export default function Ratgeber() {
         {/* All Articles - 3x3 Grid */}
         <section className="py-8">
           <div className="container mx-auto px-4">
-            <h2 className="text-xl font-bold text-white mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
               {selectedCategory === "all" ? t.ratgeberPage.allArticlesTitle : getCategoryInfo(selectedCategory)?.name}
               <span className="text-gray-500 font-normal ml-2 text-base">({filteredArticles.length})</span>
             </h2>
@@ -298,7 +298,7 @@ export default function Ratgeber() {
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center">
               <Mail className="w-10 h-10 text-primary mx-auto mb-4" />
-              <h2 className="text-2xl font-bold text-white mb-3">{t.ratgeberPage.newsletter.title}</h2>
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">{t.ratgeberPage.newsletter.title}</h2>
               <p className="text-gray-400 mb-6">
                 {t.ratgeberPage.newsletter.subtitle}
               </p>
@@ -323,7 +323,7 @@ export default function Ratgeber() {
         {/* CTA Section */}
         <section className="py-10">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl font-bold text-white mb-3">{t.ratgeberPage.cta.title}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">{t.ratgeberPage.cta.title}</h2>
             <p className="text-gray-400 mb-6 max-w-xl mx-auto">
               {t.ratgeberPage.cta.subtitle}
             </p>

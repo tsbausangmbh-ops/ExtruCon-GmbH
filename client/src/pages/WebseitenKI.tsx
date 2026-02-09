@@ -221,7 +221,7 @@ export default function WebseitenKI() {
                 <Globe className="w-4 h-4" />
                 {t.webKIPage.badge}
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-display text-white mb-4">
                 {t.webKIPage.title}
               </h1>
               <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
@@ -283,7 +283,7 @@ export default function WebseitenKI() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 {t.webKIPage.featuresTitle}
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
@@ -331,7 +331,7 @@ export default function WebseitenKI() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold font-display text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 {t.webKIPage.typesTitle}
               </h2>
               <p className="text-gray-400 max-w-xl mx-auto">
@@ -375,7 +375,7 @@ export default function WebseitenKI() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold font-display text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 {t.webKIPage.processTitle}
               </h2>
               <p className="text-gray-400 max-w-xl mx-auto">
@@ -399,7 +399,7 @@ export default function WebseitenKI() {
                   <div className="w-12 h-12 rounded-full bg-secondary text-background font-bold text-lg flex items-center justify-center mx-auto mb-3 relative z-10">
                     {i + 1}
                   </div>
-                  <h3 className="text-sm font-bold text-white mb-1">{item.title}</h3>
+                  <h3 className="text-base font-bold text-white mb-1">{item.title}</h3>
                   <p className="text-gray-400 text-xs">{item.description}</p>
                 </motion.div>
               ))}
@@ -416,7 +416,7 @@ export default function WebseitenKI() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 {localTranslations[language].whyTitle}
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
@@ -435,7 +435,7 @@ export default function WebseitenKI() {
                   className="p-6 bg-white/5 border border-white/10 rounded-xl hover:border-secondary/50 transition-all"
                 >
                   <div className="text-3xl mb-3">{featureIcons[index]}</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+                  <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>
                   <p className="text-sm text-gray-400">{feature.desc}</p>
                 </motion.div>
               ))}
@@ -452,7 +452,7 @@ export default function WebseitenKI() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 {localTranslations[language].pricingTitle}
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
@@ -478,7 +478,7 @@ export default function WebseitenKI() {
                         {localTranslations[language].popular}
                       </div>
                     )}
-                    <h3 className="text-xl font-bold text-white mb-1">{plan.name}</h3>
+                    <h3 className="text-lg font-bold text-white mb-2">{plan.name}</h3>
                     <div className="text-2xl font-bold text-secondary mb-2">{prices[index]}</div>
                     <p className="text-sm text-gray-400 mb-4">{plan.desc}</p>
                     <ul className="space-y-2">
@@ -509,7 +509,7 @@ export default function WebseitenKI() {
               viewport={{ once: true }}
               className="text-center mb-8"
             >
-              <h2 className="text-2xl font-bold font-display text-white mb-2">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 {t.webKIPage.techTitle}
               </h2>
             </motion.div>
@@ -543,7 +543,7 @@ export default function WebseitenKI() {
               className="text-center mb-10"
             >
               <HelpCircle className="w-10 h-10 text-secondary mx-auto mb-4" />
-              <h2 className="text-2xl font-bold font-display text-white mb-3">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 {t.webKIPage.faqTitle}
               </h2>
             </motion.div>
@@ -581,7 +581,7 @@ export default function WebseitenKI() {
         <section className="py-10 bg-gradient-to-r from-secondary/10 to-primary/10 border-y border-white/10">
           <div className="container mx-auto px-4 text-center">
             <Sparkles className="w-12 h-12 text-secondary mx-auto mb-4" />
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
               {t.webKIPage.ctaTitle}
             </h2>
             <p className="text-gray-400 mb-8 max-w-xl mx-auto">

@@ -84,7 +84,7 @@ export default function Chatbot() {
               <Sparkles className="w-4 h-4" />
               {t.chatbotPage.badge}
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-display text-white mb-4">
               {t.chatbotPage.title} <span className="text-gradient">{t.chatbotPage.titleHighlight}</span>
             </h1>
             <p className="text-gray-400 max-w-2xl mx-auto mb-6">
@@ -114,7 +114,7 @@ export default function Chatbot() {
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                     <Bot className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-lg font-medium text-white mb-2">{t.chatbotPage.welcome}</h3>
+                  <h3 className="text-lg font-bold text-white mb-2">{t.chatbotPage.welcome}</h3>
                   <p className="text-gray-400 text-sm max-w-sm">
                     {t.chatbotPage.welcomeMsg}
                   </p>

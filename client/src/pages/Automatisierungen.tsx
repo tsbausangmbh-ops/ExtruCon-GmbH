@@ -245,7 +245,7 @@ export default function Automatisierungen() {
                 <Workflow className="w-4 h-4" />
                 {t.automationPage.badge}
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-display text-white mb-4">
                 {t.automationPage.title}
               </h1>
               <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
@@ -289,7 +289,7 @@ export default function Automatisierungen() {
                     <div className="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center mx-auto mb-3">
                       <IconComponent className="w-6 h-6 text-orange-400" />
                     </div>
-                    <h3 className="font-bold text-white mb-1">{benefit.title}</h3>
+                    <h3 className="text-base font-bold text-white mb-1">{benefit.title}</h3>
                     <p className="text-gray-400 text-sm">{benefit.description}</p>
                   </motion.div>
                 );
@@ -307,7 +307,7 @@ export default function Automatisierungen() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 {t.automationPage.automationsTitle}
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
@@ -357,7 +357,7 @@ export default function Automatisierungen() {
                   <GitBranch className="w-4 h-4" />
                   {t.automationPage.n8nBadge}
                 </div>
-                <h2 className="text-3xl font-bold font-display text-white mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                   {t.automationPage.n8nTitle}
                 </h2>
                 <p className="text-gray-400 mb-6">
@@ -383,7 +383,7 @@ export default function Automatisierungen() {
                     <Layers className="w-8 h-8 text-orange-400" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{t.automationPage.visualWorkflows}</h3>
+                    <h3 className="text-lg font-bold text-white mb-2">{t.automationPage.visualWorkflows}</h3>
                     <p className="text-gray-400 text-sm">{t.automationPage.visualWorkflowsDesc}</p>
                   </div>
                 </div>
@@ -414,7 +414,7 @@ export default function Automatisierungen() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold font-display text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 {t.automationPage.processTitle}
               </h2>
               <p className="text-gray-400 max-w-xl mx-auto">
@@ -438,7 +438,7 @@ export default function Automatisierungen() {
                   <div className="w-12 h-12 rounded-full bg-orange-500 text-white font-bold text-lg flex items-center justify-center mx-auto mb-3 relative z-10">
                     {i + 1}
                   </div>
-                  <h3 className="text-sm font-bold text-white mb-1">{item.title}</h3>
+                  <h3 className="text-base font-bold text-white mb-1">{item.title}</h3>
                   <p className="text-gray-400 text-xs">{item.description}</p>
                 </motion.div>
               ))}
@@ -456,7 +456,7 @@ export default function Automatisierungen() {
               className="text-center mb-12"
             >
               <TrendingUp className="w-10 h-10 text-orange-400 mx-auto mb-4" />
-              <h2 className="text-3xl font-bold text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 {localTranslations[language].roiTitle}
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
@@ -487,7 +487,7 @@ export default function Automatisierungen() {
               viewport={{ once: true }}
               className="bg-gray-800/50 border border-gray-700/50 rounded-2xl p-8 max-w-4xl mx-auto"
             >
-              <h3 className="text-xl font-bold text-white mb-6 text-center">{localTranslations[language].exampleTitle}</h3>
+              <h3 className="text-lg font-bold text-white mb-2 text-center">{localTranslations[language].exampleTitle}</h3>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h4 className="text-orange-400 font-semibold mb-4">{localTranslations[language].beforeTitle}</h4>
@@ -521,7 +521,7 @@ export default function Automatisierungen() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 {localTranslations[language].useCasesTitle}
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
@@ -539,7 +539,7 @@ export default function Automatisierungen() {
                   transition={{ delay: index * 0.05 }}
                   className="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-orange-500/50 transition-all"
                 >
-                  <h3 className="text-base font-semibold text-white mb-2">{useCase.title}</h3>
+                  <h3 className="text-lg font-bold text-white mb-2">{useCase.title}</h3>
                   <p className="text-xs text-gray-400">{useCase.desc}</p>
                 </motion.div>
               ))}
@@ -556,7 +556,7 @@ export default function Automatisierungen() {
               viewport={{ once: true }}
               className="text-center mb-10"
             >
-              <h2 className="text-2xl font-bold font-display text-white mb-3">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 {t.automationPage.toolsTitle}
               </h2>
               <p className="text-gray-400">
@@ -577,7 +577,7 @@ export default function Automatisierungen() {
                   <div className="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center mx-auto mb-2">
                     <Link2 className="w-5 h-5 text-orange-400" />
                   </div>
-                  <h3 className="font-bold text-white text-sm">{tool.name}</h3>
+                  <h3 className="text-base font-bold text-white mb-1">{tool.name}</h3>
                   <p className="text-gray-500 text-xs mt-1">{tool.description}</p>
                 </motion.div>
               ))}
@@ -595,7 +595,7 @@ export default function Automatisierungen() {
               className="text-center mb-10"
             >
               <HelpCircle className="w-10 h-10 text-orange-400 mx-auto mb-4" />
-              <h2 className="text-2xl font-bold font-display text-white mb-3">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 {t.automationPage.faqTitle}
               </h2>
             </motion.div>
@@ -633,7 +633,7 @@ export default function Automatisierungen() {
         <section className="py-10 bg-gradient-to-r from-orange-500/10 to-orange-600/10 border-y border-white/10">
           <div className="container mx-auto px-4 text-center">
             <Play className="w-12 h-12 text-orange-400 mx-auto mb-4" />
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
               {t.automationPage.ctaTitle}
             </h2>
             <p className="text-gray-400 mb-8 max-w-xl mx-auto">

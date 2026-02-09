@@ -57,7 +57,7 @@ export default function SEO() {
                   {t.seoPage.badge}
                 </span>
                 
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-display text-white mb-6 leading-tight">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-display text-white mb-4 leading-tight">
                   {t.seoPage.title.split(" ").slice(0, 2).join(" ")}{" "}
                   <span className="text-gradient">{t.seoPage.title.split(" ").slice(2).join(" ")}</span>
                 </h1>
@@ -88,7 +88,7 @@ export default function SEO() {
 
         <section id="services" className="py-10 bg-card/20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold font-display text-white mb-8 text-center">{t.seoPage.servicesTitle}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4 text-center">{t.seoPage.servicesTitle}</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {t.seoPage.services.map((item, i) => {
                 const Icon = features[i]?.icon;
@@ -102,7 +102,7 @@ export default function SEO() {
                     className="p-6 rounded-xl bg-card/30 border border-white/5"
                   >
                     {Icon && <Icon className="w-8 h-8 text-primary mb-4" />}
-                    <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                    <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
                     <p className="text-gray-400">{item.desc}</p>
                   </motion.div>
                 );
@@ -114,7 +114,7 @@ export default function SEO() {
         <section className="py-10">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold font-display text-white mb-6">{t.seoPage.benefitsTitle}</h2>
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">{t.seoPage.benefitsTitle}</h2>
               <div className="space-y-4 text-left">
                 {t.seoPage.benefits.map((item, i) => (
                   <div key={i} className="flex items-center gap-3 p-4 rounded-lg bg-card/30">
@@ -129,7 +129,7 @@ export default function SEO() {
 
         <section className="py-10 bg-card/20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold font-display text-white mb-8 text-center">{t.seoPage.processTitle}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4 text-center">{t.seoPage.processTitle}</h2>
             <div className="grid md:grid-cols-4 gap-6">
               {t.seoPage.process.map((step, i) => (
                 <motion.div
@@ -153,7 +153,7 @@ export default function SEO() {
 
         <section className="py-10 bg-gradient-to-r from-primary/20 to-orange-900/20">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold font-display text-white mb-4">{t.seoPage.ctaTitle}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">{t.seoPage.ctaTitle}</h2>
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
               {t.seoPage.ctaSubtitle}
             </p>

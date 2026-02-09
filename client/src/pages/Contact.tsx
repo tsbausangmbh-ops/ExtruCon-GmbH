@@ -80,7 +80,7 @@ export default function Contact() {
               <span className="inline-block py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-4">
                 {t.contactPage.badge}
               </span>
-              <h1 className="text-4xl md:text-5xl font-bold font-display text-white mb-4">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-display text-white mb-4">
                 {t.contactPage.title}
               </h1>
               <p className="text-lg text-gray-400">
@@ -102,7 +102,7 @@ export default function Contact() {
                 className="order-2 lg:order-1"
               >
                 <div className="p-6 rounded-2xl bg-card/30 border border-white/10">
-                  <h2 className="text-2xl font-bold text-white mb-6">{t.contactPage.formTitle}</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">{t.contactPage.formTitle}</h2>
                   
                   {submitted ? (
                     <motion.div
@@ -111,7 +111,7 @@ export default function Contact() {
                       className="text-center py-12"
                     >
                       <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                      <h3 className="text-xl font-bold text-white mb-2">{t.contactPage.thankYouTitle}</h3>
+                      <h3 className="text-lg font-bold text-white mb-2">{t.contactPage.thankYouTitle}</h3>
                       <p className="text-gray-400">
                         {t.contactPage.thankYouMessage}
                       </p>
@@ -237,14 +237,14 @@ export default function Contact() {
                 className="order-1 lg:order-2"
               >
                 <div className="space-y-6">
-                  <h2 className="text-2xl font-bold text-white mb-6">{t.contactPage.contactDataTitle}</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">{t.contactPage.contactDataTitle}</h2>
                   
                   <div className="p-5 rounded-xl bg-card/30 border border-white/10 flex items-start gap-4">
                     <div className="p-3 rounded-lg bg-primary/20">
                       <MapPin className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-white mb-1">{t.contactPage.addressTitle}</h3>
+                      <h3 className="text-base font-bold text-white mb-1">{t.contactPage.addressTitle}</h3>
                       <p className="text-gray-400">
                         ExtruCon GmbH<br />
                         Hasenheide 8<br />
@@ -258,7 +258,7 @@ export default function Contact() {
                       <Mail className="w-6 h-6 text-cyan-400" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-white mb-1">{t.contactPage.emailTitle}</h3>
+                      <h3 className="text-base font-bold text-white mb-1">{t.contactPage.emailTitle}</h3>
                       <a href="mailto:info@extrucon.de" className="text-gray-400 hover:text-primary transition-colors">
                         info@extrucon.de
                       </a>
@@ -270,7 +270,7 @@ export default function Contact() {
                       <Phone className="w-6 h-6 text-purple-400" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-white mb-1">{t.contactPage.phoneTitle}</h3>
+                      <h3 className="text-base font-bold text-white mb-1">{t.contactPage.phoneTitle}</h3>
                       <a href="tel:+4989444438879" className="text-gray-400 hover:text-primary transition-colors">
                         089 444438879
                       </a>
@@ -282,7 +282,7 @@ export default function Contact() {
                       <Clock className="w-6 h-6 text-emerald-400" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-white mb-1">{t.contactPage.availabilityTitle}</h3>
+                      <h3 className="text-base font-bold text-white mb-1">{t.contactPage.availabilityTitle}</h3>
                       <p className="text-gray-400">
                         {t.contactPage.availabilityHours}<br />
                         <span className="text-sm">{t.contactPage.availabilityNote}</span>
@@ -302,7 +302,7 @@ export default function Contact() {
             <div className="grid md:grid-cols-2 gap-6">
               {/* Standort Info */}
               <div className="p-6 rounded-xl bg-card/30 border border-white/10">
-                <h3 className="text-xl font-bold text-white mb-4">{t.contactPage.locationTitle}</h3>
+                <h3 className="text-lg font-bold text-white mb-2">{t.contactPage.locationTitle}</h3>
                 <div className="space-y-4">
                   <div>
                     <p className="text-lg text-white font-medium">ExtruCon GmbH</p>
@@ -328,7 +328,7 @@ export default function Contact() {
 
               {/* Map */}
               <div className="p-6 rounded-xl bg-card/30 border border-white/10">
-                <h3 className="text-xl font-bold text-white mb-4">{t.contactPage.mapTitle}</h3>
+                <h3 className="text-lg font-bold text-white mb-2">{t.contactPage.mapTitle}</h3>
                 <div className="rounded-lg bg-white/5 overflow-hidden" style={{ height: "280px" }}>
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.5!2d11.2546!3d48.1789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDEwJzQ0LjAiTiAxMcKwMTUnMTYuNiJF!5e0!3m2!1sde!2sde!4v1234567890"
@@ -349,7 +349,7 @@ export default function Contact() {
         {/* FAQ Section */}
         <section className="py-8">
           <div className="container mx-auto px-4">
-            <h2 className="text-xl font-bold text-white mb-6 text-center">{t.contactPage.faqTitle}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4 text-center">{t.contactPage.faqTitle}</h2>
             <div className="max-w-2xl mx-auto grid md:grid-cols-3 gap-4">
               {t.contactPage.faqs.map((faq, i) => (
                 <div key={i} className="p-4 rounded-xl bg-card/30 border border-white/5 text-center">
@@ -379,7 +379,7 @@ export default function Contact() {
                 <Calendar className="w-4 h-4" />
                 {t.contactPage.bookingCta.badge}
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 {t.contactPage.bookingCta.title}
               </h2>
               <p className="text-gray-400 text-lg mb-8">

@@ -111,7 +111,7 @@ function CalendarGrid({ selectedDate, onSelectDate, currentMonth, onChangeMonth 
         >
           <ChevronLeft className="w-5 h-5" />
         </Button>
-        <h3 className="text-lg font-semibold text-white">
+        <h3 className="text-lg font-bold text-white">
           {t.terminPage.months[month]} {year}
         </h3>
         <Button
@@ -216,7 +216,7 @@ function TimeSlots({ date, selectedTime, onSelectTime }: {
   if (isLoading) {
     return (
       <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-        <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+        <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
           <Clock className="w-5 h-5 text-cyan-400" />
           {t.terminPage.availableTimes}
         </h3>
@@ -230,7 +230,7 @@ function TimeSlots({ date, selectedTime, onSelectTime }: {
   if (error || !data) {
     return (
       <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-        <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+        <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
           <Clock className="w-5 h-5 text-cyan-400" />
           {t.terminPage.availableTimes}
         </h3>
@@ -246,7 +246,7 @@ function TimeSlots({ date, selectedTime, onSelectTime }: {
 
   return (
     <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-      <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+      <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
         <Clock className="w-5 h-5 text-cyan-400" />
         {t.terminPage.availableTimes}
       </h3>
@@ -448,7 +448,7 @@ export default function Termin() {
               <Calendar className="w-4 h-4" />
               {t.terminPage.badge}
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-display text-white mb-4">
               {t.terminPage.title} <span className="text-cyan-400">{t.terminPage.titleHighlight}</span>
             </h1>
             <p className="text-slate-400 text-lg max-w-2xl mx-auto">
@@ -501,7 +501,7 @@ export default function Termin() {
               transition={{ delay: 0.2 }}
             >
               <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-                <h3 className="text-lg font-semibold text-white mb-6">
+                <h3 className="text-lg font-bold text-white mb-6">
                   {t.terminPage.yourContactData}
                 </h3>
                 

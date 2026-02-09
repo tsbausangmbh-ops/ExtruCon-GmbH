@@ -28,7 +28,7 @@ export default function Terms() {
 
           {/* Inhaltsübersicht */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">Inhaltsübersicht</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Inhaltsübersicht</h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-400">
               <li><a href="#s1" className="text-cyan-400 hover:text-cyan-300 transition-colors">§1 Geltungsbereich</a></li>
               <li><a href="#s2" className="text-cyan-400 hover:text-cyan-300 transition-colors">§2 Vertragsschluss</a></li>
@@ -52,7 +52,7 @@ export default function Terms() {
 
           {/* §1 Geltungsbereich */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="s1">
-            <h2 className="text-xl font-bold text-white mb-4">§1 Geltungsbereich und Definitionen</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">§1 Geltungsbereich und Definitionen</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               (1) Diese Allgemeinen Geschäftsbedingungen (nachfolgend "AGB") gelten für alle Verträge zwischen der ExtruCon GmbH, Hasenheide 8, 82256 Fürstenfeldbruck (nachfolgend "Anbieter" oder "wir") und ihren Kunden (nachfolgend "Kunde" oder "Auftraggeber") über die Erbringung von Dienstleistungen in den Bereichen Marketing, Künstliche Intelligenz (KI), Social Media, Content-Erstellung und Webentwicklung.
             </p>
@@ -72,7 +72,7 @@ export default function Terms() {
 
           {/* §2 Vertragsschluss */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="s2">
-            <h2 className="text-xl font-bold text-white mb-4">§2 Vertragsschluss</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">§2 Vertragsschluss</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               (1) Die Darstellung unserer Leistungen auf der Website, in Präsentationen oder anderen Medien stellt kein rechtlich bindendes Angebot, sondern eine unverbindliche Aufforderung zur Abgabe eines Angebots dar.
             </p>
@@ -89,7 +89,7 @@ export default function Terms() {
 
           {/* §3 Leistungsbeschreibung */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="s3">
-            <h2 className="text-xl font-bold text-white mb-4">§3 Leistungsbeschreibung</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">§3 Leistungsbeschreibung</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               (1) Der konkrete Umfang der zu erbringenden Leistungen ergibt sich aus dem jeweiligen Angebot, der Auftragsbestätigung oder einer gesonderten Leistungsbeschreibung.
             </p>
@@ -106,7 +106,7 @@ export default function Terms() {
 
           {/* §4 KI & Automatisierung */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="s4">
-            <h2 className="text-xl font-bold text-white mb-4">§4 Leistungen im Bereich KI & Automatisierung</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">§4 Leistungen im Bereich KI & Automatisierung</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               (1) Der Anbieter entwickelt und implementiert KI-gestützte Lösungen, einschließlich Chatbots, automatisierter Workflows, KI-generierter Inhalte und intelligenter Datenanalysen.
             </p>
@@ -126,7 +126,7 @@ export default function Terms() {
 
           {/* §5 Social Media Marketing */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="s5">
-            <h2 className="text-xl font-bold text-white mb-4">§5 Leistungen im Bereich Social Media Marketing</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">§5 Leistungen im Bereich Social Media Marketing</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               (1) Der Anbieter übernimmt die strategische Beratung, Planung und operative Betreuung von Social-Media-Präsenzen des Kunden auf Plattformen wie Instagram, Facebook, LinkedIn, TikTok, YouTube, X (Twitter) und anderen.
             </p>
@@ -146,7 +146,7 @@ export default function Terms() {
 
           {/* §6 Webentwicklung */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="s6">
-            <h2 className="text-xl font-bold text-white mb-4">§6 Leistungen im Bereich Webentwicklung</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">§6 Leistungen im Bereich Webentwicklung</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               (1) Der Anbieter erstellt Websites, Webanwendungen und digitale Plattformen nach den individuellen Anforderungen des Kunden.
             </p>
@@ -166,7 +166,7 @@ export default function Terms() {
 
           {/* §7 Content-Erstellung */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="s7">
-            <h2 className="text-xl font-bold text-white mb-4">§7 Leistungen im Bereich Content-Erstellung</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">§7 Leistungen im Bereich Content-Erstellung</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               (1) Der Anbieter erstellt redaktionelle Inhalte, Grafiken, Videos, Fotografien und andere kreative Werke nach den Vorgaben des Kunden.
             </p>
@@ -183,7 +183,7 @@ export default function Terms() {
 
           {/* §8 Preise und Zahlung */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="s8">
-            <h2 className="text-xl font-bold text-white mb-4">§8 Preise und Zahlungsbedingungen</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">§8 Preise und Zahlungsbedingungen</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               (1) Es gelten die im jeweiligen Angebot genannten Preise. Alle Preise verstehen sich, sofern nicht anders angegeben, in Euro zuzüglich der gesetzlichen Mehrwertsteuer.
             </p>
@@ -203,7 +203,7 @@ export default function Terms() {
 
           {/* §9 Mitwirkungspflichten */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="s9">
-            <h2 className="text-xl font-bold text-white mb-4">§9 Mitwirkungspflichten des Kunden</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">§9 Mitwirkungspflichten des Kunden</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               (1) Der Kunde unterstützt den Anbieter bei der Erfüllung der vertraglich geschuldeten Leistungen. Der Kunde stellt insbesondere rechtzeitig und vollständig zur Verfügung:
             </p>
@@ -224,7 +224,7 @@ export default function Terms() {
 
           {/* §10 Nutzungsrechte */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="s10">
-            <h2 className="text-xl font-bold text-white mb-4">§10 Nutzungsrechte und geistiges Eigentum</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">§10 Nutzungsrechte und geistiges Eigentum</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               (1) Mit vollständiger Zahlung erhält der Kunde das einfache, zeitlich und räumlich unbeschränkte Nutzungsrecht an den im Rahmen des Auftrags erstellten Werken für den vertraglich vereinbarten Zweck.
             </p>
@@ -244,7 +244,7 @@ export default function Terms() {
 
           {/* §11 Vertraulichkeit */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="s11">
-            <h2 className="text-xl font-bold text-white mb-4">§11 Vertraulichkeit</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">§11 Vertraulichkeit</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               (1) Die Parteien verpflichten sich, alle im Rahmen der Zusammenarbeit erlangten vertraulichen Informationen der jeweils anderen Partei geheim zu halten und nur für die Zwecke des Vertrages zu verwenden.
             </p>
@@ -258,7 +258,7 @@ export default function Terms() {
 
           {/* §12 Haftung */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="s12">
-            <h2 className="text-xl font-bold text-white mb-4">§12 Haftung und Gewährleistung</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">§12 Haftung und Gewährleistung</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               (1) Der Anbieter haftet unbeschränkt für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit sowie für Vorsatz und grobe Fahrlässigkeit.
             </p>
@@ -278,7 +278,7 @@ export default function Terms() {
 
           {/* §13 Vertragslaufzeit */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="s13">
-            <h2 className="text-xl font-bold text-white mb-4">§13 Vertragslaufzeit und Kündigung</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">§13 Vertragslaufzeit und Kündigung</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               (1) <strong className="text-gray-200">Projektverträge:</strong> Einmalige Projekte enden mit Abnahme und vollständiger Bezahlung der vereinbarten Leistungen.
             </p>
@@ -298,7 +298,7 @@ export default function Terms() {
 
           {/* §14 B2B-Bestimmungen */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="s14">
-            <h2 className="text-xl font-bold text-white mb-4">§14 Besondere Bestimmungen für Unternehmer (B2B)</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">§14 Besondere Bestimmungen für Unternehmer (B2B)</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Die folgenden Bestimmungen gelten ausschließlich für Geschäftskunden (Unternehmer im Sinne von § 14 BGB):
             </p>
@@ -318,12 +318,12 @@ export default function Terms() {
 
           {/* §15 B2C-Bestimmungen */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="s15">
-            <h2 className="text-xl font-bold text-white mb-4">§15 Besondere Bestimmungen für Verbraucher (B2C)</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">§15 Besondere Bestimmungen für Verbraucher (B2C)</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Die folgenden Bestimmungen gelten ausschließlich für Verbraucher im Sinne von § 13 BGB:
             </p>
             
-            <h3 className="text-lg font-semibold text-gray-200 mb-3">Widerrufsbelehrung</h3>
+            <h3 className="text-lg font-bold text-white mb-3">Widerrufsbelehrung</h3>
             <p className="text-gray-400 mb-4 leading-relaxed">
               <strong className="text-gray-200">Widerrufsrecht:</strong> Sie haben das Recht, binnen 14 Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt 14 Tage ab dem Tag des Vertragsschlusses.
             </p>
@@ -340,7 +340,7 @@ export default function Terms() {
               <strong className="text-gray-200">Besonderer Hinweis:</strong> Ihr Widerrufsrecht erlischt bei einem Vertrag zur Erbringung von Dienstleistungen vorzeitig, wenn wir die Dienstleistung vollständig erbracht haben und mit der Ausführung der Dienstleistung erst begonnen haben, nachdem Sie dazu Ihre ausdrückliche Zustimmung gegeben haben und gleichzeitig Ihre Kenntnis davon bestätigt haben, dass Sie Ihr Widerrufsrecht bei vollständiger Vertragserfüllung durch uns verlieren.
             </p>
             
-            <h3 className="text-lg font-semibold text-gray-200 mb-3 mt-6">Online-Streitbeilegung</h3>
+            <h3 className="text-lg font-bold text-white mb-3 mt-6">Online-Streitbeilegung</h3>
             <p className="text-gray-400 leading-relaxed">
               Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300">https://ec.europa.eu/consumers/odr</a>. Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
             </p>
@@ -348,7 +348,7 @@ export default function Terms() {
 
           {/* §16 Datenschutz */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="s16">
-            <h2 className="text-xl font-bold text-white mb-4">§16 Datenschutz</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">§16 Datenschutz</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               (1) Der Anbieter verarbeitet personenbezogene Daten des Kunden gemäß den geltenden datenschutzrechtlichen Bestimmungen, insbesondere der Datenschutz-Grundverordnung (DSGVO) und des Bundesdatenschutzgesetzes (BDSG).
             </p>
@@ -362,7 +362,7 @@ export default function Terms() {
 
           {/* §17 Schlussbestimmungen */}
           <section className="p-6 rounded-xl bg-card/30 border border-white/5" id="s17">
-            <h2 className="text-xl font-bold text-white mb-4">§17 Schlussbestimmungen</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">§17 Schlussbestimmungen</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               (1) <strong className="text-gray-200">Anwendbares Recht:</strong> Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts (CISG). Bei Verbrauchern gilt diese Rechtswahl nur insoweit, als dadurch nicht zwingende Verbraucherschutzvorschriften des Staates eingeschränkt werden, in dem der Verbraucher seinen gewöhnlichen Aufenthalt hat.
             </p>

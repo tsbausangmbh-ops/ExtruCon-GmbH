@@ -42,7 +42,7 @@ export default function KI() {
                 <Bot className="w-12 h-12 text-cyan-400" />
                 <span className="text-cyan-400 font-semibold">{t.kiServicePage.badge}</span>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold font-display text-white mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-display text-white mb-4">
                 {t.kiServicePage.title}
               </h1>
               <p className="text-xl text-gray-400 mb-8">
@@ -60,7 +60,7 @@ export default function KI() {
         {/* Leistungsumfang */}
         <section className="py-10 bg-card/20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold font-display text-white mb-4 text-center">{t.kiServicePage.servicesTitle}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4 text-center">{t.kiServicePage.servicesTitle}</h2>
             <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
               {t.kiServicePage.servicesSubtitle}
             </p>
@@ -75,7 +75,7 @@ export default function KI() {
                   className="p-6 rounded-xl bg-card/30 border border-white/5"
                 >
                   <Check className="w-8 h-8 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                  <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
                   <p className="text-gray-400">{item.desc}</p>
                 </motion.div>
               ))}
@@ -86,7 +86,7 @@ export default function KI() {
         {/* Technologien */}
         <section className="py-10">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold font-display text-white mb-12 text-center">{t.kiServicePage.techTitle}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-12 text-center">{t.kiServicePage.techTitle}</h2>
             <div className="flex flex-wrap justify-center gap-6">
               {["OpenAI / GPT-4", "Claude AI", "Google Gemini", "Midjourney", "DALL-E", "n8n", "Make", "Zapier", "Custom APIs"].map((tech, i) => (
                 <motion.div
@@ -108,7 +108,7 @@ export default function KI() {
         <section className="py-10 bg-card/20">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold font-display text-white mb-8">{t.kiServicePage.benefitsTitle}</h2>
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-8">{t.kiServicePage.benefitsTitle}</h2>
               <div className="space-y-4 text-left">
                 {t.kiServicePage.benefits.map((item, i) => (
                   <div key={i} className="flex items-center gap-3 p-4 rounded-lg bg-card/30">
@@ -124,7 +124,7 @@ export default function KI() {
         {/* FAQ Section */}
         <section className="py-10">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold font-display text-white mb-8 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-8 text-center">
               {t.kiServicePage.faqTitle}
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
@@ -151,7 +151,7 @@ export default function KI() {
         {/* CTA */}
         <section className="py-10 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold font-display text-white mb-4">{t.kiServicePage.ctaTitle}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">{t.kiServicePage.ctaTitle}</h2>
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
               {t.kiServicePage.ctaSubtitle}
             </p>

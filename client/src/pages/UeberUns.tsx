@@ -42,7 +42,7 @@ export default function UeberUns() {
                 <Users className="w-4 h-4" />
                 {about.badge}
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-white mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-display text-white mb-4">
                 {about.title}
               </h1>
               <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
@@ -86,7 +86,7 @@ export default function UeberUns() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold font-display text-white mb-6">
+                <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                   {about.whoWeAre.title}
                 </h2>
                 <p className="text-gray-400 mb-4">
@@ -162,7 +162,7 @@ export default function UeberUns() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold font-display text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 {about.timeline.title}
               </h2>
               <p className="text-gray-400 max-w-xl mx-auto">
@@ -205,7 +205,7 @@ export default function UeberUns() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold font-display text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 {about.values.title}
               </h2>
               <p className="text-gray-400 max-w-xl mx-auto">
@@ -246,7 +246,7 @@ export default function UeberUns() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold font-display text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                 {about.services.title}
               </h2>
               <p className="text-gray-400 max-w-xl mx-auto">
@@ -266,7 +266,7 @@ export default function UeberUns() {
                 >
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="font-bold text-white">{service.name}</h3>
+                    <h3 className="text-base font-bold text-white mb-1">{service.name}</h3>
                     <p className="text-gray-400 text-sm">{service.description}</p>
                   </div>
                 </motion.div>
@@ -286,7 +286,7 @@ export default function UeberUns() {
             >
               <div className="text-center mb-12">
                 <Award className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h2 className="text-3xl font-bold font-display text-white mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
                   {about.whyExtrucon.title}
                 </h2>
               </div>
@@ -305,7 +305,7 @@ export default function UeberUns() {
                       <TrendingUp className="w-4 h-4 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-white mb-1">{item.title}</h3>
+                      <h3 className="text-base font-bold text-white mb-1">{item.title}</h3>
                       <p className="text-gray-400 text-sm">{item.description}</p>
                     </div>
                   </motion.div>
@@ -324,7 +324,7 @@ export default function UeberUns() {
               viewport={{ once: true }}
               className="max-w-3xl mx-auto text-center"
             >
-              <h2 className="text-xl font-bold text-white mb-6">{about.legal.title}</h2>
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">{about.legal.title}</h2>
               <div className="p-6 rounded-xl bg-white/5 border border-white/10">
                 <div className="grid md:grid-cols-2 gap-6 text-left">
                   <div>
@@ -351,7 +351,7 @@ export default function UeberUns() {
         <section className="py-10 bg-gradient-to-r from-primary/10 to-secondary/10 border-y border-white/10">
           <div className="container mx-auto px-4 text-center">
             <Sparkles className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
               {about.cta.title}
             </h2>
             <p className="text-gray-400 mb-8 max-w-xl mx-auto">

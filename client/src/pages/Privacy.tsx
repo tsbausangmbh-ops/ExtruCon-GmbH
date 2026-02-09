@@ -25,16 +25,16 @@ export default function Privacy() {
                 {t.legalPages.legalNotice}
               </p>
               
-              <h2 className="text-xl font-bold text-cyan-400 mb-3">{t.legalPages.privacySummaryTitle}</h2>
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-cyan-400 mb-3">{t.legalPages.privacySummaryTitle}</h2>
               <p className="text-gray-300 mb-4">{t.legalPages.privacySummary}</p>
               
               <div className="grid md:grid-cols-2 gap-6 mt-4">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">{t.legalPages.applicableLaws}</h3>
+                  <h3 className="text-lg font-bold text-white mb-2">{t.legalPages.applicableLaws}</h3>
                   <p className="text-gray-400 text-sm whitespace-pre-line">{t.legalPages.applicableLawsList}</p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-2">{t.legalPages.yourRightsTitle}</h3>
+                  <h3 className="text-lg font-bold text-white mb-2">{t.legalPages.yourRightsTitle}</h3>
                   <p className="text-gray-400 text-sm whitespace-pre-line">{t.legalPages.yourRightsList}</p>
                 </div>
               </div>
@@ -48,7 +48,7 @@ export default function Privacy() {
           
           {/* Präambel */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4" id="m716">Präambel</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4" id="m716">Präambel</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Mit der folgenden Datenschutzerklärung möchten wir Sie darüber aufklären, welche Arten Ihrer personenbezogenen Daten (nachfolgend auch kurz als "Daten" bezeichnet) wir zu welchen Zwecken und in welchem Umfang verarbeiten. Die Datenschutzerklärung gilt für alle von uns durchgeführten Verarbeitungen personenbezogener Daten, sowohl im Rahmen der Erbringung unserer Leistungen als auch insbesondere auf unseren Webseiten, in mobilen Applikationen sowie innerhalb externer Onlinepräsenzen, wie z.B. unserer Social-Media-Profile (nachfolgend zusammenfassend bezeichnet als "Onlineangebot").
             </p>
@@ -58,7 +58,7 @@ export default function Privacy() {
 
           {/* Inhaltsübersicht */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5">
-            <h2 className="text-xl font-bold text-white mb-4">Inhaltsübersicht</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Inhaltsübersicht</h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-400">
               <li><a href="#m716" className="text-cyan-400 hover:text-cyan-300 transition-colors">Präambel</a></li>
               <li><a href="#m3" className="text-cyan-400 hover:text-cyan-300 transition-colors">Verantwortlicher</a></li>
@@ -88,7 +88,7 @@ export default function Privacy() {
 
           {/* Verantwortlicher */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="m3">
-            <h2 className="text-xl font-bold text-white mb-4">Verantwortlicher</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Verantwortlicher</h2>
             <div className="text-gray-400 leading-relaxed space-y-2">
               <p className="font-semibold text-gray-200">ExtruCon GmbH</p>
               <p>Hasenheide 8<br />82256 Fürstenfeldbruck</p>
@@ -101,12 +101,12 @@ export default function Privacy() {
 
           {/* Übersicht der Verarbeitungen */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="mOverview">
-            <h2 className="text-xl font-bold text-white mb-4">Übersicht der Verarbeitungen</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Übersicht der Verarbeitungen</h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Die nachfolgende Übersicht fasst die Arten der verarbeiteten Daten und die Zwecke ihrer Verarbeitung zusammen und verweist auf die betroffenen Personen.
             </p>
 
-            <h3 className="text-lg font-semibold text-gray-200 mb-3">Arten der verarbeiteten Daten</h3>
+            <h3 className="text-lg font-bold text-white mb-3">Arten der verarbeiteten Daten</h3>
             <ul className="text-gray-400 mb-6 grid grid-cols-1 md:grid-cols-2 gap-1 list-disc list-inside">
               <li>Bestandsdaten</li>
               <li>Beschäftigtendaten</li>
@@ -121,7 +121,7 @@ export default function Privacy() {
               <li>Protokolldaten</li>
             </ul>
 
-            <h3 className="text-lg font-semibold text-gray-200 mb-3">Kategorien betroffener Personen</h3>
+            <h3 className="text-lg font-bold text-white mb-3">Kategorien betroffener Personen</h3>
             <ul className="text-gray-400 mb-6 grid grid-cols-1 md:grid-cols-2 gap-1 list-disc list-inside">
               <li>Leistungsempfänger und Auftraggeber</li>
               <li>Beschäftigte</li>
@@ -134,7 +134,7 @@ export default function Privacy() {
               <li>Hinweisgeber</li>
             </ul>
 
-            <h3 className="text-lg font-semibold text-gray-200 mb-3">Zwecke der Verarbeitung</h3>
+            <h3 className="text-lg font-bold text-white mb-3">Zwecke der Verarbeitung</h3>
             <ul className="text-gray-400 grid grid-cols-1 md:grid-cols-2 gap-1 list-disc list-inside">
               <li>Erbringung vertraglicher Leistungen</li>
               <li>Kommunikation</li>
@@ -162,7 +162,7 @@ export default function Privacy() {
 
           {/* Maßgebliche Rechtsgrundlagen */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="m2427">
-            <h2 className="text-xl font-bold text-white mb-4">Maßgebliche Rechtsgrundlagen</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Maßgebliche Rechtsgrundlagen</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               <strong className="text-gray-200">Maßgebliche Rechtsgrundlagen nach der DSGVO:</strong> Im Folgenden erhalten Sie eine Übersicht der Rechtsgrundlagen der DSGVO, auf deren Basis wir personenbezogene Daten verarbeiten. Bitte nehmen Sie zur Kenntnis, dass neben den Regelungen der DSGVO nationale Datenschutzvorgaben in Ihrem bzw. unserem Wohn- oder Sitzland gelten können.
             </p>
@@ -187,7 +187,7 @@ export default function Privacy() {
 
           {/* Sicherheitsmaßnahmen */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="m27">
-            <h2 className="text-xl font-bold text-white mb-4">Sicherheitsmaßnahmen</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Sicherheitsmaßnahmen</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Wir treffen nach Maßgabe der gesetzlichen Vorgaben unter Berücksichtigung des Stands der Technik, der Implementierungskosten und der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung sowie der unterschiedlichen Eintrittswahrscheinlichkeiten und des Ausmaßes der Bedrohung der Rechte und Freiheiten natürlicher Personen geeignete technische und organisatorische Maßnahmen, um ein dem Risiko angemessenes Schutzniveau zu gewährleisten.
             </p>
@@ -201,7 +201,7 @@ export default function Privacy() {
 
           {/* Übermittlung von personenbezogenen Daten */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="m25">
-            <h2 className="text-xl font-bold text-white mb-4">Übermittlung von personenbezogenen Daten</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Übermittlung von personenbezogenen Daten</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Im Rahmen unserer Verarbeitung von personenbezogenen Daten kommt es vor, dass diese an andere Stellen, Unternehmen, rechtlich selbstständige Organisationseinheiten oder Personen übermittelt beziehungsweise ihnen gegenüber offengelegt werden. Zu den Empfängern dieser Daten können z.B. mit IT-Aufgaben beauftragte Dienstleister gehören oder Anbieter von Diensten und Inhalten, die in eine Website eingebunden sind. In solchen Fällen beachten wir die gesetzlichen Vorgaben und schließen insbesondere entsprechende Verträge bzw. Vereinbarungen, die dem Schutz Ihrer Daten dienen, mit den Empfängern Ihrer Daten ab.
             </p>
@@ -212,7 +212,7 @@ export default function Privacy() {
 
           {/* Internationale Datentransfers */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="m24">
-            <h2 className="text-xl font-bold text-white mb-4">Internationale Datentransfers</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Internationale Datentransfers</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               <strong className="text-gray-200">Datenverarbeitung in Drittländern:</strong> Sofern wir Daten in ein Drittland (d.h. außerhalb der Europäischen Union (EU) oder des Europäischen Wirtschaftsraums (EWR)) übermitteln oder dies im Rahmen der Nutzung von Diensten Dritter oder der Offenlegung bzw. Übermittlung von Daten an andere Personen, Stellen oder Unternehmen geschieht, erfolgt dies stets im Einklang mit den gesetzlichen Vorgaben.
             </p>
@@ -229,7 +229,7 @@ export default function Privacy() {
 
           {/* Allgemeine Informationen zur Datenspeicherung und Löschung */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="m12">
-            <h2 className="text-xl font-bold text-white mb-4">Allgemeine Informationen zur Datenspeicherung und Löschung</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Allgemeine Informationen zur Datenspeicherung und Löschung</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Wir löschen personenbezogene Daten, die wir verarbeiten, gemäß den gesetzlichen Bestimmungen, sobald die zugrundeliegenden Einwilligungen widerrufen werden oder keine weiteren rechtlichen Grundlagen für die Verarbeitung bestehen. Dies betrifft Fälle, in denen der ursprüngliche Verarbeitungszweck entfällt oder die Daten nicht mehr benötigt werden. Ausnahmen von dieser Regelung bestehen, wenn gesetzliche Pflichten oder besondere Interessen eine längere Aufbewahrung oder Archivierung der Daten erfordern.
             </p>
@@ -249,7 +249,7 @@ export default function Privacy() {
 
           {/* Rechte der betroffenen Personen */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="m10">
-            <h2 className="text-xl font-bold text-white mb-4">Rechte der betroffenen Personen</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Rechte der betroffenen Personen</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Rechte der betroffenen Personen aus der DSGVO: Ihnen stehen als Betroffene nach der DSGVO verschiedene Rechte zu, die sich insbesondere aus Art. 15 bis 21 DSGVO ergeben:
             </p>
@@ -280,7 +280,7 @@ export default function Privacy() {
 
           {/* Geschäftliche Leistungen */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="m317">
-            <h2 className="text-xl font-bold text-white mb-4">Geschäftliche Leistungen</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Geschäftliche Leistungen</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Wir verarbeiten Daten unserer Vertrags- und Geschäftspartner, z.B. Kunden und Interessenten (zusammenfassend als „Vertragspartner" bezeichnet), im Rahmen von vertraglichen und vergleichbaren Rechtsverhältnissen sowie damit verbundenen Maßnahmen und im Hinblick auf die Kommunikation mit den Vertragspartnern (oder vorvertraglich), etwa zur Beantwortung von Anfragen.
             </p>
@@ -297,7 +297,7 @@ export default function Privacy() {
 
           {/* Einsatz von Online-Plattformen */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="m605">
-            <h2 className="text-xl font-bold text-white mb-4">Einsatz von Online-Plattformen zu Angebots- und Vertriebszwecken</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Einsatz von Online-Plattformen zu Angebots- und Vertriebszwecken</h2>
             <p className="text-gray-400 leading-relaxed">
               Wir bieten unsere Leistungen auf Online-Plattformen, die von anderen Dienstanbietern betrieben werden, an. In diesem Zusammenhang gelten zusätzlich zu unseren Datenschutzhinweisen die Datenschutzhinweise der jeweiligen Plattformen. Dies gilt insbesondere im Hinblick auf die Durchführung des Zahlungsvorgangs und der auf den Plattformen eingesetzten Verfahren zur Reichweitemessung und zum interessensbezogenen Marketing.
             </p>
@@ -305,7 +305,7 @@ export default function Privacy() {
 
           {/* Zahlungsverfahren */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="m326">
-            <h2 className="text-xl font-bold text-white mb-4">Zahlungsverfahren</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Zahlungsverfahren</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Im Rahmen von Vertrags- und sonstigen Rechtsbeziehungen, aufgrund gesetzlicher Pflichten oder sonst auf Grundlage unserer berechtigten Interessen bieten wir den betroffenen Personen effiziente und sichere Zahlungsmöglichkeiten an und setzen hierzu neben Banken und Kreditinstituten weitere Dienstleister ein (zusammenfassend "Zahlungsdienstleister").
             </p>
@@ -316,7 +316,7 @@ export default function Privacy() {
 
           {/* Bereitstellung des Onlineangebots */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="m225">
-            <h2 className="text-xl font-bold text-white mb-4">Bereitstellung des Onlineangebots und Webhosting</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Bereitstellung des Onlineangebots und Webhosting</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Wir verarbeiten die Daten der Nutzer, um ihnen unsere Online-Dienste zur Verfügung stellen zu können. Zu diesem Zweck verarbeiten wir die IP-Adresse des Nutzers, die notwendig ist, um die Inhalte und Funktionen unserer Online-Dienste an den Browser oder das Endgerät der Nutzer zu übermitteln.
             </p>
@@ -329,7 +329,7 @@ export default function Privacy() {
 
           {/* Einsatz von Cookies */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="m134">
-            <h2 className="text-xl font-bold text-white mb-4">Einsatz von Cookies</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Einsatz von Cookies</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Unter dem Begriff „Cookies" werden Funktionen, die Informationen auf Endgeräten der Nutzer speichern und aus ihnen auslesen, verstanden. Cookies können ferner in Bezug auf unterschiedliche Anliegen Einsatz finden, etwa zu Zwecken der Funktionsfähigkeit, der Sicherheit und des Komforts von Onlineangeboten sowie der Erstellung von Analysen der Besucherströme.
             </p>
@@ -343,7 +343,7 @@ export default function Privacy() {
 
           {/* Kontakt- und Anfrageverwaltung */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="m182">
-            <h2 className="text-xl font-bold text-white mb-4">Kontakt- und Anfrageverwaltung</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Kontakt- und Anfrageverwaltung</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Bei der Kontaktaufnahme mit uns (z.B. per Post, Kontaktformular, E-Mail, Telefon oder via soziale Medien) sowie im Rahmen bestehender Nutzer- und Geschäftsbeziehungen werden die Angaben der anfragenden Personen verarbeitet, soweit dies zur Beantwortung der Kontaktanfragen und etwaiger angefragter Maßnahmen erforderlich ist.
             </p>
@@ -356,7 +356,7 @@ export default function Privacy() {
 
           {/* Newsletter */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="m17">
-            <h2 className="text-xl font-bold text-white mb-4">Newsletter und elektronische Benachrichtigungen</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Newsletter und elektronische Benachrichtigungen</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Wir versenden Newsletter, E-Mails und weitere elektronische Benachrichtigungen (nachfolgend „Newsletter") ausschließlich mit der Einwilligung der Empfänger oder aufgrund einer gesetzlichen Grundlage. Sofern im Rahmen einer Anmeldung zum Newsletter dessen Inhalte konkret umschrieben werden, sind sie für die Einwilligung der Nutzer maßgeblich.
             </p>
@@ -367,7 +367,7 @@ export default function Privacy() {
 
           {/* Werbliche Kommunikation */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="m638">
-            <h2 className="text-xl font-bold text-white mb-4">Werbliche Kommunikation via E-Mail, Post, Fax oder Telefon</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Werbliche Kommunikation via E-Mail, Post, Fax oder Telefon</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Wir verarbeiten personenbezogene Daten zu Zwecken der werblichen Kommunikation, die über diverse Kanäle, wie z.B. E-Mail, Telefon, Post oder Fax, entsprechend den gesetzlichen Vorgaben erfolgen kann.
             </p>
@@ -381,7 +381,7 @@ export default function Privacy() {
 
           {/* Webanalyse */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="m263">
-            <h2 className="text-xl font-bold text-white mb-4">Webanalyse, Monitoring und Optimierung</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Webanalyse, Monitoring und Optimierung</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Die Webanalyse (auch als „Reichweitenmessung" bezeichnet) dient der Auswertung der Besucherströme unseres Onlineangebots und kann Verhalten, Interessen oder demografische Informationen zu den Besuchern, wie beispielsweise Alter oder Geschlecht, als pseudonyme Werte umfassen.
             </p>
@@ -395,7 +395,7 @@ export default function Privacy() {
 
           {/* Onlinemarketing */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="m264">
-            <h2 className="text-xl font-bold text-white mb-4">Onlinemarketing</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Onlinemarketing</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Wir verarbeiten personenbezogene Daten zu Zwecken des Onlinemarketings, worunter insbesondere die Vermarktung von Werbeflächen oder Darstellung von werbenden und sonstigen Inhalten (zusammenfassend als „Inhalte" bezeichnet) anhand potentieller Interessen der Nutzer sowie die Messung ihrer Effektivität fallen kann.
             </p>
@@ -406,7 +406,7 @@ export default function Privacy() {
 
           {/* Einsatz von Künstlicher Intelligenz */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="mKI">
-            <h2 className="text-xl font-bold text-white mb-4">Einsatz von Künstlicher Intelligenz (KI)</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Einsatz von Künstlicher Intelligenz (KI)</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Im Rahmen unserer Dienstleistungen setzen wir Technologien der Künstlichen Intelligenz (KI) ein, um unseren Kunden innovative und effiziente Lösungen anzubieten. Hierzu gehören insbesondere KI-gestützte Chatbots, automatisierte Content-Erstellung, Datenanalysen und Optimierungsverfahren.
             </p>
@@ -429,7 +429,7 @@ export default function Privacy() {
 
           {/* Social Media */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="m136">
-            <h2 className="text-xl font-bold text-white mb-4">Präsenzen in sozialen Netzwerken (Social Media)</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Präsenzen in sozialen Netzwerken (Social Media)</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Wir unterhalten Onlinepräsenzen innerhalb sozialer Netzwerke und verarbeiten in diesem Rahmen Nutzerdaten, um mit den dort aktiven Nutzern zu kommunizieren oder Informationen über uns anzubieten.
             </p>
@@ -445,7 +445,7 @@ export default function Privacy() {
 
           {/* Social Media Marketing */}
           <section className="mb-8 p-6 rounded-xl bg-card/30 border border-white/5" id="mSocialMedia">
-            <h2 className="text-xl font-bold text-white mb-4">Social Media Marketing und Werbung</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Social Media Marketing und Werbung</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Im Rahmen unserer Social Media Marketing-Dienstleistungen verarbeiten wir personenbezogene Daten zur Planung, Durchführung und Analyse von Werbekampagnen auf sozialen Netzwerken. Dies umfasst die Erstellung und Verwaltung von Werbeanzeigen, Zielgruppenanalysen sowie die Erfolgsmessung von Kampagnen.
             </p>
@@ -471,7 +471,7 @@ export default function Privacy() {
 
           {/* Plugins und eingebettete Inhalte */}
           <section className="p-6 rounded-xl bg-card/30 border border-white/5" id="m328">
-            <h2 className="text-xl font-bold text-white mb-4">Plugins und eingebettete Funktionen sowie Inhalte</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Plugins und eingebettete Funktionen sowie Inhalte</h2>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Wir binden Funktions- und Inhaltselemente in unser Onlineangebot ein, die von den Servern ihrer jeweiligen Anbieter (nachfolgend als „Drittanbieter" bezeichnet) bezogen werden. Dabei kann es sich zum Beispiel um Grafiken, Videos oder Stadtpläne handeln.
             </p>

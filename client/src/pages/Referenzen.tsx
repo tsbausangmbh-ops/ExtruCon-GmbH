@@ -179,7 +179,7 @@ export default function Referenzen() {
                   {t.referenzenPage.badge}
                 </span>
                 
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-display text-white mb-6 leading-tight">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-display text-white mb-4 leading-tight">
                   {t.referenzenPage.title.split(" ").slice(0, 1).join(" ")}{" "}
                   <span className="text-gradient">{t.referenzenPage.title.split(" ").slice(1).join(" ")}</span>
                 </h1>
@@ -210,7 +210,7 @@ export default function Referenzen() {
 
         <section id="projekte" className="py-10 bg-card/20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold font-display text-white mb-8 text-center">{t.referenzenPage.projectsTitle}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4 text-center">{t.referenzenPage.projectsTitle}</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.map((project, i) => {
                 const colors = colorClasses[project.color];
@@ -227,7 +227,7 @@ export default function Referenzen() {
                     <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${colors.bg} ${colors.text} ${colors.border} border mb-4`}>
                       {project.category}
                     </span>
-                    <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                    <h3 className="text-lg font-bold text-white mb-2">{project.title}</h3>
                     <p className="text-gray-400 mb-4">{project.description}</p>
                     <div className="space-y-2 mb-4">
                       {project.results.map((result, j) => (
@@ -257,7 +257,7 @@ export default function Referenzen() {
         <section className="py-10">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold font-display text-white mb-6">{t.referenzenPage.testimonialsTitle}</h2>
+              <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">{t.referenzenPage.testimonialsTitle}</h2>
               <div className="space-y-6">
                 {t.referenzenPage.testimonials.map((item, i) => (
                   <motion.div
@@ -292,7 +292,7 @@ export default function Referenzen() {
 
         <section className="py-10 bg-gradient-to-r from-primary/20 to-orange-900/20">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold font-display text-white mb-4">{t.referenzenPage.ctaTitle}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">{t.referenzenPage.ctaTitle}</h2>
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
               {t.referenzenPage.ctaSubtitle}
             </p>

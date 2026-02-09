@@ -66,7 +66,7 @@ export default function Schwabing() {
                 <MapPin className="w-4 h-4" />
                 <span>Innovative KI für Schwabing</span>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-display mb-4">
                 <span className="text-white">KI-Agentur</span>{" "}
                 <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Schwabing</span>
               </h1>
@@ -91,14 +91,14 @@ export default function Schwabing() {
 
         <section className="py-12 bg-card/30">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold text-white text-center mb-10">Unsere Leistungen für Schwabing</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white text-center mb-10">Unsere Leistungen für Schwabing</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {services.map((service, i) => (
                 <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
                   <Link href={service.link}>
                     <div className="p-6 bg-white/5 border border-white/10 rounded-xl hover:border-purple-500/50 transition-all h-full">
                       <service.icon className="w-10 h-10 text-purple-400 mb-4" />
-                      <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+                      <h3 className="text-lg font-bold text-white mb-2">{service.title}</h3>
                       <p className="text-gray-400">{service.description}</p>
                     </div>
                   </Link>
@@ -110,13 +110,13 @@ export default function Schwabing() {
 
         <section className="py-12">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold text-white text-center mb-4">Branchen in Schwabing</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white text-center mb-4">Branchen in Schwabing</h2>
             <p className="text-gray-400 text-center mb-10 max-w-2xl mx-auto">Von Startups bis Kreativagenturen – wir kennen die Schwabinger Geschäftswelt.</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {industries.map((ind, i) => (
                 <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="p-6 bg-white/5 border border-white/10 rounded-xl">
                   <ind.icon className="w-8 h-8 text-purple-400 mb-3" />
-                  <h3 className="text-lg font-semibold text-white mb-2">{ind.title}</h3>
+                  <h3 className="text-lg font-bold text-white mb-2">{ind.title}</h3>
                   <p className="text-sm text-gray-400">{ind.description}</p>
                 </motion.div>
               ))}
@@ -126,7 +126,7 @@ export default function Schwabing() {
 
         <section className="py-12 bg-gradient-to-br from-purple-900/20 to-background">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Ihr Partner in Schwabing</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">Ihr Partner in Schwabing</h2>
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">Ob Leopoldstraße, Münchner Freiheit oder Englischer Garten – wir sind Ihr Ansprechpartner für innovative KI-Lösungen.</p>
             <div className="flex flex-wrap justify-center gap-3">
               {["Schwabing-West", "Schwabing-Freimann", "Münchner Freiheit", "Leopoldstraße", "Universität", "Maxvorstadt"].map((area) => (
