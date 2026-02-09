@@ -8,8 +8,8 @@ export function Footer() {
   return (
     <footer className="bg-background border-t border-white/10 py-8 mt-0" itemScope itemType="https://schema.org/LocalBusiness">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
-          <div className="col-span-1 md:col-span-2">
+        <div className="mb-8">
+          <div className="mb-8">
             <a href="https://extrucon.de" className="flex items-center gap-3 mb-4 hover:opacity-80 transition-opacity" itemProp="url">
               <img src={logoImg} alt="ExtruCon GmbH Logo" className="h-14 object-contain rounded-md" loading="lazy" itemProp="logo" />
             </a>
@@ -23,7 +23,8 @@ export function Footer() {
               <span className="px-2 py-1 rounded bg-primary/10 text-primary">{t.nav.marketing}</span>
             </div>
           </div>
-          
+
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
           <div>
             <h3 className="font-bold text-white mb-4">{t.footer.services}</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
@@ -66,6 +67,7 @@ export function Footer() {
             <div className="mt-4">
               <a href="/kontakt" className="text-primary hover:underline text-sm font-medium">→ {t.footer.contactLink}</a>
             </div>
+          </div>
           </div>
         </div>
 
