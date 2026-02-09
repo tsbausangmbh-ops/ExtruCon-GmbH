@@ -10,7 +10,14 @@ import path from "path";
 
 const CRAWLER_USER_AGENTS = [
   'googlebot',
+  'google-inspectiontool',
+  'adsbot-google',
+  'apis-google',
+  'mediapartners-google',
+  'googleother',
   'bingbot',
+  'bingpreview',
+  'msnbot',
   'slurp',
   'duckduckbot',
   'baiduspider',
@@ -28,7 +35,14 @@ const CRAWLER_USER_AGENTS = [
   'ahrefsbot',
   'mj12bot',
   'dotbot',
-  'petalbot'
+  'petalbot',
+  'rogerbot',
+  'screaming frog',
+  'sitebulb',
+  'deepcrawl',
+  'oncrawl',
+  'seositecheckup',
+  'seznam',
 ];
 
 function isCrawler(userAgent: string): boolean {
