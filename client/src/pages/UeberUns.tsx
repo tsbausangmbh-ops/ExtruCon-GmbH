@@ -10,6 +10,26 @@ import { useLanguage } from "@/lib/i18n";
 
 const valueIcons = [Lightbulb, Heart, Shield, Zap];
 
+const aboutSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": "https://extrucon.de/ueber-uns#aboutpage",
+    "name": "Über ExtruCon GmbH",
+    "description": "ExtruCon GmbH: Ihre KI-Agentur aus Fürstenfeldbruck bei München.",
+    "url": "https://extrucon.de/ueber-uns",
+    "mainEntity": { "@type": "Organization", "@id": "https://extrucon.de/#organization" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://extrucon.de" },
+      { "@type": "ListItem", "position": 2, "name": "Über uns", "item": "https://extrucon.de/ueber-uns" }
+    ]
+  }
+];
+
 export default function UeberUns() {
   const { t } = useLanguage();
   const about = t.aboutPage;
@@ -20,6 +40,8 @@ export default function UeberUns() {
         title="Über uns | ExtruCon GmbH Fürstenfeldbruck – KI-Agentur & Automatisierung"
         description="ExtruCon GmbH: Ihre KI-Agentur aus Fürstenfeldbruck bei München. Wir entwickeln KI-Agenten, automatisieren Prozesse und erstellen intelligente Websites – deutschlandweit."
         keywords="ExtruCon GmbH, KI-Agentur Fürstenfeldbruck, Automatisierung München, Marketing Agentur Bayern, HRB 18623"
+        canonical="https://extrucon.de/ueber-uns"
+        schema={aboutSchema}
       />
       <Navbar />
       <main className="pt-24">

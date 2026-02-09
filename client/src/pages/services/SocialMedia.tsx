@@ -14,6 +14,29 @@ export default function SocialMedia() {
 
   const platforms = ["Instagram", "TikTok", "LinkedIn", "Facebook", "YouTube", "X (Twitter)", "Pinterest", "Google Business"];
 
+  const serviceSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://extrucon.de/leistungen/social-media#service",
+      "name": "Social Media Marketing",
+      "description": "Professionelles Social Media Marketing für mehr Reichweite und Engagement.",
+      "url": "https://extrucon.de/leistungen/social-media",
+      "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
+      "areaServed": { "@type": "Country", "name": "Deutschland" },
+      "serviceType": "Social Media Marketing"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://extrucon.de" },
+        { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://extrucon.de/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Social Media", "item": "https://extrucon.de/leistungen/social-media" }
+      ]
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
@@ -21,6 +44,7 @@ export default function SocialMedia() {
         description="Professionelles Social Media Marketing. Instagram, TikTok, LinkedIn & Facebook Betreuung. Agentur aus Fürstenfeldbruck."
         keywords="Social Media Marketing, Instagram Agentur, TikTok Marketing, Fürstenfeldbruck"
         canonical="https://extrucon.de/leistungen/social-media"
+        schema={serviceSchema}
       />
       <Navbar />
       <main className="pt-24">

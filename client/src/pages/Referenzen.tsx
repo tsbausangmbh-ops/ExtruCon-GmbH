@@ -132,6 +132,32 @@ export default function Referenzen() {
     }
   ];
 
+  const referenzenSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "@id": "https://extrucon.de/referenzen#portfolio",
+      "name": "ExtruCon Referenzen & Projekte",
+      "description": "Erfolgreiche KI- und Webentwicklungsprojekte der ExtruCon GmbH",
+      "numberOfItems": projects.length,
+      "itemListElement": projects.map((p, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": p.title,
+        "description": p.description,
+        "url": p.link
+      }))
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://extrucon.de" },
+        { "@type": "ListItem", "position": 2, "name": "Referenzen", "item": "https://extrucon.de/referenzen" }
+      ]
+    }
+  ];
+
   const colorClasses: Record<string, { bg: string; text: string; border: string }> = {
     cyan: { bg: "bg-cyan-500/20", text: "text-cyan-400", border: "border-cyan-500/30" },
     blue: { bg: "bg-blue-500/20", text: "text-blue-400", border: "border-blue-500/30" },
@@ -148,6 +174,7 @@ export default function Referenzen() {
         description="Unsere erfolgreichen Projekte: KI-Agenten, Websites, Automatisierungen und mehr. Überzeugen Sie sich von unserer Arbeit. Agentur Fürstenfeldbruck."
         keywords="Referenzen, Portfolio, Erfolgsgeschichten, KI Projekte, Webdesign Projekte, Fürstenfeldbruck"
         canonical="https://extrucon.de/referenzen"
+        schema={referenzenSchema}
       />
       <Navbar />
       <main className="pt-24">

@@ -109,3 +109,12 @@
 img[loading="lazy"] {
   content-visibility: auto;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section:not(:has(.sticky)) {
+  contain: layout style;
+}

@@ -81,6 +81,25 @@
         "email": "info@extrucon.de",
         "availableLanguage": ["German", "English", "Croatian", "Turkish"],
         "areaServed": ["DE", "HR", "TR"]
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "KI & Automatisierungs-Dienstleistungen",
+        "itemListElement": [
+          {"@type": "OfferCatalog", "name": "KI-Agenten", "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "KI-Chatbot Entwicklung"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lead-Generierung mit KI"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kundenservice-Automatisierung"}}
+          ]},
+          {"@type": "OfferCatalog", "name": "Automatisierung", "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Workflow-Automatisierung mit n8n"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "E-Mail & CRM Automatisierung"}}
+          ]},
+          {"@type": "OfferCatalog", "name": "Webentwicklung", "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "KI-Webseiten Entwicklung"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SEO Optimierung"}}
+          ]}
+        ]
       }
     }
     </script>
@@ -142,9 +161,14 @@
       "@id": "https://extrucon.de/#website",
       "url": "https://extrucon.de",
       "name": "ExtruCon GmbH",
-      "description": "KI-Agentur für Automatisierung und digitales Marketing",
+      "description": "KI-Agentur für Automatisierung und digitales Marketing aus Fürstenfeldbruck bei München",
       "publisher": {"@type": "Organization", "@id": "https://extrucon.de/#organization"},
-      "inLanguage": "de-DE"
+      "inLanguage": ["de-DE", "en", "hr", "tr"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://extrucon.de/faq?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     }
     </script>
 

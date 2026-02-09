@@ -13,6 +13,29 @@ interface Message {
   content: string;
 }
 
+const chatbotSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "@id": "https://extrucon.de/ki-bot#softwareapp",
+    "name": "ExtruCon KI-Chatbot",
+    "description": "Kostenloser KI-Chatbot zum Testen. Stellen Sie Fragen zu KI-Agenten, Automatisierung und Webentwicklung.",
+    "url": "https://extrucon.de/ki-bot",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+    "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://extrucon.de" },
+      { "@type": "ListItem", "position": 2, "name": "KI-Bot", "item": "https://extrucon.de/ki-bot" }
+    ]
+  }
+];
+
 export default function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
@@ -70,6 +93,7 @@ export default function Chatbot() {
         title="KI-Assistent | ExtruCon GmbH – Fragen Sie unseren Bot"
         description="Sprechen Sie mit unserem KI-Assistenten über KI-Agenten, Automatisierung und digitales Marketing. Kostenlos und unverbindlich."
         keywords="KI Chatbot, ExtruCon Bot, KI Beratung, Automatisierung Beratung"
+        schema={chatbotSchema}
       />
       <Navbar />
       

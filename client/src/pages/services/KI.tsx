@@ -12,6 +12,29 @@ import { RelatedServices, ExploreMoreSection, GeoLinks } from "@/components/Inte
 export default function KI() {
   const { t } = useLanguage();
 
+  const serviceSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://extrucon.de/leistungen/ki-automatisierung#service",
+      "name": "KI-Automatisierung",
+      "description": "Intelligente Automatisierung mit künstlicher Intelligenz für Unternehmen.",
+      "url": "https://extrucon.de/leistungen/ki-automatisierung",
+      "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
+      "areaServed": { "@type": "Country", "name": "Deutschland" },
+      "serviceType": "KI-Automatisierung"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://extrucon.de" },
+        { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://extrucon.de/#services" },
+        { "@type": "ListItem", "position": 3, "name": "KI-Automatisierung", "item": "https://extrucon.de/leistungen/ki-automatisierung" }
+      ]
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
@@ -19,6 +42,7 @@ export default function KI() {
         description="Maßgeschneiderte KI-Lösungen für Ihr Unternehmen. KI-Agenten, ChatGPT Integration, Workflow-Automatisierung. Fürstenfeldbruck."
         keywords="KI Agentur, KI-Lösungen, ChatGPT Integration, Automatisierung, Künstliche Intelligenz"
         canonical="https://extrucon.de/leistungen/ki"
+        schema={serviceSchema}
       />
       <Navbar />
       <main className="pt-24">

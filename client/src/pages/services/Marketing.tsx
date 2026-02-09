@@ -14,6 +14,29 @@ export default function Marketing() {
 
   const channels = ["Google Ads", "Meta Ads", "LinkedIn Ads", "TikTok Ads", "Google SEO", "YouTube Ads", "Microsoft Ads"];
 
+  const serviceSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://extrucon.de/leistungen/marketing#service",
+      "name": "Performance Marketing",
+      "description": "Datengetriebenes Performance Marketing für maximale Reichweite und Conversion.",
+      "url": "https://extrucon.de/leistungen/marketing",
+      "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
+      "areaServed": { "@type": "Country", "name": "Deutschland" },
+      "serviceType": "Performance Marketing"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://extrucon.de" },
+        { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://extrucon.de/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Marketing", "item": "https://extrucon.de/leistungen/marketing" }
+      ]
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
@@ -21,6 +44,7 @@ export default function Marketing() {
         description="Datengetriebenes Performance Marketing. Google Ads, Meta Ads, SEO & Conversion-Optimierung. Agentur Fürstenfeldbruck."
         keywords="Performance Marketing, Google Ads Agentur, Meta Ads, SEO Fürstenfeldbruck"
         canonical="https://extrucon.de/leistungen/marketing"
+        schema={serviceSchema}
       />
       <Navbar />
       <main className="pt-24">

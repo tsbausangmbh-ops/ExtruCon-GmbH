@@ -12,6 +12,29 @@ import { RelatedServices, ExploreMoreSection, GeoLinks } from "@/components/Inte
 export default function Content() {
   const { t } = useLanguage();
 
+  const serviceSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://extrucon.de/leistungen/content#service",
+      "name": "Content-Erstellung mit KI",
+      "description": "KI-gestützte Content-Erstellung für Blog, Social Media und Website. SEO-optimierte Texte.",
+      "url": "https://extrucon.de/leistungen/content",
+      "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
+      "areaServed": { "@type": "Country", "name": "Deutschland" },
+      "serviceType": "Content Marketing"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://extrucon.de" },
+        { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://extrucon.de/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Content", "item": "https://extrucon.de/leistungen/content" }
+      ]
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
@@ -19,6 +42,7 @@ export default function Content() {
         description="Professionelle Content-Erstellung mit KI-Unterstützung. Texte, Grafiken, Videos & Social Media Content. Fürstenfeldbruck."
         keywords="Content Erstellung, KI Content, Social Media Content, Texterstellung"
         canonical="https://extrucon.de/leistungen/content"
+        schema={serviceSchema}
       />
       <Navbar />
       <main className="pt-24">

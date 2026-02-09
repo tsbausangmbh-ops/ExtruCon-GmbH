@@ -77,6 +77,26 @@ const categoryColors = {
   web: "text-blue-400",
 };
 
+const ratgeberSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://extrucon.de/ratgeber#collectionpage",
+    "name": "KI Ratgeber & Expertenwissen",
+    "description": "Ratgeber zu KI-Agenten, Automatisierung, Marketing und Webentwicklung für Unternehmen.",
+    "url": "https://extrucon.de/ratgeber",
+    "publisher": { "@type": "Organization", "@id": "https://extrucon.de/#organization" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://extrucon.de" },
+      { "@type": "ListItem", "position": 2, "name": "Ratgeber", "item": "https://extrucon.de/ratgeber" }
+    ]
+  }
+];
+
 export default function Ratgeber() {
   const { t } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -117,6 +137,7 @@ export default function Ratgeber() {
         description="Expertenwissen zu KI, Automatisierung, Social Media und Webentwicklung. Praxistipps von Ihrer KI-Agentur aus Fürstenfeldbruck."
         keywords="KI Ratgeber, Automatisierung Tipps, Marketing Guide, KI Wissen"
         canonical="https://extrucon.de/ratgeber"
+        schema={ratgeberSchema}
       />
       <Navbar />
       <main className="pt-24">

@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import { HelpCircle, ChevronDown, Bot, Share2, Globe, TrendingUp, CreditCard, Users, Search } from "lucide-react";
 import heroImg from "@/assets/images/hero-faq-abstract.webp";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/lib/i18n";
 import { SEOHead } from "@/components/SEOHead";
@@ -56,6 +56,30 @@ export default function FAQ() {
 
   const currentCategory = faqCategories.find(c => c.id === activeCategory);
 
+  const faqSchema = useMemo(() => [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://extrucon.de/faq#faqpage",
+      "mainEntity": allQuestions.map(q => ({
+        "@type": "Question",
+        "name": q.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": q.a
+        }
+      }))
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://extrucon.de" },
+        { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://extrucon.de/faq" }
+      ]
+    }
+  ], [allQuestions]);
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
@@ -63,6 +87,7 @@ export default function FAQ() {
         description="Antworten auf häufig gestellte Fragen zu KI-Agenten, Automatisierungen, Webentwicklung und Marketing. ExtruCon GmbH Fürstenfeldbruck."
         keywords="KI FAQ, Automatisierung Fragen, KI-Agenten FAQ, Webentwicklung FAQ"
         canonical="https://extrucon.de/faq"
+        schema={faqSchema}
       />
       <Navbar />
       <main className="pt-24">

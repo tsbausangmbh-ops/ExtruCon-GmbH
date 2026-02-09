@@ -14,6 +14,29 @@ export default function Web() {
 
   const technologies = ["React", "Next.js", "TypeScript", "Node.js", "WordPress", "Shopify", "Webflow", "Tailwind CSS"];
 
+  const serviceSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://extrucon.de/leistungen/web#service",
+      "name": "Webentwicklung",
+      "description": "Moderne Webentwicklung mit React und KI-Integration.",
+      "url": "https://extrucon.de/leistungen/web",
+      "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
+      "areaServed": { "@type": "Country", "name": "Deutschland" },
+      "serviceType": "Webentwicklung"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://extrucon.de" },
+        { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://extrucon.de/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Web", "item": "https://extrucon.de/leistungen/web" }
+      ]
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
@@ -21,6 +44,7 @@ export default function Web() {
         description="Moderne Webentwicklung mit KI-Integration. React, Next.js, WordPress & Shopify. Webdesign Agentur Fürstenfeldbruck bei München."
         keywords="Webentwicklung Fürstenfeldbruck, Webdesign München, Website erstellen, React Entwicklung"
         canonical="https://extrucon.de/leistungen/webentwicklung"
+        schema={serviceSchema}
       />
       <Navbar />
       <main className="pt-24">

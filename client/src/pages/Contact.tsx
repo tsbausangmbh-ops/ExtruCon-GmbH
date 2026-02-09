@@ -13,6 +13,29 @@ import { SEOHead } from "@/components/SEOHead";
 import { Link } from "wouter";
 import { RelatedServices, ExploreMoreSection } from "@/components/InternalLinks";
 
+const contactSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": "https://extrucon.de/kontakt#contactpage",
+    "name": "Kontakt ExtruCon GmbH",
+    "description": "Kontaktieren Sie ExtruCon für KI-Beratung in Fürstenfeldbruck bei München.",
+    "url": "https://extrucon.de/kontakt",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "@id": "https://extrucon.de/#localbusiness"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://extrucon.de" },
+      { "@type": "ListItem", "position": 2, "name": "Kontakt", "item": "https://extrucon.de/kontakt" }
+    ]
+  }
+];
+
 export default function Contact() {
   const { t } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
@@ -62,6 +85,7 @@ export default function Contact() {
         description="Kontaktieren Sie ExtruCon für KI-Beratung in Fürstenfeldbruck bei München. Kostenlose Erstberatung zu KI-Agenten und Automatisierung."
         keywords="KI Beratung Kontakt, Fürstenfeldbruck, München, ExtruCon Kontakt"
         canonical="https://extrucon.de/kontakt"
+        schema={contactSchema}
       />
       <Navbar />
       <main className="pt-24">

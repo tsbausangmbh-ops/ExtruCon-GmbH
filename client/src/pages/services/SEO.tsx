@@ -18,6 +18,29 @@ export default function SEO() {
     { icon: BarChart3, key: 3 },
   ];
 
+  const serviceSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://extrucon.de/leistungen/seo#service",
+      "name": "SEO & Suchmaschinenoptimierung",
+      "description": "Professionelle Suchmaschinenoptimierung für lokale und nationale Sichtbarkeit.",
+      "url": "https://extrucon.de/leistungen/seo",
+      "provider": { "@type": "Organization", "@id": "https://extrucon.de/#organization" },
+      "areaServed": { "@type": "Country", "name": "Deutschland" },
+      "serviceType": "SEO"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://extrucon.de" },
+        { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://extrucon.de/#services" },
+        { "@type": "ListItem", "position": 3, "name": "SEO", "item": "https://extrucon.de/leistungen/seo" }
+      ]
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <SEOHead
@@ -25,6 +48,7 @@ export default function SEO() {
         description="Professionelle SEO & Geo-Optimierung für lokale Unternehmen. Google My Business, lokale Keywords, strukturierte Daten. Agentur Fürstenfeldbruck bei München."
         keywords="SEO Agentur, Geo-Optimierung, lokale SEO, Google My Business, Suchmaschinenoptimierung Fürstenfeldbruck, Local SEO München"
         canonical="https://extrucon.de/leistungen/seo"
+        schema={serviceSchema}
       />
       <Navbar />
       <main className="pt-24">
