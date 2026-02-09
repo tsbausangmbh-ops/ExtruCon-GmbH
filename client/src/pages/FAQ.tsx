@@ -72,7 +72,7 @@ export default function FAQ() {
         {/* Hero Section */}
         <section className="relative py-12 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img src={heroImg} alt="" className="w-full h-full object-cover opacity-40" fetchPriority="high" decoding="async" width={1920} height={1080} />
+            <img src={heroImg} alt="Häufige Fragen zu KI-Agenten Chatbots und Automatisierung - Kosten Dauer DSGVO Konformität für Unternehmen erklärt" className="w-full h-full object-cover opacity-40" fetchPriority="high" decoding="async" width={1920} height={1080} />
             <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
           </div>
           <div className="container mx-auto px-4 relative z-10">
