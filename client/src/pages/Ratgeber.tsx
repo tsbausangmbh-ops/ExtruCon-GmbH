@@ -2,7 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 import { BookOpen, Clock, ArrowRight, Search, Bot, Share2, Globe, TrendingUp, Sparkles, Mail, Lightbulb } from "lucide-react";
-import heroBg from "@assets/generated_images/futuristic_digital_landscape_with_connecting_nodes.webp";
+import heroImg from "@/assets/images/hero-ratgeber-abstract.webp";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/lib/i18n";
@@ -124,56 +124,41 @@ export default function Ratgeber() {
           { label: t.ratgeberPage.badge }
         ]} />
         {/* Hero Section */}
-        <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-8 pb-8">
+        <section className="relative py-10 overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img 
-              src={heroBg} 
-              alt="KI Ratgeber und Expertenwissen - Tipps zu Marketing Automatisierung Chatbot Erstellung und SEO für Unternehmer" 
-              className="w-full h-full object-cover opacity-60"
-              fetchPriority="high"
-              decoding="async"
-              width={1920}
-              height={1080}
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
+            <img src={heroImg} alt="KI Ratgeber und Expertenwissen - Tipps zu Marketing Automatisierung Chatbot Erstellung und SEO für Unternehmer" className="w-full h-full object-cover opacity-40" fetchPriority="high" decoding="async" width={1920} height={1080} />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
           </div>
-          <div className="container mx-auto px-4 z-40 relative">
-            <div className="max-w-4xl mx-auto text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <div className="flex items-center justify-center gap-2 mb-4">
-                  <span className="inline-flex items-center gap-1.5 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium backdrop-blur-sm">
-                    <BookOpen className="w-3.5 h-3.5" />
-                    {t.ratgeberPage.badge}
-                  </span>
-                </div>
-
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-display text-white mb-6 leading-tight">
-                  {t.ratgeberPage.title}
-                </h1>
-
-                <h2 className="text-xl md:text-2xl text-gray-300 mb-4 max-w-2xl mx-auto leading-relaxed font-medium">
-                  {t.ratgeberPage.subtitle}
-                </h2>
-                
-                {/* Search */}
-                <div className="relative max-w-md mx-auto mt-8">
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
-                  <Input
-                    placeholder={t.ratgeberPage.searchPlaceholder}
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="pl-10 bg-white/5 border-white/10 text-white"
-                    data-testid="input-search-ratgeber"
-                  />
-                </div>
-              </motion.div>
-            </div>
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="max-w-3xl mx-auto text-center"
+            >
+              <div className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-4">
+                <BookOpen className="w-4 h-4" />
+                {t.ratgeberPage.badge}
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold font-display text-white mb-4">
+                {t.ratgeberPage.title}
+              </h1>
+              <p className="text-lg text-gray-400 mb-6">
+                {t.ratgeberPage.subtitle}
+              </p>
+              
+              {/* Search */}
+              <div className="relative max-w-md mx-auto">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
+                <Input
+                  placeholder={t.ratgeberPage.searchPlaceholder}
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-10 bg-white/5 border-white/10 text-white"
+                  data-testid="input-search-ratgeber"
+                />
+              </div>
+            </motion.div>
           </div>
-          <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-background to-transparent z-20" />
         </section>
 
         {/* Category Filter */}
