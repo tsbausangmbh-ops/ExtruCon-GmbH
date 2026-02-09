@@ -1,5 +1,5 @@
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
-import logoImg from "@assets/extrucon_logo_new.png";
+import logoImg from "@assets/extrucon_logo_new.webp";
 import { useLanguage } from "@/lib/i18n";
 
 export function Footer() {

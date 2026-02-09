@@ -15,8 +15,8 @@ export function Hero() {
           className="w-full h-full object-cover opacity-60"
           fetchPriority="high"
           decoding="async"
-          width={1920}
-          height={1080}
+          width={800}
+          height={437}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background" />
       </div>

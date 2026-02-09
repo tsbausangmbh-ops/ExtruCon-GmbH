@@ -119,8 +119,8 @@ export function Services() {
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         loading="lazy"
                         decoding="async"
-                        width={400}
-                        height={192}
+                        width={640}
+                        height={448}
                       />
                     ) : (
                       <div className="w-full h-full bg-gradient-to-br from-purple-900 to-pink-900 flex items-center justify-center">
