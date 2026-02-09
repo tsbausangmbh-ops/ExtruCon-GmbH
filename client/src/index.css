@@ -39,7 +39,7 @@
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
 
-  --font-sans: "Inter", sans-serif;
+  --font-sans: "Outfit", sans-serif;
   --font-display: "Space Grotesk", sans-serif;
   --font-heading: "Outfit", sans-serif;
 }
