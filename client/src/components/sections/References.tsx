@@ -61,7 +61,7 @@ export function References() {
           <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-4">
             Unsere Arbeit
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
             Erfolgreiche <span className="text-gradient">Referenzen</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">

@@ -17,7 +17,7 @@ export function Funnel() {
           <span className="inline-block py-1 px-3 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-4">
             {t.funnelSection.badge}
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold font-display text-white mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
             {t.funnelSection.title} <span className="text-gradient">{t.funnelSection.titleHighlight}</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
@@ -74,7 +74,7 @@ export function Funnel() {
                     <MapPin className="w-6 h-6 text-cyan-400" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{t.funnelSection.step1.title}</h3>
+                    <h3 className="text-lg font-bold text-white mb-2">{t.funnelSection.step1.title}</h3>
                     <p className="text-gray-400">{t.funnelSection.step1.desc}</p>
                   </div>
                 </div>
@@ -92,7 +92,7 @@ export function Funnel() {
                     <Users className="w-6 h-6 text-purple-400" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{t.funnelSection.step2.title}</h3>
+                    <h3 className="text-lg font-bold text-white mb-2">{t.funnelSection.step2.title}</h3>
                     <p className="text-gray-400">{t.funnelSection.step2.desc}</p>
                   </div>
                 </div>
@@ -110,7 +110,7 @@ export function Funnel() {
                     <Zap className="w-6 h-6 text-emerald-400" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{t.funnelSection.step3.title}</h3>
+                    <h3 className="text-lg font-bold text-white mb-2">{t.funnelSection.step3.title}</h3>
                     <p className="text-gray-400">{t.funnelSection.step3.desc}</p>
                   </div>
                 </div>

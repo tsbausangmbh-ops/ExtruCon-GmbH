@@ -88,7 +88,7 @@ export function Statistics() {
           <span className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
             {t.badge}
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
             {t.title}
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
@@ -125,7 +125,7 @@ export function Statistics() {
         >
           <div className="flex items-center gap-3 mb-6">
             <Award className="w-8 h-8 text-primary" />
-            <h3 className="text-xl font-bold text-white">
+            <h3 className="text-lg font-bold text-white">
               {t.whyTitle}
             </h3>
           </div>

@@ -24,7 +24,7 @@ export function Contact() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold font-display text-white mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
               {t.contact.title} <span className="text-gradient">{t.contact.titleHighlight}</span>
             </h2>
             <p className="text-gray-400 text-lg mb-8">
@@ -91,7 +91,7 @@ export function Contact() {
             {submitted ? (
               <div className="text-center py-12">
                 <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">{t.contact.thankYou}</h3>
+                <h3 className="text-lg font-bold text-white mb-2">{t.contact.thankYou}</h3>
                 <p className="text-gray-400">
                   {t.contact.thankYouMessage}
                 </p>

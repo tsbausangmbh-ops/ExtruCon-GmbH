@@ -84,7 +84,7 @@ export function TrustSignals() {
           <span className="inline-block px-4 py-1 bg-green-500/10 text-green-400 rounded-full text-sm font-medium mb-4">
             {t.badge}
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
             {t.title}
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
@@ -108,7 +108,7 @@ export function TrustSignals() {
                   <Icon className="w-6 h-6 text-green-400" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                  <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
                   <p className="text-sm text-gray-400">{item.description}</p>
                 </div>
               </motion.div>

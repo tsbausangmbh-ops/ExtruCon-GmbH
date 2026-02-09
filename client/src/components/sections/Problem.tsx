@@ -26,7 +26,7 @@ export function Problem() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
               {t.problemSection.title} <span className="text-red-500">{t.problemSection.titleHighlight}</span>
             </h2>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">

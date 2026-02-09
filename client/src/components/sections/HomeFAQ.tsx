@@ -39,7 +39,7 @@ export function HomeFAQ() {
             <HelpCircle className="w-4 h-4" />
             Häufige Fragen
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold font-display text-white mb-4">
             Ihre Fragen, <span className="text-gradient">unsere Antworten</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
