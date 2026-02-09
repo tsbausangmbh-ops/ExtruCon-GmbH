@@ -2,7 +2,6 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Bot, Share2, Globe, TrendingUp, Palette, FileText, Search, Award, HelpCircle } from "lucide-react";
 import { useState } from "react";
-import logoImage from "@assets/extrucon_logo_new.png";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/lib/i18n";
 
@@ -25,8 +24,9 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-4 h-24 flex items-center justify-between py-1">
-        <Link href="/" className="flex items-center">
-          <img src={logoImage} alt="ExtruCon GmbH" className="h-[5.5rem]" width={200} height={88} fetchPriority="high" decoding="async" />
+        <Link href="/" className="flex flex-col items-start leading-tight">
+          <span className="text-2xl font-bold font-display tracking-wider text-white">ExtruCon GmbH</span>
+          <span className="text-xs text-gray-400 tracking-wide">KI und SEO Optimierungen</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
