@@ -358,14 +358,12 @@ function extractTwitterValue(tags: string[], name: string): string {
 }
 
 export function handleVisitorSSR(reqPath: string): { html: string; source: string } | null {
+  if (process.env.NODE_ENV !== 'production') return null;
+
   const staticFilePath = getStaticFilePath(reqPath);
   if (!staticFilePath) return null;
 
-  const isDev = process.env.NODE_ENV !== 'production';
-  const spaHtml = isDev ? (() => {
-    const p = path.resolve(process.cwd(), 'client/index.html');
-    try { return fs.readFileSync(p, 'utf-8'); } catch { return ''; }
-  })() : getSpaHtml();
+  const spaHtml = getSpaHtml();
   if (!spaHtml) return null;
 
   const meta = extractMetaFromStaticFile(staticFilePath);
