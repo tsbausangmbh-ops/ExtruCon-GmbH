@@ -44,17 +44,29 @@ export async function registerRoutes(
     next();
   });
 
+  app.use((req: Request, res: Response, next: NextFunction) => {
+    if (req.method !== 'GET') return next();
+    const path = req.path;
+    if (path === '/' || path.startsWith('/api/') || path.startsWith('/assets/') || path.includes('.')) return next();
+    const normalizedPath = path.replace(/\/$/, '');
+    if (STATIC_PAGES[normalizedPath] && !path.endsWith('/')) {
+      return res.redirect(301, normalizedPath + '/');
+    }
+    next();
+  });
+
   app.use(async (req: Request, res: Response, next: NextFunction) => {
     const userAgent = req.headers['user-agent'] || '';
     const reqPath = req.path;
+    const lookupPath = reqPath === '/' ? '/' : reqPath.replace(/\/$/, '');
 
-    if (req.method !== 'GET' || !STATIC_PAGES[reqPath]) {
+    if (req.method !== 'GET' || !STATIC_PAGES[lookupPath]) {
       return next();
     }
 
     if (isCrawler(userAgent)) {
       try {
-        const { html, source } = await handleCrawlerRequest(reqPath);
+        const { html, source } = await handleCrawlerRequest(lookupPath);
 
         if (html) {
           res.set('Content-Type', 'text/html');
@@ -62,11 +74,11 @@ export async function registerRoutes(
           return res.send(html);
         }
       } catch (error: any) {
-        console.error(`[SSR] Error handling crawler request for ${reqPath}:`, error.message);
+        console.error(`[SSR] Error handling crawler request for ${lookupPath}:`, error.message);
       }
     } else {
       try {
-        const result = handleVisitorSSR(reqPath);
+        const result = handleVisitorSSR(lookupPath);
 
         if (result) {
           res.set('Content-Type', 'text/html');
@@ -74,7 +86,7 @@ export async function registerRoutes(
           return res.send(result.html);
         }
       } catch (error: any) {
-        console.error(`[SSR] Error handling visitor SSR for ${reqPath}:`, error.message);
+        console.error(`[SSR] Error handling visitor SSR for ${lookupPath}:`, error.message);
       }
     }
 
