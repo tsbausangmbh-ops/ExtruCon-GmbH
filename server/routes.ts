@@ -2,7 +2,13 @@ import type { Express, Request, Response, NextFunction } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import OpenAI from "openai";
-import { listEvents, createEvent, getAvailableSlots, isBusinessHour, getAlternativeSlots } from "./lib/googleCalendar";
+let _calendarModule: typeof import("./lib/googleCalendar") | null = null;
+async function getCalendarModule() {
+  if (!_calendarModule) {
+    _calendarModule = await import("./lib/googleCalendar");
+  }
+  return _calendarModule;
+}
 import { sendContactEmail } from "./lib/email";
 import { SITEMAP_XML, ROBOTS_TXT } from "./seoFiles";
 import { isCrawler, getStaticPages, handleCrawlerRequest, handleVisitorSSR, recachePrerenderPages } from "./lib/prerender";
@@ -288,8 +294,9 @@ Am Ende freundlich anbieten: „Wenn Sie möchten, fasse ich Ihnen alles kurz zu
       const endOfDay = new Date(requestedDate);
       endOfDay.setHours(23, 59, 59, 999);
 
-      const events = await listEvents('primary', startOfDay.toISOString(), endOfDay.toISOString());
-      const availableSlots = getAvailableSlots(requestedDate, events);
+      const cal = await getCalendarModule();
+      const events = await cal.listEvents('primary', startOfDay.toISOString(), endOfDay.toISOString());
+      const availableSlots = cal.getAvailableSlots(requestedDate, events);
 
       res.json({ 
         slots: availableSlots,
@@ -342,7 +349,8 @@ Am Ende freundlich anbieten: „Wenn Sie möchten, fasse ich Ihnen alles kurz zu
       // Get existing events to check for conflicts
       const startOfDay = new Date(date + 'T00:00:00+01:00');
       const endOfDay = new Date(date + 'T23:59:59+01:00');
-      const existingEvents = await listEvents('primary', startOfDay.toISOString(), endOfDay.toISOString());
+      const cal = await getCalendarModule();
+      const existingEvents = await cal.listEvents('primary', startOfDay.toISOString(), endOfDay.toISOString());
       
       // Check if slot is already booked (including 2-hour buffer)
       const slotStart = new Date(slotStartBerlin + '+01:00');
@@ -364,7 +372,7 @@ Am Ende freundlich anbieten: „Wenn Sie möchten, fasse ich Ihnen alles kurz zu
 
       if (hasConflict) {
         // Get 3 alternative suggestions
-        const alternatives = getAlternativeSlots(requestedDate, existingEvents, 3);
+        const alternatives = cal.getAlternativeSlots(requestedDate, existingEvents, 3);
         
         return res.status(409).json({ 
           error: "Dieser Termin ist leider nicht mehr verfügbar.",
@@ -383,7 +391,7 @@ ${phone ? `Telefon: ${phone}` : ''}
 ${message ? `Nachricht: ${message}` : ''}
       `.trim();
 
-      const event = await createEvent(
+      const event = await cal.createEvent(
         'primary',
         `Beratungsgespräch: ${name}`,
         description,
