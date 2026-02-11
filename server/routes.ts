@@ -30,6 +30,14 @@ export async function registerRoutes(
 
   const STATIC_PAGES = getStaticPages();
 
+  app.use((req: Request, res: Response, next: NextFunction) => {
+    if (req.query.lang) {
+      const cleanUrl = req.path === '/' ? '/' : req.path.replace(/\/$/, '') + '/';
+      return res.redirect(301, cleanUrl);
+    }
+    next();
+  });
+
   app.use(async (req: Request, res: Response, next: NextFunction) => {
     const userAgent = req.headers['user-agent'] || '';
     const reqPath = req.path;

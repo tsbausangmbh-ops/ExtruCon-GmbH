@@ -233,7 +233,7 @@ function extractMetaFromStaticFile(filePath: string): {
   ogTags: string[];
   twitterTags: string[];
   jsonLdBlocks: string[];
-  hreflangTags: string[];
+
 } {
   try {
     const content = fs.readFileSync(filePath, 'utf-8');
@@ -268,16 +268,9 @@ function extractMetaFromStaticFile(filePath: string): {
       jsonLdBlocks.push(jm[0]);
     }
 
-    const hreflangTags: string[] = [];
-    const hreflangRegex = /<link\s+rel=["']alternate["']\s+hreflang=["'][^"']+["']\s+href=["'][^"']+["']\s*\/?>/gi;
-    let hm;
-    while ((hm = hreflangRegex.exec(content)) !== null) {
-      hreflangTags.push(hm[0]);
-    }
-
-    return { title, description, canonical, ogTags, twitterTags: twTags, jsonLdBlocks, hreflangTags };
+    return { title, description, canonical, ogTags, twitterTags: twTags, jsonLdBlocks };
   } catch {
-    return { title: '', description: '', canonical: '', ogTags: [], twitterTags: [], jsonLdBlocks: [], hreflangTags: [] };
+    return { title: '', description: '', canonical: '', ogTags: [], twitterTags: [], jsonLdBlocks: [] };
   }
 }
 
@@ -421,14 +414,10 @@ export function handleVisitorSSR(reqPath: string): { html: string; source: strin
     enhanced = replaceJsonLdBlocks(enhanced, meta.jsonLdBlocks);
   }
 
-  if (meta.hreflangTags.length > 0) {
-    enhanced = enhanced.replace(
-      /<link\s+rel=["']alternate["']\s+hreflang=["'][^"']+["']\s+href=["'][^"']+["']\s*\/?>\s*/gi,
-      ''
-    );
-    const hreflangStr = meta.hreflangTags.join('\n    ');
-    enhanced = enhanced.replace('</head>', `    ${hreflangStr}\n  </head>`);
-  }
+  enhanced = enhanced.replace(
+    /<link\s+rel=["']alternate["']\s+hreflang=["'][^"']+["']\s+href=["'][^"']+["']\s*\/?>\s*/gi,
+    ''
+  );
 
   return { html: enhanced, source: 'ssr-visitor' };
 }
@@ -439,13 +428,10 @@ export async function recachePrerenderPages(): Promise<{ success: number; failed
   }
 
   const allPages = Object.keys(STATIC_PAGES);
-  const languages = ['', '?lang=en', '?lang=hr', '?lang=tr'];
   const urls: string[] = [];
 
   for (const page of allPages) {
-    for (const lang of languages) {
-      urls.push(`${SITE_URL}${page}${lang}`);
-    }
+    urls.push(`${SITE_URL}${page}`);
   }
 
   console.log(`[Prerender-Cache] Recaching ${urls.length} pages...`);

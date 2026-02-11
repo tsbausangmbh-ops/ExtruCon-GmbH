@@ -93,7 +93,7 @@ shared/           # Shared types and schemas
 
 ### Cache Refresh
 - POST `/api/prerender/recache` (protected by PRERENDER_TOKEN, 5min rate limit)
-- Recaches all 19 paths × 4 languages = 76 URLs
+- Recaches all 19 German-only paths (no language variants)
 - Batched in groups of 5 with 200ms delay between batches
 
 ### Key Files
@@ -108,10 +108,13 @@ shared/           # Shared types and schemas
 - **No meta keywords**: Removed per Google 2026 best practices; keywords meta tag not used anywhere
 - **Canonical URLs**: All canonicals and og:url use trailing slash for consistency (e.g., `https://extrucon.de/ki-agenten/`)
 
-### hreflang Tags
-- All 19 static HTML files include page-specific hreflang tags for de, en, hr, tr, and x-default
-- SSR injection extracts and injects hreflang tags from static files for normal visitors
-- Format: `<link rel="alternate" hreflang="de" href="https://extrucon.de/page/" />`
+### German-Only SEO Strategy
+- **No hreflang tags**: Removed from all files; only German version is indexed
+- **301 redirects**: All `?lang=` query parameters are 301-redirected to the clean German URL
+- **inLanguage**: Set to `de-DE` only in JSON-LD (no multi-language array)
+- **areaServed**: Focused on Fürstenfeldbruck, München, Bayern for local ranking
+- **Client-side i18n**: Language switching (EN, HR, TR) remains for visitors via localStorage but is invisible to search engines
+- **Recache**: Only German URLs are recached via Prerender.io (19 pages, no language variants)
 
 ## SEO & Internal Linking
 
