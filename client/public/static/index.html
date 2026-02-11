@@ -5,16 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ExtruCon GmbH | KI-Agentur Fürstenfeldbruck bei München</title>
   <meta name="description" content="Ihre KI-Agentur in Fürstenfeldbruck. KI-Agenten, Automatisierungen, Webentwicklung & Marketing mit künstlicher Intelligenz. Kostenlose Beratung!">
-  <meta name="keywords" content="KI Agentur Fürstenfeldbruck, KI Agentur München, künstliche Intelligenz Bayern, AI Agency, Automatisierung, KI Beratung, n8n Automatisierung, KI Agentur für kleine Unternehmen München, Chatbot erstellen lassen Fürstenfeldbruck, Geschäftsprozesse automatisieren mit KI Bayern, KI Lösung für Mittelstand, Workflow Automatisierung Oberbayern, SEO Optimierung mit künstlicher Intelligenz, KI gestützte Webseite erstellen lassen, digitale Transformation KMU Bayern, KI Beratung für Handwerk und Dienstleister München">
   <meta name="author" content="ExtruCon GmbH">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://extrucon.de">
+  <link rel="canonical" href="https://extrucon.de/">
+  <link rel="alternate" hreflang="de" href="https://extrucon.de/" />
+  <link rel="alternate" hreflang="en" href="https://extrucon.de/?lang=en" />
+  <link rel="alternate" hreflang="hr" href="https://extrucon.de/?lang=hr" />
+  <link rel="alternate" hreflang="tr" href="https://extrucon.de/?lang=tr" />
+  <link rel="alternate" hreflang="x-default" href="https://extrucon.de/" />
   <meta name="geo.region" content="DE-BY">
   <meta name="geo.placename" content="Fürstenfeldbruck">
   <meta property="og:title" content="ExtruCon GmbH | KI-Agentur Fürstenfeldbruck">
   <meta property="og:description" content="Ihre KI-Agentur in Fürstenfeldbruck. KI-Agenten, Automatisierungen & Marketing mit KI.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://extrucon.de">
+  <meta property="og:url" content="https://extrucon.de/">
   <meta property="og:image" content="https://extrucon.de/images/ki-agentur-digitale-automatisierung.webp">
   <meta property="og:image:alt" content="KI-Agentur ExtruCon GmbH Fürstenfeldbruck - digitale Automatisierung und künstliche Intelligenz für Unternehmen in München und Bayern mit Chatbot und Workflow Optimierung">
   <meta property="og:image:width" content="1200">
@@ -25,21 +29,137 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "ExtruCon GmbH",
-    "url": "https://extrucon.de",
-    "logo": "https://extrucon.de/logo.png",
-    "description": "KI-Agentur für Automatisierung, KI-Agenten und digitales Marketing aus Fürstenfeldbruck.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Hasenheide 8",
-      "addressLocality": "Fürstenfeldbruck",
-      "postalCode": "82256",
-      "addressRegion": "Bayern",
-      "addressCountry": "DE"
-    },
-    "telephone": "+4989444438879",
-    "email": "info@extrucon.de"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://extrucon.de/#website",
+        "url": "https://extrucon.de/",
+        "name": "ExtruCon GmbH",
+        "description": "KI-Agentur für Automatisierung und digitales Marketing aus Fürstenfeldbruck bei München",
+        "publisher": {"@id": "https://extrucon.de/#organization"},
+        "inLanguage": ["de-DE", "en", "hr", "tr"],
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://extrucon.de/faq?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://extrucon.de/#webpage",
+        "url": "https://extrucon.de/",
+        "name": "ExtruCon GmbH | KI-Agentur Fürstenfeldbruck bei München",
+        "description": "Ihre KI-Agentur in Fürstenfeldbruck. KI-Agenten, Automatisierungen, Webentwicklung & Marketing mit künstlicher Intelligenz.",
+        "isPartOf": {"@id": "https://extrucon.de/#website"},
+        "about": {"@id": "https://extrucon.de/#organization"},
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": ["ProfessionalService", "LocalBusiness"],
+        "@id": "https://extrucon.de/#organization",
+        "name": "ExtruCon GmbH",
+        "legalName": "ExtruCon GmbH",
+        "alternateName": "ExtruCon",
+        "url": "https://extrucon.de/",
+        "logo": "https://extrucon.de/logo.png",
+        "image": "https://extrucon.de/images/ki-agentur-digitale-automatisierung.webp",
+        "description": "KI-Agentur für Automatisierung, KI-Agenten und digitales Marketing aus Fürstenfeldbruck.",
+        "telephone": "+4989444438879",
+        "email": "info@extrucon.de",
+        "priceRange": "€€-€€€",
+        "currenciesAccepted": "EUR",
+        "paymentAccepted": "Überweisung, PayPal",
+        "foundingDate": "2023",
+        "numberOfEmployees": {"@type": "QuantitativeValue", "minValue": 2, "maxValue": 10},
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Hasenheide 8",
+          "addressLocality": "Fürstenfeldbruck",
+          "postalCode": "82256",
+          "addressRegion": "Bayern",
+          "addressCountry": "DE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 48.1789,
+          "longitude": 11.2546
+        },
+        "areaServed": [
+          {"@type": "Country", "name": "Deutschland"},
+          {"@type": "State", "name": "Bayern"},
+          {"@type": "City", "name": "München"},
+          {"@type": "City", "name": "Fürstenfeldbruck"}
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/company/extrucon",
+          "https://www.instagram.com/extrucon"
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:00",
+            "closes": "17:00"
+          }
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+4989444438879",
+          "contactType": "customer service",
+          "email": "info@extrucon.de",
+          "availableLanguage": ["German", "English", "Croatian", "Turkish"]
+        },
+        "knowsAbout": ["Künstliche Intelligenz", "KI-Agenten", "Workflow-Automatisierung", "n8n", "Chatbots", "Webentwicklung", "SEO"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "KI & Automatisierungs-Dienstleistungen",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "KI-Chatbot Entwicklung"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Workflow-Automatisierung mit n8n"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "KI-Webseiten Entwicklung"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SEO Optimierung"}}
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://extrucon.de/#faqpage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Was ist ein KI-Agent?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ein KI-Agent ist ein intelligentes Softwareprogramm, das menschenähnliche Konversationen führen und Aufgaben automatisch erledigen kann. Er nutzt künstliche Intelligenz, um Kundenanfragen zu beantworten, Leads zu qualifizieren oder Termine zu buchen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie viel kostet ein KI-Agent?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Die Kosten für einen KI-Agenten variieren je nach Komplexität. Einfache FAQ-Bots starten ab 490€, während komplexere Lösungen mit CRM-Integration ab 1.490€ beginnen. Kontaktieren Sie uns für ein individuelles Angebot."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Was ist n8n?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "n8n ist eine leistungsstarke Open-Source Plattform für Workflow-Automatisierung. Sie ermöglicht es, verschiedene Apps und Services zu verbinden und automatisierte Workflows zu erstellen - ohne Programmierkenntnisse."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Sind die Lösungen DSGVO-konform?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja, alle unsere Lösungen sind vollständig DSGVO-konform. Daten werden ausschließlich auf europäischen Servern verarbeitet und wir unterstützen Sie bei der korrekten Datenschutzerklärung."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>

@@ -85,7 +85,6 @@ export default function FAQ() {
       <SEOHead
         title="FAQ | Häufige Fragen zu KI & Automatisierung | ExtruCon"
         description="Antworten auf häufig gestellte Fragen zu KI-Agenten, Automatisierungen, Webentwicklung und Marketing. ExtruCon GmbH Fürstenfeldbruck."
-        keywords="KI FAQ, Automatisierung Fragen, KI-Agenten FAQ, Webentwicklung FAQ"
         canonical="https://extrucon.de/faq"
         schema={faqSchema}
       />

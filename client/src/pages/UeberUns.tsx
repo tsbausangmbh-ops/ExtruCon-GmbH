@@ -39,7 +39,6 @@ export default function UeberUns() {
       <SEOHead 
         title="Über uns | ExtruCon GmbH Fürstenfeldbruck – KI-Agentur & Automatisierung"
         description="ExtruCon GmbH: Ihre KI-Agentur aus Fürstenfeldbruck bei München. Wir entwickeln KI-Agenten, automatisieren Prozesse und erstellen intelligente Websites – deutschlandweit."
-        keywords="ExtruCon GmbH, KI-Agentur Fürstenfeldbruck, Automatisierung München, Marketing Agentur Bayern, HRB 18623"
         canonical="https://extrucon.de/ueber-uns"
         schema={aboutSchema}
       />

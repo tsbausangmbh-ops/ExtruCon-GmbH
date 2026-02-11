@@ -40,7 +40,6 @@ export default function Brand() {
       <SEOHead
         title="Markenentwicklung & Corporate Design | ExtruCon GmbH"
         description="Professionelle Markenentwicklung und Corporate Design. Logo, Branding & visuelle Identität. Agentur Fürstenfeldbruck."
-        keywords="Markenentwicklung, Corporate Design, Logo Design, Branding Agentur"
         canonical="https://extrucon.de/leistungen/markenentwicklung"
         schema={serviceSchema}
       />

@@ -11,7 +11,6 @@ export default function Terms() {
       <SEOHead
         title="AGB | Allgemeine Geschäftsbedingungen | ExtruCon GmbH"
         description="Allgemeine Geschäftsbedingungen der ExtruCon GmbH für KI, Marketing, Social Media und Webentwicklung."
-        keywords="AGB, Geschäftsbedingungen, ExtruCon"
         canonical="https://extrucon.de/agb"
       />
       <Navbar />

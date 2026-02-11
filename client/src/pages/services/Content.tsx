@@ -40,7 +40,6 @@ export default function Content() {
       <SEOHead
         title="Content-Erstellung | KI-gestützte Inhalte | ExtruCon"
         description="Professionelle Content-Erstellung mit KI-Unterstützung. Texte, Grafiken, Videos & Social Media Content. Fürstenfeldbruck."
-        keywords="Content Erstellung, KI Content, Social Media Content, Texterstellung"
         canonical="https://extrucon.de/leistungen/content"
         schema={serviceSchema}
       />

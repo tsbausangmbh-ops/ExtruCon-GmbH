@@ -42,7 +42,6 @@ export default function Web() {
       <SEOHead
         title="Webentwicklung Fürstenfeldbruck | Professionelle Websites | ExtruCon"
         description="Moderne Webentwicklung mit KI-Integration. React, Next.js, WordPress & Shopify. Webdesign Agentur Fürstenfeldbruck bei München."
-        keywords="Webentwicklung Fürstenfeldbruck, Webdesign München, Website erstellen, React Entwicklung"
         canonical="https://extrucon.de/leistungen/webentwicklung"
         schema={serviceSchema}
       />

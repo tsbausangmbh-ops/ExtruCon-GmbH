@@ -430,7 +430,6 @@ export default function Termin() {
       <SEOHead 
         title="Kostenlose KI-Beratung buchen | ExtruCon Fürstenfeldbruck"
         description="Buchen Sie jetzt Ihre kostenlose 30-minütige KI-Beratung. Online-Terminbuchung für KI-Agenten, Automatisierung und Webentwicklung."
-        keywords="KI Beratung buchen, Termin KI Agentur, Beratungsgespräch Automatisierung, ExtruCon Termin"
         canonical="https://extrucon.de/termin"
         geoRegion="DE-BY"
         geoPlacename="Fürstenfeldbruck"

@@ -38,7 +38,6 @@ export default function Cookies() {
       <SEOHead
         title="Cookie-Richtlinie | ExtruCon GmbH Fürstenfeldbruck"
         description="Cookie-Richtlinie der ExtruCon GmbH. Hier können Sie Ihre Cookie-Einstellungen für extrucon.de verwalten. DSGVO-konform, transparent und sicher. Ihre KI-Agentur bei München."
-        keywords="Cookies, Cookie-Richtlinie, Datenschutz, ExtruCon, Cookie-Einstellungen"
         canonical="https://extrucon.de/cookies"
       />
       <Navbar />

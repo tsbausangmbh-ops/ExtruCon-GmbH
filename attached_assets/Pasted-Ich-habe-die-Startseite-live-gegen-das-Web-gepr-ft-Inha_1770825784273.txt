@@ -1,0 +1,46 @@
+Ich habe die Startseite live gegen das Web geprüft: Inhalt/Struktur wird ausgeliefert und entspricht inhaltlich genau dem, was du hier gepostet hast (Navigation, H1, Sections, Kontaktblock, Local-Links etc.).
+
+Was an deinem HTML „technisch ok“ ist
+
+Title, Description, Canonical, OG/Twitter-Basis sind vorhanden.
+
+Semantik (header/nav/main/section/article) ist sauber.
+
+Bild hat width/height + sinnvolles alt (gut für CLS/SEO).
+
+Was du ändern solltest (mit hoher SEO-Wirkung)
+
+Canonical/URL-Konsistenz
+Du hast canonical auf https://extrucon.de/ (mit Slash), OG-URL auf https://extrucon.de (ohne Slash). Das ist kein Killer, aber unnötig inkonsistent. Nimm überall exakt dieselbe URL-Form.
+
+Empfehlung:
+
+canonical: https://extrucon.de/
+
+og:url: https://extrucon.de/
+
+(optional) twitter:url ebenso
+
+Schema.org: Organization → LocalBusiness/ProfessionalService (+ @graph)
+Für lokale Rankings (Fürstenfeldbruck/München) ist Organization zu generisch. Verwende LocalBusiness oder ProfessionalService und ergänze saubere Identifikatoren + Geo + areaServed.
+
+Zusätzlich: Splitte Schema in ein @graph (WebSite + WebPage + LocalBusiness). Das hilft Google, Entitäten sauber zuzuordnen.
+
+FAQ als FAQPage-Schema
+Du hast FAQ-Content im HTML, aber kein FAQPage JSON-LD. Das ist verschenktes Rich-Result-Potenzial.
+
+Sprache/Parameter-Duplikate (lang=hr / lang=tr)
+Ich sehe, dass es bei dir Seitenvarianten mit Query-Parametern gibt (z. B. ?lang=hr, ?lang=tr).
+Wenn diese Varianten indexierbar sind und keinen sauberen hreflang/Canonical bekommen, erzeugst du Duplicate Content und verteilst Signale.
+
+Empfehlung (wichtig):
+
+Wenn du echte Mehrsprachigkeit willst: hreflang + eigene Pfade (z. B. /de/, /hr/, /tr/) oder zumindest hreflang auf Query-Varianten + self-referential canonicals.
+
+Wenn du die Query-Varianten NICHT ranken willst: noindex,follow auf die Parameter-Varianten oder Canonical konsequent auf die deutsche Haupt-URL.
+
+meta keywords entfernen
+Google ignoriert das. Kannst du ersatzlos löschen.
+
+Konkretes Upgrade: JSON-LD (einfügen statt deinem aktuellen Block)
+Das ist ein praxistaugliches Grundgerüst (inkl. FAQPage). Werte wie latitude/longitude, sameAs und image bitte real setzen:

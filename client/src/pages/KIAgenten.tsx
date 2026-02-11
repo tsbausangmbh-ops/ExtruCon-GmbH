@@ -303,26 +303,6 @@ export default function KIAgenten() {
     return [serviceSchema, faqSchema, howToSchema, softwareSchema, breadcrumbSchema, productSchema];
   }, [t.kiAgentsPage.faqs, t.kiAgentsPage.processSteps]);
 
-  // Comprehensive SEO keywords
-  const seoKeywords = [
-    // Primary Keywords
-    "KI-Agenten", "KI Agent Entwicklung", "Chatbot Entwicklung",
-    // Location Keywords
-    "KI Agentur Fürstenfeldbruck", "KI Agent München", "Chatbot Bayern", "AI Agentur Deutschland",
-    // Service Keywords
-    "Kundenservice Bot", "Lead-Qualifizierung KI", "24/7 Chatbot",
-    "Marketing Automatisierung KI", "Vertrieb Automatisierung",
-    // Technology Keywords
-    "GPT Integration", "OpenAI Agent", "Claude Agent", "LLM Chatbot",
-    "n8n KI Automatisierung", "Workflow Automatisierung KI",
-    // Industry Keywords
-    "KI für Unternehmen", "Business Chatbot", "Enterprise AI Agent",
-    "DSGVO konformer Chatbot", "Mehrsprachiger Chatbot",
-    // Long-tail Keywords
-    "KI Agent für Kundenservice", "automatische Lead Qualifizierung",
-    "Chatbot mit Terminbuchung", "KI Assistent für Webseite"
-  ].join(", ");
-
   const seoTitle = language === 'de' 
     ? "KI-Agenten Entwicklung Fürstenfeldbruck | Chatbots & Automatisierung | ExtruCon"
     : language === 'en'
@@ -344,7 +324,6 @@ export default function KIAgenten() {
       <SEOHead 
         title={seoTitle}
         description={seoDescription}
-        keywords={seoKeywords}
         canonical="https://extrucon.de/ki-agenten"
         schema={schemaData}
         ogType="product"

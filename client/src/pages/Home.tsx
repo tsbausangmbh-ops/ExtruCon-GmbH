@@ -22,8 +22,7 @@ export default function Home() {
       <SEOHead
         title="ExtruCon GmbH | KI-Agentur Fürstenfeldbruck bei München"
         description="Ihre KI-Agentur in Fürstenfeldbruck. KI-Agenten, Automatisierungen, Webentwicklung & Marketing mit künstlicher Intelligenz. Kostenlose Beratung!"
-        keywords="KI Agentur Fürstenfeldbruck, KI Agentur München, künstliche Intelligenz Bayern, AI Agency, Automatisierung, KI Beratung, n8n Automatisierung"
-        canonical="https://extrucon.de"
+        canonical="https://extrucon.de/"
         geoRegion="DE-BY"
         geoPlacename="Fürstenfeldbruck"
       />

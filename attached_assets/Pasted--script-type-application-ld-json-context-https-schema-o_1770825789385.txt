@@ -1,0 +1,95 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://extrucon.de/#website",
+      "url": "https://extrucon.de/",
+      "name": "ExtruCon GmbH",
+      "inLanguage": "de-DE"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://extrucon.de/#webpage",
+      "url": "https://extrucon.de/",
+      "name": "ExtruCon GmbH | KI-Agentur Fürstenfeldbruck bei München",
+      "isPartOf": { "@id": "https://extrucon.de/#website" },
+      "about": { "@id": "https://extrucon.de/#localbusiness" },
+      "inLanguage": "de-DE"
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://extrucon.de/#localbusiness",
+      "name": "ExtruCon GmbH",
+      "url": "https://extrucon.de/",
+      "logo": "https://extrucon.de/logo.png",
+      "image": "https://extrucon.de/images/ki-agentur-digitale-automatisierung.webp",
+      "description": "KI-Agentur für Automatisierung, KI-Agenten und digitales Marketing aus Fürstenfeldbruck bei München.",
+      "telephone": "+49 89 444 438 879",
+      "email": "info@extrucon.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hasenheide 8",
+        "addressLocality": "Fürstenfeldbruck",
+        "postalCode": "82256",
+        "addressRegion": "Bayern",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 0.0,
+        "longitude": 0.0
+      },
+      "areaServed": [
+        "Fürstenfeldbruck",
+        "München",
+        "Bayern"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/DEIN-LINK",
+        "https://github.com/DEIN-LINK"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://extrucon.de/#faq",
+      "isPartOf": { "@id": "https://extrucon.de/#webpage" },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was ist ein KI-Agent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ein KI-Agent ist ein intelligentes Softwareprogramm, das Konversationen führen und Aufgaben automatisch erledigen kann, z. B. Kundenanfragen beantworten, Leads qualifizieren oder Termine buchen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie viel kostet ein KI-Agent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Kosten variieren je nach Komplexität. Einfache FAQ-Bots starten ab 490€, komplexere Lösungen mit Integrationen ab 1.490€. Für ein exaktes Angebot ist eine kurze Prozessanalyse sinnvoll."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist n8n?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "n8n ist eine Workflow-Automatisierungsplattform, mit der sich Apps und Services verbinden lassen, um Prozesse wie E-Mail-Routing, CRM-Sync oder Reporting zu automatisieren."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sind die Lösungen DSGVO-konform?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Die Umsetzung erfolgt DSGVO-konform; Details hängen von Hosting, Datenflüssen, Auftragsverarbeitung und den verwendeten Diensten ab."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>

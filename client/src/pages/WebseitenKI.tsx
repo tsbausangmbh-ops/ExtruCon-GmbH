@@ -193,7 +193,6 @@ export default function WebseitenKI() {
       <SEOHead 
         title="Webseiten mit KI-Features | ExtruCon Fürstenfeldbruck – Chatbots & SEO"
         description="Moderne Websites mit integrierten KI-Features: Chatbots, automatische Content-Erstellung, intelligente SEO. Webentwicklung aus Fürstenfeldbruck – deutschlandweit."
-        keywords="Webseiten mit KI, Website Chatbot, KI Content, SEO Automatisierung, Webentwicklung München, React Website, KI Website Agentur"
         canonical="https://extrucon.de/webseiten-ki"
         geoRegion="DE-BY"
         geoPlacename="Fürstenfeldbruck"

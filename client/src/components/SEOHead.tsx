@@ -4,7 +4,6 @@ interface SEOHeadProps {
   title: string;
   description: string;
   canonical?: string;
-  keywords?: string;
   schema?: object | object[];
   ogImage?: string;
   ogType?: string;
@@ -16,7 +15,6 @@ export function SEOHead({
   title, 
   description, 
   canonical, 
-  keywords, 
   schema,
   ogImage,
   ogType = "website",
@@ -29,13 +27,6 @@ export function SEOHead({
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute("content", description);
-    }
-    
-    if (keywords) {
-      const metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (metaKeywords) {
-        metaKeywords.setAttribute("content", keywords);
-      }
     }
     
     if (canonical) {
@@ -108,7 +99,7 @@ export function SEOHead({
         schemaScript.remove();
       }
     };
-  }, [title, description, canonical, keywords, schema, ogImage, ogType, geoRegion, geoPlacename]);
+  }, [title, description, canonical, schema, ogImage, ogType, geoRegion, geoPlacename]);
 
   return null;
 }

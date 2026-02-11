@@ -46,7 +46,6 @@ export default function SEO() {
       <SEOHead
         title="SEO & Geo-Optimierung | Lokale Suchmaschinenoptimierung | ExtruCon"
         description="Professionelle SEO & Geo-Optimierung für lokale Unternehmen. Google My Business, lokale Keywords, strukturierte Daten. Agentur Fürstenfeldbruck bei München."
-        keywords="SEO Agentur, Geo-Optimierung, lokale SEO, Google My Business, Suchmaschinenoptimierung Fürstenfeldbruck, Local SEO München"
         canonical="https://extrucon.de/leistungen/seo"
         schema={serviceSchema}
       />

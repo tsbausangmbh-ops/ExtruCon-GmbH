@@ -135,7 +135,6 @@ export default function Ratgeber() {
       <SEOHead
         title="KI Ratgeber | Tipps zu KI, Marketing & Automatisierung | ExtruCon"
         description="Expertenwissen zu KI, Automatisierung, Social Media und Webentwicklung. Praxistipps von Ihrer KI-Agentur aus Fürstenfeldbruck."
-        keywords="KI Ratgeber, Automatisierung Tipps, Marketing Guide, KI Wissen"
         canonical="https://extrucon.de/ratgeber"
         schema={ratgeberSchema}
       />

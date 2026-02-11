@@ -83,7 +83,6 @@ export default function Contact() {
       <SEOHead
         title="Kontakt | KI-Beratung Fürstenfeldbruck | ExtruCon GmbH"
         description="Kontaktieren Sie ExtruCon für KI-Beratung in Fürstenfeldbruck bei München. Kostenlose Erstberatung zu KI-Agenten und Automatisierung."
-        keywords="KI Beratung Kontakt, Fürstenfeldbruck, München, ExtruCon Kontakt"
         canonical="https://extrucon.de/kontakt"
         schema={contactSchema}
       />

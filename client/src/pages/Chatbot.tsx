@@ -92,7 +92,6 @@ export default function Chatbot() {
       <SEOHead 
         title="KI-Assistent | ExtruCon GmbH – Fragen Sie unseren Bot"
         description="Sprechen Sie mit unserem KI-Assistenten über KI-Agenten, Automatisierung und digitales Marketing. Kostenlos und unverbindlich."
-        keywords="KI Chatbot, ExtruCon Bot, KI Beratung, Automatisierung Beratung"
         schema={chatbotSchema}
       />
       <Navbar />

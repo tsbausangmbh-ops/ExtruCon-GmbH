@@ -217,7 +217,6 @@ export default function Automatisierungen() {
       <SEOHead 
         title="Workflow-Automatisierung mit n8n | ExtruCon Fürstenfeldbruck – 80% Zeit sparen"
         description="Automatisieren Sie Ihre Geschäftsprozesse mit n8n: E-Mail, CRM, Rechnungen & mehr. Bis zu 80% Zeitersparnis. KI-Agentur aus Fürstenfeldbruck – deutschlandweit."
-        keywords="n8n Automatisierung, Workflow Automatisierung, Prozessautomatisierung, Business Automation, Zapier Alternative, Make Alternative, Automatisierung München, n8n Agentur"
         canonical="https://extrucon.de/automatisierungen"
         geoRegion="DE-BY"
         geoPlacename="Fürstenfeldbruck"

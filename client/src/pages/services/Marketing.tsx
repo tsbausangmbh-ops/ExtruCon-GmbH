@@ -42,7 +42,6 @@ export default function Marketing() {
       <SEOHead
         title="Performance Marketing | Google Ads & Meta Ads | ExtruCon"
         description="Datengetriebenes Performance Marketing. Google Ads, Meta Ads, SEO & Conversion-Optimierung. Agentur Fürstenfeldbruck."
-        keywords="Performance Marketing, Google Ads Agentur, Meta Ads, SEO Fürstenfeldbruck"
         canonical="https://extrucon.de/leistungen/marketing"
         schema={serviceSchema}
       />

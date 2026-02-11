@@ -40,7 +40,6 @@ export default function KI() {
       <SEOHead
         title="KI-Lösungen & Automatisierung | KI Agentur | ExtruCon"
         description="Maßgeschneiderte KI-Lösungen für Ihr Unternehmen. KI-Agenten, ChatGPT Integration, Workflow-Automatisierung. Fürstenfeldbruck."
-        keywords="KI Agentur, KI-Lösungen, ChatGPT Integration, Automatisierung, Künstliche Intelligenz"
         canonical="https://extrucon.de/leistungen/ki"
         schema={serviceSchema}
       />

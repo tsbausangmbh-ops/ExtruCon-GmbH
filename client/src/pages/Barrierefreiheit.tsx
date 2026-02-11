@@ -15,7 +15,6 @@ export default function Barrierefreiheit() {
       <SEOHead
         title="Barrierefreiheit | ExtruCon GmbH"
         description="Erklärung zur Barrierefreiheit der ExtruCon GmbH. Informationen zur digitalen Zugänglichkeit unserer Website gemäß BFSG und WCAG 2.1."
-        keywords="Barrierefreiheit, Accessibility, WCAG, BFSG, barrierefrei, barrierefreie Website erstellen BFSG 2025, digitale Barrierefreiheit Unternehmen Pflicht"
         canonical="https://extrucon.de/barrierefreiheit"
       />
       <Navbar />

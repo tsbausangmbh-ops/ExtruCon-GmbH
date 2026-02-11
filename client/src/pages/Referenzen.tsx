@@ -172,7 +172,6 @@ export default function Referenzen() {
       <SEOHead
         title="Referenzen & Erfolgsgeschichten | ExtruCon KI-Agentur"
         description="Unsere erfolgreichen Projekte: KI-Agenten, Websites, Automatisierungen und mehr. Überzeugen Sie sich von unserer Arbeit. Agentur Fürstenfeldbruck."
-        keywords="Referenzen, Portfolio, Erfolgsgeschichten, KI Projekte, Webdesign Projekte, Fürstenfeldbruck"
         canonical="https://extrucon.de/referenzen"
         schema={referenzenSchema}
       />

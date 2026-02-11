@@ -233,7 +233,7 @@ function extractMetaFromStaticFile(filePath: string): {
   ogTags: string[];
   twitterTags: string[];
   jsonLdBlocks: string[];
-  extraMeta: string[];
+  hreflangTags: string[];
 } {
   try {
     const content = fs.readFileSync(filePath, 'utf-8');
@@ -268,13 +268,16 @@ function extractMetaFromStaticFile(filePath: string): {
       jsonLdBlocks.push(jm[0]);
     }
 
-    const extraMeta: string[] = [];
-    const keywordsMatch = content.match(/<meta\s+name=["']keywords["'][^>]*>/i);
-    if (keywordsMatch) extraMeta.push(keywordsMatch[0]);
+    const hreflangTags: string[] = [];
+    const hreflangRegex = /<link\s+rel=["']alternate["']\s+hreflang=["'][^"']+["']\s+href=["'][^"']+["']\s*\/?>/gi;
+    let hm;
+    while ((hm = hreflangRegex.exec(content)) !== null) {
+      hreflangTags.push(hm[0]);
+    }
 
-    return { title, description, canonical, ogTags, twitterTags: twTags, jsonLdBlocks, extraMeta };
+    return { title, description, canonical, ogTags, twitterTags: twTags, jsonLdBlocks, hreflangTags };
   } catch {
-    return { title: '', description: '', canonical: '', ogTags: [], twitterTags: [], jsonLdBlocks: [], extraMeta: [] };
+    return { title: '', description: '', canonical: '', ogTags: [], twitterTags: [], jsonLdBlocks: [], hreflangTags: [] };
   }
 }
 
@@ -418,9 +421,13 @@ export function handleVisitorSSR(reqPath: string): { html: string; source: strin
     enhanced = replaceJsonLdBlocks(enhanced, meta.jsonLdBlocks);
   }
 
-  if (meta.extraMeta.length > 0) {
-    const extraMetaStr = meta.extraMeta.join('\n    ');
-    enhanced = enhanced.replace('</head>', `    ${extraMetaStr}\n  </head>`);
+  if (meta.hreflangTags.length > 0) {
+    enhanced = enhanced.replace(
+      /<link\s+rel=["']alternate["']\s+hreflang=["'][^"']+["']\s+href=["'][^"']+["']\s*\/?>\s*/gi,
+      ''
+    );
+    const hreflangStr = meta.hreflangTags.join('\n    ');
+    enhanced = enhanced.replace('</head>', `    ${hreflangStr}\n  </head>`);
   }
 
   return { html: enhanced, source: 'ssr-visitor' };
