@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { SITEMAP_XML } from "../seoFiles";
 
 const PRERENDER_TOKEN = process.env.PRERENDER_TOKEN || '';
 const PRERENDER_SERVICE_URL = 'https://service.prerender.io/';
@@ -430,8 +431,7 @@ export function handleVisitorSSR(reqPath: string): { html: string; source: strin
 }
 
 function getAllSitemapUrls(): string[] {
-  const { SITEMAP_XML } = require("../seoFiles");
-  const locMatches = (SITEMAP_XML as string).match(/<loc>([^<]+)<\/loc>/g) || [];
+  const locMatches = SITEMAP_XML.match(/<loc>([^<]+)<\/loc>/g) || [];
   return locMatches
     .map(m => m.replace(/<\/?loc>/g, ''))
     .filter(url => url.startsWith('https://'));
