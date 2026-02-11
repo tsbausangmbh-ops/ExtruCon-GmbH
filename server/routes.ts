@@ -5,7 +5,7 @@ import OpenAI from "openai";
 import { listEvents, createEvent, getAvailableSlots, isBusinessHour, getAlternativeSlots } from "./lib/googleCalendar";
 import { sendContactEmail } from "./lib/email";
 import { SITEMAP_XML, ROBOTS_TXT } from "./seoFiles";
-import { isCrawler, getStaticPages, handleCrawlerRequest, recachePrerenderPages } from "./lib/prerender";
+import { isCrawler, getStaticPages, handleCrawlerRequest, handleVisitorSSR, recachePrerenderPages } from "./lib/prerender";
 
 const openai = new OpenAI({
   baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
@@ -38,20 +38,30 @@ export async function registerRoutes(
       return next();
     }
 
-    if (!isCrawler(userAgent)) {
-      return next();
-    }
+    if (isCrawler(userAgent)) {
+      try {
+        const { html, source } = await handleCrawlerRequest(reqPath);
 
-    try {
-      const { html, source } = await handleCrawlerRequest(reqPath);
-
-      if (html) {
-        res.set('Content-Type', 'text/html');
-        res.set('X-SSR-Source', source);
-        return res.send(html);
+        if (html) {
+          res.set('Content-Type', 'text/html');
+          res.set('X-SSR-Source', source);
+          return res.send(html);
+        }
+      } catch (error: any) {
+        console.error(`[SSR] Error handling crawler request for ${reqPath}:`, error.message);
       }
-    } catch (error: any) {
-      console.error(`[SSR] Error handling crawler request for ${reqPath}:`, error.message);
+    } else {
+      try {
+        const result = handleVisitorSSR(reqPath);
+
+        if (result) {
+          res.set('Content-Type', 'text/html');
+          res.set('X-SSR-Source', result.source);
+          return res.send(result.html);
+        }
+      } catch (error: any) {
+        console.error(`[SSR] Error handling visitor SSR for ${reqPath}:`, error.message);
+      }
     }
 
     next();

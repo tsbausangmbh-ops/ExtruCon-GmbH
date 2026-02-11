@@ -86,8 +86,10 @@ shared/           # Shared types and schemas
 6. Response includes `X-SSR-Source` header for debugging
 
 ### Normal Visitor Flow
-- Prerender.io is skipped entirely
-- React SPA served directly (SEOHead component handles client-side meta-tags/JSON-LD)
+- SSR injection active: meta-tags, OG-tags, Twitter-tags, canonical, and JSON-LD from static HTML files are injected into the SPA's index.html before serving
+- Each page gets its own page-specific SEO content server-side (title, description, structured data)
+- React SPA loads on top for full interactivity (SEOHead component manages client-side updates)
+- In dev mode: index.html is read fresh each time; in production: cached for performance
 
 ### Cache Refresh
 - POST `/api/prerender/recache` (protected by PRERENDER_TOKEN, 5min rate limit)

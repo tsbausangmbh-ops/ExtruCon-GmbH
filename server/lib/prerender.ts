@@ -226,6 +226,208 @@ export async function handleCrawlerRequest(reqPath: string): Promise<{ html: str
   return { html: '', source: 'none' };
 }
 
+function extractMetaFromStaticFile(filePath: string): {
+  title: string;
+  description: string;
+  canonical: string;
+  ogTags: string[];
+  twitterTags: string[];
+  jsonLdBlocks: string[];
+  extraMeta: string[];
+} {
+  try {
+    const content = fs.readFileSync(filePath, 'utf-8');
+
+    const titleMatch = content.match(/<title>([^<]+)<\/title>/);
+    const title = titleMatch ? titleMatch[1] : '';
+
+    const descMatch = content.match(/<meta\s+name=["']description["']\s+content=["']([^"']+)["']/i);
+    const description = descMatch ? descMatch[1] : '';
+
+    const canonMatch = content.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/i);
+    const canonical = canonMatch ? canonMatch[1] : '';
+
+    const ogTags: string[] = [];
+    const ogRegex = /<meta\s+property=["']og:[^"']+["'][^>]*>/gi;
+    let ogMatch;
+    while ((ogMatch = ogRegex.exec(content)) !== null) {
+      ogTags.push(ogMatch[0]);
+    }
+
+    const twTags: string[] = [];
+    const twRegex = /<meta\s+name=["']twitter:[^"']+["'][^>]*>/gi;
+    let twMatch;
+    while ((twMatch = twRegex.exec(content)) !== null) {
+      twTags.push(twMatch[0]);
+    }
+
+    const jsonLdBlocks: string[] = [];
+    const jsonLdRegex = /<script\s+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
+    let jm;
+    while ((jm = jsonLdRegex.exec(content)) !== null) {
+      jsonLdBlocks.push(jm[0]);
+    }
+
+    const extraMeta: string[] = [];
+    const keywordsMatch = content.match(/<meta\s+name=["']keywords["'][^>]*>/i);
+    if (keywordsMatch) extraMeta.push(keywordsMatch[0]);
+
+    return { title, description, canonical, ogTags, twitterTags: twTags, jsonLdBlocks, extraMeta };
+  } catch {
+    return { title: '', description: '', canonical: '', ogTags: [], twitterTags: [], jsonLdBlocks: [], extraMeta: [] };
+  }
+}
+
+let spaHtmlCache: string | null = null;
+
+function getSpaHtml(): string {
+  if (spaHtmlCache) return spaHtmlCache;
+
+  const spaPath = path.resolve(
+    process.cwd(),
+    process.env.NODE_ENV === 'production'
+      ? 'dist/public/index.html'
+      : 'client/index.html'
+  );
+
+  try {
+    spaHtmlCache = fs.readFileSync(spaPath, 'utf-8');
+    return spaHtmlCache;
+  } catch {
+    return '';
+  }
+}
+
+export function invalidateSpaCache(): void {
+  spaHtmlCache = null;
+}
+
+function replaceMetaTag(html: string, attrName: string, attrValue: string, newContent: string): string {
+  const regex = new RegExp(
+    `<meta\\s+(?:[^>]*\\s)?${attrName}=["']${attrValue}["'][^>]*>`,
+    'i'
+  );
+  return html.replace(regex, newContent);
+}
+
+function replaceOgTag(html: string, property: string, newValue: string): string {
+  const regex = new RegExp(
+    `<meta\\s+property=["']${property}["']\\s+content=["'][^"']*["'][^>]*>`,
+    'i'
+  );
+  const replacement = `<meta property="${property}" content="${newValue}" />`;
+  return html.replace(regex, replacement);
+}
+
+function replaceTwitterTag(html: string, name: string, newValue: string): string {
+  const regex = new RegExp(
+    `<meta\\s+name=["']${name}["']\\s+content=["'][^"']*["'][^>]*>`,
+    'i'
+  );
+  const replacement = `<meta name="${name}" content="${newValue}" />`;
+  return html.replace(regex, replacement);
+}
+
+function replaceJsonLdBlocks(html: string, newBlocks: string[]): string {
+  let result = html.replace(
+    /<script\s+type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi,
+    ''
+  );
+
+  const injection = newBlocks.join('\n    ');
+  result = result.replace('</head>', `${injection}\n  </head>`);
+  return result;
+}
+
+function extractOgValue(tags: string[], property: string): string {
+  for (const tag of tags) {
+    const regex = new RegExp(`property=["']${property}["']\\s+content=["']([^"']+)["']`, 'i');
+    const match = tag.match(regex);
+    if (match) return match[1];
+  }
+  return '';
+}
+
+function extractTwitterValue(tags: string[], name: string): string {
+  for (const tag of tags) {
+    const regex = new RegExp(`name=["']${name}["']\\s+content=["']([^"']+)["']`, 'i');
+    const match = tag.match(regex);
+    if (match) return match[1];
+  }
+  return '';
+}
+
+export function handleVisitorSSR(reqPath: string): { html: string; source: string } | null {
+  const staticFilePath = getStaticFilePath(reqPath);
+  if (!staticFilePath) return null;
+
+  const isDev = process.env.NODE_ENV !== 'production';
+  const spaHtml = isDev ? (() => {
+    const p = path.resolve(process.cwd(), 'client/index.html');
+    try { return fs.readFileSync(p, 'utf-8'); } catch { return ''; }
+  })() : getSpaHtml();
+  if (!spaHtml) return null;
+
+  const meta = extractMetaFromStaticFile(staticFilePath);
+  if (!meta.title && !meta.description) return null;
+
+  let enhanced = spaHtml;
+
+  if (meta.title) {
+    enhanced = enhanced.replace(/<title>[^<]*<\/title>/, `<title>${meta.title}</title>`);
+  }
+
+  if (meta.description) {
+    enhanced = replaceMetaTag(enhanced, 'name', 'description',
+      `<meta name="description" content="${meta.description}" />`);
+  }
+
+  if (meta.canonical) {
+    enhanced = enhanced.replace(
+      /<link\s+rel=["']canonical["']\s+href=["'][^"']*["']\s*\/?>/i,
+      `<link rel="canonical" href="${meta.canonical}" />`
+    );
+  }
+
+  const ogTitle = extractOgValue(meta.ogTags, 'og:title');
+  if (ogTitle) enhanced = replaceOgTag(enhanced, 'og:title', ogTitle);
+
+  const ogDesc = extractOgValue(meta.ogTags, 'og:description');
+  if (ogDesc) enhanced = replaceOgTag(enhanced, 'og:description', ogDesc);
+
+  const ogUrl = extractOgValue(meta.ogTags, 'og:url');
+  if (ogUrl) enhanced = replaceOgTag(enhanced, 'og:url', ogUrl);
+
+  const ogImage = extractOgValue(meta.ogTags, 'og:image');
+  if (ogImage) enhanced = replaceOgTag(enhanced, 'og:image', ogImage);
+
+  const ogImageAlt = extractOgValue(meta.ogTags, 'og:image:alt');
+  if (ogImageAlt) enhanced = replaceOgTag(enhanced, 'og:image:alt', ogImageAlt);
+
+  const twTitle = extractTwitterValue(meta.twitterTags, 'twitter:title');
+  if (twTitle) enhanced = replaceTwitterTag(enhanced, 'twitter:title', twTitle);
+
+  const twDesc = extractTwitterValue(meta.twitterTags, 'twitter:description');
+  if (twDesc) enhanced = replaceTwitterTag(enhanced, 'twitter:description', twDesc);
+
+  const twImage = extractTwitterValue(meta.twitterTags, 'twitter:image');
+  if (twImage) enhanced = replaceTwitterTag(enhanced, 'twitter:image', twImage);
+
+  const twImageAlt = extractTwitterValue(meta.twitterTags, 'twitter:image:alt');
+  if (twImageAlt) enhanced = replaceTwitterTag(enhanced, 'twitter:image:alt', twImageAlt);
+
+  if (meta.jsonLdBlocks.length > 0) {
+    enhanced = replaceJsonLdBlocks(enhanced, meta.jsonLdBlocks);
+  }
+
+  if (meta.extraMeta.length > 0) {
+    const extraMetaStr = meta.extraMeta.join('\n    ');
+    enhanced = enhanced.replace('</head>', `    ${extraMetaStr}\n  </head>`);
+  }
+
+  return { html: enhanced, source: 'ssr-visitor' };
+}
+
 export async function recachePrerenderPages(): Promise<{ success: number; failed: number; errors: string[] }> {
   if (!PRERENDER_TOKEN) {
     return { success: 0, failed: 0, errors: ['No PRERENDER_TOKEN configured'] };
