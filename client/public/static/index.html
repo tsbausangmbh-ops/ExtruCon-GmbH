@@ -30,42 +30,27 @@
         "@id": "https://extrucon.de/#website",
         "url": "https://extrucon.de/",
         "name": "ExtruCon GmbH",
-        "description": "KI-Agentur für Automatisierung und digitales Marketing aus Fürstenfeldbruck bei München",
-        "publisher": {"@id": "https://extrucon.de/#organization"},
-        "inLanguage": "de-DE",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://extrucon.de/faq?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+        "inLanguage": "de-DE"
       },
       {
         "@type": "WebPage",
         "@id": "https://extrucon.de/#webpage",
         "url": "https://extrucon.de/",
         "name": "ExtruCon GmbH | KI-Agentur Fürstenfeldbruck bei München",
-        "description": "Ihre KI-Agentur in Fürstenfeldbruck. KI-Agenten, Automatisierungen, Webentwicklung & Marketing mit künstlicher Intelligenz.",
-        "isPartOf": {"@id": "https://extrucon.de/#website"},
-        "about": {"@id": "https://extrucon.de/#organization"},
+        "isPartOf": { "@id": "https://extrucon.de/#website" },
+        "about": { "@id": "https://extrucon.de/#localbusiness" },
         "inLanguage": "de-DE"
       },
       {
-        "@type": ["ProfessionalService", "LocalBusiness"],
-        "@id": "https://extrucon.de/#organization",
+        "@type": "ProfessionalService",
+        "@id": "https://extrucon.de/#localbusiness",
         "name": "ExtruCon GmbH",
-        "legalName": "ExtruCon GmbH",
-        "alternateName": "ExtruCon",
         "url": "https://extrucon.de/",
         "logo": "https://extrucon.de/logo.png",
         "image": "https://extrucon.de/images/ki-agentur-digitale-automatisierung.webp",
-        "description": "KI-Agentur für Automatisierung, KI-Agenten und digitales Marketing aus Fürstenfeldbruck.",
-        "telephone": "+4989444438879",
+        "description": "KI-Agentur für Automatisierung, KI-Agenten und digitales Marketing aus Fürstenfeldbruck bei München.",
+        "telephone": "+49 89 444 438 879",
         "email": "info@extrucon.de",
-        "priceRange": "€€-€€€",
-        "currenciesAccepted": "EUR",
-        "paymentAccepted": "Überweisung, PayPal",
-        "foundingDate": "2023",
-        "numberOfEmployees": {"@type": "QuantitativeValue", "minValue": 2, "maxValue": 10},
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Hasenheide 8",
@@ -87,44 +72,19 @@
         "sameAs": [
           "https://www.linkedin.com/company/extrucon",
           "https://www.instagram.com/extrucon"
-        ],
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "08:00",
-            "closes": "17:00"
-          }
-        ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+4989444438879",
-          "contactType": "customer service",
-          "email": "info@extrucon.de",
-          "availableLanguage": ["German"]
-        },
-        "knowsAbout": ["Künstliche Intelligenz", "KI-Agenten", "Workflow-Automatisierung", "n8n", "Chatbots", "Webentwicklung", "SEO"],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "KI & Automatisierungs-Dienstleistungen",
-          "itemListElement": [
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "KI-Chatbot Entwicklung"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Workflow-Automatisierung mit n8n"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "KI-Webseiten Entwicklung"}},
-            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SEO Optimierung"}}
-          ]
-        }
+        ]
       },
       {
         "@type": "FAQPage",
-        "@id": "https://extrucon.de/#faqpage",
+        "@id": "https://extrucon.de/#faq",
+        "isPartOf": { "@id": "https://extrucon.de/#webpage" },
         "mainEntity": [
           {
             "@type": "Question",
             "name": "Was ist ein KI-Agent?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Ein KI-Agent ist ein intelligentes Softwareprogramm, das menschenähnliche Konversationen führen und Aufgaben automatisch erledigen kann. Er nutzt künstliche Intelligenz, um Kundenanfragen zu beantworten, Leads zu qualifizieren oder Termine zu buchen."
+              "text": "Ein KI-Agent ist ein intelligentes Softwareprogramm, das Konversationen führen und Aufgaben automatisch erledigen kann, z. B. Kundenanfragen beantworten, Leads qualifizieren oder Termine buchen."
             }
           },
           {
@@ -132,7 +92,7 @@
             "name": "Wie viel kostet ein KI-Agent?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Die Kosten für einen KI-Agenten variieren je nach Komplexität. Einfache FAQ-Bots starten ab 490€, während komplexere Lösungen mit CRM-Integration ab 1.490€ beginnen. Kontaktieren Sie uns für ein individuelles Angebot."
+              "text": "Die Kosten variieren je nach Komplexität. Einfache FAQ-Bots starten ab 490€, komplexere Lösungen mit Integrationen ab 1.490€. Für ein exaktes Angebot ist eine kurze Prozessanalyse sinnvoll."
             }
           },
           {
@@ -140,7 +100,7 @@
             "name": "Was ist n8n?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "n8n ist eine leistungsstarke Open-Source Plattform für Workflow-Automatisierung. Sie ermöglicht es, verschiedene Apps und Services zu verbinden und automatisierte Workflows zu erstellen - ohne Programmierkenntnisse."
+              "text": "n8n ist eine Workflow-Automatisierungsplattform, mit der sich Apps und Services verbinden lassen, um Prozesse wie E-Mail-Routing, CRM-Sync oder Reporting zu automatisieren."
             }
           },
           {
@@ -148,7 +108,7 @@
             "name": "Sind die Lösungen DSGVO-konform?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Ja, alle unsere Lösungen sind vollständig DSGVO-konform. Daten werden ausschließlich auf europäischen Servern verarbeitet und wir unterstützen Sie bei der korrekten Datenschutzerklärung."
+              "text": "Ja. Die Umsetzung erfolgt DSGVO-konform; Details hängen von Hosting, Datenflüssen, Auftragsverarbeitung und den verwendeten Diensten ab."
             }
           }
         ]
