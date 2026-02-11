@@ -5,72 +5,7 @@ import OpenAI from "openai";
 import { listEvents, createEvent, getAvailableSlots, isBusinessHour, getAlternativeSlots } from "./lib/googleCalendar";
 import { sendContactEmail } from "./lib/email";
 import { SITEMAP_XML, ROBOTS_TXT } from "./seoFiles";
-import fs from "fs";
-import path from "path";
-
-const CRAWLER_USER_AGENTS = [
-  'googlebot',
-  'google-inspectiontool',
-  'adsbot-google',
-  'apis-google',
-  'mediapartners-google',
-  'googleother',
-  'bingbot',
-  'bingpreview',
-  'msnbot',
-  'slurp',
-  'duckduckbot',
-  'baiduspider',
-  'yandexbot',
-  'sogou',
-  'exabot',
-  'facebot',
-  'facebookexternalhit',
-  'ia_archiver',
-  'linkedinbot',
-  'twitterbot',
-  'pinterestbot',
-  'applebot',
-  'semrushbot',
-  'ahrefsbot',
-  'mj12bot',
-  'dotbot',
-  'petalbot',
-  'rogerbot',
-  'screaming frog',
-  'sitebulb',
-  'deepcrawl',
-  'oncrawl',
-  'seositecheckup',
-  'seznam',
-];
-
-function isCrawler(userAgent: string): boolean {
-  const ua = userAgent.toLowerCase();
-  return CRAWLER_USER_AGENTS.some(crawler => ua.includes(crawler));
-}
-
-const STATIC_PAGES: Record<string, string> = {
-  '/': 'index.html',
-  '/ki-agenten': 'ki-agenten.html',
-  '/automatisierungen': 'automatisierungen.html',
-  '/webseiten-ki': 'webseiten-ki.html',
-  '/muenchen': 'muenchen.html',
-  '/faq': 'faq.html',
-  '/referenzen': 'referenzen.html',
-  '/ki-bot': 'ki-bot.html',
-  '/impressum': 'impressum.html',
-  '/datenschutz': 'datenschutz.html',
-  '/ratgeber': 'ratgeber.html',
-  '/leistungen/markenaufbau': 'leistungen/markenaufbau.html',
-  '/leistungen/content': 'leistungen/content.html',
-  '/leistungen/social-media': 'leistungen/social-media.html',
-  '/leistungen/ki-automatisierung': 'leistungen/ki-automatisierung.html',
-  '/leistungen/web': 'leistungen/web.html',
-  '/leistungen/marketing': 'leistungen/marketing.html',
-  '/leistungen/seo': 'leistungen/seo.html',
-  '/barrierefreiheit': 'barrierefreiheit.html'
-};
+import { isCrawler, getStaticPages, handleCrawlerRequest, recachePrerenderPages } from "./lib/prerender";
 
 const openai = new OpenAI({
   baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
@@ -93,37 +28,67 @@ export async function registerRoutes(
     res.send(ROBOTS_TXT);
   });
 
-  // Crawler detection middleware - serve static HTML for SEO
-  app.use((req: Request, res: Response, next: NextFunction) => {
+  const STATIC_PAGES = getStaticPages();
+
+  app.use(async (req: Request, res: Response, next: NextFunction) => {
     const userAgent = req.headers['user-agent'] || '';
     const reqPath = req.path;
-    
-    // Only intercept GET requests for known static pages
+
     if (req.method !== 'GET' || !STATIC_PAGES[reqPath]) {
       return next();
     }
-    
-    // Check if request is from a crawler
-    if (isCrawler(userAgent)) {
-      const staticFile = STATIC_PAGES[reqPath];
-      const staticPath = path.resolve(
-        process.cwd(),
-        process.env.NODE_ENV === 'production'
-          ? `dist/public/static/${staticFile}`
-          : `client/public/static/${staticFile}`
-      );
-      
-      // Check if static file exists
-      if (fs.existsSync(staticPath)) {
-        console.log(`[SSR] Serving static HTML for crawler: ${reqPath} from ${staticPath}`);
-        res.set('Content-Type', 'text/html');
-        return res.sendFile(staticPath);
-      } else {
-        console.log(`[SSR] Static file not found: ${staticPath}`);
-      }
+
+    if (!isCrawler(userAgent)) {
+      return next();
     }
-    
+
+    try {
+      const { html, source } = await handleCrawlerRequest(reqPath);
+
+      if (html) {
+        res.set('Content-Type', 'text/html');
+        res.set('X-SSR-Source', source);
+        return res.send(html);
+      }
+    } catch (error: any) {
+      console.error(`[SSR] Error handling crawler request for ${reqPath}:`, error.message);
+    }
+
     next();
+  });
+
+  let lastRecacheTime = 0;
+  const RECACHE_COOLDOWN = 5 * 60 * 1000;
+
+  app.post("/api/prerender/recache", async (req: Request, res: Response) => {
+    const authHeader = req.headers['x-prerender-recache-key'];
+    const expectedKey = process.env.PRERENDER_TOKEN;
+
+    if (!expectedKey || authHeader !== expectedKey) {
+      return res.status(401).json({ error: "Unauthorized" });
+    }
+
+    const now = Date.now();
+    if (now - lastRecacheTime < RECACHE_COOLDOWN) {
+      const remainingSec = Math.ceil((RECACHE_COOLDOWN - (now - lastRecacheTime)) / 1000);
+      return res.status(429).json({
+        error: "Rate limited",
+        message: `Please wait ${remainingSec}s before next recache`,
+      });
+    }
+
+    lastRecacheTime = now;
+
+    try {
+      const result = await recachePrerenderPages();
+      res.json({
+        message: "Cache refresh initiated",
+        ...result,
+      });
+    } catch (error: any) {
+      console.error("[Prerender-Cache] Error:", error);
+      res.status(500).json({ error: "Cache refresh failed", details: error.message });
+    }
   });
 
   // Chat API endpoint for KI-Bot

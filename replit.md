@@ -24,6 +24,7 @@ Preferred communication style: Simple, everyday language.
 - **Language**: TypeScript with ESM modules
 - **API Structure**: RESTful endpoints under `/api/*` prefix
 - **AI Integration**: OpenAI API (via Replit AI Integrations) for the chatbot functionality
+- **SEO/SSR**: Prerender.io integration with intelligent fallback (see SSR Architecture below)
 - **Development**: Vite dev server with HMR for frontend, tsx for server hot-reloading
 
 ### Data Storage
@@ -73,6 +74,30 @@ shared/           # Shared types and schemas
 - **@replit/vite-plugin-runtime-error-modal**: Error overlay in development
 - **@replit/vite-plugin-cartographer**: Development tooling
 - **@replit/vite-plugin-dev-banner**: Development environment indicator
+
+## SSR Architecture (Prerender.io Integration)
+
+### Crawler Flow (Googlebot, Bingbot, GPTBot, ChatGPT etc.)
+1. Crawler detected via User-Agent → request forwarded to Prerender.io
+2. Prerender.io returns fully rendered HTML
+3. Server validates response: checks for JSON-LD and SSR content
+4. If JSON-LD missing in Prerender.io cache → auto-injected from own static HTML files
+5. If Prerender.io unreachable (timeout/error) → fallback to own static SSR files in `client/public/static/`
+6. Response includes `X-SSR-Source` header for debugging
+
+### Normal Visitor Flow
+- Prerender.io is skipped entirely
+- React SPA served directly (SEOHead component handles client-side meta-tags/JSON-LD)
+
+### Cache Refresh
+- POST `/api/prerender/recache` (protected by PRERENDER_TOKEN, 5min rate limit)
+- Recaches all 19 paths × 4 languages = 76 URLs
+- Batched in groups of 5 with 200ms delay between batches
+
+### Key Files
+- `server/lib/prerender.ts` - Prerender.io middleware, crawler detection, validation, cache refresh
+- `server/routes.ts` - Middleware integration and recache API endpoint
+- `client/public/static/` - Fallback static HTML files with full SEO content
 
 ## SEO & Internal Linking
 
