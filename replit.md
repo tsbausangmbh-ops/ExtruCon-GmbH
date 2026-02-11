@@ -101,6 +101,18 @@ shared/           # Shared types and schemas
 - `server/routes.ts` - Middleware integration and recache API endpoint
 - `client/public/static/` - Fallback static HTML files with full SEO content
 
+## SEO Technical Details
+
+### Structured Data (JSON-LD)
+- **@graph pattern**: Single JSON-LD block with `@graph` array containing WebSite, WebPage, ProfessionalService/LocalBusiness, and FAQPage (homepage only) entities
+- **No meta keywords**: Removed per Google 2026 best practices; keywords meta tag not used anywhere
+- **Canonical URLs**: All canonicals and og:url use trailing slash for consistency (e.g., `https://extrucon.de/ki-agenten/`)
+
+### hreflang Tags
+- All 19 static HTML files include page-specific hreflang tags for de, en, hr, tr, and x-default
+- SSR injection extracts and injects hreflang tags from static files for normal visitors
+- Format: `<link rel="alternate" hreflang="de" href="https://extrucon.de/page/" />`
+
 ## SEO & Internal Linking
 
 ### Internal Linking Strategy
