@@ -188,6 +188,13 @@ async function fetchFromPrerender(url: string): Promise<string | null> {
   }
 }
 
+function sanitizeCrawlerResponse(html: string): string {
+  return html.replace(
+    /<link\s+rel=["']alternate["']\s+hreflang=["'][^"']+["']\s+href=["'][^"']+["']\s*\/?>\s*/gi,
+    ''
+  );
+}
+
 export async function handleCrawlerRequest(reqPath: string): Promise<{ html: string; source: string }> {
   const fullUrl = `${SITE_URL}${reqPath}`;
   const staticFilePath = getStaticFilePath(reqPath);
@@ -199,7 +206,7 @@ export async function handleCrawlerRequest(reqPath: string): Promise<{ html: str
 
     if (validation.valid) {
       console.log(`[Prerender] Valid response for ${reqPath} - serving from Prerender.io`);
-      return { html: prerenderHtml, source: 'prerender.io' };
+      return { html: sanitizeCrawlerResponse(prerenderHtml), source: 'prerender.io' };
     }
 
     console.log(`[Prerender] Response for ${reqPath} missing: ${validation.missingJsonLd ? 'JSON-LD ' : ''}${validation.missingContent ? 'Content' : ''}`);
@@ -209,18 +216,18 @@ export async function handleCrawlerRequest(reqPath: string): Promise<{ html: str
       if (jsonLdBlocks.length > 0) {
         const enrichedHtml = injectJsonLdIntoHtml(prerenderHtml, jsonLdBlocks);
         console.log(`[Prerender] Enriched response with ${jsonLdBlocks.length} JSON-LD blocks for ${reqPath}`);
-        return { html: enrichedHtml, source: 'prerender.io+ssr-jsonld' };
+        return { html: sanitizeCrawlerResponse(enrichedHtml), source: 'prerender.io+ssr-jsonld' };
       }
     }
 
     console.log(`[Prerender] Using Prerender.io response as-is (partial) for ${reqPath}`);
-    return { html: prerenderHtml, source: 'prerender.io-partial' };
+    return { html: sanitizeCrawlerResponse(prerenderHtml), source: 'prerender.io-partial' };
   }
 
   if (staticFilePath) {
     const staticHtml = fs.readFileSync(staticFilePath, 'utf-8');
     console.log(`[SSR-Fallback] Serving static HTML for ${reqPath}`);
-    return { html: staticHtml, source: 'ssr-fallback' };
+    return { html: sanitizeCrawlerResponse(staticHtml), source: 'ssr-fallback' };
   }
 
   return { html: '', source: 'none' };
