@@ -429,27 +429,34 @@ export function handleVisitorSSR(reqPath: string): { html: string; source: strin
   return { html: enhanced, source: 'ssr-visitor' };
 }
 
-export async function recachePrerenderPages(): Promise<{ success: number; failed: number; errors: string[] }> {
+function getAllSitemapUrls(): string[] {
+  const { SITEMAP_XML } = require("../seoFiles");
+  const locMatches = (SITEMAP_XML as string).match(/<loc>([^<]+)<\/loc>/g) || [];
+  return locMatches
+    .map(m => m.replace(/<\/?loc>/g, ''))
+    .filter(url => url.startsWith('https://'));
+}
+
+export async function recachePrerenderPages(): Promise<{ success: number; failed: number; errors: string[]; details: { url: string; status: string }[] }> {
   if (!PRERENDER_TOKEN) {
-    return { success: 0, failed: 0, errors: ['No PRERENDER_TOKEN configured'] };
+    return { success: 0, failed: 0, errors: ['No PRERENDER_TOKEN configured'], details: [] };
   }
 
-  const allPages = Object.keys(STATIC_PAGES);
-  const urls: string[] = [];
-
-  for (const page of allPages) {
-    urls.push(`${SITE_URL}${page}`);
-  }
-
-  console.log(`[Prerender-Cache] Recaching ${urls.length} pages...`);
+  const urls = getAllSitemapUrls();
+  console.log(`[Prerender-Cache] Recaching ${urls.length} URLs from sitemap...`);
 
   let success = 0;
   let failed = 0;
   const errors: string[] = [];
+  const details: { url: string; status: string }[] = [];
 
   const batchSize = 5;
   for (let i = 0; i < urls.length; i += batchSize) {
     const batch = urls.slice(i, i + batchSize);
+    const batchNum = Math.floor(i / batchSize) + 1;
+    const totalBatches = Math.ceil(urls.length / batchSize);
+    console.log(`[Prerender-Cache] Batch ${batchNum}/${totalBatches}: ${batch.map(u => u.replace('https://extrucon.de', '')).join(', ')}`);
+
     const results = await Promise.allSettled(
       batch.map(async (url) => {
         try {
@@ -465,12 +472,15 @@ export async function recachePrerenderPages(): Promise<{ success: number; failed
           });
 
           if (response.ok) {
+            console.log(`[Prerender-Cache] ✓ ${url}`);
             return { url, success: true };
           } else {
             const text = await response.text();
+            console.log(`[Prerender-Cache] ✗ ${url} → HTTP ${response.status}`);
             return { url, success: false, error: `HTTP ${response.status}: ${text}` };
           }
         } catch (error: any) {
+          console.log(`[Prerender-Cache] ✗ ${url} → ${error.message}`);
           return { url, success: false, error: error.message };
         }
       })
@@ -479,24 +489,29 @@ export async function recachePrerenderPages(): Promise<{ success: number; failed
     for (const result of results) {
       if (result.status === 'fulfilled' && result.value.success) {
         success++;
+        details.push({ url: result.value.url, status: 'ok' });
       } else {
         failed++;
         const msg = result.status === 'fulfilled'
           ? `${result.value.url}: ${result.value.error}`
           : `Unknown error`;
         errors.push(msg);
+        details.push({
+          url: result.status === 'fulfilled' ? result.value.url : 'unknown',
+          status: result.status === 'fulfilled' ? result.value.error! : 'unknown error'
+        });
       }
     }
 
     if (i + batchSize < urls.length) {
-      await new Promise(resolve => setTimeout(resolve, 200));
+      await new Promise(resolve => setTimeout(resolve, 500));
     }
   }
 
-  console.log(`[Prerender-Cache] Done: ${success} success, ${failed} failed`);
+  console.log(`[Prerender-Cache] Done: ${success}/${urls.length} success, ${failed} failed`);
   if (errors.length > 0) {
-    console.log(`[Prerender-Cache] Errors: ${errors.slice(0, 5).join('; ')}`);
+    console.log(`[Prerender-Cache] Errors:\n${errors.join('\n')}`);
   }
 
-  return { success, failed, errors };
+  return { success, failed, errors, details };
 }
