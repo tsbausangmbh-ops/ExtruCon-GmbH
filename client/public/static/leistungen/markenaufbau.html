@@ -22,11 +22,32 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Markenaufbau & Branding",
-    "provider": {"@type": "Organization", "name": "ExtruCon GmbH"},
-    "description": "Professioneller Markenaufbau und Corporate Identity für Ihr Unternehmen.",
-    "areaServed": "Deutschland"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://extrucon.de/#website",
+        "url": "https://extrucon.de/",
+        "name": "ExtruCon GmbH",
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://extrucon.de/leistungen/markenaufbau/#webpage",
+        "url": "https://extrucon.de/leistungen/markenaufbau/",
+        "name": "Markenaufbau & Branding | Starke Markenidentität | ExtruCon",
+        "isPartOf": {"@id": "https://extrucon.de/#website"},
+        "about": {"@id": "https://extrucon.de/leistungen/markenaufbau/#service"},
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://extrucon.de/leistungen/markenaufbau/#service",
+        "name": "Markenaufbau & Branding",
+        "description": "Professioneller Markenaufbau und Corporate Identity für Ihr Unternehmen.",
+        "areaServed": "Deutschland",
+        "provider": {"@id": "https://extrucon.de/#localbusiness"}
+      }
+    ]
   }
   </script>
 </head>
@@ -101,7 +122,7 @@
         <li><a href="/datenschutz">Datenschutz</a></li>
       </ul>
     </nav>
-    <p>&copy; 2025 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
+    <p>&copy; 2026 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
   </footer>
 </body>
 </html>

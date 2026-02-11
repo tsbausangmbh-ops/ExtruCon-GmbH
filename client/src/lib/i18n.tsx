@@ -4020,7 +4020,7 @@ export const translations = {
       imprint: 'Yasal Bildirim',
       cookies: 'Çerez Ayarları',
       accessibility: 'Erişilebilirlik',
-      copyright: '© 2025 ExtruCon GmbH. Tüm hakları saklıdır.',
+      copyright: '© 2026 ExtruCon GmbH. Tüm hakları saklıdır.',
       location: 'Fürstenfeldbruck, Almanya',
       contractNoticeTitle: 'Sözleşme Bildirimi',
       contractNotice1: 'Bu web sitesinde sunulan içerikler, hizmetler ve bilgiler yasal anlamda bağlayıcı bir teklif teşkil etmez. Bu web sitesi üzerinden sözleşme yapılmaz.',

@@ -24,26 +24,47 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "ExtruCon GmbH - KI-Agentur München",
-    "description": "KI-Agentur für München und Umgebung. KI-Agenten, Workflow-Automatisierung und Webentwicklung.",
-    "url": "https://extrucon.de/muenchen/",
-    "telephone": "+4989444438879",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Hasenheide 8",
-      "addressLocality": "Fürstenfeldbruck",
-      "postalCode": "82256",
-      "addressRegion": "Bayern",
-      "addressCountry": "DE"
-    },
-    "areaServed": [
-      {"@type": "City", "name": "München"},
-      {"@type": "City", "name": "Schwabing"},
-      {"@type": "City", "name": "Bogenhausen"},
-      {"@type": "City", "name": "Nymphenburg"},
-      {"@type": "City", "name": "Grünwald"},
-      {"@type": "City", "name": "Harlaching"}
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://extrucon.de/#website",
+        "url": "https://extrucon.de/",
+        "name": "ExtruCon GmbH",
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://extrucon.de/muenchen/#webpage",
+        "url": "https://extrucon.de/muenchen/",
+        "name": "KI-Agentur München | ExtruCon – KI-Agenten & Automatisierung",
+        "isPartOf": {"@id": "https://extrucon.de/#website"},
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://extrucon.de/#localbusiness",
+        "name": "ExtruCon GmbH - KI-Agentur München",
+        "description": "KI-Agentur für München und Umgebung. KI-Agenten, Workflow-Automatisierung und Webentwicklung.",
+        "url": "https://extrucon.de/muenchen/",
+        "telephone": "+4989444438879",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Hasenheide 8",
+          "addressLocality": "Fürstenfeldbruck",
+          "postalCode": "82256",
+          "addressRegion": "Bayern",
+          "addressCountry": "DE"
+        },
+        "areaServed": [
+          {"@type": "City", "name": "München"},
+          {"@type": "City", "name": "Schwabing"},
+          {"@type": "City", "name": "Bogenhausen"},
+          {"@type": "City", "name": "Nymphenburg"},
+          {"@type": "City", "name": "Grünwald"},
+          {"@type": "City", "name": "Harlaching"}
+        ],
+        "sameAs": ["https://www.linkedin.com/company/extrucon", "https://www.instagram.com/extrucon"]
+      }
     ]
   }
   </script>
@@ -160,7 +181,7 @@
         <li><a href="/agb">AGB</a></li>
       </ul>
     </nav>
-    <p>&copy; 2025 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
+    <p>&copy; 2026 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
   </footer>
 </body>
 </html>

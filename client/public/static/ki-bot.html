@@ -22,36 +22,48 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "KI-Chatbot Demo",
-    "description": "Testen Sie unseren KI-Chatbot live. Erfahren Sie, wie ein KI-Agent Ihrem Unternehmen helfen kann.",
-    "url": "https://extrucon.de/ki-bot/",
-    "applicationCategory": "ChatApplication",
-    "operatingSystem": "Web",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "EUR",
-      "description": "Kostenlose Demo"
-    },
-    "provider": {
-      "@type": "Organization",
-      "name": "ExtruCon GmbH",
-      "url": "https://extrucon.de"
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "@id": "https://extrucon.de/ki-bot/#softwareapp",
-    "name": "ExtruCon KI-Chatbot",
-    "description": "Kostenloser KI-Chatbot zum Testen.",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web",
-    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
-    "provider": {"@type": "Organization", "@id": "https://extrucon.de/#organization"}
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://extrucon.de/#website",
+        "url": "https://extrucon.de/",
+        "name": "ExtruCon GmbH",
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://extrucon.de/ki-bot/#webpage",
+        "url": "https://extrucon.de/ki-bot/",
+        "name": "KI-Chatbot Demo | Testen Sie unseren KI-Assistenten | ExtruCon",
+        "isPartOf": {"@id": "https://extrucon.de/#website"},
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "WebApplication",
+        "name": "KI-Chatbot Demo",
+        "description": "Testen Sie unseren KI-Chatbot live. Erfahren Sie, wie ein KI-Agent Ihrem Unternehmen helfen kann.",
+        "url": "https://extrucon.de/ki-bot/",
+        "applicationCategory": "ChatApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "description": "Kostenlose Demo"
+        },
+        "provider": {"@id": "https://extrucon.de/#localbusiness"}
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://extrucon.de/ki-bot/#softwareapp",
+        "name": "ExtruCon KI-Chatbot",
+        "description": "Kostenloser KI-Chatbot zum Testen.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+        "provider": {"@id": "https://extrucon.de/#localbusiness"}
+      }
+    ]
   }
   </script>
 </head>
@@ -139,7 +151,7 @@
         <li><a href="/agb">AGB</a></li>
       </ul>
     </nav>
-    <p>&copy; 2025 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
+    <p>&copy; 2026 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
   </footer>
 </body>
 </html>

@@ -22,11 +22,32 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Suchmaschinenoptimierung (SEO)",
-    "provider": {"@type": "Organization", "name": "ExtruCon GmbH"},
-    "description": "Professionelle SEO-Optimierung für bessere Google-Rankings und mehr organischen Traffic.",
-    "areaServed": "Deutschland"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://extrucon.de/#website",
+        "url": "https://extrucon.de/",
+        "name": "ExtruCon GmbH",
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://extrucon.de/leistungen/seo/#webpage",
+        "url": "https://extrucon.de/leistungen/seo/",
+        "name": "SEO Agentur Fürstenfeldbruck | Suchmaschinenoptimierung | ExtruCon",
+        "isPartOf": {"@id": "https://extrucon.de/#website"},
+        "about": {"@id": "https://extrucon.de/leistungen/seo/#service"},
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://extrucon.de/leistungen/seo/#service",
+        "name": "Suchmaschinenoptimierung (SEO)",
+        "description": "Professionelle SEO-Optimierung für bessere Google-Rankings und mehr organischen Traffic.",
+        "areaServed": "Deutschland",
+        "provider": {"@id": "https://extrucon.de/#localbusiness"}
+      }
+    ]
   }
   </script>
 </head>
@@ -132,7 +153,7 @@
         <li><a href="/datenschutz">Datenschutz</a></li>
       </ul>
     </nav>
-    <p>&copy; 2025 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
+    <p>&copy; 2026 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
   </footer>
 </body>
 </html>

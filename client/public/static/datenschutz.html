@@ -21,15 +21,24 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Datenschutzerklärung",
-    "description": "Datenschutzerklärung der ExtruCon GmbH gemäß DSGVO.",
-    "url": "https://extrucon.de/datenschutz/",
-    "publisher": {
-      "@type": "Organization",
-      "name": "ExtruCon GmbH",
-      "url": "https://extrucon.de"
-    }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://extrucon.de/#website",
+        "url": "https://extrucon.de/",
+        "name": "ExtruCon GmbH",
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://extrucon.de/datenschutz/#webpage",
+        "url": "https://extrucon.de/datenschutz/",
+        "name": "Datenschutzerklärung | ExtruCon GmbH",
+        "description": "Datenschutzerklärung der ExtruCon GmbH gemäß DSGVO.",
+        "isPartOf": {"@id": "https://extrucon.de/#website"},
+        "inLanguage": "de-DE"
+      }
+    ]
   }
   </script>
 </head>
@@ -131,7 +140,7 @@
         <li><a href="/agb">AGB</a></li>
       </ul>
     </nav>
-    <p>&copy; 2025 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
+    <p>&copy; 2026 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
   </footer>
 </body>
 </html>

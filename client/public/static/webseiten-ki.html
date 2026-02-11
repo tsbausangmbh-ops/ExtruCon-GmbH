@@ -24,14 +24,32 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Webseiten mit KI",
-    "description": "Moderne Webentwicklung mit integrierten KI-Features wie Chatbots, personalisierte Inhalte und intelligente Formulare.",
-    "url": "https://extrucon.de/webseiten-ki/",
-    "provider": {
-      "@type": "Organization",
-      "name": "ExtruCon GmbH"
-    }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://extrucon.de/#website",
+        "url": "https://extrucon.de/",
+        "name": "ExtruCon GmbH",
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://extrucon.de/webseiten-ki/#webpage",
+        "url": "https://extrucon.de/webseiten-ki/",
+        "name": "Webseiten mit KI | KI-Webentwicklung | ExtruCon",
+        "isPartOf": {"@id": "https://extrucon.de/#website"},
+        "about": {"@id": "https://extrucon.de/webseiten-ki/#service"},
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://extrucon.de/webseiten-ki/#service",
+        "name": "Webseiten mit KI",
+        "description": "Moderne Webentwicklung mit integrierten KI-Features wie Chatbots, personalisierte Inhalte und intelligente Formulare.",
+        "url": "https://extrucon.de/webseiten-ki/",
+        "provider": {"@id": "https://extrucon.de/#localbusiness"}
+      }
+    ]
   }
   </script>
 </head>
@@ -149,7 +167,7 @@
         <li><a href="/agb">AGB</a></li>
       </ul>
     </nav>
-    <p>&copy; 2025 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
+    <p>&copy; 2026 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
   </footer>
 </body>
 </html>

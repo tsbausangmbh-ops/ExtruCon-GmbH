@@ -22,11 +22,32 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Online-Marketing",
-    "provider": {"@type": "Organization", "name": "ExtruCon GmbH"},
-    "description": "Ganzheitliches Online-Marketing mit SEO, SEA und Content-Strategie.",
-    "areaServed": "Deutschland"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://extrucon.de/#website",
+        "url": "https://extrucon.de/",
+        "name": "ExtruCon GmbH",
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://extrucon.de/leistungen/marketing/#webpage",
+        "url": "https://extrucon.de/leistungen/marketing/",
+        "name": "Online-Marketing Agentur | Digitale Strategien | ExtruCon",
+        "isPartOf": {"@id": "https://extrucon.de/#website"},
+        "about": {"@id": "https://extrucon.de/leistungen/marketing/#service"},
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://extrucon.de/leistungen/marketing/#service",
+        "name": "Online-Marketing",
+        "description": "Ganzheitliches Online-Marketing mit SEO, SEA und Content-Strategie.",
+        "areaServed": "Deutschland",
+        "provider": {"@id": "https://extrucon.de/#localbusiness"}
+      }
+    ]
   }
   </script>
 </head>
@@ -117,7 +138,7 @@
         <li><a href="/datenschutz">Datenschutz</a></li>
       </ul>
     </nav>
-    <p>&copy; 2025 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
+    <p>&copy; 2026 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
   </footer>
 </body>
 </html>

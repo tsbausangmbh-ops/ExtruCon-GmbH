@@ -22,11 +22,32 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Webentwicklung",
-    "provider": {"@type": "Organization", "name": "ExtruCon GmbH"},
-    "description": "Professionelle Webentwicklung für responsive Websites und Web-Apps.",
-    "areaServed": "Deutschland"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://extrucon.de/#website",
+        "url": "https://extrucon.de/",
+        "name": "ExtruCon GmbH",
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://extrucon.de/leistungen/web/#webpage",
+        "url": "https://extrucon.de/leistungen/web/",
+        "name": "Webentwicklung | Moderne Websites & Web-Apps | ExtruCon",
+        "isPartOf": {"@id": "https://extrucon.de/#website"},
+        "about": {"@id": "https://extrucon.de/leistungen/web/#service"},
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://extrucon.de/leistungen/web/#service",
+        "name": "Webentwicklung",
+        "description": "Professionelle Webentwicklung für responsive Websites und Web-Apps.",
+        "areaServed": "Deutschland",
+        "provider": {"@id": "https://extrucon.de/#localbusiness"}
+      }
+    ]
   }
   </script>
 </head>
@@ -118,7 +139,7 @@
         <li><a href="/datenschutz">Datenschutz</a></li>
       </ul>
     </nav>
-    <p>&copy; 2025 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
+    <p>&copy; 2026 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
   </footer>
 </body>
 </html>

@@ -24,40 +24,49 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "KI-Agenten Entwicklung",
-    "description": "Professionelle Entwicklung von KI-Agenten für Kundenservice, Lead-Generierung, Marketing-Automatisierung und Geschäftsprozesse.",
-    "url": "https://extrucon.de/ki-agenten/",
-    "provider": {
-      "@type": "Organization",
-      "name": "ExtruCon GmbH",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Fürstenfeldbruck",
-        "addressRegion": "Bayern",
-        "addressCountry": "DE"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://extrucon.de/#website",
+        "url": "https://extrucon.de/",
+        "name": "ExtruCon GmbH",
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://extrucon.de/ki-agenten/#webpage",
+        "url": "https://extrucon.de/ki-agenten/",
+        "name": "KI-Agenten Entwicklung Fürstenfeldbruck | Chatbots | ExtruCon",
+        "isPartOf": {"@id": "https://extrucon.de/#website"},
+        "about": {"@id": "https://extrucon.de/ki-agenten/#service"},
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://extrucon.de/ki-agenten/#service",
+        "name": "KI-Agenten Entwicklung",
+        "description": "Professionelle Entwicklung von KI-Agenten für Kundenservice, Lead-Generierung, Marketing-Automatisierung und Geschäftsprozesse.",
+        "url": "https://extrucon.de/ki-agenten/",
+        "areaServed": ["Deutschland", "Österreich", "Schweiz"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "KI-Agenten Pakete",
+          "itemListElement": [
+            {"@type": "Offer", "name": "Starter-Agent", "price": "490", "priceCurrency": "EUR"},
+            {"@type": "Offer", "name": "Business-Agent", "price": "1490", "priceCurrency": "EUR"},
+            {"@type": "Offer", "name": "Enterprise-Agent", "price": "2990", "priceCurrency": "EUR"}
+          ]
+        },
+        "provider": {"@id": "https://extrucon.de/#localbusiness"}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de/"},
+          {"@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://extrucon.de/#services"},
+          {"@type": "ListItem", "position": 3, "name": "KI-Agenten", "item": "https://extrucon.de/ki-agenten/"}
+        ]
       }
-    },
-    "areaServed": ["Deutschland", "Österreich", "Schweiz"],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "KI-Agenten Pakete",
-      "itemListElement": [
-        {"@type": "Offer", "name": "Starter-Agent", "price": "490", "priceCurrency": "EUR"},
-        {"@type": "Offer", "name": "Business-Agent", "price": "1490", "priceCurrency": "EUR"},
-        {"@type": "Offer", "name": "Enterprise-Agent", "price": "2990", "priceCurrency": "EUR"}
-      ]
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://extrucon.de"},
-      {"@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://extrucon.de/#services"},
-      {"@type": "ListItem", "position": 3, "name": "KI-Agenten", "item": "https://extrucon.de/ki-agenten/"}
     ]
   }
   </script>
@@ -326,7 +335,7 @@
         <li><a href="/agb">AGB</a></li>
       </ul>
     </nav>
-    <p>&copy; 2025 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
+    <p>&copy; 2026 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
   </footer>
 </body>
 </html>

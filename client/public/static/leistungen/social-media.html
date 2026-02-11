@@ -22,11 +22,32 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Social Media Marketing",
-    "provider": {"@type": "Organization", "name": "ExtruCon GmbH"},
-    "description": "Professionelles Social Media Marketing für Instagram, LinkedIn und Facebook.",
-    "areaServed": "Deutschland"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://extrucon.de/#website",
+        "url": "https://extrucon.de/",
+        "name": "ExtruCon GmbH",
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://extrucon.de/leistungen/social-media/#webpage",
+        "url": "https://extrucon.de/leistungen/social-media/",
+        "name": "Social Media Marketing | Instagram, LinkedIn, Facebook | ExtruCon",
+        "isPartOf": {"@id": "https://extrucon.de/#website"},
+        "about": {"@id": "https://extrucon.de/leistungen/social-media/#service"},
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://extrucon.de/leistungen/social-media/#service",
+        "name": "Social Media Marketing",
+        "description": "Professionelles Social Media Marketing für Instagram, LinkedIn und Facebook.",
+        "areaServed": "Deutschland",
+        "provider": {"@id": "https://extrucon.de/#localbusiness"}
+      }
+    ]
   }
   </script>
 </head>
@@ -114,7 +135,7 @@
         <li><a href="/datenschutz">Datenschutz</a></li>
       </ul>
     </nav>
-    <p>&copy; 2025 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
+    <p>&copy; 2026 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
   </footer>
 </body>
 </html>

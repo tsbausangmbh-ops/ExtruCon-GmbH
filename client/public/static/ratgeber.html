@@ -22,25 +22,38 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "ExtruCon Ratgeber",
-    "description": "Expertenwissen zu KI-Agenten, Marketing-Automatisierung und Webentwicklung",
-    "url": "https://extrucon.de/ratgeber/",
-    "publisher": {
-      "@type": "Organization",
-      "name": "ExtruCon GmbH"
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "@id": "https://extrucon.de/ratgeber/#collectionpage",
-    "name": "KI Ratgeber & Expertenwissen",
-    "description": "Ratgeber zu KI-Agenten, Automatisierung, Marketing und Webentwicklung.",
-    "url": "https://extrucon.de/ratgeber/",
-    "publisher": {"@type": "Organization", "@id": "https://extrucon.de/#organization"}
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://extrucon.de/#website",
+        "url": "https://extrucon.de/",
+        "name": "ExtruCon GmbH",
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://extrucon.de/ratgeber/#webpage",
+        "url": "https://extrucon.de/ratgeber/",
+        "name": "Ratgeber | KI, Marketing & Automatisierung Tipps | ExtruCon",
+        "isPartOf": {"@id": "https://extrucon.de/#website"},
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "Blog",
+        "name": "ExtruCon Ratgeber",
+        "description": "Expertenwissen zu KI-Agenten, Marketing-Automatisierung und Webentwicklung",
+        "url": "https://extrucon.de/ratgeber/",
+        "publisher": {"@id": "https://extrucon.de/#localbusiness"}
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://extrucon.de/ratgeber/#collectionpage",
+        "name": "KI Ratgeber & Expertenwissen",
+        "description": "Ratgeber zu KI-Agenten, Automatisierung, Marketing und Webentwicklung.",
+        "url": "https://extrucon.de/ratgeber/",
+        "publisher": {"@id": "https://extrucon.de/#localbusiness"}
+      }
+    ]
   }
   </script>
 </head>
@@ -159,7 +172,7 @@
         <li><a href="/datenschutz">Datenschutz</a></li>
       </ul>
     </nav>
-    <p>&copy; 2025 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
+    <p>&copy; 2026 ExtruCon GmbH. Alle Rechte vorbehalten.</p>
   </footer>
 </body>
 </html>
