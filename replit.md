@@ -108,10 +108,20 @@ shared/           # Shared types and schemas
 - **No meta keywords**: Removed per Google 2026 best practices; keywords meta tag not used anywhere
 - **Canonical URLs**: All canonicals and og:url use trailing slash for consistency (e.g., `https://extrucon.de/ki-agenten/`)
 
+### URL Strategy
+- **Trailing slashes**: All canonical URLs use trailing slashes (e.g., `/ki-agenten/`). Server 301-redirects non-trailing-slash to trailing-slash.
+- **SSR lookup**: Middleware normalizes paths by stripping trailing slashes before STATIC_PAGES lookup, so both `/ki-agenten` and `/ki-agenten/` serve SSR content.
+
 ### German-Only SEO Strategy
-- **No hreflang tags**: Removed from all files; only German version is indexed
-- **301 redirects**: All `?lang=` query parameters are 301-redirected to the clean German URL
+- **No hreflang tags**: Removed from all files AND sitemap; only German version is indexed
+- **301 redirects**: All `?lang=` query parameters are 301-redirected to the clean German URL with trailing slash
+- **robots.txt blocks `?lang=`**: Explicit `Disallow: /*?lang=` prevents crawlers from attempting language URLs
 - **inLanguage**: Set to `de-DE` only in JSON-LD (no multi-language array)
+
+### Sitemap Strategy
+- **21 German-only pages** with trailing slashes, no hreflang, no non-page resources
+- **Served from `server/seoFiles.ts`**: NOT from `client/public/sitemap.xml` (both must stay in sync)
+- **robots.txt also from `seoFiles.ts`**: Single `User-agent: *` block, no Crawl-delay
 - **areaServed**: Focused on Fürstenfeldbruck, München, Bayern for local ranking
 - **Client-side i18n**: Language switching (EN, HR, TR) remains for visitors via localStorage but is invisible to search engines
 - **Recache**: Only German URLs are recached via Prerender.io (19 pages, no language variants)
