@@ -197,7 +197,8 @@ function sanitizeCrawlerResponse(html: string): string {
 }
 
 export async function handleCrawlerRequest(reqPath: string): Promise<{ html: string; source: string }> {
-  const fullUrl = `${SITE_URL}${reqPath}`;
+  const canonicalPath = reqPath === '/' ? '/' : reqPath.replace(/\/$/, '') + '/';
+  const fullUrl = `${SITE_URL}${canonicalPath}`;
   const staticFilePath = getStaticFilePath(reqPath);
 
   const prerenderHtml = await fetchFromPrerender(fullUrl);
