@@ -83,7 +83,7 @@ ${message}
 
   try {
     await transporter.sendMail({
-      from: `"ExtruCon Website" <${process.env.SMTP_USER}>`,
+      from: `"Extrucon Agentur" <${process.env.SMTP_USER}>`,
       to: 'info@extrucon.de',
       replyTo: email,
       subject: `Kontaktanfrage von ${name}${company ? ` (${company})` : ''}`,
