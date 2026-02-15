@@ -96,6 +96,56 @@ export async function registerRoutes(
   let lastRecacheTime = 0;
   const RECACHE_COOLDOWN = 5 * 60 * 1000;
 
+  app.get("/api/prerender/test", async (req: Request, res: Response) => {
+    const authHeader = req.headers['x-prerender-recache-key'];
+    const expectedKey = process.env.PRERENDER_TOKEN;
+    if (!expectedKey || authHeader !== expectedKey) {
+      return res.status(401).json({ error: "Unauthorized" });
+    }
+
+    const testPath = (req.query.path as string) || '/ki-agenten';
+    const testUrl = `https://service.prerender.io/https://extrucon.de${testPath}/`;
+    const hasToken = !!process.env.PRERENDER_TOKEN;
+    const tokenLen = (process.env.PRERENDER_TOKEN || '').length;
+
+    try {
+      const start = Date.now();
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 8000);
+
+      const response = await fetch(testUrl, {
+        headers: {
+          'X-Prerender-Token': process.env.PRERENDER_TOKEN || '',
+          'User-Agent': 'ExtruCon-SSR-Validator/1.0',
+        },
+        signal: controller.signal,
+      });
+
+      clearTimeout(timeout);
+      const elapsed = Date.now() - start;
+      const bodyLen = response.ok ? (await response.text()).length : 0;
+
+      res.json({
+        hasToken,
+        tokenLen,
+        testUrl,
+        status: response.status,
+        elapsed: `${elapsed}ms`,
+        bodyLen,
+        nodeEnv: process.env.NODE_ENV,
+      });
+    } catch (error: any) {
+      res.json({
+        hasToken,
+        tokenLen,
+        testUrl,
+        error: error.message,
+        name: error.name,
+        nodeEnv: process.env.NODE_ENV,
+      });
+    }
+  });
+
   app.post("/api/prerender/recache", async (req: Request, res: Response) => {
     const authHeader = req.headers['x-prerender-recache-key'];
     const expectedKey = process.env.PRERENDER_TOKEN;
