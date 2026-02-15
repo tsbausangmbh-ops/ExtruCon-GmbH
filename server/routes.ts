@@ -96,7 +96,7 @@ export async function registerRoutes(
   let lastRecacheTime = 0;
   const RECACHE_COOLDOWN = 5 * 60 * 1000;
 
-  app.get("/api/prerender/test", async (req: Request, res: Response) => {
+  app.post("/api/prerender/test", async (req: Request, res: Response) => {
     const authHeader = req.headers['x-prerender-recache-key'];
     const expectedKey = process.env.PRERENDER_TOKEN;
     if (!expectedKey || authHeader !== expectedKey) {
