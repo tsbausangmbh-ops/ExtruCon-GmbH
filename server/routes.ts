@@ -66,11 +66,12 @@ export async function registerRoutes(
 
     if (isCrawler(userAgent)) {
       try {
-        const { html, source } = await handleCrawlerRequest(lookupPath);
+        const { html, source, debug } = await handleCrawlerRequest(lookupPath);
 
         if (html) {
           res.set('Content-Type', 'text/html');
           res.set('X-SSR-Source', source);
+          res.set('X-SSR-Debug', debug);
           return res.send(html);
         }
       } catch (error: any) {

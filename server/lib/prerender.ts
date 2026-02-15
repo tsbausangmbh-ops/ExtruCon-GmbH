@@ -144,10 +144,10 @@ function injectJsonLdIntoHtml(html: string, jsonLdBlocks: string[]): string {
   return injection + '\n' + html;
 }
 
-async function fetchFromPrerender(url: string): Promise<string | null> {
+async function fetchFromPrerender(url: string): Promise<{ html: string | null; debug: string }> {
   if (!PRERENDER_TOKEN) {
     console.log('[Prerender] No token configured, skipping Prerender.io');
-    return null;
+    return { html: null, debug: 'no-token' };
   }
 
   const prerenderUrl = `${PRERENDER_SERVICE_URL}${url}`;
@@ -155,6 +155,7 @@ async function fetchFromPrerender(url: string): Promise<string | null> {
   try {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), PRERENDER_TIMEOUT);
+    const start = Date.now();
 
     const response = await fetch(prerenderUrl, {
       headers: {
@@ -165,27 +166,30 @@ async function fetchFromPrerender(url: string): Promise<string | null> {
     });
 
     clearTimeout(timeout);
+    const elapsed = Date.now() - start;
 
     if (!response.ok) {
-      console.log(`[Prerender] HTTP ${response.status} for ${url}`);
-      return null;
+      console.log(`[Prerender] HTTP ${response.status} for ${url} (${elapsed}ms)`);
+      return { html: null, debug: `http-${response.status}-${elapsed}ms` };
     }
 
     const html = await response.text();
 
     if (!html || html.trim().length < 100) {
-      console.log(`[Prerender] Empty or too short response for ${url}`);
-      return null;
+      console.log(`[Prerender] Empty or too short response for ${url} (${html?.length || 0} bytes, ${elapsed}ms)`);
+      return { html: null, debug: `too-short-${html?.length || 0}b-${elapsed}ms` };
     }
 
-    return html;
+    console.log(`[Prerender] OK ${url} (${html.length} bytes, ${elapsed}ms)`);
+    return { html, debug: `ok-${html.length}b-${elapsed}ms` };
   } catch (error: any) {
     if (error.name === 'AbortError') {
       console.log(`[Prerender] Timeout after ${PRERENDER_TIMEOUT}ms for ${url}`);
+      return { html: null, debug: `timeout-${PRERENDER_TIMEOUT}ms` };
     } else {
       console.log(`[Prerender] Error fetching ${url}: ${error.message}`);
+      return { html: null, debug: `error-${error.message}` };
     }
-    return null;
   }
 }
 
@@ -196,19 +200,19 @@ function sanitizeCrawlerResponse(html: string): string {
   );
 }
 
-export async function handleCrawlerRequest(reqPath: string): Promise<{ html: string; source: string }> {
+export async function handleCrawlerRequest(reqPath: string): Promise<{ html: string; source: string; debug: string }> {
   const canonicalPath = reqPath === '/' ? '/' : reqPath.replace(/\/$/, '') + '/';
   const fullUrl = `${SITE_URL}${canonicalPath}`;
   const staticFilePath = getStaticFilePath(reqPath);
 
-  const prerenderHtml = await fetchFromPrerender(fullUrl);
+  const { html: prerenderHtml, debug } = await fetchFromPrerender(fullUrl);
 
   if (prerenderHtml) {
     const validation = validatePrerenderResponse(prerenderHtml);
 
     if (validation.valid) {
       console.log(`[Prerender] Valid response for ${reqPath} - serving from Prerender.io`);
-      return { html: sanitizeCrawlerResponse(prerenderHtml), source: 'prerender.io' };
+      return { html: sanitizeCrawlerResponse(prerenderHtml), source: 'prerender.io', debug };
     }
 
     console.log(`[Prerender] Response for ${reqPath} missing: ${validation.missingJsonLd ? 'JSON-LD ' : ''}${validation.missingContent ? 'Content' : ''}`);
@@ -218,21 +222,21 @@ export async function handleCrawlerRequest(reqPath: string): Promise<{ html: str
       if (jsonLdBlocks.length > 0) {
         const enrichedHtml = injectJsonLdIntoHtml(prerenderHtml, jsonLdBlocks);
         console.log(`[Prerender] Enriched response with ${jsonLdBlocks.length} JSON-LD blocks for ${reqPath}`);
-        return { html: sanitizeCrawlerResponse(enrichedHtml), source: 'prerender.io+ssr-jsonld' };
+        return { html: sanitizeCrawlerResponse(enrichedHtml), source: 'prerender.io+ssr-jsonld', debug };
       }
     }
 
     console.log(`[Prerender] Using Prerender.io response as-is (partial) for ${reqPath}`);
-    return { html: sanitizeCrawlerResponse(prerenderHtml), source: 'prerender.io-partial' };
+    return { html: sanitizeCrawlerResponse(prerenderHtml), source: 'prerender.io-partial', debug };
   }
 
   if (staticFilePath) {
     const staticHtml = fs.readFileSync(staticFilePath, 'utf-8');
     console.log(`[SSR-Fallback] Serving static HTML for ${reqPath}`);
-    return { html: sanitizeCrawlerResponse(staticHtml), source: 'ssr-fallback' };
+    return { html: sanitizeCrawlerResponse(staticHtml), source: 'ssr-fallback', debug };
   }
 
-  return { html: '', source: 'none' };
+  return { html: '', source: 'none', debug };
 }
 
 function extractMetaFromStaticFile(filePath: string): {
