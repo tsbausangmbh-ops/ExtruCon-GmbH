@@ -77,13 +77,28 @@ shared/           # Shared types and schemas
 
 ## SSR Architecture (Prerender.io Integration)
 
+### Warum Prerender.io? (Ergebnis: 1000+ Impressionen/Tag)
+Prerender.io als Primary für alle Bots – Wenn Googlebot die Seite aufruft, bekommt er fertig gerendertes HTML von Prerender.io statt einer leeren React-SPA. Google kann so den gesamten Content sofort lesen und indexieren.
+
+Eigene SSR als Fallback – Falls Prerender.io mal nicht antwortet (Timeout, Fehler), liefert der Server trotzdem vollständige Meta-Tags, JSON-LD Structured Data und noscript-Content aus. Google sieht also nie eine leere Seite.
+
+Automatischer Cache-Refresh – Bei jedem Deployment werden alle URLs bei Prerender.io neu gecacht. So hat Google immer die aktuellste Version.
+
+JSON-LD @graph-Struktur – Saubere Structured Data auf jeder Seite (Organization, WebSite, WebPage, Service) – Google versteht dadurch genau, was die Seite bietet und für wen.
+
+Meta-Tags auf jeder Unterseite – Jede URL hat eigene Title, Description, OG-Tags – das hilft Google bei der Zuordnung zu verschiedenen Suchanfragen.
+
+Sitemap mit allen URLs – Google kennt alle Seiten und crawlt sie systematisch.
+
+Das Zusammenspiel aus korrektem Prerendering + Structured Data + sauberen Meta-Tags sorgt dafür, dass Google die Seiten besser versteht, schneller indexiert und häufiger in den Suchergebnissen zeigt.
+
 ### Crawler Flow (Googlebot, Bingbot, GPTBot, ChatGPT etc.)
 1. Crawler detected via User-Agent → request forwarded to Prerender.io
 2. Prerender.io returns fully rendered HTML
 3. Server validates response: checks for JSON-LD and SSR content
 4. If JSON-LD missing in Prerender.io cache → auto-injected from own static HTML files
 5. If Prerender.io unreachable (timeout/error) → fallback to own static SSR files in `client/public/static/`
-6. Response includes `X-SSR-Source` header for debugging
+6. Response includes `X-SSR-Source` and `X-SSR-Debug` headers for debugging
 
 ### Normal Visitor Flow
 - SSR injection active: meta-tags, OG-tags, Twitter-tags, canonical, and JSON-LD from static HTML files are injected into the SPA's index.html before serving
@@ -93,8 +108,13 @@ shared/           # Shared types and schemas
 
 ### Cache Refresh
 - POST `/api/prerender/recache` (protected by PRERENDER_TOKEN, 5min rate limit)
-- Recaches all 19 German-only paths (no language variants)
-- Batched in groups of 5 with 200ms delay between batches
+- Recaches all URLs from sitemap (no language variants)
+- Batched in groups of 5 with 500ms delay between batches
+- URLs must be sent WITH trailing slash (canonical form) to Prerender.io
+
+### Debug Headers
+- `X-SSR-Source`: Shows which source served the page (`prerender.io`, `prerender.io+ssr-jsonld`, `prerender.io-partial`, `ssr-fallback`, `ssr-visitor`, `none`)
+- `X-SSR-Debug`: Shows Prerender.io fetch details (e.g., `ok-124162b-188ms`, `timeout-8000ms`, `http-404-120ms`, `no-token`)
 
 ### Key Files
 - `server/lib/prerender.ts` - Prerender.io middleware, crawler detection, validation, cache refresh
@@ -111,6 +131,7 @@ shared/           # Shared types and schemas
 ### URL Strategy
 - **Trailing slashes**: All canonical URLs use trailing slashes (e.g., `/ki-agenten/`). Server 301-redirects non-trailing-slash to trailing-slash.
 - **SSR lookup**: Middleware normalizes paths by stripping trailing slashes before STATIC_PAGES lookup, so both `/ki-agenten` and `/ki-agenten/` serve SSR content.
+- **Prerender.io URLs**: Must always use trailing slash format (canonical form), otherwise Prerender.io returns 404 → fallback to static HTML
 
 ### German-Only SEO Strategy
 - **No hreflang tags**: Removed from all files AND sitemap; only German version is indexed
@@ -124,7 +145,8 @@ shared/           # Shared types and schemas
 - **robots.txt also from `seoFiles.ts`**: Single `User-agent: *` block, no Crawl-delay
 - **areaServed**: Focused on Fürstenfeldbruck, München, Bayern for local ranking
 - **Client-side i18n**: Language switching (EN, HR, TR) remains for visitors via localStorage but is invisible to search engines
-- **Recache**: Only German URLs are recached via Prerender.io (19 pages, no language variants)
+- **Recache**: Only German URLs are recached via Prerender.io (no language variants)
+- **Missing static HTML**: `/kontakt/` and `/termin/` have no static HTML files (SPA only, no SSR fallback)
 
 ## SEO & Internal Linking
 
