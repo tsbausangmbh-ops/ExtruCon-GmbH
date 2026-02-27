@@ -77,12 +77,12 @@ shared/           # Shared types and schemas
 
 ## SSR Architecture (Prerender.io Integration)
 
-### Warum Prerender.io? (Ergebnis: 1000+ Impressionen/Tag)
-Prerender.io als Primary für alle Bots – Wenn Googlebot die Seite aufruft, bekommt er fertig gerendertes HTML von Prerender.io statt einer leeren React-SPA. Google kann so den gesamten Content sofort lesen und indexieren.
+### SSR-Priorität (Ergebnis: 1000+ Impressionen/Tag)
+Eigene SSR als Priority 1 – Wenn Googlebot die Seite aufruft, bekommt er sofort das vollständige statische HTML mit allen H1, H2, H3-Headings, Meta-Tags, JSON-LD und Content. Kein Warten auf externe Services.
 
-Eigene SSR als Fallback – Falls Prerender.io mal nicht antwortet (Timeout, Fehler), liefert der Server trotzdem vollständige Meta-Tags, JSON-LD Structured Data und noscript-Content aus. Google sieht also nie eine leere Seite.
+Prerender.io als Fallback – Falls keine statische HTML-Datei existiert (sollte nicht vorkommen), wird Prerender.io als Fallback genutzt.
 
-Automatischer Cache-Refresh – Bei jedem Deployment werden alle URLs bei Prerender.io neu gecacht. So hat Google immer die aktuellste Version.
+Automatischer Cache-Refresh – Bei jedem Deployment werden alle URLs bei Prerender.io neu gecacht als zusätzliche Absicherung.
 
 JSON-LD @graph-Struktur – Saubere Structured Data auf jeder Seite (Organization, WebSite, WebPage, Service) – Google versteht dadurch genau, was die Seite bietet und für wen.
 
@@ -90,20 +90,20 @@ Meta-Tags auf jeder Unterseite – Jede URL hat eigene Title, Description, OG-Ta
 
 Sitemap mit allen URLs – Google kennt alle Seiten und crawlt sie systematisch.
 
-Das Zusammenspiel aus korrektem Prerendering + Structured Data + sauberen Meta-Tags sorgt dafür, dass Google die Seiten besser versteht, schneller indexiert und häufiger in den Suchergebnissen zeigt.
+Das Zusammenspiel aus korrektem SSR + Structured Data + sauberen Meta-Tags sorgt dafür, dass Google die Seiten besser versteht, schneller indexiert und häufiger in den Suchergebnissen zeigt.
 
 ### Crawler Flow (Googlebot, Bingbot, GPTBot, ChatGPT etc.)
-1. Crawler detected via User-Agent → request forwarded to Prerender.io
-2. Prerender.io returns fully rendered HTML
-3. Server validates response: checks for JSON-LD and SSR content
-4. If JSON-LD missing in Prerender.io cache → auto-injected from own static HTML files
-5. If Prerender.io unreachable (timeout/error) → fallback to own static SSR files in `client/public/static/`
-6. Response includes `X-SSR-Source` and `X-SSR-Debug` headers for debugging
+1. Crawler detected via User-Agent
+2. **Priority 1**: Server delivers full static HTML from `client/public/static/` (includes H1, H2, H3, meta tags, JSON-LD, full body content)
+3. **Fallback**: If no static HTML exists → request forwarded to Prerender.io
+4. Response includes `X-SSR-Source` and `X-SSR-Debug` headers for debugging
+5. All 21 pages have static HTML files (including `/kontakt/` and `/termin/`)
 
 ### Normal Visitor Flow
-- SSR injection active: meta-tags, OG-tags, Twitter-tags, canonical, and JSON-LD from static HTML files are injected into the SPA's index.html before serving
-- Each page gets its own page-specific SEO content server-side (title, description, structured data)
+- SSR injection active: meta-tags, OG-tags, Twitter-tags, canonical, JSON-LD, AND noscript body content (H1/H2/H3) from static HTML files are injected into the SPA's index.html before serving
+- Each page gets its own page-specific SEO content server-side (title, description, structured data, heading structure)
 - React SPA loads on top for full interactivity (SEOHead component manages client-side updates)
+- noscript block contains full page content for non-JS environments
 - In dev mode: index.html is read fresh each time; in production: cached for performance
 
 ### Cache Refresh
@@ -113,13 +113,13 @@ Das Zusammenspiel aus korrektem Prerendering + Structured Data + sauberen Meta-T
 - URLs must be sent WITH trailing slash (canonical form) to Prerender.io
 
 ### Debug Headers
-- `X-SSR-Source`: Shows which source served the page (`prerender.io`, `prerender.io+ssr-jsonld`, `prerender.io-partial`, `ssr-fallback`, `ssr-visitor`, `none`)
-- `X-SSR-Debug`: Shows Prerender.io fetch details (e.g., `ok-124162b-188ms`, `timeout-8000ms`, `http-404-120ms`, `no-token`)
+- `X-SSR-Source`: Shows which source served the page (`ssr-static`, `prerender.io-fallback`, `prerender.io-partial`, `ssr-visitor`, `none`)
+- `X-SSR-Debug`: Shows source details (`ssr-priority` for static HTML, or Prerender.io fetch details)
 
 ### Key Files
-- `server/lib/prerender.ts` - Prerender.io middleware, crawler detection, validation, cache refresh
+- `server/lib/prerender.ts` - SSR middleware, crawler detection, Prerender.io fallback, cache refresh
 - `server/routes.ts` - Middleware integration and recache API endpoint
-- `client/public/static/` - Fallback static HTML files with full SEO content
+- `client/public/static/` - Primary static HTML files with full SEO content (21 files for all pages)
 
 ## SEO Technical Details
 
@@ -146,7 +146,6 @@ Das Zusammenspiel aus korrektem Prerendering + Structured Data + sauberen Meta-T
 - **areaServed**: Focused on Fürstenfeldbruck, München, Bayern for local ranking
 - **Client-side i18n**: Language switching (EN, HR, TR) remains for visitors via localStorage but is invisible to search engines
 - **Recache**: Only German URLs are recached via Prerender.io (no language variants)
-- **Missing static HTML**: `/kontakt/` and `/termin/` have no static HTML files (SPA only, no SSR fallback)
 
 ## SEO & Internal Linking
 

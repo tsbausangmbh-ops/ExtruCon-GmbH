@@ -60,7 +60,7 @@ export async function registerRoutes(
     const reqPath = req.path;
     const lookupPath = reqPath === '/' ? '/' : reqPath.replace(/\/$/, '');
 
-    if (req.method !== 'GET' || !STATIC_PAGES[lookupPath]) {
+    if (req.method !== 'GET' || reqPath.startsWith('/api/') || reqPath.startsWith('/assets/') || reqPath.includes('.')) {
       return next();
     }
 
@@ -77,7 +77,7 @@ export async function registerRoutes(
       } catch (error: any) {
         console.error(`[SSR] Error handling crawler request for ${lookupPath}:`, error.message);
       }
-    } else {
+    } else if (STATIC_PAGES[lookupPath]) {
       try {
         const result = handleVisitorSSR(lookupPath);
 

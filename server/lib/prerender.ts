@@ -64,6 +64,8 @@ const STATIC_PAGES: Record<string, string> = {
   '/impressum': 'impressum.html',
   '/datenschutz': 'datenschutz.html',
   '/ratgeber': 'ratgeber.html',
+  '/kontakt': 'kontakt.html',
+  '/termin': 'termin.html',
   '/leistungen/markenaufbau': 'leistungen/markenaufbau.html',
   '/leistungen/content': 'leistungen/content.html',
   '/leistungen/social-media': 'leistungen/social-media.html',
@@ -205,38 +207,38 @@ export async function handleCrawlerRequest(reqPath: string): Promise<{ html: str
   const fullUrl = `${SITE_URL}${canonicalPath}`;
   const staticFilePath = getStaticFilePath(reqPath);
 
+  if (staticFilePath) {
+    const staticHtml = fs.readFileSync(staticFilePath, 'utf-8');
+    console.log(`[SSR] Priority 1: Serving full static HTML for ${reqPath}`);
+    return { html: sanitizeCrawlerResponse(staticHtml), source: 'ssr-static', debug: 'ssr-priority' };
+  }
+
   const { html: prerenderHtml, debug } = await fetchFromPrerender(fullUrl);
 
   if (prerenderHtml) {
     const validation = validatePrerenderResponse(prerenderHtml);
 
     if (validation.valid) {
-      console.log(`[Prerender] Valid response for ${reqPath} - serving from Prerender.io`);
-      return { html: sanitizeCrawlerResponse(prerenderHtml), source: 'prerender.io', debug };
+      console.log(`[Prerender] Fallback: Valid response for ${reqPath} - serving from Prerender.io`);
+      return { html: sanitizeCrawlerResponse(prerenderHtml), source: 'prerender.io-fallback', debug };
     }
 
-    console.log(`[Prerender] Response for ${reqPath} missing: ${validation.missingJsonLd ? 'JSON-LD ' : ''}${validation.missingContent ? 'Content' : ''}`);
-
-    if (validation.missingJsonLd && staticFilePath) {
-      const jsonLdBlocks = extractJsonLdFromStaticFile(staticFilePath);
-      if (jsonLdBlocks.length > 0) {
-        const enrichedHtml = injectJsonLdIntoHtml(prerenderHtml, jsonLdBlocks);
-        console.log(`[Prerender] Enriched response with ${jsonLdBlocks.length} JSON-LD blocks for ${reqPath}`);
-        return { html: sanitizeCrawlerResponse(enrichedHtml), source: 'prerender.io+ssr-jsonld', debug };
-      }
-    }
-
-    console.log(`[Prerender] Using Prerender.io response as-is (partial) for ${reqPath}`);
+    console.log(`[Prerender] Fallback partial for ${reqPath} (missing: ${validation.missingJsonLd ? 'JSON-LD ' : ''}${validation.missingContent ? 'Content' : ''})`);
     return { html: sanitizeCrawlerResponse(prerenderHtml), source: 'prerender.io-partial', debug };
   }
 
-  if (staticFilePath) {
-    const staticHtml = fs.readFileSync(staticFilePath, 'utf-8');
-    console.log(`[SSR-Fallback] Serving static HTML for ${reqPath}`);
-    return { html: sanitizeCrawlerResponse(staticHtml), source: 'ssr-fallback', debug };
-  }
-
   return { html: '', source: 'none', debug };
+}
+
+function extractBodyContent(filePath: string): string {
+  try {
+    const content = fs.readFileSync(filePath, 'utf-8');
+    const bodyMatch = content.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+    if (!bodyMatch) return '';
+    return bodyMatch[1].trim();
+  } catch {
+    return '';
+  }
 }
 
 function extractMetaFromStaticFile(filePath: string): {
@@ -431,6 +433,14 @@ export function handleVisitorSSR(reqPath: string): { html: string; source: strin
     /<link\s+rel=["']alternate["']\s+hreflang=["'][^"']+["']\s+href=["'][^"']+["']\s*\/?>\s*/gi,
     ''
   );
+
+  const bodyContent = extractBodyContent(staticFilePath);
+  if (bodyContent) {
+    enhanced = enhanced.replace(
+      '<div id="root"></div>',
+      `<div id="root"></div>\n    <noscript>${bodyContent}</noscript>`
+    );
+  }
 
   return { html: enhanced, source: 'ssr-visitor' };
 }
